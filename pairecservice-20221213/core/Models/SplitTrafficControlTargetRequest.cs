@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class SplitTrafficControlTargetRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Prod</para>
+        /// </summary>
         [NameInMap("Environment")]
         [Validation(Required=false)]
         public string Environment { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>learn-pairec-xxx</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

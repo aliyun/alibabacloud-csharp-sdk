@@ -149,6 +149,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public string StatisBehaviorConditionArray { get; set; }
 
+            [NameInMap("StatisBehaviorConditionExpress")]
+            [Validation(Required=false)]
+            public string StatisBehaviorConditionExpress { get; set; }
+
             [NameInMap("StatisBehaviorConditionType")]
             [Validation(Required=false)]
             public string StatisBehaviorConditionType { get; set; }

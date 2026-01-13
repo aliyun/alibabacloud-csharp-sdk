@@ -379,6 +379,144 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更改召回管理服务的版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeRecallManagementServiceVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeRecallManagementServiceVersionResponse
+        /// </returns>
+        public ChangeRecallManagementServiceVersionResponse ChangeRecallManagementServiceVersionWithOptions(string RecallManagementServiceId, ChangeRecallManagementServiceVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecallManagementServiceVersionId))
+            {
+                body["RecallManagementServiceVersionId"] = request.RecallManagementServiceVersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeRecallManagementServiceVersion",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/action/changeversion",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeRecallManagementServiceVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更改召回管理服务的版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeRecallManagementServiceVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeRecallManagementServiceVersionResponse
+        /// </returns>
+        public async Task<ChangeRecallManagementServiceVersionResponse> ChangeRecallManagementServiceVersionWithOptionsAsync(string RecallManagementServiceId, ChangeRecallManagementServiceVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecallManagementServiceVersionId))
+            {
+                body["RecallManagementServiceVersionId"] = request.RecallManagementServiceVersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeRecallManagementServiceVersion",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/action/changeversion",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeRecallManagementServiceVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更改召回管理服务的版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeRecallManagementServiceVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeRecallManagementServiceVersionResponse
+        /// </returns>
+        public ChangeRecallManagementServiceVersionResponse ChangeRecallManagementServiceVersion(string RecallManagementServiceId, ChangeRecallManagementServiceVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ChangeRecallManagementServiceVersionWithOptions(RecallManagementServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更改召回管理服务的版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeRecallManagementServiceVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeRecallManagementServiceVersionResponse
+        /// </returns>
+        public async Task<ChangeRecallManagementServiceVersionResponse> ChangeRecallManagementServiceVersionAsync(string RecallManagementServiceId, ChangeRecallManagementServiceVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ChangeRecallManagementServiceVersionWithOptionsAsync(RecallManagementServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>检测实例下配置的资源的连接状态。</para>
         /// </summary>
         /// 
@@ -4295,6 +4433,856 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建召回管理初始化配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementConfigResponse
+        /// </returns>
+        public CreateRecallManagementConfigResponse CreateRecallManagementConfigWithOptions(CreateRecallManagementConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkConfigs))
+            {
+                body["NetworkConfigs"] = request.NetworkConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                body["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRecallManagementConfig",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementconfigs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRecallManagementConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建召回管理初始化配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementConfigResponse
+        /// </returns>
+        public async Task<CreateRecallManagementConfigResponse> CreateRecallManagementConfigWithOptionsAsync(CreateRecallManagementConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkConfigs))
+            {
+                body["NetworkConfigs"] = request.NetworkConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                body["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRecallManagementConfig",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementconfigs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRecallManagementConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建召回管理初始化配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementConfigResponse
+        /// </returns>
+        public CreateRecallManagementConfigResponse CreateRecallManagementConfig(CreateRecallManagementConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateRecallManagementConfigWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建召回管理初始化配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementConfigResponse
+        /// </returns>
+        public async Task<CreateRecallManagementConfigResponse> CreateRecallManagementConfigAsync(CreateRecallManagementConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateRecallManagementConfigWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建召回管理服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementServiceResponse
+        /// </returns>
+        public CreateRecallManagementServiceResponse CreateRecallManagementServiceWithOptions(CreateRecallManagementServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRecallManagementService",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRecallManagementServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建召回管理服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementServiceResponse
+        /// </returns>
+        public async Task<CreateRecallManagementServiceResponse> CreateRecallManagementServiceWithOptionsAsync(CreateRecallManagementServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRecallManagementService",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRecallManagementServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建召回管理服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementServiceResponse
+        /// </returns>
+        public CreateRecallManagementServiceResponse CreateRecallManagementService(CreateRecallManagementServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateRecallManagementServiceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建召回管理服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementServiceResponse
+        /// </returns>
+        public async Task<CreateRecallManagementServiceResponse> CreateRecallManagementServiceAsync(CreateRecallManagementServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateRecallManagementServiceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建召回管理版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementServiceVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementServiceVersionResponse
+        /// </returns>
+        public CreateRecallManagementServiceVersionResponse CreateRecallManagementServiceVersionWithOptions(string RecallManagementServiceId, CreateRecallManagementServiceVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configs))
+            {
+                body["Configs"] = request.Configs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRecallManagementServiceVersionId))
+            {
+                body["SourceRecallManagementServiceVersionId"] = request.SourceRecallManagementServiceVersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRecallManagementServiceVersion",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/versions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRecallManagementServiceVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建召回管理版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementServiceVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementServiceVersionResponse
+        /// </returns>
+        public async Task<CreateRecallManagementServiceVersionResponse> CreateRecallManagementServiceVersionWithOptionsAsync(string RecallManagementServiceId, CreateRecallManagementServiceVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configs))
+            {
+                body["Configs"] = request.Configs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRecallManagementServiceVersionId))
+            {
+                body["SourceRecallManagementServiceVersionId"] = request.SourceRecallManagementServiceVersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRecallManagementServiceVersion",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/versions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRecallManagementServiceVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建召回管理版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementServiceVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementServiceVersionResponse
+        /// </returns>
+        public CreateRecallManagementServiceVersionResponse CreateRecallManagementServiceVersion(string RecallManagementServiceId, CreateRecallManagementServiceVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateRecallManagementServiceVersionWithOptions(RecallManagementServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建召回管理版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementServiceVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementServiceVersionResponse
+        /// </returns>
+        public async Task<CreateRecallManagementServiceVersionResponse> CreateRecallManagementServiceVersionAsync(string RecallManagementServiceId, CreateRecallManagementServiceVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateRecallManagementServiceVersionWithOptionsAsync(RecallManagementServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建召回管理服务版本配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementServiceVersionConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementServiceVersionConfigResponse
+        /// </returns>
+        public CreateRecallManagementServiceVersionConfigResponse CreateRecallManagementServiceVersionConfigWithOptions(string RecallManagementServiceId, string RecallManagementServiceVersionId, CreateRecallManagementServiceVersionConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
+            {
+                body["ConfigType"] = request.ConfigType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MergeConfig))
+            {
+                body["MergeConfig"] = request.MergeConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecallConfig))
+            {
+                body["RecallConfig"] = request.RecallConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRecallManagementServiceVersionConfig",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceVersionId) + "/configs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRecallManagementServiceVersionConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建召回管理服务版本配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementServiceVersionConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementServiceVersionConfigResponse
+        /// </returns>
+        public async Task<CreateRecallManagementServiceVersionConfigResponse> CreateRecallManagementServiceVersionConfigWithOptionsAsync(string RecallManagementServiceId, string RecallManagementServiceVersionId, CreateRecallManagementServiceVersionConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
+            {
+                body["ConfigType"] = request.ConfigType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MergeConfig))
+            {
+                body["MergeConfig"] = request.MergeConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecallConfig))
+            {
+                body["RecallConfig"] = request.RecallConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRecallManagementServiceVersionConfig",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceVersionId) + "/configs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRecallManagementServiceVersionConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建召回管理服务版本配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementServiceVersionConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementServiceVersionConfigResponse
+        /// </returns>
+        public CreateRecallManagementServiceVersionConfigResponse CreateRecallManagementServiceVersionConfig(string RecallManagementServiceId, string RecallManagementServiceVersionId, CreateRecallManagementServiceVersionConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateRecallManagementServiceVersionConfigWithOptions(RecallManagementServiceId, RecallManagementServiceVersionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建召回管理服务版本配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementServiceVersionConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementServiceVersionConfigResponse
+        /// </returns>
+        public async Task<CreateRecallManagementServiceVersionConfigResponse> CreateRecallManagementServiceVersionConfigAsync(string RecallManagementServiceId, string RecallManagementServiceVersionId, CreateRecallManagementServiceVersionConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateRecallManagementServiceVersionConfigWithOptionsAsync(RecallManagementServiceId, RecallManagementServiceVersionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建召回管理表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementTableResponse
+        /// </returns>
+        public CreateRecallManagementTableResponse CreateRecallManagementTableWithOptions(CreateRecallManagementTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSource))
+            {
+                body["DataSource"] = request.DataSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDataSizeFluctuationThreshold))
+            {
+                body["EnableDataSizeFluctuationThreshold"] = request.EnableDataSizeFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableRowCountFluctuationThreshold))
+            {
+                body["EnableRowCountFluctuationThreshold"] = request.EnableRowCountFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                body["Fields"] = request.Fields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDataSizeFluctuationThreshold))
+            {
+                body["MaxDataSizeFluctuationThreshold"] = request.MaxDataSizeFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxRowCountFluctuationThreshold))
+            {
+                body["MaxRowCountFluctuationThreshold"] = request.MaxRowCountFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxcomputeProjectName))
+            {
+                body["MaxcomputeProjectName"] = request.MaxcomputeProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxcomputeSchema))
+            {
+                body["MaxcomputeSchema"] = request.MaxcomputeSchema;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxcomputeTableName))
+            {
+                body["MaxcomputeTableName"] = request.MaxcomputeTableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDataSizeFluctuationThreshold))
+            {
+                body["MinDataSizeFluctuationThreshold"] = request.MinDataSizeFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinRowCountFluctuationThreshold))
+            {
+                body["MinRowCountFluctuationThreshold"] = request.MinRowCountFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecallType))
+            {
+                body["RecallType"] = request.RecallType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRecallManagementTable",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementtables",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRecallManagementTableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建召回管理表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementTableResponse
+        /// </returns>
+        public async Task<CreateRecallManagementTableResponse> CreateRecallManagementTableWithOptionsAsync(CreateRecallManagementTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSource))
+            {
+                body["DataSource"] = request.DataSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDataSizeFluctuationThreshold))
+            {
+                body["EnableDataSizeFluctuationThreshold"] = request.EnableDataSizeFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableRowCountFluctuationThreshold))
+            {
+                body["EnableRowCountFluctuationThreshold"] = request.EnableRowCountFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                body["Fields"] = request.Fields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDataSizeFluctuationThreshold))
+            {
+                body["MaxDataSizeFluctuationThreshold"] = request.MaxDataSizeFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxRowCountFluctuationThreshold))
+            {
+                body["MaxRowCountFluctuationThreshold"] = request.MaxRowCountFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxcomputeProjectName))
+            {
+                body["MaxcomputeProjectName"] = request.MaxcomputeProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxcomputeSchema))
+            {
+                body["MaxcomputeSchema"] = request.MaxcomputeSchema;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxcomputeTableName))
+            {
+                body["MaxcomputeTableName"] = request.MaxcomputeTableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDataSizeFluctuationThreshold))
+            {
+                body["MinDataSizeFluctuationThreshold"] = request.MinDataSizeFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinRowCountFluctuationThreshold))
+            {
+                body["MinRowCountFluctuationThreshold"] = request.MinRowCountFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecallType))
+            {
+                body["RecallType"] = request.RecallType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRecallManagementTable",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementtables",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRecallManagementTableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建召回管理表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementTableResponse
+        /// </returns>
+        public CreateRecallManagementTableResponse CreateRecallManagementTable(CreateRecallManagementTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateRecallManagementTableWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建召回管理表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRecallManagementTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRecallManagementTableResponse
+        /// </returns>
+        public async Task<CreateRecallManagementTableResponse> CreateRecallManagementTableAsync(CreateRecallManagementTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateRecallManagementTableWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建资源规则</para>
         /// </summary>
         /// 
@@ -7373,6 +8361,526 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除指定召回管理服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRecallManagementServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRecallManagementServiceResponse
+        /// </returns>
+        public DeleteRecallManagementServiceResponse DeleteRecallManagementServiceWithOptions(string RecallManagementServiceId, DeleteRecallManagementServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRecallManagementService",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRecallManagementServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定召回管理服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRecallManagementServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRecallManagementServiceResponse
+        /// </returns>
+        public async Task<DeleteRecallManagementServiceResponse> DeleteRecallManagementServiceWithOptionsAsync(string RecallManagementServiceId, DeleteRecallManagementServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRecallManagementService",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRecallManagementServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定召回管理服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRecallManagementServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRecallManagementServiceResponse
+        /// </returns>
+        public DeleteRecallManagementServiceResponse DeleteRecallManagementService(string RecallManagementServiceId, DeleteRecallManagementServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteRecallManagementServiceWithOptions(RecallManagementServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定召回管理服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRecallManagementServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRecallManagementServiceResponse
+        /// </returns>
+        public async Task<DeleteRecallManagementServiceResponse> DeleteRecallManagementServiceAsync(string RecallManagementServiceId, DeleteRecallManagementServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteRecallManagementServiceWithOptionsAsync(RecallManagementServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定召回管理服务版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRecallManagementServiceVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRecallManagementServiceVersionResponse
+        /// </returns>
+        public DeleteRecallManagementServiceVersionResponse DeleteRecallManagementServiceVersionWithOptions(string RecallManagementServiceId, string RecallManagementServiceVersionId, DeleteRecallManagementServiceVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRecallManagementServiceVersion",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceVersionId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRecallManagementServiceVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定召回管理服务版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRecallManagementServiceVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRecallManagementServiceVersionResponse
+        /// </returns>
+        public async Task<DeleteRecallManagementServiceVersionResponse> DeleteRecallManagementServiceVersionWithOptionsAsync(string RecallManagementServiceId, string RecallManagementServiceVersionId, DeleteRecallManagementServiceVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRecallManagementServiceVersion",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceVersionId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRecallManagementServiceVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定召回管理服务版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRecallManagementServiceVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRecallManagementServiceVersionResponse
+        /// </returns>
+        public DeleteRecallManagementServiceVersionResponse DeleteRecallManagementServiceVersion(string RecallManagementServiceId, string RecallManagementServiceVersionId, DeleteRecallManagementServiceVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteRecallManagementServiceVersionWithOptions(RecallManagementServiceId, RecallManagementServiceVersionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定召回管理服务版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRecallManagementServiceVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRecallManagementServiceVersionResponse
+        /// </returns>
+        public async Task<DeleteRecallManagementServiceVersionResponse> DeleteRecallManagementServiceVersionAsync(string RecallManagementServiceId, string RecallManagementServiceVersionId, DeleteRecallManagementServiceVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteRecallManagementServiceVersionWithOptionsAsync(RecallManagementServiceId, RecallManagementServiceVersionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除召回管理服务版本配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRecallManagementServiceVersionConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRecallManagementServiceVersionConfigResponse
+        /// </returns>
+        public DeleteRecallManagementServiceVersionConfigResponse DeleteRecallManagementServiceVersionConfigWithOptions(string RecallManagementServiceId, string RecallManagementServiceVersionId, string RecallManagementServiceVersionConfigId, DeleteRecallManagementServiceVersionConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRecallManagementServiceVersionConfig",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceVersionId) + "/configs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceVersionConfigId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRecallManagementServiceVersionConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除召回管理服务版本配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRecallManagementServiceVersionConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRecallManagementServiceVersionConfigResponse
+        /// </returns>
+        public async Task<DeleteRecallManagementServiceVersionConfigResponse> DeleteRecallManagementServiceVersionConfigWithOptionsAsync(string RecallManagementServiceId, string RecallManagementServiceVersionId, string RecallManagementServiceVersionConfigId, DeleteRecallManagementServiceVersionConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRecallManagementServiceVersionConfig",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceVersionId) + "/configs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceVersionConfigId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRecallManagementServiceVersionConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除召回管理服务版本配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRecallManagementServiceVersionConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRecallManagementServiceVersionConfigResponse
+        /// </returns>
+        public DeleteRecallManagementServiceVersionConfigResponse DeleteRecallManagementServiceVersionConfig(string RecallManagementServiceId, string RecallManagementServiceVersionId, string RecallManagementServiceVersionConfigId, DeleteRecallManagementServiceVersionConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteRecallManagementServiceVersionConfigWithOptions(RecallManagementServiceId, RecallManagementServiceVersionId, RecallManagementServiceVersionConfigId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除召回管理服务版本配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRecallManagementServiceVersionConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRecallManagementServiceVersionConfigResponse
+        /// </returns>
+        public async Task<DeleteRecallManagementServiceVersionConfigResponse> DeleteRecallManagementServiceVersionConfigAsync(string RecallManagementServiceId, string RecallManagementServiceVersionId, string RecallManagementServiceVersionConfigId, DeleteRecallManagementServiceVersionConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteRecallManagementServiceVersionConfigWithOptionsAsync(RecallManagementServiceId, RecallManagementServiceVersionId, RecallManagementServiceVersionConfigId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定召回管理表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRecallManagementTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRecallManagementTableResponse
+        /// </returns>
+        public DeleteRecallManagementTableResponse DeleteRecallManagementTableWithOptions(string RecallManagementTableId, DeleteRecallManagementTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRecallManagementTable",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementtables/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementTableId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRecallManagementTableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定召回管理表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRecallManagementTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRecallManagementTableResponse
+        /// </returns>
+        public async Task<DeleteRecallManagementTableResponse> DeleteRecallManagementTableWithOptionsAsync(string RecallManagementTableId, DeleteRecallManagementTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRecallManagementTable",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementtables/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementTableId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRecallManagementTableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定召回管理表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRecallManagementTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRecallManagementTableResponse
+        /// </returns>
+        public DeleteRecallManagementTableResponse DeleteRecallManagementTable(string RecallManagementTableId, DeleteRecallManagementTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteRecallManagementTableWithOptions(RecallManagementTableId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定召回管理表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRecallManagementTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRecallManagementTableResponse
+        /// </returns>
+        public async Task<DeleteRecallManagementTableResponse> DeleteRecallManagementTableAsync(string RecallManagementTableId, DeleteRecallManagementTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteRecallManagementTableWithOptionsAsync(RecallManagementTableId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>删除资源规则</para>
         /// </summary>
         /// 
@@ -10433,6 +11941,786 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取召回管理初始化配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementConfigResponse
+        /// </returns>
+        public GetRecallManagementConfigResponse GetRecallManagementConfigWithOptions(GetRecallManagementConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRecallManagementConfig",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementconfigs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRecallManagementConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理初始化配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementConfigResponse
+        /// </returns>
+        public async Task<GetRecallManagementConfigResponse> GetRecallManagementConfigWithOptionsAsync(GetRecallManagementConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRecallManagementConfig",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementconfigs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRecallManagementConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理初始化配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementConfigResponse
+        /// </returns>
+        public GetRecallManagementConfigResponse GetRecallManagementConfig(GetRecallManagementConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetRecallManagementConfigWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理初始化配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementConfigResponse
+        /// </returns>
+        public async Task<GetRecallManagementConfigResponse> GetRecallManagementConfigAsync(GetRecallManagementConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetRecallManagementConfigWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理任务详情。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementJobRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementJobResponse
+        /// </returns>
+        public GetRecallManagementJobResponse GetRecallManagementJobWithOptions(string RecallManagementJobId, GetRecallManagementJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRecallManagementJob",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementjobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementJobId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRecallManagementJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理任务详情。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementJobRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementJobResponse
+        /// </returns>
+        public async Task<GetRecallManagementJobResponse> GetRecallManagementJobWithOptionsAsync(string RecallManagementJobId, GetRecallManagementJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRecallManagementJob",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementjobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementJobId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRecallManagementJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理任务详情。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementJobResponse
+        /// </returns>
+        public GetRecallManagementJobResponse GetRecallManagementJob(string RecallManagementJobId, GetRecallManagementJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetRecallManagementJobWithOptions(RecallManagementJobId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理任务详情。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementJobResponse
+        /// </returns>
+        public async Task<GetRecallManagementJobResponse> GetRecallManagementJobAsync(string RecallManagementJobId, GetRecallManagementJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetRecallManagementJobWithOptionsAsync(RecallManagementJobId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定召回管理服务详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementServiceResponse
+        /// </returns>
+        public GetRecallManagementServiceResponse GetRecallManagementServiceWithOptions(string RecallManagementServiceId, GetRecallManagementServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRecallManagementService",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRecallManagementServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定召回管理服务详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementServiceResponse
+        /// </returns>
+        public async Task<GetRecallManagementServiceResponse> GetRecallManagementServiceWithOptionsAsync(string RecallManagementServiceId, GetRecallManagementServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRecallManagementService",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRecallManagementServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定召回管理服务详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementServiceResponse
+        /// </returns>
+        public GetRecallManagementServiceResponse GetRecallManagementService(string RecallManagementServiceId, GetRecallManagementServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetRecallManagementServiceWithOptions(RecallManagementServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定召回管理服务详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementServiceResponse
+        /// </returns>
+        public async Task<GetRecallManagementServiceResponse> GetRecallManagementServiceAsync(string RecallManagementServiceId, GetRecallManagementServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetRecallManagementServiceWithOptionsAsync(RecallManagementServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定召回管理版本详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementServiceVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementServiceVersionResponse
+        /// </returns>
+        public GetRecallManagementServiceVersionResponse GetRecallManagementServiceVersionWithOptions(string RecallManagementServiceId, string RecallManagementServiceVersionId, GetRecallManagementServiceVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRecallManagementServiceVersion",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceVersionId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRecallManagementServiceVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定召回管理版本详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementServiceVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementServiceVersionResponse
+        /// </returns>
+        public async Task<GetRecallManagementServiceVersionResponse> GetRecallManagementServiceVersionWithOptionsAsync(string RecallManagementServiceId, string RecallManagementServiceVersionId, GetRecallManagementServiceVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRecallManagementServiceVersion",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceVersionId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRecallManagementServiceVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定召回管理版本详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementServiceVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementServiceVersionResponse
+        /// </returns>
+        public GetRecallManagementServiceVersionResponse GetRecallManagementServiceVersion(string RecallManagementServiceId, string RecallManagementServiceVersionId, GetRecallManagementServiceVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetRecallManagementServiceVersionWithOptions(RecallManagementServiceId, RecallManagementServiceVersionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定召回管理版本详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementServiceVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementServiceVersionResponse
+        /// </returns>
+        public async Task<GetRecallManagementServiceVersionResponse> GetRecallManagementServiceVersionAsync(string RecallManagementServiceId, string RecallManagementServiceVersionId, GetRecallManagementServiceVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetRecallManagementServiceVersionWithOptionsAsync(RecallManagementServiceId, RecallManagementServiceVersionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理服务版本配置详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementServiceVersionConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementServiceVersionConfigResponse
+        /// </returns>
+        public GetRecallManagementServiceVersionConfigResponse GetRecallManagementServiceVersionConfigWithOptions(string RecallManagementServiceId, string RecallManagementServiceVersionId, string RecallManagementServiceVersionConfigId, GetRecallManagementServiceVersionConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRecallManagementServiceVersionConfig",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceVersionId) + "/configs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceVersionConfigId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRecallManagementServiceVersionConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理服务版本配置详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementServiceVersionConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementServiceVersionConfigResponse
+        /// </returns>
+        public async Task<GetRecallManagementServiceVersionConfigResponse> GetRecallManagementServiceVersionConfigWithOptionsAsync(string RecallManagementServiceId, string RecallManagementServiceVersionId, string RecallManagementServiceVersionConfigId, GetRecallManagementServiceVersionConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRecallManagementServiceVersionConfig",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceVersionId) + "/configs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceVersionConfigId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRecallManagementServiceVersionConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理服务版本配置详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementServiceVersionConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementServiceVersionConfigResponse
+        /// </returns>
+        public GetRecallManagementServiceVersionConfigResponse GetRecallManagementServiceVersionConfig(string RecallManagementServiceId, string RecallManagementServiceVersionId, string RecallManagementServiceVersionConfigId, GetRecallManagementServiceVersionConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetRecallManagementServiceVersionConfigWithOptions(RecallManagementServiceId, RecallManagementServiceVersionId, RecallManagementServiceVersionConfigId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理服务版本配置详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementServiceVersionConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementServiceVersionConfigResponse
+        /// </returns>
+        public async Task<GetRecallManagementServiceVersionConfigResponse> GetRecallManagementServiceVersionConfigAsync(string RecallManagementServiceId, string RecallManagementServiceVersionId, string RecallManagementServiceVersionConfigId, GetRecallManagementServiceVersionConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetRecallManagementServiceVersionConfigWithOptionsAsync(RecallManagementServiceId, RecallManagementServiceVersionId, RecallManagementServiceVersionConfigId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定召回管理表详细信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementTableResponse
+        /// </returns>
+        public GetRecallManagementTableResponse GetRecallManagementTableWithOptions(string RecallManagementTableId, GetRecallManagementTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRecallManagementTable",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementtables/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementTableId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRecallManagementTableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定召回管理表详细信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementTableResponse
+        /// </returns>
+        public async Task<GetRecallManagementTableResponse> GetRecallManagementTableWithOptionsAsync(string RecallManagementTableId, GetRecallManagementTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRecallManagementTable",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementtables/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementTableId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRecallManagementTableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定召回管理表详细信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementTableResponse
+        /// </returns>
+        public GetRecallManagementTableResponse GetRecallManagementTable(string RecallManagementTableId, GetRecallManagementTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetRecallManagementTableWithOptions(RecallManagementTableId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定召回管理表详细信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecallManagementTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecallManagementTableResponse
+        /// </returns>
+        public async Task<GetRecallManagementTableResponse> GetRecallManagementTableAsync(string RecallManagementTableId, GetRecallManagementTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetRecallManagementTableWithOptionsAsync(RecallManagementTableId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取资源规则详细信息</para>
         /// </summary>
         /// 
@@ -10819,6 +13107,136 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetSceneWithOptionsAsync(SceneId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取服务详细信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceResponse
+        /// </returns>
+        public GetServiceResponse GetServiceWithOptions(string ServiceId, GetServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetService",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取服务详细信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceResponse
+        /// </returns>
+        public async Task<GetServiceResponse> GetServiceWithOptionsAsync(string ServiceId, GetServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetService",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取服务详细信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceResponse
+        /// </returns>
+        public GetServiceResponse GetService(string ServiceId, GetServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetServiceWithOptions(ServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取服务详细信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceResponse
+        /// </returns>
+        public async Task<GetServiceResponse> GetServiceAsync(string ServiceId, GetServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetServiceWithOptionsAsync(ServiceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14223,6 +16641,896 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取召回管理任务列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementJobsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementJobsResponse
+        /// </returns>
+        public ListRecallManagementJobsResponse ListRecallManagementJobsWithOptions(ListRecallManagementJobsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Condition))
+            {
+                query["Condition"] = request.Condition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRecallManagementJobs",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementjobs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRecallManagementJobsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理任务列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementJobsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementJobsResponse
+        /// </returns>
+        public async Task<ListRecallManagementJobsResponse> ListRecallManagementJobsWithOptionsAsync(ListRecallManagementJobsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Condition))
+            {
+                query["Condition"] = request.Condition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRecallManagementJobs",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementjobs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRecallManagementJobsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理任务列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementJobsResponse
+        /// </returns>
+        public ListRecallManagementJobsResponse ListRecallManagementJobs(ListRecallManagementJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListRecallManagementJobsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理任务列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementJobsResponse
+        /// </returns>
+        public async Task<ListRecallManagementJobsResponse> ListRecallManagementJobsAsync(ListRecallManagementJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListRecallManagementJobsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理服务下的版本列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementServiceVersionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementServiceVersionsResponse
+        /// </returns>
+        public ListRecallManagementServiceVersionsResponse ListRecallManagementServiceVersionsWithOptions(string RecallManagementServiceId, ListRecallManagementServiceVersionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRecallManagementServiceVersions",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/versions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRecallManagementServiceVersionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理服务下的版本列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementServiceVersionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementServiceVersionsResponse
+        /// </returns>
+        public async Task<ListRecallManagementServiceVersionsResponse> ListRecallManagementServiceVersionsWithOptionsAsync(string RecallManagementServiceId, ListRecallManagementServiceVersionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRecallManagementServiceVersions",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/versions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRecallManagementServiceVersionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理服务下的版本列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementServiceVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementServiceVersionsResponse
+        /// </returns>
+        public ListRecallManagementServiceVersionsResponse ListRecallManagementServiceVersions(string RecallManagementServiceId, ListRecallManagementServiceVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListRecallManagementServiceVersionsWithOptions(RecallManagementServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理服务下的版本列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementServiceVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementServiceVersionsResponse
+        /// </returns>
+        public async Task<ListRecallManagementServiceVersionsResponse> ListRecallManagementServiceVersionsAsync(string RecallManagementServiceId, ListRecallManagementServiceVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListRecallManagementServiceVersionsWithOptionsAsync(RecallManagementServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理服务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementServicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementServicesResponse
+        /// </returns>
+        public ListRecallManagementServicesResponse ListRecallManagementServicesWithOptions(ListRecallManagementServicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRecallManagementServices",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRecallManagementServicesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理服务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementServicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementServicesResponse
+        /// </returns>
+        public async Task<ListRecallManagementServicesResponse> ListRecallManagementServicesWithOptionsAsync(ListRecallManagementServicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRecallManagementServices",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRecallManagementServicesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理服务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementServicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementServicesResponse
+        /// </returns>
+        public ListRecallManagementServicesResponse ListRecallManagementServices(ListRecallManagementServicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListRecallManagementServicesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理服务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementServicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementServicesResponse
+        /// </returns>
+        public async Task<ListRecallManagementServicesResponse> ListRecallManagementServicesAsync(ListRecallManagementServicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListRecallManagementServicesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理表版本列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementTableVersionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementTableVersionsResponse
+        /// </returns>
+        public ListRecallManagementTableVersionsResponse ListRecallManagementTableVersionsWithOptions(string RecallManagementTableId, ListRecallManagementTableVersionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRecallManagementTableVersions",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementtables/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementTableId) + "/versions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRecallManagementTableVersionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理表版本列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementTableVersionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementTableVersionsResponse
+        /// </returns>
+        public async Task<ListRecallManagementTableVersionsResponse> ListRecallManagementTableVersionsWithOptionsAsync(string RecallManagementTableId, ListRecallManagementTableVersionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRecallManagementTableVersions",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementtables/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementTableId) + "/versions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRecallManagementTableVersionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理表版本列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementTableVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementTableVersionsResponse
+        /// </returns>
+        public ListRecallManagementTableVersionsResponse ListRecallManagementTableVersions(string RecallManagementTableId, ListRecallManagementTableVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListRecallManagementTableVersionsWithOptions(RecallManagementTableId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理表版本列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementTableVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementTableVersionsResponse
+        /// </returns>
+        public async Task<ListRecallManagementTableVersionsResponse> ListRecallManagementTableVersionsAsync(string RecallManagementTableId, ListRecallManagementTableVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListRecallManagementTableVersionsWithOptionsAsync(RecallManagementTableId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理表列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementTablesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementTablesResponse
+        /// </returns>
+        public ListRecallManagementTablesResponse ListRecallManagementTablesWithOptions(ListRecallManagementTablesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRecallManagementTables",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementtables",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRecallManagementTablesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理表列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementTablesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementTablesResponse
+        /// </returns>
+        public async Task<ListRecallManagementTablesResponse> ListRecallManagementTablesWithOptionsAsync(ListRecallManagementTablesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRecallManagementTables",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementtables",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRecallManagementTablesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理表列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementTablesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementTablesResponse
+        /// </returns>
+        public ListRecallManagementTablesResponse ListRecallManagementTables(ListRecallManagementTablesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListRecallManagementTablesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取召回管理表列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecallManagementTablesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecallManagementTablesResponse
+        /// </returns>
+        public async Task<ListRecallManagementTablesResponse> ListRecallManagementTablesAsync(ListRecallManagementTablesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListRecallManagementTablesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取资源规则列表</para>
         /// </summary>
         /// 
@@ -15811,6 +19119,136 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>下线召回管理服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OfflineRecallManagementServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineRecallManagementServiceResponse
+        /// </returns>
+        public OfflineRecallManagementServiceResponse OfflineRecallManagementServiceWithOptions(string RecallManagementServiceId, OfflineRecallManagementServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OfflineRecallManagementService",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/action/offline",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OfflineRecallManagementServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下线召回管理服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OfflineRecallManagementServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineRecallManagementServiceResponse
+        /// </returns>
+        public async Task<OfflineRecallManagementServiceResponse> OfflineRecallManagementServiceWithOptionsAsync(string RecallManagementServiceId, OfflineRecallManagementServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OfflineRecallManagementService",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/action/offline",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OfflineRecallManagementServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下线召回管理服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OfflineRecallManagementServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineRecallManagementServiceResponse
+        /// </returns>
+        public OfflineRecallManagementServiceResponse OfflineRecallManagementService(string RecallManagementServiceId, OfflineRecallManagementServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return OfflineRecallManagementServiceWithOptions(RecallManagementServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下线召回管理服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OfflineRecallManagementServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineRecallManagementServiceResponse
+        /// </returns>
+        public async Task<OfflineRecallManagementServiceResponse> OfflineRecallManagementServiceAsync(string RecallManagementServiceId, OfflineRecallManagementServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await OfflineRecallManagementServiceWithOptionsAsync(RecallManagementServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>上线实验</para>
         /// </summary>
         /// 
@@ -16197,6 +19635,290 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await OnlineLaboratoryWithOptionsAsync(LaboratoryId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上线召回管理服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OnlineRecallManagementServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OnlineRecallManagementServiceResponse
+        /// </returns>
+        public OnlineRecallManagementServiceResponse OnlineRecallManagementServiceWithOptions(string RecallManagementServiceId, OnlineRecallManagementServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OnlineRecallManagementService",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/action/online",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OnlineRecallManagementServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上线召回管理服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OnlineRecallManagementServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OnlineRecallManagementServiceResponse
+        /// </returns>
+        public async Task<OnlineRecallManagementServiceResponse> OnlineRecallManagementServiceWithOptionsAsync(string RecallManagementServiceId, OnlineRecallManagementServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OnlineRecallManagementService",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/action/online",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OnlineRecallManagementServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上线召回管理服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OnlineRecallManagementServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OnlineRecallManagementServiceResponse
+        /// </returns>
+        public OnlineRecallManagementServiceResponse OnlineRecallManagementService(string RecallManagementServiceId, OnlineRecallManagementServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return OnlineRecallManagementServiceWithOptions(RecallManagementServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上线召回管理服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OnlineRecallManagementServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OnlineRecallManagementServiceResponse
+        /// </returns>
+        public async Task<OnlineRecallManagementServiceResponse> OnlineRecallManagementServiceAsync(string RecallManagementServiceId, OnlineRecallManagementServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await OnlineRecallManagementServiceWithOptionsAsync(RecallManagementServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将maxcompute的表同步到召回引擎中。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PublishRecallManagementTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishRecallManagementTableResponse
+        /// </returns>
+        public PublishRecallManagementTableResponse PublishRecallManagementTableWithOptions(string RecallManagementTableId, PublishRecallManagementTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                body["Mode"] = request.Mode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Partition))
+            {
+                body["Partition"] = request.Partition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkipThresholdCheck))
+            {
+                body["SkipThresholdCheck"] = request.SkipThresholdCheck;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PublishRecallManagementTable",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementtables/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementTableId) + "/action/publish",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PublishRecallManagementTableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将maxcompute的表同步到召回引擎中。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PublishRecallManagementTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishRecallManagementTableResponse
+        /// </returns>
+        public async Task<PublishRecallManagementTableResponse> PublishRecallManagementTableWithOptionsAsync(string RecallManagementTableId, PublishRecallManagementTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                body["Mode"] = request.Mode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Partition))
+            {
+                body["Partition"] = request.Partition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkipThresholdCheck))
+            {
+                body["SkipThresholdCheck"] = request.SkipThresholdCheck;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PublishRecallManagementTable",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementtables/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementTableId) + "/action/publish",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PublishRecallManagementTableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将maxcompute的表同步到召回引擎中。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PublishRecallManagementTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishRecallManagementTableResponse
+        /// </returns>
+        public PublishRecallManagementTableResponse PublishRecallManagementTable(string RecallManagementTableId, PublishRecallManagementTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PublishRecallManagementTableWithOptions(RecallManagementTableId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将maxcompute的表同步到召回引擎中。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PublishRecallManagementTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishRecallManagementTableResponse
+        /// </returns>
+        public async Task<PublishRecallManagementTableResponse> PublishRecallManagementTableAsync(string RecallManagementTableId, PublishRecallManagementTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PublishRecallManagementTableWithOptionsAsync(RecallManagementTableId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -20669,6 +24391,642 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新召回管理初始化配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRecallManagementConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecallManagementConfigResponse
+        /// </returns>
+        public UpdateRecallManagementConfigResponse UpdateRecallManagementConfigWithOptions(UpdateRecallManagementConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkConfigs))
+            {
+                body["NetworkConfigs"] = request.NetworkConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                body["Password"] = request.Password;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRecallManagementConfig",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementconfigs",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRecallManagementConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新召回管理初始化配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRecallManagementConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecallManagementConfigResponse
+        /// </returns>
+        public async Task<UpdateRecallManagementConfigResponse> UpdateRecallManagementConfigWithOptionsAsync(UpdateRecallManagementConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkConfigs))
+            {
+                body["NetworkConfigs"] = request.NetworkConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                body["Password"] = request.Password;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRecallManagementConfig",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementconfigs",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRecallManagementConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新召回管理初始化配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRecallManagementConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecallManagementConfigResponse
+        /// </returns>
+        public UpdateRecallManagementConfigResponse UpdateRecallManagementConfig(UpdateRecallManagementConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateRecallManagementConfigWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新召回管理初始化配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRecallManagementConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecallManagementConfigResponse
+        /// </returns>
+        public async Task<UpdateRecallManagementConfigResponse> UpdateRecallManagementConfigAsync(UpdateRecallManagementConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateRecallManagementConfigWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新召回管理服务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRecallManagementServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecallManagementServiceResponse
+        /// </returns>
+        public UpdateRecallManagementServiceResponse UpdateRecallManagementServiceWithOptions(string RecallManagementServiceId, UpdateRecallManagementServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRecallManagementService",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRecallManagementServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新召回管理服务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRecallManagementServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecallManagementServiceResponse
+        /// </returns>
+        public async Task<UpdateRecallManagementServiceResponse> UpdateRecallManagementServiceWithOptionsAsync(string RecallManagementServiceId, UpdateRecallManagementServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRecallManagementService",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRecallManagementServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新召回管理服务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRecallManagementServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecallManagementServiceResponse
+        /// </returns>
+        public UpdateRecallManagementServiceResponse UpdateRecallManagementService(string RecallManagementServiceId, UpdateRecallManagementServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateRecallManagementServiceWithOptions(RecallManagementServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新召回管理服务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRecallManagementServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecallManagementServiceResponse
+        /// </returns>
+        public async Task<UpdateRecallManagementServiceResponse> UpdateRecallManagementServiceAsync(string RecallManagementServiceId, UpdateRecallManagementServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateRecallManagementServiceWithOptionsAsync(RecallManagementServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新召回管理服务版本配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRecallManagementServiceVersionConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecallManagementServiceVersionConfigResponse
+        /// </returns>
+        public UpdateRecallManagementServiceVersionConfigResponse UpdateRecallManagementServiceVersionConfigWithOptions(string RecallManagementServiceId, string RecallManagementServiceVersionId, string RecallManagementServiceVersionConfigId, UpdateRecallManagementServiceVersionConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
+            {
+                body["ConfigType"] = request.ConfigType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MergeConfig))
+            {
+                body["MergeConfig"] = request.MergeConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecallConfig))
+            {
+                body["RecallConfig"] = request.RecallConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRecallManagementServiceVersionConfig",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceVersionId) + "/configs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceVersionConfigId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRecallManagementServiceVersionConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新召回管理服务版本配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRecallManagementServiceVersionConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecallManagementServiceVersionConfigResponse
+        /// </returns>
+        public async Task<UpdateRecallManagementServiceVersionConfigResponse> UpdateRecallManagementServiceVersionConfigWithOptionsAsync(string RecallManagementServiceId, string RecallManagementServiceVersionId, string RecallManagementServiceVersionConfigId, UpdateRecallManagementServiceVersionConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
+            {
+                body["ConfigType"] = request.ConfigType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MergeConfig))
+            {
+                body["MergeConfig"] = request.MergeConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecallConfig))
+            {
+                body["RecallConfig"] = request.RecallConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRecallManagementServiceVersionConfig",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementservices/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceVersionId) + "/configs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementServiceVersionConfigId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRecallManagementServiceVersionConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新召回管理服务版本配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRecallManagementServiceVersionConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecallManagementServiceVersionConfigResponse
+        /// </returns>
+        public UpdateRecallManagementServiceVersionConfigResponse UpdateRecallManagementServiceVersionConfig(string RecallManagementServiceId, string RecallManagementServiceVersionId, string RecallManagementServiceVersionConfigId, UpdateRecallManagementServiceVersionConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateRecallManagementServiceVersionConfigWithOptions(RecallManagementServiceId, RecallManagementServiceVersionId, RecallManagementServiceVersionConfigId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新召回管理服务版本配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRecallManagementServiceVersionConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecallManagementServiceVersionConfigResponse
+        /// </returns>
+        public async Task<UpdateRecallManagementServiceVersionConfigResponse> UpdateRecallManagementServiceVersionConfigAsync(string RecallManagementServiceId, string RecallManagementServiceVersionId, string RecallManagementServiceVersionConfigId, UpdateRecallManagementServiceVersionConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateRecallManagementServiceVersionConfigWithOptionsAsync(RecallManagementServiceId, RecallManagementServiceVersionId, RecallManagementServiceVersionConfigId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新召回管理表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRecallManagementTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecallManagementTableResponse
+        /// </returns>
+        public UpdateRecallManagementTableResponse UpdateRecallManagementTableWithOptions(string RecallManagementTableId, UpdateRecallManagementTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDataSizeFluctuationThreshold))
+            {
+                body["EnableDataSizeFluctuationThreshold"] = request.EnableDataSizeFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableRowCountFluctuationThreshold))
+            {
+                body["EnableRowCountFluctuationThreshold"] = request.EnableRowCountFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexVersionId))
+            {
+                body["IndexVersionId"] = request.IndexVersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDataSizeFluctuationThreshold))
+            {
+                body["MaxDataSizeFluctuationThreshold"] = request.MaxDataSizeFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxRowCountFluctuationThreshold))
+            {
+                body["MaxRowCountFluctuationThreshold"] = request.MaxRowCountFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDataSizeFluctuationThreshold))
+            {
+                body["MinDataSizeFluctuationThreshold"] = request.MinDataSizeFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinRowCountFluctuationThreshold))
+            {
+                body["MinRowCountFluctuationThreshold"] = request.MinRowCountFluctuationThreshold;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRecallManagementTable",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementtables/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementTableId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRecallManagementTableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新召回管理表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRecallManagementTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecallManagementTableResponse
+        /// </returns>
+        public async Task<UpdateRecallManagementTableResponse> UpdateRecallManagementTableWithOptionsAsync(string RecallManagementTableId, UpdateRecallManagementTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDataSizeFluctuationThreshold))
+            {
+                body["EnableDataSizeFluctuationThreshold"] = request.EnableDataSizeFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableRowCountFluctuationThreshold))
+            {
+                body["EnableRowCountFluctuationThreshold"] = request.EnableRowCountFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexVersionId))
+            {
+                body["IndexVersionId"] = request.IndexVersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDataSizeFluctuationThreshold))
+            {
+                body["MaxDataSizeFluctuationThreshold"] = request.MaxDataSizeFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxRowCountFluctuationThreshold))
+            {
+                body["MaxRowCountFluctuationThreshold"] = request.MaxRowCountFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDataSizeFluctuationThreshold))
+            {
+                body["MinDataSizeFluctuationThreshold"] = request.MinDataSizeFluctuationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinRowCountFluctuationThreshold))
+            {
+                body["MinRowCountFluctuationThreshold"] = request.MinRowCountFluctuationThreshold;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRecallManagementTable",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/recallmanagementtables/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RecallManagementTableId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRecallManagementTableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新召回管理表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRecallManagementTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecallManagementTableResponse
+        /// </returns>
+        public UpdateRecallManagementTableResponse UpdateRecallManagementTable(string RecallManagementTableId, UpdateRecallManagementTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateRecallManagementTableWithOptions(RecallManagementTableId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新召回管理表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRecallManagementTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRecallManagementTableResponse
+        /// </returns>
+        public async Task<UpdateRecallManagementTableResponse> UpdateRecallManagementTableAsync(string RecallManagementTableId, UpdateRecallManagementTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateRecallManagementTableWithOptionsAsync(RecallManagementTableId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取资源规则列表</para>
         /// </summary>
         /// 
@@ -21695,6 +26053,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["StatisBaeaviorConditionArray"] = request.StatisBaeaviorConditionArray;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatisBehaviorConditionArray))
+            {
+                body["StatisBehaviorConditionArray"] = request.StatisBehaviorConditionArray;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatisBehaviorConditionExpress))
             {
                 body["StatisBehaviorConditionExpress"] = request.StatisBehaviorConditionExpress;
@@ -21852,6 +26214,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatisBaeaviorConditionArray))
             {
                 body["StatisBaeaviorConditionArray"] = request.StatisBaeaviorConditionArray;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatisBehaviorConditionArray))
+            {
+                body["StatisBehaviorConditionArray"] = request.StatisBehaviorConditionArray;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatisBehaviorConditionExpress))
             {
