@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeClustersV1Request : TeaModel {
         /// <summary>
+        /// <para>The name of the ECS instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eck-xxxxxxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-58</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
+        /// <para>System specified parameters. Set the value to <b>DescribeClustersV1</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-eck-name</para>
         /// </summary>

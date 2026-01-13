@@ -15719,7 +15719,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群列表</para>
+        /// <para>Queries a list of clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15769,7 +15769,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群列表</para>
+        /// <para>Queries a list of clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15819,7 +15819,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群列表</para>
+        /// <para>Queries a list of clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15837,7 +15837,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群列表</para>
+        /// <para>Queries a list of clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31647,6 +31647,100 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ImportKeyPairWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为当前用户创建ENS的服务关联角色（SLR），管控资源。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InitializeENSECKServiceRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitializeENSECKServiceRoleResponse
+        /// </returns>
+        public InitializeENSECKServiceRoleResponse InitializeENSECKServiceRoleWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InitializeENSECKServiceRole",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InitializeENSECKServiceRoleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为当前用户创建ENS的服务关联角色（SLR），管控资源。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InitializeENSECKServiceRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitializeENSECKServiceRoleResponse
+        /// </returns>
+        public async Task<InitializeENSECKServiceRoleResponse> InitializeENSECKServiceRoleWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InitializeENSECKServiceRole",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InitializeENSECKServiceRoleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为当前用户创建ENS的服务关联角色（SLR），管控资源。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// InitializeENSECKServiceRoleResponse
+        /// </returns>
+        public InitializeENSECKServiceRoleResponse InitializeENSECKServiceRole()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return InitializeENSECKServiceRoleWithOptions(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为当前用户创建ENS的服务关联角色（SLR），管控资源。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// InitializeENSECKServiceRoleResponse
+        /// </returns>
+        public async Task<InitializeENSECKServiceRoleResponse> InitializeENSECKServiceRoleAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await InitializeENSECKServiceRoleWithOptionsAsync(runtime);
         }
 
         /// <term><b>Summary:</b></term>
