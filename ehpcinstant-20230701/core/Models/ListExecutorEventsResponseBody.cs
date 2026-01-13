@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class ListExecutorEventsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of the running event.</para>
+        /// </summary>
         [NameInMap("ExecutorEventList")]
         [Validation(Required=false)]
         public List<ListExecutorEventsResponseBodyExecutorEventList> ExecutorEventList { get; set; }
         public class ListExecutorEventsResponseBodyExecutorEventList : TeaModel {
             /// <summary>
+            /// <para>The content of the running event.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Executor created successfully</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>The ID of the executor. The format is JobId-TaskName-ArrayIndex.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>job-xxxx-Task0-1</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string ExecutorId { get; set; }
 
             /// <summary>
+            /// <para>The job ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>job-xxxx</para>
             /// </summary>
@@ -38,6 +47,13 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string JobId { get; set; }
 
             /// <summary>
+            /// <para>The level of the running event. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Normal</description></item>
+            /// <item><description>Warning</description></item>
+            /// <item><description>Error</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
             /// </summary>
@@ -46,6 +62,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string Level { get; set; }
 
             /// <summary>
+            /// <para>The event of the running event.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-02-20 10:04:13</para>
             /// </summary>
@@ -56,6 +74,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         }
 
         /// <summary>
+        /// <para>The page number of the returned page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -64,6 +84,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50</para>
         /// </summary>
@@ -72,6 +94,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>896D338C-E4F4-41EC-A154-D605E5DE****</para>
         /// </summary>
@@ -80,6 +104,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>40</para>
         /// </summary>

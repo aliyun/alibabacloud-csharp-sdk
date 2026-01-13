@@ -47,6 +47,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public string Enabled { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>60</para>
+        /// </summary>
+        [NameInMap("IntervalMinutes")]
+        [Validation(Required=false)]
+        public int? IntervalMinutes { get; set; }
+
     }
 
 }

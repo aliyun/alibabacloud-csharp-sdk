@@ -267,6 +267,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
             {
                 query["DesiredCapacity"] = request.DesiredCapacity;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntervalMinutes))
+            {
+                query["IntervalMinutes"] = request.IntervalMinutes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
             {
                 query["Level"] = request.Level;
@@ -359,6 +363,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesiredCapacity))
             {
                 query["DesiredCapacity"] = request.DesiredCapacity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntervalMinutes))
+            {
+                query["IntervalMinutes"] = request.IntervalMinutes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
             {
@@ -2611,8 +2619,13 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Executor的事件信息</para>
+        /// <para>Queries the running event list of one or more executers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries job executor information.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListExecutorEventsRequest
@@ -2667,8 +2680,13 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Executor的事件信息</para>
+        /// <para>Queries the running event list of one or more executers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries job executor information.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListExecutorEventsRequest
@@ -2723,8 +2741,13 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Executor的事件信息</para>
+        /// <para>Queries the running event list of one or more executers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries job executor information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListExecutorEventsRequest
@@ -2741,8 +2764,13 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Executor的事件信息</para>
+        /// <para>Queries the running event list of one or more executers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries job executor information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListExecutorEventsRequest
@@ -4300,6 +4328,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
             {
                 query["Enabled"] = request.Enabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntervalMinutes))
+            {
+                query["IntervalMinutes"] = request.IntervalMinutes;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4349,6 +4381,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
             {
                 query["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntervalMinutes))
+            {
+                query["IntervalMinutes"] = request.IntervalMinutes;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

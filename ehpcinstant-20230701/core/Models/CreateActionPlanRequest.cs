@@ -55,6 +55,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public double? DesiredCapacity { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>60</para>
+        /// </summary>
+        [NameInMap("IntervalMinutes")]
+        [Validation(Required=false)]
+        public int? IntervalMinutes { get; set; }
+
+        /// <summary>
         /// <para>The computing power level. This value is valid only when the resource type is Economic. The following disk categories are supported:</para>
         /// <list type="bullet">
         /// <item><description>General</description></item>
