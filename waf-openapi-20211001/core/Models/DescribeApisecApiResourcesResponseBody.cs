@@ -229,11 +229,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public long? EventNum { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The sample APIs.</para>
             /// </summary>
             [NameInMap("Examples")]
             [Validation(Required=false)]
+            [Obsolete]
             public List<string> Examples { get; set; }
 
             /// <summary>

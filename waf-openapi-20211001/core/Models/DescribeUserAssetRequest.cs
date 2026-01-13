@@ -43,6 +43,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string DataType { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The time at which the API was called. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
         /// <remarks>
@@ -54,6 +56,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// </summary>
         [NameInMap("Days")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Days { get; set; }
 
         /// <summary>

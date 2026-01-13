@@ -56,6 +56,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public long? AbnormalMedium { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The time at which the API was called. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
             /// <remarks>
@@ -67,6 +69,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// </summary>
             [NameInMap("TimeStamp")]
             [Validation(Required=false)]
+            [Obsolete]
             public long? TimeStamp { get; set; }
 
             /// <summary>

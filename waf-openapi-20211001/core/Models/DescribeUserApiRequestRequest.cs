@@ -9,6 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeUserApiRequestRequest : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The API.</para>
         /// <remarks>
@@ -20,6 +22,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// </summary>
         [NameInMap("ApiFormat")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ApiFormat { get; set; }
 
         /// <summary>
@@ -46,6 +49,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The domain name or IP address of the API.</para>
         /// <remarks>
@@ -57,6 +62,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Domain { get; set; }
 
         /// <summary>

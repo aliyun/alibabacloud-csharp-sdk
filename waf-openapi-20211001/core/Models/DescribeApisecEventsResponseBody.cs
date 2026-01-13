@@ -72,6 +72,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string AttackClient { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The information about the number of attacks. The value of this parameter is a JSON string that contains multiple parameters. Key indicates the timestamp in seconds, and Value indicates the number of attacks.</para>
             /// 
@@ -80,8 +82,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// </summary>
             [NameInMap("AttackCntInfo")]
             [Validation(Required=false)]
+            [Obsolete]
             public string AttackCntInfo { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The source IP address of the attack.</para>
             /// 
@@ -90,8 +95,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// </summary>
             [NameInMap("AttackIp")]
             [Validation(Required=false)]
+            [Obsolete]
             public string AttackIp { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The information about the attack source IP address. The value of this parameter is a JSON string that contains multiple parameters. The value includes the following parameters:</para>
             /// <list type="bullet">
@@ -106,13 +114,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// </summary>
             [NameInMap("AttackIpInfo")]
             [Validation(Required=false)]
+            [Obsolete]
             public string AttackIpInfo { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The source IP addresses of the attacks.</para>
             /// </summary>
             [NameInMap("AttackIps")]
             [Validation(Required=false)]
+            [Obsolete]
             public List<string> AttackIps { get; set; }
 
             [NameInMap("AttackerList")]
@@ -139,6 +151,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string EventId { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The details of the event. The value of this parameter is a JSON string that contains multiple parameters. The value includes the following parameters:</para>
             /// <list type="bullet">
@@ -152,6 +166,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// </summary>
             [NameInMap("EventInfo")]
             [Validation(Required=false)]
+            [Obsolete]
             public string EventInfo { get; set; }
 
             /// <summary>
@@ -250,6 +265,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string RemoteRegion { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The sample API request. The value of this parameter is a JSON string that contains multiple parameters.</para>
             /// 
@@ -258,8 +275,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// </summary>
             [NameInMap("RequestData")]
             [Validation(Required=false)]
+            [Obsolete]
             public string RequestData { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The sample API response. The value of this parameter is a JSON string that contains multiple parameters.</para>
             /// 
@@ -268,6 +288,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// </summary>
             [NameInMap("ResponseData")]
             [Validation(Required=false)]
+            [Obsolete]
             public string ResponseData { get; set; }
 
             /// <summary>

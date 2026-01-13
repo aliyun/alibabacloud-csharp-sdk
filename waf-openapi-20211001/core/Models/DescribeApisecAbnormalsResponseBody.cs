@@ -133,11 +133,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public long? DiscoverTime { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The risk-related samples.</para>
             /// </summary>
             [NameInMap("Examples")]
             [Validation(Required=false)]
+            [Obsolete]
             public List<string> Examples { get; set; }
 
             /// <summary>

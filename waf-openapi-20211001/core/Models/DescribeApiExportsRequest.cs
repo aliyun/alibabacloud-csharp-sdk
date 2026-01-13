@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Language type. Valid values:</para>
         /// <list type="bullet">
@@ -35,6 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Lang { get; set; }
 
         /// <summary>
