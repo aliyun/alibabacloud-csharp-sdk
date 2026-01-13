@@ -21041,6 +21041,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["MemorySize"] = request.MemorySize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
             {
                 query["OrderBy"] = request.OrderBy;
@@ -21159,6 +21163,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemorySize))
             {
                 query["MemorySize"] = request.MemorySize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
             {
@@ -23402,6 +23410,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["DesktopName"] = request.DesktopName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopStatusList))
+            {
+                query["DesktopStatusList"] = request.DesktopStatusList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopType))
             {
                 query["DesktopType"] = request.DesktopType;
@@ -23413,6 +23425,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
             {
                 query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeDesktopStatusList))
+            {
+                query["ExcludeDesktopStatusList"] = request.ExcludeDesktopStatusList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
             {
@@ -23510,6 +23526,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["DesktopName"] = request.DesktopName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopStatusList))
+            {
+                query["DesktopStatusList"] = request.DesktopStatusList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopType))
             {
                 query["DesktopType"] = request.DesktopType;
@@ -23521,6 +23541,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
             {
                 query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeDesktopStatusList))
+            {
+                query["ExcludeDesktopStatusList"] = request.ExcludeDesktopStatusList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
             {

@@ -166,6 +166,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? MemorySize { get; set; }
 
+        [NameInMap("OfficeSiteId")]
+        [Validation(Required=false)]
+        public string OfficeSiteId { get; set; }
+
         /// <summary>
         /// <para>The sorting field. If this parameter is not provided, results are sorted by creation time in descending order.</para>
         /// <para>Valid values:</para>

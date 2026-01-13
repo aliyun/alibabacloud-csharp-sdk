@@ -125,6 +125,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DiskStatus { get; set; }
 
+            [NameInMap("EnvId")]
+            [Validation(Required=false)]
+            public string EnvId { get; set; }
+
+            [NameInMap("EnvType")]
+            [Validation(Required=false)]
+            public string EnvType { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>Windows</para>

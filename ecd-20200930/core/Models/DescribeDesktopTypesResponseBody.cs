@@ -60,6 +60,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DesktopTypeStatus { get; set; }
 
+            [NameInMap("EnvId")]
+            [Validation(Required=false)]
+            public string EnvId { get; set; }
+
+            [NameInMap("EnvType")]
+            [Validation(Required=false)]
+            public string EnvType { get; set; }
+
             /// <summary>
             /// <para>The number of GPUs.</para>
             /// 

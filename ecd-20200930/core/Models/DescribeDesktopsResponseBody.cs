@@ -391,6 +391,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string EntraDomainName { get; set; }
 
+            [NameInMap("EnvId")]
+            [Validation(Required=false)]
+            public string EnvId { get; set; }
+
+            [NameInMap("EnvType")]
+            [Validation(Required=false)]
+            public string EnvType { get; set; }
+
             /// <summary>
             /// <para>The time when a subscription cloud computer expired.</para>
             /// 

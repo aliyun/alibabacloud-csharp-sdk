@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DesktopName { get; set; }
 
+        [NameInMap("DesktopStatusList")]
+        [Validation(Required=false)]
+        public List<string> DesktopStatusList { get; set; }
+
         /// <summary>
         /// <para>The cloud computer type. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the IDs of the specifications supported by the cloud computer.</para>
         /// 
@@ -58,6 +62,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public string EndUserId { get; set; }
+
+        [NameInMap("ExcludeDesktopStatusList")]
+        [Validation(Required=false)]
+        public List<string> ExcludeDesktopStatusList { get; set; }
 
         /// <summary>
         /// <para>The office network IDs.</para>
