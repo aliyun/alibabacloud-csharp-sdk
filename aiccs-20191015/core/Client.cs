@@ -18361,6 +18361,158 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await QueryHotlineNumberWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询呼入CallId</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryInboundCallIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryInboundCallIdResponse
+        /// </returns>
+        public QueryInboundCallIdResponse QueryInboundCallIdWithOptions(QueryInboundCallIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallDate))
+            {
+                query["CallDate"] = request.CallDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryInboundCallId",
+                Version = "2019-10-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryInboundCallIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询呼入CallId</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryInboundCallIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryInboundCallIdResponse
+        /// </returns>
+        public async Task<QueryInboundCallIdResponse> QueryInboundCallIdWithOptionsAsync(QueryInboundCallIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallDate))
+            {
+                query["CallDate"] = request.CallDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryInboundCallId",
+                Version = "2019-10-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryInboundCallIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询呼入CallId</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryInboundCallIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryInboundCallIdResponse
+        /// </returns>
+        public QueryInboundCallIdResponse QueryInboundCallId(QueryInboundCallIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryInboundCallIdWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询呼入CallId</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryInboundCallIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryInboundCallIdResponse
+        /// </returns>
+        public async Task<QueryInboundCallIdResponse> QueryInboundCallIdAsync(QueryInboundCallIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryInboundCallIdWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// QueryOutboundTaskRequest
         /// </param>
