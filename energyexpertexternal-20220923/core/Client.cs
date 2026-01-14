@@ -23,92 +23,210 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
             this._endpoint = GetEndpoint("energyexpertexternal", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
 
-        public Dictionary<string, object> _postOSSObject(string bucketName, Dictionary<string, object> data)
+        public Dictionary<string, object> _postOSSObject(string bucketName, Dictionary<string, object> data, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            TeaRequest request_ = new TeaRequest();
-            Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
-            string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-            string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
-            request_.Protocol = "HTTPS";
-            request_.Method = "POST";
-            request_.Pathname = "/";
-            request_.Headers = new Dictionary<string, string>
+            Dictionary<string, object> runtime_ = new Dictionary<string, object>
             {
-                {"host", host},
-                {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
-                {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
-            };
-            request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
-            request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
-            TeaResponse response_ = TeaCore.DoAction(request_);
-
-            Dictionary<string, object> respMap = null;
-            string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
-            if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
-            {
-                respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
-                Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
-                throw new TeaException(new Dictionary<string, object>
+                {"timeouted", "retry"},
+                {"key", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Key, _key)},
+                {"cert", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Cert, _cert)},
+                {"ca", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Ca, _ca)},
+                {"readTimeout", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.ReadTimeout, _readTimeout)},
+                {"connectTimeout", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.ConnectTimeout, _connectTimeout)},
+                {"httpProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.HttpProxy, _httpProxy)},
+                {"httpsProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.HttpsProxy, _httpsProxy)},
+                {"noProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.NoProxy, _noProxy)},
+                {"socks5Proxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Socks5Proxy, _socks5Proxy)},
+                {"socks5NetWork", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Socks5NetWork, _socks5NetWork)},
+                {"maxIdleConns", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.MaxIdleConns, _maxIdleConns)},
+                {"retry", new Dictionary<string, object>
                 {
-                    {"code", err.Get("Code")},
-                    {"message", err.Get("Message")},
-                    {"data", new Dictionary<string, object>
+                    {"retryable", runtime.Autoretry},
+                    {"maxAttempts", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.MaxAttempts, 3)},
+                }},
+                {"backoff", new Dictionary<string, object>
+                {
+                    {"policy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.BackoffPolicy, "no")},
+                    {"period", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.BackoffPeriod, 1)},
+                }},
+                {"ignoreSSL", AlibabaCloud.OpenApiClient.Client.DefaultAny(runtime.IgnoreSSL, false)},
+                {"tlsMinVersion", _tlsMinVersion},
+            };
+
+            TeaRequest _lastRequest = null;
+            Exception _lastException = null;
+            long _now = System.DateTime.Now.Millisecond;
+            int _retryTimes = 0;
+            while (TeaCore.AllowRetry((IDictionary) runtime_["retry"], _retryTimes, _now))
+            {
+                if (_retryTimes > 0)
+                {
+                    int backoffTime = TeaCore.GetBackoffTime((IDictionary)runtime_["backoff"], _retryTimes);
+                    if (backoffTime > 0)
                     {
-                        {"httpCode", response_.StatusCode},
-                        {"requestId", err.Get("RequestId")},
-                        {"hostId", err.Get("HostId")},
-                    }},
-                });
+                        TeaCore.Sleep(backoffTime);
+                    }
+                }
+                _retryTimes = _retryTimes + 1;
+                try
+                {
+                    TeaRequest request_ = new TeaRequest();
+                    Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
+                    string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
+                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    request_.Protocol = "HTTPS";
+                    request_.Method = "POST";
+                    request_.Pathname = "/";
+                    request_.Headers = new Dictionary<string, string>
+                    {
+                        {"host", host},
+                        {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
+                        {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
+                    };
+                    request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
+                    request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
+                    _lastRequest = request_;
+                    TeaResponse response_ = TeaCore.DoAction(request_, runtime_);
+
+                    Dictionary<string, object> respMap = null;
+                    string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
+                    if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
+                    {
+                        respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                        Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
+                        throw new TeaException(new Dictionary<string, object>
+                        {
+                            {"code", err.Get("Code")},
+                            {"message", err.Get("Message")},
+                            {"data", new Dictionary<string, object>
+                            {
+                                {"httpCode", response_.StatusCode},
+                                {"requestId", err.Get("RequestId")},
+                                {"hostId", err.Get("HostId")},
+                            }},
+                        });
+                    }
+                    respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                    return TeaConverter.merge<object>
+                    (
+                        respMap
+                    );
+                }
+                catch (Exception e)
+                {
+                    if (TeaCore.IsRetryable(e))
+                    {
+                        _lastException = e;
+                        continue;
+                    }
+                    throw e;
+                }
             }
-            respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
-            return TeaConverter.merge<object>
-            (
-                respMap
-            );
+
+            throw new TeaUnretryableException(_lastRequest, _lastException);
         }
 
-        public async Task<Dictionary<string, object>> _postOSSObjectAsync(string bucketName, Dictionary<string, object> data)
+        public async Task<Dictionary<string, object>> _postOSSObjectAsync(string bucketName, Dictionary<string, object> data, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            TeaRequest request_ = new TeaRequest();
-            Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
-            string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-            string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
-            request_.Protocol = "HTTPS";
-            request_.Method = "POST";
-            request_.Pathname = "/";
-            request_.Headers = new Dictionary<string, string>
+            Dictionary<string, object> runtime_ = new Dictionary<string, object>
             {
-                {"host", host},
-                {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
-                {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
-            };
-            request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
-            request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
-            TeaResponse response_ = await TeaCore.DoActionAsync(request_);
-
-            Dictionary<string, object> respMap = null;
-            string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
-            if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
-            {
-                respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
-                Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
-                throw new TeaException(new Dictionary<string, object>
+                {"timeouted", "retry"},
+                {"key", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Key, _key)},
+                {"cert", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Cert, _cert)},
+                {"ca", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Ca, _ca)},
+                {"readTimeout", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.ReadTimeout, _readTimeout)},
+                {"connectTimeout", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.ConnectTimeout, _connectTimeout)},
+                {"httpProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.HttpProxy, _httpProxy)},
+                {"httpsProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.HttpsProxy, _httpsProxy)},
+                {"noProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.NoProxy, _noProxy)},
+                {"socks5Proxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Socks5Proxy, _socks5Proxy)},
+                {"socks5NetWork", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Socks5NetWork, _socks5NetWork)},
+                {"maxIdleConns", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.MaxIdleConns, _maxIdleConns)},
+                {"retry", new Dictionary<string, object>
                 {
-                    {"code", err.Get("Code")},
-                    {"message", err.Get("Message")},
-                    {"data", new Dictionary<string, object>
+                    {"retryable", runtime.Autoretry},
+                    {"maxAttempts", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.MaxAttempts, 3)},
+                }},
+                {"backoff", new Dictionary<string, object>
+                {
+                    {"policy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.BackoffPolicy, "no")},
+                    {"period", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.BackoffPeriod, 1)},
+                }},
+                {"ignoreSSL", AlibabaCloud.OpenApiClient.Client.DefaultAny(runtime.IgnoreSSL, false)},
+                {"tlsMinVersion", _tlsMinVersion},
+            };
+
+            TeaRequest _lastRequest = null;
+            Exception _lastException = null;
+            long _now = System.DateTime.Now.Millisecond;
+            int _retryTimes = 0;
+            while (TeaCore.AllowRetry((IDictionary) runtime_["retry"], _retryTimes, _now))
+            {
+                if (_retryTimes > 0)
+                {
+                    int backoffTime = TeaCore.GetBackoffTime((IDictionary)runtime_["backoff"], _retryTimes);
+                    if (backoffTime > 0)
                     {
-                        {"httpCode", response_.StatusCode},
-                        {"requestId", err.Get("RequestId")},
-                        {"hostId", err.Get("HostId")},
-                    }},
-                });
+                        TeaCore.Sleep(backoffTime);
+                    }
+                }
+                _retryTimes = _retryTimes + 1;
+                try
+                {
+                    TeaRequest request_ = new TeaRequest();
+                    Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
+                    string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
+                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    request_.Protocol = "HTTPS";
+                    request_.Method = "POST";
+                    request_.Pathname = "/";
+                    request_.Headers = new Dictionary<string, string>
+                    {
+                        {"host", host},
+                        {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
+                        {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
+                    };
+                    request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
+                    request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
+                    _lastRequest = request_;
+                    TeaResponse response_ = await TeaCore.DoActionAsync(request_, runtime_);
+
+                    Dictionary<string, object> respMap = null;
+                    string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
+                    if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
+                    {
+                        respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                        Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
+                        throw new TeaException(new Dictionary<string, object>
+                        {
+                            {"code", err.Get("Code")},
+                            {"message", err.Get("Message")},
+                            {"data", new Dictionary<string, object>
+                            {
+                                {"httpCode", response_.StatusCode},
+                                {"requestId", err.Get("RequestId")},
+                                {"hostId", err.Get("HostId")},
+                            }},
+                        });
+                    }
+                    respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                    return TeaConverter.merge<object>
+                    (
+                        respMap
+                    );
+                }
+                catch (Exception e)
+                {
+                    if (TeaCore.IsRetryable(e))
+                    {
+                        _lastException = e;
+                        continue;
+                    }
+                    throw e;
+                }
             }
-            respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
-            return TeaConverter.merge<object>
-            (
-                respMap
-            );
+
+            throw new TeaUnretryableException(_lastRequest, _lastException);
         }
 
         public string GetEndpoint(string productId, string regionId, string endpointRule, string network, string suffix, Dictionary<string, string> endpointMap, string endpoint)
@@ -517,7 +635,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 analyzeVlRealtimeReq.FileUrl = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             AnalyzeVlRealtimeResponse analyzeVlRealtimeResp = AnalyzeVlRealtimeWithOptions(analyzeVlRealtimeReq, headers, runtime);
@@ -613,7 +731,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 analyzeVlRealtimeReq.FileUrl = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             AnalyzeVlRealtimeResponse analyzeVlRealtimeResp = await AnalyzeVlRealtimeWithOptionsAsync(analyzeVlRealtimeReq, headers, runtime);
@@ -1031,6 +1149,10 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentIds))
+            {
+                body["documentIds"] = request.DocumentIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Question))
             {
                 body["question"] = request.Question;
@@ -1090,6 +1212,10 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentIds))
+            {
+                body["documentIds"] = request.DocumentIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Question))
             {
                 body["question"] = request.Question;
@@ -1205,6 +1331,10 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentIds))
+            {
+                body["documentIds"] = request.DocumentIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Question))
             {
                 body["question"] = request.Question;
@@ -1264,6 +1394,10 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentIds))
+            {
+                body["documentIds"] = request.DocumentIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Question))
             {
                 body["question"] = request.Question;
@@ -7732,6 +7866,184 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>支持多文件夹ID或文件ID检索的RAG结果获取接口，供客户端自行加工结果并嵌入业务逻辑。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetrieveRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetrieveResponse
+        /// </returns>
+        public RetrieveResponse RetrieveWithOptions(RetrieveRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentIds))
+            {
+                body["documentIds"] = request.DocumentIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderIds))
+            {
+                body["folderIds"] = request.FolderIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreRetrieveTopK))
+            {
+                body["preRetrieveTopK"] = request.PreRetrieveTopK;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankerThreshold))
+            {
+                body["rerankerThreshold"] = request.RerankerThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
+            {
+                body["topK"] = request.TopK;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseReranker))
+            {
+                body["useReranker"] = request.UseReranker;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Retrieve",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/aidoc/knowledgebase/retrieve",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RetrieveResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>支持多文件夹ID或文件ID检索的RAG结果获取接口，供客户端自行加工结果并嵌入业务逻辑。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetrieveRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetrieveResponse
+        /// </returns>
+        public async Task<RetrieveResponse> RetrieveWithOptionsAsync(RetrieveRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentIds))
+            {
+                body["documentIds"] = request.DocumentIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderIds))
+            {
+                body["folderIds"] = request.FolderIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreRetrieveTopK))
+            {
+                body["preRetrieveTopK"] = request.PreRetrieveTopK;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankerThreshold))
+            {
+                body["rerankerThreshold"] = request.RerankerThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
+            {
+                body["topK"] = request.TopK;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseReranker))
+            {
+                body["useReranker"] = request.UseReranker;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Retrieve",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/aidoc/knowledgebase/retrieve",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RetrieveResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>支持多文件夹ID或文件ID检索的RAG结果获取接口，供客户端自行加工结果并嵌入业务逻辑。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetrieveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetrieveResponse
+        /// </returns>
+        public RetrieveResponse Retrieve(RetrieveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RetrieveWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>支持多文件夹ID或文件ID检索的RAG结果获取接口，供客户端自行加工结果并嵌入业务逻辑。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetrieveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetrieveResponse
+        /// </returns>
+        public async Task<RetrieveResponse> RetrieveAsync(RetrieveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RetrieveWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>[Important] This api is no longer maintained, please use the Chat api.</para>
         /// </summary>
         /// 
@@ -8389,7 +8701,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 submitDocExtractionTaskReq.FileUrl = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             SubmitDocExtractionTaskResponse submitDocExtractionTaskResp = SubmitDocExtractionTaskWithOptions(submitDocExtractionTaskReq, headers, runtime);
@@ -8485,7 +8797,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 submitDocExtractionTaskReq.FileUrl = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             SubmitDocExtractionTaskResponse submitDocExtractionTaskResp = await SubmitDocExtractionTaskWithOptionsAsync(submitDocExtractionTaskReq, headers, runtime);
@@ -8747,7 +9059,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 submitDocParsingTaskReq.FileUrl = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             SubmitDocParsingTaskResponse submitDocParsingTaskResp = SubmitDocParsingTaskWithOptions(submitDocParsingTaskReq, headers, runtime);
@@ -8843,7 +9155,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 submitDocParsingTaskReq.FileUrl = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             SubmitDocParsingTaskResponse submitDocParsingTaskResp = await SubmitDocParsingTaskWithOptionsAsync(submitDocParsingTaskReq, headers, runtime);
@@ -9109,7 +9421,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 submitDocumentAnalyzeJobReq.FileUrl = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             SubmitDocumentAnalyzeJobResponse submitDocumentAnalyzeJobResp = SubmitDocumentAnalyzeJobWithOptions(submitDocumentAnalyzeJobReq, headers, runtime);
@@ -9205,7 +9517,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 submitDocumentAnalyzeJobReq.FileUrl = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             SubmitDocumentAnalyzeJobResponse submitDocumentAnalyzeJobResp = await SubmitDocumentAnalyzeJobWithOptionsAsync(submitDocumentAnalyzeJobReq, headers, runtime);
@@ -9467,7 +9779,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 submitVLExtractionTaskReq.FileUrl = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             SubmitVLExtractionTaskResponse submitVLExtractionTaskResp = SubmitVLExtractionTaskWithOptions(submitVLExtractionTaskReq, headers, runtime);
@@ -9563,7 +9875,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 submitVLExtractionTaskReq.FileUrl = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             SubmitVLExtractionTaskResponse submitVLExtractionTaskResp = await SubmitVLExtractionTaskWithOptionsAsync(submitVLExtractionTaskReq, headers, runtime);

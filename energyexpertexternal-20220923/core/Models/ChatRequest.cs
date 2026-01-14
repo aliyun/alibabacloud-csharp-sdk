@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class ChatRequest : TeaModel {
+        [NameInMap("documentIds")]
+        [Validation(Required=false)]
+        public List<long?> DocumentIds { get; set; }
+
         /// <summary>
         /// <para>Q&amp;A content.</para>
         /// <para>This parameter is required.</para>
