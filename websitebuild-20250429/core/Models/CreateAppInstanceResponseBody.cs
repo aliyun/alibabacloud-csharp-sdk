@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             [Validation(Required=false)]
             public string OrderId { get; set; }
 
+            [NameInMap("SiteHost")]
+            [Validation(Required=false)]
+            public string SiteHost { get; set; }
+
         }
 
         /// <summary>
