@@ -39,8 +39,19 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加类目</para>
+        /// <para>Creates a category in the specified workspace to categorize and manage documents. You can create up to 1,000 categories in each workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You cannot use API to create structured table. To create a table, go to <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> in the console. You can associate a knowledge base with ApsaraDB for RDS to automatically update structured knowledge base. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>If you are using a RAM user, you must first obtain the OpenAPI management permissions (namely sfm:AddCategory) of Model Studio. For more information, see <a href="https://help.aliyun.com/document_detail/2848578.html">Grant OpenAPI permissions to a RAM user</a>. If you are using the Alibaba Cloud account, you do not need permissions. We recommend that you use <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">the latest version of the SDK</a> to call this operation.</description></item>
+        /// <item><description>You can create up to 1,000 categories in each workspace.</description></item>
+        /// <item><description>This interface is not idempotent.
+        /// <b>Throttling:</b> Throttling will be triggered if you call this operation frequently. Do not exceed 5 times per second. If throttling is triggered, try again later.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddCategoryRequest
@@ -93,8 +104,19 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加类目</para>
+        /// <para>Creates a category in the specified workspace to categorize and manage documents. You can create up to 1,000 categories in each workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You cannot use API to create structured table. To create a table, go to <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> in the console. You can associate a knowledge base with ApsaraDB for RDS to automatically update structured knowledge base. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>If you are using a RAM user, you must first obtain the OpenAPI management permissions (namely sfm:AddCategory) of Model Studio. For more information, see <a href="https://help.aliyun.com/document_detail/2848578.html">Grant OpenAPI permissions to a RAM user</a>. If you are using the Alibaba Cloud account, you do not need permissions. We recommend that you use <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">the latest version of the SDK</a> to call this operation.</description></item>
+        /// <item><description>You can create up to 1,000 categories in each workspace.</description></item>
+        /// <item><description>This interface is not idempotent.
+        /// <b>Throttling:</b> Throttling will be triggered if you call this operation frequently. Do not exceed 5 times per second. If throttling is triggered, try again later.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddCategoryRequest
@@ -147,8 +169,19 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加类目</para>
+        /// <para>Creates a category in the specified workspace to categorize and manage documents. You can create up to 1,000 categories in each workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You cannot use API to create structured table. To create a table, go to <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> in the console. You can associate a knowledge base with ApsaraDB for RDS to automatically update structured knowledge base. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>If you are using a RAM user, you must first obtain the OpenAPI management permissions (namely sfm:AddCategory) of Model Studio. For more information, see <a href="https://help.aliyun.com/document_detail/2848578.html">Grant OpenAPI permissions to a RAM user</a>. If you are using the Alibaba Cloud account, you do not need permissions. We recommend that you use <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">the latest version of the SDK</a> to call this operation.</description></item>
+        /// <item><description>You can create up to 1,000 categories in each workspace.</description></item>
+        /// <item><description>This interface is not idempotent.
+        /// <b>Throttling:</b> Throttling will be triggered if you call this operation frequently. Do not exceed 5 times per second. If throttling is triggered, try again later.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddCategoryRequest
@@ -166,8 +199,19 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加类目</para>
+        /// <para>Creates a category in the specified workspace to categorize and manage documents. You can create up to 1,000 categories in each workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You cannot use API to create structured table. To create a table, go to <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> in the console. You can associate a knowledge base with ApsaraDB for RDS to automatically update structured knowledge base. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>If you are using a RAM user, you must first obtain the OpenAPI management permissions (namely sfm:AddCategory) of Model Studio. For more information, see <a href="https://help.aliyun.com/document_detail/2848578.html">Grant OpenAPI permissions to a RAM user</a>. If you are using the Alibaba Cloud account, you do not need permissions. We recommend that you use <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">the latest version of the SDK</a> to call this operation.</description></item>
+        /// <item><description>You can create up to 1,000 categories in each workspace.</description></item>
+        /// <item><description>This interface is not idempotent.
+        /// <b>Throttling:</b> Throttling will be triggered if you call this operation frequently. Do not exceed 5 times per second. If throttling is triggered, try again later.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddCategoryRequest
@@ -819,8 +863,13 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请临时文件存储上传许可</para>
+        /// <para>This interface is intended for pro-code deployment only; other scenarios are currently not supported. It is used to apply for a temporary file upload lease. After obtaining the lease, you must upload the file manually.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>1\. This interface is intended for pro-code deployment only; other scenarios are currently not supported. 2. After obtaining the temporary file upload lease via this interface, upload the file manually.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ApplyTempStorageLeaseRequest
@@ -869,8 +918,13 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请临时文件存储上传许可</para>
+        /// <para>This interface is intended for pro-code deployment only; other scenarios are currently not supported. It is used to apply for a temporary file upload lease. After obtaining the lease, you must upload the file manually.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>1\. This interface is intended for pro-code deployment only; other scenarios are currently not supported. 2. After obtaining the temporary file upload lease via this interface, upload the file manually.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ApplyTempStorageLeaseRequest
@@ -919,8 +973,13 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请临时文件存储上传许可</para>
+        /// <para>This interface is intended for pro-code deployment only; other scenarios are currently not supported. It is used to apply for a temporary file upload lease. After obtaining the lease, you must upload the file manually.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>1\. This interface is intended for pro-code deployment only; other scenarios are currently not supported. 2. After obtaining the temporary file upload lease via this interface, upload the file manually.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ApplyTempStorageLeaseRequest
@@ -938,8 +997,13 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请临时文件存储上传许可</para>
+        /// <para>This interface is intended for pro-code deployment only; other scenarios are currently not supported. It is used to apply for a temporary file upload lease. After obtaining the lease, you must upload the file manually.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>1\. This interface is intended for pro-code deployment only; other scenarios are currently not supported. 2. After obtaining the temporary file upload lease via this interface, upload the file manually.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ApplyTempStorageLeaseRequest
@@ -4077,6 +4141,152 @@ namespace AlibabaCloud.SDK.Bailian20231229
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetIndexJobStatusWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取索引监控情况</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIndexMonitorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIndexMonitorResponse
+        /// </returns>
+        public GetIndexMonitorResponse GetIndexMonitorWithOptions(string WorkspaceId, GetIndexMonitorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimestamp))
+            {
+                query["EndTimestamp"] = request.EndTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexId))
+            {
+                query["IndexId"] = request.IndexId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
+            {
+                query["StartTimestamp"] = request.StartTimestamp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIndexMonitor",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/rag/index/monitor",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIndexMonitorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取索引监控情况</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIndexMonitorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIndexMonitorResponse
+        /// </returns>
+        public async Task<GetIndexMonitorResponse> GetIndexMonitorWithOptionsAsync(string WorkspaceId, GetIndexMonitorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimestamp))
+            {
+                query["EndTimestamp"] = request.EndTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexId))
+            {
+                query["IndexId"] = request.IndexId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
+            {
+                query["StartTimestamp"] = request.StartTimestamp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIndexMonitor",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/rag/index/monitor",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIndexMonitorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取索引监控情况</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIndexMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIndexMonitorResponse
+        /// </returns>
+        public GetIndexMonitorResponse GetIndexMonitor(string WorkspaceId, GetIndexMonitorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetIndexMonitorWithOptions(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取索引监控情况</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIndexMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIndexMonitorResponse
+        /// </returns>
+        public async Task<GetIndexMonitorResponse> GetIndexMonitorAsync(string WorkspaceId, GetIndexMonitorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetIndexMonitorWithOptionsAsync(WorkspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

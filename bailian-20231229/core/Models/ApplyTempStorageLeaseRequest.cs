@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ApplyTempStorageLeaseRequest : TeaModel {
         /// <summary>
+        /// <para>The file name, including the file extension.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string FileName { get; set; }
 
         /// <summary>
+        /// <para>The size of the file, in bytes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
