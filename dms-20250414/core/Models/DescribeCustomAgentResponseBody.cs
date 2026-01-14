@@ -111,6 +111,20 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string Knowledge { get; set; }
 
+            [NameInMap("KnowledgeConfigList")]
+            [Validation(Required=false)]
+            public List<DescribeCustomAgentResponseBodyDataKnowledgeConfigList> KnowledgeConfigList { get; set; }
+            public class DescribeCustomAgentResponseBodyDataKnowledgeConfigList : TeaModel {
+                [NameInMap("AccessType")]
+                [Validation(Required=false)]
+                public string AccessType { get; set; }
+
+                [NameInMap("McpServerId")]
+                [Validation(Required=false)]
+                public string McpServerId { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>20372822********</para>
