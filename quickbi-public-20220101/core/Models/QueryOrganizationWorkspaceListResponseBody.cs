@@ -152,6 +152,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string OwnerAccountName { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>test</para>
+                /// </summary>
+                [NameInMap("RealOwnerAccountName")]
+                [Validation(Required=false)]
+                public string RealOwnerAccountName { get; set; }
+
+                /// <summary>
                 /// <para>Workspace description.</para>
                 /// 
                 /// <b>Example:</b>
