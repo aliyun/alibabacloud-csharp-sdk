@@ -357,6 +357,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public string StorageSecretKey { get; set; }
 
+            [NameInMap("traceOn")]
+            [Validation(Required=false)]
+            public bool? TraceOn { get; set; }
+
         }
 
         /// <summary>

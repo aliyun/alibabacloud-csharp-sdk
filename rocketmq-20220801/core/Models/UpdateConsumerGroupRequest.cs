@@ -70,6 +70,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
         }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The new message delivery method of the consumer group.</para>
         /// <para>Valid values:</para>
@@ -77,13 +79,13 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         /// <item><description>Concurrently: concurrent delivery</description></item>
         /// <item><description>Orderly: ordered delivery</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Concurrently</para>
         /// </summary>
         [NameInMap("deliveryOrderType")]
         [Validation(Required=false)]
+        [Obsolete]
         public string DeliveryOrderType { get; set; }
 
         /// <summary>
