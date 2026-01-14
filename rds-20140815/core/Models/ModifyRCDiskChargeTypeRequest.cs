@@ -61,6 +61,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>Month</para>
+        /// </summary>
+        [NameInMap("Period")]
+        [Validation(Required=false)]
+        public string Period { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>72802442****</para>
         /// </summary>
         [NameInMap("PromotionCode")]
@@ -79,6 +87,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("UsedTime")]
+        [Validation(Required=false)]
+        public int? UsedTime { get; set; }
 
     }
 

@@ -11815,6 +11815,226 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a custom image for an RDS Custom instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engines</h3>
+        /// <list type="bullet">
+        /// <item><description>RDS MySQL</description></item>
+        /// <item><description>RDS SQL Server</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>References</h3>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2844223.html">Introduction to RDS Custom for MySQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom for SQL Server</a></description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Usage</h3>
+        /// <list type="bullet">
+        /// <item><description>Method 1: Create a custom image by using a snapshot generated from the <b>system disk</b>. In this case, specify the SnapshotId and ImageName parameters at the same time in the request.</description></item>
+        /// <item><description>Method 2: Create a custom image by using an RDS Custom instance. In this case, specify the InstanceId and ImageName parameters at the same time in the request.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRCImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRCImageResponse
+        /// </returns>
+        public CreateRCImageResponse CreateRCImageWithOptions(CreateRCImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                query["ImageName"] = request.ImageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotId))
+            {
+                query["SnapshotId"] = request.SnapshotId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRCImage",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRCImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom image for an RDS Custom instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engines</h3>
+        /// <list type="bullet">
+        /// <item><description>RDS MySQL</description></item>
+        /// <item><description>RDS SQL Server</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>References</h3>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2844223.html">Introduction to RDS Custom for MySQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom for SQL Server</a></description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Usage</h3>
+        /// <list type="bullet">
+        /// <item><description>Method 1: Create a custom image by using a snapshot generated from the <b>system disk</b>. In this case, specify the SnapshotId and ImageName parameters at the same time in the request.</description></item>
+        /// <item><description>Method 2: Create a custom image by using an RDS Custom instance. In this case, specify the InstanceId and ImageName parameters at the same time in the request.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRCImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRCImageResponse
+        /// </returns>
+        public async Task<CreateRCImageResponse> CreateRCImageWithOptionsAsync(CreateRCImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                query["ImageName"] = request.ImageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotId))
+            {
+                query["SnapshotId"] = request.SnapshotId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRCImage",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRCImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom image for an RDS Custom instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engines</h3>
+        /// <list type="bullet">
+        /// <item><description>RDS MySQL</description></item>
+        /// <item><description>RDS SQL Server</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>References</h3>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2844223.html">Introduction to RDS Custom for MySQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom for SQL Server</a></description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Usage</h3>
+        /// <list type="bullet">
+        /// <item><description>Method 1: Create a custom image by using a snapshot generated from the <b>system disk</b>. In this case, specify the SnapshotId and ImageName parameters at the same time in the request.</description></item>
+        /// <item><description>Method 2: Create a custom image by using an RDS Custom instance. In this case, specify the InstanceId and ImageName parameters at the same time in the request.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRCImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRCImageResponse
+        /// </returns>
+        public CreateRCImageResponse CreateRCImage(CreateRCImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateRCImageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom image for an RDS Custom instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engines</h3>
+        /// <list type="bullet">
+        /// <item><description>RDS MySQL</description></item>
+        /// <item><description>RDS SQL Server</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>References</h3>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2844223.html">Introduction to RDS Custom for MySQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom for SQL Server</a></description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Usage</h3>
+        /// <list type="bullet">
+        /// <item><description>Method 1: Create a custom image by using a snapshot generated from the <b>system disk</b>. In this case, specify the SnapshotId and ImageName parameters at the same time in the request.</description></item>
+        /// <item><description>Method 2: Create a custom image by using an RDS Custom instance. In this case, specify the InstanceId and ImageName parameters at the same time in the request.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRCImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRCImageResponse
+        /// </returns>
+        public async Task<CreateRCImageResponse> CreateRCImageAsync(CreateRCImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateRCImageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates an edge node pool in the Container Service for Kubernetes (ACK) Edge cluster to which the RDS Custom instance belongs.</para>
         /// </summary>
         /// 
@@ -62999,6 +63219,134 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>修改实例向量支持状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceVectorSupportStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceVectorSupportStatusResponse
+        /// </returns>
+        public ModifyDBInstanceVectorSupportStatusResponse ModifyDBInstanceVectorSupportStatusWithOptions(ModifyDBInstanceVectorSupportStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDBInstanceVectorSupportStatus",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDBInstanceVectorSupportStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例向量支持状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceVectorSupportStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceVectorSupportStatusResponse
+        /// </returns>
+        public async Task<ModifyDBInstanceVectorSupportStatusResponse> ModifyDBInstanceVectorSupportStatusWithOptionsAsync(ModifyDBInstanceVectorSupportStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDBInstanceVectorSupportStatus",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDBInstanceVectorSupportStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例向量支持状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceVectorSupportStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceVectorSupportStatusResponse
+        /// </returns>
+        public ModifyDBInstanceVectorSupportStatusResponse ModifyDBInstanceVectorSupportStatus(ModifyDBInstanceVectorSupportStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDBInstanceVectorSupportStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例向量支持状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBInstanceVectorSupportStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBInstanceVectorSupportStatusResponse
+        /// </returns>
+        public async Task<ModifyDBInstanceVectorSupportStatusResponse> ModifyDBInstanceVectorSupportStatusAsync(ModifyDBInstanceVectorSupportStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDBInstanceVectorSupportStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Changes the specifications, storage type, and storage capacity of an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition.</para>
         /// </summary>
         /// 
@@ -67796,6 +68144,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["PayType"] = request.PayType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
             {
                 query["PromotionCode"] = request.PromotionCode;
@@ -67803,6 +68155,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
+            {
+                query["UsedTime"] = request.UsedTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -67870,6 +68226,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["PayType"] = request.PayType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
             {
                 query["PromotionCode"] = request.PromotionCode;
@@ -67877,6 +68237,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
+            {
+                query["UsedTime"] = request.UsedTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
