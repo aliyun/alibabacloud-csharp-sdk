@@ -8,12 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class InitializeENSECKServiceRoleResponseBody : TeaModel {
+    public class DeleteClusterResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>eck-xxxxxxxx</para>
+        /// </summary>
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
+
         /// <summary>
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>F3B261DD-3858-4D3C-877D-303ADF374600</para>
+        /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

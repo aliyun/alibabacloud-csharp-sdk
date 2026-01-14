@@ -8,16 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class InitializeENSECKServiceRoleResponseBody : TeaModel {
+    public class DeleteClusterRequest : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>F3B261DD-3858-4D3C-877D-303ADF374600</para>
+        /// <para>eck-xxxxxxxx</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("ClusterId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string ClusterId { get; set; }
 
     }
 
