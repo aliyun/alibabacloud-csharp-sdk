@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PAILangStudio20240710.Models
 {
-    public class UpdateKnowledgeBaseResponseBody : TeaModel {
+    public class UpdateKnowledgeBaseChunkResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>963BD7F9-0C02-5594-9550-BCC6DD43E3C0</para>

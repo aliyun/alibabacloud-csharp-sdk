@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.PAILangStudio20240710.Models
         [Validation(Required=false)]
         public string Accessibility { get; set; }
 
+        [NameInMap("AutoApproval")]
+        [Validation(Required=false)]
+        public bool? AutoApproval { get; set; }
+
         [NameInMap("ChatHistoryConfig")]
         [Validation(Required=false)]
         public DeploymentChatHistoryConfig ChatHistoryConfig { get; set; }
@@ -174,7 +178,65 @@ namespace AlibabaCloud.SDK.PAILangStudio20240710.Models
 
         [NameInMap("DeploymentStages")]
         [Validation(Required=false)]
-        public string DeploymentStages { get; set; }
+        public List<DeploymentDeploymentStages> DeploymentStages { get; set; }
+        public class DeploymentDeploymentStages : TeaModel {
+            /// <summary>
+            /// <para>描述</para>
+            /// </summary>
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            /// <summary>
+            /// <para>错误信息</para>
+            /// </summary>
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
+
+            /// <summary>
+            /// <para>结束时间</para>
+            /// </summary>
+            [NameInMap("GmtEndTime")]
+            [Validation(Required=false)]
+            public string GmtEndTime { get; set; }
+
+            /// <summary>
+            /// <para>开始时间</para>
+            /// </summary>
+            [NameInMap("GmtStartTime")]
+            [Validation(Required=false)]
+            public string GmtStartTime { get; set; }
+
+            /// <summary>
+            /// <para>阶段</para>
+            /// </summary>
+            [NameInMap("Stage")]
+            [Validation(Required=false)]
+            public int? Stage { get; set; }
+
+            /// <summary>
+            /// <para>阶段信息</para>
+            /// </summary>
+            [NameInMap("StageInfo")]
+            [Validation(Required=false)]
+            public string StageInfo { get; set; }
+
+            /// <summary>
+            /// <para>阶段名称</para>
+            /// </summary>
+            [NameInMap("StageName")]
+            [Validation(Required=false)]
+            public string StageName { get; set; }
+
+            /// <summary>
+            /// <para>阶段状态</para>
+            /// </summary>
+            [NameInMap("StageStatus")]
+            [Validation(Required=false)]
+            public string StageStatus { get; set; }
+
+        }
 
         [NameInMap("DeploymentStatus")]
         [Validation(Required=false)]

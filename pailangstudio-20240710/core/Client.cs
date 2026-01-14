@@ -987,6 +987,168 @@ namespace AlibabaCloud.SDK.PAILangStudio20240710
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取知识库切片列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseChunksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseChunksResponse
+        /// </returns>
+        public ListKnowledgeBaseChunksResponse ListKnowledgeBaseChunksWithOptions(string KnowledgeBaseId, ListKnowledgeBaseChunksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChunkStatus))
+            {
+                query["ChunkStatus"] = request.ChunkStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaData))
+            {
+                query["MetaData"] = request.MetaData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionName))
+            {
+                query["VersionName"] = request.VersionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeBaseChunks",
+                Version = "2024-07-10",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/langstudio/knowledgebases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(KnowledgeBaseId) + "/knowledgebasechunks",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeBaseChunksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取知识库切片列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseChunksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseChunksResponse
+        /// </returns>
+        public async Task<ListKnowledgeBaseChunksResponse> ListKnowledgeBaseChunksWithOptionsAsync(string KnowledgeBaseId, ListKnowledgeBaseChunksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChunkStatus))
+            {
+                query["ChunkStatus"] = request.ChunkStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaData))
+            {
+                query["MetaData"] = request.MetaData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionName))
+            {
+                query["VersionName"] = request.VersionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeBaseChunks",
+                Version = "2024-07-10",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/langstudio/knowledgebases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(KnowledgeBaseId) + "/knowledgebasechunks",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeBaseChunksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取知识库切片列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseChunksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseChunksResponse
+        /// </returns>
+        public ListKnowledgeBaseChunksResponse ListKnowledgeBaseChunks(string KnowledgeBaseId, ListKnowledgeBaseChunksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListKnowledgeBaseChunksWithOptions(KnowledgeBaseId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取知识库切片列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseChunksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseChunksResponse
+        /// </returns>
+        public async Task<ListKnowledgeBaseChunksResponse> ListKnowledgeBaseChunksAsync(string KnowledgeBaseId, ListKnowledgeBaseChunksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListKnowledgeBaseChunksWithOptionsAsync(KnowledgeBaseId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取知识库任务列表</para>
         /// </summary>
         /// 
@@ -1767,6 +1929,144 @@ namespace AlibabaCloud.SDK.PAILangStudio20240710
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateKnowledgeBaseWithOptionsAsync(KnowledgeBaseId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新知识库切片</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeBaseChunkRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseChunkResponse
+        /// </returns>
+        public UpdateKnowledgeBaseChunkResponse UpdateKnowledgeBaseChunkWithOptions(string KnowledgeBaseId, string KnowledgeBaseChunkId, UpdateKnowledgeBaseChunkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChunkContent))
+            {
+                body["ChunkContent"] = request.ChunkContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChunkStatus))
+            {
+                body["ChunkStatus"] = request.ChunkStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKnowledgeBaseChunk",
+                Version = "2024-07-10",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/langstudio/knowledgebases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(KnowledgeBaseId) + "/knowledgebasechunks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(KnowledgeBaseChunkId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKnowledgeBaseChunkResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新知识库切片</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeBaseChunkRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseChunkResponse
+        /// </returns>
+        public async Task<UpdateKnowledgeBaseChunkResponse> UpdateKnowledgeBaseChunkWithOptionsAsync(string KnowledgeBaseId, string KnowledgeBaseChunkId, UpdateKnowledgeBaseChunkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChunkContent))
+            {
+                body["ChunkContent"] = request.ChunkContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChunkStatus))
+            {
+                body["ChunkStatus"] = request.ChunkStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKnowledgeBaseChunk",
+                Version = "2024-07-10",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/langstudio/knowledgebases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(KnowledgeBaseId) + "/knowledgebasechunks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(KnowledgeBaseChunkId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKnowledgeBaseChunkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新知识库切片</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeBaseChunkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseChunkResponse
+        /// </returns>
+        public UpdateKnowledgeBaseChunkResponse UpdateKnowledgeBaseChunk(string KnowledgeBaseId, string KnowledgeBaseChunkId, UpdateKnowledgeBaseChunkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateKnowledgeBaseChunkWithOptions(KnowledgeBaseId, KnowledgeBaseChunkId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新知识库切片</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeBaseChunkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseChunkResponse
+        /// </returns>
+        public async Task<UpdateKnowledgeBaseChunkResponse> UpdateKnowledgeBaseChunkAsync(string KnowledgeBaseId, string KnowledgeBaseChunkId, UpdateKnowledgeBaseChunkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateKnowledgeBaseChunkWithOptionsAsync(KnowledgeBaseId, KnowledgeBaseChunkId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
