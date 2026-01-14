@@ -27,6 +27,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public List<DescribeRulesResponseBodyItems> Items { get; set; }
         public class DescribeRulesResponseBodyItems : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
+            [NameInMap("AuditMode")]
+            [Validation(Required=false)]
+            public int? AuditMode { get; set; }
+
+            /// <summary>
             /// <para>The content type of the sensitive data detection rule. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: keyword</description></item>
@@ -323,6 +331,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("TemplateRuleIds")]
             [Validation(Required=false)]
             public string TemplateRuleIds { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
+            [NameInMap("ThreatAnalysisStatus")]
+            [Validation(Required=false)]
+            public int? ThreatAnalysisStatus { get; set; }
 
             /// <summary>
             /// <para>The ID of the account that is used to create the sensitive data detection rule.</para>
