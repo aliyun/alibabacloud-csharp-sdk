@@ -8,22 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aiccs20230516.Models
 {
-    public class ImportNumberResponseBody : TeaModel {
+    public class AddAgentGroupResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
-        public long? Code { get; set; }
+        public string Code { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -31,53 +35,43 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         [NameInMap("Model")]
         [Validation(Required=false)]
-        public ImportNumberResponseBodyModel Model { get; set; }
-        public class ImportNumberResponseBodyModel : TeaModel {
+        public AddAgentGroupResponseBodyModel Model { get; set; }
+        public class AddAgentGroupResponseBodyModel : TeaModel {
             /// <summary>
+            /// <para>坐席组ID</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>54</para>
+            /// <para>48</para>
             /// </summary>
-            [NameInMap("BatchId")]
+            [NameInMap("AgentGroupId")]
             [Validation(Required=false)]
-            public long? BatchId { get; set; }
+            public long? AgentGroupId { get; set; }
 
             /// <summary>
-            /// <b>Example:</b>
-            /// <para>94</para>
-            /// </summary>
-            [NameInMap("Code")]
-            [Validation(Required=false)]
-            public long? Code { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>示例值示例值</para>
-            /// </summary>
-            [NameInMap("Data")]
-            [Validation(Required=false)]
-            public string Data { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>26</para>
-            /// </summary>
-            [NameInMap("ImportNum")]
-            [Validation(Required=false)]
-            public long? ImportNum { get; set; }
-
-            /// <summary>
+            /// <para>坐席组名称</para>
+            /// 
             /// <b>Example:</b>
             /// <para>示例值示例值示例值</para>
             /// </summary>
-            [NameInMap("Message")]
+            [NameInMap("AgentGroupName")]
             [Validation(Required=false)]
-            public string Message { get; set; }
+            public string AgentGroupName { get; set; }
+
+            /// <summary>
+            /// <para>创建坐席组的时间</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>示例值</para>
+            /// </summary>
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
 
         }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>8EFC6D10-307B-1ECA-A8C6-7CBDF776AAD2</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -85,15 +79,15 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
-        public string Success { get; set; }
+        public bool? Success { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1683440860035</para>
+        /// <para>40</para>
         /// </summary>
         [NameInMap("Timestamp")]
         [Validation(Required=false)]

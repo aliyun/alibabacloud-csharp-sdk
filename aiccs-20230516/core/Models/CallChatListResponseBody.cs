@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aiccs20230516.Models
 {
-    public class ImportNumberResponseBody : TeaModel {
+    public class CallChatListResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
@@ -31,53 +35,53 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         [NameInMap("Model")]
         [Validation(Required=false)]
-        public ImportNumberResponseBodyModel Model { get; set; }
-        public class ImportNumberResponseBodyModel : TeaModel {
+        public List<CallChatListResponseBodyModel> Model { get; set; }
+        public class CallChatListResponseBodyModel : TeaModel {
             /// <summary>
+            /// <para>聊天内容id</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>54</para>
+            /// <para>79</para>
             /// </summary>
-            [NameInMap("BatchId")]
+            [NameInMap("ChatId")]
             [Validation(Required=false)]
-            public long? BatchId { get; set; }
+            public long? ChatId { get; set; }
 
             /// <summary>
+            /// <para>说话内容</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>94</para>
+            /// <para>1</para>
             /// </summary>
-            [NameInMap("Code")]
+            [NameInMap("Content")]
             [Validation(Required=false)]
-            public long? Code { get; set; }
+            public string Content { get; set; }
 
             /// <summary>
+            /// <para>说话时间</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>示例值示例值</para>
+            /// <para>2019-01-09 14:14:19</para>
             /// </summary>
-            [NameInMap("Data")]
+            [NameInMap("CreateTime")]
             [Validation(Required=false)]
-            public string Data { get; set; }
+            public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>说话号码，其中0为AI,1-用户,2-坐席</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>26</para>
+            /// <para>4</para>
             /// </summary>
-            [NameInMap("ImportNum")]
+            [NameInMap("FromType")]
             [Validation(Required=false)]
-            public long? ImportNum { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>示例值示例值示例值</para>
-            /// </summary>
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
+            public long? FromType { get; set; }
 
         }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>8EFC6D10-307B-1ECA-A8C6-7CBDF776AAD2</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -89,11 +93,11 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
-        public string Success { get; set; }
+        public bool? Success { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1683440860035</para>
+        /// <para>81</para>
         /// </summary>
         [NameInMap("Timestamp")]
         [Validation(Required=false)]
