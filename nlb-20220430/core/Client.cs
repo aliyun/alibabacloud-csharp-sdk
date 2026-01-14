@@ -1546,6 +1546,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
             {
                 bodyFlat["HealthCheckConfig"] = request.HealthCheckConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersionAffinityMode))
+            {
+                body["IpVersionAffinityMode"] = request.IpVersionAffinityMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreserveClientIpEnabled))
             {
                 body["PreserveClientIpEnabled"] = request.PreserveClientIpEnabled;
@@ -1662,6 +1666,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckConfig))
             {
                 bodyFlat["HealthCheckConfig"] = request.HealthCheckConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersionAffinityMode))
+            {
+                body["IpVersionAffinityMode"] = request.IpVersionAffinityMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreserveClientIpEnabled))
             {
@@ -8397,6 +8405,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
             {
                 bodyFlat["HealthCheckConfig"] = request.HealthCheckConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersionAffinityMode))
+            {
+                body["IpVersionAffinityMode"] = request.IpVersionAffinityMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreserveClientIpEnabled))
             {
                 body["PreserveClientIpEnabled"] = request.PreserveClientIpEnabled;
@@ -8480,6 +8492,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckConfig))
             {
                 bodyFlat["HealthCheckConfig"] = request.HealthCheckConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersionAffinityMode))
+            {
+                body["IpVersionAffinityMode"] = request.IpVersionAffinityMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreserveClientIpEnabled))
             {

@@ -240,6 +240,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
         }
 
+        [NameInMap("IpVersionAffinityMode")]
+        [Validation(Required=false)]
+        public string IpVersionAffinityMode { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to enable client IP preservation. Valid values:</para>
         /// <list type="bullet">
