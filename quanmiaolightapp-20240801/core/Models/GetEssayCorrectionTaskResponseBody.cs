@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
                 [Validation(Required=false)]
                 public int? Score { get; set; }
 
+                [NameInMap("usage")]
+                [Validation(Required=false)]
+                public ModelUsage Usage { get; set; }
+
             }
 
             /// <summary>
@@ -60,6 +64,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("totalUsage")]
+            [Validation(Required=false)]
+            public ModelUsage TotalUsage { get; set; }
 
         }
 
