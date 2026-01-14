@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 
         }
 
+        [NameInMap("total")]
+        [Validation(Required=false)]
+        public long? Total { get; set; }
+
     }
 
 }
