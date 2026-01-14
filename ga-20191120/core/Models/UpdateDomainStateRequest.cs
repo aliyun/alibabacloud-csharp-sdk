@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class UpdateDomainStateRequest : TeaModel {
         /// <summary>
-        /// The accelerated domain name whose ICP filing status you want to update.
+        /// <para>The accelerated domain name whose ICP filing status you want to update.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para><a href="http://www.example.com">www.example.com</a></para>
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
+        /// <para>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

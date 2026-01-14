@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class UpdateEndpointGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The IDs of the endpoint groups.
+        /// <para>The IDs of the endpoint groups.</para>
         /// </summary>
         [NameInMap("EndpointGroupIds")]
         [Validation(Required=false)]
         public List<string> EndpointGroupIds { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6FEA0CF3-D3B9-43E5-A304-D217037876A8</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,75 +10,85 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to remove all tags of the specified resource. Valid values:
+        /// <para>Specifies whether to remove all tags of the specified resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: yes</description></item>
+        /// <item><description><b>false</b> (default): no</description></item>
+        /// </list>
         /// 
-        /// *   **true**: yes
-        /// *   **false** (default): no
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// <para>The ID of the region where the GA instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the resources whose tags you want to remove.
-        /// 
-        /// *   If you set **ResourceType** to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.
-        /// *   If you set **ResourceType** to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.
-        /// *   If you set **ResourceType** to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.
-        /// *   If you set **ResourceType** to **acl**, set the value of ResourceId to the ID of an ACL.
-        /// *   If you set **ResourceType** to **endpointgroup**, set the value of ResourceId to the ID of an endpoint group.
-        /// 
-        /// You can specify up to 50 GA resource IDs.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of the resources whose tags you want to remove.</para>
+        /// <list type="bullet">
+        /// <item><description>If you set <b>ResourceType</b> to <b>accelerator</b>, set the value of ResourceId to the ID of a standard GA instance.</description></item>
+        /// <item><description>If you set <b>ResourceType</b> to <b>basicaccelerator</b>, set the value of ResourceId to the ID of a basic GA instance.</description></item>
+        /// <item><description>If you set <b>ResourceType</b> to <b>bandwidthpackage</b>, set the value of ResourceId to the ID of a bandwidth plan.</description></item>
+        /// <item><description>If you set <b>ResourceType</b> to <b>acl</b>, set the value of ResourceId to the ID of an ACL.</description></item>
+        /// <item><description>If you set <b>ResourceType</b> to <b>endpointgroup</b>, set the value of ResourceId to the ID of an endpoint group.</description></item>
+        /// </list>
+        /// <para>You can specify up to 50 GA resource IDs.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource whose tags you want to remove. Valid values:
+        /// <para>The type of the resource whose tags you want to remove. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>accelerator</b>: a standard GA instance</description></item>
+        /// <item><description><b>basicaccelerator</b>: a basic GA instance</description></item>
+        /// <item><description><b>bandwidthpackage</b>: a bandwidth plan</description></item>
+        /// <item><description><b>acl</b>: an access control list (ACL).</description></item>
+        /// <item><description><b>endpointgroup</b>: an endpoint group</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **accelerator**: a standard GA instance
-        /// *   **basicaccelerator**: a basic GA instance
-        /// *   **bandwidthpackage**: a bandwidth plan
-        /// *   **acl**: an access control list (ACL).
-        /// *   **endpointgroup**: an endpoint group
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>accelerator</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The key of the tag to be removed.
-        /// 
-        /// The system removes all tags with this tag key.
-        /// 
-        /// You can specify up to 20 tag keys.
-        /// 
-        /// >  If the **All** parameter is set to **true**, this parameter does not take effect.
+        /// <para>The key of the tag to be removed.</para>
+        /// <para>The system removes all tags with this tag key.</para>
+        /// <para>You can specify up to 20 tag keys.</para>
+        /// <remarks>
+        /// <para> If the <b>All</b> parameter is set to <b>true</b>, this parameter does not take effect.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

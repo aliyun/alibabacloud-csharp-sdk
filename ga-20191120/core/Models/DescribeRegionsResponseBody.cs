@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The available regions.
+        /// <para>The available regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
         public class DescribeRegionsResponseBodyRegions : TeaModel {
             /// <summary>
-            /// The region name.
+            /// <para>The region name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>China (Hangzhou)</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// The region ID. Only **cn-hangzhou** is returned.
+            /// <para>The region ID. Only <b>cn-hangzhou</b> is returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>611CB80C-B6A9-43DB-9E38-0B0AC3D9B58F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

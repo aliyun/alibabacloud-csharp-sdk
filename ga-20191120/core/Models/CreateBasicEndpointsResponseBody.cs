@@ -10,53 +10,69 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateBasicEndpointsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the endpoint group.
+        /// <para>The ID of the endpoint group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>epg-bp1dmlohjjz4kqaun****</para>
         /// </summary>
         [NameInMap("EndpointGroupId")]
         [Validation(Required=false)]
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// The endpoints in the endpoint group.
+        /// <para>The endpoints in the endpoint group.</para>
         /// </summary>
         [NameInMap("Endpoints")]
         [Validation(Required=false)]
         public List<CreateBasicEndpointsResponseBodyEndpoints> Endpoints { get; set; }
         public class CreateBasicEndpointsResponseBodyEndpoints : TeaModel {
             /// <summary>
-            /// The address of the endpoint.
+            /// <para>The address of the endpoint.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>eni-bp1a05txelswuj8g****</para>
             /// </summary>
             [NameInMap("EndpointAddress")]
             [Validation(Required=false)]
             public string EndpointAddress { get; set; }
 
             /// <summary>
-            /// The ID of the endpoint.
+            /// <para>The ID of the endpoint.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ep-bp14sz7ftcwwjgrdm****</para>
             /// </summary>
             [NameInMap("EndpointId")]
             [Validation(Required=false)]
             public string EndpointId { get; set; }
 
             /// <summary>
-            /// The secondary address of the endpoint.
+            /// <para>The secondary address of the endpoint.</para>
+            /// <para>This parameter is returned if the endpoint type is <b>ECS</b>, <b>ENI</b>, or <b>NLB</b>.</para>
+            /// <list type="bullet">
+            /// <item><description>If the endpoint type is <b>ECS</b>, <b>EndpointSubAddress</b> returns the primary or secondary private IP address of the primary ENI.</description></item>
+            /// <item><description>If the endpoint type is <b>ENI</b>, <b>EndpointSubAddress</b> returns the primary or secondary private IP address of the secondary ENI.</description></item>
+            /// <item><description>If the endpoint type is <b>NLB</b>, <b>EndpointSubAddress</b> returns the primary private IP address of the NLB backend server.</description></item>
+            /// </list>
             /// 
-            /// This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**.
-            /// 
-            /// *   If the endpoint type is **ECS**, **EndpointSubAddress** returns the primary or secondary private IP address of the primary ENI.
-            /// *   If the endpoint type is **ENI**, **EndpointSubAddress** returns the primary or secondary private IP address of the secondary ENI.
-            /// *   If the endpoint type is **NLB**, **EndpointSubAddress** returns the primary private IP address of the NLB backend server.
+            /// <b>Example:</b>
+            /// <para>172.16.XX.XX</para>
             /// </summary>
             [NameInMap("EndpointSubAddress")]
             [Validation(Required=false)]
             public string EndpointSubAddress { get; set; }
 
             /// <summary>
-            /// The type of the endpoint. Valid values:
+            /// <para>The type of the endpoint. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>ENI:</b> ENI.</description></item>
+            /// <item><description><b>SLB:</b> CLB instance.</description></item>
+            /// <item><description><b>ECS:</b> ECS instance.</description></item>
+            /// <item><description><b>NLB:</b> NLB instance.</description></item>
+            /// </list>
             /// 
-            /// *   **ENI:** ENI.
-            /// *   **SLB:** CLB instance.
-            /// *   **ECS:** ECS instance.
-            /// *   **NLB:** NLB instance.
+            /// <b>Example:</b>
+            /// <para>ENI</para>
             /// </summary>
             [NameInMap("EndpointType")]
             [Validation(Required=false)]
@@ -65,7 +81,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

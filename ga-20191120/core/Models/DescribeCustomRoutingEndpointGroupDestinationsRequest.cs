@@ -10,25 +10,32 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DescribeCustomRoutingEndpointGroupDestinationsRequest : TeaModel {
         /// <summary>
-        /// The ID of the endpoint group mapping configuration.
+        /// <para>The ID of the endpoint group mapping configuration.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>dst-123abc****</para>
         /// </summary>
         [NameInMap("DestinationId")]
         [Validation(Required=false)]
         public string DestinationId { get; set; }
 
         /// <summary>
-        /// The ID of the endpoint group.
+        /// <para>The ID of the endpoint group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>epg-bp1j184jhb9i9ubwf****</para>
         /// </summary>
         [NameInMap("EndpointGroupId")]
         [Validation(Required=false)]
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// <para>The ID of the region where the GA instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

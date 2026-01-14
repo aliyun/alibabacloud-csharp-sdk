@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class UpdateCustomRoutingEndpointTrafficPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// The IDs of the traffic destinations.
+        /// <para>The IDs of the traffic destinations.</para>
         /// </summary>
         [NameInMap("PolicyIds")]
         [Validation(Required=false)]
         public List<string> PolicyIds { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

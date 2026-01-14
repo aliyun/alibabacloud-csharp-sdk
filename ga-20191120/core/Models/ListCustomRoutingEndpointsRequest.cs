@@ -10,46 +10,62 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListCustomRoutingEndpointsRequest : TeaModel {
         /// <summary>
-        /// The GA instance ID.
+        /// <para>The GA instance ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ga-bp1odcab8tmno0hdq****</para>
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// The endpoint group ID.
+        /// <para>The endpoint group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>epg-bp16jdc00bhe97sr5****</para>
         /// </summary>
         [NameInMap("EndpointGroupId")]
         [Validation(Required=false)]
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// The listener ID.
+        /// <para>The listener ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>lsr-bp1bpn0kn908w4nbw****</para>
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Valid values: **1 to 50**. Default value: **10**.
+        /// <para>The number of entries per page. Valid values: <b>1 to 50</b>. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The region ID of the Global Accelerator (GA) instance. Set the value to **cn-hangzhou**.
+        /// <para>The region ID of the Global Accelerator (GA) instance. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

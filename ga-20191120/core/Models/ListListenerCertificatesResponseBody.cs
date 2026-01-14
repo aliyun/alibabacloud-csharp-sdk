@@ -10,43 +10,56 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListListenerCertificatesResponseBody : TeaModel {
         /// <summary>
-        /// The certificates.
+        /// <para>The certificates.</para>
         /// </summary>
         [NameInMap("Certificates")]
         [Validation(Required=false)]
         public List<ListListenerCertificatesResponseBodyCertificates> Certificates { get; set; }
         public class ListListenerCertificatesResponseBodyCertificates : TeaModel {
             /// <summary>
-            /// The certificate ID.
+            /// <para>The certificate ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6092**-cn-hangzhou</para>
             /// </summary>
             [NameInMap("CertificateId")]
             [Validation(Required=false)]
             public string CertificateId { get; set; }
 
             /// <summary>
-            /// The domain name associated with the additional certificate.
+            /// <para>The domain name associated with the additional certificate.</para>
+            /// <para>This parameter is not returned if the certificate is a default one.</para>
             /// 
-            /// This parameter is not returned if the certificate is a default one.
+            /// <b>Example:</b>
+            /// <para>example.com</para>
             /// </summary>
             [NameInMap("Domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
 
             /// <summary>
-            /// Indicates whether the certificate is a default one.
+            /// <para>Indicates whether the certificate is a default one.</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("IsDefault")]
             [Validation(Required=false)]
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// The status of the certificate.
+            /// <para>The status of the certificate.</para>
+            /// <list type="bullet">
+            /// <item><description><b>active</b>: The certificate is associated with a listener and in effect.</description></item>
+            /// <item><description><b>updating</b>: The additional certificate is being replaced.</description></item>
+            /// </list>
             /// 
-            /// *   **active**: The certificate is associated with a listener and in effect.
-            /// *   **updating**: The additional certificate is being replaced.
+            /// <b>Example:</b>
+            /// <para>active</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
@@ -55,31 +68,44 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The maximum number of entries returned.
+        /// <para>The maximum number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
+        /// <item><description>If a value of <b>NextToken</b> is returned, the value indicates the token that is used for the next query.</description></item>
+        /// </list>
         /// 
-        /// *   If **NextToken** is empty, no next page exists.
-        /// *   If a value of **NextToken** is returned, the value indicates the token that is used for the next query.
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6FEA0CF3-D3B9-43E5-A304-D217037876A8</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// <para>The number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

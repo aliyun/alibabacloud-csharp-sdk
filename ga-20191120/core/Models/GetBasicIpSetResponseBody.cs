@@ -10,80 +10,109 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class GetBasicIpSetResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the region where the basic GA instance is deployed.
+        /// <para>The ID of the region where the basic GA instance is deployed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("AccelerateRegionId")]
         [Validation(Required=false)]
         public string AccelerateRegionId { get; set; }
 
         /// <summary>
-        /// The ID of the basic GA instance.
+        /// <para>The ID of the basic GA instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ga-bp17frjjh0udz4qz****</para>
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// The bandwidth of the acceleration region of the basic GA instance. Unit: Mbit/s.
+        /// <para>The bandwidth of the acceleration region of the basic GA instance. Unit: Mbit/s.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public long? Bandwidth { get; set; }
 
         /// <summary>
-        /// The accelerated IP address.
+        /// <para>The accelerated IP address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>118.31.XX.XX</para>
         /// </summary>
         [NameInMap("IpAddress")]
         [Validation(Required=false)]
         public string IpAddress { get; set; }
 
         /// <summary>
-        /// The ID of the acceleration region of the basic GA instance.
+        /// <para>The ID of the acceleration region of the basic GA instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ips-bp11ilwqjdkjeg9r7****</para>
         /// </summary>
         [NameInMap("IpSetId")]
         [Validation(Required=false)]
         public string IpSetId { get; set; }
 
         /// <summary>
-        /// The Internet protocol version. Only **IPv4** may be returned.
+        /// <para>The Internet protocol version. Only <b>IPv4</b> may be returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IPv4</para>
         /// </summary>
         [NameInMap("IpVersion")]
         [Validation(Required=false)]
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// The line type of the elastic IP address (EIP) in the acceleration region. Valid values:
+        /// <para>The line type of the elastic IP address (EIP) in the acceleration region. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>BGP</b> (default): BGP (Multi-ISP) lines.</description></item>
+        /// <item><description><b>BGP_PRO</b>: BGP (Multi-ISP) Pro lines.</description></item>
+        /// </list>
+        /// <para>Valid values if you are allowed to use single-ISP bandwidth:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ChinaTelecom</b></description></item>
+        /// <item><description><b>ChinaUnicom</b></description></item>
+        /// <item><description><b>ChinaMobile</b></description></item>
+        /// <item><description><b>ChinaTelecom_L2</b></description></item>
+        /// <item><description><b>ChinaUnicom_L2</b></description></item>
+        /// <item><description><b>ChinaMobile_L2</b></description></item>
+        /// </list>
         /// 
-        /// *   **BGP** (default): BGP (Multi-ISP) lines.
-        /// *   **BGP_PRO**: BGP (Multi-ISP) Pro lines.
-        /// 
-        /// Valid values if you are allowed to use single-ISP bandwidth:
-        /// 
-        /// *   **ChinaTelecom**
-        /// *   **ChinaUnicom**
-        /// *   **ChinaMobile**
-        /// *   **ChinaTelecom_L2**
-        /// *   **ChinaUnicom_L2**
-        /// *   **ChinaMobile_L2**
+        /// <b>Example:</b>
+        /// <para>BGP</para>
         /// </summary>
         [NameInMap("IspType")]
         [Validation(Required=false)]
         public string IspType { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6D2BFF54-6AF2-4679-88C4-2F2E187F16CB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The status of the acceleration region of the basic GA instance. Valid values:
+        /// <para>The status of the acceleration region of the basic GA instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>init</b>: The acceleration region is being initialized.</description></item>
+        /// <item><description><b>active</b>: The acceleration region is in the running state.</description></item>
+        /// <item><description><b>updating</b>: The acceleration region is being configured.</description></item>
+        /// <item><description><b>Deleting</b>: The acceleration region is being deleted.</description></item>
+        /// </list>
         /// 
-        /// *   **init**: The acceleration region is being initialized.
-        /// *   **active**: The acceleration region is in the running state.
-        /// *   **updating**: The acceleration region is being configured.
-        /// *   **Deleting**: The acceleration region is being deleted.
+        /// <b>Example:</b>
+        /// <para>active</para>
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]

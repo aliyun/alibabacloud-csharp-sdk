@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateCustomRoutingEndpointGroupDestinationsResponseBody : TeaModel {
         /// <summary>
-        /// The IDs of the endpoint group mappings.
+        /// <para>The IDs of the endpoint group mappings.</para>
         /// </summary>
         [NameInMap("DestinationIds")]
         [Validation(Required=false)]
         public List<string> DestinationIds { get; set; }
 
         /// <summary>
-        /// The IDs of the endpoint group mappings.
+        /// <para>The IDs of the endpoint group mappings.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DescribeEndpointGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the endpoint group that you want to query.
+        /// <para>The ID of the endpoint group that you want to query.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>epg-bp14sz7ftcwwjgrdm****</para>
         /// </summary>
         [NameInMap("EndpointGroupId")]
         [Validation(Required=false)]
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the region where your Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+        /// <para>The ID of the region where your Global Accelerator (GA) instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

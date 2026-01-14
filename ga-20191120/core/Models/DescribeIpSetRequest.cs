@@ -10,20 +10,23 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DescribeIpSetRequest : TeaModel {
         /// <summary>
-        /// The ID of the acceleration region.
+        /// <para>The ID of the acceleration region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2253273.html">ListIpSets</a> operation to query the IDs of acceleration regions of a specific GA instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListIpSets](https://help.aliyun.com/document_detail/2253273.html) operation to query the IDs of acceleration regions of a specific GA instance.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ips-bp11ilwqjdkjeg9r7****</para>
         /// </summary>
         [NameInMap("IpSetId")]
         [Validation(Required=false)]
         public string IpSetId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+        /// <para>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

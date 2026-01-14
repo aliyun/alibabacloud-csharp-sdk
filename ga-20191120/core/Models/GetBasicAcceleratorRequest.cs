@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class GetBasicAcceleratorRequest : TeaModel {
         /// <summary>
-        /// The ID of the basic GA instance that you want to query.
+        /// <para>The ID of the basic GA instance that you want to query.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ga-bp17frjjh0udz4qz****</para>
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the basic GA instance belongs. Set the value to **cn-hangzhou**.
+        /// <para>The ID of the region to which the basic GA instance belongs. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

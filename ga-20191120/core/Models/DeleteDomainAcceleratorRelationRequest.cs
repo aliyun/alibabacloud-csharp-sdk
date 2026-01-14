@@ -10,25 +10,29 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DeleteDomainAcceleratorRelationRequest : TeaModel {
         /// <summary>
-        /// The ID of the GA instance to be disassociated. You can specify up to 50 IDs.
-        /// 
-        /// If you leave this parameter empty, all GA instances associated with the specified domain name are disassociated.
+        /// <para>The ID of the GA instance to be disassociated. You can specify up to 50 IDs.</para>
+        /// <para>If you leave this parameter empty, all GA instances associated with the specified domain name are disassociated.</para>
         /// </summary>
         [NameInMap("AcceleratorIds")]
         [Validation(Required=false)]
         public List<string> AcceleratorIds { get; set; }
 
         /// <summary>
-        /// The accelerated domain name to be disassociated.
+        /// <para>The accelerated domain name to be disassociated.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para><a href="http://www.example.com">www.example.com</a></para>
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+        /// <para>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

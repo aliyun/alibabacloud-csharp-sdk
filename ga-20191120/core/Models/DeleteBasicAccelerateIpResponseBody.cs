@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DeleteBasicAccelerateIpResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the accelerated IP address that is deleted.
+        /// <para>The ID of the accelerated IP address that is deleted.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gaip-bp1****</para>
         /// </summary>
         [NameInMap("AccelerateIpId")]
         [Validation(Required=false)]
         public string AccelerateIpId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

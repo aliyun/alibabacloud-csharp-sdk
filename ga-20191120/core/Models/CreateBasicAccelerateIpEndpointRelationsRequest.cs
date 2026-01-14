@@ -10,31 +10,32 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateBasicAccelerateIpEndpointRelationsRequest : TeaModel {
         /// <summary>
-        /// A list of accelerated IP addresses and the endpoints with which the accelerated IP addresses are associated.
-        /// 
-        /// This parameter is required.
+        /// <para>A list of accelerated IP addresses and the endpoints with which the accelerated IP addresses are associated.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AccelerateIpEndpointRelations")]
         [Validation(Required=false)]
         public List<CreateBasicAccelerateIpEndpointRelationsRequestAccelerateIpEndpointRelations> AccelerateIpEndpointRelations { get; set; }
         public class CreateBasicAccelerateIpEndpointRelationsRequestAccelerateIpEndpointRelations : TeaModel {
             /// <summary>
-            /// The IDs of the accelerated IP addresses.
+            /// <para>The IDs of the accelerated IP addresses.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2253393.html">ListBasicAccelerateIps</a> operation to query the IDs of the accelerated IP addresses.</para>
+            /// <para>You can specify up to 20 IP address IDs.</para>
             /// 
-            /// You can call the [ListBasicAccelerateIps](https://help.aliyun.com/document_detail/2253393.html) operation to query the IDs of the accelerated IP addresses.
-            /// 
-            /// You can specify up to 20 IP address IDs.
+            /// <b>Example:</b>
+            /// <para>gaip-bp1****</para>
             /// </summary>
             [NameInMap("AccelerateIpId")]
             [Validation(Required=false)]
             public string AccelerateIpId { get; set; }
 
             /// <summary>
-            /// The IDs of the endpoints.
+            /// <para>The IDs of the endpoints.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2253406.html">ListBasicEndpoints</a> to query the IDs of the endpoints.</para>
+            /// <para>You can specify up to 20 endpoint IDs.</para>
             /// 
-            /// You can call the [ListBasicEndpoints](https://help.aliyun.com/document_detail/2253406.html) to query the IDs of the endpoints.
-            /// 
-            /// You can specify up to 20 endpoint IDs.
+            /// <b>Example:</b>
+            /// <para>ep-bp14sz7ftcwwjgrdm****</para>
             /// </summary>
             [NameInMap("EndpointId")]
             [Validation(Required=false)]
@@ -43,29 +44,36 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The ID of the basic GA instance.
+        /// <para>The ID of the basic GA instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ga-bp17frjjh0udz4qz****</para>
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// <para>The ID of the region where the GA instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

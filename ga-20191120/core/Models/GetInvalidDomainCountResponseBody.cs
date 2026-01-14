@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class GetInvalidDomainCountResponseBody : TeaModel {
         /// <summary>
-        /// The number of invalid domain names.
+        /// <para>The number of invalid domain names.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("InvalidDomainCount")]
         [Validation(Required=false)]
         public string InvalidDomainCount { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

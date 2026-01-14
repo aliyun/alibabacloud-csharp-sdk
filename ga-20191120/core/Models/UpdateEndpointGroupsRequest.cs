@@ -10,112 +10,206 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class UpdateEndpointGroupsRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true:</b> performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// </list>
         /// 
-        /// *   **true:** performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The configurations of the endpoint group.
-        /// 
-        /// This parameter is required.
+        /// <para>The configurations of the endpoint groups.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EndpointGroupConfigurations")]
         [Validation(Required=false)]
         public List<UpdateEndpointGroupsRequestEndpointGroupConfigurations> EndpointGroupConfigurations { get; set; }
         public class UpdateEndpointGroupsRequestEndpointGroupConfigurations : TeaModel {
             /// <summary>
-            /// Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:
+            /// <para>Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("EnableClientIPPreservationProxyProtocol")]
             [Validation(Required=false)]
             public bool? EnableClientIPPreservationProxyProtocol { get; set; }
 
             /// <summary>
-            /// Specifies whether to use the TCP Option Address (TOA) module to preserve client IP addresses. Valid values:
+            /// <para>Specifies whether to use the TCP Option Address (TOA) module to preserve client IP addresses. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("EnableClientIPPreservationToa")]
             [Validation(Required=false)]
             public bool? EnableClientIPPreservationToa { get; set; }
 
             /// <summary>
-            /// The configurations of endpoints in the endpoint group.
+            /// <para>The configurations of the endpoints in the endpoint group.</para>
             /// </summary>
             [NameInMap("EndpointConfigurations")]
             [Validation(Required=false)]
             public List<UpdateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations> EndpointConfigurations { get; set; }
             public class UpdateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations : TeaModel {
                 /// <summary>
-                /// The IP address, domain name, or instance ID based on the value of Type.
+                /// <para>Specifies whether to automatically preserve client IP addresses. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b> (default)</description></item>
+                /// </list>
+                /// <remarks>
+                /// <list type="bullet">
+                /// <item><description>By default, client IP address preservation is disabled for an endpoint group of a UDP or TCP listener. You can configure this parameter based on your business requirements.</description></item>
+                /// <item><description>By default, client IP address preservation is enabled for an endpoint group of an HTTP or HTTP listener. You can obtain client IP addresses by using the X-Forwarded-For header. You cannot disable the feature.</description></item>
+                /// <item><description>EnableClientIPPreservation and EnableProxyProtocol cannot be set to true at the same time.<remarks>
+                /// <para> For more information, see <a href="https://help.aliyun.com/document_detail/158080.html">Preserve client IP addresses</a>.</para>
+                /// </remarks>
+                /// </description></item>
+                /// </list>
+                /// </remarks>
+                /// </summary>
+                [NameInMap("EnableClientIPPreservation")]
+                [Validation(Required=false)]
+                public bool? EnableClientIPPreservation { get; set; }
+
+                /// <summary>
+                /// <para>Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b> (default)</description></item>
+                /// </list>
+                /// <remarks>
+                /// <list type="bullet">
+                /// <item><description>This parameter is available only to endpoint groups of TCP listeners.</description></item>
+                /// <item><description>EnableClientIPPreservation and EnableProxyProtocol cannot be set to true at the same time.<remarks>
+                /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/158080.html">Preserve client IP addresses</a>.</para>
+                /// </remarks>
+                /// </description></item>
+                /// </list>
+                /// </remarks>
+                /// </summary>
+                [NameInMap("EnableProxyProtocol")]
+                [Validation(Required=false)]
+                public bool? EnableProxyProtocol { get; set; }
+
+                /// <summary>
+                /// <para>The IP address, domain name, or instance ID based on the value of Type.</para>
+                /// <para>This parameter is required.</para>
                 /// 
-                /// This parameter is required.
+                /// <b>Example:</b>
+                /// <para>47.0.XX.XX</para>
                 /// </summary>
                 [NameInMap("Endpoint")]
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
 
                 /// <summary>
-                /// The private IP address of the ENI.
+                /// <para>The private IP address of the ENI.</para>
+                /// <remarks>
+                /// <para> If you set the endpoint type to ENI, you can specify this parameter. 
+                /// If you leave this parameter empty, the primary private IP address of the ENI is used.</para>
+                /// </remarks>
                 /// 
-                /// >   If you set the endpoint type to ENI, you can specify this parameter. If you leave this parameter empty, the primary private IP address of the ENI is used.
+                /// <b>Example:</b>
+                /// <para>172.168.XX.XX</para>
                 /// </summary>
                 [NameInMap("SubAddress")]
                 [Validation(Required=false)]
                 public string SubAddress { get; set; }
 
                 /// <summary>
-                /// The type of the endpoint. Valid values:
+                /// <para>The type of the endpoint. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Domain</b>: a custom domain name.</description></item>
+                /// <item><description><b>Ip</b>: a custom IP address.</description></item>
+                /// <item><description><b>IpTarget</b>: a custom private IP address.</description></item>
+                /// <item><description><b>PublicIp</b>: a public IP address provided by Alibaba Cloud.</description></item>
+                /// <item><description><b>ECS</b>: an Elastic Compute Service (ECS) instance.</description></item>
+                /// <item><description><b>SLB</b>: a Server Load Balancer (SLB) instance.</description></item>
+                /// <item><description><b>ALB</b>: an Application Load Balancer (ALB) instance.</description></item>
+                /// <item><description><b>OSS</b>: an Object Storage Service (OSS) bucket.</description></item>
+                /// <item><description><b>ENI</b>: an elastic network interface (ENI).</description></item>
+                /// <item><description><b>NLB</b>: a Network Load Balancer (NLB) instance.</description></item>
+                /// </list>
+                /// <remarks>
+                /// <list type="bullet">
+                /// <item><description>If you set this parameter to <b>ECS</b>, <b>ENI</b>, <b>SLB</b>, <b>ALB</b>, <b>NLB</b>, or <b>IpTarget</b> and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the role.</description></item>
+                /// <item><description>If you set this parameter to <b>ALB</b> and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the role.</description></item>
+                /// <item><description>If you set this parameter to <b>OSS</b> and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the role.<remarks>
+                /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/178360.html">Service-linked roles</a>.</para>
+                /// </remarks>
+                /// </description></item>
+                /// </list>
+                /// </remarks>
+                /// <para>This parameter is required.</para>
                 /// 
-                /// *   **Domain:** a custom domain name.
-                /// *   **Ip:** a custom IP address.
-                /// *   **PublicIp:** a public IP address provided by Alibaba Cloud.
-                /// *   **ECS:** an Elastic Compute Service (ECS) instance.
-                /// *   **SLB:**: a Server Load Balancer (SLB) instance.
-                /// *   **ALB:** an Application Load Balancer (ALB) instance.
-                /// *   **OSS:** an Object Storage Service (OSS) bucket.
-                /// *   **ENI:** an elastic network interface (ENI).
-                /// *   **NLB:** a Network Load Balancer (NLB) instance.
-                /// 
-                /// > *   If you set this parameter to **ECS** or **SLB** and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the role.
-                /// >*   If you set this parameter to **ALB** and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the role.
-                /// >*   If you set this parameter to **OSS** and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the role.
-                /// > >For more information, see [Service-linked roles](https://help.aliyun.com/document_detail/178360.html).
-                /// 
-                /// This parameter is required.
+                /// <b>Example:</b>
+                /// <para>Ip</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The weight of the endpoint.
+                /// <para>The IDs of vSwitches that are deployed in the VPC.</para>
+                /// </summary>
+                [NameInMap("VSwitchIds")]
+                [Validation(Required=false)]
+                public List<string> VSwitchIds { get; set; }
+
+                /// <summary>
+                /// <para>The virtual private cloud (VPC) ID.</para>
+                /// <para>You can specify one VPC ID for an endpoint group of an intelligent routing listener.</para>
+                /// <remarks>
+                /// <para> This parameter is valid and required only if Type is set to <b>IpTarget</b>.</para>
+                /// </remarks>
                 /// 
-                /// Valid values: **0** to **255**.
+                /// <b>Example:</b>
+                /// <para>vpc-uf66oesmrqge1t2gs****</para>
+                /// </summary>
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
+                /// <summary>
+                /// <para>The weight of the endpoint.</para>
+                /// <para>Valid values: <b>0</b> to <b>255</b>.</para>
+                /// <remarks>
+                /// <para> If you set the weight of an endpoint to 0, GA stops distributing traffic to the endpoint. Proceed with caution.</para>
+                /// </remarks>
+                /// <para>This parameter is required.</para>
                 /// 
-                /// >  If you set the weight of an endpoint to 0, GA stops distributing traffic to the endpoint. Proceed with caution.
-                /// 
-                /// This parameter is required.
+                /// <b>Example:</b>
+                /// <para>20</para>
                 /// </summary>
                 [NameInMap("Weight")]
                 [Validation(Required=false)]
@@ -124,124 +218,174 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// The description of the endpoint group.
+            /// <para>The description of the endpoint group.</para>
+            /// <para>The description cannot exceed 200 characters in length and cannot start with http:// or https://.</para>
             /// 
-            /// The description can be up to 256 characters in length and cannot contain `http://` or `https://`.
+            /// <b>Example:</b>
+            /// <para>group1</para>
             /// </summary>
             [NameInMap("EndpointGroupDescription")]
             [Validation(Required=false)]
             public string EndpointGroupDescription { get; set; }
 
             /// <summary>
-            /// The ID of the endpoint.
+            /// <para>The endpoint ID.</para>
+            /// <para>This parameter is required.</para>
             /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>ep-bp1d2utp8qqe2a44t****</para>
             /// </summary>
             [NameInMap("EndpointGroupId")]
             [Validation(Required=false)]
             public string EndpointGroupId { get; set; }
 
             /// <summary>
-            /// The name of the endpoint group.
+            /// <para>The name of the endpoint group.</para>
+            /// <para>The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</para>
             /// 
-            /// The name must be 2 to 128 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.
+            /// <b>Example:</b>
+            /// <para>group1</para>
             /// </summary>
             [NameInMap("EndpointGroupName")]
             [Validation(Required=false)]
             public string EndpointGroupName { get; set; }
 
+            [NameInMap("EndpointIpVersion")]
+            [Validation(Required=false)]
+            public string EndpointIpVersion { get; set; }
+
             /// <summary>
-            /// The protocol version that is used by the backend service. Valid values:
+            /// <para>The backend service protocol of the endpoint that is associated with the intelligent routing listener. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>HTTP1.1</b> (default)</description></item>
+            /// <item><description><b>HTTP2</b></description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> You can specify this parameter only if EndpointRequestProtocol is set to HTTPS.</para>
+            /// </remarks>
             /// 
-            /// *   **HTTP1.1**
-            /// *   **HTTP2**
-            /// 
-            /// > *   You can specify this parameter only if the endpoint request protocol uses **HTTPS**.
+            /// <b>Example:</b>
+            /// <para>HTTP1.1</para>
             /// </summary>
             [NameInMap("EndpointProtocolVersion")]
             [Validation(Required=false)]
             public string EndpointProtocolVersion { get; set; }
 
             /// <summary>
-            /// The protocol that is used by the backend service. Valid values:
+            /// <para>The backend service protocol. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>HTTP</b></description></item>
+            /// <item><description><b>HTTPS</b></description></item>
+            /// </list>
+            /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>You can specify this parameter only if the listener that is associated with the endpoint group uses HTTP or HTTPS.</description></item>
+            /// <item><description>The backend service protocol of an HTTP listener must be HTTP.</description></item>
+            /// </list>
+            /// </remarks>
             /// 
-            /// *   **HTTP**
-            /// *   **HTTPS**
-            /// 
-            /// > *   You can specify this parameter only if the listener that is associated with the endpoint group uses HTTP or HTTPS.
-            /// > *   The backend service protocol of an HTTP listener must be HTTP.
+            /// <b>Example:</b>
+            /// <para>HTTP</para>
             /// </summary>
             [NameInMap("EndpointRequestProtocol")]
             [Validation(Required=false)]
             public string EndpointRequestProtocol { get; set; }
 
             /// <summary>
-            /// Specifies whether to enable the health check feature. Valid values:
+            /// <para>Specifies whether to enable the health check feature. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: enables the health check feature.</description></item>
+            /// <item><description><b>false</b> (default): disables the health check feature.</description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false** (default)
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("HealthCheckEnabled")]
             [Validation(Required=false)]
             public bool? HealthCheckEnabled { get; set; }
 
+            [NameInMap("HealthCheckHost")]
+            [Validation(Required=false)]
+            public string HealthCheckHost { get; set; }
+
             /// <summary>
-            /// The interval between two consecutive health checks. Unit: seconds. Valid values: **1** to **50**.
+            /// <para>The interval at which health checks are performed. Unit: seconds. Valid values: <b>1</b> to <b>50</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("HealthCheckIntervalSeconds")]
             [Validation(Required=false)]
             public long? HealthCheckIntervalSeconds { get; set; }
 
             /// <summary>
-            /// The health check path.
+            /// <para>The health check path.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/healthcheck</para>
             /// </summary>
             [NameInMap("HealthCheckPath")]
             [Validation(Required=false)]
             public string HealthCheckPath { get; set; }
 
             /// <summary>
-            /// The port that is used for health checks.
+            /// <para>The port that you want to use for health checks.</para>
+            /// <para>Valid values: <b>1</b> to <b>65535</b>.</para>
             /// 
-            /// Valid values: **1** to **65535**.
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("HealthCheckPort")]
             [Validation(Required=false)]
             public long? HealthCheckPort { get; set; }
 
             /// <summary>
-            /// The protocol over which health check requests are sent. Valid values:
+            /// <para>The protocol over which health check requests are sent. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>tcp</b> or <b>TCP</b></description></item>
+            /// <item><description><b>http</b> or <b>HTTP</b></description></item>
+            /// <item><description><b>https</b> or <b>HTTPS</b></description></item>
+            /// </list>
             /// 
-            /// *   **tcp** or **TCP**
-            /// *   **http** or **HTTP**
-            /// *   **https** or **HTTPS**
+            /// <b>Example:</b>
+            /// <para>tcp</para>
             /// </summary>
             [NameInMap("HealthCheckProtocol")]
             [Validation(Required=false)]
             public string HealthCheckProtocol { get; set; }
 
             /// <summary>
-            /// The port mapping.
+            /// <para>The port mappings.</para>
             /// </summary>
             [NameInMap("PortOverrides")]
             [Validation(Required=false)]
             public List<UpdateEndpointGroupsRequestEndpointGroupConfigurationsPortOverrides> PortOverrides { get; set; }
             public class UpdateEndpointGroupsRequestEndpointGroupConfigurationsPortOverrides : TeaModel {
                 /// <summary>
-                /// The endpoint port.
+                /// <para>The endpoint port.</para>
+                /// <para>Valid values: <b>1</b> to <b>65499</b>.</para>
                 /// 
-                /// Valid values: **1** to **65499**.
+                /// <b>Example:</b>
+                /// <para>80</para>
                 /// </summary>
                 [NameInMap("EndpointPort")]
                 [Validation(Required=false)]
                 public long? EndpointPort { get; set; }
 
                 /// <summary>
-                /// The listener port.
+                /// <para>The listener port.</para>
+                /// <para>Valid values: <b>1</b> to <b>65499</b>.</para>
+                /// <remarks>
+                /// <list type="bullet">
+                /// <item><description>You cannot configure port mappings for virtual endpoint groups of TCP listeners. If a virtual endpoint group already exists on the listener, you cannot configure port mappings for the default endpoint group. If port mappings are configured for the default endpoint group, you cannot add a virtual endpoint group.</description></item>
+                /// <item><description>If you configure port mappings for a listener, you cannot modify the listener protocol. You can only switch between HTTP and HTTPS.</description></item>
+                /// <item><description>Listener port: When you modify the listener port range, make sure that the port range includes the ports configured in port mappings. For example, if you set the listener port range to 80 to 82 and map the listener ports to endpoint ports 100 to 102, you cannot change the listener port range to 80 to 81.</description></item>
+                /// </list>
+                /// </remarks>
                 /// 
-                /// Valid values: **1** to **65499**.
-                /// 
-                /// > *   Only HTTP and HTTPS listeners support port mappings.
-                /// >*   The listener port in a port mapping must be the port that is used by the current listener.
+                /// <b>Example:</b>
+                /// <para>443</para>
                 /// </summary>
                 [NameInMap("ListenerPort")]
                 [Validation(Required=false)]
@@ -250,18 +394,22 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
             /// <summary>
-            /// The number of failed consecutive health checks that must occur before a healthy endpoint group is considered unhealthy or the number of successful consecutive health checks that must occur before an unhealthy endpoint group is considered healthy.
+            /// <para>The number of failed consecutive health checks that must occur before a healthy endpoint group is considered unhealthy or the number of successful consecutive health checks that must occur before an unhealthy endpoint group is considered healthy.</para>
+            /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
             /// 
-            /// Valid values: **2** to **10**.
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("ThresholdCount")]
             [Validation(Required=false)]
             public long? ThresholdCount { get; set; }
 
             /// <summary>
-            /// The traffic ratio of the endpoint group when the specified listener is associated with multiple endpoint groups.
+            /// <para>The traffic ratio of the endpoint group when the specified listener is associated with multiple endpoint groups.</para>
+            /// <para>Valid values: <b>1</b> to <b>100</b>.</para>
             /// 
-            /// Valid values: **1** to **100**.
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("TrafficPercentage")]
             [Validation(Required=false)]
@@ -270,18 +418,22 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The listener ID.
+        /// <para>The listener ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lsr-bp1bpn0kn908w4nbw****</para>
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
+        /// <para>The region ID of the GA instance. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

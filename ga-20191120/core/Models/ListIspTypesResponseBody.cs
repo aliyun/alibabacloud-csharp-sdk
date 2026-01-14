@@ -10,28 +10,33 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListIspTypesResponseBody : TeaModel {
         /// <summary>
-        /// The line types of EIPs in the acceleration region.
-        /// 
-        /// *   **BGP** (default): BGP (Multi-ISP) lines
-        /// *   **BGP_PRO**: BGP (Multi-ISP) Pro lines
-        /// 
-        /// If you have the permissions to use single-ISP bandwidth, one of the following values may be returned:
-        /// 
-        /// *   **ChinaTelecom**: China Telecom (single ISP)
-        /// *   **ChinaUnicom**: China Unicom (single ISP)
-        /// *   **ChinaMobile**: China Mobile (single ISP)
-        /// *   **ChinaTelecom_L2**: China Telecom_L2 (single ISP)
-        /// *   **ChinaUnicom_L2**: China Unicom_L2 (single ISP)
-        /// *   **ChinaMobile_L2**: China Mobile_L2 (single ISP)
-        /// 
-        /// > Different acceleration regions support different single-ISP BGP lines.
+        /// <para>The line types of EIPs in the acceleration region.</para>
+        /// <list type="bullet">
+        /// <item><description><b>BGP</b> (default): BGP (Multi-ISP) lines</description></item>
+        /// <item><description><b>BGP_PRO</b>: BGP (Multi-ISP) Pro lines</description></item>
+        /// </list>
+        /// <para>If you have the permissions to use single-ISP bandwidth, one of the following values may be returned:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ChinaTelecom</b>: China Telecom (single ISP)</description></item>
+        /// <item><description><b>ChinaUnicom</b>: China Unicom (single ISP)</description></item>
+        /// <item><description><b>ChinaMobile</b>: China Mobile (single ISP)</description></item>
+        /// <item><description><b>ChinaTelecom_L2</b>: China Telecom_L2 (single ISP)</description></item>
+        /// <item><description><b>ChinaUnicom_L2</b>: China Unicom_L2 (single ISP)</description></item>
+        /// <item><description><b>ChinaMobile_L2</b>: China Mobile_L2 (single ISP)</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>Different acceleration regions support different single-ISP BGP lines.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("IspTypeList")]
         [Validation(Required=false)]
         public List<string> IspTypeList { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F591955F-5CB5-4CCE-A75D-17CF2085CE22</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

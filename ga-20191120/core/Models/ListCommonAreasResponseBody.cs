@@ -10,42 +10,54 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListCommonAreasResponseBody : TeaModel {
         /// <summary>
-        /// The information about the areas.
+        /// <para>The information about the areas.</para>
         /// </summary>
         [NameInMap("Areas")]
         [Validation(Required=false)]
         public List<ListCommonAreasResponseBodyAreas> Areas { get; set; }
         public class ListCommonAreasResponseBodyAreas : TeaModel {
             /// <summary>
-            /// The area ID.
+            /// <para>The area ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-huabei</para>
             /// </summary>
             [NameInMap("AreaId")]
             [Validation(Required=false)]
             public string AreaId { get; set; }
 
             /// <summary>
-            /// The area name.
+            /// <para>The area name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>North China</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// The information about the regions.
+            /// <para>The information about the regions.</para>
             /// </summary>
             [NameInMap("RegionList")]
             [Validation(Required=false)]
             public List<ListCommonAreasResponseBodyAreasRegionList> RegionList { get; set; }
             public class ListCommonAreasResponseBodyAreasRegionList : TeaModel {
                 /// <summary>
-                /// The region name.
+                /// <para>The region name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>China (Qingdao)</para>
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// The region ID.
+                /// <para>The region ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-qingdao</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -56,7 +68,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DE77A7F3-3B74-41C0-A5BC-CAFD188C28B6</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

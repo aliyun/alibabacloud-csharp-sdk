@@ -10,96 +10,125 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListEndpointGroupsRequest : TeaModel {
         /// <summary>
-        /// The ID of the GA instance.
+        /// <para>The ID of the GA instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ga-bp1odcab8tmno0hdq****</para>
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// Specifies whether the access logging feature is enabled. Default value: off. Valid values:
+        /// <para>Specifies whether the access logging feature is enabled. Default value: off. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>on</b>: The access logging feature is enabled.</description></item>
+        /// <item><description><b>off</b>: The access logging feature is disabled.</description></item>
+        /// </list>
         /// 
-        /// *   **on**: The access logging feature is enabled.
-        /// *   **off**: The access logging feature is disabled.
+        /// <b>Example:</b>
+        /// <para>on</para>
         /// </summary>
         [NameInMap("AccessLogSwitch")]
         [Validation(Required=false)]
         public string AccessLogSwitch { get; set; }
 
         /// <summary>
-        /// The ID of the endpoint group.
+        /// <para>The ID of the endpoint group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>epg-bp16jdc00bhe97sr5****</para>
         /// </summary>
         [NameInMap("EndpointGroupId")]
         [Validation(Required=false)]
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// The type of the endpoint group. Valid values:
+        /// <para>The type of the endpoint group. Valid values: Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>default</b></description></item>
+        /// <item><description><b>virtual</b></description></item>
+        /// <item><description>If you leave this parameter empty, all default and virtual endpoint groups are queried.</description></item>
+        /// </list>
         /// 
-        /// *   **default**
-        /// *   **virtual**
-        /// *   If you leave this parameter empty, all default and virtual endpoint groups are queried.
+        /// <b>Example:</b>
+        /// <para>virtual</para>
         /// </summary>
         [NameInMap("EndpointGroupType")]
         [Validation(Required=false)]
         public string EndpointGroupType { get; set; }
 
         /// <summary>
-        /// The ID of the listener.
+        /// <para>The ID of the listener.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>lsr-bp1bpn0kn908w4nbw****</para>
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// The page number. Default value: **1**.
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Maximum value: **50**. Default value: **10**.
+        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+        /// <para>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The tag of the endpoint group.
+        /// <para>The tag of the endpoint group.</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>false</c>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListEndpointGroupsRequestTag> Tag { get; set; }
         public class ListEndpointGroupsRequestTag : TeaModel {
             /// <summary>
-            /// The tag key of the endpoint group. It cannot be an empty string.
+            /// <para>The tag key of the endpoint group. It cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>You can specify up to 20 tag keys.</para>
             /// 
-            /// The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
-            /// 
-            /// You can specify up to 20 tag keys.
+            /// <b>Example:</b>
+            /// <para>test-key</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value of the endpoint group. The tag value can be an empty string.
+            /// <para>The tag value of the endpoint group. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>You can specify up to 20 tag values.</para>
             /// 
-            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
-            /// 
-            /// You can specify up to 20 tag values.
+            /// <b>Example:</b>
+            /// <para>test-value</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

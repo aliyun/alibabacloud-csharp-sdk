@@ -10,74 +10,97 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListBasicEndpointsRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the endpoint group to which the endpoint that you want to query belongs.
+        /// <para>The ID of the endpoint group to which the endpoint that you want to query belongs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>epg-bp1dmlohjjz4kqaun****</para>
         /// </summary>
         [NameInMap("EndpointGroupId")]
         [Validation(Required=false)]
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the endpoint that you want to query.
+        /// <para>The ID of the endpoint that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ep-bp14sz7ftcwwjgrdm****</para>
         /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// The type of endpoint that you want to query. Valid values:
+        /// <para>The type of endpoint that you want to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ENI</b>: elastic network interface (ENI).</description></item>
+        /// <item><description><b>SLB</b>: Classic Load Balancer (CLB) instance.</description></item>
+        /// <item><description><b>ECS</b>: Elastic Compute Service (ECS) instance.</description></item>
+        /// <item><description><b>NLB</b>: Network Load Balancer (NLB) instance.</description></item>
+        /// </list>
         /// 
-        /// *   **ENI**: elastic network interface (ENI).
-        /// *   **SLB**: Classic Load Balancer (CLB) instance.
-        /// *   **ECS**: Elastic Compute Service (ECS) instance.
-        /// *   **NLB**: Network Load Balancer (NLB) instance.
+        /// <b>Example:</b>
+        /// <para>ENI</para>
         /// </summary>
         [NameInMap("EndpointType")]
         [Validation(Required=false)]
         public string EndpointType { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
+        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>10</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The name of the endpoint that you want to query.
+        /// <para>The name of the endpoint that you want to query.</para>
+        /// <para>The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</para>
         /// 
-        /// The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.
+        /// <b>Example:</b>
+        /// <para>ep01</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query. Valid values:
+        /// <para>The token that determines the start point of the query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If this is your first query or no next query is to be sent, ignore this parameter.</description></item>
+        /// <item><description>If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</description></item>
+        /// </list>
         /// 
-        /// *   If this is your first query or no next query is to be sent, ignore this parameter.
-        /// *   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// <para>The ID of the region where the GA instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

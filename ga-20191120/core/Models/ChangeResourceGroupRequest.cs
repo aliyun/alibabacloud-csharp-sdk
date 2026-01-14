@@ -10,57 +10,70 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <b>client token</b> can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the value of <b>RequestId</b> as the value of <b>ClientToken</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **client token** can contain only ASCII characters.
-        /// 
-        /// >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The ID of the new resource group.
+        /// <para>The ID of the new resource group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rg-aekzrnd67gq****</para>
         /// </summary>
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// <para>The ID of the region where the GA instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the GA resource.
+        /// <para>The ID of the GA resource.</para>
+        /// <list type="bullet">
+        /// <item><description>If you set <b>ResourceType</b> to <b>accelerator</b>, set the value of ResourceId to the ID of a standard GA instance.</description></item>
+        /// <item><description>If you set <b>ResourceType</b> to <b>basicaccelerator</b>, set the value of ResourceId to the ID of a basic GA instance.</description></item>
+        /// <item><description>If you set <b>ResourceType</b> to <b>bandwidthpackage</b>, set the value of ResourceId to the ID of a bandwidth plan.</description></item>
+        /// <item><description>If you set <b>ResourceType</b> to <b>acl</b>, set the value of ResourceId to the ID of an access control list (ACL).</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   If you set **ResourceType** to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.
-        /// *   If you set **ResourceType** to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.
-        /// *   If you set **ResourceType** to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.
-        /// *   If you set **ResourceType** to **acl**, set the value of ResourceId to the ID of an access control list (ACL).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ga-bp149u6o36qt1as9b****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the GA resource. Valid values:
+        /// <para>The type of the GA resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>accelerator:</b> a standard GA instance.</description></item>
+        /// <item><description><b>basicaccelerator:</b> a basic GA instance.</description></item>
+        /// <item><description><b>bandwidthpackage:</b> a bandwidth plan.</description></item>
+        /// <item><description><b>acl:</b> an ACL.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **accelerator:** a standard GA instance.
-        /// *   **basicaccelerator:** a basic GA instance.
-        /// *   **bandwidthpackage:** a bandwidth plan.
-        /// *   **acl:** an ACL.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>accelerator</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListAvailableBusiRegionsRequest : TeaModel {
         /// <summary>
-        /// The ID of the GA instance.
+        /// <para>The ID of the GA instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ga-bp1odcab8tmno0hdq****</para>
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// <para>The ID of the region where the GA instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,81 +10,103 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ConfigEndpointProbeRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable latency monitoring. Valid values:
+        /// <para>Specifies whether to enable latency monitoring. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b> (default)</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **true**
-        /// *   **false** (default)
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
         public string Enable { get; set; }
 
         /// <summary>
-        /// The endpoint.
+        /// <para>The endpoint.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>127.0.XX.XX</para>
         /// </summary>
         [NameInMap("Endpoint")]
         [Validation(Required=false)]
         public string Endpoint { get; set; }
 
         /// <summary>
-        /// The endpoint group ID.
+        /// <para>The endpoint group ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>epg-bp1dmlohjjz4kqaun****</para>
         /// </summary>
         [NameInMap("EndpointGroupId")]
         [Validation(Required=false)]
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// The type of the endpoint. Valid values:
+        /// <para>The type of the endpoint. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Ip:</b> a custom IP address.</description></item>
+        /// <item><description><b>Domain:</b> a custom domain name.</description></item>
+        /// <item><description><b>EIP:</b> an Alibaba Cloud elastic IP address (EIP).</description></item>
+        /// <item><description><b>PublicIp:</b> an Alibaba Cloud public IP address.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **Ip:** a custom IP address.
-        /// *   **Domain:** a custom domain name.
-        /// *   **EIP:** an Alibaba Cloud elastic IP address (EIP).
-        /// *   **PublicIp:** an Alibaba Cloud public IP address.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Ip</para>
         /// </summary>
         [NameInMap("EndpointType")]
         [Validation(Required=false)]
         public string EndpointType { get; set; }
 
         /// <summary>
-        /// The port that is used to monitor latency. Valid values: **0** to **65535**.
+        /// <para>The port that is used to monitor latency. Valid values: <b>0</b> to <b>65535</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>80</para>
         /// </summary>
         [NameInMap("ProbePort")]
         [Validation(Required=false)]
         public string ProbePort { get; set; }
 
         /// <summary>
-        /// The protocol that is used to monitor latency. Valid values:
+        /// <para>The protocol that is used to monitor latency. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>tcp:</b> TCP.</description></item>
+        /// <item><description><b>icmp:</b> ICMP.</description></item>
+        /// </list>
         /// 
-        /// *   **tcp:** TCP.
-        /// *   **icmp:** ICMP.
+        /// <b>Example:</b>
+        /// <para>tcp</para>
         /// </summary>
         [NameInMap("ProbeProtocol")]
         [Validation(Required=false)]
         public string ProbeProtocol { get; set; }
 
         /// <summary>
-        /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
+        /// <para>The region ID of the GA instance. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

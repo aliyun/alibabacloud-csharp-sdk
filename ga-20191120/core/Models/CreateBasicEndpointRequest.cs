@@ -10,104 +10,128 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateBasicEndpointRequest : TeaModel {
         /// <summary>
-        /// The ID of the basic GA instance.
+        /// <para>The ID of the basic GA instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ga-bp17frjjh0udz4qz****</para>
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The address of the endpoint.
+        /// <para>The address of the endpoint.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>eni-bp1a05txelswuj8g****</para>
         /// </summary>
         [NameInMap("EndpointAddress")]
         [Validation(Required=false)]
         public string EndpointAddress { get; set; }
 
         /// <summary>
-        /// The ID of the endpoint group.
+        /// <para>The ID of the endpoint group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>epg-bp1dmlohjjz4kqaun****</para>
         /// </summary>
         [NameInMap("EndpointGroupId")]
         [Validation(Required=false)]
         public string EndpointGroupId { get; set; }
 
         /// <summary>
-        /// The secondary address of the endpoint.
+        /// <para>The secondary address of the endpoint.</para>
+        /// <para>This parameter is required if the endpoint type is <b>ECS</b>, <b>ENI</b>, or <b>NLB</b>.</para>
+        /// <list type="bullet">
+        /// <item><description>If the endpoint type is <b>ECS</b>, you can set <b>EndpointSubAddress</b> to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.</description></item>
+        /// <item><description>If the endpoint type is <b>ENI</b>, you can set <b>EndpointSubAddress</b> to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.</description></item>
+        /// <item><description>This parameter is required if the endpoint type is <b>NLB</b>. <b>EndpointSubAddress</b> is the primary private IP address of the NLB backend server.</description></item>
+        /// </list>
         /// 
-        /// This parameter is required if the endpoint type is **ECS**, **ENI**, or **NLB**.
-        /// 
-        /// *   If the endpoint type is **ECS**, you can set **EndpointSubAddress** to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.
-        /// *   If the endpoint type is **ENI**, you can set **EndpointSubAddress** to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.
-        /// *   This parameter is required if the endpoint type is **NLB**. **EndpointSubAddress** is the primary private IP address of the NLB backend server.
+        /// <b>Example:</b>
+        /// <para>172.16.XX.XX</para>
         /// </summary>
         [NameInMap("EndpointSubAddress")]
         [Validation(Required=false)]
         public string EndpointSubAddress { get; set; }
 
         /// <summary>
-        /// The type of the secondary address of the endpoint. Valid values:
+        /// <para>The type of the secondary address of the endpoint. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>primary</b>: a primary private IP address.</description></item>
+        /// <item><description><b>secondary</b>: a secondary private IP address.</description></item>
+        /// </list>
+        /// <para>This parameter is required if the endpoint type is <b>ECS</b>, <b>ENI</b>, or <b>NLB</b>. If the endpoint type is <b>NLB</b>, only <b>primary</b> is supported.</para>
         /// 
-        /// *   **primary**: a primary private IP address.
-        /// *   **secondary**: a secondary private IP address.
-        /// 
-        /// This parameter is required if the endpoint type is **ECS**, **ENI**, or **NLB**. If the endpoint type is **NLB**, only **primary** is supported.
+        /// <b>Example:</b>
+        /// <para>primary</para>
         /// </summary>
         [NameInMap("EndpointSubAddressType")]
         [Validation(Required=false)]
         public string EndpointSubAddressType { get; set; }
 
         /// <summary>
-        /// The type of endpoint. Valid values:
+        /// <para>The type of endpoint. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ENI</b>: elastic network interface (ENI)</description></item>
+        /// <item><description><b>SLB</b>: Classic Load Balancer (CLB)</description></item>
+        /// <item><description><b>ECS</b>: Elastic Compute Service (ECS)</description></item>
+        /// <item><description><b>NLB</b>: Network Load Balancer (NLB)</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **ENI**: elastic network interface (ENI)
-        /// *   **SLB**: Classic Load Balancer (CLB)
-        /// *   **ECS**: Elastic Compute Service (ECS)
-        /// *   **NLB**: Network Load Balancer (NLB)
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ENI</para>
         /// </summary>
         [NameInMap("EndpointType")]
         [Validation(Required=false)]
         public string EndpointType { get; set; }
 
         /// <summary>
-        /// The zone ID of the endpoint.
+        /// <para>The zone ID of the endpoint.</para>
+        /// <para>This parameter is required only if the endpoint type is <b>NLB</b>.</para>
         /// 
-        /// This parameter is required only if the endpoint type is **NLB**.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-g</para>
         /// </summary>
         [NameInMap("EndpointZoneId")]
         [Validation(Required=false)]
         public string EndpointZoneId { get; set; }
 
         /// <summary>
-        /// The name of the endpoint that is associated with the basic GA instance.
+        /// <para>The name of the endpoint that is associated with the basic GA instance.</para>
+        /// <para>The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</para>
         /// 
-        /// The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.
+        /// <b>Example:</b>
+        /// <para>ep01</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// <para>The ID of the region where the GA instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

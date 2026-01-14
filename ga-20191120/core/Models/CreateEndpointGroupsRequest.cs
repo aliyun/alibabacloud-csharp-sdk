@@ -10,54 +10,63 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateEndpointGroupsRequest : TeaModel {
         /// <summary>
-        /// The ID of the GA instance.
+        /// <para>The ID of the GA instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ga-bp1odcab8tmno0hdq****</para>
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>1F4B6A4A-C89E-489E-BAF1-52777EE148EF</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, a 2xx HTTP status code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EndpointGroupConfigurations")]
         [Validation(Required=false)]
         public List<CreateEndpointGroupsRequestEndpointGroupConfigurations> EndpointGroupConfigurations { get; set; }
         public class CreateEndpointGroupsRequestEndpointGroupConfigurations : TeaModel {
-            [NameInMap("EnableClientIPPreservationProxyProtocol")]
-            [Validation(Required=false)]
-            public bool? EnableClientIPPreservationProxyProtocol { get; set; }
-
-            [NameInMap("EnableClientIPPreservationToa")]
-            [Validation(Required=false)]
-            public bool? EnableClientIPPreservationToa { get; set; }
-
             [NameInMap("EndpointConfigurations")]
             [Validation(Required=false)]
             public List<CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations> EndpointConfigurations { get; set; }
             public class CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations : TeaModel {
+                [NameInMap("EnableClientIPPreservation")]
+                [Validation(Required=false)]
+                public bool? EnableClientIPPreservation { get; set; }
+
+                [NameInMap("EnableProxyProtocol")]
+                [Validation(Required=false)]
+                public bool? EnableProxyProtocol { get; set; }
+
                 [NameInMap("Endpoint")]
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
@@ -69,6 +78,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
+
+                [NameInMap("VSwitchIds")]
+                [Validation(Required=false)]
+                public List<string> VSwitchIds { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
 
                 [NameInMap("Weight")]
                 [Validation(Required=false)]
@@ -85,7 +102,7 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             public string EndpointGroupName { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("EndpointGroupRegion")]
             [Validation(Required=false)]
@@ -94,6 +111,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [NameInMap("EndpointGroupType")]
             [Validation(Required=false)]
             public string EndpointGroupType { get; set; }
+
+            [NameInMap("EndpointIpVersion")]
+            [Validation(Required=false)]
+            public string EndpointIpVersion { get; set; }
 
             [NameInMap("EndpointProtocolVersion")]
             [Validation(Required=false)]
@@ -106,6 +127,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [NameInMap("HealthCheckEnabled")]
             [Validation(Required=false)]
             public bool? HealthCheckEnabled { get; set; }
+
+            [NameInMap("HealthCheckHost")]
+            [Validation(Required=false)]
+            public string HealthCheckHost { get; set; }
 
             [NameInMap("HealthCheckIntervalSeconds")]
             [Validation(Required=false)]
@@ -180,20 +205,25 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         }
 
         /// <summary>
-        /// The ID of the listener.
+        /// <para>The ID of the listener.</para>
+        /// <remarks>
+        /// <para> If the listener protocol is <b>HTTP</b> or <b>HTTPS</b>, you can call the <b>CreateEndpointGroups</b> operation to create only one endpoint group.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  If the listener protocol is **HTTP** or **HTTPS**, you can call the **CreateEndpointGroups** operation to create only one endpoint group.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lsr-bp1bpn0kn908w4nbw****</para>
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+        /// <para>The ID of the region where the GA instance is deployed. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

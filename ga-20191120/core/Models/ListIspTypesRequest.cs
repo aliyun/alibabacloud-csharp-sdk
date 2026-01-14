@@ -10,26 +10,35 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListIspTypesRequest : TeaModel {
         /// <summary>
-        /// The ID of the GA instance that you want to query.
+        /// <para>The ID of the GA instance that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ga-bp1odcab8tmno0hdq****</para>
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// The type of the Global Accelerator (GA) instance to be queried. Valid values:
+        /// <para>The type of the Global Accelerator (GA) instance to be queried. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>basic</b>: basic GA instance</description></item>
+        /// <item><description><b>standard</b>: standard GA instance</description></item>
+        /// </list>
         /// 
-        /// *   **basic**: basic GA instance
-        /// *   **standard**: standard GA instance
+        /// <b>Example:</b>
+        /// <para>basic</para>
         /// </summary>
         [NameInMap("AcceleratorType")]
         [Validation(Required=false)]
         public string AcceleratorType { get; set; }
 
         /// <summary>
-        /// The ID of the acceleration region to be queried.
+        /// <para>The ID of the acceleration region to be queried.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("BusinessRegionId")]
         [Validation(Required=false)]

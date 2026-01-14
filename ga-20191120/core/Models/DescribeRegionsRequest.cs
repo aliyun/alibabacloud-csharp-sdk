@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The region ID of the GA instance. Set the value to **cn-hangzhou**.
+        /// <para>The region ID of the GA instance. Set the value to <b>cn-hangzhou</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

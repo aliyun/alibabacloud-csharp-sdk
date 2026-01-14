@@ -10,25 +10,32 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateBasicAcceleratorResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the basic GA instance.
+        /// <para>The ID of the basic GA instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ga-bp17frjjh0udz4qz****</para>
         /// </summary>
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
         /// <summary>
-        /// The order ID.
+        /// <para>The order ID.</para>
+        /// <para>This parameter is returned only if ChargeType is set to PREPAY.</para>
+        /// <para>If <b>AutoPay</b> is set to <b>false</b>, go to <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment after an order is generated.</para>
         /// 
-        /// This parameter is returned only if ChargeType is set to PREPAY.
-        /// 
-        /// If **AutoPay** is set to **false**, go to [Order Center](https://usercenter2-intl.aliyun.com/order/list) to complete the payment after an order is generated.
+        /// <b>Example:</b>
+        /// <para>2082574365</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F591955F-5CB5-4CCE-A75D-17CF2085CE22</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

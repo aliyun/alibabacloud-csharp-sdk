@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class AssociateAdditionalCertificatesWithListenerResponseBody : TeaModel {
         /// <summary>
-        /// The listener ID.
+        /// <para>The listener ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>lsr-bp1bpn0kn908w4nbw****</para>
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6FEA0CF3-D3B9-43E5-A304-D217037876A8</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
