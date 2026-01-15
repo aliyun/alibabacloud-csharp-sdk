@@ -355,6 +355,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string IntentCode { get; set; }
 
+            [NameInMap("match")]
+            [Validation(Required=false)]
+            public HttpApiBackendMatchConditions Match { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>qwen-max</para>

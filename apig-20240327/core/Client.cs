@@ -7521,6 +7521,108 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询密钥</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSecretResponse
+        /// </returns>
+        public GetSecretResponse GetSecretWithOptions(string secretId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSecret",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/secrets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(secretId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSecretResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询密钥</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSecretResponse
+        /// </returns>
+        public async Task<GetSecretResponse> GetSecretWithOptionsAsync(string secretId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSecret",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/secrets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(secretId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSecretResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询密钥</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetSecretResponse
+        /// </returns>
+        public GetSecretResponse GetSecret(string secretId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetSecretWithOptions(secretId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询密钥</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetSecretResponse
+        /// </returns>
+        public async Task<GetSecretResponse> GetSecretAsync(string secretId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetSecretWithOptionsAsync(secretId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询密钥值</para>
         /// </summary>
         /// 
