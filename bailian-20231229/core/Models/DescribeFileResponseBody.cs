@@ -76,6 +76,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             [Validation(Required=false)]
             public string FileType { get; set; }
 
+            [NameInMap("ParseResultDownloadUrl")]
+            [Validation(Required=false)]
+            public string ParseResultDownloadUrl { get; set; }
+
             /// <summary>
             /// <para>The parser that is used to parse the document. Valid value:</para>
             /// <list type="bullet">
