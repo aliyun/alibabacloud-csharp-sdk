@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         [Validation(Required=false)]
         public int? Num { get; set; }
 
+        [NameInMap("ScoreThreshold")]
+        [Validation(Required=false)]
+        public string ScoreThreshold { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>0</para>

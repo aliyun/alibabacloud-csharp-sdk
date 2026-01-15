@@ -113,6 +113,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        [NameInMap("ScoreThreshold")]
+        [Validation(Required=false)]
+        public string ScoreThreshold { get; set; }
+
         /// <summary>
         /// <para>The number of the image to return. Valid values: 0 to 499. Default value: 0.</para>
         /// 
