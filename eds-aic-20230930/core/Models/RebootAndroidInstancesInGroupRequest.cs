@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public bool? ForceStop { get; set; }
 
+        [NameInMap("IgnoreParamValidation")]
+        [Validation(Required=false)]
+        public bool? IgnoreParamValidation { get; set; }
+
         [NameInMap("SaleMode")]
         [Validation(Required=false)]
         public string SaleMode { get; set; }

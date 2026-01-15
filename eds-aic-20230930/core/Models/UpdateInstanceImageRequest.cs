@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class UpdateInstanceImageRequest : TeaModel {
+        [NameInMap("IgnoreParamValidation")]
+        [Validation(Required=false)]
+        public bool? IgnoreParamValidation { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>imgc-075cllfeuazh0****</para>

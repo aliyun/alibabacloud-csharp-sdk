@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class BatchGetAcpConnectionTicketRequest : TeaModel {
+        [NameInMap("ConnectionMode")]
+        [Validation(Required=false)]
+        public string ConnectionMode { get; set; }
+
         /// <summary>
         /// <para>The ID of the user to whom the cloud phone instance is assigned.</para>
         /// 

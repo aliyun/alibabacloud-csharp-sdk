@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string PersistentAppInstanceId { get; set; }
 
+            [NameInMap("Port")]
+            [Validation(Required=false)]
+            public int? Port { get; set; }
+
             /// <summary>
             /// <para>The ID of the task.</para>
             /// 

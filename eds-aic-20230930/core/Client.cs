@@ -900,6 +900,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionMode))
+            {
+                query["ConnectionMode"] = request.ConnectionMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
             {
                 query["EndUserId"] = request.EndUserId;
@@ -954,6 +958,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionMode))
+            {
+                query["ConnectionMode"] = request.ConnectionMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
             {
                 query["EndUserId"] = request.EndUserId;
@@ -11613,6 +11621,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["ForceStop"] = request.ForceStop;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreParamValidation))
+            {
+                query["IgnoreParamValidation"] = request.IgnoreParamValidation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
             {
                 query["SaleMode"] = request.SaleMode;
@@ -11667,6 +11679,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceStop))
             {
                 query["ForceStop"] = request.ForceStop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreParamValidation))
+            {
+                query["IgnoreParamValidation"] = request.IgnoreParamValidation;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
             {
@@ -12565,6 +12581,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["AndroidInstanceIds"] = request.AndroidInstanceIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreParamValidation))
+            {
+                query["IgnoreParamValidation"] = request.IgnoreParamValidation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
             {
                 query["SaleMode"] = request.SaleMode;
@@ -12619,6 +12639,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIds))
             {
                 query["AndroidInstanceIds"] = request.AndroidInstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreParamValidation))
+            {
+                query["IgnoreParamValidation"] = request.IgnoreParamValidation;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
             {
@@ -14724,6 +14748,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreParamValidation))
+            {
+                query["IgnoreParamValidation"] = request.IgnoreParamValidation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
@@ -14774,6 +14802,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreParamValidation))
+            {
+                query["IgnoreParamValidation"] = request.IgnoreParamValidation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
