@@ -302,6 +302,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string ConfigId { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>ENABLE</para>
+                /// </summary>
+                [NameInMap("ConfigLoggingSwitchStatus")]
+                [Validation(Required=false)]
+                public string ConfigLoggingSwitchStatus { get; set; }
+
+                /// <summary>
                 /// <para>Domain instance creation time.</para>
                 /// 
                 /// <b>Example:</b>

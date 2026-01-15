@@ -7609,6 +7609,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeCloudGtmAddressReferenceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询全局流量管理告警配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCloudGtmGlobalAlertRequest
         /// </param>
@@ -7650,6 +7655,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeCloudGtmGlobalAlertResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询全局流量管理告警配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCloudGtmGlobalAlertRequest
         /// </param>
@@ -7691,6 +7701,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeCloudGtmGlobalAlertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询全局流量管理告警配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCloudGtmGlobalAlertRequest
         /// </param>
@@ -7704,6 +7719,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return DescribeCloudGtmGlobalAlertWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询全局流量管理告警配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCloudGtmGlobalAlertRequest
         /// </param>
@@ -29235,6 +29255,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await UpdateCloudGtmAddressRemarkWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新全局流量管理告警设置</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// UpdateCloudGtmGlobalAlertRequest
         /// </param>
@@ -29294,6 +29319,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<UpdateCloudGtmGlobalAlertResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新全局流量管理告警设置</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// UpdateCloudGtmGlobalAlertRequest
         /// </param>
@@ -29353,6 +29383,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<UpdateCloudGtmGlobalAlertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新全局流量管理告警设置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateCloudGtmGlobalAlertRequest
         /// </param>
@@ -29366,6 +29401,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return UpdateCloudGtmGlobalAlertWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新全局流量管理告警设置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateCloudGtmGlobalAlertRequest
         /// </param>

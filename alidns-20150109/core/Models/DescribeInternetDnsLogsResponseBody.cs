@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [Validation(Required=false)]
                 public string DnsMsgId { get; set; }
 
+                [NameInMap("Flags")]
+                [Validation(Required=false)]
+                public string Flags { get; set; }
+
                 /// <summary>
                 /// <para>Parse timestamp.</para>
                 /// 
@@ -77,6 +81,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [Validation(Required=false)]
                 public string Protocol { get; set; }
 
+                [NameInMap("QueryFlags")]
+                [Validation(Required=false)]
+                public string QueryFlags { get; set; }
+
                 /// <summary>
                 /// <para>The domain name for which you want to query Domain Name System (DNS) records.</para>
                 /// 
@@ -96,6 +104,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [NameInMap("QueryType")]
                 [Validation(Required=false)]
                 public string QueryType { get; set; }
+
+                [NameInMap("ResponseTimestamp")]
+                [Validation(Required=false)]
+                public string ResponseTimestamp { get; set; }
 
                 /// <summary>
                 /// <para>Parse response time.</para>

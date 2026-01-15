@@ -89,6 +89,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public bool? SmsNotice { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
+            [NameInMap("Threshold")]
+            [Validation(Required=false)]
+            public int? Threshold { get; set; }
+
         }
 
         /// <summary>
