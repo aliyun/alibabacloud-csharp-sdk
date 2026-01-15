@@ -27,6 +27,30 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<string> KeyList { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("PageRecordCount")]
+        [Validation(Required=false)]
+        public int? PageRecordCount { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        /// <summary>
         /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
@@ -35,6 +59,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("TotalRecordCount")]
+        [Validation(Required=false)]
+        public int? TotalRecordCount { get; set; }
 
     }
 
