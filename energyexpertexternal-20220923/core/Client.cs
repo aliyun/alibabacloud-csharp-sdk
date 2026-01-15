@@ -382,12 +382,12 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Document Results</para>
+        /// <para>Obtains the real-time parsing result of the Qwen VL model.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Users obtain real-time VL results by uploading a document URL.</para>
+        /// <para>You need to upload a document URL to obtain the real-time parsing result of the Qwen VL model.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -407,6 +407,10 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["fileName"] = request.FileName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
             {
                 query["fileUrl"] = request.FileUrl;
@@ -441,12 +445,12 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Document Results</para>
+        /// <para>Obtains the real-time parsing result of the Qwen VL model.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Users obtain real-time VL results by uploading a document URL.</para>
+        /// <para>You need to upload a document URL to obtain the real-time parsing result of the Qwen VL model.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -466,6 +470,10 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["fileName"] = request.FileName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
             {
                 query["fileUrl"] = request.FileUrl;
@@ -500,12 +508,12 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Document Results</para>
+        /// <para>Obtains the real-time parsing result of the Qwen VL model.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Users obtain real-time VL results by uploading a document URL.</para>
+        /// <para>You need to upload a document URL to obtain the real-time parsing result of the Qwen VL model.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -524,12 +532,12 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Document Results</para>
+        /// <para>Obtains the real-time parsing result of the Qwen VL model.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Users obtain real-time VL results by uploading a document URL.</para>
+        /// <para>You need to upload a document URL to obtain the real-time parsing result of the Qwen VL model.</para>
         /// </description>
         /// 
         /// <param name="request">

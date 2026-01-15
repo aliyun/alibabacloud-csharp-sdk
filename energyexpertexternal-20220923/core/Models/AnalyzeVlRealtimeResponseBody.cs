@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class AnalyzeVlRealtimeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return result.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public AnalyzeVlRealtimeResponseBodyData Data { get; set; }
         public class AnalyzeVlRealtimeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Document parsing result details</para>
+            /// <para>The details of the document extraction result.</para>
             /// </summary>
             [NameInMap("kvListInfo")]
             [Validation(Required=false)]
             public List<AnalyzeVlRealtimeResponseBodyDataKvListInfo> KvListInfo { get; set; }
             public class AnalyzeVlRealtimeResponseBodyDataKvListInfo : TeaModel {
                 /// <summary>
-                /// <para>Recall content</para>
+                /// <para>The recalled content.</para>
                 /// </summary>
                 [NameInMap("context")]
                 [Validation(Required=false)]
                 public AnalyzeVlRealtimeResponseBodyDataKvListInfoContext Context { get; set; }
                 public class AnalyzeVlRealtimeResponseBodyDataKvListInfoContext : TeaModel {
                     /// <summary>
-                    /// <para>Confidence</para>
+                    /// <para>The confidence level.</para>
                     /// </summary>
                     [NameInMap("confidence")]
                     [Validation(Required=false)]
                     public AnalyzeVlRealtimeResponseBodyDataKvListInfoContextConfidence Confidence { get; set; }
                     public class AnalyzeVlRealtimeResponseBodyDataKvListInfoContextConfidence : TeaModel {
                         /// <summary>
-                        /// <para>Key confidence</para>
+                        /// <para>The confidence level of the key.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0.9994202852249146</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
                         public double? KeyConfidence { get; set; }
 
                         /// <summary>
-                        /// <para>Value confidence</para>
+                        /// <para>The confidence level of the value.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0.9794202852249146</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
                     }
 
                     /// <summary>
-                    /// <para>Key recall information details</para>
+                    /// <para>The details of the recalled key information.</para>
                     /// </summary>
                     [NameInMap("key")]
                     [Validation(Required=false)]
                     public List<ContentItem> Key { get; set; }
 
                     /// <summary>
-                    /// <para>Value recall information details</para>
+                    /// <para>The details of the recalled value information.</para>
                     /// </summary>
                     [NameInMap("value")]
                     [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
                 }
 
                 /// <summary>
-                /// <para>Field Key name</para>
+                /// <para>The name of the key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>username</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
                 public string KeyName { get; set; }
 
                 /// <summary>
-                /// <para>Field key value</para>
+                /// <para>The value of the key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bob</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>83A5A7DD-8974-5769-952E-590A97BEA34E</para>
