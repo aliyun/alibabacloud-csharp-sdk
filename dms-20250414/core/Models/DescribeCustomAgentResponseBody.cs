@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string DataJson { get; set; }
 
+            [NameInMap("DefaultAgent")]
+            [Validation(Required=false)]
+            public int? DefaultAgent { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
