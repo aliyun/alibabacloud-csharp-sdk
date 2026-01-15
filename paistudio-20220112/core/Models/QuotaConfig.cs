@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("ControlPlaneClusterId")]
+        [Validation(Required=false)]
+        public string ControlPlaneClusterId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>470.199.02</para>
@@ -49,9 +53,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public EniCacheConfig EniCacheConfig { get; set; }
 
-        [NameInMap("OversoldUsageInfo")]
+        [NameInMap("OversoldUsageConfig")]
         [Validation(Required=false)]
-        public OversoldUsageConfig OversoldUsageInfo { get; set; }
+        public OversoldUsageConfig OversoldUsageConfig { get; set; }
 
         [NameInMap("ResourceSpecs")]
         [Validation(Required=false)]
