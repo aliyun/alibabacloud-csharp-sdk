@@ -41,6 +41,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string NewsShrink { get; set; }
 
+        [NameInMap("Topics")]
+        [Validation(Required=false)]
+        public string TopicsShrink { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="http://www.example.com/xxx.jsonline">http://www.example.com/xxx.jsonline</a></para>
+        /// </summary>
+        [NameInMap("TopicsFileUrl")]
+        [Validation(Required=false)]
+        public string TopicsFileUrl { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

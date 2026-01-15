@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ExportCustomSourceAnalysisTaskRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>jsonLine</para>
+        /// </summary>
+        [NameInMap("ExportType")]
+        [Validation(Required=false)]
+        public string ExportType { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

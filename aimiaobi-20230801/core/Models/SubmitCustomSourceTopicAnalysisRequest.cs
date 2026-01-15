@@ -81,6 +81,32 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         }
 
+        [NameInMap("Topics")]
+        [Validation(Required=false)]
+        public List<SubmitCustomSourceTopicAnalysisRequestTopics> Topics { get; set; }
+        public class SubmitCustomSourceTopicAnalysisRequestTopics : TeaModel {
+            [NameInMap("News")]
+            [Validation(Required=false)]
+            public List<HottopicNews> News { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>话题名称</para>
+            /// </summary>
+            [NameInMap("Topic")]
+            [Validation(Required=false)]
+            public string Topic { get; set; }
+
+        }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="http://www.example.com/xxx.jsonline">http://www.example.com/xxx.jsonline</a></para>
+        /// </summary>
+        [NameInMap("TopicsFileUrl")]
+        [Validation(Required=false)]
+        public string TopicsFileUrl { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
