@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建建站实例</para>
+        /// <para>Create a website instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建建站实例</para>
+        /// <para>Create a website instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -339,7 +339,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建建站实例</para>
+        /// <para>Create a website instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -357,7 +357,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建建站实例</para>
+        /// <para>Create a website instance</para>
         /// </summary>
         /// 
         /// <param name="request">

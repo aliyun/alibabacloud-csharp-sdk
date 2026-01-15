@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateAppInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>Application type</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>PC_WEBSITE</para>
+        /// <para>PC_WebSite</para>
         /// </summary>
         [NameInMap("ApplicationType")]
         [Validation(Required=false)]
         public string ApplicationType { get; set; }
 
         /// <summary>
+        /// <para>Whether to enable auto-renewal upon expiration</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
+        /// <para>Ensures idempotence of the request. Generate a unique value from your client to ensure that it is unique across different requests. ClientToken only supports ASCII characters and cannot exceed 64 characters</para>
+        /// 
         /// <b>Example:</b>
         /// <para>210713a117660695309606626a</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>Deployment area</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ChineseMainland</para>
         /// </summary>
@@ -42,14 +50,18 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DeployArea { get; set; }
 
         /// <summary>
+        /// <para>Required. The number of subscription periods</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>3</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public int? Duration { get; set; }
 
         /// <summary>
+        /// <para>Extended information</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Extend { get; set; }
 
         /// <summary>
+        /// <para>Payment type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AUTO_PAY</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PaymentType { get; set; }
 
         /// <summary>
+        /// <para>Required. The unit of the subscription period, Year: Year, Month: Month, Day: Day, Hour: Hour</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Year</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
+        /// <para>Required. The quantity of instances to be ordered.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -82,8 +100,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? Quantity { get; set; }
 
         /// <summary>
+        /// <para>Site version</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>7</para>
+        /// <para>Basic_Edition</para>
         /// </summary>
         [NameInMap("SiteVersion")]
         [Validation(Required=false)]
