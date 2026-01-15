@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string ImageRegistryType { get; set; }
 
+        [NameInMap("port")]
+        [Validation(Required=false)]
+        public int? Port { get; set; }
+
     }
 
 }
