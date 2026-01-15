@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetInstanceGroupInspectReportDetailRequest : TeaModel {
+        [NameInMap("AgentId")]
+        [Validation(Required=false)]
+        public string AgentId { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
