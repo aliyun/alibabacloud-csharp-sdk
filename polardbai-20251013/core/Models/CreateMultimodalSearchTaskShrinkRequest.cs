@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>flash</para>
+        /// </summary>
+        [NameInMap("ModelMode")]
+        [Validation(Required=false)]
+        public string ModelMode { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>指示牌</para>
         /// </summary>
         [NameInMap("Query")]

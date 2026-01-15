@@ -3984,6 +3984,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["Model"] = request.Model;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelMode))
+            {
+                query["ModelMode"] = request.ModelMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4033,6 +4037,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
             {
                 query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelMode))
+            {
+                query["ModelMode"] = request.ModelMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4126,6 +4134,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["EmbeddingModel"] = request.EmbeddingModel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelMode))
+            {
+                query["ModelMode"] = request.ModelMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
                 query["Query"] = request.Query;
@@ -4193,6 +4205,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmbeddingModel))
             {
                 query["EmbeddingModel"] = request.EmbeddingModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelMode))
+            {
+                query["ModelMode"] = request.ModelMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
@@ -5059,6 +5075,262 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListMultimodalEmbeddingModelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模型mode可选列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalEmbeddingModelModeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalEmbeddingModelModeResponse
+        /// </returns>
+        public ListMultimodalEmbeddingModelModeResponse ListMultimodalEmbeddingModelModeWithOptions(ListMultimodalEmbeddingModelModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMultimodalEmbeddingModelMode",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMultimodalEmbeddingModelModeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模型mode可选列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalEmbeddingModelModeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalEmbeddingModelModeResponse
+        /// </returns>
+        public async Task<ListMultimodalEmbeddingModelModeResponse> ListMultimodalEmbeddingModelModeWithOptionsAsync(ListMultimodalEmbeddingModelModeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMultimodalEmbeddingModelMode",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMultimodalEmbeddingModelModeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模型mode可选列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalEmbeddingModelModeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalEmbeddingModelModeResponse
+        /// </returns>
+        public ListMultimodalEmbeddingModelModeResponse ListMultimodalEmbeddingModelMode(ListMultimodalEmbeddingModelModeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListMultimodalEmbeddingModelModeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模型mode可选列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalEmbeddingModelModeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalEmbeddingModelModeResponse
+        /// </returns>
+        public async Task<ListMultimodalEmbeddingModelModeResponse> ListMultimodalEmbeddingModelModeAsync(ListMultimodalEmbeddingModelModeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListMultimodalEmbeddingModelModeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询search模型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalSearchModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalSearchModelResponse
+        /// </returns>
+        public ListMultimodalSearchModelResponse ListMultimodalSearchModelWithOptions(ListMultimodalSearchModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMultimodalSearchModel",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMultimodalSearchModelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询search模型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalSearchModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalSearchModelResponse
+        /// </returns>
+        public async Task<ListMultimodalSearchModelResponse> ListMultimodalSearchModelWithOptionsAsync(ListMultimodalSearchModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMultimodalSearchModel",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMultimodalSearchModelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询search模型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalSearchModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalSearchModelResponse
+        /// </returns>
+        public ListMultimodalSearchModelResponse ListMultimodalSearchModel(ListMultimodalSearchModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListMultimodalSearchModelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询search模型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalSearchModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalSearchModelResponse
+        /// </returns>
+        public async Task<ListMultimodalSearchModelResponse> ListMultimodalSearchModelAsync(ListMultimodalSearchModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListMultimodalSearchModelWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PolardbAI20251013.Models
 {
-    public class CreateMultimodalDatasetEmbeddingRequest : TeaModel {
+    public class ListMultimodalSearchModelRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -20,30 +20,20 @@ namespace AlibabaCloud.SDK.PolardbAI20251013.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>ds-3h6bm*****af60</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("DatasetId")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string DatasetId { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>default</para>
+        /// <para>50</para>
         /// </summary>
-        [NameInMap("Model")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string Model { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>flash</para>
-        /// </summary>
-        [NameInMap("ModelMode")]
-        [Validation(Required=false)]
-        public string ModelMode { get; set; }
+        public int? PageSize { get; set; }
 
     }
 
