@@ -23,6 +23,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether to perform a dry run of the request. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Sends a check request without creating a DNAT entry. The checks include whether the AccessKey is valid, the RAM user\&quot;s authorization status, and if all required parameters are filled out. If any check fails, the corresponding error is returned. If all checks pass, an error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request. After passing the checks, it returns a 2xx HTTP status code and creates a DNAT entry.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
@@ -143,14 +153,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to remove limits on the port range. Valid values:</para>
+        /// <para>Whether to enable port breakthrough, with values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> If a DNAT entry and an SNAT entry have the same public IP address, ou must specify a port that is larger that 1024, and set <b>PortBreak</b> to <b>true</b>.</para>
+        /// <item><description><b>true</b>: Enable port breakthrough. </description></item>
+        /// <item><description><b>false</b> (default): Do not enable port breakthrough.<remarks>
+        /// <para>When both DNAT and SNAT entries use the same public IP address, if you need to configure a port number greater than 1024, you must set <b>PortBreak</b> to <b>true</b>.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

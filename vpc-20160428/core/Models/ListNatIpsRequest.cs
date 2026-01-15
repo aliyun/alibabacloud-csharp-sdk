@@ -38,6 +38,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
+        /// <para>The enumeration of the fields used to describe the source of the NatIp. Prefix indicates the NatIp that belongs to the IPv4Prefix. The value cidr indicates isolated NatIp. The value control indicates all NatIp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cidr</para>
         /// </summary>
@@ -45,6 +47,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string IpOrigin { get; set; }
 
+        /// <summary>
+        /// <para>The IP prefix address range.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.168.0.0/28</para>
+        /// </summary>
         [NameInMap("Ipv4Prefix")]
         [Validation(Required=false)]
         public string Ipv4Prefix { get; set; }

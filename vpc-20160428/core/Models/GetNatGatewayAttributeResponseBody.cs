@@ -9,14 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetNatGatewayAttributeResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Access mode for reverse access to VPC NAT gateway.</para>
+        /// </summary>
         [NameInMap("AccessMode")]
         [Validation(Required=false)]
         public GetNatGatewayAttributeResponseBodyAccessMode AccessMode { get; set; }
         public class GetNatGatewayAttributeResponseBodyAccessMode : TeaModel {
+            /// <summary>
+            /// <para>Access mode values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>route</b>: Route mode.</description></item>
+            /// <item><description><b>tunnel</b>: Tunnel mode.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>route</para>
+            /// </summary>
             [NameInMap("ModeValue")]
             [Validation(Required=false)]
             public string ModeValue { get; set; }
 
+            /// <summary>
+            /// <para>Tunnel mode type:</para>
+            /// <list type="bullet">
+            /// <item><description><b>geneve</b>: Geneve type.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>geneve</para>
+            /// </summary>
             [NameInMap("TunnelType")]
             [Validation(Required=false)]
             public string TunnelType { get; set; }
@@ -161,6 +183,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? EcsMetricEnabled { get; set; }
 
+        /// <summary>
+        /// <para>Whether to enable session log, with values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Session logging is enabled. </description></item>
+        /// <item><description><b>false</b>: Session logging is disabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("EnableSessionLog")]
         [Validation(Required=false)]
         public bool? EnableSessionLog { get; set; }
@@ -277,22 +309,53 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        /// <summary>
+        /// <para>Session log configuration information.</para>
+        /// </summary>
         [NameInMap("LogDelivery")]
         [Validation(Required=false)]
         public GetNatGatewayAttributeResponseBodyLogDelivery LogDelivery { get; set; }
         public class GetNatGatewayAttributeResponseBodyLogDelivery : TeaModel {
+            /// <summary>
+            /// <para>Error message for session log write failure.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>LogStoreNotExist: logstore session_log_test does not exist</para>
+            /// </summary>
             [NameInMap("DeliverLogsErrorMessage")]
             [Validation(Required=false)]
             public string DeliverLogsErrorMessage { get; set; }
 
+            /// <summary>
+            /// <para>Session log write status. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Success</b>: Success. </description></item>
+            /// <item><description><b>Failure</b>: Failure.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Failure</para>
+            /// </summary>
             [NameInMap("DeliveryStatus")]
             [Validation(Required=false)]
             public string DeliveryStatus { get; set; }
 
+            /// <summary>
+            /// <para>Session log delivery destination type. Value: <b>sls</b>, Alibaba Cloud Log Service SLS.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sls</para>
+            /// </summary>
             [NameInMap("LogDeliveryType")]
             [Validation(Required=false)]
             public string LogDeliveryType { get; set; }
 
+            /// <summary>
+            /// <para>Destination address for session log writing</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>acs:log:cn-hangzhou:0000:project/nat_session_log_project/logstore/session_log_test</para>
+            /// </summary>
             [NameInMap("LogDestination")]
             [Validation(Required=false)]
             public string LogDestination { get; set; }

@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string BusinessStatus { get; set; }
 
+        [NameInMap("GatewayType")]
+        [Validation(Required=false)]
+        public string GatewayType { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to return information about pending orders. Valid values:</para>
         /// <list type="bullet">

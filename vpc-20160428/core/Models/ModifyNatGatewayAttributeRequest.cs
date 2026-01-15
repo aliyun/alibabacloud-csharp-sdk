@@ -21,15 +21,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The mode in which the NAT gateway is associated with an elastic IP address (EIP). You can leave this parameter empty. If you want to specify a value for this parameter, set the value to <b>NAT</b>, which indicates that the NAT gateway is associated with the EIP in NAT mode.</para>
-        /// <para>**</para>
-        /// <para><b>Description</b></para>
+        /// <para>Modifies the mode in which the EIP is associated with the NAT gateway. The value can be empty or <b>NAT</b>, which specifies the NAT mode.</para>
+        /// <remarks>
+        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If EipBindMode is set to MULTI_BINDED when the NAT gateway is created, you can change the value of this parameter from <b>MULTI_BINDED</b> to <b>NAT</b>. If EipBindMode is set to NAT when the NAT gateway is created, you cannot change the value of this parameter from <b>NAT</b> to <b>MULTI_BINDED</b>. For more information about <b>MULTI_BINDED</b>, see <a href="https://help.aliyun.com/document_detail/120219.html">CreateNatGateway</a>.</para>
+        /// <item><description><para>You can only change <b>MULTI_BINDED</b> to <b>NAT</b>. You cannot change <b>NAT</b> to <b>MULTI_BINDED</b>. For more information about the <b>MULTI_BINDED</b> mode, see <a href="https://help.aliyun.com/document_detail/120219.html">CreateNatGateway</a>.</para>
         /// </description></item>
-        /// <item><description><para>When the mode in which the NAT gateway is associated with an EIP is being changed, a transient connection that lasts a few seconds may occur. If the number of EIPs with which the NAT gateway is associated increases, the transient connection lasts longer. You can change the mode only for a NAT gateway that is associated with up to five EIPs. We recommend that you change the mode during off-peak hours.</para>
+        /// <item><description><para>When you change the association mode, your network may be interrupted for seconds. The duration increases with the number of EIPs. You can change the association mode for at most 5 EIPs at the same time. We recommend changing the association mode during off-peak hours.</para>
         /// </description></item>
-        /// <item><description><para>After the mode is changed to <b>NAT</b>, the Internet NAT gateway is compatible with the IPv4 gateway. However, if you associate an EIP with the NAT gateway, the EIP occupies one private IP address on the vSwitch of the NAT gateway. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, the EIP fails to be associated with the NAT gateway.</para>
+        /// <item><description><para>After the association mode is changed to <b>NAT</b>, the Internet NAT gateway is compatible with an IPv4 gateway. If an EIP is associated with a NAT gateway in NAT mode, the EIP occupies a private IP address of the vSwitch to which the NAT gateway belongs. Ensure the vSwitch has sufficient private IP addresses for EIPs to be associated with the NAT gateway.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -40,6 +40,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string EipBindMode { get; set; }
 
+        /// <summary>
+        /// <para>Whether to enable session logging, with values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Session logging is enabled. </description></item>
+        /// <item><description><b>false</b>: Session logging is disabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("EnableSessionLog")]
         [Validation(Required=false)]
         public bool? EnableSessionLog { get; set; }
@@ -58,14 +68,29 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? IcmpReplyEnabled { get; set; }
 
+        /// <summary>
+        /// <para>Session log configuration information.</para>
+        /// </summary>
         [NameInMap("LogDelivery")]
         [Validation(Required=false)]
         public ModifyNatGatewayAttributeRequestLogDelivery LogDelivery { get; set; }
         public class ModifyNatGatewayAttributeRequestLogDelivery : TeaModel {
+            /// <summary>
+            /// <para>Session log write type. Value: <b>sls</b>, Alibaba Cloud Log Service SLS.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sls</para>
+            /// </summary>
             [NameInMap("LogDeliveryType")]
             [Validation(Required=false)]
             public string LogDeliveryType { get; set; }
 
+            /// <summary>
+            /// <para>Session log write address. Value: acs:log:${regionName}:${projectOwnerAliUid}:project/${projectName}/logstore/${logstoreName}</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>acs:log:cn-hangzhou:0000:project/nat_session_log_project/logstore/session_log_test</para>
+            /// </summary>
             [NameInMap("LogDestination")]
             [Validation(Required=false)]
             public string LogDestination { get; set; }

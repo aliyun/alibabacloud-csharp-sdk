@@ -37,10 +37,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// <para>The IP prefix address to be deleted.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.168.0.0/28</para>
+        /// </summary>
         [NameInMap("Ipv4Prefix")]
         [Validation(Required=false)]
         public string Ipv4Prefix { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the NAT gateway instance to which the IP prefix to be deleted belongs. Required when deleting an IP prefix.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ngw-gw8v16wgvtq26vh59****</para>
+        /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
         public string NatGatewayId { get; set; }

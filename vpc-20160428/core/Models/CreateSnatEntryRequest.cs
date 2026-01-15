@@ -22,6 +22,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether to only precheck this request. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Sends a precheck request and does not create an SNAT entry. The precheck includes verifying if the AccessKey is valid, checking the RAM user\&quot;s authorization, and ensuring that all required parameters are filled out. If the precheck fails, the corresponding error is returned. If the precheck passes, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request. After passing the precheck, it returns a 2xx HTTP status code and creates an SNAT entry.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
@@ -42,6 +52,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public int? EipAffinity { get; set; }
 
+        /// <summary>
+        /// <para>Elastic Network Interface ID.  </para>
+        /// <remarks>
+        /// <para>The IPv4 address set of the elastic network interface will be used as the SNAT address.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eni-gw8g131ef2dnbu3k****</para>
+        /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
         public string NetworkInterfaceId { get; set; }

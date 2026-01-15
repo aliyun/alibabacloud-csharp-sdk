@@ -367,6 +367,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        [NameInMap("TunnelBandwidth")]
+        [Validation(Required=false)]
+        public string TunnelBandwidth { get; set; }
+
         /// <summary>
         /// <para>The tunnel configurations.</para>
         /// <list type="bullet">

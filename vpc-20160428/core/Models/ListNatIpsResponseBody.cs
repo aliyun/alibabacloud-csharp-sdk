@@ -16,6 +16,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public List<ListNatIpsResponseBodyNatIps> NatIps { get; set; }
         public class ListNatIpsResponseBodyNatIps : TeaModel {
+            /// <summary>
+            /// <para>The IP prefix address range to which the queried NAT IP address belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.0.0/28</para>
+            /// </summary>
             [NameInMap("Ipv4Prefix")]
             [Validation(Required=false)]
             public string Ipv4Prefix { get; set; }

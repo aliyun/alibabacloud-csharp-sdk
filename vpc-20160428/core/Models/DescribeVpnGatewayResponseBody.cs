@@ -129,6 +129,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        [NameInMap("GatewayType")]
+        [Validation(Required=false)]
+        public string GatewayType { get; set; }
+
         /// <summary>
         /// <list type="bullet">
         /// <item><description><para>If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the address is the IP address of the VPN gateway and can be used to create an IPsec-VPN connection or an SSL-VPN connection.</para>

@@ -175,6 +175,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string TransitRouterName { get; set; }
 
+            [NameInMap("TunnelBandwidth")]
+            [Validation(Required=false)]
+            public string TunnelBandwidth { get; set; }
+
         }
 
     }

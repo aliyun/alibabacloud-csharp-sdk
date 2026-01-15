@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateNatGatewayRequest : TeaModel {
         /// <summary>
         /// <para>The access mode for reverse access to the VPC NAT gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MULTI_BINDED</para>
         /// </summary>
         [NameInMap("AccessMode")]
         [Validation(Required=false)]
@@ -43,6 +46,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <remarks>
             /// <para>This value takes effect if the access mode is the tunnel mode.</para>
             /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>geneve</para>
             /// </summary>
             [NameInMap("TunnelType")]
             [Validation(Required=false)]
@@ -150,6 +156,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string InternetChargeType { get; set; }
 
+        /// <summary>
+        /// <para>Create an IP prefix address segment for batch creation of NAT IPs. Please use the reserved and unallocated network segments in the VSwitch where the NAT is located.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.168.0.0/28</para>
+        /// </summary>
         [NameInMap("Ipv4Prefix")]
         [Validation(Required=false)]
         public string Ipv4Prefix { get; set; }
@@ -166,6 +178,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The private IP address occupied by the NAT gateway. Please use an unassigned IP from the subnet where the NAT is located. If left empty, an IP address will be randomly assigned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.168.0.x</para>
+        /// </summary>
         [NameInMap("NatIp")]
         [Validation(Required=false)]
         public string NatIp { get; set; }
@@ -214,6 +232,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>PrivateLink is not supported by default. If you set the value to true, PrivateLink is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("PrivateLinkEnabled")]
         [Validation(Required=false)]

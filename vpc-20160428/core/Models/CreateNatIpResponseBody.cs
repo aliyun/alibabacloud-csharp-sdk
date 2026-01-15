@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateNatIpResponseBody : TeaModel {
         /// <summary>
+        /// <para>The IPv4Prefix returned by the previous API is obsolete.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -37,11 +39,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string NatIpId { get; set; }
 
+        /// <summary>
+        /// <para>The NatIp parameter that is returned after you create a NatIp. If you use IPv4Prefix to create a NatIp, the information about all NatIp is returned. We recommend that you use this parameter to obtain the information about a NatIp when you create a NatIp.</para>
+        /// </summary>
         [NameInMap("NatIps")]
         [Validation(Required=false)]
         public List<CreateNatIpResponseBodyNatIps> NatIps { get; set; }
         public class CreateNatIpResponseBodyNatIps : TeaModel {
             /// <summary>
+            /// <para>The Ipv4Prefix of the created NatIpList list is returned when Ipv4Preix is created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>192.168.1.128/28</para>
             /// 
@@ -53,6 +60,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Ipv4Prefix { get; set; }
 
             /// <summary>
+            /// <para>Returns the NatIp address of the created NatIpList list when Ipv4Preix is created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>192.168.2.128</para>
             /// </summary>
@@ -61,6 +70,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NatIp { get; set; }
 
             /// <summary>
+            /// <para>Returns the NatIpId of the created NatIpList list when Ipv4Preix is created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpcnatip-xxxxxxxx</para>
             /// </summary>

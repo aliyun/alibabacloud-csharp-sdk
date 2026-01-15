@@ -20,14 +20,36 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeNatGatewaysResponseBodyNatGatewaysNatGateway> NatGateway { get; set; }
             public class DescribeNatGatewaysResponseBodyNatGatewaysNatGateway : TeaModel {
+                /// <summary>
+                /// <para>Access mode for reverse access to VPC NAT gateway.</para>
+                /// </summary>
                 [NameInMap("AccessMode")]
                 [Validation(Required=false)]
                 public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayAccessMode AccessMode { get; set; }
                 public class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayAccessMode : TeaModel {
+                    /// <summary>
+                    /// <para>Access mode, with values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>route</b>: Route mode.</description></item>
+                    /// <item><description><b>tunnel</b>: Tunnel mode.</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>route</para>
+                    /// </summary>
                     [NameInMap("ModeValue")]
                     [Validation(Required=false)]
                     public string ModeValue { get; set; }
 
+                    /// <summary>
+                    /// <para>Tunnel mode type:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>geneve</b>: Geneve type.</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>geneve</para>
+                    /// </summary>
                     [NameInMap("TunnelType")]
                     [Validation(Required=false)]
                     public string TunnelType { get; set; }
@@ -127,6 +149,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string EipBindMode { get; set; }
 
+                /// <summary>
+                /// <para>Whether to enable session logging, with values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: Session logging is enabled. </description></item>
+                /// <item><description><b>false</b>: Session logging is disabled.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("EnableSessionLog")]
                 [Validation(Required=false)]
                 public string EnableSessionLog { get; set; }
@@ -280,6 +312,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 }
 
+                /// <summary>
+                /// <para>List of NAT IP prefix address segments.</para>
+                /// </summary>
                 [NameInMap("IpPrefixList")]
                 [Validation(Required=false)]
                 public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixList IpPrefixList { get; set; }
@@ -288,6 +323,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [Validation(Required=false)]
                     public List<DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixListIpPrefixList> IpPrefixList { get; set; }
                     public class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixListIpPrefixList : TeaModel {
+                        /// <summary>
+                        /// <para>NAT IP prefix address range</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>192.168.0.0/28</para>
+                        /// </summary>
                         [NameInMap("IpPrefix")]
                         [Validation(Required=false)]
                         public string IpPrefix { get; set; }

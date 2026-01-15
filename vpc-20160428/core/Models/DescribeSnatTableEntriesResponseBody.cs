@@ -50,6 +50,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry> SnatTableEntry { get; set; }
             public class DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry : TeaModel {
+                /// <summary>
+                /// <para>Whether to enable IP affinity. Values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: Disable IP affinity. - <b>1</b>: Enable IP affinity.<remarks>
+                /// <para>After enabling the IP affinity switch, if an SNAT entry is bound to multiple EIPs or NAT IPs, the same client will use the same EIP or NAT IP for access. Otherwise, the client will randomly select from the bound EIPs or NAT IPs for access.</para>
+                /// </remarks>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("EipAffinity")]
                 [Validation(Required=false)]
                 public string EipAffinity { get; set; }
@@ -64,6 +76,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string NatGatewayId { get; set; }
 
+                /// <summary>
+                /// <para>Elastic Network Interface ID</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>eni-gw8g131ef2dnbu3k****</para>
+                /// </summary>
                 [NameInMap("NetworkInterfaceId")]
                 [Validation(Required=false)]
                 public string NetworkInterfaceId { get; set; }

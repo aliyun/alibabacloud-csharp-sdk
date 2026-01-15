@@ -23,14 +23,43 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>Whether to perform a dry run of this request, with values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Sends a check request without modifying the SNAT entry. The checks include whether the required parameters are filled in, the request format, and business restrictions. If the check fails, the corresponding error is returned. If the check passes, an error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request. After passing the check, it returns a 2xx HTTP status code and modifies the SNAT entry.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// <para>Whether to enable IP affinity. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: Disable IP affinity.</description></item>
+        /// <item><description><b>1</b>: Enable IP affinity.<remarks>
+        /// <para>After enabling the IP affinity switch, if an SNAT entry is bound to multiple EIPs or NAT IPs, the same client will use the same EIP or NAT IP for access; otherwise, the client will randomly select from the bound EIPs or NAT IPs for access.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("EipAffinity")]
         [Validation(Required=false)]
         public int? EipAffinity { get; set; }
 
+        /// <summary>
+        /// <para>Elastic Network Interface ID. The IPv4 address set of the elastic network interface will be used as the SNAT address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eni-gw8g131ef2dnbu3k****</para>
+        /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
         public string NetworkInterfaceId { get; set; }

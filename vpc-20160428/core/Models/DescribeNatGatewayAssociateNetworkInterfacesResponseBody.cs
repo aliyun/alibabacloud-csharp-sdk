@@ -99,6 +99,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
+                /// <summary>
+                /// <para>VPC ID of the service resource</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-bp1di7uewzmtvfuq8****</para>
+                /// </summary>
                 [NameInMap("ResourceVpcId")]
                 [Validation(Required=false)]
                 public string ResourceVpcId { get; set; }

@@ -522,6 +522,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string TransitRouterName { get; set; }
 
+                [NameInMap("TunnelBandwidth")]
+                [Validation(Required=false)]
+                public string TunnelBandwidth { get; set; }
+
                 /// <summary>
                 /// <para>The tunnel configurations of the IPsec-VPN connection.</para>
                 /// <para>Parameters in <b>TunnelOptionsSpecification</b> are returned only if you query an IPsec-VPN connection in dual-tunnel mode.</para>
