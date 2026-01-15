@@ -228,6 +228,24 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
+                [NameInMap("RiskPositions")]
+                [Validation(Required=false)]
+                public List<TextModerationPlusResponseBodyDataResultRiskPositions> RiskPositions { get; set; }
+                public class TextModerationPlusResponseBodyDataResultRiskPositions : TeaModel {
+                    [NameInMap("EndPos")]
+                    [Validation(Required=false)]
+                    public int? EndPos { get; set; }
+
+                    [NameInMap("RiskWord")]
+                    [Validation(Required=false)]
+                    public string RiskWord { get; set; }
+
+                    [NameInMap("StartPos")]
+                    [Validation(Required=false)]
+                    public int? StartPos { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The term hit by the moderated content.</para>
                 /// 
