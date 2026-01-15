@@ -88,6 +88,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string SourceDataSourceType { get; set; }
 
+        /// <summary>
+        /// <para>The task configuration specification type. Valid values: FILESPEC, CLASSIC, ALL. FILESPEC: New-style task based on structured filespec; CLASSIC: Task using traditional configuration mode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FILESPEC</para>
+        /// </summary>
         [NameInMap("SpecType")]
         [Validation(Required=false)]
         public string SpecType { get; set; }
