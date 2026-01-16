@@ -1515,6 +1515,14 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 query["chunkMode"] = request.ChunkMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Database))
+            {
+                query["database"] = request.Database;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasourceCode))
+            {
+                query["datasourceCode"] = request.DatasourceCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableHeaders))
             {
                 query["enableHeaders"] = request.EnableHeaders;
@@ -1534,6 +1542,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineRetrieveRateLimitStrategy))
             {
                 query["pipelineRetrieveRateLimitStrategy"] = request.PipelineRetrieveRateLimitStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Table))
+            {
+                query["table"] = request.Table;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1703,6 +1715,14 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 query["chunkMode"] = request.ChunkMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Database))
+            {
+                query["database"] = request.Database;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasourceCode))
+            {
+                query["datasourceCode"] = request.DatasourceCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableHeaders))
             {
                 query["enableHeaders"] = request.EnableHeaders;
@@ -1722,6 +1742,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineRetrieveRateLimitStrategy))
             {
                 query["pipelineRetrieveRateLimitStrategy"] = request.PipelineRetrieveRateLimitStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Table))
+            {
+                query["table"] = request.Table;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

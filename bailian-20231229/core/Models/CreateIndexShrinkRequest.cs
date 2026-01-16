@@ -260,6 +260,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string ChunkMode { get; set; }
 
+        [NameInMap("database")]
+        [Validation(Required=false)]
+        public string Database { get; set; }
+
+        [NameInMap("datasourceCode")]
+        [Validation(Required=false)]
+        public string DatasourceCode { get; set; }
+
         /// <summary>
         /// <para>Whether to treat the first row of all .xlsx and .xls files as headers and concatenate them into each text chunk. This prevents the models from mistakenly interpreting headers as regular data rows.</para>
         /// <remarks>
@@ -309,6 +317,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [NameInMap("pipelineRetrieveRateLimitStrategy")]
         [Validation(Required=false)]
         public string PipelineRetrieveRateLimitStrategy { get; set; }
+
+        [NameInMap("table")]
+        [Validation(Required=false)]
+        public string Table { get; set; }
 
     }
 
