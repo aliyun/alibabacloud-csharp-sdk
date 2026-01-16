@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string Algorithm { get; set; }
 
+        [NameInMap("AliasName")]
+        [Validation(Required=false)]
+        public string AliasName { get; set; }
+
         /// <summary>
         /// <para>The issuance time of the client certificate. This value is a UNIX timestamp. The default value is the time when you call this operation. Unit: seconds.</para>
         /// <remarks>
@@ -57,6 +61,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [NameInMap("BeforeTime")]
         [Validation(Required=false)]
         public long? BeforeTime { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// <para>The name of the client certificate user. In most cases, the user of a client certificate is an individual, a company, an organization, or an application. We recommend that you enter the common name of a user. Examples: Bob, Alibaba, Alibaba Cloud password platform, and Tmall Genie.</para>

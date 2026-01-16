@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [Validation(Required=false)]
             public string Algorithm { get; set; }
 
+            [NameInMap("AliasName")]
+            [Validation(Required=false)]
+            public string AliasName { get; set; }
+
             /// <summary>
             /// <para>The issuance date of the certificate. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
@@ -99,6 +103,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [NameInMap("Days")]
             [Validation(Required=false)]
             public int? Days { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public long? Id { get; set; }
 
             /// <summary>
             /// <para>The unique identifier of the certificate.</para>
@@ -290,6 +298,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
 
         /// <summary>
         /// <para>The total number of pages returned.</para>

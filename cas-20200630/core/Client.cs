@@ -253,6 +253,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             {
                 query["Algorithm"] = request.Algorithm;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliasName))
+            {
+                query["AliasName"] = request.AliasName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeforeTime))
             {
                 query["BeforeTime"] = request.BeforeTime;
@@ -325,9 +329,15 @@ namespace AlibabaCloud.SDK.Cas20200630
             {
                 query["Years"] = request.Years;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -378,6 +388,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             {
                 query["Algorithm"] = request.Algorithm;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliasName))
+            {
+                query["AliasName"] = request.AliasName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeforeTime))
             {
                 query["BeforeTime"] = request.BeforeTime;
@@ -450,9 +464,15 @@ namespace AlibabaCloud.SDK.Cas20200630
             {
                 query["Years"] = request.Years;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4580,6 +4600,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             {
                 query["NextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentIdentifier))
+            {
+                query["ParentIdentifier"] = request.ParentIdentifier;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowSize))
             {
                 query["ShowSize"] = request.ShowSize;
@@ -4653,6 +4677,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentIdentifier))
+            {
+                query["ParentIdentifier"] = request.ParentIdentifier;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowSize))
             {

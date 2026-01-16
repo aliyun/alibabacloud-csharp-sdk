@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("ParentIdentifier")]
+        [Validation(Required=false)]
+        public string ParentIdentifier { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>50</para>

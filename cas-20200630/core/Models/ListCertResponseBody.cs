@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
-            public string Id { get; set; }
+            public long? Id { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
