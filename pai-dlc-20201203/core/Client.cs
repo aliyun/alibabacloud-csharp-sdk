@@ -3039,6 +3039,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["DisplayNameSearchMode"] = request.DisplayNameSearchMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAssignNode))
+            {
+                query["EnableAssignNode"] = request.EnableAssignNode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -3046,6 +3050,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromAllWorkspaces))
             {
                 query["FromAllWorkspaces"] = request.FromAllWorkspaces;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageSearch))
+            {
+                query["ImageSearch"] = request.ImageSearch;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
             {
@@ -3058,6 +3066,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
             {
                 query["JobType"] = request.JobType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumericRangeField))
+            {
+                query["NumericRangeField"] = request.NumericRangeField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumericRangeMax))
+            {
+                query["NumericRangeMax"] = request.NumericRangeMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumericRangeMin))
+            {
+                query["NumericRangeMin"] = request.NumericRangeMin;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
             {
@@ -3082,6 +3102,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineId))
             {
                 query["PipelineId"] = request.PipelineId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReasonSearch))
+            {
+                query["ReasonSearch"] = request.ReasonSearch;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
@@ -3110,6 +3134,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {
                 query["Tags"] = request.TagsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRangeField))
+            {
+                query["TimeRangeField"] = request.TimeRangeField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserCommandSearch))
+            {
+                query["UserCommandSearch"] = request.UserCommandSearch;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdForFilter))
             {
@@ -3191,6 +3223,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["DisplayNameSearchMode"] = request.DisplayNameSearchMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAssignNode))
+            {
+                query["EnableAssignNode"] = request.EnableAssignNode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -3198,6 +3234,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromAllWorkspaces))
             {
                 query["FromAllWorkspaces"] = request.FromAllWorkspaces;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageSearch))
+            {
+                query["ImageSearch"] = request.ImageSearch;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
             {
@@ -3210,6 +3250,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
             {
                 query["JobType"] = request.JobType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumericRangeField))
+            {
+                query["NumericRangeField"] = request.NumericRangeField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumericRangeMax))
+            {
+                query["NumericRangeMax"] = request.NumericRangeMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumericRangeMin))
+            {
+                query["NumericRangeMin"] = request.NumericRangeMin;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
             {
@@ -3234,6 +3286,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineId))
             {
                 query["PipelineId"] = request.PipelineId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReasonSearch))
+            {
+                query["ReasonSearch"] = request.ReasonSearch;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
@@ -3262,6 +3318,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {
                 query["Tags"] = request.TagsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRangeField))
+            {
+                query["TimeRangeField"] = request.TimeRangeField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserCommandSearch))
+            {
+                query["UserCommandSearch"] = request.UserCommandSearch;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdForFilter))
             {

@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string DisplayNameSearchMode { get; set; }
 
+        [NameInMap("EnableAssignNode")]
+        [Validation(Required=false)]
+        public string EnableAssignNode { get; set; }
+
         /// <summary>
         /// <para>The end time of the query. Use the job creation time to filter data. The default value is the current time.</para>
         /// 
@@ -76,6 +80,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("FromAllWorkspaces")]
         [Validation(Required=false)]
         public bool? FromAllWorkspaces { get; set; }
+
+        [NameInMap("ImageSearch")]
+        [Validation(Required=false)]
+        public string ImageSearch { get; set; }
 
         /// <summary>
         /// <para>The job ID. Fuzzy query is supported. The name is case-insensitive. Wildcards are not supported. The default value null indicates any job ID.</para>
@@ -107,6 +115,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("JobType")]
         [Validation(Required=false)]
         public string JobType { get; set; }
+
+        [NameInMap("NumericRangeField")]
+        [Validation(Required=false)]
+        public string NumericRangeField { get; set; }
+
+        [NameInMap("NumericRangeMax")]
+        [Validation(Required=false)]
+        public long? NumericRangeMax { get; set; }
+
+        [NameInMap("NumericRangeMin")]
+        [Validation(Required=false)]
+        public long? NumericRangeMin { get; set; }
 
         /// <summary>
         /// <para>The sorting order. Valid values:</para>
@@ -182,6 +202,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("PipelineId")]
         [Validation(Required=false)]
         public string PipelineId { get; set; }
+
+        [NameInMap("ReasonSearch")]
+        [Validation(Required=false)]
+        public string ReasonSearch { get; set; }
 
         /// <summary>
         /// <para>The resource group ID. For information about how to obtain the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quota</a>.</para>
@@ -271,6 +295,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public Dictionary<string, string> Tags { get; set; }
+
+        [NameInMap("TimeRangeField")]
+        [Validation(Required=false)]
+        public string TimeRangeField { get; set; }
+
+        [NameInMap("UserCommandSearch")]
+        [Validation(Required=false)]
+        public string UserCommandSearch { get; set; }
 
         /// <summary>
         /// <para>The user ID used to filter jobs.</para>
