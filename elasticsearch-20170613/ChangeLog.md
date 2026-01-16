@@ -1,3 +1,20 @@
+2026-01-16 Version: 3.0.0
+- Support API TurnOffZone.
+- Support API TurnOnZone.
+- Delete API DescribeApm.
+- Delete API ListApm.
+- Delete API RemoveApm.
+- Delete API StartApm.
+- Delete API StopApm.
+- Delete API UpdateApm.
+- Update API DescribeInstance: add response parameters Body.Result.endpoints.
+- Update API EnableKibanaPvlNetwork: add request parameters clientToken.
+- Update API UpdateInstance: add request parameters body.updateType.
+- Update API UpdateInstanceChargeType: update request parameters body' type has changed.
+- Update API UpdateInstanceSettings: update request parameters body' type has changed.
+- Update API UpdateKibanaPvlNetwork: add request parameters clientToken.
+
+
 2025-08-21 Version: 2.1.0
 - Support API GetEmonAlarmRecordStatisticsDistribute.
 

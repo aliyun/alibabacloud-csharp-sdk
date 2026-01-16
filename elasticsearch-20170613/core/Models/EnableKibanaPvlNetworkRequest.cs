@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class EnableKibanaPvlNetworkRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>es-cn-27a3mul6l000xxx-kibana-endpoint</para>
         /// </summary>
@@ -26,16 +24,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public List<string> SecurityGroups { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
         [NameInMap("vSwitchIdsZone")]
         [Validation(Required=false)]
         public List<EnableKibanaPvlNetworkRequestVSwitchIdsZone> VSwitchIdsZone { get; set; }
         public class EnableKibanaPvlNetworkRequestVSwitchIdsZone : TeaModel {
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>vsw-xxxx</para>
             /// </summary>
@@ -44,8 +37,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string VswitchId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-h</para>
             /// </summary>
@@ -56,14 +47,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>vpc-xxx</para>
         /// </summary>
         [NameInMap("vpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xxxxx</para>
+        /// </summary>
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
     }
 

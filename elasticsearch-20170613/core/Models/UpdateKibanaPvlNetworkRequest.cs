@@ -22,8 +22,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public List<string> SecurityGroups { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
+        /// <b>Example:</b>
+        /// <para>xxxx</para>
+        /// </summary>
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
         /// <b>Example:</b>
         /// <para>es-cn-27a3mul6l0***-kibana-internal</para>
         /// </summary>

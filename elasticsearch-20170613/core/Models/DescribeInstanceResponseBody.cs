@@ -275,6 +275,36 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
+            [NameInMap("endpoints")]
+            [Validation(Required=false)]
+            public List<DescribeInstanceResponseBodyResultEndpoints> Endpoints { get; set; }
+            public class DescribeInstanceResponseBodyResultEndpoints : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>es-cn-xx-cn-hangzhou-h.elasticsearch.aliyuncs.com</para>
+                /// </summary>
+                [NameInMap("endpoint")]
+                [Validation(Required=false)]
+                public string Endpoint { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>vsw-xxx</para>
+                /// </summary>
+                [NameInMap("vswitchId")]
+                [Validation(Required=false)]
+                public string VswitchId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-i</para>
+                /// </summary>
+                [NameInMap("zoneId")]
+                [Validation(Required=false)]
+                public string ZoneId { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>{&quot;http.cors.allow-credentials&quot;:&quot;false&quot;}</para>

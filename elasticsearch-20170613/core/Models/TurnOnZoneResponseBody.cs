@@ -8,22 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
-    public class StopApmResponseBody : TeaModel {
+    public class TurnOnZoneResponseBody : TeaModel {
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>FEC32FE6-4697-5110-9668-C6016EAEB5DE</para>
+        /// <para>F99407AB-2FA9-489E-A259-40CF6DCC47D9</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
-        [NameInMap("Result")]
-        [Validation(Required=false)]
-        public bool? Result { get; set; }
 
     }
 

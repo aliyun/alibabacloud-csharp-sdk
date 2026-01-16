@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
-    public class ListApmResponse : TeaModel {
+    public class TurnOffZoneResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ListApmResponseBody Body { get; set; }
+        public TurnOffZoneResponseBody Body { get; set; }
 
     }
 

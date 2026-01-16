@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public NodeSpec NodeSpec { get; set; }
 
+        [NameInMap("updateType")]
+        [Validation(Required=false)]
+        public string UpdateType { get; set; }
+
         [NameInMap("warmNodeConfiguration")]
         [Validation(Required=false)]
         public WarmNodeConfiguration WarmNodeConfiguration { get; set; }
