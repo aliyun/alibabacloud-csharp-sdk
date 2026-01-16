@@ -561,6 +561,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             {
                 query["ClickTrace"] = request.ClickTrace;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainAuth))
+            {
+                query["DomainAuth"] = request.DomainAuth;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Headers))
             {
                 query["Headers"] = request.Headers;
@@ -658,6 +662,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClickTrace))
             {
                 query["ClickTrace"] = request.ClickTrace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainAuth))
+            {
+                query["DomainAuth"] = request.DomainAuth;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Headers))
             {
@@ -11050,6 +11058,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             {
                 body["ClickTrace"] = request.ClickTrace;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainAuth))
+            {
+                body["DomainAuth"] = request.DomainAuth;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromAlias))
             {
                 body["FromAlias"] = request.FromAlias;
@@ -11183,6 +11195,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClickTrace))
             {
                 body["ClickTrace"] = request.ClickTrace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainAuth))
+            {
+                body["DomainAuth"] = request.DomainAuth;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromAlias))
             {

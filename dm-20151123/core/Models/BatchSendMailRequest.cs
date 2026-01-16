@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string ClickTrace { get; set; }
 
+        [NameInMap("DomainAuth")]
+        [Validation(Required=false)]
+        public bool? DomainAuth { get; set; }
+
         /// <summary>
         /// <para>Currently, the standard fields that can be added to the email header are Message-ID, List-Unsubscribe, and List-Unsubscribe-Post. Standard fields will overwrite the existing values in the email header, while non-standard fields must start with X-User- and will be appended to the email header. Currently, up to 10 headers can be passed in JSON format, and both standard and non-standard fields must comply with the syntax requirements for headers.</para>
         /// 
