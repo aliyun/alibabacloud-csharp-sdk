@@ -270,6 +270,26 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [Validation(Required=false)]
             public string ProductCode { get; set; }
 
+            [NameInMap("RiskBizScenario")]
+            [Validation(Required=false)]
+            public int? RiskBizScenario { get; set; }
+
+            [NameInMap("RiskDevice")]
+            [Validation(Required=false)]
+            public int? RiskDevice { get; set; }
+
+            [NameInMap("RiskDeviceToken")]
+            [Validation(Required=false)]
+            public int? RiskDeviceToken { get; set; }
+
+            [NameInMap("RiskGeneric")]
+            [Validation(Required=false)]
+            public int? RiskGeneric { get; set; }
+
+            [NameInMap("RiskModelMining")]
+            [Validation(Required=false)]
+            public int? RiskModelMining { get; set; }
+
             /// <summary>
             /// <para>Whether it is root (pass 1 if selected, otherwise do not pass; corresponds to identity label risk type).</para>
             /// 

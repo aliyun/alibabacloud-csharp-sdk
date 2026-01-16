@@ -10201,6 +10201,26 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             {
                 query["ProductCode"] = request.ProductCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskBizScenario))
+            {
+                query["RiskBizScenario"] = request.RiskBizScenario;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskDevice))
+            {
+                query["RiskDevice"] = request.RiskDevice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskDeviceToken))
+            {
+                query["RiskDeviceToken"] = request.RiskDeviceToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskGeneric))
+            {
+                query["RiskGeneric"] = request.RiskGeneric;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskModelMining))
+            {
+                query["RiskModelMining"] = request.RiskModelMining;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Root))
             {
                 query["Root"] = request.Root;
@@ -10314,6 +10334,26 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskBizScenario))
+            {
+                query["RiskBizScenario"] = request.RiskBizScenario;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskDevice))
+            {
+                query["RiskDevice"] = request.RiskDevice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskDeviceToken))
+            {
+                query["RiskDeviceToken"] = request.RiskDeviceToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskGeneric))
+            {
+                query["RiskGeneric"] = request.RiskGeneric;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskModelMining))
+            {
+                query["RiskModelMining"] = request.RiskModelMining;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Root))
             {
