@@ -81,6 +81,28 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public bool? DifferentRole { get; set; }
 
+            [NameInMap("Dimensions")]
+            [Validation(Required=false)]
+            public List<OperatorBasicInfoParamDimensions> Dimensions { get; set; }
+            public class OperatorBasicInfoParamDimensions : TeaModel {
+                [NameInMap("Desc")]
+                [Validation(Required=false)]
+                public string Desc { get; set; }
+
+                [NameInMap("Dimension")]
+                [Validation(Required=false)]
+                public string Dimension { get; set; }
+
+                [NameInMap("ExcludeCondition")]
+                [Validation(Required=false)]
+                public string ExcludeCondition { get; set; }
+
+                [NameInMap("IncludeCondition")]
+                [Validation(Required=false)]
+                public string IncludeCondition { get; set; }
+
+            }
+
             [NameInMap("EndType")]
             [Validation(Required=false)]
             public string EndType { get; set; }
@@ -96,6 +118,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [NameInMap("From_end")]
             [Validation(Required=false)]
             public bool? FromEnd { get; set; }
+
+            [NameInMap("HitCondition")]
+            [Validation(Required=false)]
+            public string HitCondition { get; set; }
 
             [NameInMap("Hit_time")]
             [Validation(Required=false)]
@@ -145,9 +171,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public int? KnowledgeTargetType { get; set; }
 
+            [NameInMap("Knowledges")]
+            [Validation(Required=false)]
+            public string Knowledges { get; set; }
+
             [NameInMap("LgfSentences")]
             [Validation(Required=false)]
             public List<string> LgfSentences { get; set; }
+
+            [NameInMap("LlmModelCode")]
+            [Validation(Required=false)]
+            public string LlmModelCode { get; set; }
 
             [NameInMap("MaxEmotionChangeValue")]
             [Validation(Required=false)]
@@ -196,6 +230,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [NameInMap("RoleId")]
             [Validation(Required=false)]
             public int? RoleId { get; set; }
+
+            [NameInMap("SceneName")]
+            [Validation(Required=false)]
+            public string SceneName { get; set; }
 
             [NameInMap("Score")]
             [Validation(Required=false)]

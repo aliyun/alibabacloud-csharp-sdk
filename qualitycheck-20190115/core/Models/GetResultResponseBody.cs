@@ -163,6 +163,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public List<GetResultResponseBodyDataResultInfoHitResultHitResult> HitResult { get; set; }
                     public class GetResultResponseBodyDataResultInfoHitResultHitResult : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>turn</para>
+                        /// </summary>
+                        [NameInMap("ArtificialRule")]
+                        [Validation(Required=false)]
+                        public string ArtificialRule { get; set; }
+
                         [NameInMap("Conditions")]
                         [Validation(Required=false)]
                         public GetResultResponseBodyDataResultInfoHitResultHitResultConditions Conditions { get; set; }
@@ -642,6 +650,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
                         }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>1</para>
+                        /// </summary>
+                        [NameInMap("FinalHitResult")]
+                        [Validation(Required=false)]
+                        public string FinalHitResult { get; set; }
+
                         [NameInMap("Hits")]
                         [Validation(Required=false)]
                         public GetResultResponseBodyDataResultInfoHitResultHitResultHits Hits { get; set; }
@@ -749,6 +765,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                             }
 
                         }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>1</para>
+                        /// </summary>
+                        [NameInMap("MachineHitResult")]
+                        [Validation(Required=false)]
+                        public string MachineHitResult { get; set; }
 
                         [NameInMap("Name")]
                         [Validation(Required=false)]

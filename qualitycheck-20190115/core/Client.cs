@@ -4841,6 +4841,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await GetQualityCheckSchemeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取质检结果</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetResultRequest
         /// </param>
@@ -4882,6 +4887,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<GetResultResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取质检结果</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetResultRequest
         /// </param>
@@ -4923,6 +4933,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<GetResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取质检结果</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetResultRequest
         /// </param>
@@ -4936,6 +4951,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return GetResultWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取质检结果</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetResultRequest
         /// </param>
