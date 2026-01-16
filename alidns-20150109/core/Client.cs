@@ -25965,6 +25965,150 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>设置全局流量管理实例配置日志开关</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetCloudGtmInstanceConfigLogSwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetCloudGtmInstanceConfigLogSwitchResponse
+        /// </returns>
+        public SetCloudGtmInstanceConfigLogSwitchResponse SetCloudGtmInstanceConfigLogSwitchWithOptions(SetCloudGtmInstanceConfigLogSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetCloudGtmInstanceConfigLogSwitch",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetCloudGtmInstanceConfigLogSwitchResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置全局流量管理实例配置日志开关</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetCloudGtmInstanceConfigLogSwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetCloudGtmInstanceConfigLogSwitchResponse
+        /// </returns>
+        public async Task<SetCloudGtmInstanceConfigLogSwitchResponse> SetCloudGtmInstanceConfigLogSwitchWithOptionsAsync(SetCloudGtmInstanceConfigLogSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetCloudGtmInstanceConfigLogSwitch",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetCloudGtmInstanceConfigLogSwitchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置全局流量管理实例配置日志开关</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetCloudGtmInstanceConfigLogSwitchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetCloudGtmInstanceConfigLogSwitchResponse
+        /// </returns>
+        public SetCloudGtmInstanceConfigLogSwitchResponse SetCloudGtmInstanceConfigLogSwitch(SetCloudGtmInstanceConfigLogSwitchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetCloudGtmInstanceConfigLogSwitchWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置全局流量管理实例配置日志开关</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetCloudGtmInstanceConfigLogSwitchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetCloudGtmInstanceConfigLogSwitchResponse
+        /// </returns>
+        public async Task<SetCloudGtmInstanceConfigLogSwitchResponse> SetCloudGtmInstanceConfigLogSwitchAsync(SetCloudGtmInstanceConfigLogSwitchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetCloudGtmInstanceConfigLogSwitchWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Enables or disables weighted round-robin based on the specified parameters.</para>
         /// </summary>
         /// 
