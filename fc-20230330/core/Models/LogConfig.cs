@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public bool? EnableInstanceMetrics { get; set; }
 
+        [NameInMap("enableLlmMetrics")]
+        [Validation(Required=false)]
+        public bool? EnableLlmMetrics { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>
