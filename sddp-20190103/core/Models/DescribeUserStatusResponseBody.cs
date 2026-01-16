@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string AccessKeyId { get; set; }
 
+            [NameInMap("AssetRoleAuthed")]
+            [Validation(Required=false)]
+            public bool? AssetRoleAuthed { get; set; }
+
             /// <summary>
             /// <para>Indicates whether the SQL Explorer feature can be disabled. Valid values:</para>
             /// <list type="bullet">
