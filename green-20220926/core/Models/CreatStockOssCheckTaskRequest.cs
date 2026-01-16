@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class CreatStockOssCheckTaskRequest : TeaModel {
+        [NameInMap("BucketPrefixFilterConfig")]
+        [Validation(Required=false)]
+        public string BucketPrefixFilterConfig { get; set; }
+
         /// <summary>
         /// <para>OSS buckets</para>
         /// 

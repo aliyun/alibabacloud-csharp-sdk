@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class CreatePreCheckRequest : TeaModel {
+        [NameInMap("BucketPrefixFilterConfig")]
+        [Validation(Required=false)]
+        public string BucketPrefixFilterConfig { get; set; }
+
         /// <summary>
         /// <para>Buckets.</para>
         /// 

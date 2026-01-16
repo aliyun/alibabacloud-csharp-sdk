@@ -1229,6 +1229,10 @@ namespace AlibabaCloud.SDK.Green20220926
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketPrefixFilterConfig))
+            {
+                query["BucketPrefixFilterConfig"] = request.BucketPrefixFilterConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Buckets))
             {
                 query["Buckets"] = request.Buckets;
@@ -1379,6 +1383,10 @@ namespace AlibabaCloud.SDK.Green20220926
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketPrefixFilterConfig))
+            {
+                query["BucketPrefixFilterConfig"] = request.BucketPrefixFilterConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Buckets))
             {
                 query["Buckets"] = request.Buckets;
@@ -2026,6 +2034,10 @@ namespace AlibabaCloud.SDK.Green20220926
                 query["RegionId"] = request.RegionId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketPrefixFilterConfig))
+            {
+                body["BucketPrefixFilterConfig"] = request.BucketPrefixFilterConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Buckets))
             {
                 body["Buckets"] = request.Buckets;
@@ -2122,6 +2134,10 @@ namespace AlibabaCloud.SDK.Green20220926
                 query["RegionId"] = request.RegionId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketPrefixFilterConfig))
+            {
+                body["BucketPrefixFilterConfig"] = request.BucketPrefixFilterConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Buckets))
             {
                 body["Buckets"] = request.Buckets;

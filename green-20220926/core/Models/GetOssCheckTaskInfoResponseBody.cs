@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public GetOssCheckTaskInfoResponseBodyConfig Config { get; set; }
         public class GetOssCheckTaskInfoResponseBodyConfig : TeaModel {
+            [NameInMap("BucketPrefixFilterConfig")]
+            [Validation(Required=false)]
+            public Dictionary<string, ConfigBucketPrefixFilterConfigValue> BucketPrefixFilterConfig { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>188</para>
