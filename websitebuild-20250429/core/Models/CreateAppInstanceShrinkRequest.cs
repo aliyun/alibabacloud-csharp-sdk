@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
-    public class CreateAppInstanceRequest : TeaModel {
+    public class CreateAppInstanceShrinkRequest : TeaModel {
         /// <summary>
         /// <para>Application type</para>
         /// 
@@ -115,17 +115,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
-        public List<CreateAppInstanceRequestTags> Tags { get; set; }
-        public class CreateAppInstanceRequestTags : TeaModel {
-            [NameInMap("TagKey")]
-            [Validation(Required=false)]
-            public string TagKey { get; set; }
-
-            [NameInMap("TagValue")]
-            [Validation(Required=false)]
-            public string TagValue { get; set; }
-
-        }
+        public string TagsShrink { get; set; }
 
     }
 
