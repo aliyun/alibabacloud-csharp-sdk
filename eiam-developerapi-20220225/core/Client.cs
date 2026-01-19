@@ -4207,6 +4207,154 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取云角色（CloudAccountRole）的临时访问凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ObtainCloudAccountRoleAccessCredentialRequest
+        /// </param>
+        /// <param name="headers">
+        /// ObtainCloudAccountRoleAccessCredentialHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ObtainCloudAccountRoleAccessCredentialResponse
+        /// </returns>
+        public ObtainCloudAccountRoleAccessCredentialResponse ObtainCloudAccountRoleAccessCredentialWithOptions(string instanceId, ObtainCloudAccountRoleAccessCredentialRequest request, ObtainCloudAccountRoleAccessCredentialHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountRoleExternalId))
+            {
+                query["cloudAccountRoleExternalId"] = request.CloudAccountRoleExternalId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ObtainCloudAccountRoleAccessCredential",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/cloudAccountRoles/_/actions/obtainAccessCredential",
+                Method = "GET",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ObtainCloudAccountRoleAccessCredentialResponse>(DoROARequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取云角色（CloudAccountRole）的临时访问凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ObtainCloudAccountRoleAccessCredentialRequest
+        /// </param>
+        /// <param name="headers">
+        /// ObtainCloudAccountRoleAccessCredentialHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ObtainCloudAccountRoleAccessCredentialResponse
+        /// </returns>
+        public async Task<ObtainCloudAccountRoleAccessCredentialResponse> ObtainCloudAccountRoleAccessCredentialWithOptionsAsync(string instanceId, ObtainCloudAccountRoleAccessCredentialRequest request, ObtainCloudAccountRoleAccessCredentialHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountRoleExternalId))
+            {
+                query["cloudAccountRoleExternalId"] = request.CloudAccountRoleExternalId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ObtainCloudAccountRoleAccessCredential",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/cloudAccountRoles/_/actions/obtainAccessCredential",
+                Method = "GET",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ObtainCloudAccountRoleAccessCredentialResponse>(await DoROARequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取云角色（CloudAccountRole）的临时访问凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ObtainCloudAccountRoleAccessCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ObtainCloudAccountRoleAccessCredentialResponse
+        /// </returns>
+        public ObtainCloudAccountRoleAccessCredentialResponse ObtainCloudAccountRoleAccessCredential(string instanceId, ObtainCloudAccountRoleAccessCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ObtainCloudAccountRoleAccessCredentialHeaders headers = new ObtainCloudAccountRoleAccessCredentialHeaders();
+            return ObtainCloudAccountRoleAccessCredentialWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取云角色（CloudAccountRole）的临时访问凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ObtainCloudAccountRoleAccessCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ObtainCloudAccountRoleAccessCredentialResponse
+        /// </returns>
+        public async Task<ObtainCloudAccountRoleAccessCredentialResponse> ObtainCloudAccountRoleAccessCredentialAsync(string instanceId, ObtainCloudAccountRoleAccessCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ObtainCloudAccountRoleAccessCredentialHeaders headers = new ObtainCloudAccountRoleAccessCredentialHeaders();
+            return await ObtainCloudAccountRoleAccessCredentialWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies information about an Employee Identity and Access Management (EIAM) group.</para>
         /// </summary>
         /// 
