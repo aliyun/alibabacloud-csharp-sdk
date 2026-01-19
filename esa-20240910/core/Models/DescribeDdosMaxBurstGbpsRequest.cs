@@ -8,17 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
-    public class ListEdgeContainerAppImageSecretsRequest : TeaModel {
+    public class DescribeDdosMaxBurstGbpsRequest : TeaModel {
         /// <summary>
-        /// <para>Application ID, which can be obtained using the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>app-88068867578379****</para>
+        /// <para>esa-site-a71k7bw19dz4</para>
         /// </summary>
-        [NameInMap("AppId")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string AppId { get; set; }
+        public string InstanceId { get; set; }
 
     }
 

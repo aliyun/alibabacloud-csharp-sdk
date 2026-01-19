@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeleteEdgeContainerAppImageSecretResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</para>
         /// </summary>

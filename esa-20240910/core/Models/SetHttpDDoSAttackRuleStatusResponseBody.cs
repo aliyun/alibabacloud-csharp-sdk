@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class SetHttpDDoSAttackRuleStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>F7B84CF8-F8A4-53F8-9B91-2643FD72042B</para>

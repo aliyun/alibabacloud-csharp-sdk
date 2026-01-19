@@ -4358,7 +4358,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘容器应用的镜像秘钥</para>
+        /// <para>Create an image secret for the edge container application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4412,7 +4412,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘容器应用的镜像秘钥</para>
+        /// <para>Create an image secret for the edge container application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4466,7 +4466,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘容器应用的镜像秘钥</para>
+        /// <para>Create an image secret for the edge container application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4484,7 +4484,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘容器应用的镜像秘钥</para>
+        /// <para>Create an image secret for the edge container application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13228,7 +13228,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘容器应用的镜像秘钥</para>
+        /// <para>Delete the image secret of an edge container application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13274,7 +13274,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘容器应用的镜像秘钥</para>
+        /// <para>Delete the image secret of an edge container application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13320,7 +13320,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘容器应用的镜像秘钥</para>
+        /// <para>Delete the image secret of an edge container application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13338,7 +13338,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘容器应用的镜像秘钥</para>
+        /// <para>Delete the image secret of an edge container application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13620,7 +13620,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除深度学习和防护下发的规则</para>
+        /// <para>Delete rules for deep learning and protection distribution</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13670,7 +13670,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除深度学习和防护下发的规则</para>
+        /// <para>Delete rules for deep learning and protection distribution</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13720,7 +13720,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除深度学习和防护下发的规则</para>
+        /// <para>Delete rules for deep learning and protection distribution</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13738,7 +13738,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除深度学习和防护下发的规则</para>
+        /// <para>Delete rules for deep learning and protection distribution</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17940,21 +17940,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于删除实例级别的Web应用防火墙规则集。</para>
+        /// <para>Used for deleting an instance-level Web Application Firewall (WAF) ruleset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</description></item>
-        /// <item><description><c>InstanceId</c> 是必需参数，指定了要为其创建规则集的具体实例。</description></item>
-        /// <item><description><c>Phase</c> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</description></item>
-        /// <item><description><c>Name</c> 和 <c>Expression</c> 是必填项，分别代表规则集的名字和具体的匹配表达式。</description></item>
-        /// <item><description>可选参数 <c>Description</c> 提供了对规则集功能或用途的文字描述。</description></item>
-        /// <item><description><c>Status</c> 控制着规则集是否立即生效 (<c>on</c>) 或者处于关闭状态 (<c>off</c>)。</description></item>
-        /// <item><description>通过 <c>Rules</c> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</description></item>
-        /// <item><description>成功响应将返回新创建规则集的唯一标识符 <c>Id</c> 以及所有关联规则的ID列表 <c>RuleIds</c>。</description></item>
+        /// <item><description><c>InstanceId</c> and <c>Id</c> are required parameters, specifying the WAF instance ID to be operated on and the specific ruleset ID, respectively.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18003,21 +17996,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于删除实例级别的Web应用防火墙规则集。</para>
+        /// <para>Used for deleting an instance-level Web Application Firewall (WAF) ruleset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</description></item>
-        /// <item><description><c>InstanceId</c> 是必需参数，指定了要为其创建规则集的具体实例。</description></item>
-        /// <item><description><c>Phase</c> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</description></item>
-        /// <item><description><c>Name</c> 和 <c>Expression</c> 是必填项，分别代表规则集的名字和具体的匹配表达式。</description></item>
-        /// <item><description>可选参数 <c>Description</c> 提供了对规则集功能或用途的文字描述。</description></item>
-        /// <item><description><c>Status</c> 控制着规则集是否立即生效 (<c>on</c>) 或者处于关闭状态 (<c>off</c>)。</description></item>
-        /// <item><description>通过 <c>Rules</c> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</description></item>
-        /// <item><description>成功响应将返回新创建规则集的唯一标识符 <c>Id</c> 以及所有关联规则的ID列表 <c>RuleIds</c>。</description></item>
+        /// <item><description><c>InstanceId</c> and <c>Id</c> are required parameters, specifying the WAF instance ID to be operated on and the specific ruleset ID, respectively.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18066,21 +18052,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于删除实例级别的Web应用防火墙规则集。</para>
+        /// <para>Used for deleting an instance-level Web Application Firewall (WAF) ruleset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</description></item>
-        /// <item><description><c>InstanceId</c> 是必需参数，指定了要为其创建规则集的具体实例。</description></item>
-        /// <item><description><c>Phase</c> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</description></item>
-        /// <item><description><c>Name</c> 和 <c>Expression</c> 是必填项，分别代表规则集的名字和具体的匹配表达式。</description></item>
-        /// <item><description>可选参数 <c>Description</c> 提供了对规则集功能或用途的文字描述。</description></item>
-        /// <item><description><c>Status</c> 控制着规则集是否立即生效 (<c>on</c>) 或者处于关闭状态 (<c>off</c>)。</description></item>
-        /// <item><description>通过 <c>Rules</c> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</description></item>
-        /// <item><description>成功响应将返回新创建规则集的唯一标识符 <c>Id</c> 以及所有关联规则的ID列表 <c>RuleIds</c>。</description></item>
+        /// <item><description><c>InstanceId</c> and <c>Id</c> are required parameters, specifying the WAF instance ID to be operated on and the specific ruleset ID, respectively.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18099,21 +18078,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于删除实例级别的Web应用防火墙规则集。</para>
+        /// <para>Used for deleting an instance-level Web Application Firewall (WAF) ruleset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</description></item>
-        /// <item><description><c>InstanceId</c> 是必需参数，指定了要为其创建规则集的具体实例。</description></item>
-        /// <item><description><c>Phase</c> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</description></item>
-        /// <item><description><c>Name</c> 和 <c>Expression</c> 是必填项，分别代表规则集的名字和具体的匹配表达式。</description></item>
-        /// <item><description>可选参数 <c>Description</c> 提供了对规则集功能或用途的文字描述。</description></item>
-        /// <item><description><c>Status</c> 控制着规则集是否立即生效 (<c>on</c>) 或者处于关闭状态 (<c>off</c>)。</description></item>
-        /// <item><description>通过 <c>Rules</c> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</description></item>
-        /// <item><description>成功响应将返回新创建规则集的唯一标识符 <c>Id</c> 以及所有关联规则的ID列表 <c>RuleIds</c>。</description></item>
+        /// <item><description><c>InstanceId</c> and <c>Id</c> are required parameters, specifying the WAF instance ID to be operated on and the specific ruleset ID, respectively.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19484,6 +19456,118 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询当前实例设置的Ddos最大防护弹性值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDdosMaxBurstGbpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDdosMaxBurstGbpsResponse
+        /// </returns>
+        public DescribeDdosMaxBurstGbpsResponse DescribeDdosMaxBurstGbpsWithOptions(DescribeDdosMaxBurstGbpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDdosMaxBurstGbps",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDdosMaxBurstGbpsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询当前实例设置的Ddos最大防护弹性值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDdosMaxBurstGbpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDdosMaxBurstGbpsResponse
+        /// </returns>
+        public async Task<DescribeDdosMaxBurstGbpsResponse> DescribeDdosMaxBurstGbpsWithOptionsAsync(DescribeDdosMaxBurstGbpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDdosMaxBurstGbps",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDdosMaxBurstGbpsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询当前实例设置的Ddos最大防护弹性值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDdosMaxBurstGbpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDdosMaxBurstGbpsResponse
+        /// </returns>
+        public DescribeDdosMaxBurstGbpsResponse DescribeDdosMaxBurstGbps(DescribeDdosMaxBurstGbpsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDdosMaxBurstGbpsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询当前实例设置的Ddos最大防护弹性值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDdosMaxBurstGbpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDdosMaxBurstGbpsResponse
+        /// </returns>
+        public async Task<DescribeDdosMaxBurstGbpsResponse> DescribeDdosMaxBurstGbpsAsync(DescribeDdosMaxBurstGbpsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDdosMaxBurstGbpsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Provides monitoring data for metrics of ESA edge containers.</para>
         /// </summary>
         /// 
@@ -19832,6 +19916,430 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHttpDDoSAttackProtectionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询HTTP DDoS攻击防护规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHttpDDoSAttackRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHttpDDoSAttackRulesResponse
+        /// </returns>
+        public DescribeHttpDDoSAttackRulesResponse DescribeHttpDDoSAttackRulesWithOptions(DescribeHttpDDoSAttackRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHttpDDoSAttackRules",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHttpDDoSAttackRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询HTTP DDoS攻击防护规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHttpDDoSAttackRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHttpDDoSAttackRulesResponse
+        /// </returns>
+        public async Task<DescribeHttpDDoSAttackRulesResponse> DescribeHttpDDoSAttackRulesWithOptionsAsync(DescribeHttpDDoSAttackRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHttpDDoSAttackRules",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHttpDDoSAttackRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询HTTP DDoS攻击防护规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHttpDDoSAttackRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHttpDDoSAttackRulesResponse
+        /// </returns>
+        public DescribeHttpDDoSAttackRulesResponse DescribeHttpDDoSAttackRules(DescribeHttpDDoSAttackRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeHttpDDoSAttackRulesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询HTTP DDoS攻击防护规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHttpDDoSAttackRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHttpDDoSAttackRulesResponse
+        /// </returns>
+        public async Task<DescribeHttpDDoSAttackRulesResponse> DescribeHttpDDoSAttackRulesAsync(DescribeHttpDDoSAttackRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeHttpDDoSAttackRulesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询深度学习和防护下发的精准访问控制规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHttpDDoSIntelligentAclRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHttpDDoSIntelligentAclRulesResponse
+        /// </returns>
+        public DescribeHttpDDoSIntelligentAclRulesResponse DescribeHttpDDoSIntelligentAclRulesWithOptions(DescribeHttpDDoSIntelligentAclRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleType))
+            {
+                query["RuleType"] = request.RuleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHttpDDoSIntelligentAclRules",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHttpDDoSIntelligentAclRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询深度学习和防护下发的精准访问控制规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHttpDDoSIntelligentAclRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHttpDDoSIntelligentAclRulesResponse
+        /// </returns>
+        public async Task<DescribeHttpDDoSIntelligentAclRulesResponse> DescribeHttpDDoSIntelligentAclRulesWithOptionsAsync(DescribeHttpDDoSIntelligentAclRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleType))
+            {
+                query["RuleType"] = request.RuleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHttpDDoSIntelligentAclRules",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHttpDDoSIntelligentAclRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询深度学习和防护下发的精准访问控制规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHttpDDoSIntelligentAclRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHttpDDoSIntelligentAclRulesResponse
+        /// </returns>
+        public DescribeHttpDDoSIntelligentAclRulesResponse DescribeHttpDDoSIntelligentAclRules(DescribeHttpDDoSIntelligentAclRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeHttpDDoSIntelligentAclRulesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询深度学习和防护下发的精准访问控制规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHttpDDoSIntelligentAclRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHttpDDoSIntelligentAclRulesResponse
+        /// </returns>
+        public async Task<DescribeHttpDDoSIntelligentAclRulesResponse> DescribeHttpDDoSIntelligentAclRulesAsync(DescribeHttpDDoSIntelligentAclRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeHttpDDoSIntelligentAclRulesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询深度学习和防护下发的频率控制规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHttpDDoSIntelligentRateLimitRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHttpDDoSIntelligentRateLimitRulesResponse
+        /// </returns>
+        public DescribeHttpDDoSIntelligentRateLimitRulesResponse DescribeHttpDDoSIntelligentRateLimitRulesWithOptions(DescribeHttpDDoSIntelligentRateLimitRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleType))
+            {
+                query["RuleType"] = request.RuleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHttpDDoSIntelligentRateLimitRules",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHttpDDoSIntelligentRateLimitRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询深度学习和防护下发的频率控制规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHttpDDoSIntelligentRateLimitRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHttpDDoSIntelligentRateLimitRulesResponse
+        /// </returns>
+        public async Task<DescribeHttpDDoSIntelligentRateLimitRulesResponse> DescribeHttpDDoSIntelligentRateLimitRulesWithOptionsAsync(DescribeHttpDDoSIntelligentRateLimitRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleType))
+            {
+                query["RuleType"] = request.RuleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHttpDDoSIntelligentRateLimitRules",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHttpDDoSIntelligentRateLimitRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询深度学习和防护下发的频率控制规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHttpDDoSIntelligentRateLimitRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHttpDDoSIntelligentRateLimitRulesResponse
+        /// </returns>
+        public DescribeHttpDDoSIntelligentRateLimitRulesResponse DescribeHttpDDoSIntelligentRateLimitRules(DescribeHttpDDoSIntelligentRateLimitRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeHttpDDoSIntelligentRateLimitRulesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询深度学习和防护下发的频率控制规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHttpDDoSIntelligentRateLimitRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHttpDDoSIntelligentRateLimitRulesResponse
+        /// </returns>
+        public async Task<DescribeHttpDDoSIntelligentRateLimitRulesResponse> DescribeHttpDDoSIntelligentRateLimitRulesAsync(DescribeHttpDDoSIntelligentRateLimitRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeHttpDDoSIntelligentRateLimitRulesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -25546,7 +26054,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Key-Value对的某个Key的详情</para>
+        /// <para>Queries the value and time to live (TTL) of a key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25592,7 +26100,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Key-Value对的某个Key的详情</para>
+        /// <para>Queries the value and time to live (TTL) of a key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25638,7 +26146,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Key-Value对的某个Key的详情</para>
+        /// <para>Queries the value and time to live (TTL) of a key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25656,7 +26164,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Key-Value对的某个Key的详情</para>
+        /// <para>Queries the value and time to live (TTL) of a key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32324,7 +32832,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用的镜像秘钥列表</para>
+        /// <para>Retrieve the list of image secrets for edge container applications</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32366,7 +32874,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用的镜像秘钥列表</para>
+        /// <para>Retrieve the list of image secrets for edge container applications</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32408,7 +32916,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用的镜像秘钥列表</para>
+        /// <para>Retrieve the list of image secrets for edge container applications</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32426,7 +32934,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用的镜像秘钥列表</para>
+        /// <para>Retrieve the list of image secrets for edge container applications</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42540,6 +43048,134 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>设置Ddos实例的最大防护弹性值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetDdosMaxBurstGbpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDdosMaxBurstGbpsResponse
+        /// </returns>
+        public SetDdosMaxBurstGbpsResponse SetDdosMaxBurstGbpsWithOptions(SetDdosMaxBurstGbpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxBurstGbps))
+            {
+                query["MaxBurstGbps"] = request.MaxBurstGbps;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetDdosMaxBurstGbps",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetDdosMaxBurstGbpsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置Ddos实例的最大防护弹性值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetDdosMaxBurstGbpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDdosMaxBurstGbpsResponse
+        /// </returns>
+        public async Task<SetDdosMaxBurstGbpsResponse> SetDdosMaxBurstGbpsWithOptionsAsync(SetDdosMaxBurstGbpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxBurstGbps))
+            {
+                query["MaxBurstGbps"] = request.MaxBurstGbps;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetDdosMaxBurstGbps",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetDdosMaxBurstGbpsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置Ddos实例的最大防护弹性值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetDdosMaxBurstGbpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDdosMaxBurstGbpsResponse
+        /// </returns>
+        public SetDdosMaxBurstGbpsResponse SetDdosMaxBurstGbps(SetDdosMaxBurstGbpsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetDdosMaxBurstGbpsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置Ddos实例的最大防护弹性值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetDdosMaxBurstGbpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetDdosMaxBurstGbpsResponse
+        /// </returns>
+        public async Task<SetDdosMaxBurstGbpsResponse> SetDdosMaxBurstGbpsAsync(SetDdosMaxBurstGbpsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetDdosMaxBurstGbpsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Configures smart HTTP DDoS protection.</para>
         /// </summary>
         /// 
@@ -42804,7 +43440,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置HTTP DDoS攻击防护指定规则防护动作</para>
+        /// <para>Set the Protection Action for Specified HTTP DDoS Attack Rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42854,7 +43490,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置HTTP DDoS攻击防护指定规则防护动作</para>
+        /// <para>Set the Protection Action for Specified HTTP DDoS Attack Rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42904,7 +43540,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置HTTP DDoS攻击防护指定规则防护动作</para>
+        /// <para>Set the Protection Action for Specified HTTP DDoS Attack Rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42922,7 +43558,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置HTTP DDoS攻击防护指定规则防护动作</para>
+        /// <para>Set the Protection Action for Specified HTTP DDoS Attack Rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42940,7 +43576,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置HTTP DDoS攻击防护指定规则防护状态</para>
+        /// <para>Set the Protection Status of Specified HTTP DDoS Attack Rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42990,7 +43626,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置HTTP DDoS攻击防护指定规则防护状态</para>
+        /// <para>Set the Protection Status of Specified HTTP DDoS Attack Rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43040,7 +43676,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置HTTP DDoS攻击防护指定规则防护状态</para>
+        /// <para>Set the Protection Status of Specified HTTP DDoS Attack Rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43058,7 +43694,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置HTTP DDoS攻击防护指定规则防护状态</para>
+        /// <para>Set the Protection Status of Specified HTTP DDoS Attack Rules</para>
         /// </summary>
         /// 
         /// <param name="request">

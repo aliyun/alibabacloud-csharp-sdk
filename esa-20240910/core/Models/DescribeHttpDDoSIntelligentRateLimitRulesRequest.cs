@@ -8,31 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
-    public class DeleteHttpDDoSIntelligentRuleRequest : TeaModel {
+    public class DescribeHttpDDoSIntelligentRateLimitRulesRequest : TeaModel {
         /// <summary>
-        /// <para>Record name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="http://www.example.com">www.example.com</a></para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("RecordName")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string RecordName { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Rule ID.</para>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>20928021</para>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("RuleId")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public long? RuleId { get; set; }
+        public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</para>
+        /// <b>Example:</b>
+        /// <para>cc</para>
+        /// </summary>
+        [NameInMap("RuleType")]
+        [Validation(Required=false)]
+        public string RuleType { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

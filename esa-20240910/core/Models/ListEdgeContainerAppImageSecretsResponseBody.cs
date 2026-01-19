@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListEdgeContainerAppImageSecretsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>List of image secrets.</para>
+        /// </summary>
         [NameInMap("ImageSecretList")]
         [Validation(Required=false)]
         public List<ListEdgeContainerAppImageSecretsResponseBodyImageSecretList> ImageSecretList { get; set; }
         public class ListEdgeContainerAppImageSecretsResponseBodyImageSecretList : TeaModel {
             /// <summary>
+            /// <para>Name of the image secret.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>reg-123****</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Registry address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>registry-vpc.cn-hangzhou.aliyuncs.com</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Registry { get; set; }
 
             /// <summary>
+            /// <para>Username for the image repository</para>
+            /// 
             /// <b>Example:</b>
             /// <para>admin</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3558df77-8a7a-4060-a900-2d7949403836</para>
         /// </summary>

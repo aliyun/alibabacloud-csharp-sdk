@@ -8,28 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
-    public class GetKvDetailRequest : TeaModel {
+    public class DescribeHttpDDoSAttackRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The key name for the query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test_key</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("Key")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string Key { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</para>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test_namespace</para>
+        /// <para>123456****</para>
         /// </summary>
-        [NameInMap("Namespace")]
+        [NameInMap("SiteId")]
         [Validation(Required=false)]
-        public string Namespace { get; set; }
+        public long? SiteId { get; set; }
 
     }
 

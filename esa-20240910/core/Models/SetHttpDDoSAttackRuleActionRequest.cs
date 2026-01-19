@@ -10,6 +10,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class SetHttpDDoSAttackRuleActionRequest : TeaModel {
         /// <summary>
+        /// <para>Rule action, with values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>deny</b>: Block.</para>
+        /// </description></item>
+        /// <item><description><para><b>js</b>: JS Verification.</para>
+        /// </description></item>
+        /// <item><description><para><b>observe</b>: Observe.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +29,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleAction { get; set; }
 
         /// <summary>
+        /// <para>List of rule IDs to be operated on, separated by English commas (,).</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeHttpDDoSAttackRules~~">DescribeHttpDDoSAttackRules</a> API to get this parameter.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +43,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleIds { get; set; }
 
         /// <summary>
+        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

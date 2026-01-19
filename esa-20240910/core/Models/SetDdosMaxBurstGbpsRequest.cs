@@ -8,28 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
-    public class GetKvDetailRequest : TeaModel {
+    public class SetDdosMaxBurstGbpsRequest : TeaModel {
         /// <summary>
-        /// <para>The key name for the query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test_key</para>
+        /// <para>esa-site-ads11w</para>
         /// </summary>
-        [NameInMap("Key")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string Key { get; set; }
+        public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test_namespace</para>
+        /// <para>300</para>
         /// </summary>
-        [NameInMap("Namespace")]
+        [NameInMap("MaxBurstGbps")]
         [Validation(Required=false)]
-        public string Namespace { get; set; }
+        public string MaxBurstGbps { get; set; }
 
     }
 
