@@ -140,6 +140,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string CertState { get; set; }
 
+            [NameInMap("cloud_service_name")]
+            [Validation(Required=false)]
+            public string CloudServiceName { get; set; }
+
             [NameInMap("cloud_service_roles")]
             [Validation(Required=false)]
             public List<ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles> CloudServiceRoles { get; set; }
