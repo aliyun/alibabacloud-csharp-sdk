@@ -233,6 +233,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>1768788515725</para>
+                /// </summary>
+                [NameInMap("LastCompliantFixedTimestamp")]
+                [Validation(Required=false)]
+                public long? LastCompliantFixedTimestamp { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>1744696665000</para>
                 /// </summary>
                 [NameInMap("LastNonCompliantRecordTimestamp")]
