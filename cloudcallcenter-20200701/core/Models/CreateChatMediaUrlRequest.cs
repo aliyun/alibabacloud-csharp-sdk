@@ -8,42 +8,35 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudCallCenter20200701.Models
 {
-    public class ListCampaignTrendingReportRequest : TeaModel {
+    public class CreateChatMediaUrlRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>111</para>
-        /// </summary>
-        [NameInMap("CampaignId")]
-        [Validation(Required=false)]
-        public string CampaignId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1111</para>
-        /// </summary>
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public long? EndTime { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>111</para>
+        /// <para>ccc-test</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>media id</para>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>111</para>
+        /// <para>jpg</para>
         /// </summary>
-        [NameInMap("StartTime")]
+        [NameInMap("MimeType")]
         [Validation(Required=false)]
-        public long? StartTime { get; set; }
+        public string MimeType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>943D8EF3-3321-471F-A104-51C96FCA94D6</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

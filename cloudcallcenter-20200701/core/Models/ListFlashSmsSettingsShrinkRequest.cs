@@ -8,30 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudCallCenter20200701.Models
 {
-    public class ListCampaignTrendingReportRequest : TeaModel {
+    public class ListFlashSmsSettingsShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>111</para>
-        /// </summary>
-        [NameInMap("CampaignId")]
-        [Validation(Required=false)]
-        public string CampaignId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1111</para>
-        /// </summary>
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public long? EndTime { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>111</para>
+        /// <para>ccc-test</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -39,11 +21,27 @@ namespace AlibabaCloud.SDK.CloudCallCenter20200701.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>111</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("StartTime")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long? StartTime { get; set; }
+        public int? PageNumber { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("SkillGroupIdList")]
+        [Validation(Required=false)]
+        public string SkillGroupIdListShrink { get; set; }
+
+        [NameInMap("SkillGroupName")]
+        [Validation(Required=false)]
+        public string SkillGroupName { get; set; }
 
     }
 

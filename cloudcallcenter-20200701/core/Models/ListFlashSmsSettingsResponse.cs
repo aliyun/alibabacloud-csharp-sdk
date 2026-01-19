@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudCallCenter20200701.Models
 {
-    public class SaveRTCStatsV2Response : TeaModel {
+    public class ListFlashSmsSettingsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.CloudCallCenter20200701.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public SaveRTCStatsV2ResponseBody Body { get; set; }
+        public ListFlashSmsSettingsResponseBody Body { get; set; }
 
     }
 

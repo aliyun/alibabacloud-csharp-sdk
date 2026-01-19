@@ -8,42 +8,38 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CloudCallCenter20200701.Models
 {
-    public class ListCampaignTrendingReportRequest : TeaModel {
+    public class SendNotificationResponseBody : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>111</para>
+        /// <para>OK</para>
         /// </summary>
-        [NameInMap("CampaignId")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string CampaignId { get; set; }
+        public string Code { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1111</para>
+        /// <para>200</para>
         /// </summary>
-        [NameInMap("EndTime")]
+        [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
-        public long? EndTime { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>111</para>
-        /// </summary>
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string HttpStatusCode { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>111</para>
+        /// <para>无</para>
         /// </summary>
-        [NameInMap("StartTime")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public long? StartTime { get; set; }
+        public string Message { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>39138031-<b><b>-</b></b>-****-3AEE8F5DAC13</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

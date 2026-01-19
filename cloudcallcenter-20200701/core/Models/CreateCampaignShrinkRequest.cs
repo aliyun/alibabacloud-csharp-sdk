@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.CloudCallCenter20200701.Models
         [Validation(Required=false)]
         public bool? ExecutingUntilTimeout { get; set; }
 
+        [NameInMap("FlashSmsParameters")]
+        [Validation(Required=false)]
+        public string FlashSmsParameters { get; set; }
+
+        [NameInMap("InstGroupId")]
+        [Validation(Required=false)]
+        public string InstGroupId { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -48,6 +56,10 @@ namespace AlibabaCloud.SDK.CloudCallCenter20200701.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("NumberList")]
+        [Validation(Required=false)]
+        public string NumberListShrink { get; set; }
 
         [NameInMap("QueueId")]
         [Validation(Required=false)]
