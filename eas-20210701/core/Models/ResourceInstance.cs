@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
+        [NameInMap("InstancePhase")]
+        [Validation(Required=false)]
+        public string InstancePhase { get; set; }
+
         [NameInMap("InstanceStatus")]
         [Validation(Required=false)]
         public string InstanceStatus { get; set; }

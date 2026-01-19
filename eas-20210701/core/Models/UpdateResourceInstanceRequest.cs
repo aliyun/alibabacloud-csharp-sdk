@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string Action { get; set; }
 
+        [NameInMap("NewDiskSize")]
+        [Validation(Required=false)]
+        public string NewDiskSize { get; set; }
+
     }
 
 }
