@@ -1342,6 +1342,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             {
                 query["ClusterNodeType"] = request.ClusterNodeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigPatternType))
+            {
+                query["ConfigPatternType"] = request.ConfigPatternType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionString))
             {
                 query["ConnectionString"] = request.ConnectionString;
@@ -1491,6 +1495,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterNodeType))
             {
                 query["ClusterNodeType"] = request.ClusterNodeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigPatternType))
+            {
+                query["ConfigPatternType"] = request.ConfigPatternType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionString))
             {

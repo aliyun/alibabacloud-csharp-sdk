@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string ClusterNodeType { get; set; }
 
+        [NameInMap("ConfigPatternType")]
+        [Validation(Required=false)]
+        public string ConfigPatternType { get; set; }
+
         /// <summary>
         /// <para>The instance endpoint.</para>
         /// 
