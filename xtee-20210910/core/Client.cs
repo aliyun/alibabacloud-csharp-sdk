@@ -18996,6 +18996,14 @@ namespace AlibabaCloud.SDK.Xtee20210910
             {
                 query["RegId"] = request.RegId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                query["TaskName"] = request.TaskName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskStatus))
+            {
+                query["TaskStatus"] = request.TaskStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 query["Type"] = request.Type;
@@ -19053,6 +19061,14 @@ namespace AlibabaCloud.SDK.Xtee20210910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegId))
             {
                 query["RegId"] = request.RegId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                query["TaskName"] = request.TaskName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskStatus))
+            {
+                query["TaskStatus"] = request.TaskStatus;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {

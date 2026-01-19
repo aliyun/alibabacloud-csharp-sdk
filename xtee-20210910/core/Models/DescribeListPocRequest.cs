@@ -53,6 +53,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         [Validation(Required=false)]
         public string RegId { get; set; }
 
+        [NameInMap("TaskName")]
+        [Validation(Required=false)]
+        public string TaskName { get; set; }
+
+        [NameInMap("TaskStatus")]
+        [Validation(Required=false)]
+        public string TaskStatus { get; set; }
+
         /// <summary>
         /// <para>Type</para>
         /// 
