@@ -154,6 +154,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public long? CertificateValidStart { get; set; }
 
+                [NameInMap("ClientCertSDnPassThrough")]
+                [Validation(Required=false)]
+                public bool? ClientCertSDnPassThrough { get; set; }
+
                 /// <summary>
                 /// <para>The type of the custom domain name.</para>
                 /// 
@@ -245,6 +249,18 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [NameInMap("IsHttpRedirectToHttps")]
                 [Validation(Required=false)]
                 public bool? IsHttpRedirectToHttps { get; set; }
+
+                [NameInMap("SslOcspCacheEnable")]
+                [Validation(Required=false)]
+                public bool? SslOcspCacheEnable { get; set; }
+
+                [NameInMap("SslOcspEnable")]
+                [Validation(Required=false)]
+                public bool? SslOcspEnable { get; set; }
+
+                [NameInMap("SslVerifyDepth")]
+                [Validation(Required=false)]
+                public int? SslVerifyDepth { get; set; }
 
                 /// <summary>
                 /// <para>The wildcard domain name mode.</para>
