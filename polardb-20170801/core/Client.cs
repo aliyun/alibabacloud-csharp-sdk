@@ -13997,6 +13997,358 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询模型算子日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAIDBClusterTaskLogFilesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAIDBClusterTaskLogFilesResponse
+        /// </returns>
+        public DescribeAIDBClusterTaskLogFilesResponse DescribeAIDBClusterTaskLogFilesWithOptions(DescribeAIDBClusterTaskLogFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogType))
+            {
+                query["LogType"] = request.LogType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelativeDBClusterId))
+            {
+                query["RelativeDBClusterId"] = request.RelativeDBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reverse))
+            {
+                query["Reverse"] = request.Reverse;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAIDBClusterTaskLogFiles",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAIDBClusterTaskLogFilesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模型算子日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAIDBClusterTaskLogFilesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAIDBClusterTaskLogFilesResponse
+        /// </returns>
+        public async Task<DescribeAIDBClusterTaskLogFilesResponse> DescribeAIDBClusterTaskLogFilesWithOptionsAsync(DescribeAIDBClusterTaskLogFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogType))
+            {
+                query["LogType"] = request.LogType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelativeDBClusterId))
+            {
+                query["RelativeDBClusterId"] = request.RelativeDBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reverse))
+            {
+                query["Reverse"] = request.Reverse;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAIDBClusterTaskLogFiles",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAIDBClusterTaskLogFilesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模型算子日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAIDBClusterTaskLogFilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAIDBClusterTaskLogFilesResponse
+        /// </returns>
+        public DescribeAIDBClusterTaskLogFilesResponse DescribeAIDBClusterTaskLogFiles(DescribeAIDBClusterTaskLogFilesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAIDBClusterTaskLogFilesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模型算子日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAIDBClusterTaskLogFilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAIDBClusterTaskLogFilesResponse
+        /// </returns>
+        public async Task<DescribeAIDBClusterTaskLogFilesResponse> DescribeAIDBClusterTaskLogFilesAsync(DescribeAIDBClusterTaskLogFilesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAIDBClusterTaskLogFilesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模型算子指标</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAIDBClusterTaskMetricsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAIDBClusterTaskMetricsResponse
+        /// </returns>
+        public DescribeAIDBClusterTaskMetricsResponse DescribeAIDBClusterTaskMetricsWithOptions(DescribeAIDBClusterTaskMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricType))
+            {
+                query["MetricType"] = request.MetricType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelativeDBClusterId))
+            {
+                query["RelativeDBClusterId"] = request.RelativeDBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reverse))
+            {
+                query["Reverse"] = request.Reverse;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAIDBClusterTaskMetrics",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAIDBClusterTaskMetricsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模型算子指标</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAIDBClusterTaskMetricsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAIDBClusterTaskMetricsResponse
+        /// </returns>
+        public async Task<DescribeAIDBClusterTaskMetricsResponse> DescribeAIDBClusterTaskMetricsWithOptionsAsync(DescribeAIDBClusterTaskMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricType))
+            {
+                query["MetricType"] = request.MetricType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelativeDBClusterId))
+            {
+                query["RelativeDBClusterId"] = request.RelativeDBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reverse))
+            {
+                query["Reverse"] = request.Reverse;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAIDBClusterTaskMetrics",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAIDBClusterTaskMetricsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模型算子指标</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAIDBClusterTaskMetricsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAIDBClusterTaskMetricsResponse
+        /// </returns>
+        public DescribeAIDBClusterTaskMetricsResponse DescribeAIDBClusterTaskMetrics(DescribeAIDBClusterTaskMetricsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAIDBClusterTaskMetricsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模型算子指标</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAIDBClusterTaskMetricsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAIDBClusterTaskMetricsResponse
+        /// </returns>
+        public async Task<DescribeAIDBClusterTaskMetricsResponse> DescribeAIDBClusterTaskMetricsAsync(DescribeAIDBClusterTaskMetricsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAIDBClusterTaskMetricsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查看custom集群列表</para>
         /// </summary>
         /// 
