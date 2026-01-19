@@ -822,6 +822,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string VpcType { get; set; }
 
+            [NameInMap("VplVersion")]
+            [Validation(Required=false)]
+            public string VplVersion { get; set; }
+
         }
 
         /// <summary>
