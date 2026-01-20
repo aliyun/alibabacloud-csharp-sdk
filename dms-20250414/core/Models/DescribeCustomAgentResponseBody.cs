@@ -45,6 +45,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string CustomAgentId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
+            /// </summary>
+            [NameInMap("DMSUnit")]
+            [Validation(Required=false)]
+            public string DMSUnit { get; set; }
+
             [NameInMap("DataJson")]
             [Validation(Required=false)]
             public string DataJson { get; set; }
@@ -111,6 +119,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string Instruction { get; set; }
 
+            [NameInMap("IsScheduleTask")]
+            [Validation(Required=false)]
+            public bool? IsScheduleTask { get; set; }
+
             [NameInMap("Knowledge")]
             [Validation(Required=false)]
             public string Knowledge { get; set; }
@@ -149,6 +161,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("NextRuntime")]
+            [Validation(Required=false)]
+            public long? NextRuntime { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2025-12-11T14:04:32.000+00:00</para>
@@ -172,6 +188,24 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [NameInMap("ReleaseTime")]
             [Validation(Required=false)]
             public string ReleaseTime { get; set; }
+
+            [NameInMap("ScheduleTaskConfig")]
+            [Validation(Required=false)]
+            public DescribeCustomAgentResponseBodyDataScheduleTaskConfig ScheduleTaskConfig { get; set; }
+            public class DescribeCustomAgentResponseBodyDataScheduleTaskConfig : TeaModel {
+                [NameInMap("CronExpression")]
+                [Validation(Required=false)]
+                public string CronExpression { get; set; }
+
+                [NameInMap("Query")]
+                [Validation(Required=false)]
+                public string Query { get; set; }
+
+                [NameInMap("RelatedSessionId")]
+                [Validation(Required=false)]
+                public string RelatedSessionId { get; set; }
+
+            }
 
             /// <summary>
             /// <b>Example:</b>
