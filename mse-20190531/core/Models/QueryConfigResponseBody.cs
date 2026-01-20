@@ -285,6 +285,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [Validation(Required=false)]
                     public Dictionary<string, string> InterceptPolicy { get; set; }
 
+                    [NameInMap("serviceName")]
+                    [Validation(Required=false)]
+                    public string ServiceName { get; set; }
+
                 }
 
                 [NameInMap("grayAuth")]
