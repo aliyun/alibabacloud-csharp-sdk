@@ -8,11 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
-    public class RemoveRspDomainServerHoldStatusForGatewayResponseBody : TeaModel {
+    public class AddRspDomainServerHoldStatusForGatewayOteResponseBody : TeaModel {
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
-        public RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
-        public class RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail : TeaModel {
+        public AddRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
+        public class AddRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>CreateUser</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>AQEAAAAAaNIARXXXXUQwNjE0LUQzN0XXXXVEQy1BQzExLTMzXXXXNTkxRjk1Ng==</para>
+            /// <para>AQFohtp4aIbaeEXXXXQxNjFDLUIzMzgtNTXXXX05NkFCLUI2RkY5XXXXzAzQQ==</para>
             /// </summary>
             [NameInMap("EncodedDiagnosticMessage")]
             [Validation(Required=false)]
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public RemoveRspDomainServerHoldStatusForGatewayResponseBodyData Data { get; set; }
-        public class RemoveRspDomainServerHoldStatusForGatewayResponseBodyData : TeaModel {
+        public AddRspDomainServerHoldStatusForGatewayOteResponseBodyData Data { get; set; }
+        public class AddRspDomainServerHoldStatusForGatewayOteResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -82,10 +82,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
-
-            [NameInMap("ServerHoldStatus")]
-            [Validation(Required=false)]
-            public string ServerHoldStatus { get; set; }
 
         }
 

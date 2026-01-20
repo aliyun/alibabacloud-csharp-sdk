@@ -8,11 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
-    public class RemoveRspDomainServerHoldStatusForGatewayResponseBody : TeaModel {
+    public class UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody : TeaModel {
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
-        public RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
-        public class RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail : TeaModel {
+        public UpdateRspDomainServerProhibitStatusForGatewayOteResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
+        public class UpdateRspDomainServerProhibitStatusForGatewayOteResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>CreateUser</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>AQEAAAAAaNIARXXXXUQwNjE0LUQzN0XXXXVEQy1BQzExLTMzXXXXNTkxRjk1Ng==</para>
+            /// <para>AQFohtp4aIbaeEXXXXQxNjFDLUIzMzgtNTXXXX05NkFCLUI2RkY5XXXXzAzQQ==</para>
             /// </summary>
             [NameInMap("EncodedDiagnosticMessage")]
             [Validation(Required=false)]
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public RemoveRspDomainServerHoldStatusForGatewayResponseBodyData Data { get; set; }
-        public class RemoveRspDomainServerHoldStatusForGatewayResponseBodyData : TeaModel {
+        public UpdateRspDomainServerProhibitStatusForGatewayOteResponseBodyData Data { get; set; }
+        public class UpdateRspDomainServerProhibitStatusForGatewayOteResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -83,9 +83,31 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public string DomainName { get; set; }
 
-            [NameInMap("ServerHoldStatus")]
+            [NameInMap("StatusList")]
             [Validation(Required=false)]
-            public string ServerHoldStatus { get; set; }
+            public List<UpdateRspDomainServerProhibitStatusForGatewayOteResponseBodyDataStatusList> StatusList { get; set; }
+            public class UpdateRspDomainServerProhibitStatusForGatewayOteResponseBodyDataStatusList : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>uptp.test.abchina.com.cn</para>
+                /// </summary>
+                [NameInMap("DomainName")]
+                [Validation(Required=false)]
+                public string DomainName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>serverUpdateProhibited</para>
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("StatusMsg")]
+                [Validation(Required=false)]
+                public string StatusMsg { get; set; }
+
+            }
 
         }
 

@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
-    public class RemoveRspDomainServerHoldStatusForGatewayRequest : TeaModel {
+    public class RemoveRspDomainServerHoldStatusForGatewayOteRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>asdf</para>
+        /// <para>qwoefasdf</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]

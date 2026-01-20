@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
-    public class RemoveRspDomainServerHoldStatusForGatewayRequest : TeaModel {
+    public class AddRspDomainServerHoldStatusForGatewayOteRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>asdf</para>
+        /// <para>qwoefasdf</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -23,12 +23,15 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example.com</para>
+        /// <para>dns-example.top</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("StatusMsg")]
         [Validation(Required=false)]
         public string StatusMsg { get; set; }

@@ -8,11 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
-    public class RemoveRspDomainServerHoldStatusForGatewayResponseBody : TeaModel {
+    public class RemoveRspDomainServerHoldStatusForGatewayOteResponseBody : TeaModel {
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
-        public RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
-        public class RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail : TeaModel {
+        public RemoveRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
+        public class RemoveRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>CreateUser</para>
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public RemoveRspDomainServerHoldStatusForGatewayResponseBodyData Data { get; set; }
-        public class RemoveRspDomainServerHoldStatusForGatewayResponseBodyData : TeaModel {
+        public RemoveRspDomainServerHoldStatusForGatewayOteResponseBodyData Data { get; set; }
+        public class RemoveRspDomainServerHoldStatusForGatewayOteResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -82,10 +82,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
-
-            [NameInMap("ServerHoldStatus")]
-            [Validation(Required=false)]
-            public string ServerHoldStatus { get; set; }
 
         }
 
