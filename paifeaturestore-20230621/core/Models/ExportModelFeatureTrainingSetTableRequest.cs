@@ -31,10 +31,18 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("RealTimeIterateInterval")]
         [Validation(Required=false)]
         public long? RealTimeIterateInterval { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
         [NameInMap("RealTimePartitionCountValue")]
         [Validation(Required=false)]
         public long? RealTimePartitionCountValue { get; set; }

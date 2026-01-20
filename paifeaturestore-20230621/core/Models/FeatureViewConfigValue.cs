@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public Dictionary<string, FeatureViewConfigValuePartitionsValue> Partitions { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1721186536</para>
+        /// </summary>
         [NameInMap("EventTime")]
         [Validation(Required=false)]
         public string EventTime { get; set; }
@@ -24,6 +28,24 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [NameInMap("UseMock")]
         [Validation(Required=false)]
         public bool? UseMock { get; set; }
+
+        [NameInMap("Snapshot")]
+        [Validation(Required=false)]
+        public FeatureViewConfigValueSnapshot Snapshot { get; set; }
+        public class FeatureViewConfigValueSnapshot : TeaModel {
+            [NameInMap("Partitions")]
+            [Validation(Required=false)]
+            public Dictionary<string, FeatureViewConfigValueSnapshotPartitionsValue> Partitions { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>table_name</para>
+            /// </summary>
+            [NameInMap("Table")]
+            [Validation(Required=false)]
+            public string Table { get; set; }
+
+        }
 
     }
 

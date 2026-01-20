@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
-    public class FeatureViewConfigValuePartitionsValue : TeaModel {
+    public class FeatureViewConfigValueSnapshotPartitionsValue : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>20250101</para>
+        /// <para>20260101</para>
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]
@@ -21,18 +21,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public List<string> Values { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>20250101</para>
-        /// </summary>
         [NameInMap("StartValue")]
         [Validation(Required=false)]
         public string StartValue { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>20250201</para>
-        /// </summary>
         [NameInMap("EndValue")]
         [Validation(Required=false)]
         public string EndValue { get; set; }

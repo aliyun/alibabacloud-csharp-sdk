@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public int? BatchSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>8192</para>
+        /// </summary>
         [NameInMap("MaxTokens")]
         [Validation(Required=false)]
         public int? MaxTokens { get; set; }
