@@ -1,3 +1,7 @@
+2026-01-20 Version: 1.11.0
+- Support API ListLivyComputeSessions.
+
+
 2026-01-13 Version: 1.9.4
 - Update API ListCatalogs: add response parameters Body.catalogs.$.alias.
 - Update API ListKyuubiSparkApplications: add response parameters Body.applications.$.tags.
