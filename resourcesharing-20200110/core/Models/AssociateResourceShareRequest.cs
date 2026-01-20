@@ -20,6 +20,28 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         [Validation(Required=false)]
         public List<string> ResourceArns { get; set; }
 
+        [NameInMap("ResourceProperties")]
+        [Validation(Required=false)]
+        public List<AssociateResourceShareRequestResourceProperties> ResourceProperties { get; set; }
+        public class AssociateResourceShareRequestResourceProperties : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{&quot;sharePrincipals&quot;:true,&quot;shareTagOptions&quot;:false}</para>
+            /// </summary>
+            [NameInMap("Property")]
+            [Validation(Required=false)]
+            public string Property { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>acs:vpc:cn-shanghai:103755469187****:vswitch/vsw-uf62b11ue4m8oz2di****</para>
+            /// </summary>
+            [NameInMap("ResourceArn")]
+            [Validation(Required=false)]
+            public string ResourceArn { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The ID of the resource share.</para>
         /// <para>This parameter is required.</para>

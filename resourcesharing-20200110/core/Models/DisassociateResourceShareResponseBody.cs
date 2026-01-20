@@ -117,6 +117,14 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
             public string ResourceArn { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>{&quot;sharePrincipals&quot;:true,&quot;shareTagOptions&quot;:false}</para>
+            /// </summary>
+            [NameInMap("ResourceProperty")]
+            [Validation(Required=false)]
+            public string ResourceProperty { get; set; }
+
+            /// <summary>
             /// <para>The ID of the resource share.</para>
             /// 
             /// <b>Example:</b>

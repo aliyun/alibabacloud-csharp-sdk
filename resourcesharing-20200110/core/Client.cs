@@ -229,6 +229,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             {
                 query["ResourceArns"] = request.ResourceArns;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceProperties))
+            {
+                query["ResourceProperties"] = request.ResourceProperties;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceShareId))
             {
                 query["ResourceShareId"] = request.ResourceShareId;
@@ -295,6 +299,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceArns))
             {
                 query["ResourceArns"] = request.ResourceArns;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceProperties))
+            {
+                query["ResourceProperties"] = request.ResourceProperties;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceShareId))
             {
@@ -804,6 +812,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceProperties))
+            {
+                query["ResourceProperties"] = request.ResourceProperties;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceShareName))
             {
                 query["ResourceShareName"] = request.ResourceShareName;
@@ -883,6 +895,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceProperties))
+            {
+                query["ResourceProperties"] = request.ResourceProperties;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceShareName))
             {

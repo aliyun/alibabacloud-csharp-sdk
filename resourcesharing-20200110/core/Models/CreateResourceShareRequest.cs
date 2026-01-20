@@ -44,6 +44,28 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("ResourceProperties")]
+        [Validation(Required=false)]
+        public List<CreateResourceShareRequestResourceProperties> ResourceProperties { get; set; }
+        public class CreateResourceShareRequestResourceProperties : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{&quot;sharePrincipals&quot;:true,&quot;shareTagOptions&quot;:false}</para>
+            /// </summary>
+            [NameInMap("Property")]
+            [Validation(Required=false)]
+            public string Property { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>acs:vpc:cn-shanghai:103755469187****:vswitch/vsw-uf62b11ue4m8oz2di****</para>
+            /// </summary>
+            [NameInMap("ResourceArn")]
+            [Validation(Required=false)]
+            public string ResourceArn { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The name of the resource share.</para>
         /// <para>The name must be 1 to 50 characters in length.</para>
