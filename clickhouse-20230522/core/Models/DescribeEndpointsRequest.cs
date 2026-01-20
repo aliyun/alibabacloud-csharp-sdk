@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeEndpointsRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>cc-*****-clickhouse</para>
+        /// </summary>
+        [NameInMap("ComputingGroupId")]
+        [Validation(Required=false)]
+        public string ComputingGroupId { get; set; }
+
+        /// <summary>
         /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 

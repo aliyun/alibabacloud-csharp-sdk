@@ -42,6 +42,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string ConnectionString { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>cc-*****-clickhouse</para>
+                /// </summary>
+                [NameInMap("EndpointName")]
+                [Validation(Required=false)]
+                public string EndpointName { get; set; }
+
+                /// <summary>
                 /// <para>The IP address.</para>
                 /// 
                 /// <b>Example:</b>
