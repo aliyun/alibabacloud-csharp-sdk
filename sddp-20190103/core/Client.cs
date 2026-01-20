@@ -1624,6 +1624,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             {
                 query["RuleID"] = request.RuleID;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["RuleId"] = request.RuleId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
             {
                 query["RuleName"] = request.RuleName;
@@ -1773,6 +1777,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleID))
             {
                 query["RuleID"] = request.RuleID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["RuleId"] = request.RuleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
             {

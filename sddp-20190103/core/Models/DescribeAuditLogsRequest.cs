@@ -197,6 +197,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string RuleID { get; set; }
 
+        [NameInMap("RuleId")]
+        [Validation(Required=false)]
+        public string RuleId { get; set; }
+
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
