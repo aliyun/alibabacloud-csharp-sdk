@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public List<Dictionary<string, object>> Agents { get; set; }
 
+            [NameInMap("artifacts")]
+            [Validation(Required=false)]
+            public List<Dictionary<string, object>> Artifacts { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>call_search_001</para>
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [NameInMap("detail")]
             [Validation(Required=false)]
             public string Detail { get; set; }
+
+            [NameInMap("events")]
+            [Validation(Required=false)]
+            public List<Dictionary<string, object>> Events { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -67,7 +75,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// </summary>
             [NameInMap("timestamp")]
             [Validation(Required=false)]
-            public long? Timestamp { get; set; }
+            public string Timestamp { get; set; }
 
             [NameInMap("tools")]
             [Validation(Required=false)]
@@ -80,6 +88,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
+
+            [NameInMap("version")]
+            [Validation(Required=false)]
+            public string Version { get; set; }
 
         }
 

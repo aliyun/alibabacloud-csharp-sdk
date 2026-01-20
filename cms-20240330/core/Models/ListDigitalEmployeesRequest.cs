@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListDigitalEmployeesRequest : TeaModel {
+        [NameInMap("displayName")]
+        [Validation(Required=false)]
+        public string DisplayName { get; set; }
+
         [NameInMap("employeeType")]
         [Validation(Required=false)]
         public string EmployeeType { get; set; }

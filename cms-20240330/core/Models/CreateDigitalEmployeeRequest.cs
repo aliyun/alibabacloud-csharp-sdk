@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             }
 
+            [NameInMap("sop")]
+            [Validation(Required=false)]
+            public List<Dictionary<string, object>> Sop { get; set; }
+
         }
 
         /// <summary>

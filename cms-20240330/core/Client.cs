@@ -8711,6 +8711,10 @@ namespace AlibabaCloud.SDK.Cms20240330
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                query["displayName"] = request.DisplayName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmployeeType))
             {
                 query["employeeType"] = request.EmployeeType;
@@ -8769,6 +8773,10 @@ namespace AlibabaCloud.SDK.Cms20240330
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                query["displayName"] = request.DisplayName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmployeeType))
             {
                 query["employeeType"] = request.EmployeeType;
