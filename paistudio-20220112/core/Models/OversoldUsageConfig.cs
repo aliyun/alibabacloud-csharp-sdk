@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
     public class OversoldUsageConfig : TeaModel {
         [NameInMap("Disabled")]
         [Validation(Required=false)]
-        public string Disabled { get; set; }
+        public bool? Disabled { get; set; }
 
         [NameInMap("DisabledBy")]
         [Validation(Required=false)]
