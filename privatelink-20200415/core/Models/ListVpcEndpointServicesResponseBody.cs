@@ -267,6 +267,24 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             [Validation(Required=false)]
             public string ServiceType { get; set; }
 
+            [NameInMap("SupportedRegionSet")]
+            [Validation(Required=false)]
+            public List<ListVpcEndpointServicesResponseBodyServicesSupportedRegionSet> SupportedRegionSet { get; set; }
+            public class ListVpcEndpointServicesResponseBodyServicesSupportedRegionSet : TeaModel {
+                [NameInMap("RegionBusinessStatus")]
+                [Validation(Required=false)]
+                public string RegionBusinessStatus { get; set; }
+
+                [NameInMap("RegionServiceStatus")]
+                [Validation(Required=false)]
+                public string RegionServiceStatus { get; set; }
+
+                [NameInMap("ServiceRegionId")]
+                [Validation(Required=false)]
+                public string ServiceRegionId { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The tags added to the resource.</para>
             /// </summary>

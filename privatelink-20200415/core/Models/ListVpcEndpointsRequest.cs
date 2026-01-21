@@ -148,6 +148,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
+        [NameInMap("ServiceRegionId")]
+        [Validation(Required=false)]
+        public string ServiceRegionId { get; set; }
+
         /// <summary>
         /// <para>The tags.</para>
         /// </summary>

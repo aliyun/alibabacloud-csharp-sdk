@@ -154,6 +154,24 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Obsolete]
         public bool? ServiceSupportIPv6 { get; set; }
 
+        [NameInMap("SupportedRegionSet")]
+        [Validation(Required=false)]
+        public List<CreateVpcEndpointServiceResponseBodySupportedRegionSet> SupportedRegionSet { get; set; }
+        public class CreateVpcEndpointServiceResponseBodySupportedRegionSet : TeaModel {
+            [NameInMap("RegionBusinessStatus")]
+            [Validation(Required=false)]
+            public string RegionBusinessStatus { get; set; }
+
+            [NameInMap("RegionServiceStatus")]
+            [Validation(Required=false)]
+            public string RegionServiceStatus { get; set; }
+
+            [NameInMap("ServiceRegionId")]
+            [Validation(Required=false)]
+            public string ServiceRegionId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Indicates whether the domain name of the nearest endpoint that is associated with the endpoint service is resolved first. Valid values:</para>
         /// <list type="bullet">

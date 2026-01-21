@@ -1135,6 +1135,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossRegionBandwidth))
+            {
+                query["CrossRegionBandwidth"] = request.CrossRegionBandwidth;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
@@ -1182,6 +1186,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
             {
                 query["ServiceName"] = request.ServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                query["ServiceRegionId"] = request.ServiceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -1258,6 +1266,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossRegionBandwidth))
+            {
+                query["CrossRegionBandwidth"] = request.CrossRegionBandwidth;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
@@ -1305,6 +1317,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
             {
                 query["ServiceName"] = request.ServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                query["ServiceRegionId"] = request.ServiceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -1478,6 +1494,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             {
                 query["ServiceSupportIPv6"] = request.ServiceSupportIPv6;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupportedRegionList))
+            {
+                query["SupportedRegionList"] = request.SupportedRegionList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -1583,6 +1603,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceSupportIPv6))
             {
                 query["ServiceSupportIPv6"] = request.ServiceSupportIPv6;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupportedRegionList))
+            {
+                query["SupportedRegionList"] = request.SupportedRegionList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -5050,6 +5074,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             {
                 query["ServiceName"] = request.ServiceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                query["ServiceRegionId"] = request.ServiceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
             {
                 query["ServiceType"] = request.ServiceType;
@@ -5123,6 +5151,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
             {
                 query["ServiceName"] = request.ServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                query["ServiceRegionId"] = request.ServiceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
             {
@@ -5406,6 +5438,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             {
                 query["ServiceName"] = request.ServiceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                query["ServiceRegionId"] = request.ServiceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -5499,6 +5535,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
             {
                 query["ServiceName"] = request.ServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                query["ServiceRegionId"] = request.ServiceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -6503,6 +6543,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossRegionBandwidth))
+            {
+                query["CrossRegionBandwidth"] = request.CrossRegionBandwidth;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
@@ -6589,6 +6633,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossRegionBandwidth))
+            {
+                query["CrossRegionBandwidth"] = request.CrossRegionBandwidth;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
@@ -6911,6 +6959,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddSupportedRegionSet))
+            {
+                query["AddSupportedRegionSet"] = request.AddSupportedRegionSet;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressIpVersion))
             {
                 query["AddressIpVersion"] = request.AddressIpVersion;
@@ -6926,6 +6978,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectBandwidth))
             {
                 query["ConnectBandwidth"] = request.ConnectBandwidth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteSupportedRegionSet))
+            {
+                query["DeleteSupportedRegionSet"] = request.DeleteSupportedRegionSet;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
@@ -6998,6 +7054,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddSupportedRegionSet))
+            {
+                query["AddSupportedRegionSet"] = request.AddSupportedRegionSet;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressIpVersion))
             {
                 query["AddressIpVersion"] = request.AddressIpVersion;
@@ -7013,6 +7073,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectBandwidth))
             {
                 query["ConnectBandwidth"] = request.ConnectBandwidth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteSupportedRegionSet))
+            {
+                query["DeleteSupportedRegionSet"] = request.DeleteSupportedRegionSet;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {

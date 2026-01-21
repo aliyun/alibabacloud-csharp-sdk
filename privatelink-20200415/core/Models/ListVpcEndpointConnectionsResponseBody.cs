@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             [Validation(Required=false)]
             public long? EndpointOwnerId { get; set; }
 
+            [NameInMap("EndpointRegionId")]
+            [Validation(Required=false)]
+            public string EndpointRegionId { get; set; }
+
             /// <summary>
             /// <para>The ID of the virtual private cloud (VPC) to which the endpoint belongs.</para>
             /// 
@@ -118,6 +122,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             [NameInMap("ServiceId")]
             [Validation(Required=false)]
             public string ServiceId { get; set; }
+
+            [NameInMap("ServiceRegionId")]
+            [Validation(Required=false)]
+            public string ServiceRegionId { get; set; }
 
             [NameInMap("TrafficControlMode")]
             [Validation(Required=false)]

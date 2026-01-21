@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
+        [NameInMap("ServiceRegionId")]
+        [Validation(Required=false)]
+        public string ServiceRegionId { get; set; }
+
         /// <summary>
         /// <para>The type of the endpoint service.</para>
         /// <para>Set the value to <b>Interface</b>. You can specify CLB and ALB instances as service resources for the endpoint service.</para>

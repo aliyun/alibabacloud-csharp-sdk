@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class UpdateVpcEndpointServiceAttributeRequest : TeaModel {
+        [NameInMap("AddSupportedRegionSet")]
+        [Validation(Required=false)]
+        public List<string> AddSupportedRegionSet { get; set; }
+
         /// <summary>
         /// <para>The protocol. Valid values:</para>
         /// <list type="bullet">
@@ -64,6 +68,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [NameInMap("ConnectBandwidth")]
         [Validation(Required=false)]
         public int? ConnectBandwidth { get; set; }
+
+        [NameInMap("DeleteSupportedRegionSet")]
+        [Validation(Required=false)]
+        public List<string> DeleteSupportedRegionSet { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>

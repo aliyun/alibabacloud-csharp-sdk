@@ -193,6 +193,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Obsolete]
         public bool? ServiceSupportIPv6 { get; set; }
 
+        [NameInMap("SupportedRegionList")]
+        [Validation(Required=false)]
+        public List<string> SupportedRegionList { get; set; }
+
         /// <summary>
         /// <para>The tags to add to the resource.</para>
         /// </summary>

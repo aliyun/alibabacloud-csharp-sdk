@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("CrossRegionBandwidth")]
+        [Validation(Required=false)]
+        public int? CrossRegionBandwidth { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">

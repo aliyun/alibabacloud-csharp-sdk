@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("CrossRegionBandwidth")]
+            [Validation(Required=false)]
+            public int? CrossRegionBandwidth { get; set; }
+
             /// <summary>
             /// <para>The service state of the endpoint. Valid values:</para>
             /// <list type="bullet">
@@ -216,6 +220,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
             public string ServiceName { get; set; }
+
+            [NameInMap("ServiceRegionId")]
+            [Validation(Required=false)]
+            public string ServiceRegionId { get; set; }
 
             /// <summary>
             /// <para>The tags added to the resource.</para>
