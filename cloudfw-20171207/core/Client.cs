@@ -1729,9 +1729,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <returns>
         /// ClearLogStoreStorageResponse
         /// </returns>
-        public ClearLogStoreStorageResponse ClearLogStoreStorageWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ClearLogStoreStorageResponse ClearLogStoreStorageWithOptions(ClearLogStoreStorageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Site))
+            {
+                query["Site"] = request.Site;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ClearLogStoreStorage",
@@ -1762,9 +1771,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <returns>
         /// ClearLogStoreStorageResponse
         /// </returns>
-        public async Task<ClearLogStoreStorageResponse> ClearLogStoreStorageWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ClearLogStoreStorageResponse> ClearLogStoreStorageWithOptionsAsync(ClearLogStoreStorageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Site))
+            {
+                query["Site"] = request.Site;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ClearLogStoreStorage",
@@ -1785,13 +1803,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <para>清空防火墙日志</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ClearLogStoreStorageRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ClearLogStoreStorageResponse
         /// </returns>
-        public ClearLogStoreStorageResponse ClearLogStoreStorage()
+        public ClearLogStoreStorageResponse ClearLogStoreStorage(ClearLogStoreStorageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ClearLogStoreStorageWithOptions(runtime);
+            return ClearLogStoreStorageWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1799,13 +1821,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <para>清空防火墙日志</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ClearLogStoreStorageRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ClearLogStoreStorageResponse
         /// </returns>
-        public async Task<ClearLogStoreStorageResponse> ClearLogStoreStorageAsync()
+        public async Task<ClearLogStoreStorageResponse> ClearLogStoreStorageAsync(ClearLogStoreStorageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ClearLogStoreStorageWithOptionsAsync(runtime);
+            return await ClearLogStoreStorageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -24804,6 +24830,126 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询地域和资产类型引流设置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionResourceTypeAutoEnableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionResourceTypeAutoEnableResponse
+        /// </returns>
+        public DescribeRegionResourceTypeAutoEnableResponse DescribeRegionResourceTypeAutoEnableWithOptions(DescribeRegionResourceTypeAutoEnableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRegionResourceTypeAutoEnable",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRegionResourceTypeAutoEnableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询地域和资产类型引流设置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionResourceTypeAutoEnableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionResourceTypeAutoEnableResponse
+        /// </returns>
+        public async Task<DescribeRegionResourceTypeAutoEnableResponse> DescribeRegionResourceTypeAutoEnableWithOptionsAsync(DescribeRegionResourceTypeAutoEnableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRegionResourceTypeAutoEnable",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRegionResourceTypeAutoEnableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询地域和资产类型引流设置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionResourceTypeAutoEnableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionResourceTypeAutoEnableResponse
+        /// </returns>
+        public DescribeRegionResourceTypeAutoEnableResponse DescribeRegionResourceTypeAutoEnable(DescribeRegionResourceTypeAutoEnableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeRegionResourceTypeAutoEnableWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询地域和资产类型引流设置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionResourceTypeAutoEnableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionResourceTypeAutoEnableResponse
+        /// </returns>
+        public async Task<DescribeRegionResourceTypeAutoEnableResponse> DescribeRegionResourceTypeAutoEnableAsync(DescribeRegionResourceTypeAutoEnableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeRegionResourceTypeAutoEnableWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询资产类型默认引流</para>
         /// </summary>
         /// 
@@ -38601,6 +38747,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypeAutoEnable))
             {
                 query["ResourceTypeAutoEnable"] = request.ResourceTypeAutoEnable;
@@ -38646,6 +38796,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypeAutoEnable))
             {
@@ -38877,6 +39031,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["NewRegionId"] = request.NewRegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Site))
+            {
+                query["Site"] = request.Site;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -38930,6 +39088,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewRegionId))
             {
                 query["NewRegionId"] = request.NewRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Site))
+            {
+                query["Site"] = request.Site;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -39797,6 +39959,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogVersion))
+            {
+                query["LogVersion"] = request.LogVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsRegionId))
+            {
+                query["SlsRegionId"] = request.SlsRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageTime))
             {
                 query["StorageTime"] = request.StorageTime;
@@ -39842,6 +40012,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogVersion))
+            {
+                query["LogVersion"] = request.LogVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsRegionId))
+            {
+                query["SlsRegionId"] = request.SlsRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageTime))
             {
@@ -41808,6 +41986,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpaddrList))
             {
                 query["IpaddrList"] = request.IpaddrList;
@@ -41815,6 +41997,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberUid))
+            {
+                query["MemberUid"] = request.MemberUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionList))
             {
@@ -41873,6 +42059,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpaddrList))
             {
                 query["IpaddrList"] = request.IpaddrList;
@@ -41880,6 +42070,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberUid))
+            {
+                query["MemberUid"] = request.MemberUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionList))
             {
@@ -42152,6 +42346,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpaddrList))
             {
                 query["IpaddrList"] = request.IpaddrList;
@@ -42159,6 +42357,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberUid))
+            {
+                query["MemberUid"] = request.MemberUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionList))
             {
@@ -42217,6 +42419,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpaddrList))
             {
                 query["IpaddrList"] = request.IpaddrList;
@@ -42224,6 +42430,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberUid))
+            {
+                query["MemberUid"] = request.MemberUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionList))
             {
@@ -42972,6 +43182,142 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetVpcFirewallRuleHitCountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启自动保护新入资产</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAutoProtectNewAssetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAutoProtectNewAssetsResponse
+        /// </returns>
+        public SetAutoProtectNewAssetsResponse SetAutoProtectNewAssetsWithOptions(SetAutoProtectNewAssetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoProtect))
+            {
+                query["AutoProtect"] = request.AutoProtect;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetAutoProtectNewAssets",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetAutoProtectNewAssetsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启自动保护新入资产</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAutoProtectNewAssetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAutoProtectNewAssetsResponse
+        /// </returns>
+        public async Task<SetAutoProtectNewAssetsResponse> SetAutoProtectNewAssetsWithOptionsAsync(SetAutoProtectNewAssetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoProtect))
+            {
+                query["AutoProtect"] = request.AutoProtect;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
+            {
+                query["SourceIp"] = request.SourceIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetAutoProtectNewAssets",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetAutoProtectNewAssetsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启自动保护新入资产</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAutoProtectNewAssetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAutoProtectNewAssetsResponse
+        /// </returns>
+        public SetAutoProtectNewAssetsResponse SetAutoProtectNewAssets(SetAutoProtectNewAssetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetAutoProtectNewAssetsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启自动保护新入资产</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAutoProtectNewAssetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAutoProtectNewAssetsResponse
+        /// </returns>
+        public async Task<SetAutoProtectNewAssetsResponse> SetAutoProtectNewAssetsAsync(SetAutoProtectNewAssetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetAutoProtectNewAssetsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

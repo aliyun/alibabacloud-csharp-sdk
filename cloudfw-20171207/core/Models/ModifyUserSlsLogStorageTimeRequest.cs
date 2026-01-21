@@ -20,6 +20,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("LogVersion")]
+        [Validation(Required=false)]
+        public int? LogVersion { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ap-southeast-1</para>
+        /// </summary>
+        [NameInMap("SlsRegionId")]
+        [Validation(Required=false)]
+        public string SlsRegionId { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class PutDisableFwSwitchRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>4</para>
+        /// </summary>
+        [NameInMap("IpVersion")]
+        [Validation(Required=false)]
+        public string IpVersion { get; set; }
+
+        /// <summary>
         /// <para>The IP addresses.</para>
         /// <remarks>
         /// <para> You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</para>
@@ -35,6 +43,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1234</para>
+        /// </summary>
+        [NameInMap("MemberUid")]
+        [Validation(Required=false)]
+        public string MemberUid { get; set; }
 
         /// <summary>
         /// <para>The regions.</para>

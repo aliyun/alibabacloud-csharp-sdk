@@ -41,6 +41,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string NewRegionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn</para>
+        /// </summary>
+        [NameInMap("Site")]
+        [Validation(Required=false)]
+        public string Site { get; set; }
+
     }
 
 }
