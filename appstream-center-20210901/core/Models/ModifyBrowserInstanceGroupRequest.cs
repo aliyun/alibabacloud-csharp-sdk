@@ -232,6 +232,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 [Validation(Required=false)]
                 public string ClipboardScope { get; set; }
 
+                [NameInMap("ClipboardSizeUnit")]
+                [Validation(Required=false)]
+                public string ClipboardSizeUnit { get; set; }
+
                 /// <summary>
                 /// <para>The maximum number of characters allowed when copying to the clipboard.</para>
                 /// 
