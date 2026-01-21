@@ -39,6 +39,162 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建指标平台</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateAgentPlatformRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentPlatformResponse
+        /// </returns>
+        public CreateAgentPlatformResponse CreateAgentPlatformWithOptions(CreateAgentPlatformRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAgentPlatformShrinkRequest request = new CreateAgentPlatformShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AiPlatformConfig))
+            {
+                request.AiPlatformConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AiPlatformConfig, "AiPlatformConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiPlatformConfigShrink))
+            {
+                query["AiPlatformConfig"] = request.AiPlatformConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgentPlatform",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgentPlatformResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建指标平台</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateAgentPlatformRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentPlatformResponse
+        /// </returns>
+        public async Task<CreateAgentPlatformResponse> CreateAgentPlatformWithOptionsAsync(CreateAgentPlatformRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAgentPlatformShrinkRequest request = new CreateAgentPlatformShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AiPlatformConfig))
+            {
+                request.AiPlatformConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AiPlatformConfig, "AiPlatformConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiPlatformConfigShrink))
+            {
+                query["AiPlatformConfig"] = request.AiPlatformConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgentPlatform",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgentPlatformResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建指标平台</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentPlatformRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentPlatformResponse
+        /// </returns>
+        public CreateAgentPlatformResponse CreateAgentPlatform(CreateAgentPlatformRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAgentPlatformWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建指标平台</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentPlatformRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentPlatformResponse
+        /// </returns>
+        public async Task<CreateAgentPlatformResponse> CreateAgentPlatformAsync(CreateAgentPlatformRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAgentPlatformWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建具身智能平台</para>
         /// </summary>
         /// 
