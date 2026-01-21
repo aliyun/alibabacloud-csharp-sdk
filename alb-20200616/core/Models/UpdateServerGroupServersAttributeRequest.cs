@@ -49,7 +49,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ServerGroupId { get; set; }
 
         /// <summary>
-        /// <para>The server groups. You can specify at most 40 server groups in each call.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Servers")]
@@ -57,8 +56,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<UpdateServerGroupServersAttributeRequestServers> Servers { get; set; }
         public class UpdateServerGroupServersAttributeRequestServers : TeaModel {
             /// <summary>
-            /// <para>The description of the backend server. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -67,11 +64,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The port that is used by the backend server. Valid values: <b>1</b> to <b>65535</b>.</para>
-            /// <remarks>
-            /// <para>You do not need to set this parameter if <b>ServerType</b> is set to <b>Fc</b>.</para>
-            /// </remarks>
-            /// 
             /// <b>Example:</b>
             /// <para>80</para>
             /// </summary>
@@ -80,23 +72,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The ID of the backend server.</para>
-            /// <list type="bullet">
-            /// <item><description>Specify the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance if you set <b>ServerType</b> to <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b>.</description></item>
-            /// <item><description>Specify an IP address if you set <b>ServerType</b> to <b>Ip</b>.</description></item>
-            /// <item><description>Specify the Alibaba Cloud Resource Name (ARN) of a Function Compute function if you set <b>ServerType</b> to <b>Fc</b>.</description></item>
-            /// </list>
-            /// 
             /// <b>Example:</b>
-            /// <para>i-bp1f9kdprbgy9uiu****</para>
+            /// <para>ecs-123</para>
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
             public string ServerId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the backend server.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>192.168.1.1</para>
             /// </summary>
@@ -105,29 +88,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerIp { get; set; }
 
             /// <summary>
-            /// <para>The type of the backend server. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>Ecs</b>: ECS instance</description></item>
-            /// <item><description><b>Eni</b>: ENI</description></item>
-            /// <item><description><b>Eci</b>: elastic container instance</description></item>
-            /// <item><description><b>Ip</b>: IP address</description></item>
-            /// <item><description><b>Fc</b>: Function Compute</description></item>
-            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Ecs</para>
+            /// <para>ecs</para>
             /// </summary>
             [NameInMap("ServerType")]
             [Validation(Required=false)]
             public string ServerType { get; set; }
 
             /// <summary>
-            /// <para>The weight of the backend server. Valid values: <b>0</b> to <b>100</b>. Default value: <b>100</b>. If the value is set to <b>0</b>, no requests are forwarded to the server. You can specify up to 40 servers in each call.</para>
-            /// <remarks>
-            /// <para>You do not need to set this parameter if <b>ServerType</b> is set to <b>Fc</b>.</para>
-            /// </remarks>
-            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>

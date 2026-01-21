@@ -10,7 +10,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ReplaceServersInServerGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The backend servers. You can specify at most 200 servers in each call.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AddedServers")]
@@ -18,8 +17,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<ReplaceServersInServerGroupRequestAddedServers> AddedServers { get; set; }
         public class ReplaceServersInServerGroupRequestAddedServers : TeaModel {
             /// <summary>
-            /// <para>The description of the backend server. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -28,8 +25,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The port used by the backend server in the server group. Valid values: <b>1</b> to <b>65535</b>. You can specify at most 200 servers in each call.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>80</para>
             /// </summary>
@@ -38,26 +33,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The ID of the backend server. You can specify at most 200 servers in each call.</para>
-            /// <list type="bullet">
-            /// <item><description>If the server group is of the <b>Instance</b> type, set ServerId to the ID of a resource of the <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b> type.</description></item>
-            /// <item><description>If the server group is of the <b>Ip</b> type, set ServerId to IP addresses.</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> You cannot perform this operation on a server group of the Function Compute type. You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the type of server groups.</para>
-            /// </remarks>
-            /// <para>This parameter is required.</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>i-bp1f9kdprbgy9uiu****</para>
+            /// <para>ecs-123</para>
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
             public string ServerId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the elastic network interface (ENI) in exclusive mode.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>192.168.1.1</para>
             /// </summary>
@@ -66,24 +49,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerIp { get; set; }
 
             /// <summary>
-            /// <para>The type of backend server. You can specify at most 200 servers in each call. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>Ecs</b>: Elastic Compute Service (ECS) instance</description></item>
-            /// <item><description><b>Eni</b>: ENI</description></item>
-            /// <item><description><b>Eci</b>: elastic container instance</description></item>
-            /// </list>
-            /// 
             /// <b>Example:</b>
-            /// <para>Ecs</para>
+            /// <para>ecs</para>
             /// </summary>
             [NameInMap("ServerType")]
             [Validation(Required=false)]
             public string ServerType { get; set; }
 
             /// <summary>
-            /// <para>The weight of the backend server. You can specify at most 200 servers in each call.</para>
-            /// <para>Valid values: <b>0</b> to <b>100</b>. Default value: <b>100</b>. If the value is set to <b>0</b>, no requests are forwarded to the server.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
