@@ -104,6 +104,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
                 }
 
+                [NameInMap("ExpirePeriod")]
+                [Validation(Required=false)]
+                public long? ExpirePeriod { get; set; }
+
                 /// <summary>
                 /// <para>The validity period of the rule. Unit: seconds. This parameter takes effect only when <b>action</b> of a rule is <b>block</b>. Access requests that match the rule are blocked within the specified validity period of the rule. The value <b>0</b> indicates that the whitelist takes effect all the time.</para>
                 /// 
