@@ -2,6 +2,10 @@
 - Support API ListSiteOriginClientCertificates.
 
 
+2026-01-21 Version: 2.39.0
+- Support API ListSiteOriginClientCertificates.
+
+
 2026-01-19 Version: 2.38.0
 - Support API DescribeDdosMaxBurstGbps.
 - Support API DescribeHttpDDoSAttackRules.
