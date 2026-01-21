@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetNetworkDomainRequest : TeaModel {
+        [NameInMap("CheckProxyState")]
+        [Validation(Required=false)]
+        public string CheckProxyState { get; set; }
+
         /// <summary>
         /// <para>The bastion host ID.</para>
         /// <remarks>

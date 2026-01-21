@@ -104,6 +104,22 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string DiskRedirection { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>Enable</para>
+                /// </summary>
+                [NameInMap("DiskRedirectionDownload")]
+                [Validation(Required=false)]
+                public string DiskRedirectionDownload { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Enable</para>
+                /// </summary>
+                [NameInMap("DiskRedirectionUpload")]
+                [Validation(Required=false)]
+                public string DiskRedirectionUpload { get; set; }
+
+                /// <summary>
                 /// <para>Specifies whether to enable keyboard operation recording. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>Enable</description></item>
@@ -129,6 +145,22 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public SetPolicyProtocolConfigRequestProtocolConfigSSH SSH { get; set; }
             public class SetPolicyProtocolConfigRequestProtocolConfigSSH : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Enable</para>
+                /// </summary>
+                [NameInMap("AllowDirectTcp")]
+                [Validation(Required=false)]
+                public string AllowDirectTcp { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Enable</para>
+                /// </summary>
+                [NameInMap("AllowTcpForwarding")]
+                [Validation(Required=false)]
+                public string AllowTcpForwarding { get; set; }
+
                 /// <summary>
                 /// <para>Specifies whether to enable remote command execution. Valid values:</para>
                 /// <list type="bullet">

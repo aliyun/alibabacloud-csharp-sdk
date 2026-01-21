@@ -2765,6 +2765,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return await CreateDatabaseAccountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建导出配置的任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateExportConfigJobRequest
         /// </param>
@@ -2806,6 +2811,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateExportConfigJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建导出配置的任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateExportConfigJobRequest
         /// </param>
@@ -2847,6 +2857,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateExportConfigJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建导出配置的任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateExportConfigJobRequest
         /// </param>
@@ -2860,6 +2875,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return CreateExportConfigJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建导出配置的任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateExportConfigJobRequest
         /// </param>
@@ -3745,6 +3765,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return await CreateNetworkDomainWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建运维审批工单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateOperationTicketRequest
         /// </param>
@@ -3814,6 +3839,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateOperationTicketResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建运维审批工单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateOperationTicketRequest
         /// </param>
@@ -3883,6 +3913,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<CreateOperationTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建运维审批工单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateOperationTicketRequest
         /// </param>
@@ -3896,6 +3931,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return CreateOperationTicketWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建运维审批工单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateOperationTicketRequest
         /// </param>
@@ -9109,6 +9149,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return await GetDatabaseAccountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取导出配置任务进度</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetExportConfigJobRequest
         /// </param>
@@ -9154,6 +9199,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetExportConfigJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取导出配置任务进度</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetExportConfigJobRequest
         /// </param>
@@ -9199,6 +9249,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetExportConfigJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取导出配置任务进度</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetExportConfigJobRequest
         /// </param>
@@ -9212,6 +9267,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return GetExportConfigJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取导出配置任务进度</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetExportConfigJobRequest
         /// </param>
@@ -10057,6 +10117,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return await GetInstanceLDAPAuthServerWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取堡垒机实例存储信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceStoreInfoRequest
         /// </param>
@@ -10098,6 +10163,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetInstanceStoreInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取堡垒机实例存储信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceStoreInfoRequest
         /// </param>
@@ -10139,6 +10209,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return TeaModel.ToObject<GetInstanceStoreInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取堡垒机实例存储信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceStoreInfoRequest
         /// </param>
@@ -10152,6 +10227,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return GetInstanceStoreInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取堡垒机实例存储信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceStoreInfoRequest
         /// </param>
@@ -10340,6 +10420,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckProxyState))
+            {
+                query["CheckProxyState"] = request.CheckProxyState;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -10390,6 +10474,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckProxyState))
+            {
+                query["CheckProxyState"] = request.CheckProxyState;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;

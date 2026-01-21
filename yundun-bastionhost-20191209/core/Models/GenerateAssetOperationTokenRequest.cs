@@ -128,6 +128,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// 
         /// <b>Example:</b>
         /// <para>SID</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
         /// </summary>
         [NameInMap("LoginAttribute")]
         [Validation(Required=false)]
