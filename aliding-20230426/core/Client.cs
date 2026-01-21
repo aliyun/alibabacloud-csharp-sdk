@@ -19395,6 +19395,1514 @@ namespace AlibabaCloud.SDK.Aliding20230426
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取钉钉会议信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetDingtalkMeetingInfoRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// GetDingtalkMeetingInfoHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingInfoResponse
+        /// </returns>
+        public GetDingtalkMeetingInfoResponse GetDingtalkMeetingInfoWithOptions(GetDingtalkMeetingInfoRequest tmpReq, GetDingtalkMeetingInfoHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDingtalkMeetingInfoShrinkRequest request = new GetDingtalkMeetingInfoShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetDingtalkMeetingInfoShrinkHeaders headers = new GetDingtalkMeetingInfoShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConferenceId))
+            {
+                body["conferenceId"] = request.ConferenceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                body["orgId"] = request.OrgId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDingtalkMeetingInfo",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/getDingtalkMeetingInfo",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDingtalkMeetingInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉会议信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetDingtalkMeetingInfoRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// GetDingtalkMeetingInfoHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingInfoResponse
+        /// </returns>
+        public async Task<GetDingtalkMeetingInfoResponse> GetDingtalkMeetingInfoWithOptionsAsync(GetDingtalkMeetingInfoRequest tmpReq, GetDingtalkMeetingInfoHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDingtalkMeetingInfoShrinkRequest request = new GetDingtalkMeetingInfoShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetDingtalkMeetingInfoShrinkHeaders headers = new GetDingtalkMeetingInfoShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConferenceId))
+            {
+                body["conferenceId"] = request.ConferenceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                body["orgId"] = request.OrgId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDingtalkMeetingInfo",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/getDingtalkMeetingInfo",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDingtalkMeetingInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉会议信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDingtalkMeetingInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingInfoResponse
+        /// </returns>
+        public GetDingtalkMeetingInfoResponse GetDingtalkMeetingInfo(GetDingtalkMeetingInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDingtalkMeetingInfoHeaders headers = new GetDingtalkMeetingInfoHeaders();
+            return GetDingtalkMeetingInfoWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉会议信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDingtalkMeetingInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingInfoResponse
+        /// </returns>
+        public async Task<GetDingtalkMeetingInfoResponse> GetDingtalkMeetingInfoAsync(GetDingtalkMeetingInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDingtalkMeetingInfoHeaders headers = new GetDingtalkMeetingInfoHeaders();
+            return await GetDingtalkMeetingInfoWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉会议列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetDingtalkMeetingListRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// GetDingtalkMeetingListHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingListResponse
+        /// </returns>
+        public GetDingtalkMeetingListResponse GetDingtalkMeetingListWithOptions(GetDingtalkMeetingListRequest tmpReq, GetDingtalkMeetingListHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDingtalkMeetingListShrinkRequest request = new GetDingtalkMeetingListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetDingtalkMeetingListShrinkHeaders headers = new GetDingtalkMeetingListShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                body["currentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                body["orgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomCode))
+            {
+                body["roomCode"] = request.RoomCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomName))
+            {
+                body["roomName"] = request.RoomName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkNo))
+            {
+                body["workNo"] = request.WorkNo;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDingtalkMeetingList",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/getDingtalkMeetingList",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDingtalkMeetingListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉会议列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetDingtalkMeetingListRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// GetDingtalkMeetingListHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingListResponse
+        /// </returns>
+        public async Task<GetDingtalkMeetingListResponse> GetDingtalkMeetingListWithOptionsAsync(GetDingtalkMeetingListRequest tmpReq, GetDingtalkMeetingListHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDingtalkMeetingListShrinkRequest request = new GetDingtalkMeetingListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetDingtalkMeetingListShrinkHeaders headers = new GetDingtalkMeetingListShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                body["currentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                body["orgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomCode))
+            {
+                body["roomCode"] = request.RoomCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomName))
+            {
+                body["roomName"] = request.RoomName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkNo))
+            {
+                body["workNo"] = request.WorkNo;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDingtalkMeetingList",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/getDingtalkMeetingList",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDingtalkMeetingListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉会议列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDingtalkMeetingListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingListResponse
+        /// </returns>
+        public GetDingtalkMeetingListResponse GetDingtalkMeetingList(GetDingtalkMeetingListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDingtalkMeetingListHeaders headers = new GetDingtalkMeetingListHeaders();
+            return GetDingtalkMeetingListWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉会议列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDingtalkMeetingListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingListResponse
+        /// </returns>
+        public async Task<GetDingtalkMeetingListResponse> GetDingtalkMeetingListAsync(GetDingtalkMeetingListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDingtalkMeetingListHeaders headers = new GetDingtalkMeetingListHeaders();
+            return await GetDingtalkMeetingListWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉会议成员事件</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetDingtalkMeetingMemberEventRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// GetDingtalkMeetingMemberEventHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingMemberEventResponse
+        /// </returns>
+        public GetDingtalkMeetingMemberEventResponse GetDingtalkMeetingMemberEventWithOptions(GetDingtalkMeetingMemberEventRequest tmpReq, GetDingtalkMeetingMemberEventHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDingtalkMeetingMemberEventShrinkRequest request = new GetDingtalkMeetingMemberEventShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetDingtalkMeetingMemberEventShrinkHeaders headers = new GetDingtalkMeetingMemberEventShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                body["beginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConferenceId))
+            {
+                body["conferenceId"] = request.ConferenceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                body["orgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkNo))
+            {
+                body["workNo"] = request.WorkNo;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDingtalkMeetingMemberEvent",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/getDingtalkMeetingMemberEvent",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDingtalkMeetingMemberEventResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉会议成员事件</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetDingtalkMeetingMemberEventRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// GetDingtalkMeetingMemberEventHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingMemberEventResponse
+        /// </returns>
+        public async Task<GetDingtalkMeetingMemberEventResponse> GetDingtalkMeetingMemberEventWithOptionsAsync(GetDingtalkMeetingMemberEventRequest tmpReq, GetDingtalkMeetingMemberEventHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDingtalkMeetingMemberEventShrinkRequest request = new GetDingtalkMeetingMemberEventShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetDingtalkMeetingMemberEventShrinkHeaders headers = new GetDingtalkMeetingMemberEventShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                body["beginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConferenceId))
+            {
+                body["conferenceId"] = request.ConferenceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                body["orgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkNo))
+            {
+                body["workNo"] = request.WorkNo;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDingtalkMeetingMemberEvent",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/getDingtalkMeetingMemberEvent",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDingtalkMeetingMemberEventResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉会议成员事件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDingtalkMeetingMemberEventRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingMemberEventResponse
+        /// </returns>
+        public GetDingtalkMeetingMemberEventResponse GetDingtalkMeetingMemberEvent(GetDingtalkMeetingMemberEventRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDingtalkMeetingMemberEventHeaders headers = new GetDingtalkMeetingMemberEventHeaders();
+            return GetDingtalkMeetingMemberEventWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉会议成员事件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDingtalkMeetingMemberEventRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingMemberEventResponse
+        /// </returns>
+        public async Task<GetDingtalkMeetingMemberEventResponse> GetDingtalkMeetingMemberEventAsync(GetDingtalkMeetingMemberEventRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDingtalkMeetingMemberEventHeaders headers = new GetDingtalkMeetingMemberEventHeaders();
+            return await GetDingtalkMeetingMemberEventWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉会议成员列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetDingtalkMeetingMemberListRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// GetDingtalkMeetingMemberListHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingMemberListResponse
+        /// </returns>
+        public GetDingtalkMeetingMemberListResponse GetDingtalkMeetingMemberListWithOptions(GetDingtalkMeetingMemberListRequest tmpReq, GetDingtalkMeetingMemberListHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDingtalkMeetingMemberListShrinkRequest request = new GetDingtalkMeetingMemberListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetDingtalkMeetingMemberListShrinkHeaders headers = new GetDingtalkMeetingMemberListShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterName))
+            {
+                body["clusterName"] = request.ClusterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConferenceId))
+            {
+                body["conferenceId"] = request.ConferenceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                body["currentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                body["orgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDingtalkMeetingMemberList",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/getDingtalkMeetingMemberList",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDingtalkMeetingMemberListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉会议成员列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetDingtalkMeetingMemberListRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// GetDingtalkMeetingMemberListHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingMemberListResponse
+        /// </returns>
+        public async Task<GetDingtalkMeetingMemberListResponse> GetDingtalkMeetingMemberListWithOptionsAsync(GetDingtalkMeetingMemberListRequest tmpReq, GetDingtalkMeetingMemberListHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDingtalkMeetingMemberListShrinkRequest request = new GetDingtalkMeetingMemberListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetDingtalkMeetingMemberListShrinkHeaders headers = new GetDingtalkMeetingMemberListShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterName))
+            {
+                body["clusterName"] = request.ClusterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConferenceId))
+            {
+                body["conferenceId"] = request.ConferenceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                body["currentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                body["orgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDingtalkMeetingMemberList",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/getDingtalkMeetingMemberList",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDingtalkMeetingMemberListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉会议成员列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDingtalkMeetingMemberListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingMemberListResponse
+        /// </returns>
+        public GetDingtalkMeetingMemberListResponse GetDingtalkMeetingMemberList(GetDingtalkMeetingMemberListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDingtalkMeetingMemberListHeaders headers = new GetDingtalkMeetingMemberListHeaders();
+            return GetDingtalkMeetingMemberListWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉会议成员列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDingtalkMeetingMemberListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingMemberListResponse
+        /// </returns>
+        public async Task<GetDingtalkMeetingMemberListResponse> GetDingtalkMeetingMemberListAsync(GetDingtalkMeetingMemberListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDingtalkMeetingMemberListHeaders headers = new GetDingtalkMeetingMemberListHeaders();
+            return await GetDingtalkMeetingMemberListWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取会议指标数据</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetDingtalkMeetingMetricDataRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// GetDingtalkMeetingMetricDataHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingMetricDataResponse
+        /// </returns>
+        public GetDingtalkMeetingMetricDataResponse GetDingtalkMeetingMetricDataWithOptions(GetDingtalkMeetingMetricDataRequest tmpReq, GetDingtalkMeetingMetricDataHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDingtalkMeetingMetricDataShrinkRequest request = new GetDingtalkMeetingMetricDataShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetDingtalkMeetingMetricDataShrinkHeaders headers = new GetDingtalkMeetingMetricDataShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                body["beginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConferenceId))
+            {
+                body["conferenceId"] = request.ConferenceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                body["orgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TypeName))
+            {
+                body["typeName"] = request.TypeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkNo))
+            {
+                body["workNo"] = request.WorkNo;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDingtalkMeetingMetricData",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/getDingtalkMeetingMetricData",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDingtalkMeetingMetricDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取会议指标数据</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetDingtalkMeetingMetricDataRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// GetDingtalkMeetingMetricDataHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingMetricDataResponse
+        /// </returns>
+        public async Task<GetDingtalkMeetingMetricDataResponse> GetDingtalkMeetingMetricDataWithOptionsAsync(GetDingtalkMeetingMetricDataRequest tmpReq, GetDingtalkMeetingMetricDataHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDingtalkMeetingMetricDataShrinkRequest request = new GetDingtalkMeetingMetricDataShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetDingtalkMeetingMetricDataShrinkHeaders headers = new GetDingtalkMeetingMetricDataShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                body["beginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConferenceId))
+            {
+                body["conferenceId"] = request.ConferenceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                body["orgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TypeName))
+            {
+                body["typeName"] = request.TypeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkNo))
+            {
+                body["workNo"] = request.WorkNo;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDingtalkMeetingMetricData",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/getDingtalkMeetingMetricData",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDingtalkMeetingMetricDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取会议指标数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDingtalkMeetingMetricDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingMetricDataResponse
+        /// </returns>
+        public GetDingtalkMeetingMetricDataResponse GetDingtalkMeetingMetricData(GetDingtalkMeetingMetricDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDingtalkMeetingMetricDataHeaders headers = new GetDingtalkMeetingMetricDataHeaders();
+            return GetDingtalkMeetingMetricDataWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取会议指标数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDingtalkMeetingMetricDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkMeetingMetricDataResponse
+        /// </returns>
+        public async Task<GetDingtalkMeetingMetricDataResponse> GetDingtalkMeetingMetricDataAsync(GetDingtalkMeetingMetricDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDingtalkMeetingMetricDataHeaders headers = new GetDingtalkMeetingMetricDataHeaders();
+            return await GetDingtalkMeetingMetricDataWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉投屏信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetDingtalkProjectionInfoRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// GetDingtalkProjectionInfoHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkProjectionInfoResponse
+        /// </returns>
+        public GetDingtalkProjectionInfoResponse GetDingtalkProjectionInfoWithOptions(GetDingtalkProjectionInfoRequest tmpReq, GetDingtalkProjectionInfoHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDingtalkProjectionInfoShrinkRequest request = new GetDingtalkProjectionInfoShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetDingtalkProjectionInfoShrinkHeaders headers = new GetDingtalkProjectionInfoShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Client))
+            {
+                body["client"] = request.Client;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTs))
+            {
+                body["endTs"] = request.EndTs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                body["orgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PubWorkNo))
+            {
+                body["pubWorkNo"] = request.PubWorkNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomId))
+            {
+                body["roomId"] = request.RoomId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTs))
+            {
+                body["startTs"] = request.StartTs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubUid))
+            {
+                body["subUid"] = request.SubUid;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDingtalkProjectionInfo",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/getDingtalkProjectionInfo",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDingtalkProjectionInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉投屏信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetDingtalkProjectionInfoRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// GetDingtalkProjectionInfoHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkProjectionInfoResponse
+        /// </returns>
+        public async Task<GetDingtalkProjectionInfoResponse> GetDingtalkProjectionInfoWithOptionsAsync(GetDingtalkProjectionInfoRequest tmpReq, GetDingtalkProjectionInfoHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDingtalkProjectionInfoShrinkRequest request = new GetDingtalkProjectionInfoShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetDingtalkProjectionInfoShrinkHeaders headers = new GetDingtalkProjectionInfoShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Client))
+            {
+                body["client"] = request.Client;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTs))
+            {
+                body["endTs"] = request.EndTs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                body["orgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PubWorkNo))
+            {
+                body["pubWorkNo"] = request.PubWorkNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoomId))
+            {
+                body["roomId"] = request.RoomId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTs))
+            {
+                body["startTs"] = request.StartTs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubUid))
+            {
+                body["subUid"] = request.SubUid;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDingtalkProjectionInfo",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/getDingtalkProjectionInfo",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDingtalkProjectionInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉投屏信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDingtalkProjectionInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkProjectionInfoResponse
+        /// </returns>
+        public GetDingtalkProjectionInfoResponse GetDingtalkProjectionInfo(GetDingtalkProjectionInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDingtalkProjectionInfoHeaders headers = new GetDingtalkProjectionInfoHeaders();
+            return GetDingtalkProjectionInfoWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉投屏信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDingtalkProjectionInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkProjectionInfoResponse
+        /// </returns>
+        public async Task<GetDingtalkProjectionInfoResponse> GetDingtalkProjectionInfoAsync(GetDingtalkProjectionInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDingtalkProjectionInfoHeaders headers = new GetDingtalkProjectionInfoHeaders();
+            return await GetDingtalkProjectionInfoWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉投屏列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetDingtalkProjectionListRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// GetDingtalkProjectionListHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkProjectionListResponse
+        /// </returns>
+        public GetDingtalkProjectionListResponse GetDingtalkProjectionListWithOptions(GetDingtalkProjectionListRequest tmpReq, GetDingtalkProjectionListHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDingtalkProjectionListShrinkRequest request = new GetDingtalkProjectionListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetDingtalkProjectionListShrinkHeaders headers = new GetDingtalkProjectionListShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                body["code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                body["currentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                body["orgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectorWorkNo))
+            {
+                body["projectorWorkNo"] = request.ProjectorWorkNo;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDingtalkProjectionList",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/getDingtalkProjectionList",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDingtalkProjectionListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉投屏列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetDingtalkProjectionListRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// GetDingtalkProjectionListHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkProjectionListResponse
+        /// </returns>
+        public async Task<GetDingtalkProjectionListResponse> GetDingtalkProjectionListWithOptionsAsync(GetDingtalkProjectionListRequest tmpReq, GetDingtalkProjectionListHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDingtalkProjectionListShrinkRequest request = new GetDingtalkProjectionListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetDingtalkProjectionListShrinkHeaders headers = new GetDingtalkProjectionListShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                body["code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                body["currentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                body["orgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectorWorkNo))
+            {
+                body["projectorWorkNo"] = request.ProjectorWorkNo;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDingtalkProjectionList",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/ysp/getDingtalkProjectionList",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDingtalkProjectionListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉投屏列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDingtalkProjectionListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkProjectionListResponse
+        /// </returns>
+        public GetDingtalkProjectionListResponse GetDingtalkProjectionList(GetDingtalkProjectionListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDingtalkProjectionListHeaders headers = new GetDingtalkProjectionListHeaders();
+            return GetDingtalkProjectionListWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取钉钉投屏列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDingtalkProjectionListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDingtalkProjectionListResponse
+        /// </returns>
+        public async Task<GetDingtalkProjectionListResponse> GetDingtalkProjectionListAsync(GetDingtalkProjectionListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDingtalkProjectionListHeaders headers = new GetDingtalkProjectionListHeaders();
+            return await GetDingtalkProjectionListWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>委托权限获取文档内容</para>
         /// </summary>
         /// 
@@ -40651,6 +42159,160 @@ namespace AlibabaCloud.SDK.Aliding20230426
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             QueryReportDetailHeaders headers = new QueryReportDetailHeaders();
             return await QueryReportDetailWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询钉钉机器人退订工号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryRobotUnsubscriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryRobotUnsubscriptionResponse
+        /// </returns>
+        public QueryRobotUnsubscriptionResponse QueryRobotUnsubscriptionWithOptions(QueryRobotUnsubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RobotCode))
+            {
+                body["RobotCode"] = request.RobotCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                body["SceneCode"] = request.SceneCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryRobotUnsubscription",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/aliding/v1/robot/queryRobotUnsubscription",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryRobotUnsubscriptionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询钉钉机器人退订工号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryRobotUnsubscriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryRobotUnsubscriptionResponse
+        /// </returns>
+        public async Task<QueryRobotUnsubscriptionResponse> QueryRobotUnsubscriptionWithOptionsAsync(QueryRobotUnsubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RobotCode))
+            {
+                body["RobotCode"] = request.RobotCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                body["SceneCode"] = request.SceneCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryRobotUnsubscription",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/aliding/v1/robot/queryRobotUnsubscription",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryRobotUnsubscriptionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询钉钉机器人退订工号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryRobotUnsubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryRobotUnsubscriptionResponse
+        /// </returns>
+        public QueryRobotUnsubscriptionResponse QueryRobotUnsubscription(QueryRobotUnsubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return QueryRobotUnsubscriptionWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询钉钉机器人退订工号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryRobotUnsubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryRobotUnsubscriptionResponse
+        /// </returns>
+        public async Task<QueryRobotUnsubscriptionResponse> QueryRobotUnsubscriptionAsync(QueryRobotUnsubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await QueryRobotUnsubscriptionWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

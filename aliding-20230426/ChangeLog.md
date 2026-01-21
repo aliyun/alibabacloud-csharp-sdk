@@ -1,3 +1,15 @@
+2026-01-21 Version: 2.47.0
+- Support API GetDingtalkMeetingInfo.
+- Support API GetDingtalkMeetingList.
+- Support API GetDingtalkMeetingMemberEvent.
+- Support API GetDingtalkMeetingMemberList.
+- Support API GetDingtalkMeetingMetricData.
+- Support API GetDingtalkProjectionInfo.
+- Support API GetDingtalkProjectionList.
+- Support API QueryRobotUnsubscription.
+- Update API CreateEvent: add response parameters Body.encryptedId.
+
+
 2025-12-23 Version: 2.46.2
 - Update API CreateThread: add request parameters body.clientEnum.
 - Update API InvokeAssistant: add request parameters body.clientEnum.

@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("encryptedId")]
+        [Validation(Required=false)]
+        public string EncryptedId { get; set; }
+
         [NameInMap("end")]
         [Validation(Required=false)]
         public CreateEventResponseBodyEnd End { get; set; }
