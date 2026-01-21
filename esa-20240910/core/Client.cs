@@ -37444,6 +37444,118 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询站点回源客户端证书列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSiteOriginClientCertificatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSiteOriginClientCertificatesResponse
+        /// </returns>
+        public ListSiteOriginClientCertificatesResponse ListSiteOriginClientCertificatesWithOptions(ListSiteOriginClientCertificatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSiteOriginClientCertificates",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSiteOriginClientCertificatesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点回源客户端证书列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSiteOriginClientCertificatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSiteOriginClientCertificatesResponse
+        /// </returns>
+        public async Task<ListSiteOriginClientCertificatesResponse> ListSiteOriginClientCertificatesWithOptionsAsync(ListSiteOriginClientCertificatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSiteOriginClientCertificates",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSiteOriginClientCertificatesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点回源客户端证书列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSiteOriginClientCertificatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSiteOriginClientCertificatesResponse
+        /// </returns>
+        public ListSiteOriginClientCertificatesResponse ListSiteOriginClientCertificates(ListSiteOriginClientCertificatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListSiteOriginClientCertificatesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点回源客户端证书列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSiteOriginClientCertificatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSiteOriginClientCertificatesResponse
+        /// </returns>
+        public async Task<ListSiteOriginClientCertificatesResponse> ListSiteOriginClientCertificatesAsync(ListSiteOriginClientCertificatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListSiteOriginClientCertificatesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the edge function routes for a website.</para>
         /// </summary>
         /// 
