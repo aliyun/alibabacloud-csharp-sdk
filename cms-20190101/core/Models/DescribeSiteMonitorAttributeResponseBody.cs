@@ -1036,6 +1036,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? Port { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>cert.pem</para>
+                /// </summary>
+                [NameInMap("private_crt_file_name")]
+                [Validation(Required=false)]
+                public string PrivateCrtFileName { get; set; }
+
+                /// <summary>
                 /// <para>The protocol that is used to send the request.</para>
                 /// 
                 /// <b>Example:</b>
@@ -1305,6 +1313,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public List<string> TrafficHijackElementWhitelist { get; set; }
 
                 }
+
+                [NameInMap("use_private_crt")]
+                [Validation(Required=false)]
+                public bool? UsePrivateCrt { get; set; }
 
                 /// <summary>
                 /// <para>The username of the FTP, SMTP, or POP3 protocol.</para>
