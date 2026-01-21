@@ -101,6 +101,14 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string KeepAlive { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("MinCount")]
+        [Validation(Required=false)]
+        public int? MinCount { get; set; }
+
+        /// <summary>
         /// <para>The name of the queue for which you want to create compute nodes.</para>
         /// 
         /// <b>Example:</b>

@@ -1035,6 +1035,10 @@ namespace AlibabaCloud.SDK.EHPC20240730
             {
                 query["KeepAlive"] = request.KeepAlive;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinCount))
+            {
+                query["MinCount"] = request.MinCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
             {
                 query["QueueName"] = request.QueueName;
@@ -1139,6 +1143,10 @@ namespace AlibabaCloud.SDK.EHPC20240730
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeepAlive))
             {
                 query["KeepAlive"] = request.KeepAlive;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinCount))
+            {
+                query["MinCount"] = request.MinCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
             {
