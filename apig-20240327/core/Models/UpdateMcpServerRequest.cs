@@ -216,6 +216,20 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public HttpRouteMatch Match { get; set; }
 
+        [NameInMap("mcpServerConfig")]
+        [Validation(Required=false)]
+        public UpdateMcpServerRequestMcpServerConfig McpServerConfig { get; set; }
+        public class UpdateMcpServerRequestMcpServerConfig : TeaModel {
+            [NameInMap("mcpServerSpec")]
+            [Validation(Required=false)]
+            public string McpServerSpec { get; set; }
+
+            [NameInMap("swaggerConfig")]
+            [Validation(Required=false)]
+            public string SwaggerConfig { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Specifies if MCP observability is enabled. Default value: false.</para>
         /// 

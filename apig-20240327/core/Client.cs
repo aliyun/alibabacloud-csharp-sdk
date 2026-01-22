@@ -2409,6 +2409,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["match"] = request.Match;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpServerConfig))
+            {
+                body["mcpServerConfig"] = request.McpServerConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpStatisticsEnable))
             {
                 body["mcpStatisticsEnable"] = request.McpStatisticsEnable;
@@ -2502,6 +2506,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Match))
             {
                 body["match"] = request.Match;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpServerConfig))
+            {
+                body["mcpServerConfig"] = request.McpServerConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpStatisticsEnable))
             {
@@ -14650,6 +14658,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["match"] = request.Match;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpServerConfig))
+            {
+                body["mcpServerConfig"] = request.McpServerConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpStatisticsEnable))
             {
                 body["mcpStatisticsEnable"] = request.McpStatisticsEnable;
@@ -14740,6 +14752,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Match))
             {
                 body["match"] = request.Match;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpServerConfig))
+            {
+                body["mcpServerConfig"] = request.McpServerConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpStatisticsEnable))
             {
