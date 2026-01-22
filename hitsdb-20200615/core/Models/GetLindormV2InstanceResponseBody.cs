@@ -57,6 +57,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public bool? EnableCompute { get; set; }
 
+        [NameInMap("EnableFS")]
+        [Validation(Required=false)]
+        public bool? EnableFS { get; set; }
+
+        [NameInMap("EnableStoreTDE")]
+        [Validation(Required=false)]
+        public bool? EnableStoreTDE { get; set; }
+
         [NameInMap("EngineList")]
         [Validation(Required=false)]
         public List<GetLindormV2InstanceResponseBodyEngineList> EngineList { get; set; }
