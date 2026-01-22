@@ -1,3 +1,6 @@
+2026-01-22 Version: 2.47.1
+- Generated csharp 2023-04-26 for aliding.
+
 2026-01-21 Version: 2.47.0
 - Support API GetDingtalkMeetingInfo.
 - Support API GetDingtalkMeetingList.
