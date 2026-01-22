@@ -1881,6 +1881,10 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["AndroidHonorTargetUserType"] = request.AndroidHonorTargetUserType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidHuaweiBusinessType))
+            {
+                query["AndroidHuaweiBusinessType"] = request.AndroidHuaweiBusinessType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidHuaweiLiveNotificationPayload))
             {
                 query["AndroidHuaweiLiveNotificationPayload"] = request.AndroidHuaweiLiveNotificationPayload;
@@ -2388,6 +2392,10 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidHonorTargetUserType))
             {
                 query["AndroidHonorTargetUserType"] = request.AndroidHonorTargetUserType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidHuaweiBusinessType))
+            {
+                query["AndroidHuaweiBusinessType"] = request.AndroidHuaweiBusinessType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidHuaweiLiveNotificationPayload))
             {

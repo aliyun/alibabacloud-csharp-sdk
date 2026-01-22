@@ -86,6 +86,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public int? AndroidHonorTargetUserType { get; set; }
 
+            [NameInMap("AndroidHuaweiBusinessType")]
+            [Validation(Required=false)]
+            public int? AndroidHuaweiBusinessType { get; set; }
+
             [NameInMap("AndroidHuaweiLiveNotificationPayload")]
             [Validation(Required=false)]
             public string AndroidHuaweiLiveNotificationPayload { get; set; }
@@ -277,16 +281,22 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public int? AndroidOppoIntentEnv { get; set; }
 
+            /// <term><b>Obsolete</b></term>
             [NameInMap("AndroidOppoPrivateContentParameters")]
             [Validation(Required=false)]
+            [Obsolete]
             public Dictionary<string, string> AndroidOppoPrivateContentParameters { get; set; }
 
+            /// <term><b>Obsolete</b></term>
             [NameInMap("AndroidOppoPrivateMsgTemplateId")]
             [Validation(Required=false)]
+            [Obsolete]
             public string AndroidOppoPrivateMsgTemplateId { get; set; }
 
+            /// <term><b>Obsolete</b></term>
             [NameInMap("AndroidOppoPrivateTitleParameters")]
             [Validation(Required=false)]
+            [Obsolete]
             public Dictionary<string, string> AndroidOppoPrivateTitleParameters { get; set; }
 
             /// <summary>

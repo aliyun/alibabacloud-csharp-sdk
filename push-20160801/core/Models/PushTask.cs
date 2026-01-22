@@ -127,6 +127,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
                     [Validation(Required=false)]
                     public PushTaskNotificationAndroidOptionsHuawei Huawei { get; set; }
                     public class PushTaskNotificationAndroidOptionsHuawei : TeaModel {
+                        [NameInMap("BusinessType")]
+                        [Validation(Required=false)]
+                        public int? BusinessType { get; set; }
+
                         [NameInMap("Category")]
                         [Validation(Required=false)]
                         public string Category { get; set; }

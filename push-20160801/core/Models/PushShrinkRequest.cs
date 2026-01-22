@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [Validation(Required=false)]
         public int? AndroidHonorTargetUserType { get; set; }
 
+        [NameInMap("AndroidHuaweiBusinessType")]
+        [Validation(Required=false)]
+        public int? AndroidHuaweiBusinessType { get; set; }
+
         [NameInMap("AndroidHuaweiLiveNotificationPayload")]
         [Validation(Required=false)]
         public string AndroidHuaweiLiveNotificationPayload { get; set; }
