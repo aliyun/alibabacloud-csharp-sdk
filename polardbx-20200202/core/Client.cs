@@ -7908,6 +7908,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             {
                 query["DbVersion"] = request.DbVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -7981,6 +7985,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbVersion))
             {
                 query["DbVersion"] = request.DbVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {

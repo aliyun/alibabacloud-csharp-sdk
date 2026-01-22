@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string DbVersion { get; set; }
 
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>dinga93c84f4d***</para>
