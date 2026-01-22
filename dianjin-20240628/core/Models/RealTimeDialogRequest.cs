@@ -88,6 +88,14 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             public int? End { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>1983746378992743</para>
+            /// </summary>
+            [NameInMap("intentionCode")]
+            [Validation(Required=false)]
+            public string IntentionCode { get; set; }
+
+            /// <summary>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
