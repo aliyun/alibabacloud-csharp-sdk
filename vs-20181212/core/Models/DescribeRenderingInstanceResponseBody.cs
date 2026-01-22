@@ -137,6 +137,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string Hostname { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>PostPaid</para>
+        /// </summary>
+        [NameInMap("InstanceChargeType")]
+        [Validation(Required=false)]
+        public string InstanceChargeType { get; set; }
+
         [NameInMap("InternalIp")]
         [Validation(Required=false)]
         public string InternalIp { get; set; }
