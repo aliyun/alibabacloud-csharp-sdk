@@ -15,6 +15,30 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public class QueryCostCenterResourceResponseBodyCostCenterResourceDtoList : TeaModel {
             /// <summary>
             /// <b>Example:</b>
+            /// <para>AUTO_ALLOCATE</para>
+            /// </summary>
+            [NameInMap("AddStrategy")]
+            [Validation(Required=false)]
+            public string AddStrategy { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>自动分配</para>
+            /// </summary>
+            [NameInMap("AddStrategyName")]
+            [Validation(Required=false)]
+            public string AddStrategyName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
+            [NameInMap("ApplicablePeriodNum")]
+            [Validation(Required=false)]
+            public long? ApplicablePeriodNum { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
             [NameInMap("ApportionItemCode")]
@@ -81,9 +105,33 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             [Validation(Required=false)]
             public string CostCenterUpdateTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
+            [NameInMap("FinanceUnitRuleVersion")]
+            [Validation(Required=false)]
+            public long? FinanceUnitRuleVersion { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ecs</para>
+            /// </summary>
+            [NameInMap("MasterCommodityCode")]
+            [Validation(Required=false)]
+            public string MasterCommodityCode { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>i-xxxxx</para>
+            /// </summary>
+            [NameInMap("MasterInstanceId")]
+            [Validation(Required=false)]
+            public string MasterInstanceId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -93,6 +141,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             [Validation(Required=false)]
             public long? OwnerAccountId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>XXX公司</para>
+            /// </summary>
             [NameInMap("OwnerAccountName")]
             [Validation(Required=false)]
             public string OwnerAccountName { get; set; }
@@ -116,6 +168,30 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             [NameInMap("PipName")]
             [Validation(Required=false)]
             public string PipName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>202509</para>
+            /// </summary>
+            [NameInMap("RecentBillingMonth")]
+            [Validation(Required=false)]
+            public long? RecentBillingMonth { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>上海</para>
+            /// </summary>
+            [NameInMap("RegionName")]
+            [Validation(Required=false)]
+            public string RegionName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-shanghai</para>
+            /// </summary>
+            [NameInMap("RegionNo")]
+            [Validation(Required=false)]
+            public string RegionNo { get; set; }
 
             [NameInMap("ResourceGroup")]
             [Validation(Required=false)]
@@ -192,6 +268,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             [NameInMap("RootCostCenterId")]
             [Validation(Required=false)]
             public long? RootCostCenterId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>202509</para>
+            /// </summary>
+            [NameInMap("StartBillingMonth")]
+            [Validation(Required=false)]
+            public long? StartBillingMonth { get; set; }
 
         }
 

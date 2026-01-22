@@ -89,6 +89,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>2026-01-01 00:00:00</para>
+            /// </summary>
+            [NameInMap("GmtModified")]
+            [Validation(Required=false)]
+            public string GmtModified { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>1529600453335198</para>
             /// </summary>
             [NameInMap("OwnerAccountId")]
