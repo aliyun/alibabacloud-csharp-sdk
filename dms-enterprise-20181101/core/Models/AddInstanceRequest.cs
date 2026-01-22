@@ -279,6 +279,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public int? QueryTimeout { get; set; }
 
+        [NameInMap("RoleArn")]
+        [Validation(Required=false)]
+        public string RoleArn { get; set; }
+
         /// <summary>
         /// <para>The name of the security rule set for the database instance. This parameter is required if Security Collaboration is enabled. You can call the<a href="https://help.aliyun.com/document_detail/465940.html">ListStandardGroups</a> or <a href="https://help.aliyun.com/document_detail/465826.html">GetInstance</a> operation to obtain the name of the security rule set from GroupName.</para>
         /// </summary>

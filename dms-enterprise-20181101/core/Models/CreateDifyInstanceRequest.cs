@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string AdbpgInstanceMode { get; set; }
 
+        [NameInMap("AutoRenew")]
+        [Validation(Required=false)]
+        public bool? AutoRenew { get; set; }
+
         [NameInMap("BackupVSwitchId")]
         [Validation(Required=false)]
         public string BackupVSwitchId { get; set; }

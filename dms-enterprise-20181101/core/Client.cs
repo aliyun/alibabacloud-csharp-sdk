@@ -465,6 +465,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["QueryTimeout"] = request.QueryTimeout;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleArn))
+            {
+                query["RoleArn"] = request.RoleArn;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SafeRule))
             {
                 query["SafeRule"] = request.SafeRule;
@@ -623,6 +627,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryTimeout))
             {
                 query["QueryTimeout"] = request.QueryTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleArn))
+            {
+                query["RoleArn"] = request.RoleArn;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SafeRule))
             {
@@ -3379,12 +3387,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>带有DMS脱敏能力的聊天API接口</para>
+        /// <para>Chat API with DMS Data Masking capabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>带有DMS脱敏能力的聊天API接口</para>
+        /// <para>Chat API with DMS Data Masking capabilities.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3538,12 +3546,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>带有DMS脱敏能力的聊天API接口</para>
+        /// <para>Chat API with DMS Data Masking capabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>带有DMS脱敏能力的聊天API接口</para>
+        /// <para>Chat API with DMS Data Masking capabilities.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3697,12 +3705,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>带有DMS脱敏能力的聊天API接口</para>
+        /// <para>Chat API with DMS Data Masking capabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>带有DMS脱敏能力的聊天API接口</para>
+        /// <para>Chat API with DMS Data Masking capabilities.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3720,12 +3728,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>带有DMS脱敏能力的聊天API接口</para>
+        /// <para>Chat API with DMS Data Masking capabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>带有DMS脱敏能力的聊天API接口</para>
+        /// <para>Chat API with DMS Data Masking capabilities.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3743,12 +3751,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>带有DMS脱敏能力的聊天SSE API接口</para>
+        /// <para>Chat SSE API with DMS Data Masking capability.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>带有DMS脱敏能力的聊天SSE API接口</para>
+        /// <para>Chat SSE API with DMS Data Masking capability.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3922,12 +3930,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>带有DMS脱敏能力的聊天SSE API接口</para>
+        /// <para>Chat SSE API with DMS Data Masking capability.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>带有DMS脱敏能力的聊天SSE API接口</para>
+        /// <para>Chat SSE API with DMS Data Masking capability.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4101,12 +4109,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>带有DMS脱敏能力的聊天SSE API接口</para>
+        /// <para>Chat SSE API with DMS Data Masking capability.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>带有DMS脱敏能力的聊天SSE API接口</para>
+        /// <para>Chat SSE API with DMS Data Masking capability.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4124,12 +4132,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>带有DMS脱敏能力的聊天SSE API接口</para>
+        /// <para>Chat SSE API with DMS Data Masking capability.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>带有DMS脱敏能力的聊天SSE API接口</para>
+        /// <para>Chat SSE API with DMS Data Masking capability.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4147,8 +4155,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量校验是否有表访问权限</para>
+        /// <para>Batch verify table permissions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Verify the permissions on multiple tables at a time.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CheckBatchTableAccessPermissionRequest
@@ -4211,8 +4224,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量校验是否有表访问权限</para>
+        /// <para>Batch verify table permissions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Verify the permissions on multiple tables at a time.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CheckBatchTableAccessPermissionRequest
@@ -4275,8 +4293,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量校验是否有表访问权限</para>
+        /// <para>Batch verify table permissions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Verify the permissions on multiple tables at a time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CheckBatchTableAccessPermissionRequest
@@ -4293,8 +4316,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量校验是否有表访问权限</para>
+        /// <para>Batch verify table permissions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Verify the permissions on multiple tables at a time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CheckBatchTableAccessPermissionRequest
@@ -7042,6 +7070,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["AdbpgInstanceMode"] = request.AdbpgInstanceMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupVSwitchId))
             {
                 query["BackupVSwitchId"] = request.BackupVSwitchId;
@@ -7329,6 +7361,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdbpgInstanceMode))
             {
                 query["AdbpgInstanceMode"] = request.AdbpgInstanceMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupVSwitchId))
             {
