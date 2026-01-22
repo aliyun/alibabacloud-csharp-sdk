@@ -8165,6 +8165,192 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新索引任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIndexResponse
+        /// </returns>
+        public UpdateIndexResponse UpdateIndexWithOptions(string WorkspaceId, UpdateIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DenseSimilarityTopK))
+            {
+                query["DenseSimilarityTopK"] = request.DenseSimilarityTopK;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineCommercialCu))
+            {
+                query["PipelineCommercialCu"] = request.PipelineCommercialCu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineCommercialType))
+            {
+                query["PipelineCommercialType"] = request.PipelineCommercialType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankMinScore))
+            {
+                query["RerankMinScore"] = request.RerankMinScore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SparseSimilarityTopK))
+            {
+                query["SparseSimilarityTopK"] = request.SparseSimilarityTopK;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateIndex",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/index/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateIndexResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新索引任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIndexResponse
+        /// </returns>
+        public async Task<UpdateIndexResponse> UpdateIndexWithOptionsAsync(string WorkspaceId, UpdateIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DenseSimilarityTopK))
+            {
+                query["DenseSimilarityTopK"] = request.DenseSimilarityTopK;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineCommercialCu))
+            {
+                query["PipelineCommercialCu"] = request.PipelineCommercialCu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineCommercialType))
+            {
+                query["PipelineCommercialType"] = request.PipelineCommercialType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankMinScore))
+            {
+                query["RerankMinScore"] = request.RerankMinScore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SparseSimilarityTopK))
+            {
+                query["SparseSimilarityTopK"] = request.SparseSimilarityTopK;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateIndex",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/index/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateIndexResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新索引任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIndexResponse
+        /// </returns>
+        public UpdateIndexResponse UpdateIndex(string WorkspaceId, UpdateIndexRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateIndexWithOptions(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新索引任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIndexResponse
+        /// </returns>
+        public async Task<UpdateIndexResponse> UpdateIndexAsync(string WorkspaceId, UpdateIndexRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateIndexWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>更新memory</para>
         /// </summary>
         /// 
