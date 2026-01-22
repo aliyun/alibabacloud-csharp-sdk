@@ -109,6 +109,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>age&gt;20</para>
+            /// </summary>
+            [NameInMap("ItemConditionExpression")]
+            [Validation(Required=false)]
+            public string ItemConditionExpression { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>item_embedding</para>
             /// </summary>
             [NameInMap("ItemVectorField")]

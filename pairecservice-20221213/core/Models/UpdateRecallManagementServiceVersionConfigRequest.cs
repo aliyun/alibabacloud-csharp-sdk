@@ -67,6 +67,22 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public string ExtendedConfig { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>[&quot;type&quot;:&quot;equal&quot;]</para>
+            /// </summary>
+            [NameInMap("ItemConditionArray")]
+            [Validation(Required=false)]
+            public string ItemConditionArray { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>age&gt;20</para>
+            /// </summary>
+            [NameInMap("ItemConditionExpression")]
+            [Validation(Required=false)]
+            public string ItemConditionExpression { get; set; }
+
             [NameInMap("ItemVectorField")]
             [Validation(Required=false)]
             public string ItemVectorField { get; set; }
