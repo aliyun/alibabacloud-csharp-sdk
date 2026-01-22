@@ -549,5 +549,301 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             return await DescribeEmbodiedAIPlatformsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询具身智能平台资源用量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmbodiedAIPlatformResourceUsageInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmbodiedAIPlatformResourceUsageInfoResponse
+        /// </returns>
+        public GetEmbodiedAIPlatformResourceUsageInfoResponse GetEmbodiedAIPlatformResourceUsageInfoWithOptions(GetEmbodiedAIPlatformResourceUsageInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformName))
+            {
+                query["PlatformName"] = request.PlatformName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEmbodiedAIPlatformResourceUsageInfo",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEmbodiedAIPlatformResourceUsageInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询具身智能平台资源用量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmbodiedAIPlatformResourceUsageInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmbodiedAIPlatformResourceUsageInfoResponse
+        /// </returns>
+        public async Task<GetEmbodiedAIPlatformResourceUsageInfoResponse> GetEmbodiedAIPlatformResourceUsageInfoWithOptionsAsync(GetEmbodiedAIPlatformResourceUsageInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformName))
+            {
+                query["PlatformName"] = request.PlatformName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEmbodiedAIPlatformResourceUsageInfo",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEmbodiedAIPlatformResourceUsageInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询具身智能平台资源用量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmbodiedAIPlatformResourceUsageInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmbodiedAIPlatformResourceUsageInfoResponse
+        /// </returns>
+        public GetEmbodiedAIPlatformResourceUsageInfoResponse GetEmbodiedAIPlatformResourceUsageInfo(GetEmbodiedAIPlatformResourceUsageInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetEmbodiedAIPlatformResourceUsageInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询具身智能平台资源用量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmbodiedAIPlatformResourceUsageInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmbodiedAIPlatformResourceUsageInfoResponse
+        /// </returns>
+        public async Task<GetEmbodiedAIPlatformResourceUsageInfoResponse> GetEmbodiedAIPlatformResourceUsageInfoAsync(GetEmbodiedAIPlatformResourceUsageInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetEmbodiedAIPlatformResourceUsageInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重置具身智能平台密码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetEmbodiedAIPlatformPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetEmbodiedAIPlatformPasswordResponse
+        /// </returns>
+        public ResetEmbodiedAIPlatformPasswordResponse ResetEmbodiedAIPlatformPasswordWithOptions(ResetEmbodiedAIPlatformPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformName))
+            {
+                query["PlatformName"] = request.PlatformName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetEmbodiedAIPlatformPassword",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetEmbodiedAIPlatformPasswordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重置具身智能平台密码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetEmbodiedAIPlatformPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetEmbodiedAIPlatformPasswordResponse
+        /// </returns>
+        public async Task<ResetEmbodiedAIPlatformPasswordResponse> ResetEmbodiedAIPlatformPasswordWithOptionsAsync(ResetEmbodiedAIPlatformPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformName))
+            {
+                query["PlatformName"] = request.PlatformName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetEmbodiedAIPlatformPassword",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetEmbodiedAIPlatformPasswordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重置具身智能平台密码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetEmbodiedAIPlatformPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetEmbodiedAIPlatformPasswordResponse
+        /// </returns>
+        public ResetEmbodiedAIPlatformPasswordResponse ResetEmbodiedAIPlatformPassword(ResetEmbodiedAIPlatformPasswordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ResetEmbodiedAIPlatformPasswordWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重置具身智能平台密码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetEmbodiedAIPlatformPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetEmbodiedAIPlatformPasswordResponse
+        /// </returns>
+        public async Task<ResetEmbodiedAIPlatformPasswordResponse> ResetEmbodiedAIPlatformPasswordAsync(ResetEmbodiedAIPlatformPasswordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ResetEmbodiedAIPlatformPasswordWithOptionsAsync(request, runtime);
+        }
+
     }
 }
