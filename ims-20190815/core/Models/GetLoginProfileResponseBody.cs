@@ -64,6 +64,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public bool? PasswordResetRequired { get; set; }
 
+            [NameInMap("PasswordStatus")]
+            [Validation(Required=false)]
+            public string PasswordStatus { get; set; }
+
             /// <summary>
             /// <para>Indicates whether console logon is enabled. Valid values:</para>
             /// <list type="bullet">

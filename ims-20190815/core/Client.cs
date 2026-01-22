@@ -10614,6 +10614,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             {
                 query["HardExpire"] = request.HardExpire;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitialPasswordAge))
+            {
+                query["InitialPasswordAge"] = request.InitialPasswordAge;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxLoginAttemps))
             {
                 query["MaxLoginAttemps"] = request.MaxLoginAttemps;
@@ -10695,6 +10699,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HardExpire))
             {
                 query["HardExpire"] = request.HardExpire;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitialPasswordAge))
+            {
+                query["InitialPasswordAge"] = request.InitialPasswordAge;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxLoginAttemps))
             {
@@ -10858,6 +10866,14 @@ namespace AlibabaCloud.SDK.Ims20190815
             {
                 query["MFAOperationForLogin"] = request.MFAOperationForLogin;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxIdleDaysForAccessKeys))
+            {
+                query["MaxIdleDaysForAccessKeys"] = request.MaxIdleDaysForAccessKeys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxIdleDaysForUsers))
+            {
+                query["MaxIdleDaysForUsers"] = request.MaxIdleDaysForUsers;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationForRiskLogin))
             {
                 query["OperationForRiskLogin"] = request.OperationForRiskLogin;
@@ -10951,6 +10967,14 @@ namespace AlibabaCloud.SDK.Ims20190815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MFAOperationForLogin))
             {
                 query["MFAOperationForLogin"] = request.MFAOperationForLogin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxIdleDaysForAccessKeys))
+            {
+                query["MaxIdleDaysForAccessKeys"] = request.MaxIdleDaysForAccessKeys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxIdleDaysForUsers))
+            {
+                query["MaxIdleDaysForUsers"] = request.MaxIdleDaysForUsers;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationForRiskLogin))
             {

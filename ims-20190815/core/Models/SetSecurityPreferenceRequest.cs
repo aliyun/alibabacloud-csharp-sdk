@@ -136,6 +136,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public string MFAOperationForLogin { get; set; }
 
+        [NameInMap("MaxIdleDaysForAccessKeys")]
+        [Validation(Required=false)]
+        public int? MaxIdleDaysForAccessKeys { get; set; }
+
+        [NameInMap("MaxIdleDaysForUsers")]
+        [Validation(Required=false)]
+        public int? MaxIdleDaysForUsers { get; set; }
+
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>

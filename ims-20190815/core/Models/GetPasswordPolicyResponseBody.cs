@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public bool? HardExpire { get; set; }
 
+            [NameInMap("InitialPasswordAge")]
+            [Validation(Required=false)]
+            public int? InitialPasswordAge { get; set; }
+
             /// <summary>
             /// <para>The maximum number of password retries.</para>
             /// 
