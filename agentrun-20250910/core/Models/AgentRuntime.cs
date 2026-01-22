@@ -209,6 +209,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public ProtocolConfiguration ProtocolConfiguration { get; set; }
 
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// <para>每个运行时实例允许的最大并发会话数</para>
         /// 
