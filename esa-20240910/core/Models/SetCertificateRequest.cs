@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Id { get; set; }
 
+        [NameInMap("KeyServerId")]
+        [Validation(Required=false)]
+        public string KeyServerId { get; set; }
+
         /// <summary>
         /// <para>The certificate name.</para>
         /// 
