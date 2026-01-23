@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// </summary>
             [NameInMap("akSkIdentityConfigs")]
             [Validation(Required=false)]
-            public AkSkIdentityConfig AkSkIdentityConfigs { get; set; }
+            public List<AkSkIdentityConfig> AkSkIdentityConfigs { get; set; }
 
             /// <summary>
             /// <para>The API key authentication configurations.</para>
