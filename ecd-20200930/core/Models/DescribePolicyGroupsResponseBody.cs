@@ -692,6 +692,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string GpuAcceleration { get; set; }
 
+            [NameInMap("HoverConfigMsg")]
+            [Validation(Required=false)]
+            public string HoverConfigMsg { get; set; }
+
             /// <summary>
             /// <para>Specifies whether to allow web client access.</para>
             /// <para>Valid values:</para>
@@ -904,6 +908,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("ModelLibrary")]
             [Validation(Required=false)]
             public string ModelLibrary { get; set; }
+
+            [NameInMap("MultiScreen")]
+            [Validation(Required=false)]
+            public string MultiScreen { get; set; }
 
             /// <summary>
             /// <para>The name of the cloud computer policy.</para>
@@ -1310,6 +1318,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("ResetDesktop")]
             [Validation(Required=false)]
             public string ResetDesktop { get; set; }
+
+            [NameInMap("ResolutionDpi")]
+            [Validation(Required=false)]
+            public int? ResolutionDpi { get; set; }
 
             [NameInMap("ResolutionHeight")]
             [Validation(Required=false)]

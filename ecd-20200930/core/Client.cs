@@ -6464,6 +6464,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["GpuAcceleration"] = request.GpuAcceleration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HoverConfigMsg))
+            {
+                query["HoverConfigMsg"] = request.HoverConfigMsg;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Html5FileTransfer))
             {
                 query["Html5FileTransfer"] = request.Html5FileTransfer;
@@ -6535,6 +6539,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelLibrary))
             {
                 query["ModelLibrary"] = request.ModelLibrary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiScreen))
+            {
+                query["MultiScreen"] = request.MultiScreen;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -6639,6 +6647,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResetDesktop))
             {
                 query["ResetDesktop"] = request.ResetDesktop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResolutionDpi))
+            {
+                query["ResolutionDpi"] = request.ResolutionDpi;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResolutionHeight))
             {
@@ -7006,6 +7018,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["GpuAcceleration"] = request.GpuAcceleration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HoverConfigMsg))
+            {
+                query["HoverConfigMsg"] = request.HoverConfigMsg;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Html5FileTransfer))
             {
                 query["Html5FileTransfer"] = request.Html5FileTransfer;
@@ -7077,6 +7093,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelLibrary))
             {
                 query["ModelLibrary"] = request.ModelLibrary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiScreen))
+            {
+                query["MultiScreen"] = request.MultiScreen;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -7181,6 +7201,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResetDesktop))
             {
                 query["ResetDesktop"] = request.ResetDesktop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResolutionDpi))
+            {
+                query["ResolutionDpi"] = request.ResolutionDpi;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResolutionHeight))
             {
@@ -37000,6 +37024,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["GpuAcceleration"] = request.GpuAcceleration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HoverConfigMsg))
+            {
+                query["HoverConfigMsg"] = request.HoverConfigMsg;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Html5FileTransfer))
             {
                 query["Html5FileTransfer"] = request.Html5FileTransfer;
@@ -37071,6 +37099,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelLibrary))
             {
                 query["ModelLibrary"] = request.ModelLibrary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiScreen))
+            {
+                query["MultiScreen"] = request.MultiScreen;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -37179,6 +37211,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResetDesktop))
             {
                 query["ResetDesktop"] = request.ResetDesktop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResolutionDpi))
+            {
+                query["ResolutionDpi"] = request.ResolutionDpi;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResolutionHeight))
             {
@@ -37554,6 +37590,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["GpuAcceleration"] = request.GpuAcceleration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HoverConfigMsg))
+            {
+                query["HoverConfigMsg"] = request.HoverConfigMsg;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Html5FileTransfer))
             {
                 query["Html5FileTransfer"] = request.Html5FileTransfer;
@@ -37625,6 +37665,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelLibrary))
             {
                 query["ModelLibrary"] = request.ModelLibrary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiScreen))
+            {
+                query["MultiScreen"] = request.MultiScreen;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -37733,6 +37777,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResetDesktop))
             {
                 query["ResetDesktop"] = request.ResetDesktop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResolutionDpi))
+            {
+                query["ResolutionDpi"] = request.ResolutionDpi;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResolutionHeight))
             {

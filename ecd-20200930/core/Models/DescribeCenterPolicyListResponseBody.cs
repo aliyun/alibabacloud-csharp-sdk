@@ -527,6 +527,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string GpuAcceleration { get; set; }
 
+            [NameInMap("HoverConfigMsg")]
+            [Validation(Required=false)]
+            public string HoverConfigMsg { get; set; }
+
             /// <summary>
             /// <para>The web client access policy.</para>
             /// 
@@ -945,6 +949,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("RemoteCoordinate")]
             [Validation(Required=false)]
             public string RemoteCoordinate { get; set; }
+
+            [NameInMap("ResolutionDpi")]
+            [Validation(Required=false)]
+            public int? ResolutionDpi { get; set; }
 
             /// <summary>
             /// <para>The height of the resolution. Unit: pixel.</para>

@@ -315,6 +315,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string GrainedType { get; set; }
 
+            [NameInMap("InClipboardSize")]
+            [Validation(Required=false)]
+            public int? InClipboardSize { get; set; }
+
+            [NameInMap("InClipboardSizeUnit")]
+            [Validation(Required=false)]
+            public string InClipboardSizeUnit { get; set; }
+
+            [NameInMap("OutClipboardSize")]
+            [Validation(Required=false)]
+            public int? OutClipboardSize { get; set; }
+
+            [NameInMap("OutClipboardSizeUnit")]
+            [Validation(Required=false)]
+            public string OutClipboardSizeUnit { get; set; }
+
         }
 
         /// <summary>
@@ -748,6 +764,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string GpuAcceleration { get; set; }
 
+        [NameInMap("HoverConfigMsg")]
+        [Validation(Required=false)]
+        public string HoverConfigMsg { get; set; }
+
         /// <summary>
         /// <para>The file transfer feature on the web client.</para>
         /// <para>Valid values:</para>
@@ -941,6 +961,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("ModelLibrary")]
         [Validation(Required=false)]
         public string ModelLibrary { get; set; }
+
+        [NameInMap("MultiScreen")]
+        [Validation(Required=false)]
+        public string MultiScreen { get; set; }
 
         /// <summary>
         /// <para>The policy name.</para>
@@ -1282,6 +1306,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("ResetDesktop")]
         [Validation(Required=false)]
         public string ResetDesktop { get; set; }
+
+        [NameInMap("ResolutionDpi")]
+        [Validation(Required=false)]
+        public int? ResolutionDpi { get; set; }
 
         /// <summary>
         /// <para>The resolution height. Unit: pixel. Valid values for cloud applications: 500 to 50000. Valid values for cloud computers: 480 to 4096.</para>
