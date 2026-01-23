@@ -70,6 +70,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string NodeName { get; set; }
 
+        [NameInMap("NodeNameList")]
+        [Validation(Required=false)]
+        public List<string> NodeNameList { get; set; }
+
         /// <summary>
         /// <para>The matrix specification.</para>
         /// <para>Valid values:</para>

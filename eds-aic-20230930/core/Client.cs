@@ -5404,6 +5404,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["NodeName"] = request.NodeName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNameList))
+            {
+                query["NodeNameList"] = request.NodeNameList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerType))
             {
                 query["ServerType"] = request.ServerType;
@@ -5477,6 +5481,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeName))
             {
                 query["NodeName"] = request.NodeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNameList))
+            {
+                query["NodeNameList"] = request.NodeNameList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerType))
             {
@@ -8851,6 +8859,126 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetInstancePropertiesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>网络黑名单列表查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkBlacklistRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkBlacklistResponse
+        /// </returns>
+        public GetNetworkBlacklistResponse GetNetworkBlacklistWithOptions(GetNetworkBlacklistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNetworkBlacklist",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNetworkBlacklistResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>网络黑名单列表查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkBlacklistRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkBlacklistResponse
+        /// </returns>
+        public async Task<GetNetworkBlacklistResponse> GetNetworkBlacklistWithOptionsAsync(GetNetworkBlacklistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNetworkBlacklist",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNetworkBlacklistResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>网络黑名单列表查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkBlacklistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkBlacklistResponse
+        /// </returns>
+        public GetNetworkBlacklistResponse GetNetworkBlacklist(GetNetworkBlacklistRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetNetworkBlacklistWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>网络黑名单列表查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkBlacklistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkBlacklistResponse
+        /// </returns>
+        public async Task<GetNetworkBlacklistResponse> GetNetworkBlacklistAsync(GetNetworkBlacklistRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetNetworkBlacklistWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13343,6 +13471,134 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetAdbSecureWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置网络黑名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetNetworkBlacklistRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetNetworkBlacklistResponse
+        /// </returns>
+        public SetNetworkBlacklistResponse SetNetworkBlacklistWithOptions(SetNetworkBlacklistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainBlacklist))
+            {
+                query["DomainBlacklist"] = request.DomainBlacklist;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpBlacklist))
+            {
+                query["IpBlacklist"] = request.IpBlacklist;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetNetworkBlacklist",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetNetworkBlacklistResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置网络黑名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetNetworkBlacklistRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetNetworkBlacklistResponse
+        /// </returns>
+        public async Task<SetNetworkBlacklistResponse> SetNetworkBlacklistWithOptionsAsync(SetNetworkBlacklistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainBlacklist))
+            {
+                query["DomainBlacklist"] = request.DomainBlacklist;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpBlacklist))
+            {
+                query["IpBlacklist"] = request.IpBlacklist;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetNetworkBlacklist",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetNetworkBlacklistResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置网络黑名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetNetworkBlacklistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetNetworkBlacklistResponse
+        /// </returns>
+        public SetNetworkBlacklistResponse SetNetworkBlacklist(SetNetworkBlacklistRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetNetworkBlacklistWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置网络黑名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetNetworkBlacklistRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetNetworkBlacklistResponse
+        /// </returns>
+        public async Task<SetNetworkBlacklistResponse> SetNetworkBlacklistAsync(SetNetworkBlacklistRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetNetworkBlacklistWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
