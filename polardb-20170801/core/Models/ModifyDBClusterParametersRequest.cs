@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterParametersRequest : TeaModel {
+        [NameInMap("ClearBinlog")]
+        [Validation(Required=false)]
+        public bool? ClearBinlog { get; set; }
+
         /// <summary>
         /// <para>The ID of the cluster.</para>
         /// <remarks>

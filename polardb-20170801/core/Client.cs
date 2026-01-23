@@ -39780,6 +39780,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClearBinlog))
+            {
+                query["ClearBinlog"] = request.ClearBinlog;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
@@ -39866,6 +39870,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClearBinlog))
+            {
+                query["ClearBinlog"] = request.ClearBinlog;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
@@ -42079,6 +42087,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClearBinlog))
+            {
+                query["ClearBinlog"] = request.ClearBinlog;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
@@ -42164,6 +42176,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClearBinlog))
+            {
+                query["ClearBinlog"] = request.ClearBinlog;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
