@@ -121,6 +121,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public int? OperationMode { get; set; }
 
+        [NameInMap("PreqRule")]
+        [Validation(Required=false)]
+        public List<RuleInfoPreqRule> PreqRule { get; set; }
+        public class RuleInfoPreqRule : TeaModel {
+            [NameInMap("Rid")]
+            [Validation(Required=false)]
+            public string Rid { get; set; }
+
+        }
+
         [NameInMap("QualityCheckType")]
         [Validation(Required=false)]
         public int? QualityCheckType { get; set; }
