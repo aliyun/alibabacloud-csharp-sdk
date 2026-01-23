@@ -18,6 +18,14 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>为客户XXX审批优惠券，该客户是XXXX</para>
+        /// </summary>
+        [NameInMap("ApplicationReason")]
+        [Validation(Required=false)]
+        public string ApplicationReason { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,8 +35,10 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         [Validation(Required=false)]
         public long? CouponTemplateId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
         [NameInMap("IsUseBenefit")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? IsUseBenefit { get; set; }
 
         /// <summary>

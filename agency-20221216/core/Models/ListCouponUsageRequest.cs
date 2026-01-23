@@ -51,6 +51,14 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>123456768</para>
+        /// </summary>
+        [NameInMap("T2PartnerUid")]
+        [Validation(Required=false)]
+        public long? T2PartnerUid { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>1133166938931507</para>
         /// </summary>
         [NameInMap("Uid")]
