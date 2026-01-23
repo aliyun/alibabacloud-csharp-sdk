@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListDatasetFileMetasShrinkRequest : TeaModel {
+        [NameInMap("DatasetFileMetaIds")]
+        [Validation(Required=false)]
+        public string DatasetFileMetaIdsShrink { get; set; }
+
         /// <summary>
         /// <para>The dataset version.</para>
         /// <para>This parameter is required.</para>

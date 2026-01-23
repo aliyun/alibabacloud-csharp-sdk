@@ -9875,6 +9875,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ListDatasetFileMetasShrinkRequest request = new ListDatasetFileMetasShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DatasetFileMetaIds))
+            {
+                request.DatasetFileMetaIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetFileMetaIds, "DatasetFileMetaIds", "simple");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryContentTypeIncludeAny))
             {
                 request.QueryContentTypeIncludeAnyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryContentTypeIncludeAny, "QueryContentTypeIncludeAny", "simple");
@@ -9896,6 +9900,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
                 request.QueryTagsIncludeAnyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryTagsIncludeAny, "QueryTagsIncludeAny", "simple");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetFileMetaIdsShrink))
+            {
+                query["DatasetFileMetaIds"] = request.DatasetFileMetaIdsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetVersion))
             {
                 query["DatasetVersion"] = request.DatasetVersion;
@@ -10047,6 +10055,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ListDatasetFileMetasShrinkRequest request = new ListDatasetFileMetasShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DatasetFileMetaIds))
+            {
+                request.DatasetFileMetaIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetFileMetaIds, "DatasetFileMetaIds", "simple");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryContentTypeIncludeAny))
             {
                 request.QueryContentTypeIncludeAnyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryContentTypeIncludeAny, "QueryContentTypeIncludeAny", "simple");
@@ -10068,6 +10080,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
                 request.QueryTagsIncludeAnyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryTagsIncludeAny, "QueryTagsIncludeAny", "simple");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetFileMetaIdsShrink))
+            {
+                query["DatasetFileMetaIds"] = request.DatasetFileMetaIdsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetVersion))
             {
                 query["DatasetVersion"] = request.DatasetVersion;

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListDatasetFileMetasRequest : TeaModel {
+        [NameInMap("DatasetFileMetaIds")]
+        [Validation(Required=false)]
+        public List<string> DatasetFileMetaIds { get; set; }
+
         /// <summary>
         /// <para>The dataset version.</para>
         /// <para>This parameter is required.</para>
