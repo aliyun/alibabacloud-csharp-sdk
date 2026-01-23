@@ -423,6 +423,150 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>读取Topic数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecordsResponse
+        /// </returns>
+        public GetRecordsResponse GetRecordsWithOptions(GetRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardId))
+            {
+                query["ShardId"] = request.ShardId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
+            {
+                query["TopicName"] = request.TopicName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRecords",
+                Version = "2024-06-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>读取Topic数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecordsResponse
+        /// </returns>
+        public async Task<GetRecordsResponse> GetRecordsWithOptionsAsync(GetRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardId))
+            {
+                query["ShardId"] = request.ShardId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
+            {
+                query["TopicName"] = request.TopicName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRecords",
+                Version = "2024-06-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRecordsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>读取Topic数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecordsResponse
+        /// </returns>
+        public GetRecordsResponse GetRecords(GetRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetRecordsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>读取Topic数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecordsResponse
+        /// </returns>
+        public async Task<GetRecordsResponse> GetRecordsAsync(GetRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetRecordsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询Schema信息</para>
         /// </summary>
         /// 
@@ -1771,6 +1915,162 @@ namespace AlibabaCloud.SDK.Datahub20240620
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTopicsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>写入数据</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// PutRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutRecordsResponse
+        /// </returns>
+        public PutRecordsResponse PutRecordsWithOptions(PutRecordsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PutRecordsShrinkRequest request = new PutRecordsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Records))
+            {
+                request.RecordsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Records, "Records", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordsShrink))
+            {
+                query["Records"] = request.RecordsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardId))
+            {
+                query["ShardId"] = request.ShardId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
+            {
+                query["TopicName"] = request.TopicName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutRecords",
+                Version = "2024-06-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PutRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>写入数据</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// PutRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutRecordsResponse
+        /// </returns>
+        public async Task<PutRecordsResponse> PutRecordsWithOptionsAsync(PutRecordsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PutRecordsShrinkRequest request = new PutRecordsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Records))
+            {
+                request.RecordsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Records, "Records", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordsShrink))
+            {
+                query["Records"] = request.RecordsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardId))
+            {
+                query["ShardId"] = request.ShardId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
+            {
+                query["TopicName"] = request.TopicName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutRecords",
+                Version = "2024-06-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PutRecordsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>写入数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PutRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutRecordsResponse
+        /// </returns>
+        public PutRecordsResponse PutRecords(PutRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PutRecordsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>写入数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PutRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutRecordsResponse
+        /// </returns>
+        public async Task<PutRecordsResponse> PutRecordsAsync(PutRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PutRecordsWithOptionsAsync(request, runtime);
         }
 
     }

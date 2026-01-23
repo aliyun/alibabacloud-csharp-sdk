@@ -1,0 +1,50 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Datahub20240620.Models
+{
+    public class GetRecordsRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_project</para>
+        /// </summary>
+        [NameInMap("ProjectName")]
+        [Validation(Required=false)]
+        public string ProjectName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>7</para>
+        /// </summary>
+        [NameInMap("ShardId")]
+        [Validation(Required=false)]
+        public string ShardId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1769065251123</para>
+        /// </summary>
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_topic</para>
+        /// </summary>
+        [NameInMap("TopicName")]
+        [Validation(Required=false)]
+        public string TopicName { get; set; }
+
+    }
+
+}
