@@ -520,35 +520,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>Resource tag key values.</para>
-            /// </summary>
-            [NameInMap("tags")]
-            [Validation(Required=false)]
-            public List<ListIntegrationPoliciesResponseBodyPoliciesTags> Tags { get; set; }
-            public class ListIntegrationPoliciesResponseBodyPoliciesTags : TeaModel {
-                /// <summary>
-                /// <para>Tag key</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>key</para>
-                /// </summary>
-                [NameInMap("key")]
-                [Validation(Required=false)]
-                public string Key { get; set; }
-
-                /// <summary>
-                /// <para>Match value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>value</para>
-                /// </summary>
-                [NameInMap("value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
-
-            }
-
-            /// <summary>
             /// <para>User ID</para>
             /// 
             /// <b>Example:</b>

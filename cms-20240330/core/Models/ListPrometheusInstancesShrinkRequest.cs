@@ -117,6 +117,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string Version { get; set; }
 
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("workspace")]
+        [Validation(Required=false)]
+        public string Workspace { get; set; }
+
     }
 
 }

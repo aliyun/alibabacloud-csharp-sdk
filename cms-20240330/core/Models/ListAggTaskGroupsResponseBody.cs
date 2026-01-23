@@ -167,35 +167,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Resource group tags</para>
-            /// </summary>
-            [NameInMap("tags")]
-            [Validation(Required=false)]
-            public List<ListAggTaskGroupsResponseBodyAggTaskGroupsTags> Tags { get; set; }
-            public class ListAggTaskGroupsResponseBodyAggTaskGroupsTags : TeaModel {
-                /// <summary>
-                /// <para>Key of the resource group tag.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>key1</para>
-                /// </summary>
-                [NameInMap("key")]
-                [Validation(Required=false)]
-                public string Key { get; set; }
-
-                /// <summary>
-                /// <para>Value of the resource group tag.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>value1</para>
-                /// </summary>
-                [NameInMap("value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
-
-            }
-
-            /// <summary>
             /// <para>The target Prometheus instance ID of the aggregation task group.</para>
             /// 
             /// <b>Example:</b>

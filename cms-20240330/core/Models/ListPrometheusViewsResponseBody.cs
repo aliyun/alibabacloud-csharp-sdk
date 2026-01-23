@@ -122,16 +122,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Resource group ID.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>rg-acfm3gn5i6bigbi</para>
-            /// </summary>
-            [NameInMap("resourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
-
-            /// <summary>
             /// <para>Fixed value: PrometheusView.</para>
             /// 
             /// <b>Example:</b>
@@ -150,35 +140,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-
-            /// <summary>
-            /// <para>Tag values.</para>
-            /// </summary>
-            [NameInMap("tags")]
-            [Validation(Required=false)]
-            public List<ListPrometheusViewsResponseBodyPrometheusViewsTags> Tags { get; set; }
-            public class ListPrometheusViewsResponseBodyPrometheusViewsTags : TeaModel {
-                /// <summary>
-                /// <para>Tag key</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>key1</para>
-                /// </summary>
-                [NameInMap("key")]
-                [Validation(Required=false)]
-                public string Key { get; set; }
-
-                /// <summary>
-                /// <para>Match value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>value1</para>
-                /// </summary>
-                [NameInMap("value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
-
-            }
 
             /// <summary>
             /// <para>User ID.</para>
