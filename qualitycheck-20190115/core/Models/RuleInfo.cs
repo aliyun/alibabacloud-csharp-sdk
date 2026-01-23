@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
         [NameInMap("PreqRule")]
         [Validation(Required=false)]
-        public List<RuleInfoPreqRule> PreqRule { get; set; }
+        public RuleInfoPreqRule PreqRule { get; set; }
         public class RuleInfoPreqRule : TeaModel {
             [NameInMap("Rid")]
             [Validation(Required=false)]
