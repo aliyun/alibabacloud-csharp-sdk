@@ -1,3 +1,6 @@
+2026-01-23 Version: 1.18.4
+- Generated csharp 2024-06-28 for DianJin.
+
 2026-01-22 Version: 1.18.3
 - Update API RealTimeDialog: add request parameters body.conversationModel.$.intentionCode.
 
