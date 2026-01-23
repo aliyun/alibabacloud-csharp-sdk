@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetAuthorizationTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The temporary password returned after you call this API operation is a Security Token Service (STS) token whose validity period is 1 hour. Take note of the following items when you log on to Container Registry instances by using an STS token:</para>
-        /// <list type="bullet">
-        /// <item><description>If the STS token belongs to an Alibaba Cloud account, you can use the STS token to log on to all Container Registry instances that belong to the Alibaba Cloud account.</description></item>
-        /// <item><description>If the STS token belongs to a Resource Access Management (RAM) user, you can use the STS token to log on to all Container Registry instances that belong to the RAM user.</description></item>
-        /// <item><description>You can use an STS token to access only Container Registry instances to which the STS token is scoped.</description></item>
-        /// </list>
+        /// <para>The password that you use to log on to the registry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>shaunadadakks:uuczxnjcyeyhdjadkkajsjdjadhyucb</para>
@@ -25,11 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string AuthorizationToken { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call is successful.</para>
-        /// <list type="bullet">
-        /// <item><description><c>true</c>: successful</description></item>
-        /// <item><description><c>false</c>: failed</description></item>
-        /// </list>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -39,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The timestamp when the temporary token expired. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1571242083000</para>
@@ -49,7 +40,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>The username that is used to log on to the Container Registry instance.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -59,7 +50,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the temporary password expires. Unit: milliseconds.</para>
+        /// <para>The request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>E069EB86-E6AD-4A98-ADDE-0E993390239A</para>
@@ -69,7 +60,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The password that is used to log on to the Container Registry instance.</para>
+        /// <para>The username that you use to log on to the registry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>temp_user_cr</para>

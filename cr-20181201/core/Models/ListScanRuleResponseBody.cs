@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListScanRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -51,11 +59,16 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of scan rules.</para>
+        /// </summary>
         [NameInMap("ScanRules")]
         [Validation(Required=false)]
         public List<ListScanRuleResponseBodyScanRules> ScanRules { get; set; }
         public class ListScanRuleResponseBodyScanRules : TeaModel {
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1702361810000</para>
             /// </summary>
@@ -63,15 +76,23 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>The list of namespaces.</para>
+            /// </summary>
             [NameInMap("Namespaces")]
             [Validation(Required=false)]
             public List<string> Namespaces { get; set; }
 
+            /// <summary>
+            /// <para>The repository name.</para>
+            /// </summary>
             [NameInMap("RepoNames")]
             [Validation(Required=false)]
             public List<string> RepoNames { get; set; }
 
             /// <summary>
+            /// <para>The tag that triggers the scan matches the regular expression.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>.*</para>
             /// </summary>
@@ -80,6 +101,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoTagFilterPattern { get; set; }
 
             /// <summary>
+            /// <para>The rule name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cicd-prod</para>
             /// </summary>
@@ -88,6 +111,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RuleName { get; set; }
 
             /// <summary>
+            /// <para>The scan rule id.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>crscnr-2sdveqjhpzd****</para>
             /// </summary>
@@ -96,6 +121,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ScanRuleId { get; set; }
 
             /// <summary>
+            /// <para>The scan scope.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>REPO</para>
             /// </summary>
@@ -104,6 +131,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ScanScope { get; set; }
 
             /// <summary>
+            /// <para>The scan type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>VUL</c>: Products Cloud Security Scanner</description></item>
+            /// <item><description><c>SBOM</c>: Product Content Analysis</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>SBOM</para>
             /// </summary>
@@ -112,6 +145,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ScanType { get; set; }
 
             /// <summary>
+            /// <para>The trigger type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AUTO</para>
             /// </summary>
@@ -120,6 +155,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string TriggerType { get; set; }
 
             /// <summary>
+            /// <para>The update time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1764122725000</para>
             /// </summary>
@@ -130,6 +167,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

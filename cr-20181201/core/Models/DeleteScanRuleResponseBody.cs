@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class DeleteScanRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class UpdateScanRuleShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The list of namespaces.</para>
+        /// <list type="bullet">
+        /// <item><description>When the scan scope is NAMESPACE, this parameter cannot be empty.</description></item>
+        /// <item><description>If the scan scope is REPO, you must specify a unique Namespace for this parameter.</description></item>
+        /// </list>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -28,6 +35,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string NamespacesShrink { get; set; }
 
         /// <summary>
+        /// <para>The list of repositories.</para>
+        /// <list type="bullet">
+        /// <item><description>When the scan scope is NAMESPACE, this parameter must be empty.</description></item>
+        /// <item><description>When the scan scope is REPO, this parameter cannot be empty.</description></item>
+        /// </list>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -36,6 +49,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoNamesShrink { get; set; }
 
         /// <summary>
+        /// <para>The tag filtering rules.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +60,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoTagFilterPattern { get; set; }
 
         /// <summary>
+        /// <para>The rule name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +71,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RuleName { get; set; }
 
         /// <summary>
+        /// <para>The rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,6 +82,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ScanRuleId { get; set; }
 
         /// <summary>
+        /// <para>The scan scope.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NAMESPACE: namespace.</description></item>
+        /// <item><description>REPO: repository.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,6 +98,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ScanScope { get; set; }
 
         /// <summary>
+        /// <para>The trigger type.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>AUTO: automatically triggers.</description></item>
+        /// <item><description>MANUAL: manually triggers.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

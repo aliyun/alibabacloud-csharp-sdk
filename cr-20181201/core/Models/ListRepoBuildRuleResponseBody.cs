@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public string BuildRuleId { get; set; }
 
+            [NameInMap("DestArtifactType")]
+            [Validation(Required=false)]
+            public string DestArtifactType { get; set; }
+
             /// <summary>
             /// <para>The directory of the Dockerfile.</para>
             /// 

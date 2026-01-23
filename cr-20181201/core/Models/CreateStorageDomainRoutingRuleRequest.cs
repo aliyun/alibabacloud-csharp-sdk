@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateStorageDomainRoutingRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The route list</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Routes")]

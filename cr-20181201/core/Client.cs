@@ -4023,8 +4023,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建扫描规则</para>
+        /// <para>Creates a scan or content analysis rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a scan or content analysis rule.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateScanRuleRequest
@@ -4103,8 +4108,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建扫描规则</para>
+        /// <para>Creates a scan or content analysis rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a scan or content analysis rule.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateScanRuleRequest
@@ -4183,8 +4193,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建扫描规则</para>
+        /// <para>Creates a scan or content analysis rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a scan or content analysis rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateScanRuleRequest
@@ -4201,8 +4216,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建扫描规则</para>
+        /// <para>Creates a scan or content analysis rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a scan or content analysis rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateScanRuleRequest
@@ -4219,8 +4239,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例域名路由规则</para>
+        /// <para>Creates an instance store domain name routing rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateStorageDomainRoutingRuleRequest
@@ -4271,8 +4296,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例域名路由规则</para>
+        /// <para>Creates an instance store domain name routing rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateStorageDomainRoutingRuleRequest
@@ -4323,8 +4353,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例域名路由规则</para>
+        /// <para>Creates an instance store domain name routing rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateStorageDomainRoutingRuleRequest
@@ -4341,8 +4376,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例域名路由规则</para>
+        /// <para>Creates an instance store domain name routing rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateStorageDomainRoutingRuleRequest
@@ -6459,8 +6499,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除扫描规则</para>
+        /// <para>Deletes a scan rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a scan rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteScanRuleRequest
@@ -6505,8 +6550,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除扫描规则</para>
+        /// <para>Deletes a scan rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a scan rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteScanRuleRequest
@@ -6551,8 +6601,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除扫描规则</para>
+        /// <para>Deletes a scan rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a scan rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteScanRuleRequest
@@ -6569,8 +6624,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除扫描规则</para>
+        /// <para>Deletes a scan rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a scan rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteScanRuleRequest
@@ -6587,8 +6647,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例存储域名映射规则</para>
+        /// <para>Deletes an instance store domain name routing rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteStorageDomainRoutingRuleRequest
@@ -6633,8 +6698,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例存储域名映射规则</para>
+        /// <para>Deletes an instance store domain name routing rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteStorageDomainRoutingRuleRequest
@@ -6679,8 +6749,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例存储域名映射规则</para>
+        /// <para>Deletes an instance store domain name routing rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteStorageDomainRoutingRuleRequest
@@ -6697,8 +6772,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例存储域名映射规则</para>
+        /// <para>Deletes an instance store domain name routing rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteStorageDomainRoutingRuleRequest
@@ -7367,12 +7447,17 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a temporary username and a token that you can use to log on to a Container Registry instance.</para>
+        /// <para>Queries a pair of temporary username and password that you use to log on to a Container Registry instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the Container Registry instance.</para>
+        /// <para>The validity period of the temporary password is 1 hour. If you use STS to request a token, the validity period of the temporary password is the same as the validity period of the STS token.</para>
+        /// <list type="bullet">
+        /// <item><description>If you log on to an instance by using the temporary password obtained through an Alibaba Cloud account, you have the same permissions on resources as the user of the Alibaba Cloud account.</description></item>
+        /// <item><description>If you log on to an instance by using the temporary password obtained through a RAM user, you have the same permissions as the RAM user.</description></item>
+        /// <item><description>If you log on to an instance by using the temporary password obtained through STS, you have the same permissions as the STS token.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7414,12 +7499,17 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a temporary username and a token that you can use to log on to a Container Registry instance.</para>
+        /// <para>Queries a pair of temporary username and password that you use to log on to a Container Registry instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the Container Registry instance.</para>
+        /// <para>The validity period of the temporary password is 1 hour. If you use STS to request a token, the validity period of the temporary password is the same as the validity period of the STS token.</para>
+        /// <list type="bullet">
+        /// <item><description>If you log on to an instance by using the temporary password obtained through an Alibaba Cloud account, you have the same permissions on resources as the user of the Alibaba Cloud account.</description></item>
+        /// <item><description>If you log on to an instance by using the temporary password obtained through a RAM user, you have the same permissions as the RAM user.</description></item>
+        /// <item><description>If you log on to an instance by using the temporary password obtained through STS, you have the same permissions as the STS token.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7461,12 +7551,17 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a temporary username and a token that you can use to log on to a Container Registry instance.</para>
+        /// <para>Queries a pair of temporary username and password that you use to log on to a Container Registry instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the Container Registry instance.</para>
+        /// <para>The validity period of the temporary password is 1 hour. If you use STS to request a token, the validity period of the temporary password is the same as the validity period of the STS token.</para>
+        /// <list type="bullet">
+        /// <item><description>If you log on to an instance by using the temporary password obtained through an Alibaba Cloud account, you have the same permissions on resources as the user of the Alibaba Cloud account.</description></item>
+        /// <item><description>If you log on to an instance by using the temporary password obtained through a RAM user, you have the same permissions as the RAM user.</description></item>
+        /// <item><description>If you log on to an instance by using the temporary password obtained through STS, you have the same permissions as the STS token.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7484,12 +7579,17 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a temporary username and a token that you can use to log on to a Container Registry instance.</para>
+        /// <para>Queries a pair of temporary username and password that you use to log on to a Container Registry instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the Container Registry instance.</para>
+        /// <para>The validity period of the temporary password is 1 hour. If you use STS to request a token, the validity period of the temporary password is the same as the validity period of the STS token.</para>
+        /// <list type="bullet">
+        /// <item><description>If you log on to an instance by using the temporary password obtained through an Alibaba Cloud account, you have the same permissions on resources as the user of the Alibaba Cloud account.</description></item>
+        /// <item><description>If you log on to an instance by using the temporary password obtained through a RAM user, you have the same permissions as the RAM user.</description></item>
+        /// <item><description>If you log on to an instance by using the temporary password obtained through STS, you have the same permissions as the STS token.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -9721,8 +9821,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询扫描规则</para>
+        /// <para>Obtains a scan rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Get scan rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScanRuleRequest
@@ -9767,8 +9872,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询扫描规则</para>
+        /// <para>Obtains a scan rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Get scan rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScanRuleRequest
@@ -9813,8 +9923,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询扫描规则</para>
+        /// <para>Obtains a scan rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Get scan rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScanRuleRequest
@@ -9831,8 +9946,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询扫描规则</para>
+        /// <para>Obtains a scan rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Get scan rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScanRuleRequest
@@ -9849,8 +9969,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例存储域名路由规则</para>
+        /// <para>Queries instance storage domain routing rules</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is open to a whitelist. Please <a href="https://smartservice.console.aliyun.com/service/create-ticket">submit a ticket</a> for support.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetStorageDomainRoutingRuleRequest
@@ -9895,8 +10020,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例存储域名路由规则</para>
+        /// <para>Queries instance storage domain routing rules</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is open to a whitelist. Please <a href="https://smartservice.console.aliyun.com/service/create-ticket">submit a ticket</a> for support.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetStorageDomainRoutingRuleRequest
@@ -9941,8 +10071,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例存储域名路由规则</para>
+        /// <para>Queries instance storage domain routing rules</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is open to a whitelist. Please <a href="https://smartservice.console.aliyun.com/service/create-ticket">submit a ticket</a> for support.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetStorageDomainRoutingRuleRequest
@@ -9959,8 +10094,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例存储域名路由规则</para>
+        /// <para>Queries instance storage domain routing rules</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is open to a whitelist. Please <a href="https://smartservice.console.aliyun.com/service/create-ticket">submit a ticket</a> for support.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetStorageDomainRoutingRuleRequest
@@ -13649,8 +13789,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询扫描规则</para>
+        /// <para>Lists the scan rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the scan rules.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListScanRuleRequest
@@ -13687,8 +13832,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询扫描规则</para>
+        /// <para>Lists the scan rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the scan rules.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListScanRuleRequest
@@ -13725,8 +13875,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询扫描规则</para>
+        /// <para>Lists the scan rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the scan rules.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListScanRuleRequest
@@ -13743,8 +13898,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询扫描规则</para>
+        /// <para>Lists the scan rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the scan rules.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListScanRuleRequest
@@ -16433,8 +16593,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新扫描规则</para>
+        /// <para>Updates a scan rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateScanRuleRequest
@@ -16513,8 +16678,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新扫描规则</para>
+        /// <para>Updates a scan rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateScanRuleRequest
@@ -16593,8 +16763,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新扫描规则</para>
+        /// <para>Updates a scan rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateScanRuleRequest
@@ -16611,8 +16786,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新扫描规则</para>
+        /// <para>Updates a scan rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateScanRuleRequest
@@ -16629,8 +16809,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例域名路由规则</para>
+        /// <para>Updates a routing rule for an instance store domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateStorageDomainRoutingRuleRequest
@@ -16685,8 +16870,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例域名路由规则</para>
+        /// <para>Updates a routing rule for an instance store domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateStorageDomainRoutingRuleRequest
@@ -16741,8 +16931,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例域名路由规则</para>
+        /// <para>Updates a routing rule for an instance store domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateStorageDomainRoutingRuleRequest
@@ -16759,8 +16954,13 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例域名路由规则</para>
+        /// <para>Updates a routing rule for an instance store domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateStorageDomainRoutingRuleRequest

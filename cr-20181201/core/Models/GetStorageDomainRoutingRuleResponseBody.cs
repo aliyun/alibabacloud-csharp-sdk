@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetStorageDomainRoutingRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The return value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1571926439000</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The modification time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1571926439000</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? ModifyTime { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D4978DCC-ECBD-40B0-A714-EE695******</para>
         /// </summary>
@@ -41,11 +49,16 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The routing list.</para>
+        /// </summary>
         [NameInMap("Routes")]
         [Validation(Required=false)]
         public List<RouteItem> Routes { get; set; }
 
         /// <summary>
+        /// <para>The rule ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>crsdr-luq6qiegzvx****</para>
         /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RuleId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

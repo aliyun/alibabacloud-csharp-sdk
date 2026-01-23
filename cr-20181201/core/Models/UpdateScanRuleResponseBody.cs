@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class UpdateScanRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The rule ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>crscnr-3qmkeiuggfpjkfrq</para>
         /// </summary>

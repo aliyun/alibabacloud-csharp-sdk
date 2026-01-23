@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class DeleteScanRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cri-kmsiwlxxdcva****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The rule ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>crscnr-aemytkwad2h7fyhb</para>
         /// </summary>
