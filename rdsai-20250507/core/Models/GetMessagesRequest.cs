@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string ConversationId { get; set; }
 
+        [NameInMap("EventMode")]
+        [Validation(Required=false)]
+        public string EventMode { get; set; }
+
         /// <summary>
         /// <para>The ID of the conversation.</para>
         /// 

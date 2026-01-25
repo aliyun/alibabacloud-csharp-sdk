@@ -43,6 +43,20 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
 
+            [NameInMap("Events")]
+            [Validation(Required=false)]
+            public List<GetMessagesResponseBodyDataEvents> Events { get; set; }
+            public class GetMessagesResponseBodyDataEvents : TeaModel {
+                [NameInMap("answer")]
+                [Validation(Required=false)]
+                public string Answer { get; set; }
+
+                [NameInMap("event")]
+                [Validation(Required=false)]
+                public string Event { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The feedback.</para>
             /// 

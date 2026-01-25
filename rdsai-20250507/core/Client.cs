@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["ConversationId"] = request.ConversationId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventMode))
+            {
+                query["EventMode"] = request.EventMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputsShrink))
             {
                 query["Inputs"] = request.InputsShrink;
@@ -125,6 +129,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
             {
                 query["ConversationId"] = request.ConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventMode))
+            {
+                query["EventMode"] = request.EventMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputsShrink))
             {
@@ -2800,6 +2808,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["ConversationId"] = request.ConversationId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventMode))
+            {
+                query["EventMode"] = request.EventMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirstId))
             {
                 query["FirstId"] = request.FirstId;
@@ -2849,6 +2861,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
             {
                 query["ConversationId"] = request.ConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventMode))
+            {
+                query["EventMode"] = request.EventMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirstId))
             {
@@ -4213,6 +4229,178 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceStorageConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量修改实例的SSL配置</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyInstancesSSLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstancesSSLResponse
+        /// </returns>
+        public ModifyInstancesSSLResponse ModifyInstancesSSLWithOptions(ModifyInstancesSSLRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyInstancesSSLShrinkRequest request = new ModifyInstancesSSLShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceNames))
+            {
+                request.InstanceNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceNames, "InstanceNames", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CAType))
+            {
+                query["CAType"] = request.CAType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceNamesShrink))
+            {
+                query["InstanceNames"] = request.InstanceNamesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLEnabled))
+            {
+                query["SSLEnabled"] = request.SSLEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerCert))
+            {
+                query["ServerCert"] = request.ServerCert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerKey))
+            {
+                query["ServerKey"] = request.ServerKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstancesSSL",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstancesSSLResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量修改实例的SSL配置</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyInstancesSSLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstancesSSLResponse
+        /// </returns>
+        public async Task<ModifyInstancesSSLResponse> ModifyInstancesSSLWithOptionsAsync(ModifyInstancesSSLRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyInstancesSSLShrinkRequest request = new ModifyInstancesSSLShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceNames))
+            {
+                request.InstanceNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceNames, "InstanceNames", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CAType))
+            {
+                query["CAType"] = request.CAType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceNamesShrink))
+            {
+                query["InstanceNames"] = request.InstanceNamesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SSLEnabled))
+            {
+                query["SSLEnabled"] = request.SSLEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerCert))
+            {
+                query["ServerCert"] = request.ServerCert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerKey))
+            {
+                query["ServerKey"] = request.ServerKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstancesSSL",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstancesSSLResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量修改实例的SSL配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstancesSSLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstancesSSLResponse
+        /// </returns>
+        public ModifyInstancesSSLResponse ModifyInstancesSSL(ModifyInstancesSSLRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyInstancesSSLWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量修改实例的SSL配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstancesSSLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstancesSSLResponse
+        /// </returns>
+        public async Task<ModifyInstancesSSLResponse> ModifyInstancesSSLAsync(ModifyInstancesSSLRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyInstancesSSLWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
