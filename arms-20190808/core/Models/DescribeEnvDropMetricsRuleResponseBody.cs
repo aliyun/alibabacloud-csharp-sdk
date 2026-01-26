@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DescribeEnvDropMetricsRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code. The status code 200 indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned struct.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeEnvDropMetricsRuleResponseBodyData Data { get; set; }
         public class DescribeEnvDropMetricsRuleResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The list of discarded metrics. Separate multiple metrics with line feeds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>kube_pod_created</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string DropMetrics { get; set; }
 
             /// <summary>
+            /// <para>The name of the discarded metric rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ruleName1</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
+        /// <para>The returned message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>message</para>
         /// </summary>
@@ -48,7 +59,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>F7781D4A-2818-41E7-B7BB-79D809E9****</para>

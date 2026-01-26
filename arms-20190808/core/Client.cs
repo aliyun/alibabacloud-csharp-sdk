@@ -4984,6 +4984,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 body["Tags"] = request.Tags;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                body["aliyunLang"] = request.AliyunLang;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -5141,6 +5145,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
                 body["Tags"] = request.Tags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                body["aliyunLang"] = request.AliyunLang;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -14455,7 +14463,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定环境实例的废弃指标列表</para>
+        /// <para>Queries the list of discarded metrics of a specified environment instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14501,7 +14509,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定环境实例的废弃指标列表</para>
+        /// <para>Queries the list of discarded metrics of a specified environment instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14547,7 +14555,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定环境实例的废弃指标列表</para>
+        /// <para>Queries the list of discarded metrics of a specified environment instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14565,7 +14573,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定环境实例的废弃指标列表</para>
+        /// <para>Queries the list of discarded metrics of a specified environment instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33589,6 +33597,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await SetRetcodeShareStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动报警</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartAlertRequest
         /// </param>
@@ -33630,6 +33643,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<StartAlertResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动报警</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartAlertRequest
         /// </param>
@@ -33671,6 +33689,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<StartAlertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动报警</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartAlertRequest
         /// </param>
@@ -33684,6 +33707,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return StartAlertWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动报警</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartAlertRequest
         /// </param>
@@ -35771,7 +35799,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新环境实例的废弃指标列表</para>
+        /// <para>Updates a discarded metric rule in the environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35827,7 +35855,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新环境实例的废弃指标列表</para>
+        /// <para>Updates a discarded metric rule in the environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35883,7 +35911,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新环境实例的废弃指标列表</para>
+        /// <para>Updates a discarded metric rule in the environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35901,7 +35929,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新环境实例的废弃指标列表</para>
+        /// <para>Updates a discarded metric rule in the environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37115,7 +37143,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Prometheus告警规则</para>
+        /// <para>Updates a Prometheus alert rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37205,7 +37233,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Prometheus告警规则</para>
+        /// <para>Updates a Prometheus alert rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37295,7 +37323,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Prometheus告警规则</para>
+        /// <para>Updates a Prometheus alert rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37313,7 +37341,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Prometheus告警规则</para>
+        /// <para>Updates a Prometheus alert rule.</para>
         /// </summary>
         /// 
         /// <param name="request">

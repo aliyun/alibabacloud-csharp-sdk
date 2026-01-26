@@ -457,6 +457,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         }
 
+        [NameInMap("aliyunLang")]
+        [Validation(Required=false)]
+        public string AliyunLang { get; set; }
+
     }
 
 }

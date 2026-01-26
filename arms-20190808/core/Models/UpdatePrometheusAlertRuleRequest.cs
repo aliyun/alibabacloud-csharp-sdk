@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpdatePrometheusAlertRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the alert rule. You can call the ListPrometheusAlertRules operation to query the ID of the alert rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public long? AlertId { get; set; }
 
         /// <summary>
+        /// <para>The name of the alert rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AlertName { get; set; }
 
         /// <summary>
+        /// <para>The annotations that are described in a JSON string. You must specify the name and value of each annotation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;Value&quot;: &quot;xxx&quot;,&quot;Name&quot;: &quot;description&quot;}]</para>
         /// </summary>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Annotations { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the notification policy. This parameter is required if the NotifyType parameter is set to <c>DISPATCH_RULE</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10282</para>
         /// </summary>
@@ -56,6 +63,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public long? DispatchRuleId { get; set; }
 
         /// <summary>
+        /// <para>The duration. The value ranges from 1 to 1440 minutes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,6 +74,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Duration { get; set; }
 
         /// <summary>
+        /// <para>The expression of the alert rule. The expression must follow the PromQL syntax.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,6 +85,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Expression { get; set; }
 
         /// <summary>
+        /// <para>The tags that are described in a JSON string. You must specify the name and value of each tag.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;Value&quot;: &quot;critical&quot;,&quot;Name&quot;: &quot;severity&quot;}]</para>
         /// </summary>
@@ -84,13 +95,23 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Labels { get; set; }
 
         /// <summary>
+        /// <para>The alert message. Tags can be referenced in the {{$labels.xxx}} format.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The CPU utilization of ${{$labels.pod_name}} exceeds 80%. Current value: {{$value}}%</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The method that is used to send alert notifications. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>ALERT_MANAGER</c>: Alert notifications are sent by Operation Center. This is the default value.</description></item>
+        /// <item><description><c>DISPATCH_RULE</c>: Alert notifications are sent based on the specified notification policy.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>ALERT_MANAGER</para>
         /// </summary>
@@ -99,6 +120,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string NotifyType { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -137,6 +159,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         }
 
+        /// <summary>
+        /// <para>The type of the alert rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Kubernetes component alert</para>
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

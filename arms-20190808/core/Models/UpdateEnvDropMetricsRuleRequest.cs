@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpdateEnvDropMetricsRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The language. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh (default)</description></item>
+        /// <item><description>en</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +24,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AliyunLang { get; set; }
 
         /// <summary>
+        /// <para>The metric to be discarded. Separate multiple metrics with line feeds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +37,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string DropMetrics { get; set; }
 
         /// <summary>
+        /// <para>The environment ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +48,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
