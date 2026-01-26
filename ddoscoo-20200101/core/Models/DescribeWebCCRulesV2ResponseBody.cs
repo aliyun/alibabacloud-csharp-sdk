@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                     /// </summary>
                     [NameInMap("ContentList")]
                     [Validation(Required=false)]
-                    public string ContentList { get; set; }
+                    public List<string> ContentList { get; set; }
 
                     /// <summary>
                     /// <para>The match field.</para>
@@ -167,6 +167,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
                 /// <summary>
                 /// <para>The parameter is deprecated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>废弃</para>
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
@@ -184,6 +187,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 
                 /// <summary>
                 /// <para>The parameter is deprecated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>废弃</para>
                 /// </summary>
                 [NameInMap("Mode")]
                 [Validation(Required=false)]
