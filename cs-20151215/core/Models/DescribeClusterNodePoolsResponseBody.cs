@@ -363,6 +363,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     public bool? ApprovalRequired { get; set; }
 
                     /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>r-xxxxxxxxx</para>
+                    /// </summary>
+                    [NameInMap("auto_repair_policy_id")]
+                    [Validation(Required=false)]
+                    public string AutoRepairPolicyId { get; set; }
+
+                    /// <summary>
                     /// <para>Specifies whether to allow node restart. This parameter takes effect only when <c>auto_repair=true</c> is specified.</para>
                     /// <list type="bullet">
                     /// <item><description><c>true</c>: allows node restart.</description></item>

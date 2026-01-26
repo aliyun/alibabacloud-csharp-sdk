@@ -300,6 +300,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public bool? ApprovalRequired { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>r-xxxxxxxxxx</para>
+                /// </summary>
+                [NameInMap("auto_repair_policy_id")]
+                [Validation(Required=false)]
+                public string AutoRepairPolicyId { get; set; }
+
+                /// <summary>
                 /// <para>Specifies whether ACK is allowed to automatically restart nodes after repairing the nodes. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><c>true</c>: yes.</description></item>

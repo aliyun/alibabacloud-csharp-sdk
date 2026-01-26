@@ -368,6 +368,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public bool? ApprovalRequired { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>r-xxxxxxxxxx</para>
+                /// </summary>
+                [NameInMap("auto_repair_policy_id")]
+                [Validation(Required=false)]
+                public string AutoRepairPolicyId { get; set; }
+
+                /// <summary>
                 /// <para>Whether to allow restarting nodes.</para>
                 /// 
                 /// <b>Example:</b>
