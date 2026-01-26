@@ -4598,6 +4598,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             {
                 request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "videoRoles", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VideoUrls))
+            {
+                request.VideoUrlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoUrls, "videoUrls", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddDocumentParamShrink))
             {
@@ -4690,6 +4694,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoUrl))
             {
                 body["videoUrl"] = request.VideoUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoUrlsShrink))
+            {
+                body["videoUrls"] = request.VideoUrlsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4762,6 +4770,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             {
                 request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "videoRoles", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VideoUrls))
+            {
+                request.VideoUrlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoUrls, "videoUrls", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddDocumentParamShrink))
             {
@@ -4854,6 +4866,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoUrl))
             {
                 body["videoUrl"] = request.VideoUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoUrlsShrink))
+            {
+                body["videoUrls"] = request.VideoUrlsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5860,6 +5876,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             {
                 request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "videoRoles", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VideoUrls))
+            {
+                request.VideoUrlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoUrls, "videoUrls", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddDocumentParamShrink))
             {
@@ -5948,6 +5968,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoUrl))
             {
                 body["videoUrl"] = request.VideoUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoUrlsShrink))
+            {
+                body["videoUrls"] = request.VideoUrlsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6020,6 +6044,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             {
                 request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "videoRoles", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VideoUrls))
+            {
+                request.VideoUrlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoUrls, "videoUrls", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddDocumentParamShrink))
             {
@@ -6108,6 +6136,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoUrl))
             {
                 body["videoUrl"] = request.VideoUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoUrlsShrink))
+            {
+                body["videoUrls"] = request.VideoUrlsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

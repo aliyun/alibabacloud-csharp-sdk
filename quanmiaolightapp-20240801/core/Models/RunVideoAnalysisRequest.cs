@@ -269,6 +269,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [Validation(Required=false)]
         public string VideoUrl { get; set; }
 
+        [NameInMap("videoUrls")]
+        [Validation(Required=false)]
+        public List<string> VideoUrls { get; set; }
+
     }
 
 }

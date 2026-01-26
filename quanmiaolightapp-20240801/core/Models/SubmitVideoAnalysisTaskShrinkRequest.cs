@@ -126,14 +126,16 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         public int? VideoShotFaceIdentityCount { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para><a href="http://xxxx.mp4">http://xxxx.mp4</a></para>
         /// </summary>
         [NameInMap("videoUrl")]
         [Validation(Required=false)]
         public string VideoUrl { get; set; }
+
+        [NameInMap("videoUrls")]
+        [Validation(Required=false)]
+        public string VideoUrlsShrink { get; set; }
 
     }
 
