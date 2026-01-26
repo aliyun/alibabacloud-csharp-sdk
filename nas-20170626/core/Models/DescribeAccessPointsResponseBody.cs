@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The ID of the access point.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ap-ie15yd****</para>
+            /// <para>ap-ie15y*****</para>
             /// </summary>
             [NameInMap("AccessPointId")]
             [Validation(Required=false)]
@@ -227,11 +227,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The tags of the access point.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeAccessPointsResponseBodyAccessPointsTags> Tags { get; set; }
             public class DescribeAccessPointsResponseBodyAccessPointsTags : TeaModel {
                 /// <summary>
+                /// <para>The key of the tag that is added to the resource.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
                 /// </summary>
@@ -240,6 +245,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>Tag value</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>TestValue</para>
                 /// </summary>
@@ -250,7 +257,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             }
 
             /// <summary>
-            /// <para>The vSwitch ID.</para>
+            /// <para>Switch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-2zevmwkwyztjuoffg****</para>
@@ -272,7 +279,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTY4NzcxOTcwMjAzMDk2Nzc0MyM4MDM4****</para>
@@ -282,7 +289,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -64,9 +64,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <para>The type of the file system.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>standard: General-purpose Apsara File Storage NAS (NAS) file system</description></item>
-                /// <item><description>extreme: Extreme NAS file system.</description></item>
-                /// <item><description>cpfs: CPFS file system.</description></item>
+                /// <item><description>standard: General-purpose NAS</description></item>
+                /// <item><description>extreme: Extreme NAS</description></item>
+                /// <item><description>cpfs: CPFS</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public int? MountTargetCount { get; set; }
 
                 /// <summary>
-                /// <para>The region ID.</para>
+                /// <para>Region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>

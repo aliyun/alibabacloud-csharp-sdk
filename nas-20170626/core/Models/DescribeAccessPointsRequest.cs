@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class DescribeAccessPointsRequest : TeaModel {
         /// <summary>
         /// <para>The name of the permission group.</para>
-        /// <para>This parameter is required for a General-purpose File Storage NAS (NAS) file system.</para>
+        /// <para>This parameter is required for a General-purpose NAS file system.</para>
         /// <para>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token used to retrieve the next page of results. Do not specify this parameter for the first request. For subsequent requests, set this value to the NextToken returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTY4NzcxOTcwMjAzMDk2Nzc0MyM4MDM4****</para>
@@ -52,11 +52,23 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The tags of the access point.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeAccessPointsRequestTag> Tag { get; set; }
         public class DescribeAccessPointsRequestTag : TeaModel {
             /// <summary>
+            /// <para>The key of the tag.</para>
+            /// <para>Limits:</para>
+            /// <list type="bullet">
+            /// <item><description>Valid values of N: 1 to 20.</description></item>
+            /// <item><description>Maximum length is 128 characters.</description></item>
+            /// <item><description>Cannot start with aliyun or acs:.</description></item>
+            /// <item><description>Cannot contain http:// or https://.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
             /// </summary>
@@ -65,6 +77,15 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The value of the tag.</para>
+            /// <para>Limits:</para>
+            /// <list type="bullet">
+            /// <item><description>Valid values of N: 1 to 20.</description></item>
+            /// <item><description>Maximum length is 128 characters.</description></item>
+            /// <item><description>Cannot start with aliyun or acs:.</description></item>
+            /// <item><description>Cannot contain http:// or https://.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
             /// </summary>

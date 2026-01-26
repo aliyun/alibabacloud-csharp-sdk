@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateFileSystemResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the file system that is created.</para>
+        /// <para>The ID of the created file system.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1ca404****</para>

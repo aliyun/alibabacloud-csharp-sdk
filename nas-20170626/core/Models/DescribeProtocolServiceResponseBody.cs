@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The information about protocol services.</para>
+        /// <para>The information about protocol service list.</para>
         /// </summary>
         [NameInMap("ProtocolServices")]
         [Validation(Required=false)]
@@ -181,6 +181,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The VSW ID associated with the protocol service.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vsw-123xxx</para>
             /// </summary>
@@ -189,6 +191,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
+            /// <para>The VPC ID associated with the protocol service.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-123xxx</para>
             /// </summary>

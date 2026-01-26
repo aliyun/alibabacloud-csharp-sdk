@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the lifecycle policy. Required for the CPFS for Lingjun file systems.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>lc-xxx</para>
         /// </summary>
@@ -29,7 +31,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string LifecyclePolicyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the lifecycle policy.</para>
+        /// <para>The name of the lifecycle policy. The name must be 3 to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</para>
+        /// <remarks>
+        /// <para> Optional for General-purpose NAS file systems. If this parameter is provided, it takes precedence over LifecyclePolicyId. If left empty, LifecyclePolicyId is used.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>lifecyclepolicy1</para>

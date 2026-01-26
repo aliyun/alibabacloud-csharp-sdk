@@ -15,6 +15,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <item><description>Sample ID of a General-purpose NAS file system: 31a8e4\<em>\</em>\<em>\</em>.</description></item>
         /// <item><description>The IDs of Extreme NAS file systems must start with extreme-, for example, extreme-0015\<em>\</em>\<em>\</em>.</description></item>
         /// <item><description>The IDs of CPFS file systems must start with cpfs-. Example: cpfs-125487\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description>The IDs of CPFS SE file systems must start with cpfsse-. Example: cpfsse-022c71b134\<em>\</em>\<em>\</em>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -29,9 +30,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>all (default): All types.</description></item>
-        /// <item><description>standard: General-purpose NAS file system.</description></item>
-        /// <item><description>extreme: Extreme NAS file system.</description></item>
-        /// <item><description>cpfs: CPFS file system.</description></item>
+        /// <item><description>standard: General-purpose NAS</description></item>
+        /// <item><description>extreme: Extreme NAS</description></item>
+        /// <item><description>cpfs: CPFS (locally redundant storage)</description></item>
+        /// <item><description>cpfsse: CPFS SE (zone-redundant storage)</description></item>
         /// </list>
         /// <remarks>
         /// <para> Separate multiple data types with commas (,).</para>

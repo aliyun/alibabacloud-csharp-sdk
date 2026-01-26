@@ -28,8 +28,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>Description</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>描述</para>
+            /// <para>Description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -46,6 +48,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileSystemId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the lifecycle policy.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>lc-xxx</para>
             /// </summary>
@@ -64,6 +68,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string LifecyclePolicyName { get; set; }
 
             /// <summary>
+            /// <para>The type of the lifecycle policy.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Auto</para>
             /// </summary>
@@ -75,10 +81,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The management rule that is associated with the lifecycle policy.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DEFAULT_ATIME_14: Files that are not accessed in the last 14 days are dumped to the IA storage medium.</description></item>
-            /// <item><description>DEFAULT_ATIME_30: Files that are not accessed in the last 30 days are dumped to the IA storage medium.</description></item>
-            /// <item><description>DEFAULT_ATIME_60: Files that are not accessed in the last 60 days are dumped to the IA storage medium.</description></item>
-            /// <item><description>DEFAULT_ATIME_90: Files that are not accessed in the last 90 days are dumped to the IA storage medium.</description></item>
+            /// <item><description>DEFAULT_ATIME_14: Files that are not accessed in the last 14 days.</description></item>
+            /// <item><description>DEFAULT_ATIME_30: Files that are not accessed in the last 30 days.</description></item>
+            /// <item><description>DEFAULT_ATIME_60: Files that are not accessed in the last 60 days.</description></item>
+            /// <item><description>DEFAULT_ATIME_90: Files that are not accessed in the last 90 days.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,17 +105,22 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The absolute paths to multiple directories associated with the lifecycle policy.</para>
+            /// <para>The absolute paths of directories with which the lifecycle policy is associated.</para>
             /// </summary>
             [NameInMap("Paths")]
             [Validation(Required=false)]
             public List<string> Paths { get; set; }
 
+            /// <summary>
+            /// <para>File data retrieval rules.</para>
+            /// </summary>
             [NameInMap("RetrieveRules")]
             [Validation(Required=false)]
             public List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules> RetrieveRules { get; set; }
             public class DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules : TeaModel {
                 /// <summary>
+                /// <para>Attribute of the rule.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>RetrieveType</para>
                 /// </summary>
@@ -118,6 +129,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string Attribute { get; set; }
 
                 /// <summary>
+                /// <para>Threshold for the rule.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>All</para>
                 /// </summary>
@@ -128,8 +141,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             }
 
             /// <summary>
-            /// <para>The storage type of the data that is dumped to the IA storage medium.</para>
-            /// <para>Default value: InfrequentAccess (IA).</para>
+            /// <para>The storage class.</para>
+            /// <list type="bullet">
+            /// <item><description>InfrequentAccess: the IA storage class.</description></item>
+            /// <item><description>Archive: the Archive storage class.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>InfrequentAccess</para>
@@ -138,11 +154,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public string StorageType { get; set; }
 
+            /// <summary>
+            /// <para>Data transition rules.</para>
+            /// </summary>
             [NameInMap("TransitRules")]
             [Validation(Required=false)]
             public List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules> TransitRules { get; set; }
             public class DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules : TeaModel {
                 /// <summary>
+                /// <para>Attribute of the rule.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Atime</para>
                 /// </summary>
@@ -151,6 +172,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string Attribute { get; set; }
 
                 /// <summary>
+                /// <para>Threshold for the rule.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
                 /// </summary>

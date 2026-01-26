@@ -133,11 +133,22 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string RootDirectory { get; set; }
 
+        /// <summary>
+        /// <para>The tags of the access point.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateAccessPointRequestTag> Tag { get; set; }
         public class CreateAccessPointRequestTag : TeaModel {
             /// <summary>
+            /// <para>The key of a tag. Limits:</para>
+            /// <list type="bullet">
+            /// <item><description>Cannot be null or an empty string.</description></item>
+            /// <item><description>Can be up to 128 characters in length.</description></item>
+            /// <item><description>Cannot start with aliyun or acs:.</description></item>
+            /// <item><description>Cannot contain http:// or https://.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
             /// </summary>
@@ -146,6 +157,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The value of a tag. Limits:</para>
+            /// <list type="bullet">
+            /// <item><description>Cannot be null or an empty string.</description></item>
+            /// <item><description>Can be up to 128 characters in length.</description></item>
+            /// <item><description>Cannot contain http:// or https://.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
             /// </summary>

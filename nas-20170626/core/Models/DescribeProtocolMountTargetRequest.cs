@@ -44,13 +44,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <summary>
             /// <para>The filter name.</para>
             /// <list type="bullet">
-            /// <item><description>ProtocolServiceIds: filters export directories by protocol service ID.</description></item>
-            /// <item><description>ExportIds: filters export directories by export directory ID.</description></item>
-            /// <item><description>VpcIds: filters export directories by virtual private cloud (VPC) ID.</description></item>
-            /// <item><description>VSwitchIds: filters export directories by vSwitch ID.</description></item>
-            /// <item><description>FsetIds: filters export directories by fileset ID.</description></item>
-            /// <item><description>Paths: filters export directories based on the path of the file system corresponding to the mount target.</description></item>
-            /// <item><description>AccessGroupNames: filters export directories by permission group name.</description></item>
+            /// <item><description>ProtocolServiceIds: Filters export directories by protocol service ID.</description></item>
+            /// <item><description>ExportIds: Filters export directories by export directory ID.</description></item>
+            /// <item><description>VpcIds: Filters export directories by VPC ID.</description></item>
+            /// <item><description>FsetIds: Filters export directories by fileset ID.</description></item>
+            /// <item><description>Paths: Filters export directories based on the path of the file system corresponding to the mount target.</description></item>
+            /// <item><description>AccessGroupNames: Filters export directories by permission group name.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,6 +104,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Protocol service ID list</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ptc-123xxx</para>
         /// </summary>

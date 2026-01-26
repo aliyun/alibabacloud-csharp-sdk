@@ -4571,7 +4571,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, you must understand the billing and pricing of Apsara File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</para>
+        /// <para>  Before you call this operation, you must understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</para>
         /// <list type="bullet">
         /// <item><description>Before you create a file system, you must complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
         /// <item><description>When you call this operation, a service-linked role of NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</description></item>
@@ -4698,7 +4698,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, you must understand the billing and pricing of Apsara File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</para>
+        /// <para>  Before you call this operation, you must understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</para>
         /// <list type="bullet">
         /// <item><description>Before you create a file system, you must complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
         /// <item><description>When you call this operation, a service-linked role of NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</description></item>
@@ -4825,7 +4825,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, you must understand the billing and pricing of Apsara File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</para>
+        /// <para>  Before you call this operation, you must understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</para>
         /// <list type="bullet">
         /// <item><description>Before you create a file system, you must complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
         /// <item><description>When you call this operation, a service-linked role of NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</description></item>
@@ -4852,7 +4852,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, you must understand the billing and pricing of Apsara File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</para>
+        /// <para>  Before you call this operation, you must understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</para>
         /// <list type="bullet">
         /// <item><description>Before you create a file system, you must complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
         /// <item><description>When you call this operation, a service-linked role of NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</description></item>
@@ -5319,9 +5319,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can create lifecycle policies only for General-purpose NAS file systems.</para>
+        /// <para>  Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can create up to 20 lifecycle policies in each region within an Alibaba Cloud account.</description></item>
+        /// <item><description>Up to 10 Auto and 100 OnDemand lifecycle policies can be created for each CPFS for Lingjun file system.</description></item>
+        /// <item><description>For general-purpose NAS file systems, up to 20 lifecycle policies can be created in each region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5405,9 +5406,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can create lifecycle policies only for General-purpose NAS file systems.</para>
+        /// <para>  Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can create up to 20 lifecycle policies in each region within an Alibaba Cloud account.</description></item>
+        /// <item><description>Up to 10 Auto and 100 OnDemand lifecycle policies can be created for each CPFS for Lingjun file system.</description></item>
+        /// <item><description>For general-purpose NAS file systems, up to 20 lifecycle policies can be created in each region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5491,9 +5493,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can create lifecycle policies only for General-purpose NAS file systems.</para>
+        /// <para>  Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can create up to 20 lifecycle policies in each region within an Alibaba Cloud account.</description></item>
+        /// <item><description>Up to 10 Auto and 100 OnDemand lifecycle policies can be created for each CPFS for Lingjun file system.</description></item>
+        /// <item><description>For general-purpose NAS file systems, up to 20 lifecycle policies can be created in each region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5517,9 +5520,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can create lifecycle policies only for General-purpose NAS file systems.</para>
+        /// <para>  Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can create up to 20 lifecycle policies in each region within an Alibaba Cloud account.</description></item>
+        /// <item><description>Up to 10 Auto and 100 OnDemand lifecycle policies can be created for each CPFS for Lingjun file system.</description></item>
+        /// <item><description>For general-purpose NAS file systems, up to 20 lifecycle policies can be created in each region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8371,7 +8375,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8426,7 +8430,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8481,7 +8485,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8504,7 +8508,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9598,12 +9602,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an access point.</para>
+        /// <para>Queries a list of access points.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// <para>Only General-purpose NAS file systems that use the NFS protocol support this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9661,12 +9665,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an access point.</para>
+        /// <para>Queries a list of access points.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// <para>Only General-purpose NAS file systems that use the NFS protocol support this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9724,12 +9728,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an access point.</para>
+        /// <para>Queries a list of access points.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// <para>Only General-purpose NAS file systems that use the NFS protocol support this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9747,12 +9751,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an access point.</para>
+        /// <para>Queries a list of access points.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose Network File System (NFS) file systems support this operation.</para>
+        /// <para>Only General-purpose NAS file systems that use the NFS protocol support this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11658,6 +11662,146 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询文件系统关联的 HpnZone 列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeFilesystemsAssociatedHpnZonesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFilesystemsAssociatedHpnZonesResponse
+        /// </returns>
+        public DescribeFilesystemsAssociatedHpnZonesResponse DescribeFilesystemsAssociatedHpnZonesWithOptions(DescribeFilesystemsAssociatedHpnZonesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeFilesystemsAssociatedHpnZonesShrinkRequest request = new DescribeFilesystemsAssociatedHpnZonesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filesystems))
+            {
+                request.FilesystemsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filesystems, "Filesystems", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilesystemsShrink))
+            {
+                query["Filesystems"] = request.FilesystemsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFilesystemsAssociatedHpnZones",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFilesystemsAssociatedHpnZonesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询文件系统关联的 HpnZone 列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeFilesystemsAssociatedHpnZonesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFilesystemsAssociatedHpnZonesResponse
+        /// </returns>
+        public async Task<DescribeFilesystemsAssociatedHpnZonesResponse> DescribeFilesystemsAssociatedHpnZonesWithOptionsAsync(DescribeFilesystemsAssociatedHpnZonesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeFilesystemsAssociatedHpnZonesShrinkRequest request = new DescribeFilesystemsAssociatedHpnZonesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filesystems))
+            {
+                request.FilesystemsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filesystems, "Filesystems", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilesystemsShrink))
+            {
+                query["Filesystems"] = request.FilesystemsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFilesystemsAssociatedHpnZones",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFilesystemsAssociatedHpnZonesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询文件系统关联的 HpnZone 列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFilesystemsAssociatedHpnZonesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFilesystemsAssociatedHpnZonesResponse
+        /// </returns>
+        public DescribeFilesystemsAssociatedHpnZonesResponse DescribeFilesystemsAssociatedHpnZones(DescribeFilesystemsAssociatedHpnZonesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeFilesystemsAssociatedHpnZonesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询文件系统关联的 HpnZone 列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFilesystemsAssociatedHpnZonesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFilesystemsAssociatedHpnZonesResponse
+        /// </returns>
+        public async Task<DescribeFilesystemsAssociatedHpnZonesResponse> DescribeFilesystemsAssociatedHpnZonesAsync(DescribeFilesystemsAssociatedHpnZonesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeFilesystemsAssociatedHpnZonesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries information about virtual storage channels associated with a file system.</para>
         /// </summary>
         /// 
@@ -11831,7 +11975,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11874,7 +12018,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11917,7 +12061,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11940,7 +12084,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14770,8 +14914,13 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询特定智能目录</para>
+        /// <para>Queries the information about the created fileset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only CPFS V2.2.0 and CPFS for Lingjun V2.7.0 and later support this operation. You can view the version information on the file system details page in the console.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetFilesetRequest
@@ -14816,8 +14965,13 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询特定智能目录</para>
+        /// <para>Queries the information about the created fileset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only CPFS V2.2.0 and CPFS for Lingjun V2.7.0 and later support this operation. You can view the version information on the file system details page in the console.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetFilesetRequest
@@ -14862,8 +15016,13 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询特定智能目录</para>
+        /// <para>Queries the information about the created fileset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only CPFS V2.2.0 and CPFS for Lingjun V2.7.0 and later support this operation. You can view the version information on the file system details page in the console.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetFilesetRequest
@@ -14880,8 +15039,13 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询特定智能目录</para>
+        /// <para>Queries the information about the created fileset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only CPFS V2.2.0 and CPFS for Lingjun V2.7.0 and later support this operation. You can view the version information on the file system details page in the console.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetFilesetRequest

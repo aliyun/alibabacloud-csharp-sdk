@@ -136,11 +136,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
                 /// <summary>
                 /// <para>The file system type.</para>
-                /// <para>The following information is displayed:</para>
+                /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>standard: General-purpose NAS file system.</description></item>
-                /// <item><description>extreme: Extreme NAS file system.</description></item>
-                /// <item><description>cpfs: CPFS file system.</description></item>
+                /// <item><description>standard: General-purpose NAS</description></item>
+                /// <item><description>extreme: Extreme NAS</description></item>
+                /// <item><description>cpfs: CPFS (locally redundant storage)</description></item>
+                /// <item><description>cpfsse: CPFS SE (zone-redundant storage)</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -509,7 +510,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
                 /// <summary>
                 /// <para>The protocol type of the file system.</para>
-                /// <para>The following information is displayed:</para>
+                /// <para>Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>NFS: Network File System.</description></item>
                 /// <item><description>SMB: Server Message Block.</description></item>
@@ -534,6 +535,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string QuorumVswId { get; set; }
 
                 /// <summary>
+                /// <para>Storage redundancy type. Returned only for CPFS SE.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>LRS</para>
                 /// </summary>
@@ -541,6 +544,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string RedundancyType { get; set; }
 
+                /// <summary>
+                /// <para>A list of IDs for the zone-redundant vSwitches.</para>
+                /// </summary>
                 [NameInMap("RedundancyVSwitchIds")]
                 [Validation(Required=false)]
                 public DescribeFileSystemsResponseBodyFileSystemsFileSystemRedundancyVSwitchIds RedundancyVSwitchIds { get; set; }
@@ -590,12 +596,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The type of the storage.</para>
-                /// <para>The following information is displayed:</para>
+                /// <para>The storage type.</para>
+                /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Valid values for General-purpose NAS file systems: Capacity, Performance, and Premium</description></item>
-                /// <item><description>Valid values for Extreme NAS file systems: standard and advance</description></item>
-                /// <item><description>Valid values for Cloud Parallel File Storage (CPFS) file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline)</description></item>
+                /// <item><description>General-purpose NAS: Capacity, Performance, Premium</description></item>
+                /// <item><description>Extreme NAS: standard, advance</description></item>
+                /// <item><description>CPFS: advance_100 (100 MB/s/TiB Baseline), advance_200 (200 MB/s/TiB Baseline), economic</description></item>
+                /// <item><description>CPFS SE: advance_100 (100 MB/s/TiB Baseline)</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

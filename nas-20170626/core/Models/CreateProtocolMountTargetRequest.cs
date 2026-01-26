@@ -126,7 +126,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ProtocolServiceId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID of the export directory for the protocol service.</para>
+        /// <para>The vSwitch ID of the export directory.</para>
+        /// <para>If the storage redundancy type of the file system is not zone-redundant (ZRS) and the VpcId is set, this field is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-123****</para>
@@ -139,6 +140,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
+        /// <para>The list of vSwitch IDs of the export directory.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -147,7 +150,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<string> VSwitchIds { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID of the export directory for the protocol service.</para>
+        /// <para>The VPC ID of the export directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-123****</para>

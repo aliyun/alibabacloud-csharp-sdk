@@ -10,8 +10,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeLifecyclePoliciesRequest : TeaModel {
         /// <summary>
+        /// <para>The description of the policy.</para>
+        /// <remarks>
+        /// <para> Only CPFS for Lingjun supports this parameter.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
-        /// <para>描述</para>
+        /// <para>Description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -28,6 +33,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the lifecycle policy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>lc-xxx</para>
         /// </summary>
@@ -36,8 +43,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string LifecyclePolicyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the lifecycle policy. The name must meet the following conventions:</para>
+        /// <para>The name of the lifecycle policy. The naming rules are as follows:</para>
         /// <para>The name must be 3 to 64 characters in length and must start with a letter. It can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// <remarks>
+        /// <para> Optional for General-purpose NAS file systems. If this parameter is provided, it takes precedence over LifecyclePolicyId. If left empty, LifecyclePolicyId is used.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>lifecyclepolicy_01</para>
@@ -47,6 +57,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string LifecyclePolicyName { get; set; }
 
         /// <summary>
+        /// <para>The type of the lifecycle policy.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Auto: The job is automatically triggered.</description></item>
+        /// <item><description>OnDemand: On-demand execution.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> Only CPFS for Lingjun supports this parameter.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>Auto</para>
         /// </summary>
@@ -78,6 +98,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Filter by path.</para>
+        /// <remarks>
+        /// <para> Only CPFS for Lingjun supports this parameter.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>/abc/</para>
         /// </summary>
@@ -92,7 +117,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <item><description>Archive: the Archive storage class.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If the StorageType parameter is not specified, data retrieval tasks of all types are returned.</para>
+        /// <para> If StorageType is not specified, all lifecycle policies are returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -234,11 +234,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The tags of the access point.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeAccessPointResponseBodyAccessPointTags> Tags { get; set; }
             public class DescribeAccessPointResponseBodyAccessPointTags : TeaModel {
                 /// <summary>
+                /// <para>The key of a tag.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
                 /// </summary>
@@ -247,6 +252,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The value of a tag.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>TestValue</para>
                 /// </summary>
