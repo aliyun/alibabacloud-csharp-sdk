@@ -612,6 +612,126 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>为自定义主机名申请一个免费证书，适用于申请失败、证书即将过期、证书已过期场景</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApplyCustomHostnameCertificateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyCustomHostnameCertificateResponse
+        /// </returns>
+        public ApplyCustomHostnameCertificateResponse ApplyCustomHostnameCertificateWithOptions(ApplyCustomHostnameCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostnameId))
+            {
+                query["HostnameId"] = request.HostnameId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApplyCustomHostnameCertificate",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ApplyCustomHostnameCertificateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为自定义主机名申请一个免费证书，适用于申请失败、证书即将过期、证书已过期场景</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApplyCustomHostnameCertificateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyCustomHostnameCertificateResponse
+        /// </returns>
+        public async Task<ApplyCustomHostnameCertificateResponse> ApplyCustomHostnameCertificateWithOptionsAsync(ApplyCustomHostnameCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostnameId))
+            {
+                query["HostnameId"] = request.HostnameId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApplyCustomHostnameCertificate",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ApplyCustomHostnameCertificateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为自定义主机名申请一个免费证书，适用于申请失败、证书即将过期、证书已过期场景</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApplyCustomHostnameCertificateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyCustomHostnameCertificateResponse
+        /// </returns>
+        public ApplyCustomHostnameCertificateResponse ApplyCustomHostnameCertificate(ApplyCustomHostnameCertificateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ApplyCustomHostnameCertificateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为自定义主机名申请一个免费证书，适用于申请失败、证书即将过期、证书已过期场景</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApplyCustomHostnameCertificateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyCustomHostnameCertificateResponse
+        /// </returns>
+        public async Task<ApplyCustomHostnameCertificateResponse> ApplyCustomHostnameCertificateAsync(ApplyCustomHostnameCertificateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ApplyCustomHostnameCertificateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Adds DNS records of different record types at a time..</para>
         /// </summary>
         /// 
@@ -3994,6 +4114,190 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCompressionRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建自定义主机名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCustomHostnameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomHostnameResponse
+        /// </returns>
+        public CreateCustomHostnameResponse CreateCustomHostnameWithOptions(CreateCustomHostnameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CasId))
+            {
+                query["CasId"] = request.CasId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CasRegion))
+            {
+                query["CasRegion"] = request.CasRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertType))
+            {
+                query["CertType"] = request.CertType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Certificate))
+            {
+                query["Certificate"] = request.Certificate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Hostname))
+            {
+                query["Hostname"] = request.Hostname;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateKey))
+            {
+                query["PrivateKey"] = request.PrivateKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordId))
+            {
+                query["RecordId"] = request.RecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SslFlag))
+            {
+                query["SslFlag"] = request.SslFlag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCustomHostname",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCustomHostnameResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建自定义主机名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCustomHostnameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomHostnameResponse
+        /// </returns>
+        public async Task<CreateCustomHostnameResponse> CreateCustomHostnameWithOptionsAsync(CreateCustomHostnameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CasId))
+            {
+                query["CasId"] = request.CasId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CasRegion))
+            {
+                query["CasRegion"] = request.CasRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertType))
+            {
+                query["CertType"] = request.CertType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Certificate))
+            {
+                query["Certificate"] = request.Certificate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Hostname))
+            {
+                query["Hostname"] = request.Hostname;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateKey))
+            {
+                query["PrivateKey"] = request.PrivateKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordId))
+            {
+                query["RecordId"] = request.RecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SslFlag))
+            {
+                query["SslFlag"] = request.SslFlag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCustomHostname",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCustomHostnameResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建自定义主机名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCustomHostnameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomHostnameResponse
+        /// </returns>
+        public CreateCustomHostnameResponse CreateCustomHostname(CreateCustomHostnameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCustomHostnameWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建自定义主机名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCustomHostnameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomHostnameResponse
+        /// </returns>
+        public async Task<CreateCustomHostnameResponse> CreateCustomHostnameAsync(CreateCustomHostnameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCustomHostnameWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13008,6 +13312,126 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCompressionRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除自定义主机名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCustomHostnameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCustomHostnameResponse
+        /// </returns>
+        public DeleteCustomHostnameResponse DeleteCustomHostnameWithOptions(DeleteCustomHostnameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostnameId))
+            {
+                query["HostnameId"] = request.HostnameId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCustomHostname",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCustomHostnameResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除自定义主机名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCustomHostnameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCustomHostnameResponse
+        /// </returns>
+        public async Task<DeleteCustomHostnameResponse> DeleteCustomHostnameWithOptionsAsync(DeleteCustomHostnameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostnameId))
+            {
+                query["HostnameId"] = request.HostnameId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCustomHostname",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCustomHostnameResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除自定义主机名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCustomHostnameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCustomHostnameResponse
+        /// </returns>
+        public DeleteCustomHostnameResponse DeleteCustomHostname(DeleteCustomHostnameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteCustomHostnameWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除自定义主机名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCustomHostnameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCustomHostnameResponse
+        /// </returns>
+        public async Task<DeleteCustomHostnameResponse> DeleteCustomHostnameAsync(DeleteCustomHostnameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteCustomHostnameWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -23480,6 +23904,126 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询单个自定义主机名的信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomHostnameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomHostnameResponse
+        /// </returns>
+        public GetCustomHostnameResponse GetCustomHostnameWithOptions(GetCustomHostnameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostnameId))
+            {
+                query["HostnameId"] = request.HostnameId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCustomHostname",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCustomHostnameResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询单个自定义主机名的信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomHostnameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomHostnameResponse
+        /// </returns>
+        public async Task<GetCustomHostnameResponse> GetCustomHostnameWithOptionsAsync(GetCustomHostnameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostnameId))
+            {
+                query["HostnameId"] = request.HostnameId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCustomHostname",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCustomHostnameResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询单个自定义主机名的信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomHostnameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomHostnameResponse
+        /// </returns>
+        public GetCustomHostnameResponse GetCustomHostname(GetCustomHostnameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCustomHostnameWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询单个自定义主机名的信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomHostnameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomHostnameResponse
+        /// </returns>
+        public async Task<GetCustomHostnameResponse> GetCustomHostnameAsync(GetCustomHostnameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCustomHostnameWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Query Site Developer Mode Configuration</para>
         /// </summary>
         /// 
@@ -32808,6 +33352,174 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListCompressionRulesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点下的自定义主机名列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomHostnamesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomHostnamesResponse
+        /// </returns>
+        public ListCustomHostnamesResponse ListCustomHostnamesWithOptions(ListCustomHostnamesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Hostname))
+            {
+                query["Hostname"] = request.Hostname;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NameMatchType))
+            {
+                query["NameMatchType"] = request.NameMatchType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordId))
+            {
+                query["RecordId"] = request.RecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCustomHostnames",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCustomHostnamesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点下的自定义主机名列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomHostnamesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomHostnamesResponse
+        /// </returns>
+        public async Task<ListCustomHostnamesResponse> ListCustomHostnamesWithOptionsAsync(ListCustomHostnamesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Hostname))
+            {
+                query["Hostname"] = request.Hostname;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NameMatchType))
+            {
+                query["NameMatchType"] = request.NameMatchType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordId))
+            {
+                query["RecordId"] = request.RecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCustomHostnames",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCustomHostnamesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点下的自定义主机名列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomHostnamesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomHostnamesResponse
+        /// </returns>
+        public ListCustomHostnamesResponse ListCustomHostnames(ListCustomHostnamesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCustomHostnamesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点下的自定义主机名列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomHostnamesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomHostnamesResponse
+        /// </returns>
+        public async Task<ListCustomHostnamesResponse> ListCustomHostnamesAsync(ListCustomHostnamesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCustomHostnamesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -45732,6 +46444,182 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新自定义主机名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCustomHostnameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCustomHostnameResponse
+        /// </returns>
+        public UpdateCustomHostnameResponse UpdateCustomHostnameWithOptions(UpdateCustomHostnameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CasId))
+            {
+                query["CasId"] = request.CasId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CasRegion))
+            {
+                query["CasRegion"] = request.CasRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertType))
+            {
+                query["CertType"] = request.CertType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Certificate))
+            {
+                query["Certificate"] = request.Certificate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostnameId))
+            {
+                query["HostnameId"] = request.HostnameId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateKey))
+            {
+                query["PrivateKey"] = request.PrivateKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordId))
+            {
+                query["RecordId"] = request.RecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SslFlag))
+            {
+                query["SslFlag"] = request.SslFlag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCustomHostname",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCustomHostnameResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新自定义主机名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCustomHostnameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCustomHostnameResponse
+        /// </returns>
+        public async Task<UpdateCustomHostnameResponse> UpdateCustomHostnameWithOptionsAsync(UpdateCustomHostnameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CasId))
+            {
+                query["CasId"] = request.CasId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CasRegion))
+            {
+                query["CasRegion"] = request.CasRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertType))
+            {
+                query["CertType"] = request.CertType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Certificate))
+            {
+                query["Certificate"] = request.Certificate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostnameId))
+            {
+                query["HostnameId"] = request.HostnameId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateKey))
+            {
+                query["PrivateKey"] = request.PrivateKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordId))
+            {
+                query["RecordId"] = request.RecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SslFlag))
+            {
+                query["SslFlag"] = request.SslFlag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCustomHostname",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCustomHostnameResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新自定义主机名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCustomHostnameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCustomHostnameResponse
+        /// </returns>
+        public UpdateCustomHostnameResponse UpdateCustomHostname(UpdateCustomHostnameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateCustomHostnameWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新自定义主机名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCustomHostnameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCustomHostnameResponse
+        /// </returns>
+        public async Task<UpdateCustomHostnameResponse> UpdateCustomHostnameAsync(UpdateCustomHostnameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateCustomHostnameWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the configurations of a custom scenario-specific policy.</para>
         /// </summary>
         /// 
@@ -55228,6 +56116,126 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UploadSiteOriginClientCertificateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证自定义主机名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyCustomHostnameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyCustomHostnameResponse
+        /// </returns>
+        public VerifyCustomHostnameResponse VerifyCustomHostnameWithOptions(VerifyCustomHostnameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostnameId))
+            {
+                query["HostnameId"] = request.HostnameId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyCustomHostname",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyCustomHostnameResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证自定义主机名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyCustomHostnameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyCustomHostnameResponse
+        /// </returns>
+        public async Task<VerifyCustomHostnameResponse> VerifyCustomHostnameWithOptionsAsync(VerifyCustomHostnameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostnameId))
+            {
+                query["HostnameId"] = request.HostnameId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyCustomHostname",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyCustomHostnameResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证自定义主机名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyCustomHostnameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyCustomHostnameResponse
+        /// </returns>
+        public VerifyCustomHostnameResponse VerifyCustomHostname(VerifyCustomHostnameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return VerifyCustomHostnameWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证自定义主机名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyCustomHostnameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyCustomHostnameResponse
+        /// </returns>
+        public async Task<VerifyCustomHostnameResponse> VerifyCustomHostnameAsync(VerifyCustomHostnameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await VerifyCustomHostnameWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
