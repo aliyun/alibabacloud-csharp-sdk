@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public Dictionary<string, string> Partition { get; set; }
 
+        [NameInMap("Partitions")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Partitions { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>false</para>

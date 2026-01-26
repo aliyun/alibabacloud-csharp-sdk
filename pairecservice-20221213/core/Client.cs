@@ -19801,6 +19801,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["Partition"] = request.Partition;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Partitions))
+            {
+                body["Partitions"] = request.Partitions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkipThresholdCheck))
             {
                 body["SkipThresholdCheck"] = request.SkipThresholdCheck;
@@ -19858,6 +19862,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Partition))
             {
                 body["Partition"] = request.Partition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Partitions))
+            {
+                body["Partitions"] = request.Partitions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkipThresholdCheck))
             {
