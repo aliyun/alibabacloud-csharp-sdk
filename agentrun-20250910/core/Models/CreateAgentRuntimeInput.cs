@@ -116,6 +116,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ExecutionRoleArn { get; set; }
 
         /// <summary>
+        /// <para>外部注册类型的智能体访问端点地址，用于连接已部署在外部的智能体服务</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://external-agent.example.com/api">https://external-agent.example.com/api</a></para>
+        /// </summary>
+        [NameInMap("externalAgentEndpointUrl")]
+        [Validation(Required=false)]
+        public string ExternalAgentEndpointUrl { get; set; }
+
+        /// <summary>
         /// <para>智能体运行时的健康检查配置，用于监控运行时实例的健康状态</para>
         /// 
         /// <b>Example:</b>
@@ -147,6 +157,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? Memory { get; set; }
 
         /// <summary>
+        /// <para>文件存储NAS的配置信息，用于挂载NAS文件系统到智能体运行时</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("nasConfig")]
+        [Validation(Required=false)]
+        public NASConfig NasConfig { get; set; }
+
+        /// <summary>
         /// <para>智能体运行时的网络配置，包括VPC、安全组等网络访问设置</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -156,6 +176,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [NameInMap("networkConfiguration")]
         [Validation(Required=false)]
         public NetworkConfiguration NetworkConfiguration { get; set; }
+
+        /// <summary>
+        /// <para>对象存储OSS的挂载配置信息，用于挂载OSS存储桶到智能体运行时</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("ossMountConfig")]
+        [Validation(Required=false)]
+        public OSSMountConfig OssMountConfig { get; set; }
 
         /// <summary>
         /// <para>智能体运行时监听的端口号，用于接收外部请求</para>

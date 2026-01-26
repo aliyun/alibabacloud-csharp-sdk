@@ -4880,6 +4880,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910
             {
                 query["agentRuntimeName"] = request.AgentRuntimeName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiscoveryResourceGroupId))
+            {
+                query["discoveryResourceGroupId"] = request.DiscoveryResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["pageNumber"] = request.PageNumber;
@@ -4950,6 +4954,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentRuntimeName))
             {
                 query["agentRuntimeName"] = request.AgentRuntimeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiscoveryResourceGroupId))
+            {
+                query["discoveryResourceGroupId"] = request.DiscoveryResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {

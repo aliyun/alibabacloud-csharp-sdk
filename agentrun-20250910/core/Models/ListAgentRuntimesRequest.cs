@@ -20,6 +20,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string AgentRuntimeName { get; set; }
 
         /// <summary>
+        /// <para>用于服务发现的资源组标识符</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-123456</para>
+        /// </summary>
+        [NameInMap("discoveryResourceGroupId")]
+        [Validation(Required=false)]
+        public string DiscoveryResourceGroupId { get; set; }
+
+        /// <summary>
         /// <para>当前页码，从1开始计数</para>
         /// 
         /// <b>Example:</b>
