@@ -3606,10 +3606,6 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["ClusterType"] = request.ClusterType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterVersion))
-            {
-                query["ClusterVersion"] = request.ClusterVersion;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerCidr))
             {
                 query["ContainerCidr"] = request.ContainerCidr;
@@ -3721,10 +3717,6 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterType))
             {
                 query["ClusterType"] = request.ClusterType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterVersion))
-            {
-                query["ClusterVersion"] = request.ClusterVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerCidr))
             {

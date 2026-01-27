@@ -1,3 +1,7 @@
+2026-01-27 Version: 9.0.0
+- Update API CreateCluster: delete request parameters ClusterVersion.
+
+
 2026-01-16 Version: 8.10.0
 - Support API CreateClusterNodePool.
 - Support API DeleteClusterNodePool.

@@ -20,16 +20,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>The version of the cluster.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1.18.8</para>
-        /// </summary>
-        [NameInMap("ClusterVersion")]
-        [Validation(Required=false)]
-        public string ClusterVersion { get; set; }
-
-        /// <summary>
         /// <b>Example:</b>
         /// <para>172.20.0.0/16</para>
         /// </summary>
