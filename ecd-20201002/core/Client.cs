@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>允许桌面FOTA升级</para>
+        /// <para>Enables OTA updates for cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>允许桌面FOTA升级</para>
+        /// <para>Enables OTA updates for cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>允许桌面FOTA升级</para>
+        /// <para>Enables OTA updates for cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>允许桌面FOTA升级</para>
+        /// <para>Enables OTA updates for cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -809,6 +809,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return await DescribeFingerPrintTemplatesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of cloud computers. Currently, only the region corresponding to the Chinese mainland can be queried (excluding: Nanjing-local region-shutting down).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This API is a centralized domain name. The endpoint is in the China (Shanghai) region. You cannot call this API operation in other regions.</para>
+        /// <list type="bullet">
+        /// <item><description>The cloud computer status information in this interface has a delay of 1 to 3 seconds from the actual value.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeGlobalDesktopsRequest
         /// </param>
@@ -922,6 +935,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return TeaModel.ToObject<DescribeGlobalDesktopsResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of cloud computers. Currently, only the region corresponding to the Chinese mainland can be queried (excluding: Nanjing-local region-shutting down).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This API is a centralized domain name. The endpoint is in the China (Shanghai) region. You cannot call this API operation in other regions.</para>
+        /// <list type="bullet">
+        /// <item><description>The cloud computer status information in this interface has a delay of 1 to 3 seconds from the actual value.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeGlobalDesktopsRequest
         /// </param>
@@ -1035,6 +1061,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return TeaModel.ToObject<DescribeGlobalDesktopsResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of cloud computers. Currently, only the region corresponding to the Chinese mainland can be queried (excluding: Nanjing-local region-shutting down).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This API is a centralized domain name. The endpoint is in the China (Shanghai) region. You cannot call this API operation in other regions.</para>
+        /// <list type="bullet">
+        /// <item><description>The cloud computer status information in this interface has a delay of 1 to 3 seconds from the actual value.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeGlobalDesktopsRequest
         /// </param>
@@ -1048,6 +1087,19 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return DescribeGlobalDesktopsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of cloud computers. Currently, only the region corresponding to the Chinese mainland can be queried (excluding: Nanjing-local region-shutting down).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This API is a centralized domain name. The endpoint is in the China (Shanghai) region. You cannot call this API operation in other regions.</para>
+        /// <list type="bullet">
+        /// <item><description>The cloud computer status information in this interface has a delay of 1 to 3 seconds from the actual value.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeGlobalDesktopsRequest
         /// </param>
@@ -1061,6 +1113,11 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return await DescribeGlobalDesktopsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries office networks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeOfficeSitesRequest
         /// </param>
@@ -1087,6 +1144,10 @@ namespace AlibabaCloud.SDK.Ecd20201002
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["Uuid"] = request.Uuid;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1106,6 +1167,11 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return TeaModel.ToObject<DescribeOfficeSitesResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries office networks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeOfficeSitesRequest
         /// </param>
@@ -1132,6 +1198,10 @@ namespace AlibabaCloud.SDK.Ecd20201002
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["Uuid"] = request.Uuid;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1151,6 +1221,11 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return TeaModel.ToObject<DescribeOfficeSitesResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries office networks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeOfficeSitesRequest
         /// </param>
@@ -1164,6 +1239,11 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return DescribeOfficeSitesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries office networks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeOfficeSitesRequest
         /// </param>
@@ -1287,7 +1367,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举快照</para>
+        /// <para>Queries the snapshots that are created based on a cloud computer and the details of the snapshots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1357,7 +1437,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举快照</para>
+        /// <para>Queries the snapshots that are created based on a cloud computer and the details of the snapshots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1427,7 +1507,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举快照</para>
+        /// <para>Queries the snapshots that are created based on a cloud computer and the details of the snapshots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1445,7 +1525,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举快照</para>
+        /// <para>Queries the snapshots that are created based on a cloud computer and the details of the snapshots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1463,8 +1543,13 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户资源列表</para>
+        /// <para>Queries user resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, verify supported resource and service types in Alibaba Cloud Workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUserResourcesRequest
@@ -1613,8 +1698,13 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户资源列表</para>
+        /// <para>Queries user resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, verify supported resource and service types in Alibaba Cloud Workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUserResourcesRequest
@@ -1763,8 +1853,13 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户资源列表</para>
+        /// <para>Queries user resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, verify supported resource and service types in Alibaba Cloud Workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUserResourcesRequest
@@ -1781,8 +1876,13 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户资源列表</para>
+        /// <para>Queries user resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, verify supported resource and service types in Alibaba Cloud Workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUserResourcesRequest
@@ -1967,7 +2067,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取无影云盘的免密token</para>
+        /// <para>Retrieves the logon tokens for enterprise drives.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2025,7 +2125,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取无影云盘的免密token</para>
+        /// <para>Retrieves the logon tokens for enterprise drives.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2083,7 +2183,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取无影云盘的免密token</para>
+        /// <para>Retrieves the logon tokens for enterprise drives.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2101,7 +2201,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取无影云盘的免密token</para>
+        /// <para>Retrieves the logon tokens for enterprise drives.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2119,8 +2219,13 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得连接凭证</para>
+        /// <para>Retrieves the credential that is used to connect to a cloud computer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The first time you call this operation, the system returns a task ID in the <c>TaskID</c> parameter. Use the task ID indicated in the <c>TaskID</c> parameter to continue calling this operation until the value of the <c>TaskStatus</c> parameter becomes <c>FINISHED</c> or <c>FAILED</c>. When <c>TaskStatus</c> becomes <c>FINISHED</c>, the value of the <c>Ticket</c> parameter is the ticket that is used to connect the client to the cloud computer.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetConnectionTicketRequest
@@ -2196,6 +2301,10 @@ namespace AlibabaCloud.SDK.Ecd20201002
             {
                 query["TaskId"] = request.TaskId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TicketBlackList))
+            {
+                query["TicketBlackList"] = request.TicketBlackList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
             {
                 query["Uuid"] = request.Uuid;
@@ -2221,8 +2330,13 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得连接凭证</para>
+        /// <para>Retrieves the credential that is used to connect to a cloud computer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The first time you call this operation, the system returns a task ID in the <c>TaskID</c> parameter. Use the task ID indicated in the <c>TaskID</c> parameter to continue calling this operation until the value of the <c>TaskStatus</c> parameter becomes <c>FINISHED</c> or <c>FAILED</c>. When <c>TaskStatus</c> becomes <c>FINISHED</c>, the value of the <c>Ticket</c> parameter is the ticket that is used to connect the client to the cloud computer.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetConnectionTicketRequest
@@ -2298,6 +2412,10 @@ namespace AlibabaCloud.SDK.Ecd20201002
             {
                 query["TaskId"] = request.TaskId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TicketBlackList))
+            {
+                query["TicketBlackList"] = request.TicketBlackList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
             {
                 query["Uuid"] = request.Uuid;
@@ -2323,8 +2441,13 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得连接凭证</para>
+        /// <para>Retrieves the credential that is used to connect to a cloud computer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The first time you call this operation, the system returns a task ID in the <c>TaskID</c> parameter. Use the task ID indicated in the <c>TaskID</c> parameter to continue calling this operation until the value of the <c>TaskStatus</c> parameter becomes <c>FINISHED</c> or <c>FAILED</c>. When <c>TaskStatus</c> becomes <c>FINISHED</c>, the value of the <c>Ticket</c> parameter is the ticket that is used to connect the client to the cloud computer.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetConnectionTicketRequest
@@ -2341,8 +2464,13 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得连接凭证</para>
+        /// <para>Retrieves the credential that is used to connect to a cloud computer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The first time you call this operation, the system returns a task ID in the <c>TaskID</c> parameter. Use the task ID indicated in the <c>TaskID</c> parameter to continue calling this operation until the value of the <c>TaskStatus</c> parameter becomes <c>FINISHED</c> or <c>FAILED</c>. When <c>TaskStatus</c> becomes <c>FINISHED</c>, the value of the <c>Ticket</c> parameter is the ticket that is used to connect the client to the cloud computer.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetConnectionTicketRequest
@@ -2643,7 +2771,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>是否保持登录判断接口</para>
+        /// <para>Verifies whether the client\&quot;s logon session is still active.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2693,7 +2821,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>是否保持登录判断接口</para>
+        /// <para>Verifies whether the client\&quot;s logon session is still active.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2743,7 +2871,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>是否保持登录判断接口</para>
+        /// <para>Verifies whether the client\&quot;s logon session is still active.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2761,7 +2889,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>是否保持登录判断接口</para>
+        /// <para>Verifies whether the client\&quot;s logon session is still active.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5273,6 +5401,11 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return await UnbindUserDesktopWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates credentials to lock on-premises sessions on clients.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VerifyCredentialRequest
         /// </param>
@@ -5338,6 +5471,11 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return TeaModel.ToObject<VerifyCredentialResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates credentials to lock on-premises sessions on clients.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VerifyCredentialRequest
         /// </param>
@@ -5403,6 +5541,11 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return TeaModel.ToObject<VerifyCredentialResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates credentials to lock on-premises sessions on clients.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VerifyCredentialRequest
         /// </param>
@@ -5416,6 +5559,11 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return VerifyCredentialWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates credentials to lock on-premises sessions on clients.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VerifyCredentialRequest
         /// </param>

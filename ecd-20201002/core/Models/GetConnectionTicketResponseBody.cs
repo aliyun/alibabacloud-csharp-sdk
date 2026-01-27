@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class GetConnectionTicketResponseBody : TeaModel {
+        [NameInMap("DesktopId")]
+        [Validation(Required=false)]
+        public string DesktopId { get; set; }
+
         [NameInMap("P2PToken")]
         [Validation(Required=false)]
         public string P2PToken { get; set; }
@@ -21,11 +25,17 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</para>
+        /// </summary>
         [NameInMap("TaskCode")]
         [Validation(Required=false)]
         public string TaskCode { get; set; }
 
         /// <summary>
+        /// <para>The ID of the task to connect to the cloud computer.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2afbad19-778a-4fc5-9674-1f19c63862da</para>
         /// </summary>
@@ -33,6 +43,10 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2afbad19-778a-4fc5-9674-1f19c638****</para>
+        /// </summary>
         [NameInMap("TaskMessage")]
         [Validation(Required=false)]
         public string TaskMessage { get; set; }
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string TaskStatus { get; set; }
 
         /// <summary>
+        /// <para>The credentials for connecting to the cloud computer.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</para>
         /// </summary>

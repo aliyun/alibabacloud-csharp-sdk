@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class DescribeUserResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The access type. If you leave this parameter empty, both types will be displayed.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>INTERNET: access over the Internet.</description></item>
+        /// <item><description>VPC: access over an enterprise virtual private cloud (VPC).</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>INTERNET</para>
         /// </summary>
@@ -18,6 +25,16 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string AccessType { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable the immediate refresh feature.</para>
+        /// <remarks>
+        /// <para> To ensure the operation response speed, we recommend that you set the value to <c>false</c>.</para>
+        /// </remarks>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false</description></item>
+        /// <item><description>true</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -26,6 +43,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public bool? AutoRefresh { get; set; }
 
         /// <summary>
+        /// <para>The level-2 resource category.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -34,6 +53,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public int? CategoryId { get; set; }
 
         /// <summary>
+        /// <para>The level-1 resource category.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,6 +63,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public int? CategoryType { get; set; }
 
         /// <summary>
+        /// <para>The client ID. The system generates a unique ID for each client. This parameter is non-sensitive and does not need encryption.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,6 +74,16 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string ClientId { get; set; }
 
         /// <summary>
+        /// <para>The client type.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>html5: the web client.</description></item>
+        /// <item><description>android: the Android client.</description></item>
+        /// <item><description>windows: the Windows client.</description></item>
+        /// <item><description>ios: the iOS client.</description></item>
+        /// <item><description>macos: the macOS client.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>windows</para>
         /// </summary>
@@ -60,6 +92,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string ClientType { get; set; }
 
         /// <summary>
+        /// <para>The client version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7.6.0-R-20241112.222305</para>
         /// </summary>
@@ -70,6 +104,11 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para>Specifies whether to enable geo-redundant forwarding. Set the value to <c>false</c>.</para>
+        /// <para>Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>false: disables geo-redundant forwarding.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -80,6 +119,14 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public bool? DualCenterForward { get; set; }
 
         /// <summary>
+        /// <para>The client language.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en_US: English.</description></item>
+        /// <item><description>zh_CN: Simplified Chinese.</description></item>
+        /// <item><description>ja_JP: Japanese.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
         /// </summary>
@@ -88,6 +135,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string Language { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region where end users log on to clients. This parameter applies to office network ID-based logons. For organization ID-based logons, you can leave this parameter empty.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -96,6 +145,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string LoginRegionId { get; set; }
 
         /// <summary>
+        /// <para>The logon token. You can call the <c>GetLoginToken</c> or <c>RefreshLoginToken</c> operation to retrieve the logon token.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -106,6 +156,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string LoginToken { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 500.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>500</para>
         /// </summary>
@@ -114,6 +166,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
@@ -121,11 +175,21 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The office network IDs. This parameter is required for logons by using enterprise Active Directory (AD) accounts.</para>
+        /// </summary>
         [NameInMap("OfficeSiteIds")]
         [Validation(Required=false)]
         public List<string> OfficeSiteIds { get; set; }
 
         /// <summary>
+        /// <para>The sorting field. If you do not specify this parameter, resources are sorted by creation time by default.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CreateTime: the time when resources are created.</description></item>
+        /// <item><description>AssignTime: the time when resources are assigned.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>AssignTime</para>
         /// </summary>
@@ -133,11 +197,21 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
+        /// <summary>
+        /// <para>The service types. If you leave this parameter empty, services of all supported types will be queried.</para>
+        /// </summary>
         [NameInMap("ProductTypes")]
         [Validation(Required=false)]
         public List<string> ProductTypes { get; set; }
 
         /// <summary>
+        /// <para>The protocol type. You can specify this parameter to filter cloud computers.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>HDX: High-definition Experience (HDX).</description></item>
+        /// <item><description>ASP: Adaptive Streaming Protocol (ASP).</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>ASP</para>
         /// </summary>
@@ -146,6 +220,11 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
+        /// <para>是否查询云桌面套餐包信息，默认为true。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -154,6 +233,11 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public bool? QueryDesktopDurationList { get; set; }
 
         /// <summary>
+        /// <para>是否查询云电脑定时任务信息，默认为true。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -162,6 +246,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public bool? QueryDesktopTimers { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to return the image version information of cloud computers.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -170,6 +256,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public bool? QueryFotaUpdate { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to refresh over-the-air (OTA) information in real time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -177,11 +265,16 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public bool? RefreshFotaUpdate { get; set; }
 
+        /// <summary>
+        /// <para>The resource IDs. You can specify up to 100 resource IDs.</para>
+        /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
+        /// <para>The resource name. Fuzzy search is supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testName</para>
         /// </summary>
@@ -189,11 +282,20 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string ResourceName { get; set; }
 
+        /// <summary>
+        /// <para>The resource types. If you leave this parameter empty, resources of all supported types will be queried.</para>
+        /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]
         public List<string> ResourceTypes { get; set; }
 
         /// <summary>
+        /// <para>The client usage scenario. Set the value to <c>desktop</c>.</para>
+        /// <para>Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>desktop: cloud computers.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>desktop</para>
         /// </summary>
@@ -202,6 +304,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string Scene { get; set; }
 
         /// <summary>
+        /// <para>The ID of the searched region. You can specify this parameter to filter cloud resources in specific regions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -210,6 +314,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string SearchRegionId { get; set; }
 
         /// <summary>
+        /// <para>The session ID. You can call the <c>GetLoginToken</c> operation to retrieve the session ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cd45e873-650d-4d70-acb9-f996187a****</para>
         /// </summary>
@@ -218,6 +324,13 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>The sorting method.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ASC (default): the ascending order.</description></item>
+        /// <item><description>DESC: the descending order.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>ASC</para>
         /// </summary>

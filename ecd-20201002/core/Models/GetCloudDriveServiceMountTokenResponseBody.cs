@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The tokens.</para>
+        /// </summary>
         [NameInMap("Token")]
         [Validation(Required=false)]
         public GetCloudDriveServiceMountTokenResponseBodyToken Token { get; set; }
@@ -46,6 +49,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The token.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>7836fa6eced7dc8d54c775k34iu3h4i2kh534f****</para>
             /// </summary>
@@ -54,6 +59,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string Token { get; set; }
 
             /// <summary>
+            /// <para>The total capacity of the enterprise drive. Unit: GiB</para>
+            /// 
             /// <b>Example:</b>
             /// <para>6050416754750</para>
             /// </summary>

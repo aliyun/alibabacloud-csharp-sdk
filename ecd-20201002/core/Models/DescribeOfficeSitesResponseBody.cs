@@ -9,10 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class DescribeOfficeSitesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The office networks.</para>
+        /// </summary>
         [NameInMap("OfficeSites")]
         [Validation(Required=false)]
         public List<DescribeOfficeSitesResponseBodyOfficeSites> OfficeSites { get; set; }
         public class DescribeOfficeSitesResponseBodyOfficeSites : TeaModel {
+            /// <summary>
+            /// <para>aliuid</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>125552</para>
+            /// </summary>
+            [NameInMap("AliUid")]
+            [Validation(Required=false)]
+            public long? AliUid { get; set; }
+
+            /// <summary>
+            /// <para>biztype</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ENTERPRISE</para>
+            /// </summary>
+            [NameInMap("BizType")]
+            [Validation(Required=false)]
+            public int? BizType { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>VPC</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class IsKeepAliveResponseBody : TeaModel {
         /// <summary>
+        /// <para>Identifies whether the user should remain logged on to the client.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public bool? IsKeepAlive { get; set; }
 
         /// <summary>
+        /// <para>The office network ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-885351****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The unique ID (UID) of the Alibaba Cloud account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>141631846826****</para>
         /// </summary>

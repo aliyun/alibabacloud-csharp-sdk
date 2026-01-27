@@ -32,6 +32,17 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string ClientOS { get; set; }
 
         /// <summary>
+        /// <para>The type of the client.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>html5: web client</description></item>
+        /// <item><description>Linux: self-developed hardware terminal</description></item>
+        /// <item><description>android: Android client</description></item>
+        /// <item><description>windows: Windows client</description></item>
+        /// <item><description>ios: iOS client</description></item>
+        /// <item><description>macos: macOS client</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>windows</para>
         /// </summary>
@@ -47,11 +58,31 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string ClientVersion { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{
+        ///       &quot;startApplication&quot;: {
+        ///             &quot;startApplicationList&quot;: [
+        ///                   {
+        ///                         &quot;sessionName&quot;: &quot;&quot;,
+        ///                         &quot;appList&quot;: [
+        ///                               {
+        ///                                     &quot;appPath&quot;: &quot;C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe&quot;,
+        ///                                     &quot;appParameter&quot;: &quot;<a href="http://www.example.com">www.example.com</a> <a href="http://www.example1.com">www.example1.com</a>&quot;
+        ///                               }
+        ///                         ]
+        ///                   }
+        ///             ]
+        ///       }
+        /// }</para>
+        /// </summary>
         [NameInMap("CommandContent")]
         [Validation(Required=false)]
         public string CommandContent { get; set; }
 
         /// <summary>
+        /// <para>The cloud compute ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ecd-gx2x1dhsmucyy****</para>
         /// </summary>
@@ -74,6 +105,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -99,14 +131,29 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
+        /// <summary>
+        /// <para>The tags. You can specify 1 to 20 tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<GetConnectionTicketRequestTag> Tag { get; set; }
         public class GetConnectionTicketRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key. If you specify the <c>Tag</c> parameter, you must also specify the <c>Key</c> parameter. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c> and contain only spaces.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value. You can specify an empty string as a tag value. A tag value can be up to 128 characters in length and cannot start with <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -114,6 +161,9 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         }
 
         /// <summary>
+        /// <para>The ID of the cloud computer connection task.\
+        /// The first time you call the GetConnectionTicket operation, you do not need to configure this parameter. When you call the GetConnectionTicket operation later, set this parameter to the value of the <c>TaskId</c> parameter returned from the previous invocation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2afbad19-778a-4fc5-9674-1f19c638****</para>
         /// </summary>
@@ -121,6 +171,14 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
+        [NameInMap("TicketBlackList")]
+        [Validation(Required=false)]
+        public List<string> TicketBlackList { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>28c80e90-f71e-4c23-93d6-1225329cf949</para>
+        /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]
         public string Uuid { get; set; }

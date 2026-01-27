@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class SetFingerPrintTemplateResponseBody : TeaModel {
         /// <summary>
+        /// <para>The encrypted password.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0711abb9-4cf8-41b2-9d0e-b51209468631;da4VFPNxwY3CZegFjOrCNw==;iHp2l9/qGcfD4tWx7jZIZQ==</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string EncryptedPassword { get; set; }
 
         /// <summary>
+        /// <para>The index.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public int? Index { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CDE666EA-4FCD-5024-895C-8698E3D3****</para>
         /// </summary>

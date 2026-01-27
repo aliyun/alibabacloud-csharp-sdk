@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class VerifyCredentialResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D5F0BDFB-A229-5F1D-B790-33709D43****</para>
         /// </summary>

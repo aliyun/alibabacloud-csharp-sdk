@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class DeleteFingerPrintTemplateResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>134BD0B2-B848-5743-9CE2-C1FD3D5F****</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class SetFingerPrintTemplateDescriptionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BBD7DFD1-A5DE-51D9-8FD6-3BF54EF4****</para>
         /// </summary>

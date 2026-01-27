@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class ApproveFotaUpdateRequest : TeaModel {
         /// <summary>
+        /// <para>The application version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string AppVersion { get; set; }
 
         /// <summary>
+        /// <para>The client ID. The system generates a unique ID for each client.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string ClientId { get; set; }
 
         /// <summary>
+        /// <para>The cloud computer ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ecd-138dsptkrt00u****</para>
         /// </summary>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string DesktopId { get; set; }
 
         /// <summary>
+        /// <para>The logon token.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string LoginToken { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +64,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The session ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4771b873-c757-4893-973c-7f5beejh****</para>
         /// </summary>
@@ -65,10 +73,28 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
+        /// <summary>
+        /// <para>The state of the cloud computer after the OTA update.</para>
+        /// <remarks>
+        /// <para> This parameter is not publicly available. After the OTA update is complete, the state of the cloud computer changes to <c>RUNNING</c>.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Set the value to running.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>running</para>
+        /// </summary>
         [NameInMap("TargetStatus")]
         [Validation(Required=false)]
         public string TargetStatus { get; set; }
 
+        /// <summary>
+        /// <para>The unique identifier of the client. To view the unique identifier of an Alibaba Cloud Workspace client, go to the client logon page and click on &quot;About.&quot;</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>28c80e90-f71e-4c23-93d6-1225329c****</para>
+        /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]
         public string Uuid { get; set; }

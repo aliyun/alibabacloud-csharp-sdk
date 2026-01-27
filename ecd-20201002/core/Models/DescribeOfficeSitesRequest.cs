@@ -33,6 +33,16 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>uuid</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ASDASD</para>
+        /// </summary>
+        [NameInMap("Uuid")]
+        [Validation(Required=false)]
+        public string Uuid { get; set; }
+
     }
 
 }
