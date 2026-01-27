@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public KubeletConfig KubeletConfig { get; set; }
 
+        [NameInMap("node_names")]
+        [Validation(Required=false)]
+        public List<string> NodeNames { get; set; }
+
         /// <summary>
         /// <para>The OS configuration.</para>
         /// </summary>
