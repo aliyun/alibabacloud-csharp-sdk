@@ -651,6 +651,36 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public string VpcInstanceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("zoneCount")]
+            [Validation(Required=false)]
+            public int? ZoneCount { get; set; }
+
+            [NameInMap("zoneInfos")]
+            [Validation(Required=false)]
+            public List<ListInstanceResponseBodyResultZoneInfos> ZoneInfos { get; set; }
+            public class ListInstanceResponseBodyResultZoneInfos : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>NORMAL</para>
+                /// </summary>
+                [NameInMap("status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-i</para>
+                /// </summary>
+                [NameInMap("zoneId")]
+                [Validation(Required=false)]
+                public string ZoneId { get; set; }
+
+            }
+
         }
 
     }
