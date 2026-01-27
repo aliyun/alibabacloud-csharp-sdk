@@ -8,41 +8,51 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class DetachRCDiskRequest : TeaModel {
+    public class ModifyRCDiskAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The reserved parameter. This parameter is not supported.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("BurstingEnabled")]
+        [Validation(Required=false)]
+        public bool? BurstingEnabled { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DeleteWithInstance")]
         [Validation(Required=false)]
         public bool? DeleteWithInstance { get; set; }
 
         /// <summary>
-        /// <para>The ID of the disk that you want to detach.</para>
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rcd-f8zh55g5gbk1byjr****</para>
+        /// <para>rcd-wz9c8isqly8637zw****</para>
         /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>rc-dh2jf9n6j4s14926****</para>
+        /// <para>testDisk</para>
         /// </summary>
-        [NameInMap("InstanceId")]
+        [NameInMap("DiskName")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string DiskName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

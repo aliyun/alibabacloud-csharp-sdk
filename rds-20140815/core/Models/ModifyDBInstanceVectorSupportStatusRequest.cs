@@ -8,27 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class DeleteRCDiskRequest : TeaModel {
+    public class ModifyDBInstanceVectorSupportStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud disk that you want to release.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rcd-wz9c8isqly8637zw****</para>
+        /// <para>rm-2vc2bn5c5b7g6****</para>
         /// </summary>
-        [NameInMap("DiskId")]
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public string DiskId { get; set; }
+        public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>Scheduled</para>
         /// </summary>
-        [NameInMap("RegionId")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Status { get; set; }
 
     }
 

@@ -128,6 +128,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string NodeStatus { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("PodCount")]
+            [Validation(Required=false)]
+            public long? PodCount { get; set; }
+
+            /// <summary>
             /// <para>The runtime of the ACK cluster.</para>
             /// 
             /// <b>Example:</b>

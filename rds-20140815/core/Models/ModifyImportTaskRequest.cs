@@ -8,34 +8,33 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class StopRCInstanceRequest : TeaModel {
+    public class ModifyImportTaskRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to forcefully stop the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
-        [NameInMap("ForceStop")]
-        [Validation(Required=false)]
-        public bool? ForceStop { get; set; }
-
-        /// <summary>
-        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rc-m5sc1271fv344a1r****</para>
+        /// <para>rm-2ze63v2p3o3k****</para>
         /// </summary>
-        [NameInMap("InstanceId")]
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CANCEL</para>
+        /// </summary>
+        [NameInMap("Operation")]
+        [Validation(Required=false)]
+        public string Operation { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -44,9 +43,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("StoppedMode")]
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1234567</para>
+        /// </summary>
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public string StoppedMode { get; set; }
+        public string TaskId { get; set; }
 
     }
 

@@ -10,6 +10,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCClusterNodesRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>c919424d85a644078ab1575c3a02c****</para>
+        /// </summary>
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rcnpf5e3ee4a65104cf0801f94850d37****</para>
+        /// </summary>
+        [NameInMap("NodePoolId")]
+        [Validation(Required=false)]
+        public string NodePoolId { get; set; }
+
+        /// <summary>
         /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>

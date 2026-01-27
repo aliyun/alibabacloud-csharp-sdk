@@ -50,6 +50,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>2018-01-01T12:05Z</para>
+        /// </summary>
+        [NameInMap("RebootTime")]
+        [Validation(Required=false)]
+        public string RebootTime { get; set; }
+
+        /// <summary>
         /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>

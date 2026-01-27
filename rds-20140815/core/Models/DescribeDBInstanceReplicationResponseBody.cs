@@ -28,6 +28,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string GtidExecuted { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>COMPLETED</para>
+        /// </summary>
+        [NameInMap("ImportStatus")]
+        [Validation(Required=false)]
+        public string ImportStatus { get; set; }
+
+        /// <summary>
         /// <para>The replication latency. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>

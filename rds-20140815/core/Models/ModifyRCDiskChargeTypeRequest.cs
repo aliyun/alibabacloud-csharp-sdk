@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyRCDiskChargeTypeRequest : TeaModel {
+        [NameInMap("AutoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>
@@ -48,14 +52,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>Postpaid</para>
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Month</para>
+        /// </summary>
+        [NameInMap("Period")]
+        [Validation(Required=false)]
+        public string Period { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -77,6 +87,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("UsedTime")]
+        [Validation(Required=false)]
+        public int? UsedTime { get; set; }
 
     }
 

@@ -41,6 +41,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceIdsShrink { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>2018-01-01T12:05Z</para>
+        /// </summary>
+        [NameInMap("RebootTime")]
+        [Validation(Required=false)]
+        public string RebootTime { get; set; }
+
+        /// <summary>
         /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
