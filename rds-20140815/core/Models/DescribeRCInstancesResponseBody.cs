@@ -78,14 +78,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>testHostName</para>
-            /// </summary>
-            [NameInMap("EcsHostName")]
-            [Validation(Required=false)]
-            public string EcsHostName { get; set; }
-
             [NameInMap("ExpiredTime")]
             [Validation(Required=false)]
             public string ExpiredTime { get; set; }
@@ -162,22 +154,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string NodeType { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>CentOS  7.4 64 位</para>
-            /// </summary>
-            [NameInMap("OSName")]
-            [Validation(Required=false)]
-            public string OSName { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>linux</para>
-            /// </summary>
-            [NameInMap("OSType")]
-            [Validation(Required=false)]
-            public string OSType { get; set; }
-
             [NameInMap("PublicIp")]
             [Validation(Required=false)]
             public string PublicIp { get; set; }
@@ -201,14 +177,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SpotStrategy { get; set; }
 
             /// <summary>
-            /// <b>Example:</b>
-            /// <para>2017-12-10T04:04Z</para>
-            /// </summary>
-            [NameInMap("StartTime")]
-            [Validation(Required=false)]
-            public string StartTime { get; set; }
-
-            /// <summary>
             /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Pending</b></description></item>
@@ -227,10 +195,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-
-            [NameInMap("StoppedMode")]
-            [Validation(Required=false)]
-            public string StoppedMode { get; set; }
 
             [NameInMap("TagResources")]
             [Validation(Required=false)]

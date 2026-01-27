@@ -50,10 +50,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("StoppedMode")]
-        [Validation(Required=false)]
-        public string StoppedMode { get; set; }
-
     }
 
 }

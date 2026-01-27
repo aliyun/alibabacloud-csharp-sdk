@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class ModifyRCDiskChargeTypeResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>Prepaid</para>
+        /// <para>POSTPAY</para>
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]

@@ -119,10 +119,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public bool? InstantAccess { get; set; }
 
-            [NameInMap("LastModifiedTime")]
-            [Validation(Required=false)]
-            public string LastModifiedTime { get; set; }
-
             /// <summary>
             /// <para>The progress of the snapshot creation task in percentage.</para>
             /// 
