@@ -346,6 +346,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public int? SystemDiskSize { get; set; }
 
+            [NameInMap("VirtualKubeletIp")]
+            [Validation(Required=false)]
+            public string VirtualKubeletIp { get; set; }
+
             [NameInMap("VirtualNodePoolId")]
             [Validation(Required=false)]
             public string VirtualNodePoolId { get; set; }
