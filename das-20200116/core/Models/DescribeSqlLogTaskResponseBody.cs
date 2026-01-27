@@ -126,9 +126,41 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public string AccountName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>[&quot;col1&quot;]</para>
+                /// </summary>
+                [NameInMap("AffectColumns")]
+                [Validation(Required=false)]
+                public string AffectColumns { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10.0.0.1xx</para>
+                /// </summary>
+                [NameInMap("ClientIp")]
+                [Validation(Required=false)]
+                public string ClientIp { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>3306</para>
+                /// </summary>
+                [NameInMap("ClientPort")]
+                [Validation(Required=false)]
+                public long? ClientPort { get; set; }
+
                 [NameInMap("Collection")]
                 [Validation(Required=false)]
                 public string Collection { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>ld-******</para>
+                /// </summary>
+                [NameInMap("ConnectionId")]
+                [Validation(Required=false)]
+                public string ConnectionId { get; set; }
 
                 /// <summary>
                 /// <para>The execution duration. Unit: millisecond.</para>
@@ -261,6 +293,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string ParallelQueueTime { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>[1, &quot;das&quot;]</para>
+                /// </summary>
+                [NameInMap("Params")]
+                [Validation(Required=false)]
+                public string Params { get; set; }
+
+                /// <summary>
                 /// <para>The number of physical asynchronous reads.</para>
                 /// 
                 /// <b>Example:</b>
@@ -291,6 +331,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? PhysicSyncRead { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>MySQL</para>
+                /// </summary>
+                [NameInMap("Protected")]
+                [Validation(Required=false)]
+                public string Protected { get; set; }
+
+                /// <summary>
                 /// <para>The number of rows returned.</para>
                 /// 
                 /// <b>Example:</b>
@@ -299,6 +347,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [NameInMap("ReturnRows")]
                 [Validation(Required=false)]
                 public long? ReturnRows { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>23</para>
+                /// </summary>
+                [NameInMap("RowKey")]
+                [Validation(Required=false)]
+                public string RowKey { get; set; }
 
                 /// <summary>
                 /// <para>The total number of rows updated or returned by the CNs of the PolarDB-X 2.0 instance.</para>
@@ -330,6 +386,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public long? Scnt { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>sql</para>
+                /// </summary>
                 [NameInMap("SqlCommand")]
                 [Validation(Required=false)]
                 public long? SqlCommand { get; set; }
@@ -382,6 +442,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [NameInMap("State")]
                 [Validation(Required=false)]
                 public string State { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>das</para>
+                /// </summary>
+                [NameInMap("TableName")]
+                [Validation(Required=false)]
+                public string TableName { get; set; }
 
                 /// <summary>
                 /// <para>The thread ID.</para>
