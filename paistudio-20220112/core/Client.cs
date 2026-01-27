@@ -7239,6 +7239,152 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>您可以通过OperateNode对节点进行操作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateNodeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateNodeResponse
+        /// </returns>
+        public OperateNodeResponse OperateNodeWithOptions(string NodeId, OperateNodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operation))
+            {
+                body["Operation"] = request.Operation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationParameters))
+            {
+                body["OperationParameters"] = request.OperationParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateNode",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/nodes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodeId),
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateNodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>您可以通过OperateNode对节点进行操作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateNodeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateNodeResponse
+        /// </returns>
+        public async Task<OperateNodeResponse> OperateNodeWithOptionsAsync(string NodeId, OperateNodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operation))
+            {
+                body["Operation"] = request.Operation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationParameters))
+            {
+                body["OperationParameters"] = request.OperationParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateNode",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/nodes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(NodeId),
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateNodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>您可以通过OperateNode对节点进行操作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateNodeResponse
+        /// </returns>
+        public OperateNodeResponse OperateNode(string NodeId, OperateNodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return OperateNodeWithOptions(NodeId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>您可以通过OperateNode对节点进行操作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateNodeResponse
+        /// </returns>
+        public async Task<OperateNodeResponse> OperateNodeAsync(string NodeId, OperateNodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await OperateNodeWithOptionsAsync(NodeId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>扩缩容Quota</para>
         /// </summary>
         /// 
