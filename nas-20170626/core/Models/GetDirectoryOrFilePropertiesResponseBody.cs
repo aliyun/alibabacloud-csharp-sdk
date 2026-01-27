@@ -104,6 +104,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("OfflineDuration")]
+            [Validation(Required=false)]
+            public long? OfflineDuration { get; set; }
+
+            [NameInMap("OfflineUnchangedDuration")]
+            [Validation(Required=false)]
+            public long? OfflineUnchangedDuration { get; set; }
+
             /// <summary>
             /// <para>The time when the last data retrieval task was run.</para>
             /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>

@@ -114,6 +114,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("OfflineDuration")]
+            [Validation(Required=false)]
+            public long? OfflineDuration { get; set; }
+
+            [NameInMap("OfflineUnchangedDuration")]
+            [Validation(Required=false)]
+            public long? OfflineUnchangedDuration { get; set; }
+
             /// <summary>
             /// <para>The ID of the portable account. This parameter is returned and valid only if the value of the ProtocolType parameter is SMB and RAM-based access control is enabled.</para>
             /// 

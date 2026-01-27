@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public ModifyFileSystemRequestOptions Options { get; set; }
         public class ModifyFileSystemRequestOptions : TeaModel {
+            [NameInMap("EnableABE")]
+            [Validation(Required=false)]
+            public bool? EnableABE { get; set; }
+
             /// <summary>
             /// <para>Specifies whether to enable the oplock feature. Valid values:</para>
             /// <list type="bullet">
