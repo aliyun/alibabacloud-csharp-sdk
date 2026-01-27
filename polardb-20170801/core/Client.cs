@@ -4231,6 +4231,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 request.EndpointsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Endpoints, "Endpoints", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MemApplicationSpec))
+            {
+                request.MemApplicationSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MemApplicationSpec, "MemApplicationSpec", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationType))
             {
@@ -4272,6 +4276,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["Endpoints"] = request.EndpointsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemApplicationSpecShrink))
+            {
+                query["MemApplicationSpec"] = request.MemApplicationSpecShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {
                 query["PayType"] = request.PayType;
@@ -4295,6 +4303,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
@@ -4359,6 +4371,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 request.EndpointsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Endpoints, "Endpoints", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MemApplicationSpec))
+            {
+                request.MemApplicationSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MemApplicationSpec, "MemApplicationSpec", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationType))
             {
@@ -4400,6 +4416,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["Endpoints"] = request.EndpointsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemApplicationSpecShrink))
+            {
+                query["MemApplicationSpec"] = request.MemApplicationSpecShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {
                 query["PayType"] = request.PayType;
@@ -4423,6 +4443,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
@@ -16206,6 +16230,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["ApplicationIds"] = request.ApplicationIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationTypes))
+            {
+                query["ApplicationTypes"] = request.ApplicationTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
@@ -16263,6 +16291,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationIds))
             {
                 query["ApplicationIds"] = request.ApplicationIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationTypes))
+            {
+                query["ApplicationTypes"] = request.ApplicationTypes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {

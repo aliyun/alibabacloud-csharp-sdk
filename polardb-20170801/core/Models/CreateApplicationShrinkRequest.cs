@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string EndpointsShrink { get; set; }
 
+        [NameInMap("MemApplicationSpec")]
+        [Validation(Required=false)]
+        public string MemApplicationSpecShrink { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>Postpaid</para>
@@ -124,6 +128,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("SecurityGroupId")]
+        [Validation(Required=false)]
+        public string SecurityGroupId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

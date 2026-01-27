@@ -323,6 +323,36 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string MaintainStartTime { get; set; }
 
+        [NameInMap("MemApplicationAttribute")]
+        [Validation(Required=false)]
+        public DescribeApplicationAttributeResponseBodyMemApplicationAttribute MemApplicationAttribute { get; set; }
+        public class DescribeApplicationAttributeResponseBodyMemApplicationAttribute : TeaModel {
+            [NameInMap("DbName")]
+            [Validation(Required=false)]
+            public string DbName { get; set; }
+
+            [NameInMap("EmbedderModelName")]
+            [Validation(Required=false)]
+            public string EmbedderModelName { get; set; }
+
+            [NameInMap("LlmModelName")]
+            [Validation(Required=false)]
+            public string LlmModelName { get; set; }
+
+            [NameInMap("ProjectName")]
+            [Validation(Required=false)]
+            public string ProjectName { get; set; }
+
+            [NameInMap("RerankerModelName")]
+            [Validation(Required=false)]
+            public string RerankerModelName { get; set; }
+
+            [NameInMap("UserName")]
+            [Validation(Required=false)]
+            public string UserName { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>Postpaid</para>

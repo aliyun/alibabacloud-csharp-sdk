@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ApplicationIds { get; set; }
 
+        [NameInMap("ApplicationTypes")]
+        [Validation(Required=false)]
+        public string ApplicationTypes { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>pc-**************</para>

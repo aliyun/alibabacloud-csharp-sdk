@@ -169,6 +169,40 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         }
 
+        [NameInMap("MemApplicationSpec")]
+        [Validation(Required=false)]
+        public CreateApplicationRequestMemApplicationSpec MemApplicationSpec { get; set; }
+        public class CreateApplicationRequestMemApplicationSpec : TeaModel {
+            [NameInMap("DbName")]
+            [Validation(Required=false)]
+            public string DbName { get; set; }
+
+            [NameInMap("DbPassword")]
+            [Validation(Required=false)]
+            public string DbPassword { get; set; }
+
+            [NameInMap("DbUser")]
+            [Validation(Required=false)]
+            public string DbUser { get; set; }
+
+            [NameInMap("EmbedderModel")]
+            [Validation(Required=false)]
+            public string EmbedderModel { get; set; }
+
+            [NameInMap("LlmModel")]
+            [Validation(Required=false)]
+            public string LlmModel { get; set; }
+
+            [NameInMap("ProjectName")]
+            [Validation(Required=false)]
+            public string ProjectName { get; set; }
+
+            [NameInMap("RerankerModel")]
+            [Validation(Required=false)]
+            public string RerankerModel { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>Postpaid</para>
@@ -216,6 +250,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("SecurityGroupId")]
+        [Validation(Required=false)]
+        public string SecurityGroupId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
