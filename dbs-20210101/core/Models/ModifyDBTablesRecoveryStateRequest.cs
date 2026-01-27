@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         [Validation(Required=false)]
         public string Category { get; set; }
 
+        [NameInMap("ClusterName")]
+        [Validation(Required=false)]
+        public string ClusterName { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

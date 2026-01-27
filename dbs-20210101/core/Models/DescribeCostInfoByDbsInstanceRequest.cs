@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dbs20210101.Models
 {
-    public class CreateAdvancedPolicyRequest : TeaModel {
+    public class DescribeCostInfoByDbsInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the PolarDB instance.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>pc-2ze3nrr64c5****</para>
+        /// <para>dbsr1l3ro21****</para>
         /// </summary>
-        [NameInMap("InstanceName")]
+        [NameInMap("BackupPlanId")]
         [Validation(Required=false)]
-        public string InstanceName { get; set; }
+        public string BackupPlanId { get; set; }
 
         /// <summary>
-        /// <para>The region in which backup sets reside.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>cn-shanghai</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionCode")]
         [Validation(Required=false)]

@@ -8,40 +8,38 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dbs20210101.Models
 {
-    public class DeleteSandboxInstanceResponseBody : TeaModel {
+    public class ConfigureBackupSetInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>Param.NotFound</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>The returned data.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>operation forbidden due to sandbox is creating.</para>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public ConfigureBackupSetInfoResponseBodyData Data { get; set; }
+        public class ConfigureBackupSetInfoResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ee-d84wwm3ca****</para>
+            /// </summary>
+            [NameInMap("BackupSetId")]
+            [Validation(Required=false)]
+            public string BackupSetId { get; set; }
+
+        }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>Param.NotFound</para>
+        /// <para>Request.Forbidden</para>
         /// </summary>
         [NameInMap("ErrCode")]
         [Validation(Required=false)]
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>The specified parameter %s value is not valid.</para>
         /// </summary>
@@ -50,28 +48,22 @@ namespace AlibabaCloud.SDK.Dbs20210101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>The specified parameter %s value is not valid.</para>
+        /// <para>Successful!</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>4F1888AC-1138-4995-B9FE-D2734F61C058</para>
+        /// <para>54A63B3B-AA10-1CC3-A6BB-6CCE98D1****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

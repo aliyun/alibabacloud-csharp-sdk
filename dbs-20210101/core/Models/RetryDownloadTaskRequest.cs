@@ -8,26 +8,38 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dbs20210101.Models
 {
-    public class CreateAdvancedPolicyRequest : TeaModel {
+    public class RetryDownloadTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the PolarDB instance.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>pc-2ze3nrr64c5****</para>
+        /// <para>dds-example</para>
+        /// </summary>
+        [NameInMap("ClusterName")]
+        [Validation(Required=false)]
+        public string ClusterName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rm-example</para>
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The region in which backup sets reside.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>cn-shanghai</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionCode")]
         [Validation(Required=false)]
         public string RegionCode { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dt-example</para>
+        /// </summary>
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
 
     }
 
