@@ -1336,6 +1336,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressGroups))
+            {
+                bodyFlat["AddressGroups"] = request.AddressGroups;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Addresses))
             {
                 bodyFlat["Addresses"] = request.Addresses;
@@ -1343,6 +1347,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BrowserAccessStatus))
             {
                 body["BrowserAccessStatus"] = request.BrowserAccessStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigMode))
+            {
+                body["ConfigMode"] = request.ConfigMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -1435,6 +1443,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressGroups))
+            {
+                bodyFlat["AddressGroups"] = request.AddressGroups;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Addresses))
             {
                 bodyFlat["Addresses"] = request.Addresses;
@@ -1442,6 +1454,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BrowserAccessStatus))
             {
                 body["BrowserAccessStatus"] = request.BrowserAccessStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigMode))
+            {
+                body["ConfigMode"] = request.ConfigMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -14177,6 +14193,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressGroups))
+            {
+                bodyFlat["AddressGroups"] = request.AddressGroups;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Addresses))
             {
                 bodyFlat["Addresses"] = request.Addresses;
@@ -14184,6 +14204,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 body["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigMode))
+            {
+                body["ConfigMode"] = request.ConfigMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -14208,6 +14232,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyType))
             {
                 body["ModifyType"] = request.ModifyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortRanges))
             {
@@ -14275,6 +14303,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressGroups))
+            {
+                bodyFlat["AddressGroups"] = request.AddressGroups;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Addresses))
             {
                 bodyFlat["Addresses"] = request.Addresses;
@@ -14282,6 +14314,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 body["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigMode))
+            {
+                body["ConfigMode"] = request.ConfigMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -14306,6 +14342,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyType))
             {
                 body["ModifyType"] = request.ModifyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortRanges))
             {
@@ -14430,6 +14470,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyType))
             {
                 body["ModifyType"] = request.ModifyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyAction))
             {
@@ -14558,6 +14602,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyType))
             {
                 body["ModifyType"] = request.ModifyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyAction))
             {

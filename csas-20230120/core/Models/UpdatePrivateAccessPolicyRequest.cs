@@ -143,6 +143,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string ModifyType { get; set; }
 
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         /// <summary>
         /// <para>Action of the private access policy. Values:</para>
         /// <list type="bullet">

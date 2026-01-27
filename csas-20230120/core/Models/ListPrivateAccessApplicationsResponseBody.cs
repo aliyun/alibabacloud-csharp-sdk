@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public List<ListPrivateAccessApplicationsResponseBodyApplications> Applications { get; set; }
         public class ListPrivateAccessApplicationsResponseBodyApplications : TeaModel {
+            [NameInMap("AddressGroups")]
+            [Validation(Required=false)]
+            public List<AddressGroup> AddressGroups { get; set; }
+
             [NameInMap("Addresses")]
             [Validation(Required=false)]
             public List<string> Addresses { get; set; }
@@ -32,6 +36,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [NameInMap("BrowserAccessStatus")]
             [Validation(Required=false)]
             public string BrowserAccessStatus { get; set; }
+
+            [NameInMap("ConfigMode")]
+            [Validation(Required=false)]
+            public string ConfigMode { get; set; }
 
             [NameInMap("ConnectorIds")]
             [Validation(Required=false)]

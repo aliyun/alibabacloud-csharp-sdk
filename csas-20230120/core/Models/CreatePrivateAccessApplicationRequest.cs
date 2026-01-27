@@ -9,9 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreatePrivateAccessApplicationRequest : TeaModel {
+        [NameInMap("AddressGroups")]
+        [Validation(Required=false)]
+        public List<AddressGroup> AddressGroups { get; set; }
+
         /// <summary>
         /// <para>The addresses of the office applications. You can enter up to 1,000 addresses of office applications.</para>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Addresses")]
         [Validation(Required=false)]
@@ -30,6 +33,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [NameInMap("BrowserAccessStatus")]
         [Validation(Required=false)]
         public string BrowserAccessStatus { get; set; }
+
+        [NameInMap("ConfigMode")]
+        [Validation(Required=false)]
+        public string ConfigMode { get; set; }
 
         /// <summary>
         /// <para>The description of the office application. The value must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</para>
@@ -78,7 +85,6 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
         /// <summary>
         /// <para>The port ranges of the office applications. You can enter up to 65,535 port ranges. Multiple port ranges cannot be duplicated or overlapped.</para>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PortRanges")]
         [Validation(Required=false)]
