@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionNo")]
         [Validation(Required=false)]
         public string RegionNo { get; set; }

@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
