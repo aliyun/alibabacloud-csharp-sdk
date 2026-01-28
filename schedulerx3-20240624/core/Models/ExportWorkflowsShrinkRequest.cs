@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ExportWorkflowsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>test-app</para>
         /// </summary>

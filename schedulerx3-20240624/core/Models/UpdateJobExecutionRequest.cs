@@ -8,8 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
-    public class ExportWorkflowsRequest : TeaModel {
+    public class UpdateJobExecutionRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-app</para>
         /// </summary>
@@ -18,7 +20,6 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>A short description of struct</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,9 +29,23 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("WorkflowId")]
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1310630367761285120</para>
+        /// </summary>
+        [NameInMap("JobExecutionId")]
         [Validation(Required=false)]
-        public List<long?> WorkflowId { get; set; }
+        public string JobExecutionId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2023-10-01 12:00:00</para>
+        /// </summary>
+        [NameInMap("ScheduleTime")]
+        [Validation(Required=false)]
+        public long? ScheduleTime { get; set; }
 
     }
 

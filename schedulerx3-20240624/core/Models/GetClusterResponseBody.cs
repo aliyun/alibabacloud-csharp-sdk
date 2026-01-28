@@ -104,6 +104,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>192.168.1.0/24</para>
+            /// </summary>
+            [NameInMap("IpWhitelist")]
+            [Validation(Required=false)]
+            public string IpWhitelist { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
             [NameInMap("JobNum")]

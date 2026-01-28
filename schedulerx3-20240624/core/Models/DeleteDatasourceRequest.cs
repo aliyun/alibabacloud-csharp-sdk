@@ -8,17 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
-    public class ExportWorkflowsRequest : TeaModel {
+    public class DeleteDatasourceRequest : TeaModel {
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>test-app</para>
-        /// </summary>
-        [NameInMap("AppName")]
-        [Validation(Required=false)]
-        public string AppName { get; set; }
-
-        /// <summary>
-        /// <para>A short description of struct</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,9 +19,15 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("WorkflowId")]
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>195</para>
+        /// </summary>
+        [NameInMap("DatasourceId")]
         [Validation(Required=false)]
-        public List<long?> WorkflowId { get; set; }
+        public long? DatasourceId { get; set; }
 
     }
 
