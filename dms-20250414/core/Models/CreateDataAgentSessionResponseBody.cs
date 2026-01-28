@@ -99,6 +99,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [Validation(Required=false)]
                 public string Mode { get; set; }
 
+                [NameInMap("UserOssBucket")]
+                [Validation(Required=false)]
+                public string UserOssBucket { get; set; }
+
             }
 
             /// <summary>
