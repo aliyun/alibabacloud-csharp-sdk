@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.ARMS20181015.Models
         [Validation(Required=false)]
         public List<string> Dimensions { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
@@ -43,10 +46,16 @@ namespace AlibabaCloud.SDK.ARMS20181015.Models
         [Validation(Required=false)]
         public int? Limit { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Measures")]
         [Validation(Required=false)]
         public List<string> Measures { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Metric")]
         [Validation(Required=false)]
         public string Metric { get; set; }
@@ -63,6 +72,9 @@ namespace AlibabaCloud.SDK.ARMS20181015.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }

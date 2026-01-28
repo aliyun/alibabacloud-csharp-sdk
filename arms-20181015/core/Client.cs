@@ -73,6 +73,16 @@ namespace AlibabaCloud.SDK.ARMS20181015
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <param name="request">
+        /// ARMSQueryDataSetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ARMSQueryDataSetResponse
+        /// </returns>
         public ARMSQueryDataSetResponse ARMSQueryDataSetWithOptions(ARMSQueryDataSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -160,6 +170,16 @@ namespace AlibabaCloud.SDK.ARMS20181015
             return TeaModel.ToObject<ARMSQueryDataSetResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ARMSQueryDataSetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ARMSQueryDataSetResponse
+        /// </returns>
         public async Task<ARMSQueryDataSetResponse> ARMSQueryDataSetWithOptionsAsync(ARMSQueryDataSetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -247,18 +267,42 @@ namespace AlibabaCloud.SDK.ARMS20181015
             return TeaModel.ToObject<ARMSQueryDataSetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ARMSQueryDataSetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ARMSQueryDataSetResponse
+        /// </returns>
         public ARMSQueryDataSetResponse ARMSQueryDataSet(ARMSQueryDataSetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ARMSQueryDataSetWithOptions(request, runtime);
         }
 
+        /// <param name="request">
+        /// ARMSQueryDataSetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ARMSQueryDataSetResponse
+        /// </returns>
         public async Task<ARMSQueryDataSetResponse> ARMSQueryDataSetAsync(ARMSQueryDataSetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ARMSQueryDataSetWithOptionsAsync(request, runtime);
         }
 
+        /// <param name="request">
+        /// MetricQueryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MetricQueryResponse
+        /// </returns>
         public MetricQueryResponse MetricQueryWithOptions(MetricQueryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -330,6 +374,16 @@ namespace AlibabaCloud.SDK.ARMS20181015
             return TeaModel.ToObject<MetricQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// MetricQueryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MetricQueryResponse
+        /// </returns>
         public async Task<MetricQueryResponse> MetricQueryWithOptionsAsync(MetricQueryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -401,12 +455,26 @@ namespace AlibabaCloud.SDK.ARMS20181015
             return TeaModel.ToObject<MetricQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// MetricQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MetricQueryResponse
+        /// </returns>
         public MetricQueryResponse MetricQuery(MetricQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return MetricQueryWithOptions(request, runtime);
         }
 
+        /// <param name="request">
+        /// MetricQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MetricQueryResponse
+        /// </returns>
         public async Task<MetricQueryResponse> MetricQueryAsync(MetricQueryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

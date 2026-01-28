@@ -21,10 +21,18 @@ namespace AlibabaCloud.SDK.ARMS20181015.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1652803200000</para>
+        /// </summary>
         [NameInMap("endTime")]
         [Validation(Required=false)]
         public float? EndTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>创建时间</para>
+        /// </summary>
         [NameInMap("gmtCreate")]
         [Validation(Required=false)]
         public float? GmtCreate { get; set; }
@@ -37,14 +45,34 @@ namespace AlibabaCloud.SDK.ARMS20181015.Models
         [Validation(Required=false)]
         public string GrafanaWorkspaceDomain { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>on</para>
+        /// </summary>
+        [NameInMap("grafanaWorkspaceDomainStatus")]
+        [Validation(Required=false)]
+        public string GrafanaWorkspaceDomainStatus { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>experts_edition/advanced_edition/standard</para>
+        /// </summary>
         [NameInMap("grafanaWorkspaceEdition")]
         [Validation(Required=false)]
         public string GrafanaWorkspaceEdition { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>g-thisisademo666</para>
+        /// </summary>
         [NameInMap("grafanaWorkspaceId")]
         [Validation(Required=false)]
         public string GrafanaWorkspaceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>127.0.0.1:3000</para>
+        /// </summary>
         [NameInMap("grafanaWorkspaceIp")]
         [Validation(Required=false)]
         public string GrafanaWorkspaceIp { get; set; }
@@ -53,6 +81,10 @@ namespace AlibabaCloud.SDK.ARMS20181015.Models
         [Validation(Required=false)]
         public string GrafanaWorkspaceName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("maxAccount")]
         [Validation(Required=false)]
         public string MaxAccount { get; set; }
@@ -77,10 +109,18 @@ namespace AlibabaCloud.SDK.ARMS20181015.Models
         [Validation(Required=false)]
         public string PrivateIp { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>http/https</para>
+        /// </summary>
         [NameInMap("protocol")]
         [Validation(Required=false)]
         public string Protocol { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("regionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -93,10 +133,18 @@ namespace AlibabaCloud.SDK.ARMS20181015.Models
         [Validation(Required=false)]
         public bool? ShareSynced { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1.1.1.1</para>
+        /// </summary>
         [NameInMap("snatIp")]
         [Validation(Required=false)]
         public string SnatIp { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Starting/Running/Stop/DeleteSucceed</para>
+        /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }
@@ -119,6 +167,10 @@ namespace AlibabaCloud.SDK.ARMS20181015.Models
         [Validation(Required=false)]
         public List<string> UpgradeVersion { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>66666666</para>
+        /// </summary>
         [NameInMap("userId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
