@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         [Validation(Required=false)]
         public List<GetEmbodiedAIPlatformResourceUsageInfoResponseBodyGpuDetails> GpuDetails { get; set; }
         public class GetEmbodiedAIPlatformResourceUsageInfoResponseBodyGpuDetails : TeaModel {
+            [NameInMap("AllocatedUnit")]
+            [Validation(Required=false)]
+            public int? AllocatedUnit { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>ADB.MLLarge.2</para>
