@@ -192,9 +192,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The connection tracking configurations of the ENI.</para>
-        /// <para>Before you use this parameter, learn about how to manage connection timeout periods. For more information, see <a href="https://help.aliyun.com/document_detail/2865958.html">Manage connection timeout periods</a>.</para>
+        /// <para>Before you use the parameter, familiarize yourself with how to manage the timeout periods of connections. For more information, see <a href="https://help.aliyun.com/document_detail/2865958.html">Mange connection timeout periods</a>.</para>
         /// <remarks>
-        /// <para> This parameter is returned only if <c>Attribute</c> is set to <c>connectionTrackingConfiguration</c>.</para>
+        /// <para> This parameter is returned only when the value of the input parameter <c>Attribute</c> is: <c>connectionTrackingConfiguration</c>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ConnectionTrackingConfiguration")]

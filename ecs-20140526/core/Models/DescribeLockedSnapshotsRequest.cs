@@ -39,10 +39,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LockStatus { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100.</para>
+        /// <para>The maximum number of entries to return on each page. Maximum value: 100.</para>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description>If you do not specify this parameter or if you set this parameter to a value that is smaller than 10, the default value is 10.</description></item>
+        /// <item><description>If no value is set or the set value is less than 10, the default value is 10.</description></item>
         /// <item><description>If you set a value greater than 100, the default value is 100.</description></item>
         /// </list>
         /// 
