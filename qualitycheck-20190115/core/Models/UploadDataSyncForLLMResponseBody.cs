@@ -145,6 +145,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public int? Score { get; set; }
 
+                [NameInMap("TyxmPlusCount")]
+                [Validation(Required=false)]
+                public string TyxmPlusCount { get; set; }
+
+                [NameInMap("TyxmTurboCount")]
+                [Validation(Required=false)]
+                public string TyxmTurboCount { get; set; }
+
             }
 
         }
