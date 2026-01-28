@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string AiNodeType { get; set; }
 
+        [NameInMap("ApiKey")]
+        [Validation(Required=false)]
+        public string ApiKey { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2020-08-14T05:58:42Z</para>
