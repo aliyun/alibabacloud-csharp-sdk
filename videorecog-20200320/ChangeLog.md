@@ -1,3 +1,6 @@
+2026-01-28 Version: 2.0.11
+- Generated csharp 2020-03-20 for videorecog.
+
 2025-08-25 Version: 2.0.10
 - Generated csharp 2020-03-20 for videorecog.
 
