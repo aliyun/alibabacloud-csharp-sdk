@@ -2923,7 +2923,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询国际一口价在售域名列表</para>
+        /// <para>Queries the list of domain names for fixed-price orders at the international site (alibabacloud.com).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2965,7 +2965,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询国际一口价在售域名列表</para>
+        /// <para>Queries the list of domain names for fixed-price orders at the international site (alibabacloud.com).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3007,7 +3007,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询国际一口价在售域名列表</para>
+        /// <para>Queries the list of domain names for fixed-price orders at the international site (alibabacloud.com).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3025,7 +3025,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询国际一口价在售域名列表</para>
+        /// <para>Queries the list of domain names for fixed-price orders at the international site (alibabacloud.com).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5265,6 +5265,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryDomainByInstanceIdWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名分组信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDomainGroupListRequest
         /// </param>
@@ -5286,6 +5291,14 @@ namespace AlibabaCloud.SDK.Domain20180129
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderByType))
+            {
+                query["OrderByType"] = request.OrderByType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderKeyType))
+            {
+                query["OrderKeyType"] = request.OrderKeyType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowDeletingGroup))
             {
@@ -5314,6 +5327,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryDomainGroupListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名分组信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDomainGroupListRequest
         /// </param>
@@ -5335,6 +5353,14 @@ namespace AlibabaCloud.SDK.Domain20180129
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderByType))
+            {
+                query["OrderByType"] = request.OrderByType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderKeyType))
+            {
+                query["OrderKeyType"] = request.OrderKeyType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowDeletingGroup))
             {
@@ -5363,6 +5389,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryDomainGroupListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名分组信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDomainGroupListRequest
         /// </param>
@@ -5376,6 +5407,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryDomainGroupListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名分组信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryDomainGroupListRequest
         /// </param>
@@ -5411,6 +5447,10 @@ namespace AlibabaCloud.SDK.Domain20180129
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ccompany))
             {
                 query["Ccompany"] = request.Ccompany;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dns))
+            {
+                query["Dns"] = request.Dns;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainGroupId))
             {
@@ -5521,6 +5561,10 @@ namespace AlibabaCloud.SDK.Domain20180129
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ccompany))
             {
                 query["Ccompany"] = request.Ccompany;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dns))
+            {
+                query["Dns"] = request.Dns;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainGroupId))
             {

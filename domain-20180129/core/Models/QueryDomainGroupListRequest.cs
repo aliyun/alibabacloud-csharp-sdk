@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("OrderByType")]
+        [Validation(Required=false)]
+        public string OrderByType { get; set; }
+
+        [NameInMap("OrderKeyType")]
+        [Validation(Required=false)]
+        public string OrderKeyType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>false</para>

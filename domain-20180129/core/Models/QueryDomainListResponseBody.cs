@@ -55,6 +55,16 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                 [Validation(Required=false)]
                 public string ChgholderStatus { get; set; }
 
+                [NameInMap("DnsList")]
+                [Validation(Required=false)]
+                public QueryDomainListResponseBodyDataDomainDnsList DnsList { get; set; }
+                public class QueryDomainListResponseBodyDataDomainDnsList : TeaModel {
+                    [NameInMap("DnsList")]
+                    [Validation(Required=false)]
+                    public List<string> DnsList { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The state of real-name verification for the domain name. Valid values:</para>
                 /// <list type="bullet">

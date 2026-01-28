@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class GetIntlFixPriceDomainListUrlRequest : TeaModel {
         /// <summary>
+        /// <para>The date when the list is exported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20240809</para>
         /// </summary>

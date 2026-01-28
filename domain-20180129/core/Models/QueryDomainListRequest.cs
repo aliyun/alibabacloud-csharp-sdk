@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string Ccompany { get; set; }
 
+        [NameInMap("Dns")]
+        [Validation(Required=false)]
+        public string Dns { get; set; }
+
         /// <summary>
         /// <para>The ID of the domain name group.</para>
         /// 
