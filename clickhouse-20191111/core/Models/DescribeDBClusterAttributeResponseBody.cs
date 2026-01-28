@@ -376,6 +376,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public string IsExpired { get; set; }
 
+            [NameInMap("LbKind")]
+            [Validation(Required=false)]
+            public string LbKind { get; set; }
+
             /// <summary>
             /// <para>The lock mode of the cluster. Valid values:</para>
             /// <list type="bullet">
