@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DataDisk : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
         [NameInMap("auto_format")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? AutoFormat { get; set; }
 
         /// <summary>
@@ -65,12 +69,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string Encrypted { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// 
         /// <b>Example:</b>
         /// <para>ext4</para>
         /// </summary>
         [NameInMap("file_system")]
         [Validation(Required=false)]
+        [Obsolete]
         public string FileSystem { get; set; }
 
         /// <summary>
@@ -81,12 +89,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string KmsKeyId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// 
         /// <b>Example:</b>
         /// <para>/mnt/path1</para>
         /// </summary>
         [NameInMap("mount_target")]
         [Validation(Required=false)]
+        [Obsolete]
         public string MountTarget { get; set; }
 
         /// <summary>

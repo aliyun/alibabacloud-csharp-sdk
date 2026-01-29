@@ -806,6 +806,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public long? DesiredSize { get; set; }
 
+                [NameInMap("disk_init")]
+                [Validation(Required=false)]
+                public List<DiskInit> DiskInit { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the custom image. You can call the <c>DescribeKubernetesVersionMetadata</c> operation to query the images supported by ACK.</para>
                 /// 
