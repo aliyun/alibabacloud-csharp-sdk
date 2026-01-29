@@ -32,6 +32,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>readOnly</para>
+        /// </summary>
+        [NameInMap("TargetMode")]
+        [Validation(Required=false)]
+        public string TargetMode { get; set; }
+
     }
 
 }

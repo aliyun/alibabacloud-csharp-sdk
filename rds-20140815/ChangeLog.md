@@ -1,3 +1,7 @@
+2026-01-29 Version: 15.1.1
+- Update API PrecheckDuckDBDependency: add request parameters TargetMode.
+
+
 2026-01-27 Version: 15.1.0
 - Support API CreateImportTask.
 - Support API CreateRCImage.
