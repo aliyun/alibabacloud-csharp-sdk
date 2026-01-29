@@ -35,6 +35,14 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>1024</para>
+        /// </summary>
+        [NameInMap("EmbeddingDimension")]
+        [Validation(Required=false)]
+        public int? EmbeddingDimension { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>2023-07-04T11:26:09.036+08:00</para>
         /// </summary>
         [NameInMap("GmtCreateTime")]

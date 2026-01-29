@@ -991,6 +991,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             {
                 body["BatchSize"] = request.BatchSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmbeddingDimension))
+            {
+                body["EmbeddingDimension"] = request.EmbeddingDimension;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTokens))
             {
                 body["MaxTokens"] = request.MaxTokens;
@@ -1064,6 +1068,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchSize))
             {
                 body["BatchSize"] = request.BatchSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmbeddingDimension))
+            {
+                body["EmbeddingDimension"] = request.EmbeddingDimension;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTokens))
             {
@@ -7519,6 +7527,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             {
                 body["BatchSize"] = request.BatchSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmbeddingDimension))
+            {
+                body["EmbeddingDimension"] = request.EmbeddingDimension;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTokens))
             {
                 body["MaxTokens"] = request.MaxTokens;
@@ -7588,6 +7600,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchSize))
             {
                 body["BatchSize"] = request.BatchSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmbeddingDimension))
+            {
+                body["EmbeddingDimension"] = request.EmbeddingDimension;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTokens))
             {

@@ -38,6 +38,14 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public int? BatchSize { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1024</para>
+        /// </summary>
+        [NameInMap("EmbeddingDimension")]
+        [Validation(Required=false)]
+        public int? EmbeddingDimension { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

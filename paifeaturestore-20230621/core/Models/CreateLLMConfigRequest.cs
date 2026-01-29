@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>1024</para>
+        /// </summary>
+        [NameInMap("EmbeddingDimension")]
+        [Validation(Required=false)]
+        public int? EmbeddingDimension { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>8192</para>
         /// </summary>
         [NameInMap("MaxTokens")]
