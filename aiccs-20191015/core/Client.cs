@@ -18145,6 +18145,174 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await QueryConversationDetailInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询通话记录接口-新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryConversationDetailInfoNewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryConversationDetailInfoNewResponse
+        /// </returns>
+        public QueryConversationDetailInfoNewResponse QueryConversationDetailInfoNewWithOptions(QueryConversationDetailInfoNewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallId))
+            {
+                query["CallId"] = request.CallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetailId))
+            {
+                query["DetailId"] = request.DetailId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryConversationDetailInfoNew",
+                Version = "2019-10-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryConversationDetailInfoNewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询通话记录接口-新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryConversationDetailInfoNewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryConversationDetailInfoNewResponse
+        /// </returns>
+        public async Task<QueryConversationDetailInfoNewResponse> QueryConversationDetailInfoNewWithOptionsAsync(QueryConversationDetailInfoNewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallId))
+            {
+                query["CallId"] = request.CallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetailId))
+            {
+                query["DetailId"] = request.DetailId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryConversationDetailInfoNew",
+                Version = "2019-10-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryConversationDetailInfoNewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询通话记录接口-新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryConversationDetailInfoNewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryConversationDetailInfoNewResponse
+        /// </returns>
+        public QueryConversationDetailInfoNewResponse QueryConversationDetailInfoNew(QueryConversationDetailInfoNewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryConversationDetailInfoNewWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询通话记录接口-新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryConversationDetailInfoNewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryConversationDetailInfoNewResponse
+        /// </returns>
+        public async Task<QueryConversationDetailInfoNewResponse> QueryConversationDetailInfoNewAsync(QueryConversationDetailInfoNewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryConversationDetailInfoNewWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// QueryHotlineInQueueRequest
         /// </param>
