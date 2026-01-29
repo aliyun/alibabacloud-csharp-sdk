@@ -225,6 +225,150 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>添加跨账号信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddCrossAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddCrossAccountResponse
+        /// </returns>
+        public AddCrossAccountResponse AddCrossAccountWithOptions(AddCrossAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alias))
+            {
+                query["Alias"] = request.Alias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountRoleName))
+            {
+                query["CrossAccountRoleName"] = request.CrossAccountRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountType))
+            {
+                query["CrossAccountType"] = request.CrossAccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountUserId))
+            {
+                query["CrossAccountUserId"] = request.CrossAccountUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddCrossAccount",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddCrossAccountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加跨账号信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddCrossAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddCrossAccountResponse
+        /// </returns>
+        public async Task<AddCrossAccountResponse> AddCrossAccountWithOptionsAsync(AddCrossAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alias))
+            {
+                query["Alias"] = request.Alias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountRoleName))
+            {
+                query["CrossAccountRoleName"] = request.CrossAccountRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountType))
+            {
+                query["CrossAccountType"] = request.CrossAccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountUserId))
+            {
+                query["CrossAccountUserId"] = request.CrossAccountUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddCrossAccount",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddCrossAccountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加跨账号信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddCrossAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddCrossAccountResponse
+        /// </returns>
+        public AddCrossAccountResponse AddCrossAccount(AddCrossAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddCrossAccountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加跨账号信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddCrossAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddCrossAccountResponse
+        /// </returns>
+        public async Task<AddCrossAccountResponse> AddCrossAccountAsync(AddCrossAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddCrossAccountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Cancels a backup job.</para>
         /// </summary>
         /// 
@@ -4725,6 +4869,142 @@ namespace AlibabaCloud.SDK.Hbr20170908
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteClientWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除跨账号信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCrossAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCrossAccountResponse
+        /// </returns>
+        public DeleteCrossAccountResponse DeleteCrossAccountWithOptions(DeleteCrossAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountRoleName))
+            {
+                query["CrossAccountRoleName"] = request.CrossAccountRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountType))
+            {
+                query["CrossAccountType"] = request.CrossAccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountUserId))
+            {
+                query["CrossAccountUserId"] = request.CrossAccountUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCrossAccount",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCrossAccountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除跨账号信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCrossAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCrossAccountResponse
+        /// </returns>
+        public async Task<DeleteCrossAccountResponse> DeleteCrossAccountWithOptionsAsync(DeleteCrossAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountRoleName))
+            {
+                query["CrossAccountRoleName"] = request.CrossAccountRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountType))
+            {
+                query["CrossAccountType"] = request.CrossAccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountUserId))
+            {
+                query["CrossAccountUserId"] = request.CrossAccountUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCrossAccount",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCrossAccountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除跨账号信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCrossAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCrossAccountResponse
+        /// </returns>
+        public DeleteCrossAccountResponse DeleteCrossAccount(DeleteCrossAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteCrossAccountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除跨账号信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCrossAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCrossAccountResponse
+        /// </returns>
+        public async Task<DeleteCrossAccountResponse> DeleteCrossAccountAsync(DeleteCrossAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteCrossAccountWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
