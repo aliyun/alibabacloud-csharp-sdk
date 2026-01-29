@@ -3,6 +3,11 @@
 - Update API ListApplications: add response parameters Body.Data.Applications.$.Children.$.EnableIdle.
 
 
+2026-01-29 Version: 2.8.0
+- Support API ListApplicationCenterServiceInstances.
+- Update API ListApplications: add response parameters Body.Data.Applications.$.Children.$.EnableIdle.
+
+
 2026-01-08 Version: 2.7.6
 - Update API DescribeApplicationConfig: add response parameters Body.Data.IdleHour.
 - Update API UpdateAppMode: add request parameters IdleHour.
