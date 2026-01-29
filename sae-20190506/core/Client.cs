@@ -13131,6 +13131,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return await EnableApplicationScalingRuleWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes a job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExecJobRequest
         /// </param>
@@ -13208,6 +13213,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<ExecJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes a job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExecJobRequest
         /// </param>
@@ -13285,6 +13295,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<ExecJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes a job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExecJobRequest
         /// </param>
@@ -13299,6 +13314,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return ExecJobWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes a job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExecJobRequest
         /// </param>
@@ -15377,6 +15397,144 @@ namespace AlibabaCloud.SDK.Sae20190506
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListAppVersionsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询服务实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApplicationCenterServiceInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApplicationCenterServiceInstancesResponse
+        /// </returns>
+        public ListApplicationCenterServiceInstancesResponse ListApplicationCenterServiceInstancesWithOptions(ListApplicationCenterServiceInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApplicationCenterServiceInstances",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/cas/v5/app/listApplicationCenterServiceInstances",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApplicationCenterServiceInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询服务实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApplicationCenterServiceInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApplicationCenterServiceInstancesResponse
+        /// </returns>
+        public async Task<ListApplicationCenterServiceInstancesResponse> ListApplicationCenterServiceInstancesWithOptionsAsync(ListApplicationCenterServiceInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApplicationCenterServiceInstances",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/cas/v5/app/listApplicationCenterServiceInstances",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApplicationCenterServiceInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询服务实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApplicationCenterServiceInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApplicationCenterServiceInstancesResponse
+        /// </returns>
+        public ListApplicationCenterServiceInstancesResponse ListApplicationCenterServiceInstances(ListApplicationCenterServiceInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListApplicationCenterServiceInstancesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询服务实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApplicationCenterServiceInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApplicationCenterServiceInstancesResponse
+        /// </returns>
+        public async Task<ListApplicationCenterServiceInstancesResponse> ListApplicationCenterServiceInstancesAsync(ListApplicationCenterServiceInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListApplicationCenterServiceInstancesWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
