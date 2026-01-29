@@ -50,6 +50,140 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public List<ChatappSyncPhoneNumberResponseBodyPhoneNumbers> PhoneNumbers { get; set; }
         public class ChatappSyncPhoneNumberResponseBodyPhoneNumbers : TeaModel {
+            [NameInMap("CallingConfigure")]
+            [Validation(Required=false)]
+            public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigure CallingConfigure { get; set; }
+            public class ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigure : TeaModel {
+                [NameInMap("Calling")]
+                [Validation(Required=false)]
+                public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCalling Calling { get; set; }
+                public class ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCalling : TeaModel {
+                    [NameInMap("CallHours")]
+                    [Validation(Required=false)]
+                    public ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHours CallHours { get; set; }
+                    public class ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHours : TeaModel {
+                        [NameInMap("HolidaySchedule")]
+                        [Validation(Required=false)]
+                        public List<ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursHolidaySchedule> HolidaySchedule { get; set; }
+                        public class ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursHolidaySchedule : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>2026-01-01</para>
+                            /// </summary>
+                            [NameInMap("Date")]
+                            [Validation(Required=false)]
+                            public string Date { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>2359</para>
+                            /// </summary>
+                            [NameInMap("EndTime")]
+                            [Validation(Required=false)]
+                            public string EndTime { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>0000</para>
+                            /// </summary>
+                            [NameInMap("StartTime")]
+                            [Validation(Required=false)]
+                            public string StartTime { get; set; }
+
+                        }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>ENABLED</para>
+                        /// </summary>
+                        [NameInMap("Status")]
+                        [Validation(Required=false)]
+                        public string Status { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>Asia/Shanghai</para>
+                        /// </summary>
+                        [NameInMap("TimezoneId")]
+                        [Validation(Required=false)]
+                        public string TimezoneId { get; set; }
+
+                        [NameInMap("WeeklyOperatingHours")]
+                        [Validation(Required=false)]
+                        public List<ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursWeeklyOperatingHours> WeeklyOperatingHours { get; set; }
+                        public class ChatappSyncPhoneNumberResponseBodyPhoneNumbersCallingConfigureCallingCallHoursWeeklyOperatingHours : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>2359</para>
+                            /// </summary>
+                            [NameInMap("CloseTime")]
+                            [Validation(Required=false)]
+                            public string CloseTime { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>MONDAY</para>
+                            /// </summary>
+                            [NameInMap("DayOfWeek")]
+                            [Validation(Required=false)]
+                            public string DayOfWeek { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>0000</para>
+                            /// </summary>
+                            [NameInMap("OpenTime")]
+                            [Validation(Required=false)]
+                            public string OpenTime { get; set; }
+
+                        }
+
+                    }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>DEFAULT</para>
+                    /// </summary>
+                    [NameInMap("CallIconVisibility")]
+                    [Validation(Required=false)]
+                    public string CallIconVisibility { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>示例值示例值示例值</para>
+                    /// </summary>
+                    [NameInMap("CallbackPermissionStatus")]
+                    [Validation(Required=false)]
+                    public string CallbackPermissionStatus { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>ENABLED</para>
+                    /// </summary>
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><a href="http://aliyun.com">http://aliyun.com</a></para>
+                /// </summary>
+                [NameInMap("CallingCallbackUrl")]
+                [Validation(Required=false)]
+                public string CallingCallbackUrl { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>100</para>
+                /// </summary>
+                [NameInMap("MaxTalkTime")]
+                [Validation(Required=false)]
+                public long? MaxTalkTime { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The verification state of the phone number.</para>
             /// <para>Valid values:</para>
