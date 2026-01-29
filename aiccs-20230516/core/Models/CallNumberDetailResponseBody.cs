@@ -38,6 +38,26 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         public CallNumberDetailResponseBodyModel Model { get; set; }
         public class CallNumberDetailResponseBodyModel : TeaModel {
             /// <summary>
+            /// <para>ai计费时长</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("AiBill")]
+            [Validation(Required=false)]
+            public long? AiBill { get; set; }
+
+            /// <summary>
+            /// <para>接通转接类型 1-不转人工；2-接通转人工；3-智能转人工</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("AnswerTransferType")]
+            [Validation(Required=false)]
+            public long? AnswerTransferType { get; set; }
+
+            /// <summary>
             /// <para>导入号码时返回的批次号</para>
             /// 
             /// <b>Example:</b>
@@ -58,6 +78,16 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
             public long? Bill { get; set; }
 
             /// <summary>
+            /// <para>转接计费时长</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("BridgeBill")]
+            [Validation(Required=false)]
+            public long? BridgeBill { get; set; }
+
+            /// <summary>
             /// <para>每次呼叫的唯一标识</para>
             /// 
             /// <b>Example:</b>
@@ -76,6 +106,46 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
             [NameInMap("CallType")]
             [Validation(Required=false)]
             public long? CallType { get; set; }
+
+            /// <summary>
+            /// <para>客户详情url</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>a</para>
+            /// </summary>
+            [NameInMap("ClientUrl")]
+            [Validation(Required=false)]
+            public string ClientUrl { get; set; }
+
+            /// <summary>
+            /// <para>创建时间 格式 2026-01-01 00:00:00</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-01-01 00:00:00</para>
+            /// </summary>
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            /// <summary>
+            /// <para>通话轮次</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("Duration")]
+            [Validation(Required=false)]
+            public long? Duration { get; set; }
+
+            /// <summary>
+            /// <para>线路id</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("GatewayId")]
+            [Validation(Required=false)]
+            public long? GatewayId { get; set; }
 
             /// <summary>
             /// <para>号码编号</para>
@@ -128,6 +198,16 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
             public string NumberMd5 { get; set; }
 
             /// <summary>
+            /// <para>自定义参数 json</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;名字&quot;:&quot;a&quot;}</para>
+            /// </summary>
+            [NameInMap("Params")]
+            [Validation(Required=false)]
+            public string Params { get; set; }
+
+            /// <summary>
             /// <para>个性标签</para>
             /// 
             /// <b>Example:</b>
@@ -136,6 +216,26 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
             [NameInMap("PersonalityTag")]
             [Validation(Required=false)]
             public string PersonalityTag { get; set; }
+
+            /// <summary>
+            /// <para>备注信息</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>a</para>
+            /// </summary>
+            [NameInMap("Remark")]
+            [Validation(Required=false)]
+            public string Remark { get; set; }
+
+            /// <summary>
+            /// <para>坐席id</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("Sid")]
+            [Validation(Required=false)]
+            public long? Sid { get; set; }
 
             /// <summary>
             /// <para>外呼状态编码</para>
