@@ -214,6 +214,22 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public string JobScheduler { get; set; }
 
+            [NameInMap("SecurityPolicy")]
+            [Validation(Required=false)]
+            public GetJobResponseBodyJobInfoSecurityPolicy SecurityPolicy { get; set; }
+            public class GetJobResponseBodyJobInfoSecurityPolicy : TeaModel {
+                [NameInMap("SecurityGroup")]
+                [Validation(Required=false)]
+                public GetJobResponseBodyJobInfoSecurityPolicySecurityGroup SecurityGroup { get; set; }
+                public class GetJobResponseBodyJobInfoSecurityPolicySecurityGroup : TeaModel {
+                    [NameInMap("SecurityGroupIds")]
+                    [Validation(Required=false)]
+                    public List<string> SecurityGroupIds { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// <para>The time when the job started.</para>
             /// 
@@ -544,6 +560,24 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                             public string Script { get; set; }
 
                         }
+
+                    }
+
+                    [NameInMap("VolumeMount")]
+                    [Validation(Required=false)]
+                    public List<GetJobResponseBodyJobInfoTasksTaskSpecVolumeMount> VolumeMount { get; set; }
+                    public class GetJobResponseBodyJobInfoTasksTaskSpecVolumeMount : TeaModel {
+                        [NameInMap("MountOptions")]
+                        [Validation(Required=false)]
+                        public string MountOptions { get; set; }
+
+                        [NameInMap("MountPath")]
+                        [Validation(Required=false)]
+                        public string MountPath { get; set; }
+
+                        [NameInMap("VolumeDriver")]
+                        [Validation(Required=false)]
+                        public string VolumeDriver { get; set; }
 
                     }
 
