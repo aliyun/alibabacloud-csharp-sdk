@@ -1523,6 +1523,184 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRayClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRayClusterResponse
+        /// </returns>
+        public CreateRayClusterResponse CreateRayClusterWithOptions(string workspaceId, CreateRayClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayReleaseVersion))
+            {
+                body["displayReleaseVersion"] = request.DisplayReleaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraParam))
+            {
+                body["extraParam"] = request.ExtraParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HeadSpec))
+            {
+                body["headSpec"] = request.HeadSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkServiceName))
+            {
+                body["networkServiceName"] = request.NetworkServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerSpec))
+            {
+                body["workerSpec"] = request.WorkerSpec;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRayCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/rayCluster",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRayClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRayClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRayClusterResponse
+        /// </returns>
+        public async Task<CreateRayClusterResponse> CreateRayClusterWithOptionsAsync(string workspaceId, CreateRayClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayReleaseVersion))
+            {
+                body["displayReleaseVersion"] = request.DisplayReleaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraParam))
+            {
+                body["extraParam"] = request.ExtraParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HeadSpec))
+            {
+                body["headSpec"] = request.HeadSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkServiceName))
+            {
+                body["networkServiceName"] = request.NetworkServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerSpec))
+            {
+                body["workerSpec"] = request.WorkerSpec;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRayCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/rayCluster",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRayClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRayClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRayClusterResponse
+        /// </returns>
+        public CreateRayClusterResponse CreateRayCluster(string workspaceId, CreateRayClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateRayClusterWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRayClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRayClusterResponse
+        /// </returns>
+        public async Task<CreateRayClusterResponse> CreateRayClusterAsync(string workspaceId, CreateRayClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateRayClusterWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a session.</para>
         /// </summary>
         /// 
@@ -2685,6 +2863,108 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteLivyComputeTokenWithOptionsAsync(workspaceBizId, livyComputeId, tokenId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRayClusterResponse
+        /// </returns>
+        public DeleteRayClusterResponse DeleteRayClusterWithOptions(string workspaceId, string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRayCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/rayCluster/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRayClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRayClusterResponse
+        /// </returns>
+        public async Task<DeleteRayClusterResponse> DeleteRayClusterWithOptionsAsync(string workspaceId, string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRayCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/rayCluster/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRayClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Ray集群</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteRayClusterResponse
+        /// </returns>
+        public DeleteRayClusterResponse DeleteRayCluster(string workspaceId, string clusterId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteRayClusterWithOptions(workspaceId, clusterId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Ray集群</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteRayClusterResponse
+        /// </returns>
+        public async Task<DeleteRayClusterResponse> DeleteRayClusterAsync(string workspaceId, string clusterId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteRayClusterWithOptionsAsync(workspaceId, clusterId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3903,6 +4183,108 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetLivyComputeTokenWithOptionsAsync(workspaceBizId, livyComputeId, tokenId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRayClusterResponse
+        /// </returns>
+        public GetRayClusterResponse GetRayClusterWithOptions(string workspaceId, string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRayCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/rayCluster/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRayClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRayClusterResponse
+        /// </returns>
+        public async Task<GetRayClusterResponse> GetRayClusterWithOptionsAsync(string workspaceId, string clusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRayCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/rayCluster/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRayClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Ray集群</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetRayClusterResponse
+        /// </returns>
+        public GetRayClusterResponse GetRayCluster(string workspaceId, string clusterId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetRayClusterWithOptions(workspaceId, clusterId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Ray集群</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetRayClusterResponse
+        /// </returns>
+        public async Task<GetRayClusterResponse> GetRayClusterAsync(string workspaceId, string clusterId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetRayClusterWithOptionsAsync(workspaceId, clusterId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6339,6 +6721,144 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>列出Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRayClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRayClusterResponse
+        /// </returns>
+        public ListRayClusterResponse ListRayClusterWithOptions(string workspaceId, ListRayClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["pageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRayCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/rayCluster",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRayClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRayClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRayClusterResponse
+        /// </returns>
+        public async Task<ListRayClusterResponse> ListRayClusterWithOptionsAsync(string workspaceId, ListRayClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["pageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRayCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/rayCluster",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRayClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRayClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRayClusterResponse
+        /// </returns>
+        public ListRayClusterResponse ListRayCluster(string workspaceId, ListRayClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListRayClusterWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRayClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRayClusterResponse
+        /// </returns>
+        public async Task<ListRayClusterResponse> ListRayClusterAsync(string workspaceId, ListRayClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListRayClusterWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the list of published versions of E-MapReduce (EMR) Serverless Spark.</para>
         /// </summary>
         /// 
@@ -8105,6 +8625,136 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>启动Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartRayClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartRayClusterResponse
+        /// </returns>
+        public StartRayClusterResponse StartRayClusterWithOptions(string workspaceId, string clusterId, StartRayClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartRayCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/rayCluster/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/start",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartRayClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartRayClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartRayClusterResponse
+        /// </returns>
+        public async Task<StartRayClusterResponse> StartRayClusterWithOptionsAsync(string workspaceId, string clusterId, StartRayClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartRayCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/rayCluster/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/start",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartRayClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartRayClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartRayClusterResponse
+        /// </returns>
+        public StartRayClusterResponse StartRayCluster(string workspaceId, string clusterId, StartRayClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StartRayClusterWithOptions(workspaceId, clusterId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartRayClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartRayClusterResponse
+        /// </returns>
+        public async Task<StartRayClusterResponse> StartRayClusterAsync(string workspaceId, string clusterId, StartRayClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StartRayClusterWithOptionsAsync(workspaceId, clusterId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Starts a session.</para>
         /// </summary>
         /// 
@@ -8483,6 +9133,136 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await StopLivyComputeWithOptionsAsync(workspaceBizId, livyComputeId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopRayClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopRayClusterResponse
+        /// </returns>
+        public StopRayClusterResponse StopRayClusterWithOptions(string workspaceId, string clusterId, StopRayClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["instanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopRayCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/rayCluster/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/stop",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopRayClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopRayClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopRayClusterResponse
+        /// </returns>
+        public async Task<StopRayClusterResponse> StopRayClusterWithOptionsAsync(string workspaceId, string clusterId, StopRayClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["instanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopRayCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/rayCluster/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/stop",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopRayClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopRayClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopRayClusterResponse
+        /// </returns>
+        public StopRayClusterResponse StopRayCluster(string workspaceId, string clusterId, StopRayClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StopRayClusterWithOptions(workspaceId, clusterId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopRayClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopRayClusterResponse
+        /// </returns>
+        public async Task<StopRayClusterResponse> StopRayClusterAsync(string workspaceId, string clusterId, StopRayClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StopRayClusterWithOptionsAsync(workspaceId, clusterId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9695,6 +10475,184 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateProcessDefinitionWithScheduleWithOptionsAsync(bizId, code, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRayClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRayClusterResponse
+        /// </returns>
+        public UpdateRayClusterResponse UpdateRayClusterWithOptions(string workspaceId, string clusterId, UpdateRayClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayReleaseVersion))
+            {
+                body["displayReleaseVersion"] = request.DisplayReleaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraParam))
+            {
+                body["extraParam"] = request.ExtraParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HeadSpec))
+            {
+                body["headSpec"] = request.HeadSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkServiceName))
+            {
+                body["networkServiceName"] = request.NetworkServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerSpec))
+            {
+                body["workerSpec"] = request.WorkerSpec;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRayCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/rayCluster/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId),
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRayClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRayClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRayClusterResponse
+        /// </returns>
+        public async Task<UpdateRayClusterResponse> UpdateRayClusterWithOptionsAsync(string workspaceId, string clusterId, UpdateRayClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayReleaseVersion))
+            {
+                body["displayReleaseVersion"] = request.DisplayReleaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraParam))
+            {
+                body["extraParam"] = request.ExtraParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HeadSpec))
+            {
+                body["headSpec"] = request.HeadSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkServiceName))
+            {
+                body["networkServiceName"] = request.NetworkServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerSpec))
+            {
+                body["workerSpec"] = request.WorkerSpec;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRayCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/rayCluster/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId),
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRayClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRayClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRayClusterResponse
+        /// </returns>
+        public UpdateRayClusterResponse UpdateRayCluster(string workspaceId, string clusterId, UpdateRayClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateRayClusterWithOptions(workspaceId, clusterId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Ray集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRayClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRayClusterResponse
+        /// </returns>
+        public async Task<UpdateRayClusterResponse> UpdateRayClusterAsync(string workspaceId, string clusterId, UpdateRayClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateRayClusterWithOptionsAsync(workspaceId, clusterId, request, headers, runtime);
         }
 
     }

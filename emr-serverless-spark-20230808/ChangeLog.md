@@ -1,3 +1,13 @@
+2026-01-29 Version: 1.12.0
+- Support API CreateRayCluster.
+- Support API DeleteRayCluster.
+- Support API GetRayCluster.
+- Support API ListRayCluster.
+- Support API StartRayCluster.
+- Support API StopRayCluster.
+- Support API UpdateRayCluster.
+
+
 2026-01-20 Version: 1.11.0
 - Support API ListLivyComputeSessions.
 
