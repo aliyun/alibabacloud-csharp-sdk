@@ -263,6 +263,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public string InvocationStatus { get; set; }
 
+                        [NameInMap("OssOutputErrorCode")]
+                        [Validation(Required=false)]
+                        public string OssOutputErrorCode { get; set; }
+
+                        [NameInMap("OssOutputErrorInfo")]
+                        [Validation(Required=false)]
+                        public string OssOutputErrorInfo { get; set; }
+
                         /// <summary>
                         /// <para>The overall execution status of the command task. The value of this parameter depends on the execution status of the command task on all the involved instances. Valid values:</para>
                         /// <list type="bullet">

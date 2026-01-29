@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyInvocationAttributeShrinkRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         /// <summary>
         /// <para>The content of the command after modification. The command content can be plaintext or Base64-encoded. Take note of the following items:</para>
         /// <list type="bullet">
