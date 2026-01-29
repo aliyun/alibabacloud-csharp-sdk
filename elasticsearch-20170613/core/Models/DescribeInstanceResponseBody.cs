@@ -387,6 +387,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
             }
 
+            [NameInMap("inited")]
+            [Validation(Required=false)]
+            public bool? Inited { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>advanced</para>
