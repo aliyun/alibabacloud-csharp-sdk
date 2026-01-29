@@ -5075,7 +5075,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <para>Queries the coverage details of savings plans.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DescribeSavingsPlansCoverageDetailRequest
         /// </param>
         /// <param name="runtime">
@@ -5085,9 +5085,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <returns>
         /// DescribeSavingsPlansCoverageDetailResponse
         /// </returns>
-        public DescribeSavingsPlansCoverageDetailResponse DescribeSavingsPlansCoverageDetailWithOptions(DescribeSavingsPlansCoverageDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeSavingsPlansCoverageDetailResponse DescribeSavingsPlansCoverageDetailWithOptions(DescribeSavingsPlansCoverageDetailRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeSavingsPlansCoverageDetailShrinkRequest request = new DescribeSavingsPlansCoverageDetailShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FilterParam))
+            {
+                request.FilterParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FilterParam, "FilterParam", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillOwnerId))
             {
@@ -5096,6 +5102,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndPeriod))
             {
                 query["EndPeriod"] = request.EndPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterParamShrink))
+            {
+                query["FilterParam"] = request.FilterParamShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -5137,7 +5147,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <para>Queries the coverage details of savings plans.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DescribeSavingsPlansCoverageDetailRequest
         /// </param>
         /// <param name="runtime">
@@ -5147,9 +5157,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <returns>
         /// DescribeSavingsPlansCoverageDetailResponse
         /// </returns>
-        public async Task<DescribeSavingsPlansCoverageDetailResponse> DescribeSavingsPlansCoverageDetailWithOptionsAsync(DescribeSavingsPlansCoverageDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeSavingsPlansCoverageDetailResponse> DescribeSavingsPlansCoverageDetailWithOptionsAsync(DescribeSavingsPlansCoverageDetailRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeSavingsPlansCoverageDetailShrinkRequest request = new DescribeSavingsPlansCoverageDetailShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FilterParam))
+            {
+                request.FilterParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FilterParam, "FilterParam", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillOwnerId))
             {
@@ -5158,6 +5174,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndPeriod))
             {
                 query["EndPeriod"] = request.EndPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterParamShrink))
+            {
+                query["FilterParam"] = request.FilterParamShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -5235,7 +5255,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <para>Queries the coverage summary of savings plans.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DescribeSavingsPlansCoverageTotalRequest
         /// </param>
         /// <param name="runtime">
@@ -5245,9 +5265,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <returns>
         /// DescribeSavingsPlansCoverageTotalResponse
         /// </returns>
-        public DescribeSavingsPlansCoverageTotalResponse DescribeSavingsPlansCoverageTotalWithOptions(DescribeSavingsPlansCoverageTotalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeSavingsPlansCoverageTotalResponse DescribeSavingsPlansCoverageTotalWithOptions(DescribeSavingsPlansCoverageTotalRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeSavingsPlansCoverageTotalShrinkRequest request = new DescribeSavingsPlansCoverageTotalShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FilterParam))
+            {
+                request.FilterParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FilterParam, "FilterParam", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillOwnerId))
             {
@@ -5256,6 +5282,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndPeriod))
             {
                 query["EndPeriod"] = request.EndPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterParamShrink))
+            {
+                query["FilterParam"] = request.FilterParamShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodType))
             {
@@ -5289,7 +5319,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <para>Queries the coverage summary of savings plans.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DescribeSavingsPlansCoverageTotalRequest
         /// </param>
         /// <param name="runtime">
@@ -5299,9 +5329,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <returns>
         /// DescribeSavingsPlansCoverageTotalResponse
         /// </returns>
-        public async Task<DescribeSavingsPlansCoverageTotalResponse> DescribeSavingsPlansCoverageTotalWithOptionsAsync(DescribeSavingsPlansCoverageTotalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeSavingsPlansCoverageTotalResponse> DescribeSavingsPlansCoverageTotalWithOptionsAsync(DescribeSavingsPlansCoverageTotalRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeSavingsPlansCoverageTotalShrinkRequest request = new DescribeSavingsPlansCoverageTotalShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FilterParam))
+            {
+                request.FilterParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FilterParam, "FilterParam", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillOwnerId))
             {
@@ -5310,6 +5346,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndPeriod))
             {
                 query["EndPeriod"] = request.EndPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterParamShrink))
+            {
+                query["FilterParam"] = request.FilterParamShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodType))
             {
@@ -5379,7 +5419,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <para>Queries the usage details of savings plans.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DescribeSavingsPlansUsageDetailRequest
         /// </param>
         /// <param name="runtime">
@@ -5389,9 +5429,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <returns>
         /// DescribeSavingsPlansUsageDetailResponse
         /// </returns>
-        public DescribeSavingsPlansUsageDetailResponse DescribeSavingsPlansUsageDetailWithOptions(DescribeSavingsPlansUsageDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeSavingsPlansUsageDetailResponse DescribeSavingsPlansUsageDetailWithOptions(DescribeSavingsPlansUsageDetailRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeSavingsPlansUsageDetailShrinkRequest request = new DescribeSavingsPlansUsageDetailShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FilterParam))
+            {
+                request.FilterParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FilterParam, "FilterParam", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillOwnerId))
             {
@@ -5400,6 +5446,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndPeriod))
             {
                 query["EndPeriod"] = request.EndPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterParamShrink))
+            {
+                query["FilterParam"] = request.FilterParamShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -5441,7 +5491,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <para>Queries the usage details of savings plans.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DescribeSavingsPlansUsageDetailRequest
         /// </param>
         /// <param name="runtime">
@@ -5451,9 +5501,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <returns>
         /// DescribeSavingsPlansUsageDetailResponse
         /// </returns>
-        public async Task<DescribeSavingsPlansUsageDetailResponse> DescribeSavingsPlansUsageDetailWithOptionsAsync(DescribeSavingsPlansUsageDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeSavingsPlansUsageDetailResponse> DescribeSavingsPlansUsageDetailWithOptionsAsync(DescribeSavingsPlansUsageDetailRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeSavingsPlansUsageDetailShrinkRequest request = new DescribeSavingsPlansUsageDetailShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FilterParam))
+            {
+                request.FilterParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FilterParam, "FilterParam", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillOwnerId))
             {
@@ -5462,6 +5518,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndPeriod))
             {
                 query["EndPeriod"] = request.EndPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterParamShrink))
+            {
+                query["FilterParam"] = request.FilterParamShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -5539,7 +5599,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <para>Queries the usage summary of savings plans.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DescribeSavingsPlansUsageTotalRequest
         /// </param>
         /// <param name="runtime">
@@ -5549,9 +5609,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <returns>
         /// DescribeSavingsPlansUsageTotalResponse
         /// </returns>
-        public DescribeSavingsPlansUsageTotalResponse DescribeSavingsPlansUsageTotalWithOptions(DescribeSavingsPlansUsageTotalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeSavingsPlansUsageTotalResponse DescribeSavingsPlansUsageTotalWithOptions(DescribeSavingsPlansUsageTotalRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeSavingsPlansUsageTotalShrinkRequest request = new DescribeSavingsPlansUsageTotalShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FilterParam))
+            {
+                request.FilterParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FilterParam, "FilterParam", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillOwnerId))
             {
@@ -5560,6 +5626,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndPeriod))
             {
                 query["EndPeriod"] = request.EndPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterParamShrink))
+            {
+                query["FilterParam"] = request.FilterParamShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodType))
             {
@@ -5593,7 +5663,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <para>Queries the usage summary of savings plans.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DescribeSavingsPlansUsageTotalRequest
         /// </param>
         /// <param name="runtime">
@@ -5603,9 +5673,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <returns>
         /// DescribeSavingsPlansUsageTotalResponse
         /// </returns>
-        public async Task<DescribeSavingsPlansUsageTotalResponse> DescribeSavingsPlansUsageTotalWithOptionsAsync(DescribeSavingsPlansUsageTotalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeSavingsPlansUsageTotalResponse> DescribeSavingsPlansUsageTotalWithOptionsAsync(DescribeSavingsPlansUsageTotalRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeSavingsPlansUsageTotalShrinkRequest request = new DescribeSavingsPlansUsageTotalShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FilterParam))
+            {
+                request.FilterParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FilterParam, "FilterParam", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillOwnerId))
             {
@@ -5614,6 +5690,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndPeriod))
             {
                 query["EndPeriod"] = request.EndPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterParamShrink))
+            {
+                query["FilterParam"] = request.FilterParamShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodType))
             {

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
-    public class DescribeSavingsPlansUsageDetailRequest : TeaModel {
+    public class DescribeSavingsPlansUsageDetailShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the account for which you want to query usage details. If you do not set this parameter, the data of the current Alibaba Cloud account and its RAM users is queried. To query the data of a RAM user, specify the ID of the RAM user.</para>
         /// 
@@ -31,45 +31,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         [NameInMap("FilterParam")]
         [Validation(Required=false)]
-        public DescribeSavingsPlansUsageDetailRequestFilterParam FilterParam { get; set; }
-        public class DescribeSavingsPlansUsageDetailRequestFilterParam : TeaModel {
-            [NameInMap("Dimensions")]
-            [Validation(Required=false)]
-            public List<DescribeSavingsPlansUsageDetailRequestFilterParamDimensions> Dimensions { get; set; }
-            public class DescribeSavingsPlansUsageDetailRequestFilterParamDimensions : TeaModel {
-                [NameInMap("Code")]
-                [Validation(Required=false)]
-                public string Code { get; set; }
-
-                [NameInMap("SelectType")]
-                [Validation(Required=false)]
-                public string SelectType { get; set; }
-
-                [NameInMap("Values")]
-                [Validation(Required=false)]
-                public List<string> Values { get; set; }
-
-            }
-
-            [NameInMap("Tags")]
-            [Validation(Required=false)]
-            public List<DescribeSavingsPlansUsageDetailRequestFilterParamTags> Tags { get; set; }
-            public class DescribeSavingsPlansUsageDetailRequestFilterParamTags : TeaModel {
-                [NameInMap("Code")]
-                [Validation(Required=false)]
-                public string Code { get; set; }
-
-                [NameInMap("SelectType")]
-                [Validation(Required=false)]
-                public string SelectType { get; set; }
-
-                [NameInMap("Values")]
-                [Validation(Required=false)]
-                public List<string> Values { get; set; }
-
-            }
-
-        }
+        public string FilterParamShrink { get; set; }
 
         /// <summary>
         /// <para>The maximum number of entries to return. Default value: 20. Maximum value: 300.</para>

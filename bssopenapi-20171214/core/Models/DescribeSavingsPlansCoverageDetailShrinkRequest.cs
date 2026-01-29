@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
-    public class DescribeSavingsPlansCoverageDetailRequest : TeaModel {
+    public class DescribeSavingsPlansCoverageDetailShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the account for which you want to query coverage details.</para>
         /// 
@@ -31,45 +31,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         [NameInMap("FilterParam")]
         [Validation(Required=false)]
-        public DescribeSavingsPlansCoverageDetailRequestFilterParam FilterParam { get; set; }
-        public class DescribeSavingsPlansCoverageDetailRequestFilterParam : TeaModel {
-            [NameInMap("Dimensions")]
-            [Validation(Required=false)]
-            public List<DescribeSavingsPlansCoverageDetailRequestFilterParamDimensions> Dimensions { get; set; }
-            public class DescribeSavingsPlansCoverageDetailRequestFilterParamDimensions : TeaModel {
-                [NameInMap("Code")]
-                [Validation(Required=false)]
-                public string Code { get; set; }
-
-                [NameInMap("SelectType")]
-                [Validation(Required=false)]
-                public string SelectType { get; set; }
-
-                [NameInMap("Values")]
-                [Validation(Required=false)]
-                public List<string> Values { get; set; }
-
-            }
-
-            [NameInMap("Tags")]
-            [Validation(Required=false)]
-            public List<DescribeSavingsPlansCoverageDetailRequestFilterParamTags> Tags { get; set; }
-            public class DescribeSavingsPlansCoverageDetailRequestFilterParamTags : TeaModel {
-                [NameInMap("Code")]
-                [Validation(Required=false)]
-                public string Code { get; set; }
-
-                [NameInMap("SelectType")]
-                [Validation(Required=false)]
-                public string SelectType { get; set; }
-
-                [NameInMap("Values")]
-                [Validation(Required=false)]
-                public List<string> Values { get; set; }
-
-            }
-
-        }
+        public string FilterParamShrink { get; set; }
 
         /// <summary>
         /// <para>The maximum number of entries to return. Default value: 20. Maximum value: 300.</para>
