@@ -149,6 +149,34 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public DescribeApplicationsResponseBodyItemsApplicationsTags Tags { get; set; }
+                public class DescribeApplicationsResponseBodyItemsApplicationsTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeApplicationsResponseBodyItemsApplicationsTagsTag> Tag { get; set; }
+                    public class DescribeApplicationsResponseBodyItemsApplicationsTagsTag : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>testKey</para>
+                        /// </summary>
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>testValue</para>
+                        /// </summary>
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-b</para>
