@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string AuthType { get; set; }
 
+        [NameInMap("corsConfig")]
+        [Validation(Required=false)]
+        public CORSConfig CorsConfig { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>

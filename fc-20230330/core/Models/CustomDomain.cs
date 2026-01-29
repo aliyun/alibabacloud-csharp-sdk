@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public CertConfig CertConfig { get; set; }
 
+        [NameInMap("corsConfig")]
+        [Validation(Required=false)]
+        public CORSConfig CorsConfig { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2023-03-30T08:02:19Z</para>
