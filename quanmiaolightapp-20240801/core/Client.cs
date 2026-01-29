@@ -3042,7 +3042,7 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
         /// <para>营销文案写作服务</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// RunMarketingInformationWritingRequest
         /// </param>
         /// <param name="headers">
@@ -3055,9 +3055,15 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
         /// <returns>
         /// RunMarketingInformationWritingResponse
         /// </returns>
-        public RunMarketingInformationWritingResponse RunMarketingInformationWritingWithOptions(string workspaceId, RunMarketingInformationWritingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public RunMarketingInformationWritingResponse RunMarketingInformationWritingWithOptions(string workspaceId, RunMarketingInformationWritingRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunMarketingInformationWritingShrinkRequest request = new RunMarketingInformationWritingShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExtParameters))
+            {
+                request.ExtParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExtParameters, "extParameters", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
             {
@@ -3071,21 +3077,49 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             {
                 body["customPrompt"] = request.CustomPrompt;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParametersShrink))
+            {
+                body["extParameters"] = request.ExtParametersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateCount))
+            {
+                body["generateCount"] = request.GenerateCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputExample))
             {
                 body["inputExample"] = request.InputExample;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keywords))
+            {
+                body["keywords"] = request.Keywords;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                body["language"] = request.Language;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
             {
                 body["modelId"] = request.ModelId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherRequirements))
+            {
+                body["otherRequirements"] = request.OtherRequirements;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputExample))
             {
                 body["outputExample"] = request.OutputExample;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                body["prompt"] = request.Prompt;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceMaterial))
             {
                 body["sourceMaterial"] = request.SourceMaterial;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WordCountRange))
+            {
+                body["wordCountRange"] = request.WordCountRange;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WritingType))
             {
@@ -3116,7 +3150,7 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
         /// <para>营销文案写作服务</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// RunMarketingInformationWritingRequest
         /// </param>
         /// <param name="headers">
@@ -3129,9 +3163,15 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
         /// <returns>
         /// RunMarketingInformationWritingResponse
         /// </returns>
-        public async Task<RunMarketingInformationWritingResponse> RunMarketingInformationWritingWithOptionsAsync(string workspaceId, RunMarketingInformationWritingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<RunMarketingInformationWritingResponse> RunMarketingInformationWritingWithOptionsAsync(string workspaceId, RunMarketingInformationWritingRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunMarketingInformationWritingShrinkRequest request = new RunMarketingInformationWritingShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExtParameters))
+            {
+                request.ExtParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExtParameters, "extParameters", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
             {
@@ -3145,21 +3185,49 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             {
                 body["customPrompt"] = request.CustomPrompt;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParametersShrink))
+            {
+                body["extParameters"] = request.ExtParametersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateCount))
+            {
+                body["generateCount"] = request.GenerateCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputExample))
             {
                 body["inputExample"] = request.InputExample;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keywords))
+            {
+                body["keywords"] = request.Keywords;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                body["language"] = request.Language;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
             {
                 body["modelId"] = request.ModelId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherRequirements))
+            {
+                body["otherRequirements"] = request.OtherRequirements;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputExample))
             {
                 body["outputExample"] = request.OutputExample;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                body["prompt"] = request.Prompt;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceMaterial))
             {
                 body["sourceMaterial"] = request.SourceMaterial;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WordCountRange))
+            {
+                body["wordCountRange"] = request.WordCountRange;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WritingType))
             {

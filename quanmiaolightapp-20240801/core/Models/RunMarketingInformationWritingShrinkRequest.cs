@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 {
-    public class RunMarketingInformationWritingRequest : TeaModel {
+    public class RunMarketingInformationWritingShrinkRequest : TeaModel {
         [NameInMap("apiKey")]
         [Validation(Required=false)]
         public string ApiKey { get; set; }
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         /// </summary>
         [NameInMap("extParameters")]
         [Validation(Required=false)]
-        public Dictionary<string, string> ExtParameters { get; set; }
+        public string ExtParametersShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

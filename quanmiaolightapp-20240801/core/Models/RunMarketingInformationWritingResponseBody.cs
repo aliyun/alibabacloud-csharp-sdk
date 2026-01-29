@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
             [Validation(Required=false)]
             public RunMarketingInformationWritingResponseBodyPayloadOutput Output { get; set; }
             public class RunMarketingInformationWritingResponseBodyPayloadOutput : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>推理内容</para>
+                /// </summary>
                 [NameInMap("reasonContent")]
                 [Validation(Required=false)]
                 public string ReasonContent { get; set; }
