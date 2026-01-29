@@ -280,6 +280,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RelationshipTypesShrink { get; set; }
 
+        [NameInMap("SparseRetrievalFields")]
+        [Validation(Required=false)]
+        public string SparseRetrievalFields { get; set; }
+
+        [NameInMap("SparseVectorIndexConfig")]
+        [Validation(Required=false)]
+        public string SparseVectorIndexConfigShrink { get; set; }
+
+        [NameInMap("SupportSparse")]
+        [Validation(Required=false)]
+        public bool? SupportSparse { get; set; }
+
     }
 
 }

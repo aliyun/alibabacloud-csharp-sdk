@@ -100,6 +100,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public string Parser { get; set; }
 
+                [NameInMap("SparseRetrievalFields")]
+                [Validation(Required=false)]
+                public string SparseRetrievalFields { get; set; }
+
+                [NameInMap("SupportSparse")]
+                [Validation(Required=false)]
+                public bool? SupportSparse { get; set; }
+
             }
 
         }

@@ -280,6 +280,28 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public List<string> RelationshipTypes { get; set; }
 
+        [NameInMap("SparseRetrievalFields")]
+        [Validation(Required=false)]
+        public string SparseRetrievalFields { get; set; }
+
+        [NameInMap("SparseVectorIndexConfig")]
+        [Validation(Required=false)]
+        public CreateDocumentCollectionRequestSparseVectorIndexConfig SparseVectorIndexConfig { get; set; }
+        public class CreateDocumentCollectionRequestSparseVectorIndexConfig : TeaModel {
+            [NameInMap("HnswEfConstruction")]
+            [Validation(Required=false)]
+            public int? HnswEfConstruction { get; set; }
+
+            [NameInMap("HnswM")]
+            [Validation(Required=false)]
+            public int? HnswM { get; set; }
+
+        }
+
+        [NameInMap("SupportSparse")]
+        [Validation(Required=false)]
+        public bool? SupportSparse { get; set; }
+
     }
 
 }

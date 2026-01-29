@@ -4350,6 +4350,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 request.RelationshipTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RelationshipTypes, "RelationshipTypes", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SparseVectorIndexConfig))
+            {
+                request.SparseVectorIndexConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SparseVectorIndexConfig, "SparseVectorIndexConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Collection))
             {
@@ -4442,6 +4446,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationshipTypesShrink))
             {
                 query["RelationshipTypes"] = request.RelationshipTypesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SparseRetrievalFields))
+            {
+                query["SparseRetrievalFields"] = request.SparseRetrievalFields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SparseVectorIndexConfigShrink))
+            {
+                query["SparseVectorIndexConfig"] = request.SparseVectorIndexConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupportSparse))
+            {
+                query["SupportSparse"] = request.SupportSparse;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4490,6 +4506,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 request.RelationshipTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RelationshipTypes, "RelationshipTypes", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SparseVectorIndexConfig))
+            {
+                request.SparseVectorIndexConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SparseVectorIndexConfig, "SparseVectorIndexConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Collection))
             {
@@ -4582,6 +4602,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationshipTypesShrink))
             {
                 query["RelationshipTypes"] = request.RelationshipTypesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SparseRetrievalFields))
+            {
+                query["SparseRetrievalFields"] = request.SparseRetrievalFields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SparseVectorIndexConfigShrink))
+            {
+                query["SparseVectorIndexConfig"] = request.SparseVectorIndexConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupportSparse))
+            {
+                query["SupportSparse"] = request.SupportSparse;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
