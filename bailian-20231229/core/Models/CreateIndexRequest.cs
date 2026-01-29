@@ -374,6 +374,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string ChunkMode { get; set; }
 
+        [NameInMap("connectId")]
+        [Validation(Required=false)]
+        public string ConnectId { get; set; }
+
         [NameInMap("database")]
         [Validation(Required=false)]
         public string Database { get; set; }
@@ -400,6 +404,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [NameInMap("enableHeaders")]
         [Validation(Required=false)]
         public bool? EnableHeaders { get; set; }
+
+        [NameInMap("knowledgeScene")]
+        [Validation(Required=false)]
+        public string KnowledgeScene { get; set; }
 
         /// <summary>
         /// <para>The metadata extraction configurations. Metadata refers to a set of additional attributes associated with unstructured data, which are integrated into text chunks in key-value pairs. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</para>

@@ -1515,6 +1515,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 query["chunkMode"] = request.ChunkMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectId))
+            {
+                query["connectId"] = request.ConnectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Database))
             {
                 query["database"] = request.Database;
@@ -1526,6 +1530,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableHeaders))
             {
                 query["enableHeaders"] = request.EnableHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeScene))
+            {
+                query["knowledgeScene"] = request.KnowledgeScene;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaExtractColumnsShrink))
             {
@@ -1715,6 +1723,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 query["chunkMode"] = request.ChunkMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectId))
+            {
+                query["connectId"] = request.ConnectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Database))
             {
                 query["database"] = request.Database;
@@ -1726,6 +1738,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableHeaders))
             {
                 query["enableHeaders"] = request.EnableHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeScene))
+            {
+                query["knowledgeScene"] = request.KnowledgeScene;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaExtractColumnsShrink))
             {
