@@ -1,3 +1,7 @@
+2026-01-30 Version: 9.0.1
+- Update API DescribeClusterUserKubeconfig: add request parameters PrivateIpAddress.
+
+
 2026-01-27 Version: 9.0.0
 - Update API CreateCluster: delete request parameters ClusterVersion.
 
