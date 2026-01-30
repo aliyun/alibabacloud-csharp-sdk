@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.OssMfd20231017.Models
             [Validation(Required=false)]
             public string DisplaySandboxResult { get; set; }
 
+            [NameInMap("ErrorMsg")]
+            [Validation(Required=false)]
+            public string ErrorMsg { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1</para>
@@ -127,6 +131,10 @@ namespace AlibabaCloud.SDK.OssMfd20231017.Models
             [Validation(Required=false)]
             public string Md5 { get; set; }
 
+            [NameInMap("OperateResult")]
+            [Validation(Required=false)]
+            public string OperateResult { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1/2022/06/23/15/41/16559701077444693a0c6-33b2-4cc2-a99f-9f38b8b8****</para>
@@ -134,6 +142,10 @@ namespace AlibabaCloud.SDK.OssMfd20231017.Models
             [NameInMap("OssKey")]
             [Validation(Required=false)]
             public string OssKey { get; set; }
+
+            [NameInMap("Remark")]
+            [Validation(Required=false)]
+            public string Remark { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -166,6 +178,10 @@ namespace AlibabaCloud.SDK.OssMfd20231017.Models
             [NameInMap("Source")]
             [Validation(Required=false)]
             public string Source { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
 
         }
 

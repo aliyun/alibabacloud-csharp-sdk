@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.OssMfd20231017.Models
     public class ListObjectScanEventRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>sha256</para>
+        /// </summary>
+        [NameInMap("BatchType")]
+        [Validation(Required=false)]
+        public string BatchType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>testBucket******</para>
         /// </summary>
         [NameInMap("BucketName")]
@@ -27,6 +35,18 @@ namespace AlibabaCloud.SDK.OssMfd20231017.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("EventId")]
+        [Validation(Required=false)]
+        public long? EventId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>WebShell</para>
+        /// </summary>
         [NameInMap("EventName")]
         [Validation(Required=false)]
         public string EventName { get; set; }
@@ -88,6 +108,14 @@ namespace AlibabaCloud.SDK.OssMfd20231017.Models
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public int? Status { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

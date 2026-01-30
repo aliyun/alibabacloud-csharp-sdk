@@ -1334,6 +1334,10 @@ namespace AlibabaCloud.SDK.OssMfd20231017
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchType))
+            {
+                query["BatchType"] = request.BatchType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
             {
                 query["BucketName"] = request.BucketName;
@@ -1341,6 +1345,10 @@ namespace AlibabaCloud.SDK.OssMfd20231017
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["EventId"] = request.EventId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventName))
             {
@@ -1373,6 +1381,10 @@ namespace AlibabaCloud.SDK.OssMfd20231017
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeEnd))
             {
@@ -1420,6 +1432,10 @@ namespace AlibabaCloud.SDK.OssMfd20231017
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchType))
+            {
+                query["BatchType"] = request.BatchType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
             {
                 query["BucketName"] = request.BucketName;
@@ -1427,6 +1443,10 @@ namespace AlibabaCloud.SDK.OssMfd20231017
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["EventId"] = request.EventId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventName))
             {
@@ -1459,6 +1479,10 @@ namespace AlibabaCloud.SDK.OssMfd20231017
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeEnd))
             {
