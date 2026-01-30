@@ -163,6 +163,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("policyConfigs")]
+        [Validation(Required=false)]
+        public List<HttpApiPolicyConfigs> PolicyConfigs { get; set; }
+
     }
 
 }

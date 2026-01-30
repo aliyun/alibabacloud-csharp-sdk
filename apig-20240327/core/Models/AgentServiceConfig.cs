@@ -19,6 +19,20 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Address { get; set; }
 
+        [NameInMap("customConfig")]
+        [Validation(Required=false)]
+        public AgentServiceConfigCustomConfig CustomConfig { get; set; }
+        public class AgentServiceConfigCustomConfig : TeaModel {
+            [NameInMap("apiKey")]
+            [Validation(Required=false)]
+            public string ApiKey { get; set; }
+
+            [NameInMap("apiKeyGenerateMode")]
+            [Validation(Required=false)]
+            public string ApiKeyGenerateMode { get; set; }
+
+        }
+
         [NameInMap("dashScopeConfig")]
         [Validation(Required=false)]
         public AgentServiceConfigDashScopeConfig DashScopeConfig { get; set; }
@@ -56,6 +70,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("enableHealthCheck")]
         [Validation(Required=false)]
         public bool? EnableHealthCheck { get; set; }
+
+        [NameInMap("enableOutlierDetection")]
+        [Validation(Required=false)]
+        public bool? EnableOutlierDetection { get; set; }
 
         [NameInMap("protocols")]
         [Validation(Required=false)]

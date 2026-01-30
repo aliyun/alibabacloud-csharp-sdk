@@ -43,9 +43,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         }
 
+        [NameInMap("compatibleProtocols")]
+        [Validation(Required=false)]
+        public List<string> CompatibleProtocols { get; set; }
+
+        [NameInMap("defaultModelName")]
+        [Validation(Required=false)]
+        public string DefaultModelName { get; set; }
+
         [NameInMap("enableHealthCheck")]
         [Validation(Required=false)]
         public bool? EnableHealthCheck { get; set; }
+
+        [NameInMap("enableOutlierDetection")]
+        [Validation(Required=false)]
+        public bool? EnableOutlierDetection { get; set; }
 
         [NameInMap("paiEASServiceConfig")]
         [Validation(Required=false)]
@@ -80,6 +92,36 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("provider")]
         [Validation(Required=false)]
         public string Provider { get; set; }
+
+        [NameInMap("vertexServiceConfig")]
+        [Validation(Required=false)]
+        public AiServiceConfigVertexServiceConfig VertexServiceConfig { get; set; }
+        public class AiServiceConfigVertexServiceConfig : TeaModel {
+            [NameInMap("geminiSafetySetting")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> GeminiSafetySetting { get; set; }
+
+            [NameInMap("vertexAuthKey")]
+            [Validation(Required=false)]
+            public string VertexAuthKey { get; set; }
+
+            [NameInMap("vertexAuthServiceName")]
+            [Validation(Required=false)]
+            public string VertexAuthServiceName { get; set; }
+
+            [NameInMap("vertexProjectId")]
+            [Validation(Required=false)]
+            public string VertexProjectId { get; set; }
+
+            [NameInMap("vertexRegion")]
+            [Validation(Required=false)]
+            public string VertexRegion { get; set; }
+
+            [NameInMap("vertexTokenRefreshAhead")]
+            [Validation(Required=false)]
+            public int? VertexTokenRefreshAhead { get; set; }
+
+        }
 
     }
 

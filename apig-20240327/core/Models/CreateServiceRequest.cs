@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public List<string> DnsServers { get; set; }
 
+            [NameInMap("expressType")]
+            [Validation(Required=false)]
+            public string ExpressType { get; set; }
+
             /// <summary>
             /// <para>The service group name. This parameter is required if sourceType is set to MSE_NACOS.</para>
             /// 
@@ -109,6 +113,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string SourceId { get; set; }
 
+            [NameInMap("validationOptions")]
+            [Validation(Required=false)]
+            public CreateServiceRequestServiceConfigsValidationOptions ValidationOptions { get; set; }
+            public class CreateServiceRequestServiceConfigsValidationOptions : TeaModel {
+                [NameInMap("skipVerifyAIChatCompletion")]
+                [Validation(Required=false)]
+                public bool? SkipVerifyAIChatCompletion { get; set; }
+
+            }
+
         }
 
         /// <summary>
@@ -137,6 +151,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("sourceType")]
         [Validation(Required=false)]
         public string SourceType { get; set; }
+
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
     }
 
