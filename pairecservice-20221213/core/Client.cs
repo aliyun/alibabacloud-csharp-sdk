@@ -15855,6 +15855,266 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取数据资源下的Schema列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceResourceSchemasRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceResourceSchemasResponse
+        /// </returns>
+        public ListInstanceResourceSchemasResponse ListInstanceResourceSchemasWithOptions(string InstanceId, string ResourceId, ListInstanceResourceSchemasRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemaName))
+            {
+                query["SchemaName"] = request.SchemaName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceResourceSchemas",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/resources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceId) + "/schemas",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceResourceSchemasResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据资源下的Schema列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceResourceSchemasRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceResourceSchemasResponse
+        /// </returns>
+        public async Task<ListInstanceResourceSchemasResponse> ListInstanceResourceSchemasWithOptionsAsync(string InstanceId, string ResourceId, ListInstanceResourceSchemasRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemaName))
+            {
+                query["SchemaName"] = request.SchemaName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceResourceSchemas",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/resources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceId) + "/schemas",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceResourceSchemasResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据资源下的Schema列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceResourceSchemasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceResourceSchemasResponse
+        /// </returns>
+        public ListInstanceResourceSchemasResponse ListInstanceResourceSchemas(string InstanceId, string ResourceId, ListInstanceResourceSchemasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListInstanceResourceSchemasWithOptions(InstanceId, ResourceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据资源下的Schema列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceResourceSchemasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceResourceSchemasResponse
+        /// </returns>
+        public async Task<ListInstanceResourceSchemasResponse> ListInstanceResourceSchemasAsync(string InstanceId, string ResourceId, ListInstanceResourceSchemasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListInstanceResourceSchemasWithOptionsAsync(InstanceId, ResourceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据源下数据表的列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceResourceTablesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceResourceTablesResponse
+        /// </returns>
+        public ListInstanceResourceTablesResponse ListInstanceResourceTablesWithOptions(string InstanceId, string ResourceId, ListInstanceResourceTablesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxcomputeSchema))
+            {
+                query["MaxcomputeSchema"] = request.MaxcomputeSchema;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceResourceTables",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/resources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceId) + "/tables",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceResourceTablesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据源下数据表的列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceResourceTablesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceResourceTablesResponse
+        /// </returns>
+        public async Task<ListInstanceResourceTablesResponse> ListInstanceResourceTablesWithOptionsAsync(string InstanceId, string ResourceId, ListInstanceResourceTablesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxcomputeSchema))
+            {
+                query["MaxcomputeSchema"] = request.MaxcomputeSchema;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceResourceTables",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/resources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceId) + "/tables",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceResourceTablesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据源下数据表的列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceResourceTablesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceResourceTablesResponse
+        /// </returns>
+        public ListInstanceResourceTablesResponse ListInstanceResourceTables(string InstanceId, string ResourceId, ListInstanceResourceTablesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListInstanceResourceTablesWithOptions(InstanceId, ResourceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据源下数据表的列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceResourceTablesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceResourceTablesResponse
+        /// </returns>
+        public async Task<ListInstanceResourceTablesResponse> ListInstanceResourceTablesAsync(string InstanceId, string ResourceId, ListInstanceResourceTablesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListInstanceResourceTablesWithOptionsAsync(InstanceId, ResourceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取实例下配置的资源列表。</para>
         /// </summary>
         /// 
