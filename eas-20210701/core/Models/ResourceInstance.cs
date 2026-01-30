@@ -107,6 +107,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
         }
 
+        [NameInMap("LastCordonOperator")]
+        [Validation(Required=false)]
+        public string LastCordonOperator { get; set; }
+
+        [NameInMap("LastCordonReason")]
+        [Validation(Required=false)]
+        public string LastCordonReason { get; set; }
+
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }

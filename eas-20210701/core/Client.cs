@@ -13147,6 +13147,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 body["NewDiskSize"] = request.NewDiskSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                body["Reason"] = request.Reason;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -13196,6 +13200,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewDiskSize))
             {
                 body["NewDiskSize"] = request.NewDiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                body["Reason"] = request.Reason;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
