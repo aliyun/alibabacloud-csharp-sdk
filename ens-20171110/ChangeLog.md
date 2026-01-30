@@ -1,3 +1,6 @@
+2026-01-30 Version: 9.0.2
+- Generated csharp 2017-11-10 for Ens.
+
 2026-01-30 Version: 9.0.1
 - Update API DescribeClusterUserKubeconfig: add request parameters PrivateIpAddress.
 
