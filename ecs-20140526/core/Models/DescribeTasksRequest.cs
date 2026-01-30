@@ -105,6 +105,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TaskAction { get; set; }
 
         /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>false</c>
+        /// </summary>
+        [NameInMap("TaskGroupId")]
+        [Validation(Required=false)]
+        public string TaskGroupId { get; set; }
+
+        /// <summary>
         /// <para>The task IDs. You can specify up to 100 task IDs at a time. Separate the task IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
