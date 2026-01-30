@@ -9,10 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
     public class ListClusterTypeResponseBody : TeaModel {
-        [NameInMap("ClusterTypeDetailList")]
+        [NameInMap("ClusterTypeInfos")]
         [Validation(Required=false)]
-        public List<ListClusterTypeResponseBodyClusterTypeDetailList> ClusterTypeDetailList { get; set; }
-        public class ListClusterTypeResponseBodyClusterTypeDetailList : TeaModel {
+        public List<ListClusterTypeResponseBodyClusterTypeInfos> ClusterTypeInfos { get; set; }
+        public class ListClusterTypeResponseBodyClusterTypeInfos : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>SSD</para>
@@ -21,19 +21,15 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
             [Validation(Required=false)]
             public string ClusterType { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>true</para>
-            /// </summary>
             [NameInMap("IsMultiAZ")]
             [Validation(Required=false)]
             public bool? IsMultiAZ { get; set; }
 
         }
 
-        [NameInMap("ClusterTypeList")]
+        [NameInMap("ClusterTypes")]
         [Validation(Required=false)]
-        public List<string> ClusterTypeList { get; set; }
+        public List<string> ClusterTypes { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
