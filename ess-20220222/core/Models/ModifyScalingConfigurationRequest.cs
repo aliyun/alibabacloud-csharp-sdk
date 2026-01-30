@@ -959,19 +959,19 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The instance types.</para>
+        /// <para>Details of the instance types.</para>
         /// </summary>
         [NameInMap("InstanceTypeOverrides")]
         [Validation(Required=false)]
         public List<ModifyScalingConfigurationRequestInstanceTypeOverrides> InstanceTypeOverrides { get; set; }
         public class ModifyScalingConfigurationRequestInstanceTypeOverrides : TeaModel {
             /// <summary>
-            /// <para>The instance type. If you want to specify the capacity of instance types in the scaling configuration, specify InstanceType and WeightedCapacity at the same time.</para>
-            /// <para>You can use InstanceType to specify multiple instance types and WeightedCapacity to specify the weights of the instance types.</para>
+            /// <para>The instance type. If you want to specify the weight of the instance type in the scaling configuration, you must specify InstanceTypeOverride.WeightedCapacity after you specify this parameter.</para>
+            /// <para>This parameter specifies instance types. You can use this parameter to specify multiple instance types and use InstanceTypeOverride.WeightedCapacity to specify weights for the instance types.</para>
             /// <remarks>
-            /// <para>If you specify InstanceType, you cannot specify InstanceTypes.</para>
+            /// <para> If you specify this parameter, you cannot specify instanceTypes.</para>
             /// </remarks>
-            /// <para>You can use InstanceType to specify only instance types that are available for purchase.</para>
+            /// <para>You can use this parameter to specify any instance types that are available for purchase.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs.c5.xlarge</para>
@@ -981,18 +981,18 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The weight of the instance type. The weight specifies the capacity of an instance of the specified instance type in the scaling group. If you want Auto Scaling to scale instances in the scaling group based on the weighted capacity of the instances, specify WeightedCapacity after you specify InstanceType.</para>
-            /// <para>A higher weight specifies that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.</para>
-            /// <para>Performance metrics, such as the number of vCPUs and the memory size of each instance type, may vary. You can specify different weights for different instance types based on your business requirements.</para>
-            /// <para>Example:</para>
+            /// <para>The weight of the instance type. If you want to trigger scale-outs based on instance capacities, you can specify this parameter after you specify LaunchTemplateOverride.InstanceType.</para>
+            /// <para>The weight specifies the capacity of an instance of the specified instance type in the scaling group. A higher weight specifies that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.</para>
+            /// <para>Performance metrics such as the number of vCPUs and the memory size of each instance type may vary. You can specify different weights for different instance types based on your business requirements.</para>
+            /// <para>Sample capacity configurations:</para>
             /// <list type="bullet">
-            /// <item><description>Current capacity: 0</description></item>
-            /// <item><description>Expected capacity: 6</description></item>
-            /// <item><description>Capacity of ecs.c5.xlarge: 4</description></item>
+            /// <item><description>Current capacity: 0.</description></item>
+            /// <item><description>Expected capacity: 6.</description></item>
+            /// <item><description>Capacity of ecs.c5.xlarge: 4.</description></item>
             /// </list>
-            /// <para>To meet the expected capacity requirement, Auto Scaling must create and add two ecs.c5.xlarge instances.</para>
+            /// <para>To reach the expected capacity, Auto Scaling must scale out two instances of ecs.c5.xlarge.</para>
             /// <remarks>
-            /// <para>The capacity of the scaling group cannot exceed the sum of the maximum number of instances that is specified by MaxSize and the maximum weight of the instance types.</para>
+            /// <para> The total capacity of the scaling group is constrained and cannot surpass the combined total of the maximum group size defined by MaxSize and the highest weight assigned to any instance type.</para>
             /// </remarks>
             /// <para>Valid values of WeightedCapacity: 1 to 500.</para>
             /// 
@@ -1165,6 +1165,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [NameInMap("NetworkInterfaceTrafficMode")]
             [Validation(Required=false)]
             public string NetworkInterfaceTrafficMode { get; set; }
+
+            [NameInMap("SecondaryPrivateIpAddressCount")]
+            [Validation(Required=false)]
+            public int? SecondaryPrivateIpAddressCount { get; set; }
 
             /// <summary>
             /// <para>The IDs of the security groups to which you want to assign the ENI.</para>
@@ -1380,14 +1384,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string SpotInterruptionBehavior { get; set; }
 
         /// <summary>
-        /// <para>The preemptible instance types.</para>
+        /// <para>The information about spot instance types.</para>
         /// </summary>
         [NameInMap("SpotPriceLimits")]
         [Validation(Required=false)]
         public List<ModifyScalingConfigurationRequestSpotPriceLimits> SpotPriceLimits { get; set; }
         public class ModifyScalingConfigurationRequestSpotPriceLimits : TeaModel {
             /// <summary>
-            /// <para>The instance type of the preemptible instance. This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit.</para>
+            /// <para>The instance type of the spot instances. This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs.g6.large</para>
@@ -1397,7 +1401,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The price limit of the preemptible instance. This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit.</para>
+            /// <para>The price limit of the spot instances. This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.125</para>

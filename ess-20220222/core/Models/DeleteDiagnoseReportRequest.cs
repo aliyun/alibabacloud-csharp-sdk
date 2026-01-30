@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DeleteDiagnoseReportRequest : TeaModel {
         /// <summary>
+        /// <para>The region ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the diagnostic report.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

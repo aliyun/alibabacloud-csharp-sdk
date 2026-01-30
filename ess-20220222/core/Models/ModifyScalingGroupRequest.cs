@@ -266,19 +266,19 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string LaunchTemplateId { get; set; }
 
         /// <summary>
-        /// <para>Details of the instance types that are specified in the extended configurations of the launch template.</para>
+        /// <para>The information about the instance types that are extended in the launch template.</para>
         /// </summary>
         [NameInMap("LaunchTemplateOverrides")]
         [Validation(Required=false)]
         public List<ModifyScalingGroupRequestLaunchTemplateOverrides> LaunchTemplateOverrides { get; set; }
         public class ModifyScalingGroupRequestLaunchTemplateOverrides : TeaModel {
             /// <summary>
-            /// <para>The instance type. The instance type that you specify by using the InstanceType parameter overwrites the instance type that is specified in the launch template.</para>
-            /// <para>If you want Auto Scaling to scale instances in the scaling group based on the instance type weight, you must specify both the InstanceType and WeightedCapacity parameters.</para>
+            /// <para>The instance type that you want to use to override the instance type that is specified in the launch template.</para>
+            /// <para>The instance type specified by using this parameter overwrites the instance type of the launch template.</para>
             /// <remarks>
-            /// <para>This parameter takes effect only after you specify the LaunchTemplateId parameter.</para>
+            /// <para> This parameter takes effect only if you specify LaunchTemplateId.</para>
             /// </remarks>
-            /// <para>You can use the InstanceType parameter to specify only instance types that are available for purchase.</para>
+            /// <para>You can use this parameter to specify any instance types that are available for purchase.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs.c5.xlarge</para>
@@ -288,6 +288,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string InstanceType { get; set; }
 
             /// <summary>
+            /// <para>The maximum bid price of instance type N that is specified by <c>LaunchTemplateOverride.N.InstanceType</c>. You can specify N instance types by using the Extend Launch Template feature. You can specify 1 to 10 memory sizes, indicated by N.</para>
+            /// <remarks>
+            /// <para> This parameter takes effect only if you use <c>LaunchTemplateId</c> to specify a launch template.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>0.025</para>
             /// </summary>
@@ -296,20 +301,21 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public float? SpotPriceLimit { get; set; }
 
             /// <summary>
-            /// <para>The weight of the instance type. The weight specifies the capacity of a single instance of the specified instance type in the scaling group. If you want Auto Scaling to scale instances in the scaling group based on the weighted capacity of instances, you must specify the WeightedCapacity parameter after you specify the InstanceType parameter.</para>
-            /// <para>A higher weight specifies that a smaller number of instances of the specified instance type are required to meet the expected capacity.</para>
-            /// <para>Performance metrics, such as the number of vCPUs and the memory size of each instance type, may vary. You can specify different weights for different instance types based on your business requirements.</para>
-            /// <para>Example:</para>
+            /// <para>If you want to scale the scaling group based on the instance types, you must specify LaunchTemplateOverrides.InstanceType before you specify this parameter. The two parameters have a one-to-one correspondence.</para>
+            /// <para>The weight specifies the capacity of an instance of the specified instance type in the scaling group.</para>
+            /// <para>A higher weight specifies that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.</para>
+            /// <para>Performance metrics such as the number of vCPUs and the memory size of each instance type may vary. You can specify different weights for different instance types based on your business requirements.</para>
+            /// <para>Sample capacity configurations:</para>
             /// <list type="bullet">
-            /// <item><description>Current capacity: 0</description></item>
+            /// <item><description>Current capacity: 0.</description></item>
             /// <item><description>Expected capacity: 6</description></item>
             /// <item><description>Capacity of ecs.c5.xlarge: 4</description></item>
             /// </list>
-            /// <para>To meet the expected capacity requirement, Auto Scaling must create and add two ecs.c5.xlarge instances.</para>
+            /// <para>To reach the expected capacity, Auto Scaling must scale out two instances of ecs.c5.xlarge.</para>
             /// <remarks>
-            /// <para>The capacity of the scaling group cannot exceed the sum of the maximum number of instances that is specified by the MaxSize parameter and the maximum weight of the instance type.</para>
+            /// <para> The total capacity of the scaling group is constrained and cannot surpass the combined total of the maximum group size defined by MaxSize and the highest weight assigned to any instance type.</para>
             /// </remarks>
-            /// <para>Valid values of the WeightedCapacity parameter: 1 to 500.</para>
+            /// <para>Valid values of WeightedCapacity: 1 to 500.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>

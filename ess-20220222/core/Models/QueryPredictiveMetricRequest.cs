@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class QueryPredictiveMetricRequest : TeaModel {
         /// <summary>
+        /// <para>The end time of the predicted monitoring data. The time follows the ISO8601 standard and uses UTC time.</para>
+        /// <para>Format: yyyy-MM-ddTHH:mmZ.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +22,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The name of the monitoring metric of the prediction rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CpuUtilization: the average CPU utilization.</description></item>
+        /// <item><description>IntranetRx: the inbound traffic over an internal network.</description></item>
+        /// <item><description>IntranetTx: the outbound traffic over an internal network.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +42,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,6 +61,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the scaling group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +72,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
+        /// <para>The start time of the predicted monitoring data. The time follows the ISO8601 standard and uses UTC time.</para>
+        /// <para>Format: yyyy-MM-ddTHH:mmZ.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

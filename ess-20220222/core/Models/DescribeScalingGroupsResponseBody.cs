@@ -763,9 +763,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ScalingPolicy { get; set; }
 
             /// <summary>
-            /// <para>The server groups.</para>
+            /// <para>The information about the server groups.</para>
             /// <remarks>
-            /// <para> You can use this parameter to obtain information about ALB server groups and Network Load Balancer (NLB) server groups attached to the scaling group.</para>
+            /// <para> You can use this parameter to obtain the information about the ALB, NLB, and GWLB server groups associated with a scaling group.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("ServerGroups")]
@@ -773,7 +773,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<DescribeScalingGroupsResponseBodyScalingGroupsServerGroups> ServerGroups { get; set; }
             public class DescribeScalingGroupsResponseBodyScalingGroupsServerGroups : TeaModel {
                 /// <summary>
-                /// <para>The port number used by an ECS instance as a backend server in the server group.</para>
+                /// <para>The port number used by each ECS instance in the server group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
@@ -797,6 +797,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 /// <list type="bullet">
                 /// <item><description>ALB</description></item>
                 /// <item><description>NLB</description></item>
+                /// <item><description>GWLB</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

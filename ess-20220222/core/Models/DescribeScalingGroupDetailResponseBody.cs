@@ -639,7 +639,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>The information about the server groups.</para>
             /// <remarks>
-            /// <para> You can use this parameter to obtain information about ALB server groups and Network Load Balancer (NLB) server groups attached to your scaling group.</para>
+            /// <para> You can use this parameter to obtain the information about the ALB, NLB, and GWLB server groups associated with a scaling group.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("ServerGroups")]
@@ -671,6 +671,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 /// <list type="bullet">
                 /// <item><description>ALB</description></item>
                 /// <item><description>NLB</description></item>
+                /// <item><description>GWLB</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

@@ -945,6 +945,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public string NetworkInterfaceTrafficMode { get; set; }
 
+                [NameInMap("SecondaryPrivateIpAddressCount")]
+                [Validation(Required=false)]
+                public int? SecondaryPrivateIpAddressCount { get; set; }
+
                 /// <summary>
                 /// <para>The IDs of the security groups to which the ENIs belong.</para>
                 /// </summary>

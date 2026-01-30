@@ -75,6 +75,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public class DetachServerGroupsRequestServerGroups : TeaModel {
             /// <summary>
             /// <para>The port used by ECS instances or elastic container instances as backend servers of the server group.</para>
+            /// <remarks>
+            /// <para> For ALB and NLB types, this parameter is required. GWLB type cannot set this parameter and the default value is 6081.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>22</para>
@@ -99,6 +102,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <list type="bullet">
             /// <item><description>ALB</description></item>
             /// <item><description>NLB</description></item>
+            /// <item><description>GWLB</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

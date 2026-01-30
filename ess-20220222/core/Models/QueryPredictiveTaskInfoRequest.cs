@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class QueryPredictiveTaskInfoRequest : TeaModel {
         /// <summary>
+        /// <para>The end time of the prediction task. The time follows the ISO8601 standard and uses UTC time.</para>
+        /// <para>Format: yyyy-MM-ddTHH:mmZ.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +26,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,6 +45,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the prediction scaling rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,6 +56,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingRuleId { get; set; }
 
         /// <summary>
+        /// <para>The start time of the prediction task. The time follows the ISO8601 standard and uses UTC time.</para>
+        /// <para>Format: yyyy-MM-ddTHH:mmZ.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the server group. Valid values:</para>
+        /// <para>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances (ECI) in the scaling group to the server group. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -74,8 +74,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<AttachServerGroupsRequestServerGroups> ServerGroups { get; set; }
         public class AttachServerGroupsRequestServerGroups : TeaModel {
             /// <summary>
-            /// <para>The port used by ECS instances or elastic container instances after being added as backend servers to the server group.</para>
+            /// <para>The port used by ECS or ECI instances after being added as backend servers to the server group.</para>
             /// <para>Valid values: 1 to 65535.</para>
+            /// <remarks>
+            /// <para>For ALB and NLB types, this parameter is required. GWLB type cannot set this parameter and the default value is 6081.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>22</para>
@@ -96,10 +99,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ServerGroupId { get; set; }
 
             /// <summary>
-            /// <para>The type of the server group. Valid values:</para>
+            /// <para>The type of the server group. Valid Values:</para>
             /// <list type="bullet">
             /// <item><description>ALB</description></item>
             /// <item><description>NLB</description></item>
+            /// <item><description>GWLB</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -111,8 +115,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The weight of an ECS instance or elastic container instance as a backend server of the server group. Valid values: 0 to 100.</para>
-            /// <para>If you assign a higher weight to an instance, the instance is allocated a larger proportion of access requests. If you assign zero weight to an instance, the instance is allocated no access requests.</para>
+            /// <para>The weight of an ECS or ECI instance as a backend server of the server group. Valid values: 0 to 100</para>
+            /// <para>If you assign a higher weight to an instance, the instance is allocated a larger proportion of access requests. If the weight is 0, the ECS or ECI instance does not receive access requests.</para>
+            /// <remarks>
+            /// <para>For ALB and NLB types, this parameter is required. GWLB type cannot be set.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

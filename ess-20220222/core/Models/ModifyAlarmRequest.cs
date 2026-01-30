@@ -56,23 +56,24 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Details of the dimensions.</para>
+        /// <para>The metric dimensions.</para>
         /// </summary>
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
         public List<ModifyAlarmRequestDimensions> Dimensions { get; set; }
         public class ModifyAlarmRequestDimensions : TeaModel {
             /// <summary>
-            /// <para>The key of the dimension. The valid values vary based on the metric type.</para>
+            /// <para>The key of dimension N that you want to associate with the metric. The valid values of Dimension.N.DimensionKey vary based on the value of MetricType.</para>
             /// <list type="bullet">
-            /// <item><description><para>If you set the MetricType parameter to custom, you can specify this parameter based on your business requirements.</para>
+            /// <item><description><para>If you set MetricType to custom, you can specify this parameter based on your business requirements.</para>
             /// </description></item>
-            /// <item><description><para>If you set the MetricType parameter to system, this parameter has the following valid values:</para>
+            /// <item><description><para>If you set MetricType to system, this parameter has the following valid values:</para>
             /// <list type="bullet">
-            /// <item><description>user_id: the ID of your Alibaba Cloud account</description></item>
-            /// <item><description>scaling_group: the scaling group that you want to monitor</description></item>
-            /// <item><description>device: the type of the NIC</description></item>
-            /// <item><description>state: the status of the TCP connection</description></item>
+            /// <item><description>user_id: the ID of your Alibaba Cloud account.</description></item>
+            /// <item><description>scaling_group: the scaling group that is monitored by the event-triggered task.</description></item>
+            /// <item><description>device: the NIC type.</description></item>
+            /// <item><description>state: the status of the TCP connection.</description></item>
+            /// <item><description>rulePool: the specified server group for the ALB qps metric.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -85,26 +86,26 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string DimensionKey { get; set; }
 
             /// <summary>
-            /// <para>The value of the dimension. The valid values vary based on the value of the DimensionKey parameter.</para>
+            /// <para>The dimension value of the metric. The valid values of this parameter vary based on the value of Dimensions.DimensionKey.</para>
             /// <list type="bullet">
-            /// <item><description><para>If you set the MetricType parameter to custom, you can specify this parameter based on your business requirements.</para>
+            /// <item><description><para>If you set MetricType to custom, you can specify this parameter based on your business requirements.</para>
             /// </description></item>
-            /// <item><description><para>If you set the MetricType parameter to system, this parameter has the following valid values:</para>
+            /// <item><description><para>If you set MetricType to system, Dimension.N.DimensionValue has the following valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>If you set the DimensionKey parameter to user_id, the system specifies the value</para>
+            /// <item><description><para>user_id: The system specifies the value.</para>
             /// </description></item>
-            /// <item><description><para>scaling_group: The system specifies the value of the DimensionValue parameter.</para>
+            /// <item><description><para>scaling_group: The system specifies the value.</para>
             /// </description></item>
-            /// <item><description><para>If you set the DimensionKey parameter to device, you can set the DimensionValue parameter to eth0 or eth1.</para>
+            /// <item><description><para>device:</para>
             /// <list type="bullet">
-            /// <item><description>For instances that reside in the classic network type, eth0 specifies the internal NIC. Only one eth0 NIC exists on each instance that resides in a VPC.</description></item>
-            /// <item><description>For instances that reside in the classic network, eth1 specifies the public NIC.</description></item>
+            /// <item><description>eth0: For classic network instances, eth0 indicates the internal network network interface controller. Only one eth0 NIC exists on each instance that resides in VPCs.</description></item>
+            /// <item><description>eth1: For classic network instances, eth1 represents the Internet network interface controller.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>If you set the DimensionKey parameter to state, you can set the DimensionValue parameter to TCP_TOTAL or ESTABLISHED.</para>
+            /// <item><description><para>state:</para>
             /// <list type="bullet">
             /// <item><description>TCP_TOTAL specifies the total number of TCP connections.</description></item>
-            /// <item><description>ESTABLISHED specifies the number of established TCP connections.</description></item>
+            /// <item><description>ESTABLISHED specifies the number of TCP connections that are established.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -333,9 +334,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The metric type. Valid values:</para>
+        /// <para>The metric type. Valid Values:</para>
         /// <list type="bullet">
-        /// <item><description>system: a system metric of CloudMonitor</description></item>
+        /// <item><description>system: a system metric of CloudMonitor.</description></item>
         /// <item><description>custom: a custom metric that is reported to CloudMonitor.</description></item>
         /// </list>
         /// 

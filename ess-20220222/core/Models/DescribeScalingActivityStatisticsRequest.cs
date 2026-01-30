@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScalingActivityStatisticsRequest : TeaModel {
         /// <summary>
+        /// <para>The end time of the statistical interval. The time follows the ISO 8601 standard and uses UTC time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,13 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The name of the metric on which the scaling activity is counted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ScalingActivityStatus: collects statistics on the distribution of scaling activities in different states within a time range.</description></item>
+        /// <item><description>ScalingActivityErrorCodes: the distribution of error codes in failed scaling activities within a time range.</description></item>
+        /// </list>
+        /// <para>Default value: ScalingActivityStatus.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ScalingActivityStatus</para>
         /// </summary>
@@ -32,6 +40,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +59,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the scaling group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>asg-8vbje5pofxxxxxxxx</para>
         /// </summary>
@@ -58,6 +69,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
+        /// <para>The start time of the statistical interval. The time follows the ISO 8601 standard and uses UTC time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

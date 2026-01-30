@@ -781,9 +781,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingPolicy { get; set; }
 
         /// <summary>
-        /// <para>The server groups.</para>
+        /// <para>The information about the server groups.</para>
         /// <remarks>
-        /// <para> You cannot use AlbServerGroups and ServerGroups to specify the same server group.</para>
+        /// <para>You cannot use AlbServerGroups and ServerGroups to specify the same server group.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ServerGroups")]
@@ -811,10 +811,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ServerGroupId { get; set; }
 
             /// <summary>
-            /// <para>The type of the server group. Valid values:</para>
+            /// <para>The type of server group N. Valid Values:</para>
             /// <list type="bullet">
             /// <item><description>ALB</description></item>
             /// <item><description>NLB</description></item>
+            /// <item><description>GWLB</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -826,7 +827,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
             /// <summary>
             /// <para>The weight of each ECS instance as a backend server in the server group. Valid values: 0 to 100.</para>
-            /// <para>If you increase the weight for an ECS instance, the number of requests that are forwarded to the ECS instance also increases. If you set the weight for an ECS instance to 0, no requests are forwarded to the ECS instance.</para>
+            /// <para>The higher the weight, the more access requests the instance will be assigned. If the weight is 0, the instance will not receive any access requests.</para>
+            /// <remarks>
+            /// <para>For ALB and NLB types, this parameter is required. GWLB type cannot be set.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -905,7 +909,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? SyncAlarmRuleToCms { get; set; }
 
         /// <summary>
-        /// <para>The information about the tags of the scaling group.</para>
+        /// <para>The collection of tag information for the scaling group.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
