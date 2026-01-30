@@ -3486,6 +3486,126 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询T2优惠券审批详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTier2CouponApprovalDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTier2CouponApprovalDetailResponse
+        /// </returns>
+        public GetTier2CouponApprovalDetailResponse GetTier2CouponApprovalDetailWithOptions(GetTier2CouponApprovalDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationSheetId))
+            {
+                query["ApplicationSheetId"] = request.ApplicationSheetId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTier2CouponApprovalDetail",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTier2CouponApprovalDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询T2优惠券审批详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTier2CouponApprovalDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTier2CouponApprovalDetailResponse
+        /// </returns>
+        public async Task<GetTier2CouponApprovalDetailResponse> GetTier2CouponApprovalDetailWithOptionsAsync(GetTier2CouponApprovalDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationSheetId))
+            {
+                query["ApplicationSheetId"] = request.ApplicationSheetId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTier2CouponApprovalDetail",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTier2CouponApprovalDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询T2优惠券审批详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTier2CouponApprovalDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTier2CouponApprovalDetailResponse
+        /// </returns>
+        public GetTier2CouponApprovalDetailResponse GetTier2CouponApprovalDetail(GetTier2CouponApprovalDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTier2CouponApprovalDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询T2优惠券审批详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTier2CouponApprovalDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTier2CouponApprovalDetailResponse
+        /// </returns>
+        public async Task<GetTier2CouponApprovalDetailResponse> GetTier2CouponApprovalDetailAsync(GetTier2CouponApprovalDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTier2CouponApprovalDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Query all the Unassociated Customer.</para>
         /// </summary>
         /// 
@@ -4320,6 +4440,302 @@ namespace AlibabaCloud.SDK.Agency20221216
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListExportTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>T1查询T2优惠券申请列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTier2CouponApprovalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTier2CouponApprovalResponse
+        /// </returns>
+        public ListTier2CouponApprovalResponse ListTier2CouponApprovalWithOptions(ListTier2CouponApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationSheetId))
+            {
+                query["ApplicationSheetId"] = request.ApplicationSheetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalStatus))
+            {
+                query["ApprovalStatus"] = request.ApprovalStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.T2PartnerName))
+            {
+                query["T2PartnerName"] = request.T2PartnerName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.T2PartnerUid))
+            {
+                query["T2PartnerUid"] = request.T2PartnerUid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTier2CouponApproval",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTier2CouponApprovalResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>T1查询T2优惠券申请列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTier2CouponApprovalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTier2CouponApprovalResponse
+        /// </returns>
+        public async Task<ListTier2CouponApprovalResponse> ListTier2CouponApprovalWithOptionsAsync(ListTier2CouponApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationSheetId))
+            {
+                query["ApplicationSheetId"] = request.ApplicationSheetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalStatus))
+            {
+                query["ApprovalStatus"] = request.ApprovalStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.T2PartnerName))
+            {
+                query["T2PartnerName"] = request.T2PartnerName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.T2PartnerUid))
+            {
+                query["T2PartnerUid"] = request.T2PartnerUid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTier2CouponApproval",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTier2CouponApprovalResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>T1查询T2优惠券申请列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTier2CouponApprovalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTier2CouponApprovalResponse
+        /// </returns>
+        public ListTier2CouponApprovalResponse ListTier2CouponApproval(ListTier2CouponApprovalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListTier2CouponApprovalWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>T1查询T2优惠券申请列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTier2CouponApprovalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTier2CouponApprovalResponse
+        /// </returns>
+        public async Task<ListTier2CouponApprovalResponse> ListTier2CouponApprovalAsync(ListTier2CouponApprovalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListTier2CouponApprovalWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>审批流审批通用接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ProcessApprovalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ProcessApprovalResponse
+        /// </returns>
+        public ProcessApprovalResponse ProcessApprovalWithOptions(ProcessApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationSheetId))
+            {
+                query["ApplicationSheetId"] = request.ApplicationSheetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalAction))
+            {
+                query["ApprovalAction"] = request.ApprovalAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalComments))
+            {
+                query["ApprovalComments"] = request.ApprovalComments;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ProcessApproval",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ProcessApprovalResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>审批流审批通用接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ProcessApprovalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ProcessApprovalResponse
+        /// </returns>
+        public async Task<ProcessApprovalResponse> ProcessApprovalWithOptionsAsync(ProcessApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationSheetId))
+            {
+                query["ApplicationSheetId"] = request.ApplicationSheetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalAction))
+            {
+                query["ApprovalAction"] = request.ApprovalAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalComments))
+            {
+                query["ApprovalComments"] = request.ApprovalComments;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ProcessApproval",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ProcessApprovalResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>审批流审批通用接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ProcessApprovalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ProcessApprovalResponse
+        /// </returns>
+        public ProcessApprovalResponse ProcessApproval(ProcessApprovalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ProcessApprovalWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>审批流审批通用接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ProcessApprovalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ProcessApprovalResponse
+        /// </returns>
+        public async Task<ProcessApprovalResponse> ProcessApprovalAsync(ProcessApprovalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ProcessApprovalWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
