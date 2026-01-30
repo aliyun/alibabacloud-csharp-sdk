@@ -214,6 +214,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string EditOcrResult { get; set; }
 
+        [NameInMap("Email")]
+        [Validation(Required=false)]
+        public string Email { get; set; }
+
         /// <summary>
         /// <para>Experience code</para>
         /// 
@@ -368,6 +372,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [NameInMap("MetaInfo")]
         [Validation(Required=false)]
         public string MetaInfo { get; set; }
+
+        [NameInMap("Mobile")]
+        [Validation(Required=false)]
+        public string Mobile { get; set; }
 
         /// <summary>
         /// <para>The type of liveness detection to be performed:</para>

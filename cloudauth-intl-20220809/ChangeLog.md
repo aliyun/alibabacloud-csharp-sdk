@@ -1,3 +1,9 @@
+2026-01-30 Version: 3.14.1
+- Update API CheckResult: add response parameters Body.Result.ExtSourceInfo.
+- Update API Initialize: add request parameters Email.
+- Update API Initialize: add request parameters Mobile.
+
+
 2025-12-26 Version: 3.14.0
 - Support API AddFaceRecord.
 

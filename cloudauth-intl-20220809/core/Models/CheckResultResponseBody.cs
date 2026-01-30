@@ -106,6 +106,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             [Validation(Required=false)]
             public string ExtRiskInfo { get; set; }
 
+            [NameInMap("ExtSourceInfo")]
+            [Validation(Required=false)]
+            public string ExtSourceInfo { get; set; }
+
             /// <summary>
             /// <para>Whether the authentication is passed.</para>
             /// <list type="bullet">

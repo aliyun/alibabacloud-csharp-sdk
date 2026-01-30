@@ -6035,6 +6035,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["EditOcrResult"] = request.EditOcrResult;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExperienceCode))
             {
                 query["ExperienceCode"] = request.ExperienceCode;
@@ -6086,6 +6090,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaInfo))
             {
                 query["MetaInfo"] = request.MetaInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                query["Mobile"] = request.Mobile;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
             {
@@ -6281,6 +6289,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["EditOcrResult"] = request.EditOcrResult;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExperienceCode))
             {
                 query["ExperienceCode"] = request.ExperienceCode;
@@ -6332,6 +6344,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaInfo))
             {
                 query["MetaInfo"] = request.MetaInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                query["Mobile"] = request.Mobile;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
             {
