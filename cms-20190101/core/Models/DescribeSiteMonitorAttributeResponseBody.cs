@@ -970,6 +970,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public int? MatchRule { get; set; }
 
+                [NameInMap("max_tls_version")]
+                [Validation(Required=false)]
+                public string MaxTlsVersion { get; set; }
+
                 /// <summary>
                 /// <para>The minimum TLS version. By default, TLS 1.2 and later versions are supported. TLS 1.0 and 1.1 are disabled. If you still require TLS 1.0 or 1.1, you can change the configuration.</para>
                 /// 
@@ -1158,6 +1162,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public bool? ScrollEnd { get; set; }
 
+                [NameInMap("server_name")]
+                [Validation(Required=false)]
+                public string ServerName { get; set; }
+
                 [NameInMap("steps")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonSteps Steps { get; set; }
@@ -1260,6 +1268,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public bool? StrictMode { get; set; }
 
+                [NameInMap("supported_cipher_suits")]
+                [Validation(Required=false)]
+                public string SupportedCipherSuits { get; set; }
+
                 /// <summary>
                 /// <para>The timeout period. Unit: milliseconds.</para>
                 /// 
@@ -1317,6 +1329,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [NameInMap("use_private_crt")]
                 [Validation(Required=false)]
                 public bool? UsePrivateCrt { get; set; }
+
+                [NameInMap("use_ssl")]
+                [Validation(Required=false)]
+                public bool? UseSsl { get; set; }
 
                 /// <summary>
                 /// <para>The username of the FTP, SMTP, or POP3 protocol.</para>
