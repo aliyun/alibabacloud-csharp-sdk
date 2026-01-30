@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.EHPC20240730</AssemblyName>
-    <Version>2.2.3</Version>
+    <Version>2.3.0</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud Elastic High Performance Computing (20240730) SDK Library for .NET</Description>

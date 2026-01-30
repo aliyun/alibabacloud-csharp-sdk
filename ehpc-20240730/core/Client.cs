@@ -1371,6 +1371,174 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建预设节点池</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateReservedNodePoolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateReservedNodePoolResponse
+        /// </returns>
+        public CreateReservedNodePoolResponse CreateReservedNodePoolWithOptions(CreateReservedNodePoolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
+            {
+                query["Count"] = request.Count;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostPostfix))
+            {
+                query["HostPostfix"] = request.HostPostfix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostPrefix))
+            {
+                query["HostPrefix"] = request.HostPrefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateReservedNodePool",
+                Version = "2024-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateReservedNodePoolResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建预设节点池</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateReservedNodePoolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateReservedNodePoolResponse
+        /// </returns>
+        public async Task<CreateReservedNodePoolResponse> CreateReservedNodePoolWithOptionsAsync(CreateReservedNodePoolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
+            {
+                query["Count"] = request.Count;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostPostfix))
+            {
+                query["HostPostfix"] = request.HostPostfix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostPrefix))
+            {
+                query["HostPrefix"] = request.HostPrefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateReservedNodePool",
+                Version = "2024-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateReservedNodePoolResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建预设节点池</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateReservedNodePoolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateReservedNodePoolResponse
+        /// </returns>
+        public CreateReservedNodePoolResponse CreateReservedNodePool(CreateReservedNodePoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateReservedNodePoolWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建预设节点池</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateReservedNodePoolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateReservedNodePoolResponse
+        /// </returns>
+        public async Task<CreateReservedNodePoolResponse> CreateReservedNodePoolAsync(CreateReservedNodePoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateReservedNodePoolWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Adds users to an Elastic High Performance Computing (E-HPC) cluster.</para>
         /// </summary>
         /// 
@@ -1991,6 +2159,134 @@ namespace AlibabaCloud.SDK.EHPC20240730
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteQueuesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除集群预设节点池</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteReservedNodePoolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteReservedNodePoolResponse
+        /// </returns>
+        public DeleteReservedNodePoolResponse DeleteReservedNodePoolWithOptions(DeleteReservedNodePoolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteReservedNodePool",
+                Version = "2024-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteReservedNodePoolResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除集群预设节点池</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteReservedNodePoolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteReservedNodePoolResponse
+        /// </returns>
+        public async Task<DeleteReservedNodePoolResponse> DeleteReservedNodePoolWithOptionsAsync(DeleteReservedNodePoolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteReservedNodePool",
+                Version = "2024-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteReservedNodePoolResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除集群预设节点池</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteReservedNodePoolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteReservedNodePoolResponse
+        /// </returns>
+        public DeleteReservedNodePoolResponse DeleteReservedNodePool(DeleteReservedNodePoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteReservedNodePoolWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除集群预设节点池</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteReservedNodePoolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteReservedNodePoolResponse
+        /// </returns>
+        public async Task<DeleteReservedNodePoolResponse> DeleteReservedNodePoolAsync(DeleteReservedNodePoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteReservedNodePoolWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
