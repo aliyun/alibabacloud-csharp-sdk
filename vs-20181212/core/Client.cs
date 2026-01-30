@@ -18267,6 +18267,158 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>变配云渲染资源实例付费类型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRenderingChargeTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRenderingChargeTypeResponse
+        /// </returns>
+        public ModifyRenderingChargeTypeResponse ModifyRenderingChargeTypeWithOptions(ModifyRenderingChargeTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceBillingCycle))
+            {
+                query["InstanceBillingCycle"] = request.InstanceBillingCycle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
+            {
+                query["InstanceChargeType"] = request.InstanceChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceId))
+            {
+                query["RenderingInstanceId"] = request.RenderingInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyRenderingChargeType",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyRenderingChargeTypeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变配云渲染资源实例付费类型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRenderingChargeTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRenderingChargeTypeResponse
+        /// </returns>
+        public async Task<ModifyRenderingChargeTypeResponse> ModifyRenderingChargeTypeWithOptionsAsync(ModifyRenderingChargeTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceBillingCycle))
+            {
+                query["InstanceBillingCycle"] = request.InstanceBillingCycle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
+            {
+                query["InstanceChargeType"] = request.InstanceChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceId))
+            {
+                query["RenderingInstanceId"] = request.RenderingInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyRenderingChargeType",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyRenderingChargeTypeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变配云渲染资源实例付费类型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRenderingChargeTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRenderingChargeTypeResponse
+        /// </returns>
+        public ModifyRenderingChargeTypeResponse ModifyRenderingChargeType(ModifyRenderingChargeTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyRenderingChargeTypeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变配云渲染资源实例付费类型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRenderingChargeTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRenderingChargeTypeResponse
+        /// </returns>
+        public async Task<ModifyRenderingChargeTypeResponse> ModifyRenderingChargeTypeAsync(ModifyRenderingChargeTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyRenderingChargeTypeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>变配云渲染资源实例</para>
         /// </summary>
         /// 
