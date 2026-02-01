@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 [Validation(Required=false)]
                 public string Error { get; set; }
 
+                [NameInMap("errorCode")]
+                [Validation(Required=false)]
+                public string ErrorCode { get; set; }
+
+                [NameInMap("errorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
                 [NameInMap("instance")]
                 [Validation(Required=false)]
                 public string Instance { get; set; }
