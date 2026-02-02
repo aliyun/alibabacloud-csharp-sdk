@@ -553,6 +553,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? Size { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>d-123*********</para>
+                /// </summary>
+                [NameInMap("SourceDiskId")]
+                [Validation(Required=false)]
+                public string SourceDiskId { get; set; }
+
+                /// <summary>
                 /// <para>The ID of the snapshot that was used to create the cloud disk.</para>
                 /// <para>This parameter is empty unless the cloud disk was created from a snapshot. The value of this parameter remains unchanged throughout the lifecycle of the cloud disk.</para>
                 /// 

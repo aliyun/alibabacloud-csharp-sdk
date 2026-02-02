@@ -112,6 +112,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public string OccurrenceTime { get; set; }
 
+                        [NameInMap("RepairStatus")]
+                        [Validation(Required=false)]
+                        public string RepairStatus { get; set; }
+
+                        [NameInMap("Repairable")]
+                        [Validation(Required=false)]
+                        public bool? Repairable { get; set; }
+
                         /// <summary>
                         /// <para>The severity level of the diagnosed issue. Valid values:</para>
                         /// <list type="bullet">
