@@ -35197,6 +35197,166 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>aic实例变配接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAICInstanceTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAICInstanceTypeResponse
+        /// </returns>
+        public ModifyAICInstanceTypeResponse ModifyAICInstanceTypeWithOptions(ModifyAICInstanceTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentVar))
+            {
+                query["EnvironmentVar"] = request.EnvironmentVar;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Frequency))
+            {
+                query["Frequency"] = request.Frequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resolution))
+            {
+                query["Resolution"] = request.Resolution;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAICInstanceType",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAICInstanceTypeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>aic实例变配接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAICInstanceTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAICInstanceTypeResponse
+        /// </returns>
+        public async Task<ModifyAICInstanceTypeResponse> ModifyAICInstanceTypeWithOptionsAsync(ModifyAICInstanceTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentVar))
+            {
+                query["EnvironmentVar"] = request.EnvironmentVar;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Frequency))
+            {
+                query["Frequency"] = request.Frequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resolution))
+            {
+                query["Resolution"] = request.Resolution;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAICInstanceType",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAICInstanceTypeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>aic实例变配接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAICInstanceTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAICInstanceTypeResponse
+        /// </returns>
+        public ModifyAICInstanceTypeResponse ModifyAICInstanceType(ModifyAICInstanceTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyAICInstanceTypeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>aic实例变配接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAICInstanceTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAICInstanceTypeResponse
+        /// </returns>
+        public async Task<ModifyAICInstanceTypeResponse> ModifyAICInstanceTypeAsync(ModifyAICInstanceTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyAICInstanceTypeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>修改集群组件实例配置</para>
         /// </summary>
         /// 
