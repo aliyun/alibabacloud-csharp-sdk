@@ -1,3 +1,7 @@
+2026-02-02 Version: 1.18.5
+- Update API GetDialogDetail: add response parameters Body.data.dialogueList.$.recordId.
+
+
 2026-01-23 Version: 1.18.4
 - Generated csharp 2024-06-28 for DianJin.
 

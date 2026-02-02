@@ -83,6 +83,14 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>19387872364736xdhcb</para>
+                /// </summary>
+                [NameInMap("recordId")]
+                [Validation(Required=false)]
+                public string RecordId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
                 [NameInMap("role")]
