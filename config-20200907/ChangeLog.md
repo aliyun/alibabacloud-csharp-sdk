@@ -1,3 +1,10 @@
+2026-02-02 Version: 3.2.0
+- Support API CreateReportTemplate.
+- Support API GetReportTemplate.
+- Support API ListReportTemplates.
+- Support API UpdateReportTemplate.
+
+
 2026-01-19 Version: 3.1.0
 - Support API DeleteReportTemplate.
 - Support API GenerateReportFromTemplate.

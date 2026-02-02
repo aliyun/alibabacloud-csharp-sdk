@@ -3732,6 +3732,186 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>为当前UID创建合规报告模版</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateReportTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateReportTemplateResponse
+        /// </returns>
+        public CreateReportTemplateResponse CreateReportTemplateWithOptions(CreateReportTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateReportTemplateShrinkRequest request = new CreateReportTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReportScope))
+            {
+                request.ReportScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReportScope, "ReportScope", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportFileFormats))
+            {
+                body["ReportFileFormats"] = request.ReportFileFormats;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportGranularity))
+            {
+                body["ReportGranularity"] = request.ReportGranularity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportLanguage))
+            {
+                body["ReportLanguage"] = request.ReportLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportScopeShrink))
+            {
+                body["ReportScope"] = request.ReportScopeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportTemplateDescription))
+            {
+                body["ReportTemplateDescription"] = request.ReportTemplateDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportTemplateName))
+            {
+                body["ReportTemplateName"] = request.ReportTemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionFrequency))
+            {
+                body["SubscriptionFrequency"] = request.SubscriptionFrequency;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateReportTemplate",
+                Version = "2020-09-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateReportTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为当前UID创建合规报告模版</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateReportTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateReportTemplateResponse
+        /// </returns>
+        public async Task<CreateReportTemplateResponse> CreateReportTemplateWithOptionsAsync(CreateReportTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateReportTemplateShrinkRequest request = new CreateReportTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReportScope))
+            {
+                request.ReportScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReportScope, "ReportScope", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportFileFormats))
+            {
+                body["ReportFileFormats"] = request.ReportFileFormats;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportGranularity))
+            {
+                body["ReportGranularity"] = request.ReportGranularity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportLanguage))
+            {
+                body["ReportLanguage"] = request.ReportLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportScopeShrink))
+            {
+                body["ReportScope"] = request.ReportScopeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportTemplateDescription))
+            {
+                body["ReportTemplateDescription"] = request.ReportTemplateDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportTemplateName))
+            {
+                body["ReportTemplateName"] = request.ReportTemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionFrequency))
+            {
+                body["SubscriptionFrequency"] = request.SubscriptionFrequency;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateReportTemplate",
+                Version = "2020-09-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateReportTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为当前UID创建合规报告模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateReportTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateReportTemplateResponse
+        /// </returns>
+        public CreateReportTemplateResponse CreateReportTemplate(CreateReportTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateReportTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为当前UID创建合规报告模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateReportTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateReportTemplateResponse
+        /// </returns>
+        public async Task<CreateReportTemplateResponse> CreateReportTemplateAsync(CreateReportTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateReportTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Disables one or more rules in an account group. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.</para>
         /// </summary>
         /// 
@@ -12984,6 +13164,126 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取合规报告模版详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetReportTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetReportTemplateResponse
+        /// </returns>
+        public GetReportTemplateResponse GetReportTemplateWithOptions(GetReportTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportTemplateId))
+            {
+                query["ReportTemplateId"] = request.ReportTemplateId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetReportTemplate",
+                Version = "2020-09-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetReportTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取合规报告模版详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetReportTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetReportTemplateResponse
+        /// </returns>
+        public async Task<GetReportTemplateResponse> GetReportTemplateWithOptionsAsync(GetReportTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportTemplateId))
+            {
+                query["ReportTemplateId"] = request.ReportTemplateId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetReportTemplate",
+                Version = "2020-09-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetReportTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取合规报告模版详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetReportTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetReportTemplateResponse
+        /// </returns>
+        public GetReportTemplateResponse GetReportTemplate(GetReportTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetReportTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取合规报告模版详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetReportTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetReportTemplateResponse
+        /// </returns>
+        public async Task<GetReportTemplateResponse> GetReportTemplateAsync(GetReportTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetReportTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the compliance summary based on the compliance evaluation result of a rule.</para>
         /// </summary>
         /// 
@@ -19524,6 +19824,142 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>批量获取合规报告模版详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListReportTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListReportTemplatesResponse
+        /// </returns>
+        public ListReportTemplatesResponse ListReportTemplatesWithOptions(ListReportTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListReportTemplates",
+                Version = "2020-09-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListReportTemplatesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量获取合规报告模版详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListReportTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListReportTemplatesResponse
+        /// </returns>
+        public async Task<ListReportTemplatesResponse> ListReportTemplatesWithOptionsAsync(ListReportTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListReportTemplates",
+                Version = "2020-09-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListReportTemplatesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量获取合规报告模版详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListReportTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListReportTemplatesResponse
+        /// </returns>
+        public ListReportTemplatesResponse ListReportTemplates(ListReportTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListReportTemplatesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量获取合规报告模版详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListReportTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListReportTemplatesResponse
+        /// </returns>
+        public async Task<ListReportTemplatesResponse> ListReportTemplatesAsync(ListReportTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListReportTemplatesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the compliance evaluation results of resources.</para>
         /// </summary>
         /// 
@@ -25036,6 +25472,194 @@ namespace AlibabaCloud.SDK.Config20200907
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateRemediationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新合规报告模版</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateReportTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateReportTemplateResponse
+        /// </returns>
+        public UpdateReportTemplateResponse UpdateReportTemplateWithOptions(UpdateReportTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateReportTemplateShrinkRequest request = new UpdateReportTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReportScope))
+            {
+                request.ReportScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReportScope, "ReportScope", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportFileFormats))
+            {
+                body["ReportFileFormats"] = request.ReportFileFormats;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportGranularity))
+            {
+                body["ReportGranularity"] = request.ReportGranularity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportLanguage))
+            {
+                body["ReportLanguage"] = request.ReportLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportScopeShrink))
+            {
+                body["ReportScope"] = request.ReportScopeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportTemplateDescription))
+            {
+                body["ReportTemplateDescription"] = request.ReportTemplateDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportTemplateId))
+            {
+                body["ReportTemplateId"] = request.ReportTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportTemplateName))
+            {
+                body["ReportTemplateName"] = request.ReportTemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionFrequency))
+            {
+                body["SubscriptionFrequency"] = request.SubscriptionFrequency;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateReportTemplate",
+                Version = "2020-09-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateReportTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新合规报告模版</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateReportTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateReportTemplateResponse
+        /// </returns>
+        public async Task<UpdateReportTemplateResponse> UpdateReportTemplateWithOptionsAsync(UpdateReportTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateReportTemplateShrinkRequest request = new UpdateReportTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReportScope))
+            {
+                request.ReportScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReportScope, "ReportScope", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportFileFormats))
+            {
+                body["ReportFileFormats"] = request.ReportFileFormats;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportGranularity))
+            {
+                body["ReportGranularity"] = request.ReportGranularity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportLanguage))
+            {
+                body["ReportLanguage"] = request.ReportLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportScopeShrink))
+            {
+                body["ReportScope"] = request.ReportScopeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportTemplateDescription))
+            {
+                body["ReportTemplateDescription"] = request.ReportTemplateDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportTemplateId))
+            {
+                body["ReportTemplateId"] = request.ReportTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportTemplateName))
+            {
+                body["ReportTemplateName"] = request.ReportTemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionFrequency))
+            {
+                body["SubscriptionFrequency"] = request.SubscriptionFrequency;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateReportTemplate",
+                Version = "2020-09-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateReportTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新合规报告模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateReportTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateReportTemplateResponse
+        /// </returns>
+        public UpdateReportTemplateResponse UpdateReportTemplate(UpdateReportTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateReportTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新合规报告模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateReportTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateReportTemplateResponse
+        /// </returns>
+        public async Task<UpdateReportTemplateResponse> UpdateReportTemplateAsync(UpdateReportTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateReportTemplateWithOptionsAsync(request, runtime);
         }
 
     }
