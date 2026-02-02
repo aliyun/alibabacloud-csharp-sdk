@@ -92,6 +92,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>rg-ae******ey</para>
+        /// </summary>
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -100,6 +108,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("roleArn")]
         [Validation(Required=false)]
         public string RoleArn { get; set; }
+
+        [NameInMap("tags")]
+        [Validation(Required=false)]
+        public List<Tag> Tags { get; set; }
 
     }
 

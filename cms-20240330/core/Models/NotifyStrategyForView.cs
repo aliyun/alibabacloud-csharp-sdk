@@ -160,6 +160,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             }
 
+            [NameInMap("digitalEmployeeName")]
+            [Validation(Required=false)]
+            public string DigitalEmployeeName { get; set; }
+
             [NameInMap("effectTimeRange")]
             [Validation(Required=false)]
             public NotifyStrategyForViewRoutesEffectTimeRange EffectTimeRange { get; set; }
@@ -181,6 +185,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string TimeZone { get; set; }
 
             }
+
+            [NameInMap("enableRca")]
+            [Validation(Required=false)]
+            public bool? EnableRca { get; set; }
 
             [NameInMap("filterSetting")]
             [Validation(Required=false)]

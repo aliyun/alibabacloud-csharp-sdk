@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string SubscriptionName { get; set; }
 
+        [NameInMap("workspaceFilterSetting")]
+        [Validation(Required=false)]
+        public WorkspaceFilterSetting WorkspaceFilterSetting { get; set; }
+
     }
 
 }

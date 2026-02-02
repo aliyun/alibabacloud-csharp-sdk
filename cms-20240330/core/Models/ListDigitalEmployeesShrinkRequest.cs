@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
-    public class ListDigitalEmployeesRequest : TeaModel {
+    public class ListDigitalEmployeesShrinkRequest : TeaModel {
         [NameInMap("displayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         [NameInMap("tags")]
         [Validation(Required=false)]
-        public List<Tag> Tags { get; set; }
+        public string TagsShrink { get; set; }
 
     }
 
