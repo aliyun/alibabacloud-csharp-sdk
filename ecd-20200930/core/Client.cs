@@ -11531,6 +11531,166 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>新建限速组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateQosRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQosRuleResponse
+        /// </returns>
+        public CreateQosRuleResponse CreateQosRuleWithOptions(CreateQosRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthAndroidId))
+            {
+                query["AuthAndroidId"] = request.AuthAndroidId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthDesktopId))
+            {
+                query["AuthDesktopId"] = request.AuthDesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Download))
+            {
+                query["Download"] = request.Download;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkPackageId))
+            {
+                query["NetworkPackageId"] = request.NetworkPackageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleName))
+            {
+                query["QosRuleName"] = request.QosRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Upload))
+            {
+                query["Upload"] = request.Upload;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateQosRule",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateQosRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新建限速组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateQosRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQosRuleResponse
+        /// </returns>
+        public async Task<CreateQosRuleResponse> CreateQosRuleWithOptionsAsync(CreateQosRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthAndroidId))
+            {
+                query["AuthAndroidId"] = request.AuthAndroidId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthDesktopId))
+            {
+                query["AuthDesktopId"] = request.AuthDesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Download))
+            {
+                query["Download"] = request.Download;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkPackageId))
+            {
+                query["NetworkPackageId"] = request.NetworkPackageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleName))
+            {
+                query["QosRuleName"] = request.QosRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Upload))
+            {
+                query["Upload"] = request.Upload;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateQosRule",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateQosRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新建限速组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateQosRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQosRuleResponse
+        /// </returns>
+        public CreateQosRuleResponse CreateQosRule(CreateQosRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateQosRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新建限速组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateQosRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQosRuleResponse
+        /// </returns>
+        public async Task<CreateQosRuleResponse> CreateQosRuleAsync(CreateQosRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateQosRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a Resource Access Management (RAM) directory.</para>
         /// </summary>
         /// 
@@ -16015,6 +16175,106 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeletePolicyGroupsWithOptionsAsync(request, runtime);
+        }
+
+        /// <param name="request">
+        /// DeleteQosRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQosRulesResponse
+        /// </returns>
+        public DeleteQosRulesResponse DeleteQosRulesWithOptions(DeleteQosRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleId))
+            {
+                query["QosRuleId"] = request.QosRuleId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteQosRules",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteQosRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// DeleteQosRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQosRulesResponse
+        /// </returns>
+        public async Task<DeleteQosRulesResponse> DeleteQosRulesWithOptionsAsync(DeleteQosRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleId))
+            {
+                query["QosRuleId"] = request.QosRuleId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteQosRules",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteQosRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// DeleteQosRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQosRulesResponse
+        /// </returns>
+        public DeleteQosRulesResponse DeleteQosRules(DeleteQosRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteQosRulesWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// DeleteQosRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQosRulesResponse
+        /// </returns>
+        public async Task<DeleteQosRulesResponse> DeleteQosRulesAsync(DeleteQosRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteQosRulesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -27011,6 +27271,114 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePriceForRenewDesktopOversoldGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <param name="request">
+        /// DescribeQosRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQosRulesResponse
+        /// </returns>
+        public DescribeQosRulesResponse DescribeQosRulesWithOptions(DescribeQosRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkPackageId))
+            {
+                query["NetworkPackageId"] = request.NetworkPackageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleName))
+            {
+                query["QosRuleName"] = request.QosRuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeQosRules",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeQosRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// DescribeQosRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQosRulesResponse
+        /// </returns>
+        public async Task<DescribeQosRulesResponse> DescribeQosRulesWithOptionsAsync(DescribeQosRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkPackageId))
+            {
+                query["NetworkPackageId"] = request.NetworkPackageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleName))
+            {
+                query["QosRuleName"] = request.QosRuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeQosRules",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeQosRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// DescribeQosRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQosRulesResponse
+        /// </returns>
+        public DescribeQosRulesResponse DescribeQosRules(DescribeQosRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeQosRulesWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// DescribeQosRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQosRulesResponse
+        /// </returns>
+        public async Task<DescribeQosRulesResponse> DescribeQosRulesAsync(DescribeQosRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeQosRulesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -43119,6 +43487,282 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyPolicyGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改限速组资源绑定关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyQosEntriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosEntriesResponse
+        /// </returns>
+        public ModifyQosEntriesResponse ModifyQosEntriesWithOptions(ModifyQosEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthAndroidId))
+            {
+                query["AuthAndroidId"] = request.AuthAndroidId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthDesktopId))
+            {
+                query["AuthDesktopId"] = request.AuthDesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleId))
+            {
+                query["QosRuleId"] = request.QosRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeAndroidId))
+            {
+                query["RevokeAndroidId"] = request.RevokeAndroidId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeDesktopId))
+            {
+                query["RevokeDesktopId"] = request.RevokeDesktopId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyQosEntries",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyQosEntriesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改限速组资源绑定关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyQosEntriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosEntriesResponse
+        /// </returns>
+        public async Task<ModifyQosEntriesResponse> ModifyQosEntriesWithOptionsAsync(ModifyQosEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthAndroidId))
+            {
+                query["AuthAndroidId"] = request.AuthAndroidId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthDesktopId))
+            {
+                query["AuthDesktopId"] = request.AuthDesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleId))
+            {
+                query["QosRuleId"] = request.QosRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeAndroidId))
+            {
+                query["RevokeAndroidId"] = request.RevokeAndroidId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeDesktopId))
+            {
+                query["RevokeDesktopId"] = request.RevokeDesktopId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyQosEntries",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyQosEntriesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改限速组资源绑定关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyQosEntriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosEntriesResponse
+        /// </returns>
+        public ModifyQosEntriesResponse ModifyQosEntries(ModifyQosEntriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyQosEntriesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改限速组资源绑定关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyQosEntriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosEntriesResponse
+        /// </returns>
+        public async Task<ModifyQosEntriesResponse> ModifyQosEntriesAsync(ModifyQosEntriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyQosEntriesWithOptionsAsync(request, runtime);
+        }
+
+        /// <param name="request">
+        /// ModifyQosRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosRuleResponse
+        /// </returns>
+        public ModifyQosRuleResponse ModifyQosRuleWithOptions(ModifyQosRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Download))
+            {
+                query["Download"] = request.Download;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleId))
+            {
+                query["QosRuleId"] = request.QosRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleName))
+            {
+                query["QosRuleName"] = request.QosRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Upload))
+            {
+                query["Upload"] = request.Upload;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyQosRule",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyQosRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// ModifyQosRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosRuleResponse
+        /// </returns>
+        public async Task<ModifyQosRuleResponse> ModifyQosRuleWithOptionsAsync(ModifyQosRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Download))
+            {
+                query["Download"] = request.Download;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleId))
+            {
+                query["QosRuleId"] = request.QosRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleName))
+            {
+                query["QosRuleName"] = request.QosRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Upload))
+            {
+                query["Upload"] = request.Upload;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyQosRule",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyQosRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// ModifyQosRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosRuleResponse
+        /// </returns>
+        public ModifyQosRuleResponse ModifyQosRule(ModifyQosRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyQosRuleWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// ModifyQosRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosRuleResponse
+        /// </returns>
+        public async Task<ModifyQosRuleResponse> ModifyQosRuleAsync(ModifyQosRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyQosRuleWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
