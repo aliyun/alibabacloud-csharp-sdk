@@ -2907,6 +2907,158 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>中心化角色：查询App信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAppsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAppsResponse
+        /// </returns>
+        public DescribeAppsResponse DescribeAppsWithOptions(DescribeAppsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIds))
+            {
+                query["AppIds"] = request.AppIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppNames))
+            {
+                query["AppNames"] = request.AppNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApps",
+                Version = "2021-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAppsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>中心化角色：查询App信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAppsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAppsResponse
+        /// </returns>
+        public async Task<DescribeAppsResponse> DescribeAppsWithOptionsAsync(DescribeAppsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIds))
+            {
+                query["AppIds"] = request.AppIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppNames))
+            {
+                query["AppNames"] = request.AppNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApps",
+                Version = "2021-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAppsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>中心化角色：查询App信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAppsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAppsResponse
+        /// </returns>
+        public DescribeAppsResponse DescribeApps(DescribeAppsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAppsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>中心化角色：查询App信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAppsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAppsResponse
+        /// </returns>
+        public async Task<DescribeAppsResponse> DescribeAppsAsync(DescribeAppsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAppsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of one or more disks in a dedicated block storage cluster.</para>
         /// </summary>
         /// 
