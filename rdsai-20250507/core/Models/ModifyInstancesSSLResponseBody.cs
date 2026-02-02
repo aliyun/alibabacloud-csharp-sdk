@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyInstancesSSLResponseBody : TeaModel {
         /// <summary>
+        /// <para>The RDS Supabase instances whose SSL settings are modified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[
         ///     &quot;ra-supabase-xxx&quot;,
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public List<string> InstanceNames { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32DEFB4A-xxxx-ADD5-918E4FD7AB8C</para>
         /// </summary>

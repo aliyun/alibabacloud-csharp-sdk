@@ -46,6 +46,28 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Skills")]
+        [Validation(Required=false)]
+        public List<UpdateCustomAgentResponseBodySkills> Skills { get; set; }
+        public class UpdateCustomAgentResponseBodySkills : TeaModel {
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("SkillType")]
+            [Validation(Required=false)]
+            public string SkillType { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The system prompts.</para>
         /// </summary>

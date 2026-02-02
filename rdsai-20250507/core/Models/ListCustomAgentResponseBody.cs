@@ -109,6 +109,28 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Skills")]
+        [Validation(Required=false)]
+        public List<ListCustomAgentResponseBodySkills> Skills { get; set; }
+        public class ListCustomAgentResponseBodySkills : TeaModel {
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("SkillType")]
+            [Validation(Required=false)]
+            public string SkillType { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The total number of entries returned. By default, this parameter is not returned.</para>
         /// 

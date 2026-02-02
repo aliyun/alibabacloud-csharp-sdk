@@ -629,6 +629,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateCustomAgentShrinkRequest request = new CreateCustomAgentShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SkillIds))
+            {
+                request.SkillIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SkillIds, "SkillIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tools))
             {
                 request.ToolsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tools, "Tools", "json");
@@ -641,6 +645,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillIdsShrink))
+            {
+                query["SkillIds"] = request.SkillIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemPrompt))
             {
@@ -689,6 +697,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateCustomAgentShrinkRequest request = new CreateCustomAgentShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SkillIds))
+            {
+                request.SkillIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SkillIds, "SkillIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tools))
             {
                 request.ToolsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tools, "Tools", "json");
@@ -701,6 +713,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillIdsShrink))
+            {
+                query["SkillIds"] = request.SkillIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemPrompt))
             {
@@ -4233,8 +4249,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量修改实例的SSL配置</para>
+        /// <para>Modifies the SSL settings of RDS Supabase instances in batches.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyInstancesSSLRequest
@@ -4301,8 +4325,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量修改实例的SSL配置</para>
+        /// <para>Modifies the SSL settings of RDS Supabase instances in batches.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyInstancesSSLRequest
@@ -4369,8 +4401,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量修改实例的SSL配置</para>
+        /// <para>Modifies the SSL settings of RDS Supabase instances in batches.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstancesSSLRequest
@@ -4387,8 +4427,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量修改实例的SSL配置</para>
+        /// <para>Modifies the SSL settings of RDS Supabase instances in batches.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstancesSSLRequest
@@ -5227,6 +5275,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateCustomAgentShrinkRequest request = new UpdateCustomAgentShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SkillIds))
+            {
+                request.SkillIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SkillIds, "SkillIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tools))
             {
                 request.ToolsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tools, "Tools", "json");
@@ -5243,6 +5295,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillIdsShrink))
+            {
+                query["SkillIds"] = request.SkillIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemPrompt))
             {
@@ -5291,6 +5347,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateCustomAgentShrinkRequest request = new UpdateCustomAgentShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SkillIds))
+            {
+                request.SkillIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SkillIds, "SkillIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tools))
             {
                 request.ToolsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tools, "Tools", "json");
@@ -5307,6 +5367,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillIdsShrink))
+            {
+                query["SkillIds"] = request.SkillIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemPrompt))
             {

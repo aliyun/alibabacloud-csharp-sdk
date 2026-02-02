@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("SkillIds")]
+        [Validation(Required=false)]
+        public string SkillIdsShrink { get; set; }
+
         /// <summary>
         /// <para>The name of the dedicated agent.</para>
         /// <para>This parameter is required.</para>
