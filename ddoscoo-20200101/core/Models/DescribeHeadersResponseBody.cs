@@ -39,6 +39,17 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;X-Client-IP&quot;:true,&quot;X-True-IP&quot;:true,&quot;Web-Server-Type&quot;:true,&quot;WL-Proxy-Client-IP&quot;:true,&quot;X-Forwarded-Proto&quot;:true}</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>false</c>
+        /// </summary>
+        [NameInMap("EmbeddedHeaders")]
+        [Validation(Required=false)]
+        public string EmbeddedHeaders { get; set; }
+
+        /// <summary>
         /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>

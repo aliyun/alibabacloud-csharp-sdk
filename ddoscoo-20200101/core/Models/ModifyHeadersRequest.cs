@@ -50,6 +50,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public string Domain { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;X-Client-IP&quot;:true,&quot;X-True-IP&quot;:true,&quot;Web-Server-Type&quot;:true,&quot;WL-Proxy-Client-IP&quot;:true,&quot;X-Forwarded-Proto&quot;:true}</para>
+        /// </summary>
+        [NameInMap("EmbeddedHeaders")]
+        [Validation(Required=false)]
+        public string EmbeddedHeaders { get; set; }
+
+        /// <summary>
         /// <para>The ID of the resource group to which the instance belongs.</para>
         /// <remarks>
         /// </remarks>

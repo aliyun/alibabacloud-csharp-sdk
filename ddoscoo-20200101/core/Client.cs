@@ -24016,6 +24016,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             {
                 query["Domain"] = request.Domain;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmbeddedHeaders))
+            {
+                query["EmbeddedHeaders"] = request.EmbeddedHeaders;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -24065,6 +24069,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
             {
                 query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmbeddedHeaders))
+            {
+                query["EmbeddedHeaders"] = request.EmbeddedHeaders;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
