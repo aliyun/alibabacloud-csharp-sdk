@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudauth20221125.Models
 {
     public class EntVerifyResponseBody : TeaModel {
         /// <summary>
+        /// <para>Return code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -17,12 +19,18 @@ namespace AlibabaCloud.SDK.Cloudauth20221125.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Error message</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>成功</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-A***B-A3DC0DE3C83E</para>
@@ -31,15 +39,23 @@ namespace AlibabaCloud.SDK.Cloudauth20221125.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Result</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public EntVerifyResponseBodyResult Result { get; set; }
         public class EntVerifyResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <para>Enterprise risk verification result</para>
+            /// </summary>
             [NameInMap("RiskVerifyResult")]
             [Validation(Required=false)]
             public EntVerifyResponseBodyResultRiskVerifyResult RiskVerifyResult { get; set; }
             public class EntVerifyResponseBodyResultRiskVerifyResult : TeaModel {
                 /// <summary>
+                /// <para>Whether found</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -47,11 +63,16 @@ namespace AlibabaCloud.SDK.Cloudauth20221125.Models
                 [Validation(Required=false)]
                 public bool? Found { get; set; }
 
+                /// <summary>
+                /// <para>List of enterprise risk verification model results</para>
+                /// </summary>
                 [NameInMap("ModelResults")]
                 [Validation(Required=false)]
                 public List<EntVerifyResponseBodyResultRiskVerifyResultModelResults> ModelResults { get; set; }
                 public class EntVerifyResponseBodyResultRiskVerifyResultModelResults : TeaModel {
                     /// <summary>
+                    /// <para>Model name</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>model_1</para>
                     /// </summary>
@@ -59,6 +80,12 @@ namespace AlibabaCloud.SDK.Cloudauth20221125.Models
                     [Validation(Required=false)]
                     public string ModelName { get; set; }
 
+                    /// <summary>
+                    /// <para>Model result</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>5</para>
+                    /// </summary>
                     [NameInMap("Result")]
                     [Validation(Required=false)]
                     public string Result { get; set; }

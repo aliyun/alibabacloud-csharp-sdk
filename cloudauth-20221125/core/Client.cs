@@ -39,8 +39,13 @@ namespace AlibabaCloud.SDK.Cloudauth20221125
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>企业要素核验</para>
+        /// <para>Enterprise Element Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Supports only enterprises and individual businesses.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EntElementVerifyRequest
@@ -108,20 +113,18 @@ namespace AlibabaCloud.SDK.Cloudauth20221125
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EntElementVerifyResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EntElementVerifyResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EntElementVerifyResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>企业要素核验</para>
+        /// <para>Enterprise Element Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Supports only enterprises and individual businesses.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EntElementVerifyRequest
@@ -189,20 +192,18 @@ namespace AlibabaCloud.SDK.Cloudauth20221125
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EntElementVerifyResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EntElementVerifyResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EntElementVerifyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>企业要素核验</para>
+        /// <para>Enterprise Element Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Supports only enterprises and individual businesses.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EntElementVerifyRequest
@@ -219,8 +220,13 @@ namespace AlibabaCloud.SDK.Cloudauth20221125
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>企业要素核验</para>
+        /// <para>Enterprise Element Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Supports only enterprises and individual businesses.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EntElementVerifyRequest
@@ -237,8 +243,199 @@ namespace AlibabaCloud.SDK.Cloudauth20221125
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>企业要素验证V2</para>
+        /// <para>企业要素核验PRO</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// EntElementVerifyPRORequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EntElementVerifyPROResponse
+        /// </returns>
+        public EntElementVerifyPROResponse EntElementVerifyPROWithOptions(EntElementVerifyPRORequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntName))
+            {
+                query["EntName"] = request.EntName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InfoVerifyType))
+            {
+                query["InfoVerifyType"] = request.InfoVerifyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonCertNo))
+            {
+                query["LegalPersonCertNo"] = request.LegalPersonCertNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonName))
+            {
+                query["LegalPersonName"] = request.LegalPersonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseNo))
+            {
+                query["LicenseNo"] = request.LicenseNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                query["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                query["SceneCode"] = request.SceneCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAuthorization))
+            {
+                query["UserAuthorization"] = request.UserAuthorization;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EntElementVerifyPRO",
+                Version = "2022-11-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EntElementVerifyPROResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>企业要素核验PRO</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EntElementVerifyPRORequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EntElementVerifyPROResponse
+        /// </returns>
+        public async Task<EntElementVerifyPROResponse> EntElementVerifyPROWithOptionsAsync(EntElementVerifyPRORequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntName))
+            {
+                query["EntName"] = request.EntName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InfoVerifyType))
+            {
+                query["InfoVerifyType"] = request.InfoVerifyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonCertNo))
+            {
+                query["LegalPersonCertNo"] = request.LegalPersonCertNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonName))
+            {
+                query["LegalPersonName"] = request.LegalPersonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseNo))
+            {
+                query["LicenseNo"] = request.LicenseNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                query["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                query["SceneCode"] = request.SceneCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAuthorization))
+            {
+                query["UserAuthorization"] = request.UserAuthorization;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EntElementVerifyPRO",
+                Version = "2022-11-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EntElementVerifyPROResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>企业要素核验PRO</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EntElementVerifyPRORequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EntElementVerifyPROResponse
+        /// </returns>
+        public EntElementVerifyPROResponse EntElementVerifyPRO(EntElementVerifyPRORequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EntElementVerifyPROWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>企业要素核验PRO</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EntElementVerifyPRORequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EntElementVerifyPROResponse
+        /// </returns>
+        public async Task<EntElementVerifyPROResponse> EntElementVerifyPROAsync(EntElementVerifyPRORequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EntElementVerifyPROWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enterprise Element Verification V2</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Enterprise Element Verification API provides a service for verifying the consistency of enterprise element information, used to identify the authenticity of enterprise information.
+        /// It supports various institutions including enterprises, individual businesses, farmers\&quot; professional cooperatives, government agencies, public institutions, social organizations, legal profession institutions, and owners\&quot; meetings for 2-3 elements;
+        /// For 4 elements, it supports enterprises, individual businesses, farmers\&quot; professional cooperatives, and legal professions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EntElementVerifyV2Request
@@ -306,20 +503,20 @@ namespace AlibabaCloud.SDK.Cloudauth20221125
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EntElementVerifyV2Response>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EntElementVerifyV2Response>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EntElementVerifyV2Response>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>企业要素验证V2</para>
+        /// <para>Enterprise Element Verification V2</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Enterprise Element Verification API provides a service for verifying the consistency of enterprise element information, used to identify the authenticity of enterprise information.
+        /// It supports various institutions including enterprises, individual businesses, farmers\&quot; professional cooperatives, government agencies, public institutions, social organizations, legal profession institutions, and owners\&quot; meetings for 2-3 elements;
+        /// For 4 elements, it supports enterprises, individual businesses, farmers\&quot; professional cooperatives, and legal professions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EntElementVerifyV2Request
@@ -387,20 +584,20 @@ namespace AlibabaCloud.SDK.Cloudauth20221125
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EntElementVerifyV2Response>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EntElementVerifyV2Response>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EntElementVerifyV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>企业要素验证V2</para>
+        /// <para>Enterprise Element Verification V2</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Enterprise Element Verification API provides a service for verifying the consistency of enterprise element information, used to identify the authenticity of enterprise information.
+        /// It supports various institutions including enterprises, individual businesses, farmers\&quot; professional cooperatives, government agencies, public institutions, social organizations, legal profession institutions, and owners\&quot; meetings for 2-3 elements;
+        /// For 4 elements, it supports enterprises, individual businesses, farmers\&quot; professional cooperatives, and legal professions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EntElementVerifyV2Request
@@ -417,8 +614,15 @@ namespace AlibabaCloud.SDK.Cloudauth20221125
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>企业要素验证V2</para>
+        /// <para>Enterprise Element Verification V2</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Enterprise Element Verification API provides a service for verifying the consistency of enterprise element information, used to identify the authenticity of enterprise information.
+        /// It supports various institutions including enterprises, individual businesses, farmers\&quot; professional cooperatives, government agencies, public institutions, social organizations, legal profession institutions, and owners\&quot; meetings for 2-3 elements;
+        /// For 4 elements, it supports enterprises, individual businesses, farmers\&quot; professional cooperatives, and legal professions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EntElementVerifyV2Request
@@ -435,7 +639,7 @@ namespace AlibabaCloud.SDK.Cloudauth20221125
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>企业经营异常查询</para>
+        /// <para>Abnormal Business Operation Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -492,19 +696,12 @@ namespace AlibabaCloud.SDK.Cloudauth20221125
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EntRiskQueryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EntRiskQueryResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EntRiskQueryResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>企业经营异常查询</para>
+        /// <para>Abnormal Business Operation Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -561,19 +758,12 @@ namespace AlibabaCloud.SDK.Cloudauth20221125
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EntRiskQueryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EntRiskQueryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EntRiskQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>企业经营异常查询</para>
+        /// <para>Abnormal Business Operation Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -591,7 +781,7 @@ namespace AlibabaCloud.SDK.Cloudauth20221125
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>企业经营异常查询</para>
+        /// <para>Abnormal Business Operation Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -609,7 +799,7 @@ namespace AlibabaCloud.SDK.Cloudauth20221125
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>企业认证</para>
+        /// <para>Enterprise Authentication</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -694,19 +884,12 @@ namespace AlibabaCloud.SDK.Cloudauth20221125
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EntVerifyResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EntVerifyResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EntVerifyResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>企业认证</para>
+        /// <para>Enterprise Authentication</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -791,19 +974,12 @@ namespace AlibabaCloud.SDK.Cloudauth20221125
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EntVerifyResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EntVerifyResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EntVerifyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>企业认证</para>
+        /// <para>Enterprise Authentication</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -821,7 +997,7 @@ namespace AlibabaCloud.SDK.Cloudauth20221125
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>企业认证</para>
+        /// <para>Enterprise Authentication</para>
         /// </summary>
         /// 
         /// <param name="request">
