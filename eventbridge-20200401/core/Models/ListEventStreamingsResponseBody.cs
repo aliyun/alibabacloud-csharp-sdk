@@ -1775,6 +1775,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                     }
 
+                    [NameInMap("SinkMQTTParameters")]
+                    [Validation(Required=false)]
+                    public SinkMQTTParameters SinkMQTTParameters { get; set; }
+
                     [NameInMap("SinkOSSParameters")]
                     [Validation(Required=false)]
                     public SinkOSSParameters SinkOSSParameters { get; set; }
