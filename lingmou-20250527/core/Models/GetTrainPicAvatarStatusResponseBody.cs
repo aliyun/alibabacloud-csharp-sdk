@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.LingMou20250527.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>//daily-avatar-property.oss-cn-beijing.aliyuncs.com/avatar-share-property/AVATAR_2D_PIC/Mt.CMTMRYX4TNIU2/retalking_output.mp4?Expires=1764327167&amp;OSSAccessKeyId=LTAI5tBRPnF5JkRCidYA8kw9&amp;Signature=%2BH%2BSBpNDPiMQtPyl8vraEHMv9X8%3D</para>
+            /// <para>//daily-avatar-property.oss-cn-beijing.aliyuncs.com/avatar-share-property/AVATAR_2D_PIC/Mt.CMTMRYX4TNIU2/retalking_output.mp4?Expires=1764327167&amp;OSSAccessKeyId=LTAI5tBRPnF5JkRCid******&amp;Signature=%2BH%2BSBpNDPiMQtPyl8vraEHMv9X8%3D</para>
             /// </summary>
             [NameInMap("previewURL")]
             [Validation(Required=false)]

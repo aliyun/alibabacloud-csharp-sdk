@@ -887,7 +887,7 @@ namespace AlibabaCloud.SDK.LingMou20250527
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数字人会话</para>
+        /// <para>创建实时数字人会话。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -941,7 +941,7 @@ namespace AlibabaCloud.SDK.LingMou20250527
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数字人会话</para>
+        /// <para>创建实时数字人会话。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -995,7 +995,7 @@ namespace AlibabaCloud.SDK.LingMou20250527
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数字人会话</para>
+        /// <para>创建实时数字人会话。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1014,7 +1014,7 @@ namespace AlibabaCloud.SDK.LingMou20250527
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数字人会话</para>
+        /// <para>创建实时数字人会话。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1385,6 +1385,10 @@ namespace AlibabaCloud.SDK.LingMou20250527
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["bizType"] = request.BizType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
             {
                 query["gender"] = request.Gender;
@@ -1451,6 +1455,10 @@ namespace AlibabaCloud.SDK.LingMou20250527
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["bizType"] = request.BizType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
             {
                 query["gender"] = request.Gender;

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.LingMou20250527.Models
 {
     public class CreateTrainPicAvatarRequest : TeaModel {
+        [NameInMap("bizType")]
+        [Validation(Required=false)]
+        public string BizType { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

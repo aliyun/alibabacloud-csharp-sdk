@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.LingMou20250527.Models
             public class ListPrivateTTSVoicesCustomResponseBodyDataData : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para><a href="https://xxx-aliyuncs.com/material/INPUT_TRAIN_AUDIO/Mt.CQEG75L4FWIU2/TestTTSVoiceName.mp3?Expires=1764262805&OSSAccessKeyId=LTAI5tK3WcKwKtAyaTSeq7sx&Signature=D%2Fld6gp9Zh6TsGRU9cd6GD2pFY0%3D">https://xxx-aliyuncs.com/material/INPUT_TRAIN_AUDIO/Mt.CQEG75L4FWIU2/TestTTSVoiceName.mp3?Expires=1764262805&amp;OSSAccessKeyId=LTAI5tK3WcKwKtAyaTSeq7sx&amp;Signature=D%2Fld6gp9Zh6TsGRU9cd6GD2pFY0%3D</a></para>
+                /// <para><a href="https://xxx-aliyuncs.com/material/INPUT_TRAIN_AUDIO/Mt.CQEG75L4FWIU2/TestTTSVoiceName.mp3?Expires=1764262805&OSSAccessKeyId=LTAI5tK3WcKwKtAyaT******&Signature=D%2Fld6gp9Zh6TsGRU9cd6GD2pFY0%3D">https://xxx-aliyuncs.com/material/INPUT_TRAIN_AUDIO/Mt.CQEG75L4FWIU2/TestTTSVoiceName.mp3?Expires=1764262805&amp;OSSAccessKeyId=LTAI5tK3WcKwKtAyaT******&amp;Signature=D%2Fld6gp9Zh6TsGRU9cd6GD2pFY0%3D</a></para>
                 /// </summary>
                 [NameInMap("audioURL")]
                 [Validation(Required=false)]
@@ -65,6 +65,12 @@ namespace AlibabaCloud.SDK.LingMou20250527.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>错误码。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Audio.AudioShortError</para>
+                /// </summary>
                 [NameInMap("errorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
