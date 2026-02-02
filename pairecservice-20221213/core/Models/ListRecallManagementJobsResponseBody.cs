@@ -45,6 +45,28 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public string RecallManagementJobId { get; set; }
 
+            [NameInMap("RecallManagementTableInfo")]
+            [Validation(Required=false)]
+            public ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagementTableInfo RecallManagementTableInfo { get; set; }
+            public class ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagementTableInfo : TeaModel {
+                [NameInMap("DataVersion")]
+                [Validation(Required=false)]
+                public string DataVersion { get; set; }
+
+                [NameInMap("RecallManagementTableVersionId")]
+                [Validation(Required=false)]
+                public string RecallManagementTableVersionId { get; set; }
+
+                [NameInMap("SourceTableDataSize")]
+                [Validation(Required=false)]
+                public string SourceTableDataSize { get; set; }
+
+                [NameInMap("SourceTableRowCount")]
+                [Validation(Required=false)]
+                public string SourceTableRowCount { get; set; }
+
+            }
+
             [NameInMap("RecallManagerTableInfo")]
             [Validation(Required=false)]
             public ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagerTableInfo RecallManagerTableInfo { get; set; }
