@@ -122,6 +122,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public long? LastRowsAffectedCount { get; set; }
 
+                [NameInMap("LockTimeMS")]
+                [Validation(Required=false)]
+                public long? LockTimeMS { get; set; }
+
                 /// <summary>
                 /// <para>The lock duration of the query. Unit: seconds.</para>
                 /// 
