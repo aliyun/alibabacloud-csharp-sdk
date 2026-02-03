@@ -1817,6 +1817,142 @@ namespace AlibabaCloud.SDK.Nis20211216
             return await DescribeNisInspectionTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询流量分析topN异步任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNisTrafficRankingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNisTrafficRankingResponse
+        /// </returns>
+        public DescribeNisTrafficRankingResponse DescribeNisTrafficRankingWithOptions(DescribeNisTrafficRankingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NisTrafficRankingId))
+            {
+                query["NisTrafficRankingId"] = request.NisTrafficRankingId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNisTrafficRanking",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNisTrafficRankingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询流量分析topN异步任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNisTrafficRankingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNisTrafficRankingResponse
+        /// </returns>
+        public async Task<DescribeNisTrafficRankingResponse> DescribeNisTrafficRankingWithOptionsAsync(DescribeNisTrafficRankingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NisTrafficRankingId))
+            {
+                query["NisTrafficRankingId"] = request.NisTrafficRankingId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNisTrafficRanking",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNisTrafficRankingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询流量分析topN异步任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNisTrafficRankingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNisTrafficRankingResponse
+        /// </returns>
+        public DescribeNisTrafficRankingResponse DescribeNisTrafficRanking(DescribeNisTrafficRankingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeNisTrafficRankingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询流量分析topN异步任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNisTrafficRankingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNisTrafficRankingResponse
+        /// </returns>
+        public async Task<DescribeNisTrafficRankingResponse> DescribeNisTrafficRankingAsync(DescribeNisTrafficRankingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeNisTrafficRankingWithOptionsAsync(request, runtime);
+        }
+
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI GetInternetTuple is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.
@@ -4021,6 +4157,266 @@ namespace AlibabaCloud.SDK.Nis20211216
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartNisInspectionTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取云网络流量指标排名</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// StartNisTrafficRankingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartNisTrafficRankingResponse
+        /// </returns>
+        public StartNisTrafficRankingResponse StartNisTrafficRankingWithOptions(StartNisTrafficRankingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StartNisTrafficRankingShrinkRequest request = new StartNisTrafficRankingShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filter))
+            {
+                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "Filter", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GroupBy))
+            {
+                request.GroupByShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GroupBy, "GroupBy", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                query["BeginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
+            {
+                query["Filter"] = request.FilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByShrink))
+            {
+                query["GroupBy"] = request.GroupByShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
+            {
+                query["Sort"] = request.Sort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageInterval))
+            {
+                query["StorageInterval"] = request.StorageInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopN))
+            {
+                query["TopN"] = request.TopN;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficAnalyzerId))
+            {
+                query["TrafficAnalyzerId"] = request.TrafficAnalyzerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficScenario))
+            {
+                query["TrafficScenario"] = request.TrafficScenario;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TupleDimension))
+            {
+                query["TupleDimension"] = request.TupleDimension;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartNisTrafficRanking",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartNisTrafficRankingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取云网络流量指标排名</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// StartNisTrafficRankingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartNisTrafficRankingResponse
+        /// </returns>
+        public async Task<StartNisTrafficRankingResponse> StartNisTrafficRankingWithOptionsAsync(StartNisTrafficRankingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StartNisTrafficRankingShrinkRequest request = new StartNisTrafficRankingShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filter))
+            {
+                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "Filter", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GroupBy))
+            {
+                request.GroupByShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GroupBy, "GroupBy", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                query["BeginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
+            {
+                query["Filter"] = request.FilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByShrink))
+            {
+                query["GroupBy"] = request.GroupByShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
+            {
+                query["Sort"] = request.Sort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageInterval))
+            {
+                query["StorageInterval"] = request.StorageInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopN))
+            {
+                query["TopN"] = request.TopN;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficAnalyzerId))
+            {
+                query["TrafficAnalyzerId"] = request.TrafficAnalyzerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficScenario))
+            {
+                query["TrafficScenario"] = request.TrafficScenario;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TupleDimension))
+            {
+                query["TupleDimension"] = request.TupleDimension;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartNisTrafficRanking",
+                Version = "2021-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartNisTrafficRankingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取云网络流量指标排名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartNisTrafficRankingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartNisTrafficRankingResponse
+        /// </returns>
+        public StartNisTrafficRankingResponse StartNisTrafficRanking(StartNisTrafficRankingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartNisTrafficRankingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取云网络流量指标排名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartNisTrafficRankingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartNisTrafficRankingResponse
+        /// </returns>
+        public async Task<StartNisTrafficRankingResponse> StartNisTrafficRankingAsync(StartNisTrafficRankingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartNisTrafficRankingWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
