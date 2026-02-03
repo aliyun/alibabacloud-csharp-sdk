@@ -89,6 +89,24 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public CredentialConfig CredentialConfig { get; set; }
 
+        [NameInMap("CustomEnvs")]
+        [Validation(Required=false)]
+        public List<GetJobResponseBodyCustomEnvs> CustomEnvs { get; set; }
+        public class GetJobResponseBodyCustomEnvs : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+            [NameInMap("Visible")]
+            [Validation(Required=false)]
+            public string Visible { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The data sources.</para>
         /// </summary>

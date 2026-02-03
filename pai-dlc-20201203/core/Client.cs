@@ -122,6 +122,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 body["CredentialConfig"] = request.CredentialConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomEnvs))
+            {
+                body["CustomEnvs"] = request.CustomEnvs;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSources))
             {
                 body["DataSources"] = request.DataSources;
@@ -252,6 +256,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfig))
             {
                 body["CredentialConfig"] = request.CredentialConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomEnvs))
+            {
+                body["CustomEnvs"] = request.CustomEnvs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSources))
             {

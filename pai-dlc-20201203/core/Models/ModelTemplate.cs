@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
-    public class ModelConfig : TeaModel {
+    public class ModelTemplate : TeaModel {
+        [NameInMap("Collections")]
+        [Validation(Required=false)]
+        public string Collections { get; set; }
+
         [NameInMap("ModelName")]
         [Validation(Required=false)]
         public string ModelName { get; set; }
 
-        [NameInMap("ModelTemplate")]
+        [NameInMap("Provider")]
         [Validation(Required=false)]
-        public ModelTemplate ModelTemplate { get; set; }
+        public string Provider { get; set; }
 
     }
 
