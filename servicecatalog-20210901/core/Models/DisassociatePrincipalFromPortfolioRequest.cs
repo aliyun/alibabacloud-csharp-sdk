@@ -24,7 +24,6 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
         /// <para>The ID of the RAM entity.</para>
         /// <para>For more information about how to obtain the ID of a RAM user, see <a href="https://help.aliyun.com/document_detail/28681.html">GetUser</a>.</para>
         /// <para>For more information about how to obtain the ID of a RAM role, see <a href="https://help.aliyun.com/document_detail/28711.html">GetRole</a>.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24477111603637****</para>
@@ -32,6 +31,14 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
         [NameInMap("PrincipalId")]
         [Validation(Required=false)]
         public string PrincipalId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>user/userName</para>
+        /// </summary>
+        [NameInMap("PrincipalPattern")]
+        [Validation(Required=false)]
+        public string PrincipalPattern { get; set; }
 
         /// <summary>
         /// <para>The type of the Resource Access Management (RAM) entity. Valid values:</para>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
 {
     public class ListTagOptionsResponseBody : TeaModel {
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// <para>The page number of the returned page.</para>
         /// 

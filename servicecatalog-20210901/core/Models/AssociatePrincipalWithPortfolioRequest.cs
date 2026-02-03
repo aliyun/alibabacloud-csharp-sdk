@@ -20,14 +20,23 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
         public string PortfolioId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>24477111603637****</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
         /// </summary>
         [NameInMap("PrincipalId")]
         [Validation(Required=false)]
         public string PrincipalId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>user/userName</para>
+        /// </summary>
+        [NameInMap("PrincipalPattern")]
+        [Validation(Required=false)]
+        public string PrincipalPattern { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
             [Validation(Required=false)]
             public string PrincipalId { get; set; }
 
+            [NameInMap("PrincipalPattern")]
+            [Validation(Required=false)]
+            public string PrincipalPattern { get; set; }
+
             /// <summary>
             /// <para>The type of the RAM entity. Valid values:</para>
             /// <list type="bullet">
