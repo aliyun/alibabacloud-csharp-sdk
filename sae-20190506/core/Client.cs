@@ -9293,6 +9293,14 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Cpu"] = request.Cpu;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuA10))
+            {
+                query["GpuA10"] = request.GpuA10;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuPpu810e))
+            {
+                query["GpuPpu810e"] = request.GpuPpu810e;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
             {
                 query["Memory"] = request.Memory;
@@ -9358,6 +9366,14 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
             {
                 query["Cpu"] = request.Cpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuA10))
+            {
+                query["GpuA10"] = request.GpuA10;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuPpu810e))
+            {
+                query["GpuPpu810e"] = request.GpuPpu810e;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
             {
