@@ -25,9 +25,49 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
             [Validation(Required=false)]
             public RunVideoAnalysisRequestAddDocumentParamDocument Document { get; set; }
             public class RunVideoAnalysisRequestAddDocumentParamDocument : TeaModel {
+                [NameInMap("categoryUuid")]
+                [Validation(Required=false)]
+                public string CategoryUuid { get; set; }
+
                 [NameInMap("docId")]
                 [Validation(Required=false)]
                 public string DocId { get; set; }
+
+                [NameInMap("extend1")]
+                [Validation(Required=false)]
+                public string Extend1 { get; set; }
+
+                [NameInMap("extend2")]
+                [Validation(Required=false)]
+                public string Extend2 { get; set; }
+
+                [NameInMap("extend3")]
+                [Validation(Required=false)]
+                public string Extend3 { get; set; }
+
+                [NameInMap("metadata")]
+                [Validation(Required=false)]
+                public RunVideoAnalysisRequestAddDocumentParamDocumentMetadata Metadata { get; set; }
+                public class RunVideoAnalysisRequestAddDocumentParamDocumentMetadata : TeaModel {
+                    [NameInMap("keyValues")]
+                    [Validation(Required=false)]
+                    public List<RunVideoAnalysisRequestAddDocumentParamDocumentMetadataKeyValues> KeyValues { get; set; }
+                    public class RunVideoAnalysisRequestAddDocumentParamDocumentMetadataKeyValues : TeaModel {
+                        [NameInMap("key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("tags")]
+                [Validation(Required=false)]
+                public List<string> Tags { get; set; }
 
                 [NameInMap("title")]
                 [Validation(Required=false)]
