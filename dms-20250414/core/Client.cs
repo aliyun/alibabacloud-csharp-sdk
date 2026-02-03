@@ -7974,6 +7974,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["MessageType"] = request.MessageType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentSessionId))
+            {
+                query["ParentSessionId"] = request.ParentSessionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Question))
             {
                 query["Question"] = request.Question;
@@ -8061,6 +8065,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageType))
             {
                 query["MessageType"] = request.MessageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentSessionId))
+            {
+                query["ParentSessionId"] = request.ParentSessionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Question))
             {

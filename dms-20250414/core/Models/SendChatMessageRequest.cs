@@ -135,6 +135,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string MessageType { get; set; }
 
+        [NameInMap("ParentSessionId")]
+        [Validation(Required=false)]
+        public string ParentSessionId { get; set; }
+
         [NameInMap("Question")]
         [Validation(Required=false)]
         public string Question { get; set; }
