@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? AutoRenewPeriod { get; set; }
 
+        [NameInMap("CouponNo")]
+        [Validation(Required=false)]
+        public string CouponNo { get; set; }
+
         /// <summary>
         /// <para>The ID of the instance. You can call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to query the ID of the instance.</para>
         /// <para>This parameter is required.</para>

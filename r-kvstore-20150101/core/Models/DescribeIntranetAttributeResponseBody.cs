@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public bool? HasPrePaidBandWidthOrderRunning { get; set; }
 
+        [NameInMap("IntranetBandWidthBurst")]
+        [Validation(Required=false)]
+        public int? IntranetBandWidthBurst { get; set; }
+
         /// <summary>
         /// <para>The internal bandwidth of the instance. This parameter indicates the combined bandwidth of all shards in the instance. Unit: Mbit/s.</para>
         /// 

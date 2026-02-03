@@ -17503,8 +17503,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看TairInfer实例列表</para>
+        /// <para>Queries the information of one or more Tair (Redis OSS-compatible) KVCache instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the following Tair (Redis OSS-compatible) KVCache instances: inference operator instances, virtual cluster instances, and cache service instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTairKVCacheInferInstancesRequest
@@ -17541,8 +17546,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看TairInfer实例列表</para>
+        /// <para>Queries the information of one or more Tair (Redis OSS-compatible) KVCache instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the following Tair (Redis OSS-compatible) KVCache instances: inference operator instances, virtual cluster instances, and cache service instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTairKVCacheInferInstancesRequest
@@ -17579,8 +17589,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看TairInfer实例列表</para>
+        /// <para>Queries the information of one or more Tair (Redis OSS-compatible) KVCache instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the following Tair (Redis OSS-compatible) KVCache instances: inference operator instances, virtual cluster instances, and cache service instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTairKVCacheInferInstancesRequest
@@ -17597,8 +17612,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看TairInfer实例列表</para>
+        /// <para>Queries the information of one or more Tair (Redis OSS-compatible) KVCache instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the following Tair (Redis OSS-compatible) KVCache instances: inference operator instances, virtual cluster instances, and cache service instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTairKVCacheInferInstancesRequest
@@ -30901,6 +30921,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["ChargeType"] = request.ChargeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
+            {
+                query["CouponNo"] = request.CouponNo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -30991,6 +31015,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
                 query["ChargeType"] = request.ChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
+            {
+                query["CouponNo"] = request.CouponNo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -31356,6 +31384,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["AutoRenewPeriod"] = request.AutoRenewPeriod;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
+            {
+                query["CouponNo"] = request.CouponNo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -31441,6 +31473,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewPeriod))
             {
                 query["AutoRenewPeriod"] = request.AutoRenewPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
+            {
+                query["CouponNo"] = request.CouponNo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
