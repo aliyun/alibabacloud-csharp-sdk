@@ -246,6 +246,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
+                [NameInMap("VmncLearn")]
+                [Validation(Required=false)]
+                public bool? VmncLearn { get; set; }
+
             }
 
         }
