@@ -170,6 +170,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string RouteMode { get; set; }
 
+        [NameInMap("TrAttachmentId")]
+        [Validation(Required=false)]
+        public string TrAttachmentId { get; set; }
+
         /// <summary>
         /// <para>The primary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</para>
         /// 
