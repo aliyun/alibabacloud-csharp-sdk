@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        [NameInMap("rowFilter")]
+        [Validation(Required=false)]
+        public RowFilter RowFilter { get; set; }
+
         [NameInMap("table")]
         [Validation(Required=false)]
         public string Table { get; set; }

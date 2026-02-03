@@ -2373,7 +2373,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据湖Catalog</para>
+        /// <para>删除数据湖Catalog</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2409,7 +2409,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据湖Catalog</para>
+        /// <para>删除数据湖Catalog</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2445,7 +2445,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据湖Catalog</para>
+        /// <para>删除数据湖Catalog</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2460,7 +2460,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据湖Catalog</para>
+        /// <para>删除数据湖Catalog</para>
         /// </summary>
         /// 
         /// <returns>

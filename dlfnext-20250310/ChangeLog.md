@@ -1,3 +1,6 @@
+2026-02-03 Version: 1.7.1
+- Generated csharp 2025-03-10 for DlfNext.
+
 2025-12-22 Version: 1.7.0
 - Support API ListFunctions.
 - Support API ListViewDetails.

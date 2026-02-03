@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string StorageClass { get; set; }
 
+        [NameInMap("totalBuckets")]
+        [Validation(Required=false)]
+        public int? TotalBuckets { get; set; }
+
         [NameInMap("updatedAt")]
         [Validation(Required=false)]
         public long? UpdatedAt { get; set; }

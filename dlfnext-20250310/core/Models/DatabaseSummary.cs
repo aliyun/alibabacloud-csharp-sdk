@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public long? TotalFileSizeInBytes { get; set; }
 
+        [NameInMap("totalMetaFileCount")]
+        [Validation(Required=false)]
+        public long? TotalMetaFileCount { get; set; }
+
         [NameInMap("totalMetaSizeInBytes")]
         [Validation(Required=false)]
         public long? TotalMetaSizeInBytes { get; set; }
