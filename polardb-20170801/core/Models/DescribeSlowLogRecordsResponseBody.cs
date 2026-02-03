@@ -80,6 +80,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string HostAddress { get; set; }
 
+                [NameInMap("LockTimeMS")]
+                [Validation(Required=false)]
+                public long? LockTimeMS { get; set; }
+
                 /// <summary>
                 /// <para>SQL lock duration in seconds.</para>
                 /// 
