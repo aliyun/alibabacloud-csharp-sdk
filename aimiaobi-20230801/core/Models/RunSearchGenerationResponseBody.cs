@@ -139,6 +139,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                     [Validation(Required=false)]
                                     public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResultArticle Article { get; set; }
                                     public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResultArticle : TeaModel {
+                                        [NameInMap("CategoryUuid")]
+                                        [Validation(Required=false)]
+                                        public string CategoryUuid { get; set; }
+
                                         /// <summary>
                                         /// <b>Example:</b>
                                         /// <para>xx</para>
@@ -155,6 +159,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                         [Validation(Required=false)]
                                         public string DocUuid { get; set; }
 
+                                        [NameInMap("Extend1")]
+                                        [Validation(Required=false)]
+                                        public string Extend1 { get; set; }
+
+                                        [NameInMap("Extend2")]
+                                        [Validation(Required=false)]
+                                        public string Extend2 { get; set; }
+
+                                        [NameInMap("Extend3")]
+                                        [Validation(Required=false)]
+                                        public string Extend3 { get; set; }
+
                                         /// <summary>
                                         /// <b>Example:</b>
                                         /// <para>xx</para>
@@ -170,6 +186,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                         [NameInMap("Summary")]
                                         [Validation(Required=false)]
                                         public string Summary { get; set; }
+
+                                        [NameInMap("Tags")]
+                                        [Validation(Required=false)]
+                                        public List<string> Tags { get; set; }
 
                                         /// <summary>
                                         /// <b>Example:</b>
@@ -291,6 +311,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                             [Validation(Required=false)]
                                             public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultArticle Article { get; set; }
                                             public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultArticle : TeaModel {
+                                                [NameInMap("CategoryUuid")]
+                                                [Validation(Required=false)]
+                                                public string CategoryUuid { get; set; }
+
                                                 /// <summary>
                                                 /// <b>Example:</b>
                                                 /// <para>xx</para>
@@ -307,6 +331,22 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                                 [Validation(Required=false)]
                                                 public string DocUuid { get; set; }
 
+                                                [NameInMap("Extend1")]
+                                                [Validation(Required=false)]
+                                                public string Extend1 { get; set; }
+
+                                                [NameInMap("Extend2")]
+                                                [Validation(Required=false)]
+                                                public string Extend2 { get; set; }
+
+                                                [NameInMap("Extend3")]
+                                                [Validation(Required=false)]
+                                                public string Extend3 { get; set; }
+
+                                                [NameInMap("SearchSource")]
+                                                [Validation(Required=false)]
+                                                public string SearchSource { get; set; }
+
                                                 /// <summary>
                                                 /// <b>Example:</b>
                                                 /// <para>xx</para>
@@ -315,6 +355,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                                 [Validation(Required=false)]
                                                 public string SearchSourceName { get; set; }
 
+                                                [NameInMap("SearchSourceType")]
+                                                [Validation(Required=false)]
+                                                public string SearchSourceType { get; set; }
+
                                                 /// <summary>
                                                 /// <b>Example:</b>
                                                 /// <para>xx</para>
@@ -322,6 +366,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                                 [NameInMap("Summary")]
                                                 [Validation(Required=false)]
                                                 public string Summary { get; set; }
+
+                                                [NameInMap("Tags")]
+                                                [Validation(Required=false)]
+                                                public List<string> Tags { get; set; }
 
                                                 /// <summary>
                                                 /// <b>Example:</b>
@@ -443,6 +491,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                             [Validation(Required=false)]
                                             public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResultSearchResultArticle Article { get; set; }
                                             public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResultSearchResultArticle : TeaModel {
+                                                [NameInMap("CategoryUuid")]
+                                                [Validation(Required=false)]
+                                                public string CategoryUuid { get; set; }
+
                                                 /// <summary>
                                                 /// <b>Example:</b>
                                                 /// <para>xx</para>
@@ -459,6 +511,22 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                                 [Validation(Required=false)]
                                                 public string DocUuid { get; set; }
 
+                                                [NameInMap("Extend1")]
+                                                [Validation(Required=false)]
+                                                public string Extend1 { get; set; }
+
+                                                [NameInMap("Extend2")]
+                                                [Validation(Required=false)]
+                                                public string Extend2 { get; set; }
+
+                                                [NameInMap("Extend3")]
+                                                [Validation(Required=false)]
+                                                public string Extend3 { get; set; }
+
+                                                [NameInMap("SearchSource")]
+                                                [Validation(Required=false)]
+                                                public string SearchSource { get; set; }
+
                                                 /// <summary>
                                                 /// <b>Example:</b>
                                                 /// <para>互联网搜索</para>
@@ -467,6 +535,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                                 [Validation(Required=false)]
                                                 public string SearchSourceName { get; set; }
 
+                                                [NameInMap("SearchSourceType")]
+                                                [Validation(Required=false)]
+                                                public string SearchSourceType { get; set; }
+
                                                 /// <summary>
                                                 /// <b>Example:</b>
                                                 /// <para>xx</para>
@@ -474,6 +546,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                                 [NameInMap("Summary")]
                                                 [Validation(Required=false)]
                                                 public string Summary { get; set; }
+
+                                                [NameInMap("Tags")]
+                                                [Validation(Required=false)]
+                                                public List<string> Tags { get; set; }
 
                                                 /// <summary>
                                                 /// <b>Example:</b>
@@ -545,6 +621,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                         [Validation(Required=false)]
                                         public List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsTextSearchResultSearchResult> SearchResult { get; set; }
                                         public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsTextSearchResultSearchResult : TeaModel {
+                                            [NameInMap("CategoryUuid")]
+                                            [Validation(Required=false)]
+                                            public string CategoryUuid { get; set; }
+
                                             /// <summary>
                                             /// <b>Example:</b>
                                             /// <para>xx</para>
@@ -560,6 +640,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                             [NameInMap("DocUuid")]
                                             [Validation(Required=false)]
                                             public string DocUuid { get; set; }
+
+                                            [NameInMap("Extend1")]
+                                            [Validation(Required=false)]
+                                            public string Extend1 { get; set; }
+
+                                            [NameInMap("Extend2")]
+                                            [Validation(Required=false)]
+                                            public string Extend2 { get; set; }
+
+                                            [NameInMap("Extend3")]
+                                            [Validation(Required=false)]
+                                            public string Extend3 { get; set; }
 
                                             [NameInMap("MultimodalMedias")]
                                             [Validation(Required=false)]
@@ -631,6 +723,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                             [Validation(Required=false)]
                                             public string Summary { get; set; }
 
+                                            [NameInMap("Tags")]
+                                            [Validation(Required=false)]
+                                            public List<string> Tags { get; set; }
+
                                             /// <summary>
                                             /// <b>Example:</b>
                                             /// <para>xx</para>
@@ -695,6 +791,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                             [Validation(Required=false)]
                                             public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResultArticle Article { get; set; }
                                             public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResultArticle : TeaModel {
+                                                [NameInMap("CategoryUuid")]
+                                                [Validation(Required=false)]
+                                                public string CategoryUuid { get; set; }
+
                                                 /// <summary>
                                                 /// <b>Example:</b>
                                                 /// <para>xx</para>
@@ -711,6 +811,22 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                                 [Validation(Required=false)]
                                                 public string DocUuid { get; set; }
 
+                                                [NameInMap("Extend1")]
+                                                [Validation(Required=false)]
+                                                public string Extend1 { get; set; }
+
+                                                [NameInMap("Extend2")]
+                                                [Validation(Required=false)]
+                                                public string Extend2 { get; set; }
+
+                                                [NameInMap("Extend3")]
+                                                [Validation(Required=false)]
+                                                public string Extend3 { get; set; }
+
+                                                [NameInMap("SearchSource")]
+                                                [Validation(Required=false)]
+                                                public string SearchSource { get; set; }
+
                                                 /// <summary>
                                                 /// <b>Example:</b>
                                                 /// <para>互联网搜索</para>
@@ -719,6 +835,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                                 [Validation(Required=false)]
                                                 public string SearchSourceName { get; set; }
 
+                                                [NameInMap("SearchSourceType")]
+                                                [Validation(Required=false)]
+                                                public string SearchSourceType { get; set; }
+
                                                 /// <summary>
                                                 /// <b>Example:</b>
                                                 /// <para>xx</para>
@@ -726,6 +846,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                                 [NameInMap("Summary")]
                                                 [Validation(Required=false)]
                                                 public string Summary { get; set; }
+
+                                                [NameInMap("Tags")]
+                                                [Validation(Required=false)]
+                                                public List<string> Tags { get; set; }
 
                                                 /// <summary>
                                                 /// <b>Example:</b>
@@ -875,6 +999,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                 [Validation(Required=false)]
                                 public List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResult> SearchResult { get; set; }
                                 public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResult : TeaModel {
+                                    [NameInMap("CategoryUuid")]
+                                    [Validation(Required=false)]
+                                    public string CategoryUuid { get; set; }
+
                                     [NameInMap("Chunks")]
                                     [Validation(Required=false)]
                                     public List<string> Chunks { get; set; }
@@ -910,6 +1038,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                     [NameInMap("Excerpt")]
                                     [Validation(Required=false)]
                                     public string Excerpt { get; set; }
+
+                                    [NameInMap("Extend1")]
+                                    [Validation(Required=false)]
+                                    public string Extend1 { get; set; }
+
+                                    [NameInMap("Extend2")]
+                                    [Validation(Required=false)]
+                                    public string Extend2 { get; set; }
+
+                                    [NameInMap("Extend3")]
+                                    [Validation(Required=false)]
+                                    public string Extend3 { get; set; }
 
                                     [NameInMap("MultimodalMedias")]
                                     [Validation(Required=false)]
@@ -996,6 +1136,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                     [NameInMap("Summary")]
                                     [Validation(Required=false)]
                                     public string Summary { get; set; }
+
+                                    [NameInMap("Tags")]
+                                    [Validation(Required=false)]
+                                    public List<string> Tags { get; set; }
 
                                     [NameInMap("TextGenerateMultimodalMediaList")]
                                     [Validation(Required=false)]
@@ -1151,6 +1295,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                     [Validation(Required=false)]
                                     public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentImageSearchResultSearchResultArticle Article { get; set; }
                                     public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentImageSearchResultSearchResultArticle : TeaModel {
+                                        [NameInMap("CategoryUuid")]
+                                        [Validation(Required=false)]
+                                        public string CategoryUuid { get; set; }
+
                                         /// <summary>
                                         /// <b>Example:</b>
                                         /// <para>xx</para>
@@ -1167,6 +1315,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                         [Validation(Required=false)]
                                         public string DocUuid { get; set; }
 
+                                        [NameInMap("Extend1")]
+                                        [Validation(Required=false)]
+                                        public string Extend1 { get; set; }
+
+                                        [NameInMap("Extend2")]
+                                        [Validation(Required=false)]
+                                        public string Extend2 { get; set; }
+
+                                        [NameInMap("Extend3")]
+                                        [Validation(Required=false)]
+                                        public string Extend3 { get; set; }
+
                                         /// <summary>
                                         /// <b>Example:</b>
                                         /// <para>互联网搜索</para>
@@ -1182,6 +1342,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                         [NameInMap("Summary")]
                                         [Validation(Required=false)]
                                         public string Summary { get; set; }
+
+                                        [NameInMap("Tags")]
+                                        [Validation(Required=false)]
+                                        public List<string> Tags { get; set; }
 
                                         /// <summary>
                                         /// <b>Example:</b>
@@ -1249,6 +1413,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                     [Validation(Required=false)]
                                     public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListArticle Article { get; set; }
                                     public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListArticle : TeaModel {
+                                        [NameInMap("CategoryUuid")]
+                                        [Validation(Required=false)]
+                                        public string CategoryUuid { get; set; }
+
                                         /// <summary>
                                         /// <b>Example:</b>
                                         /// <para>xx</para>
@@ -1272,6 +1440,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                         [NameInMap("DocUuid")]
                                         [Validation(Required=false)]
                                         public string DocUuid { get; set; }
+
+                                        [NameInMap("Extend1")]
+                                        [Validation(Required=false)]
+                                        public string Extend1 { get; set; }
+
+                                        [NameInMap("Extend2")]
+                                        [Validation(Required=false)]
+                                        public string Extend2 { get; set; }
+
+                                        [NameInMap("Extend3")]
+                                        [Validation(Required=false)]
+                                        public string Extend3 { get; set; }
 
                                         /// <summary>
                                         /// <b>Example:</b>
@@ -1328,6 +1508,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                         [NameInMap("Summary")]
                                         [Validation(Required=false)]
                                         public string Summary { get; set; }
+
+                                        [NameInMap("Tags")]
+                                        [Validation(Required=false)]
+                                        public List<string> Tags { get; set; }
 
                                         /// <summary>
                                         /// <b>Example:</b>
@@ -1719,6 +1903,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                 [Validation(Required=false)]
                                 public List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultReferenceList> ReferenceList { get; set; }
                                 public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultReferenceList : TeaModel {
+                                    [NameInMap("CategoryUuid")]
+                                    [Validation(Required=false)]
+                                    public string CategoryUuid { get; set; }
+
                                     [NameInMap("Chunks")]
                                     [Validation(Required=false)]
                                     public List<string> Chunks { get; set; }
@@ -1746,6 +1934,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                     [NameInMap("DocUuid")]
                                     [Validation(Required=false)]
                                     public string DocUuid { get; set; }
+
+                                    [NameInMap("Extend1")]
+                                    [Validation(Required=false)]
+                                    public string Extend1 { get; set; }
+
+                                    [NameInMap("Extend2")]
+                                    [Validation(Required=false)]
+                                    public string Extend2 { get; set; }
+
+                                    [NameInMap("Extend3")]
+                                    [Validation(Required=false)]
+                                    public string Extend3 { get; set; }
 
                                     /// <summary>
                                     /// <b>Example:</b>
@@ -1810,6 +2010,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                     [NameInMap("Summary")]
                                     [Validation(Required=false)]
                                     public string Summary { get; set; }
+
+                                    [NameInMap("Tags")]
+                                    [Validation(Required=false)]
+                                    public List<string> Tags { get; set; }
 
                                     /// <summary>
                                     /// <b>Example:</b>
@@ -1965,6 +2169,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                 [Validation(Required=false)]
                                 public List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult> SearchResult { get; set; }
                                 public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult : TeaModel {
+                                    [NameInMap("CategoryUuid")]
+                                    [Validation(Required=false)]
+                                    public string CategoryUuid { get; set; }
+
                                     /// <summary>
                                     /// <b>Example:</b>
                                     /// <para>xx</para>
@@ -1988,6 +2196,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                     [NameInMap("DocUuid")]
                                     [Validation(Required=false)]
                                     public string DocUuid { get; set; }
+
+                                    [NameInMap("Extend1")]
+                                    [Validation(Required=false)]
+                                    public string Extend1 { get; set; }
+
+                                    [NameInMap("Extend2")]
+                                    [Validation(Required=false)]
+                                    public string Extend2 { get; set; }
+
+                                    [NameInMap("Extend3")]
+                                    [Validation(Required=false)]
+                                    public string Extend3 { get; set; }
 
                                     /// <summary>
                                     /// <b>Example:</b>
@@ -2028,6 +2248,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                     [NameInMap("Summary")]
                                     [Validation(Required=false)]
                                     public string Summary { get; set; }
+
+                                    [NameInMap("Tags")]
+                                    [Validation(Required=false)]
+                                    public List<string> Tags { get; set; }
 
                                     /// <summary>
                                     /// <b>Example:</b>
@@ -2317,6 +2541,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                 [Validation(Required=false)]
                                 public List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultReferenceList> ReferenceList { get; set; }
                                 public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultReferenceList : TeaModel {
+                                    [NameInMap("CategoryUuid")]
+                                    [Validation(Required=false)]
+                                    public string CategoryUuid { get; set; }
+
                                     [NameInMap("Chunks")]
                                     [Validation(Required=false)]
                                     public List<string> Chunks { get; set; }
@@ -2344,6 +2572,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                     [NameInMap("DocUuid")]
                                     [Validation(Required=false)]
                                     public string DocUuid { get; set; }
+
+                                    [NameInMap("Extend1")]
+                                    [Validation(Required=false)]
+                                    public string Extend1 { get; set; }
+
+                                    [NameInMap("Extend2")]
+                                    [Validation(Required=false)]
+                                    public string Extend2 { get; set; }
+
+                                    [NameInMap("Extend3")]
+                                    [Validation(Required=false)]
+                                    public string Extend3 { get; set; }
 
                                     /// <summary>
                                     /// <b>Example:</b>
@@ -2408,6 +2648,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                     [NameInMap("Summary")]
                                     [Validation(Required=false)]
                                     public string Summary { get; set; }
+
+                                    [NameInMap("Tags")]
+                                    [Validation(Required=false)]
+                                    public List<string> Tags { get; set; }
 
                                     /// <summary>
                                     /// <b>Example:</b>
@@ -2563,6 +2807,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                     [Validation(Required=false)]
                                     public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentVideoSearchResultSearchResultArticle Article { get; set; }
                                     public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentVideoSearchResultSearchResultArticle : TeaModel {
+                                        [NameInMap("CategoryUuid")]
+                                        [Validation(Required=false)]
+                                        public string CategoryUuid { get; set; }
+
                                         /// <summary>
                                         /// <b>Example:</b>
                                         /// <para>xx</para>
@@ -2579,6 +2827,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                         [Validation(Required=false)]
                                         public string DocUuid { get; set; }
 
+                                        [NameInMap("Extend1")]
+                                        [Validation(Required=false)]
+                                        public string Extend1 { get; set; }
+
+                                        [NameInMap("Extend2")]
+                                        [Validation(Required=false)]
+                                        public string Extend2 { get; set; }
+
+                                        [NameInMap("Extend3")]
+                                        [Validation(Required=false)]
+                                        public string Extend3 { get; set; }
+
                                         /// <summary>
                                         /// <b>Example:</b>
                                         /// <para>互联网搜索</para>
@@ -2594,6 +2854,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                         [NameInMap("Summary")]
                                         [Validation(Required=false)]
                                         public string Summary { get; set; }
+
+                                        [NameInMap("Tags")]
+                                        [Validation(Required=false)]
+                                        public List<string> Tags { get; set; }
 
                                         /// <summary>
                                         /// <b>Example:</b>

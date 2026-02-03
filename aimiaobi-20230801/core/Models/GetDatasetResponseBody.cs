@@ -41,6 +41,28 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public GetDatasetResponseBodyDataDatasetConfig DatasetConfig { get; set; }
             public class GetDatasetResponseBodyDataDatasetConfig : TeaModel {
+                [NameInMap("SearchSourceConfig")]
+                [Validation(Required=false)]
+                public GetDatasetResponseBodyDataDatasetConfigSearchSourceConfig SearchSourceConfig { get; set; }
+                public class GetDatasetResponseBodyDataDatasetConfigSearchSourceConfig : TeaModel {
+                    [NameInMap("MetadataKeyValueGenerateEnable")]
+                    [Validation(Required=false)]
+                    public string MetadataKeyValueGenerateEnable { get; set; }
+
+                    [NameInMap("MetadataKeyValueSearchEnable")]
+                    [Validation(Required=false)]
+                    public string MetadataKeyValueSearchEnable { get; set; }
+
+                    [NameInMap("TagGenerateEnable")]
+                    [Validation(Required=false)]
+                    public string TagGenerateEnable { get; set; }
+
+                    [NameInMap("TagSearchEnable")]
+                    [Validation(Required=false)]
+                    public string TagSearchEnable { get; set; }
+
+                }
+
                 [NameInMap("SearchSourceConfigs")]
                 [Validation(Required=false)]
                 public List<GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigs> SearchSourceConfigs { get; set; }

@@ -25,6 +25,28 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public List<SearchDatasetDocumentsResponseBodyDataDocuments> Documents { get; set; }
             public class SearchDatasetDocumentsResponseBodyDataDocuments : TeaModel {
+                [NameInMap("CategoryUuid")]
+                [Validation(Required=false)]
+                public string CategoryUuid { get; set; }
+
+                [NameInMap("Chunk")]
+                [Validation(Required=false)]
+                public string Chunk { get; set; }
+
+                [NameInMap("ChunkInfos")]
+                [Validation(Required=false)]
+                public List<SearchDatasetDocumentsResponseBodyDataDocumentsChunkInfos> ChunkInfos { get; set; }
+                public class SearchDatasetDocumentsResponseBodyDataDocumentsChunkInfos : TeaModel {
+                    [NameInMap("Chunk")]
+                    [Validation(Required=false)]
+                    public string Chunk { get; set; }
+
+                    [NameInMap("Score")]
+                    [Validation(Required=false)]
+                    public double? Score { get; set; }
+
+                }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>xx</para>
@@ -41,6 +63,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public string DocId { get; set; }
 
+                [NameInMap("DocType")]
+                [Validation(Required=false)]
+                public string DocType { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>内部文档唯一ID</para>
@@ -49,6 +75,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public string DocUuid { get; set; }
 
+                [NameInMap("Extend1")]
+                [Validation(Required=false)]
+                public string Extend1 { get; set; }
+
+                [NameInMap("Extend2")]
+                [Validation(Required=false)]
+                public string Extend2 { get; set; }
+
+                [NameInMap("Extend3")]
+                [Validation(Required=false)]
+                public string Extend3 { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>2024-12-09 17:09:40</para>
@@ -56,6 +94,22 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [NameInMap("PubTime")]
                 [Validation(Required=false)]
                 public string PubTime { get; set; }
+
+                [NameInMap("Score")]
+                [Validation(Required=false)]
+                public double? Score { get; set; }
+
+                [NameInMap("SearchSource")]
+                [Validation(Required=false)]
+                public string SearchSource { get; set; }
+
+                [NameInMap("SearchSourceName")]
+                [Validation(Required=false)]
+                public string SearchSourceName { get; set; }
+
+                [NameInMap("SearchSourceType")]
+                [Validation(Required=false)]
+                public string SearchSourceType { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -72,6 +126,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [NameInMap("Summary")]
                 [Validation(Required=false)]
                 public string Summary { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public List<string> Tags { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

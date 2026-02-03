@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("CreateUser")]
+            [Validation(Required=false)]
+            public string CreateUser { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>false</para>
@@ -163,6 +167,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string Summary { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<string> Tags { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>xx</para>
@@ -178,6 +186,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
+
+            [NameInMap("UpdateUser")]
+            [Validation(Required=false)]
+            public string UpdateUser { get; set; }
 
             /// <summary>
             /// <para>url</para>

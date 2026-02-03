@@ -271,6 +271,26 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public RunSearchGenerationRequestChatConfigSearchParam SearchParam { get; set; }
             public class RunSearchGenerationRequestChatConfigSearchParam : TeaModel {
+                [NameInMap("CategoryUuids")]
+                [Validation(Required=false)]
+                public List<string> CategoryUuids { get; set; }
+
+                [NameInMap("CreateTimeEnd")]
+                [Validation(Required=false)]
+                public long? CreateTimeEnd { get; set; }
+
+                [NameInMap("CreateTimeStart")]
+                [Validation(Required=false)]
+                public long? CreateTimeStart { get; set; }
+
+                [NameInMap("DocIds")]
+                [Validation(Required=false)]
+                public List<string> DocIds { get; set; }
+
+                [NameInMap("DocUuids")]
+                [Validation(Required=false)]
+                public List<string> DocUuids { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>1725983999999</para>
@@ -278,6 +298,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public long? EndTime { get; set; }
+
+                [NameInMap("Extend1")]
+                [Validation(Required=false)]
+                public string Extend1 { get; set; }
+
+                [NameInMap("Extend2")]
+                [Validation(Required=false)]
+                public string Extend2 { get; set; }
+
+                [NameInMap("Extend3")]
+                [Validation(Required=false)]
+                public string Extend3 { get; set; }
 
                 [NameInMap("MultimodalSearchTypes")]
                 [Validation(Required=false)]
@@ -344,6 +376,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public long? StartTime { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public List<string> Tags { get; set; }
 
             }
 

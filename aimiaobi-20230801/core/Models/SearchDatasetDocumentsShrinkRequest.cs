@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
-    public class ListDatasetDocumentsShrinkRequest : TeaModel {
+    public class SearchDatasetDocumentsShrinkRequest : TeaModel {
         [NameInMap("CategoryUuids")]
         [Validation(Required=false)]
         public string CategoryUuidsShrink { get; set; }
@@ -20,14 +20,6 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [NameInMap("CreateTimeStart")]
         [Validation(Required=false)]
         public long? CreateTimeStart { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>xx</para>
-        /// </summary>
-        [NameInMap("DatasetDescription")]
-        [Validation(Required=false)]
-        public string DatasetDescription { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -49,13 +41,9 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string DocIdsShrink { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>text</para>
-        /// </summary>
-        [NameInMap("DocType")]
+        [NameInMap("DocTypes")]
         [Validation(Required=false)]
-        public string DocType { get; set; }
+        public string DocTypesShrink { get; set; }
 
         [NameInMap("DocUuids")]
         [Validation(Required=false)]
@@ -65,10 +53,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
-        [NameInMap("ExcludeFields")]
-        [Validation(Required=false)]
-        public string ExcludeFieldsShrink { get; set; }
-
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>业务参数</para>
+        /// </summary>
         [NameInMap("Extend1")]
         [Validation(Required=false)]
         public string Extend1 { get; set; }
@@ -81,17 +69,13 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Extend3 { get; set; }
 
-        [NameInMap("IncludeFields")]
-        [Validation(Required=false)]
-        public string IncludeFieldsShrink { get; set; }
-
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>false</para>
         /// </summary>
-        [NameInMap("PageNumber")]
+        [NameInMap("IncludeContent")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public bool? IncludeContent { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -99,41 +83,35 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>搜索条件</para>
-        /// </summary>
-        [NameInMap("Query")]
-        [Validation(Required=false)]
-        public string Query { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>100</para>
-        /// </summary>
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public int? Status { get; set; }
-
-        [NameInMap("Tags")]
-        [Validation(Required=false)]
-        public string TagsShrink { get; set; }
-
-        [NameInMap("Title")]
-        [Validation(Required=false)]
-        public string Title { get; set; }
+        public string PageSize { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>搜索内容</para>
+        /// </summary>
+        [NameInMap("Query")]
+        [Validation(Required=false)]
+        public string Query { get; set; }
+
+        [NameInMap("SearchMode")]
+        [Validation(Required=false)]
+        public string SearchMode { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public string TagsShrink { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xx</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

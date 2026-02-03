@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public GetDatasetDocumentResponseBodyData Data { get; set; }
         public class GetDatasetDocumentResponseBodyData : TeaModel {
+            [NameInMap("CategoryUuid")]
+            [Validation(Required=false)]
+            public string CategoryUuid { get; set; }
+
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
@@ -53,6 +57,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string DocUuid { get; set; }
 
+            [NameInMap("Extend1")]
+            [Validation(Required=false)]
+            public string Extend1 { get; set; }
+
+            [NameInMap("Extend2")]
+            [Validation(Required=false)]
+            public string Extend2 { get; set; }
+
+            [NameInMap("Extend3")]
+            [Validation(Required=false)]
+            public string Extend3 { get; set; }
+
             [NameInMap("Metadata")]
             [Validation(Required=false)]
             public GetDatasetDocumentResponseBodyDataMetadata Metadata { get; set; }
@@ -72,6 +88,20 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     [NameInMap("Text")]
                     [Validation(Required=false)]
                     public string Text { get; set; }
+
+                }
+
+                [NameInMap("KeyValues")]
+                [Validation(Required=false)]
+                public List<GetDatasetDocumentResponseBodyDataMetadataKeyValues> KeyValues { get; set; }
+                public class GetDatasetDocumentResponseBodyDataMetadataKeyValues : TeaModel {
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
 
                 }
 
@@ -126,6 +156,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [NameInMap("Summary")]
             [Validation(Required=false)]
             public string Summary { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<string> Tags { get; set; }
 
             [NameInMap("Title")]
             [Validation(Required=false)]

@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class ListDatasetDocumentsRequest : TeaModel {
+        [NameInMap("CategoryUuids")]
+        [Validation(Required=false)]
+        public List<string> CategoryUuids { get; set; }
+
+        [NameInMap("CreateTimeEnd")]
+        [Validation(Required=false)]
+        public long? CreateTimeEnd { get; set; }
+
+        [NameInMap("CreateTimeStart")]
+        [Validation(Required=false)]
+        public long? CreateTimeStart { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>xx</para>
@@ -33,6 +45,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string DatasetName { get; set; }
 
+        [NameInMap("DocIds")]
+        [Validation(Required=false)]
+        public List<string> DocIds { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>text</para>
@@ -41,9 +57,29 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string DocType { get; set; }
 
+        [NameInMap("DocUuids")]
+        [Validation(Required=false)]
+        public List<string> DocUuids { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
         [NameInMap("ExcludeFields")]
         [Validation(Required=false)]
         public List<string> ExcludeFields { get; set; }
+
+        [NameInMap("Extend1")]
+        [Validation(Required=false)]
+        public string Extend1 { get; set; }
+
+        [NameInMap("Extend2")]
+        [Validation(Required=false)]
+        public string Extend2 { get; set; }
+
+        [NameInMap("Extend3")]
+        [Validation(Required=false)]
+        public string Extend3 { get; set; }
 
         [NameInMap("IncludeFields")]
         [Validation(Required=false)]
@@ -73,6 +109,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Query { get; set; }
 
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>100</para>
@@ -80,6 +120,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<string> Tags { get; set; }
+
+        [NameInMap("Title")]
+        [Validation(Required=false)]
+        public string Title { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

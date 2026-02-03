@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public UpdateDatasetDocumentResponseBodyData Data { get; set; }
         public class UpdateDatasetDocumentResponseBodyData : TeaModel {
+            [NameInMap("CategoryUuid")]
+            [Validation(Required=false)]
+            public string CategoryUuid { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>用户指定的文档唯一ID</para>
@@ -36,6 +40,22 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [NameInMap("DocUuid")]
             [Validation(Required=false)]
             public string DocUuid { get; set; }
+
+            [NameInMap("Extend1")]
+            [Validation(Required=false)]
+            public string Extend1 { get; set; }
+
+            [NameInMap("Extend2")]
+            [Validation(Required=false)]
+            public string Extend2 { get; set; }
+
+            [NameInMap("Extend3")]
+            [Validation(Required=false)]
+            public string Extend3 { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<string> Tags { get; set; }
 
             [NameInMap("Title")]
             [Validation(Required=false)]

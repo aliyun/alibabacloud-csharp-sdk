@@ -13,6 +13,28 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public UpdateDatasetRequestDatasetConfig DatasetConfig { get; set; }
         public class UpdateDatasetRequestDatasetConfig : TeaModel {
+            [NameInMap("SearchSourceConfig")]
+            [Validation(Required=false)]
+            public UpdateDatasetRequestDatasetConfigSearchSourceConfig SearchSourceConfig { get; set; }
+            public class UpdateDatasetRequestDatasetConfigSearchSourceConfig : TeaModel {
+                [NameInMap("MetadataKeyValueGenerateEnable")]
+                [Validation(Required=false)]
+                public bool? MetadataKeyValueGenerateEnable { get; set; }
+
+                [NameInMap("MetadataKeyValueSearchEnable")]
+                [Validation(Required=false)]
+                public bool? MetadataKeyValueSearchEnable { get; set; }
+
+                [NameInMap("TagGenerateEnable")]
+                [Validation(Required=false)]
+                public bool? TagGenerateEnable { get; set; }
+
+                [NameInMap("TagSearchEnable")]
+                [Validation(Required=false)]
+                public bool? TagSearchEnable { get; set; }
+
+            }
+
             [NameInMap("SearchSourceConfigs")]
             [Validation(Required=false)]
             public List<UpdateDatasetRequestDatasetConfigSearchSourceConfigs> SearchSourceConfigs { get; set; }

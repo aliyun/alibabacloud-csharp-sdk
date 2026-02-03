@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public AddDatasetDocumentRequestDocument Document { get; set; }
         public class AddDatasetDocumentRequestDocument : TeaModel {
+            [NameInMap("CategoryUuid")]
+            [Validation(Required=false)]
+            public string CategoryUuid { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -115,6 +119,20 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     [NameInMap("Text")]
                     [Validation(Required=false)]
                     public string Text { get; set; }
+
+                }
+
+                [NameInMap("KeyValues")]
+                [Validation(Required=false)]
+                public List<AddDatasetDocumentRequestDocumentMetadataKeyValues> KeyValues { get; set; }
+                public class AddDatasetDocumentRequestDocumentMetadataKeyValues : TeaModel {
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
 
                 }
 
@@ -203,6 +221,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [NameInMap("Summary")]
             [Validation(Required=false)]
             public string Summary { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<string> Tags { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
