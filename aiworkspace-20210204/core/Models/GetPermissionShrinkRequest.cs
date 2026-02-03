@@ -23,6 +23,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Accessibility { get; set; }
 
+        [NameInMap("CallerType")]
+        [Validation(Required=false)]
+        public string CallerType { get; set; }
+
+        [NameInMap("CallerUid")]
+        [Validation(Required=false)]
+        public string CallerUid { get; set; }
+
         /// <summary>
         /// <para>The UID of the Alibaba Cloud account that is used to create the workspace.</para>
         /// 
@@ -60,6 +68,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public string Resource { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
     }
 

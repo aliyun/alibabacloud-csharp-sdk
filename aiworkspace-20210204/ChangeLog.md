@@ -1,3 +1,10 @@
+2026-02-03 Version: 6.1.0
+- Support API ValidateConnection.
+- Update API GetPermission: add request parameters CallerType.
+- Update API GetPermission: add request parameters CallerUid.
+- Update API GetPermission: add request parameters SecurityToken.
+
+
 2026-01-23 Version: 6.0.3
 - Update API ListDatasetFileMetas: add request parameters DatasetFileMetaIds.
 

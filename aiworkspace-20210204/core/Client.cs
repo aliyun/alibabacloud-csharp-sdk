@@ -8872,6 +8872,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 query["Accessibility"] = request.Accessibility;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerType))
+            {
+                query["CallerType"] = request.CallerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUid))
+            {
+                query["CallerUid"] = request.CallerUid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Creator))
             {
                 query["Creator"] = request.Creator;
@@ -8887,6 +8895,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resource))
             {
                 query["Resource"] = request.Resource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8940,6 +8952,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 query["Accessibility"] = request.Accessibility;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerType))
+            {
+                query["CallerType"] = request.CallerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUid))
+            {
+                query["CallerUid"] = request.CallerUid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Creator))
             {
                 query["Creator"] = request.Creator;
@@ -8955,6 +8975,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resource))
             {
                 query["Resource"] = request.Resource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -17612,6 +17636,176 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateWorkspaceResourceWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateConnectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateConnectionResponse
+        /// </returns>
+        public ValidateConnectionResponse ValidateConnectionWithOptions(ValidateConnectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configs))
+            {
+                body["Configs"] = request.Configs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionId))
+            {
+                body["ConnectionId"] = request.ConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionType))
+            {
+                body["ConnectionType"] = request.ConnectionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Secrets))
+            {
+                body["Secrets"] = request.Secrets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidateType))
+            {
+                body["ValidateType"] = request.ValidateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidateConnection",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/connections/validate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidateConnectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateConnectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateConnectionResponse
+        /// </returns>
+        public async Task<ValidateConnectionResponse> ValidateConnectionWithOptionsAsync(ValidateConnectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configs))
+            {
+                body["Configs"] = request.Configs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionId))
+            {
+                body["ConnectionId"] = request.ConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionType))
+            {
+                body["ConnectionType"] = request.ConnectionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Secrets))
+            {
+                body["Secrets"] = request.Secrets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidateType))
+            {
+                body["ValidateType"] = request.ValidateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidateConnection",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/connections/validate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidateConnectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateConnectionResponse
+        /// </returns>
+        public ValidateConnectionResponse ValidateConnection(ValidateConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ValidateConnectionWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateConnectionResponse
+        /// </returns>
+        public async Task<ValidateConnectionResponse> ValidateConnectionAsync(ValidateConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ValidateConnectionWithOptionsAsync(request, headers, runtime);
         }
 
     }
