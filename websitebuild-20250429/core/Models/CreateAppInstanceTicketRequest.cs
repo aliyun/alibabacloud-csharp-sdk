@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateAppInstanceTicketRequest : TeaModel {
         /// <summary>
+        /// <para>Customer business ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WS20250801154628000001</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>Client ID of the device that needs to revoke the access token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>d566aaf2-7c88-40a4-982f-6abef0be13c9</para>
         /// </summary>

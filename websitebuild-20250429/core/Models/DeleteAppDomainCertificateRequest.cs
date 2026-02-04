@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class DeleteAppDomainCertificateRequest : TeaModel {
         /// <summary>
+        /// <para>Business ID of the application instance</para>
+        /// 
         /// <b>Example:</b>
         /// <para>202506170003</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>Domain name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aliwmzs.com</para>
         /// </summary>

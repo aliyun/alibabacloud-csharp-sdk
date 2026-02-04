@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class RefreshAppInstanceTicketRequest : TeaModel {
         /// <summary>
+        /// <para>Business ID of the application instance</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>Updated token information</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Token { get; set; }
 
         /// <summary>
+        /// <para>The UUID of the server.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c5c354d7-5e68-443a-b7fc-767e6ede9deb</para>
         /// </summary>

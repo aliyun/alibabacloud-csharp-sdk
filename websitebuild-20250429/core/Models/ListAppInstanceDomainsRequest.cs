@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppInstanceDomainsRequest : TeaModel {
         /// <summary>
+        /// <para>Business ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WD20250718165839000001</para>
         /// </summary>
@@ -18,6 +20,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>Number of results per query.</para>
+        /// <para>Range: 10~100. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50</para>
         /// </summary>
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Token for the next query. It will be empty if there is no next query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0l45bkwM022Dt+rOvPi/oQ==</para>
         /// </summary>
@@ -34,6 +41,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Sorting field</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CreationTime</para>
         /// </summary>
@@ -42,6 +51,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
+        /// <para>Sorting type ASC|DESC</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BUY</para>
         /// </summary>
@@ -50,6 +61,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderType { get; set; }
 
         /// <summary>
+        /// <para>Page number, default is 1</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -58,6 +71,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>Page size, default is 10</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

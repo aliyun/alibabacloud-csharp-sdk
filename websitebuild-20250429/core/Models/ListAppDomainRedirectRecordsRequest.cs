@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppDomainRedirectRecordsRequest : TeaModel {
         /// <summary>
+        /// <para>Application instance business ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>
         /// </summary>
@@ -18,6 +20,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>The number of results per query.</para>
+        /// <para>Range: 10~100. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Token for the next query. It is empty if there is no next query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yPkgBbQln0gmUnIZSGizGw==</para>
         /// </summary>

@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定应用域名</para>
+        /// <para>Bind Application Domain</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定应用域名</para>
+        /// <para>Bind Application Domain</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定应用域名</para>
+        /// <para>Bind Application Domain</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定应用域名</para>
+        /// <para>Bind Application Domain</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -407,7 +407,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>免登ticket</para>
+        /// <para>SSO ticket</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -453,7 +453,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>免登ticket</para>
+        /// <para>SSO ticket</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -499,7 +499,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>免登ticket</para>
+        /// <para>SSO ticket</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -517,7 +517,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>免登ticket</para>
+        /// <para>SSO ticket</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -679,7 +679,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除域名的SSL证书</para>
+        /// <para>Delete the SSL certificate of a domain</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -725,7 +725,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除域名的SSL证书</para>
+        /// <para>Delete the SSL certificate of a domain</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -771,7 +771,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除域名的SSL证书</para>
+        /// <para>Delete the SSL certificate of a domain</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -789,7 +789,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除域名的SSL证书</para>
+        /// <para>Delete the SSL certificate of a domain</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -807,7 +807,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除域名的跳转规则</para>
+        /// <para>Delete the domain redirection rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -853,7 +853,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除域名的跳转规则</para>
+        /// <para>Delete the domain redirection rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -899,7 +899,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除域名的跳转规则</para>
+        /// <para>Delete the domain redirection rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -917,7 +917,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除域名的跳转规则</para>
+        /// <para>Delete the domain redirection rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -935,7 +935,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名的DNS解析记录</para>
+        /// <para>Query the DNS resolution records of a domain</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -985,7 +985,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名的DNS解析记录</para>
+        /// <para>Query the DNS resolution records of a domain</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1035,7 +1035,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名的DNS解析记录</para>
+        /// <para>Query the DNS resolution records of a domain</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1053,7 +1053,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名的DNS解析记录</para>
+        /// <para>Query the DNS resolution records of a domain</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1223,7 +1223,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用实例详情</para>
+        /// <para>Query Application Instance Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1265,7 +1265,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用实例详情</para>
+        /// <para>Query Application Instance Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1307,7 +1307,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用实例详情</para>
+        /// <para>Query Application Instance Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1325,7 +1325,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用实例详情</para>
+        /// <para>Query Application Instance Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2007,7 +2007,135 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名的跳转规则列表</para>
+        /// <para>检查AccessToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntrospectAppInstanceTicketForPreviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntrospectAppInstanceTicketForPreviewResponse
+        /// </returns>
+        public IntrospectAppInstanceTicketForPreviewResponse IntrospectAppInstanceTicketForPreviewWithOptions(IntrospectAppInstanceTicketForPreviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntrospectAppInstanceTicketForPreview",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntrospectAppInstanceTicketForPreviewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查AccessToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntrospectAppInstanceTicketForPreviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntrospectAppInstanceTicketForPreviewResponse
+        /// </returns>
+        public async Task<IntrospectAppInstanceTicketForPreviewResponse> IntrospectAppInstanceTicketForPreviewWithOptionsAsync(IntrospectAppInstanceTicketForPreviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntrospectAppInstanceTicketForPreview",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntrospectAppInstanceTicketForPreviewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查AccessToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntrospectAppInstanceTicketForPreviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntrospectAppInstanceTicketForPreviewResponse
+        /// </returns>
+        public IntrospectAppInstanceTicketForPreviewResponse IntrospectAppInstanceTicketForPreview(IntrospectAppInstanceTicketForPreviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return IntrospectAppInstanceTicketForPreviewWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查AccessToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntrospectAppInstanceTicketForPreviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntrospectAppInstanceTicketForPreviewResponse
+        /// </returns>
+        public async Task<IntrospectAppInstanceTicketForPreviewResponse> IntrospectAppInstanceTicketForPreviewAsync(IntrospectAppInstanceTicketForPreviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await IntrospectAppInstanceTicketForPreviewWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the list of domain redirection rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2057,7 +2185,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名的跳转规则列表</para>
+        /// <para>Query the list of domain redirection rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2107,7 +2235,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名的跳转规则列表</para>
+        /// <para>Query the list of domain redirection rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2125,7 +2253,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名的跳转规则列表</para>
+        /// <para>Query the list of domain redirection rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2143,7 +2271,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用实例下的所有域名列表</para>
+        /// <para>List all domain names under the application instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2209,7 +2337,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用实例下的所有域名列表</para>
+        /// <para>List all domain names under the application instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2275,7 +2403,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用实例下的所有域名列表</para>
+        /// <para>List all domain names under the application instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2293,7 +2421,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用实例下的所有域名列表</para>
+        /// <para>List all domain names under the application instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2311,7 +2439,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>建站实例列表查询</para>
+        /// <para>Website Instance List Query</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2403,7 +2531,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>建站实例列表查询</para>
+        /// <para>Website Instance List Query</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2495,7 +2623,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>建站实例列表查询</para>
+        /// <para>Website Instance List Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2513,7 +2641,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>建站实例列表查询</para>
+        /// <para>Website Instance List Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2531,7 +2659,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>建站实例变配</para>
+        /// <para>Modify the configuration of a building instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2597,7 +2725,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>建站实例变配</para>
+        /// <para>Modify the configuration of a building instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2663,7 +2791,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>建站实例变配</para>
+        /// <para>Modify the configuration of a building instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2681,7 +2809,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>建站实例变配</para>
+        /// <para>Modify the configuration of a building instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2971,7 +3099,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新ticket</para>
+        /// <para>Refresh ticket</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3021,7 +3149,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新ticket</para>
+        /// <para>Refresh ticket</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3071,7 +3199,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新ticket</para>
+        /// <para>Refresh ticket</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3089,7 +3217,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新ticket</para>
+        /// <para>Refresh ticket</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3251,7 +3379,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>建站实例续费</para>
+        /// <para>Renewal of website building instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3313,7 +3441,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>建站实例续费</para>
+        /// <para>Renewal of website building instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3375,7 +3503,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>建站实例续费</para>
+        /// <para>Renewal of website building instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3393,7 +3521,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>建站实例续费</para>
+        /// <para>Renewal of website building instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3655,7 +3783,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置域名的SSL证书</para>
+        /// <para>Set the SSL certificate for a domain</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3717,7 +3845,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置域名的SSL证书</para>
+        /// <para>Set the SSL certificate for a domain</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3779,7 +3907,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置域名的SSL证书</para>
+        /// <para>Set the SSL certificate for a domain</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3797,7 +3925,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置域名的SSL证书</para>
+        /// <para>Set the SSL certificate for a domain</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3979,7 +4107,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑应用域名</para>
+        /// <para>Unbind Application Domain</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4025,7 +4153,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑应用域名</para>
+        /// <para>Unbind Application Domain</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4071,7 +4199,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑应用域名</para>
+        /// <para>Unbind Application Domain</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4089,7 +4217,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑应用域名</para>
+        /// <para>Unbind Application Domain</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -8,26 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
-    public class UnbindAppDomainRequest : TeaModel {
+    public class IntrospectAppInstanceTicketForPreviewRequest : TeaModel {
         /// <summary>
-        /// <para>Business ID</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>WD20250908140837000001</para>
+        /// <para>WS12345678</para>
         /// </summary>
         [NameInMap("BizId")]
         [Validation(Required=false)]
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Domain Name</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>conway.cn</para>
+        /// <para>ogxMqT04nnZOqdIqJZldbm-ZNsAVDz5mcqdCSudfX0SL61jjyWfV-ZnAO-OVpCt_aDl8xaaIO1OVkuvEcMn-HR_QddvaxMqIdsMY1cHdD4SDiRfOBGNdnpSdX9gG_Hi_.ab9c10816d913b51d87520ce0a72b2970668144c552689e9d9e211eb4529f0ea</para>
         /// </summary>
-        [NameInMap("DomainName")]
+        [NameInMap("Token")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string Token { get; set; }
 
     }
 
