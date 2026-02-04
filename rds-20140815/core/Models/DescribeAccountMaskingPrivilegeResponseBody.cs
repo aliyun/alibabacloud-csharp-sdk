@@ -17,14 +17,26 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeAccountMaskingPrivilegeResponseBodyDataUserPrivilege> UserPrivilege { get; set; }
             public class DescribeAccountMaskingPrivilegeResponseBodyDataUserPrivilege : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2026-01-22T02:01:20Z</para>
+                /// </summary>
                 [NameInMap("ExpireTime")]
                 [Validation(Required=false)]
                 public string ExpireTime { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>restrictedAccess</para>
+                /// </summary>
                 [NameInMap("Privilege")]
                 [Validation(Required=false)]
                 public string Privilege { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>rds</para>
+                /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]
                 public string UserName { get; set; }
@@ -33,6 +45,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>D0073A98-52F1-3075-8256-394**********</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
