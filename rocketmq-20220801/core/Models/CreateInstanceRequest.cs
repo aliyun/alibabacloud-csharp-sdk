@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class CreateInstanceRequest : TeaModel {
+        [NameInMap("aclInfo")]
+        [Validation(Required=false)]
+        public CreateInstanceRequestAclInfo AclInfo { get; set; }
+        public class CreateInstanceRequestAclInfo : TeaModel {
+            [NameInMap("defaultVpcAuthFree")]
+            [Validation(Required=false)]
+            public bool? DefaultVpcAuthFree { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal for the instance. This parameter takes effect only if you set paymentType to Subscription. Valid values:</para>
         /// <list type="bullet">

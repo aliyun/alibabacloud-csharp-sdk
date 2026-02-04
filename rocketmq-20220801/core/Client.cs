@@ -739,6 +739,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 query["clientToken"] = request.ClientToken;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AclInfo))
+            {
+                body["aclInfo"] = request.AclInfo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 body["autoRenew"] = request.AutoRenew;
@@ -854,6 +858,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
                 query["clientToken"] = request.ClientToken;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AclInfo))
+            {
+                body["aclInfo"] = request.AclInfo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 body["autoRenew"] = request.AutoRenew;
