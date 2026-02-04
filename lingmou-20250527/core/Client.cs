@@ -457,6 +457,144 @@ namespace AlibabaCloud.SDK.LingMou20250527
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建播报音频</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBroadcastAudioRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBroadcastAudioResponse
+        /// </returns>
+        public CreateBroadcastAudioResponse CreateBroadcastAudioWithOptions(CreateBroadcastAudioRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["fileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssKey))
+            {
+                body["ossKey"] = request.OssKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBroadcastAudio",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/customer/broadcast/material/audio/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBroadcastAudioResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建播报音频</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBroadcastAudioRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBroadcastAudioResponse
+        /// </returns>
+        public async Task<CreateBroadcastAudioResponse> CreateBroadcastAudioWithOptionsAsync(CreateBroadcastAudioRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["fileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssKey))
+            {
+                body["ossKey"] = request.OssKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBroadcastAudio",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/customer/broadcast/material/audio/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBroadcastAudioResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建播报音频</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBroadcastAudioRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBroadcastAudioResponse
+        /// </returns>
+        public CreateBroadcastAudioResponse CreateBroadcastAudio(CreateBroadcastAudioRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateBroadcastAudioWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建播报音频</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBroadcastAudioRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBroadcastAudioResponse
+        /// </returns>
+        public async Task<CreateBroadcastAudioResponse> CreateBroadcastAudioAsync(CreateBroadcastAudioRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateBroadcastAudioWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建播报贴图</para>
         /// </summary>
         /// 
@@ -2067,6 +2205,148 @@ namespace AlibabaCloud.SDK.LingMou20250527
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetUploadPolicyWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据音频id批量查询播报音频（最多查询100个）</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListBroadcastAudiosByIdRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBroadcastAudiosByIdResponse
+        /// </returns>
+        public ListBroadcastAudiosByIdResponse ListBroadcastAudiosByIdWithOptions(ListBroadcastAudiosByIdRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListBroadcastAudiosByIdShrinkRequest request = new ListBroadcastAudiosByIdShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AudioIds))
+            {
+                request.AudioIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AudioIds, "audioIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioIdsShrink))
+            {
+                query["audioIds"] = request.AudioIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBroadcastAudiosById",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/customer/broadcast/material/audio/batchQuery",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBroadcastAudiosByIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据音频id批量查询播报音频（最多查询100个）</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListBroadcastAudiosByIdRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBroadcastAudiosByIdResponse
+        /// </returns>
+        public async Task<ListBroadcastAudiosByIdResponse> ListBroadcastAudiosByIdWithOptionsAsync(ListBroadcastAudiosByIdRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListBroadcastAudiosByIdShrinkRequest request = new ListBroadcastAudiosByIdShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AudioIds))
+            {
+                request.AudioIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AudioIds, "audioIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioIdsShrink))
+            {
+                query["audioIds"] = request.AudioIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBroadcastAudiosById",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/customer/broadcast/material/audio/batchQuery",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBroadcastAudiosByIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据音频id批量查询播报音频（最多查询100个）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBroadcastAudiosByIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBroadcastAudiosByIdResponse
+        /// </returns>
+        public ListBroadcastAudiosByIdResponse ListBroadcastAudiosById(ListBroadcastAudiosByIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListBroadcastAudiosByIdWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据音频id批量查询播报音频（最多查询100个）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBroadcastAudiosByIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBroadcastAudiosByIdResponse
+        /// </returns>
+        public async Task<ListBroadcastAudiosByIdResponse> ListBroadcastAudiosByIdAsync(ListBroadcastAudiosByIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListBroadcastAudiosByIdWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
