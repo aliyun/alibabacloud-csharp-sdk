@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("T2PartnerUid")]
+            [Validation(Required=false)]
+            public string T2PartnerUid { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1647668856741998</para>
