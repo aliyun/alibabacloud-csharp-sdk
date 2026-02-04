@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Hitsdb20200615</AssemblyName>
-    <Version>5.2.2</Version>
+    <Version>5.2.3</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud Time  Series and Spatial-Temporal  Database (20200615) SDK Library for .NET</Description>

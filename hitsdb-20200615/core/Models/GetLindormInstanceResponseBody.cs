@@ -80,6 +80,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
+        [NameInMap("BackupInstance")]
+        [Validation(Required=false)]
+        public string BackupInstance { get; set; }
+
         /// <summary>
         /// <para>The Capacity storage size of the instance.</para>
         /// 
