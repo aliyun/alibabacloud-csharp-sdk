@@ -2042,6 +2042,190 @@ namespace AlibabaCloud.SDK.Companyreg20200306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>玄坛发起智能外呼</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LlmSmartCallRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LlmSmartCallResponse
+        /// </returns>
+        public LlmSmartCallResponse LlmSmartCallWithOptions(LlmSmartCallRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerNumber))
+            {
+                query["CallerNumber"] = request.CallerNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptParam))
+            {
+                query["PromptParam"] = request.PromptParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScenesCode))
+            {
+                query["ScenesCode"] = request.ScenesCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillType))
+            {
+                query["SkillType"] = request.SkillType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartWordParam))
+            {
+                query["StartWordParam"] = request.StartWordParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantCode))
+            {
+                query["TenantCode"] = request.TenantCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LlmSmartCall",
+                Version = "2020-03-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LlmSmartCallResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>玄坛发起智能外呼</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LlmSmartCallRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LlmSmartCallResponse
+        /// </returns>
+        public async Task<LlmSmartCallResponse> LlmSmartCallWithOptionsAsync(LlmSmartCallRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerNumber))
+            {
+                query["CallerNumber"] = request.CallerNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptParam))
+            {
+                query["PromptParam"] = request.PromptParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScenesCode))
+            {
+                query["ScenesCode"] = request.ScenesCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillType))
+            {
+                query["SkillType"] = request.SkillType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartWordParam))
+            {
+                query["StartWordParam"] = request.StartWordParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantCode))
+            {
+                query["TenantCode"] = request.TenantCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LlmSmartCall",
+                Version = "2020-03-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LlmSmartCallResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>玄坛发起智能外呼</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LlmSmartCallRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LlmSmartCallResponse
+        /// </returns>
+        public LlmSmartCallResponse LlmSmartCall(LlmSmartCallRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return LlmSmartCallWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>玄坛发起智能外呼</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LlmSmartCallRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LlmSmartCallResponse
+        /// </returns>
+        public async Task<LlmSmartCallResponse> LlmSmartCallAsync(LlmSmartCallRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await LlmSmartCallWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>服务商玄坛呼叫中心操作</para>
         /// </summary>
         /// 
