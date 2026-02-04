@@ -88,6 +88,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("PreciseSort")]
+        [Validation(Required=false)]
+        public bool? PreciseSort { get; set; }
+
         /// <summary>
         /// <para>Query parameters </para>
         /// <list type="bullet">

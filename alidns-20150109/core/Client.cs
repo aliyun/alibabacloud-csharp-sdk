@@ -16478,6 +16478,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreciseSort))
+            {
+                query["PreciseSort"] = request.PreciseSort;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryCondition))
             {
                 query["QueryCondition"] = request.QueryCondition;
@@ -16555,6 +16559,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreciseSort))
+            {
+                query["PreciseSort"] = request.PreciseSort;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryCondition))
             {
