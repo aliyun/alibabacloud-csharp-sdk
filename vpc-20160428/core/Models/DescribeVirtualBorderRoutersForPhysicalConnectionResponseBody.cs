@@ -297,6 +297,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string VbrId { get; set; }
 
+                [NameInMap("VbrName")]
+                [Validation(Required=false)]
+                public string VbrName { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the Alibaba Cloud account to which the VBR belongs.</para>
                 /// <para>If the owner of the VBR is the same as that of the Express Connect circuit, this parameter is empty.</para>

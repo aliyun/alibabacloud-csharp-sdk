@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </summary>
         [NameInMap("Ipv4PrefixCount")]
         [Validation(Required=false)]
-        public long? Ipv4PrefixCount { get; set; }
+        public int? Ipv4PrefixCount { get; set; }
 
         /// <summary>
         /// <para>The ID of the Virtual Private Cloud (VPC) NAT gateway for which you want to create the NAT IP address.</para>

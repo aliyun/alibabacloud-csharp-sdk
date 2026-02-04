@@ -9,9 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateFullNatEntryRequest : TeaModel {
+        [NameInMap("AccessDomain")]
+        [Validation(Required=false)]
+        public string AccessDomain { get; set; }
+
         /// <summary>
         /// <para>The backend IP address to be modified in FULLNAT address translation.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>

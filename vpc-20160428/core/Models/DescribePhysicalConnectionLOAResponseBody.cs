@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string ConstructionTime { get; set; }
 
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
             /// <summary>
             /// <para>The ID of the Express Connect circuit.</para>
             /// 

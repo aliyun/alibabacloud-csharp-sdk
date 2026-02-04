@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public List<ListFullNatEntriesResponseBodyFullNatEntries> FullNatEntries { get; set; }
         public class ListFullNatEntriesResponseBodyFullNatEntries : TeaModel {
+            [NameInMap("AccessDomain")]
+            [Validation(Required=false)]
+            public string AccessDomain { get; set; }
+
             /// <summary>
             /// <para>The backend IP address that is used for FULLNAT address translation in FULLNAT entries.</para>
             /// 
@@ -45,6 +49,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
+
+            [NameInMap("DomainResolve")]
+            [Validation(Required=false)]
+            public string DomainResolve { get; set; }
 
             /// <summary>
             /// <para>The description of the FULLNAT entry.</para>
