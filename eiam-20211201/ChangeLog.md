@@ -1,3 +1,6 @@
+2026-02-04 Version: 1.20.1
+- Generated csharp 2021-12-01 for Eiam.
+
 2026-02-04 Version: 1.20.0
 - Support API ExecIdentityProviderMetadataUrlResolution.
 - Support API GenerateOauthToken.
