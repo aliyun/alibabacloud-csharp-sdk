@@ -648,6 +648,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string InitCheckpoint { get; set; }
 
+        [NameInMap("InsightModule")]
+        [Validation(Required=false)]
+        public bool? InsightModule { get; set; }
+
         /// <summary>
         /// <para>The type of the DTS task. Valid values:</para>
         /// <list type="bullet">

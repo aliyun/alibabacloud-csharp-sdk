@@ -4367,6 +4367,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["FeeType"] = request.FeeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InsightModule))
+            {
+                query["InsightModule"] = request.InsightModule;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
             {
                 query["InstanceClass"] = request.InstanceClass;
@@ -4504,6 +4508,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeeType))
             {
                 query["FeeType"] = request.FeeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InsightModule))
+            {
+                query["InsightModule"] = request.InsightModule;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
             {

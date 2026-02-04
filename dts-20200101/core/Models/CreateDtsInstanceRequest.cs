@@ -150,6 +150,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string FeeType { get; set; }
 
+        [NameInMap("InsightModule")]
+        [Validation(Required=false)]
+        public bool? InsightModule { get; set; }
+
         /// <summary>
         /// <para>The instance class.</para>
         /// <list type="bullet">
