@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public List<string> DetailIdList { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>36</para>
+        /// </summary>
+        [NameInMap("EncryptionType")]
+        [Validation(Required=false)]
+        public long? EncryptionType { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }

@@ -45,6 +45,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             [Validation(Required=false)]
             public string AgentName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值</para>
+            /// </summary>
+            [NameInMap("ApplicationCode")]
+            [Validation(Required=false)]
+            public string ApplicationCode { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值</para>
+            /// </summary>
+            [NameInMap("ApplicationName")]
+            [Validation(Required=false)]
+            public string ApplicationName { get; set; }
+
             [NameInMap("CallDays")]
             [Validation(Required=false)]
             public List<string> CallDays { get; set; }
@@ -86,6 +102,30 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             [NameInMap("ConcurrentCount")]
             [Validation(Required=false)]
             public long? ConcurrentCount { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值示例值</para>
+            /// </summary>
+            [NameInMap("LineEncoding")]
+            [Validation(Required=false)]
+            public string LineEncoding { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值示例值示例值</para>
+            /// </summary>
+            [NameInMap("LinePhoneNum")]
+            [Validation(Required=false)]
+            public string LinePhoneNum { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>17</para>
+            /// </summary>
+            [NameInMap("PhoneType")]
+            [Validation(Required=false)]
+            public long? PhoneType { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string AgentName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值示例值示例值</para>
+        /// </summary>
+        [NameInMap("ApplicationCode")]
+        [Validation(Required=false)]
+        public string ApplicationCode { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -44,6 +52,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>68</para>
+        /// </summary>
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public long? Source { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

@@ -103,6 +103,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>28</para>
+            /// </summary>
+            [NameInMap("EncryptionType")]
+            [Validation(Required=false)]
+            public long? EncryptionType { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("FailedReason")]

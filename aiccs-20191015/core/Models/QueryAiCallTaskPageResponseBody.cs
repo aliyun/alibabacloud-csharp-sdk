@@ -51,6 +51,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>示例值示例值示例值</para>
+                /// </summary>
+                [NameInMap("ApplicationCode")]
+                [Validation(Required=false)]
+                public string ApplicationCode { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>示例值</para>
+                /// </summary>
+                [NameInMap("ApplicationName")]
+                [Validation(Required=false)]
+                public string ApplicationName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>72</para>
                 /// </summary>
                 [NameInMap("CallingCount")]

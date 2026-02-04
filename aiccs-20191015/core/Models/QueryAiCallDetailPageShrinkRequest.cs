@@ -39,6 +39,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>73</para>
+        /// </summary>
+        [NameInMap("EncryptionType")]
+        [Validation(Required=false)]
+        public long? EncryptionType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>1748948749000</para>
         /// </summary>
         [NameInMap("EndCallingTime")]

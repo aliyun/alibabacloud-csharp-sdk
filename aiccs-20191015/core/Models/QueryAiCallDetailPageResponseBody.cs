@@ -43,6 +43,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>49</para>
+                /// </summary>
+                [NameInMap("BranchId")]
+                [Validation(Required=false)]
+                public long? BranchId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>9</para>
+                /// </summary>
+                [NameInMap("BranchVersionId")]
+                [Validation(Required=false)]
+                public long? BranchVersionId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>示例值</para>
                 /// </summary>
                 [NameInMap("CallResult")]
@@ -96,6 +112,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 [NameInMap("DetailId")]
                 [Validation(Required=false)]
                 public string DetailId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>21</para>
+                /// </summary>
+                [NameInMap("EncryptionType")]
+                [Validation(Required=false)]
+                public long? EncryptionType { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

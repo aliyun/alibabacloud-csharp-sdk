@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
     public class ImportOneTaskPhoneNumberRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>81</para>
+        /// </summary>
+        [NameInMap("EncryptionType")]
+        [Validation(Required=false)]
+        public long? EncryptionType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>94ba739b-c01a-ef91-335d-4be006c34899</para>
         /// </summary>
         [NameInMap("OutId")]
