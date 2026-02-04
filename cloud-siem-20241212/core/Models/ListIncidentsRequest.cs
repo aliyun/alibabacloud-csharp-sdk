@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         [Validation(Required=false)]
         public string OrderFieldName { get; set; }
 
+        [NameInMap("Owners")]
+        [Validation(Required=false)]
+        public List<string> Owners { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

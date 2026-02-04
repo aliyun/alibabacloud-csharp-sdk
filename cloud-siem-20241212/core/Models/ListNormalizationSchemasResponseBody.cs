@@ -31,11 +31,35 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public class ListNormalizationSchemasResponseBodyNormalizationSchemas : TeaModel {
             /// <summary>
             /// <b>Example:</b>
+            /// <para>1736386610000</para>
+            /// </summary>
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public long? CreateTime { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>NETWORK_CATEGORY。</para>
             /// </summary>
             [NameInMap("NormalizationCategoryId")]
             [Validation(Required=false)]
             public string NormalizationCategoryId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>网络五元组日志</para>
+            /// </summary>
+            [NameInMap("NormalizationSchemaDescription")]
+            [Validation(Required=false)]
+            public string NormalizationSchemaDescription { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>preset</para>
+            /// </summary>
+            [NameInMap("NormalizationSchemaFrom")]
+            [Validation(Required=false)]
+            public string NormalizationSchemaFrom { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -60,6 +84,30 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             [NameInMap("NormalizationSchemaTargetLogStore")]
             [Validation(Required=false)]
             public string NormalizationSchemaTargetLogStore { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>network-activity</para>
+            /// </summary>
+            [NameInMap("TargetLogStore")]
+            [Validation(Required=false)]
+            public string TargetLogStore { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>network-activity</para>
+            /// </summary>
+            [NameInMap("TargetStoreView")]
+            [Validation(Required=false)]
+            public string TargetStoreView { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1736386610000</para>
+            /// </summary>
+            [NameInMap("UpdateTime")]
+            [Validation(Required=false)]
+            public long? UpdateTime { get; set; }
 
         }
 

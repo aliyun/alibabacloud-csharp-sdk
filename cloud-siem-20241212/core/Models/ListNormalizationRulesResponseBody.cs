@@ -43,6 +43,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>flat</para>
+            /// </summary>
+            [NameInMap("ExtendFieldStoreMode")]
+            [Validation(Required=false)]
+            public string ExtendFieldStoreMode { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>NETWORK_CATEGORY。</para>
             /// </summary>
             [NameInMap("NormalizationCategoryId")]

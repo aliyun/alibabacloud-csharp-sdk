@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            [NameInMap("DetectionRuleId")]
+            [Validation(Required=false)]
+            public string DetectionRuleId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>ECS unusual log in</para>
@@ -60,6 +64,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             [NameInMap("IncidentUuid")]
             [Validation(Required=false)]
             public string IncidentUuid { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1234567890xxxxxx</para>
+            /// </summary>
+            [NameInMap("Owner")]
+            [Validation(Required=false)]
+            public string Owner { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

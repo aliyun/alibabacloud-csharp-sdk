@@ -8,46 +8,32 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
-    public class ListNormalizationFieldsResponseBody : TeaModel {
+    public class CreateNormalizationSchemaRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>50。</para>
+        /// <para>zh</para>
         /// </summary>
-        [NameInMap("MaxResults")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public int? MaxResults { get; set; }
+        public string Lang { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>AAAAAUqcj6VO4E3ECWIrFczs****。</para>
+        /// <para>NETWORK_CATEGORY</para>
         /// </summary>
-        [NameInMap("NextToken")]
+        [NameInMap("NormalizationCategoryId")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public string NormalizationCategoryId { get; set; }
 
         [NameInMap("NormalizationFields")]
         [Validation(Required=false)]
-        public List<ListNormalizationFieldsResponseBodyNormalizationFields> NormalizationFields { get; set; }
-        public class ListNormalizationFieldsResponseBodyNormalizationFields : TeaModel {
+        public List<CreateNormalizationSchemaRequestNormalizationFields> NormalizationFields { get; set; }
+        public class CreateNormalizationSchemaRequestNormalizationFields : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>1736386610000</para>
-            /// </summary>
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public long? CreateTime { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>NETWORK_CATEGORY。</para>
-            /// </summary>
-            [NameInMap("NormalizationCategoryId")]
-            [Validation(Required=false)]
-            public string NormalizationCategoryId { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>cloud_user。</para>
+            /// <para>cloud_user</para>
             /// </summary>
             [NameInMap("NormalizationFieldDescription")]
             [Validation(Required=false)]
@@ -55,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>173326*******。</para>
+            /// <para>173326*******</para>
             /// </summary>
             [NameInMap("NormalizationFieldExample")]
             [Validation(Required=false)]
@@ -69,34 +55,22 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             [Validation(Required=false)]
             public string NormalizationFieldFrom { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("NormalizationFieldJsonIndexAll")]
             [Validation(Required=false)]
             public bool? NormalizationFieldJsonIndexAll { get; set; }
 
             [NameInMap("NormalizationFieldJsonKeys")]
             [Validation(Required=false)]
-            public List<ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys> NormalizationFieldJsonKeys { get; set; }
-            public class ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1736386610000</para>
-                /// </summary>
-                [NameInMap("CreateTime")]
-                [Validation(Required=false)]
-                public long? CreateTime { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>告警等级</para>
-                /// </summary>
+            public List<CreateNormalizationSchemaRequestNormalizationFieldsNormalizationFieldJsonKeys> NormalizationFieldJsonKeys { get; set; }
+            public class CreateNormalizationSchemaRequestNormalizationFieldsNormalizationFieldJsonKeys : TeaModel {
                 [NameInMap("NormalizationFieldDescription")]
                 [Validation(Required=false)]
                 public string NormalizationFieldDescription { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>枚举值：1、2、3、4、5</para>
-                /// </summary>
                 [NameInMap("NormalizationFieldExample")]
                 [Validation(Required=false)]
                 public string NormalizationFieldExample { get; set; }
@@ -110,6 +84,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string NormalizationFieldFrom { get; set; }
 
                 /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>alert_name</para>
                 /// </summary>
@@ -117,19 +93,25 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 [Validation(Required=false)]
                 public string NormalizationFieldName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("NormalizationFieldRequired")]
                 [Validation(Required=false)]
                 public bool? NormalizationFieldRequired { get; set; }
 
-                [NameInMap("NormalizationFieldReserved")]
-                [Validation(Required=false)]
-                public bool? NormalizationFieldReserved { get; set; }
-
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("NormalizationFieldTokenize")]
                 [Validation(Required=false)]
                 public bool? NormalizationFieldTokenize { get; set; }
 
                 /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>text</para>
                 /// </summary>
@@ -137,31 +119,29 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 [Validation(Required=false)]
                 public string NormalizationFieldType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1736386610000</para>
-                /// </summary>
-                [NameInMap("UpdateTime")]
-                [Validation(Required=false)]
-                public long? UpdateTime { get; set; }
-
             }
 
             /// <summary>
+            /// <para>This parameter is required.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>cloud_user。</para>
+            /// <para>cloud_user</para>
             /// </summary>
             [NameInMap("NormalizationFieldName")]
             [Validation(Required=false)]
             public string NormalizationFieldName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("NormalizationFieldRequired")]
             [Validation(Required=false)]
             public bool? NormalizationFieldRequired { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>true。</para>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("NormalizationFieldRequirement")]
             [Validation(Required=false)]
@@ -169,57 +149,95 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>true。</para>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("NormalizationFieldReserved")]
             [Validation(Required=false)]
             public bool? NormalizationFieldReserved { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("NormalizationFieldTokenize")]
             [Validation(Required=false)]
             public bool? NormalizationFieldTokenize { get; set; }
 
             /// <summary>
+            /// <para>This parameter is required.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>varchar。</para>
+            /// <para>varchar</para>
             /// </summary>
             [NameInMap("NormalizationFieldType")]
             [Validation(Required=false)]
             public string NormalizationFieldType { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>NETWORK_SESSION_ACTIVITY。</para>
-            /// </summary>
-            [NameInMap("NormalizationSchemaId")]
-            [Validation(Required=false)]
-            public string NormalizationSchemaId { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1736386610000</para>
-            /// </summary>
-            [NameInMap("UpdateTime")]
-            [Validation(Required=false)]
-            public long? UpdateTime { get; set; }
-
         }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>6276D891-*****-55B2-87B9-74D413F7****。</para>
+        /// <para>ProcessQuery</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("NormalizationSchemaDescription")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string NormalizationSchemaDescription { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PROCESS_QUERY_DNS_ACTIVITY</para>
+        /// </summary>
+        [NameInMap("NormalizationSchemaId")]
+        [Validation(Required=false)]
+        public string NormalizationSchemaId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ProcessQuery</para>
+        /// </summary>
+        [NameInMap("NormalizationSchemaName")]
+        [Validation(Required=false)]
+        public string NormalizationSchemaName { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>log</para>
+        /// </summary>
+        [NameInMap("NormalizationSchemaType")]
+        [Validation(Required=false)]
+        public string NormalizationSchemaType { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>57。</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
-        [NameInMap("TotalCount")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public string RegionId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>113091674488****</para>
+        /// </summary>
+        [NameInMap("RoleFor")]
+        [Validation(Required=false)]
+        public long? RoleFor { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx-activity</para>
+        /// </summary>
+        [NameInMap("TargetLogStore")]
+        [Validation(Required=false)]
+        public string TargetLogStore { get; set; }
 
     }
 

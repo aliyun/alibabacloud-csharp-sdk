@@ -45,10 +45,6 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         [Validation(Required=false)]
         public List<CreateDataSourceRequestDataSourceStores> DataSourceStores { get; set; }
         public class CreateDataSourceRequestDataSourceStores : TeaModel {
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public long? CreateTime { get; set; }
-
             [NameInMap("DataSourceStoreFrom")]
             [Validation(Required=false)]
             public string DataSourceStoreFrom { get; set; }
@@ -84,10 +80,6 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             [NameInMap("LogStoreName")]
             [Validation(Required=false)]
             public string LogStoreName { get; set; }
-
-            [NameInMap("UpdateTime")]
-            [Validation(Required=false)]
-            public long? UpdateTime { get; set; }
 
         }
 
@@ -162,10 +154,6 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         [NameInMap("RoleFor")]
         [Validation(Required=false)]
         public long? RoleFor { get; set; }
-
-        [NameInMap("UpdateTime")]
-        [Validation(Required=false)]
-        public long? UpdateTime { get; set; }
 
     }
 

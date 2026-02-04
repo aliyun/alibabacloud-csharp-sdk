@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         [Validation(Required=false)]
         public string AlertAttCk { get; set; }
 
+        [NameInMap("AlertDescription")]
+        [Validation(Required=false)]
+        public string AlertDescription { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         [NameInMap("AlertLevel")]
         [Validation(Required=false)]
         public string AlertLevel { get; set; }
+
+        [NameInMap("AlertName")]
+        [Validation(Required=false)]
+        public string AlertName { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

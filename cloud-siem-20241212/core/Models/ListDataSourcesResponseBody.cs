@@ -121,6 +121,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>LogStoreNotExist</para>
+                /// </summary>
+                [NameInMap("DataSourceStoreStatusCode")]
+                [Validation(Required=false)]
+                public string DataSourceStoreStatusCode { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>aliyun-cloudsiem-data-173326*******-cn-hangzhou。</para>
                 /// </summary>
                 [NameInMap("LogProjectName")]

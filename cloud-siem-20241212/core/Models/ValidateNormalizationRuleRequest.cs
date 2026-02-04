@@ -19,11 +19,27 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>flat</para>
+        /// </summary>
+        [NameInMap("ExtendFieldStoreMode")]
+        [Validation(Required=false)]
+        public string ExtendFieldStoreMode { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>zh。</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;aaa&quot;:&quot;bbb&quot;,&quot;xxx&quot;:&quot;yyy&quot;}</para>
+        /// </summary>
+        [NameInMap("LogSample")]
+        [Validation(Required=false)]
+        public string LogSample { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -35,11 +51,37 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
+        [NameInMap("NormalizationRuleExpression")]
+        [Validation(Required=false)]
+        public string NormalizationRuleExpression { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>realtime</para>
+        /// </summary>
+        [NameInMap("NormalizationRuleMode")]
+        [Validation(Required=false)]
+        public string NormalizationRuleMode { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>HTTP_ACTIVITY。</para>
         /// </summary>
         [NameInMap("NormalizationSchemaId")]
         [Validation(Required=false)]
         public string NormalizationSchemaId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>alibaba_cloud_sas</para>
+        /// </summary>
+        [NameInMap("ProductId")]
+        [Validation(Required=false)]
+        public string ProductId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -56,6 +98,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         [NameInMap("RoleFor")]
         [Validation(Required=false)]
         public long? RoleFor { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>alibaba_cloud</para>
+        /// </summary>
+        [NameInMap("VendorId")]
+        [Validation(Required=false)]
+        public string VendorId { get; set; }
 
     }
 

@@ -103,6 +103,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>1234567890xxxxxx</para>
+            /// </summary>
+            [NameInMap("Owner")]
+            [Validation(Required=false)]
+            public string Owner { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>23</para>
             /// </summary>
             [NameInMap("RelateAlertCount")]

@@ -15,11 +15,27 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>flat</para>
+        /// </summary>
+        [NameInMap("ExtendFieldStoreMode")]
+        [Validation(Required=false)]
+        public string ExtendFieldStoreMode { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>zh。</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>NETWORK_CATEGORY。</para>
+        /// </summary>
+        [NameInMap("NormalizationCategoryId")]
+        [Validation(Required=false)]
+        public string NormalizationCategoryId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
