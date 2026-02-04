@@ -37,6 +37,21 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>登录token主动失效</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExpireLoginTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExpireLoginTokenResponse
+        /// </returns>
         public ExpireLoginTokenResponse ExpireLoginTokenWithOptions(ExpireLoginTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -76,6 +91,21 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
             return TeaModel.ToObject<ExpireLoginTokenResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>登录token主动失效</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExpireLoginTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExpireLoginTokenResponse
+        /// </returns>
         public async Task<ExpireLoginTokenResponse> ExpireLoginTokenWithOptionsAsync(ExpireLoginTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -115,18 +145,57 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
             return TeaModel.ToObject<ExpireLoginTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>登录token主动失效</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExpireLoginTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExpireLoginTokenResponse
+        /// </returns>
         public ExpireLoginTokenResponse ExpireLoginToken(ExpireLoginTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExpireLoginTokenWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>登录token主动失效</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExpireLoginTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExpireLoginTokenResponse
+        /// </returns>
         public async Task<ExpireLoginTokenResponse> ExpireLoginTokenAsync(ExpireLoginTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ExpireLoginTokenWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取授权码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAuthCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAuthCodeResponse
+        /// </returns>
         public GetAuthCodeResponse GetAuthCodeWithOptions(GetAuthCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -166,6 +235,21 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
             return TeaModel.ToObject<GetAuthCodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取授权码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAuthCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAuthCodeResponse
+        /// </returns>
         public async Task<GetAuthCodeResponse> GetAuthCodeWithOptionsAsync(GetAuthCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -205,16 +289,176 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
             return TeaModel.ToObject<GetAuthCodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取授权码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAuthCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAuthCodeResponse
+        /// </returns>
         public GetAuthCodeResponse GetAuthCode(GetAuthCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAuthCodeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取授权码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAuthCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAuthCodeResponse
+        /// </returns>
         public async Task<GetAuthCodeResponse> GetAuthCodeAsync(GetAuthCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAuthCodeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取stsToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetStsTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStsTokenResponse
+        /// </returns>
+        public GetStsTokenResponse GetStsTokenWithOptions(GetStsTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                body["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expiration))
+            {
+                body["Expiration"] = request.Expiration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalId))
+            {
+                body["ExternalId"] = request.ExternalId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetStsToken",
+                Version = "2021-02-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetStsTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取stsToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetStsTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStsTokenResponse
+        /// </returns>
+        public async Task<GetStsTokenResponse> GetStsTokenWithOptionsAsync(GetStsTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                body["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expiration))
+            {
+                body["Expiration"] = request.Expiration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalId))
+            {
+                body["ExternalId"] = request.ExternalId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetStsToken",
+                Version = "2021-02-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetStsTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取stsToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetStsTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStsTokenResponse
+        /// </returns>
+        public GetStsTokenResponse GetStsToken(GetStsTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetStsTokenWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取stsToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetStsTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStsTokenResponse
+        /// </returns>
+        public async Task<GetStsTokenResponse> GetStsTokenAsync(GetStsTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetStsTokenWithOptionsAsync(request, runtime);
         }
 
     }
