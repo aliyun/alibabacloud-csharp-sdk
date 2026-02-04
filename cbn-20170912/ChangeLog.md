@@ -1,3 +1,6 @@
+2026-02-04 Version: 1.3.4
+- Generated csharp 2017-09-12 for Cbn.
+
 2025-08-14 Version: 1.3.3
 - Generated csharp 2017-09-12 for Cbn.
 
