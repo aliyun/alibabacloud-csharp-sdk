@@ -103,6 +103,10 @@ namespace AlibabaCloud.SDK.CustomerService20231228.Models
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
+                [NameInMap("isOneToOneExpertServiceByTime")]
+                [Validation(Required=false)]
+                public bool? IsOneToOneExpertServiceByTime { get; set; }
+
                 [NameInMap("mergeSolutionAndReporterOneStep")]
                 [Validation(Required=false)]
                 public bool? MergeSolutionAndReporterOneStep { get; set; }
@@ -1530,6 +1534,10 @@ namespace AlibabaCloud.SDK.CustomerService20231228.Models
                 [NameInMap("usePack")]
                 [Validation(Required=false)]
                 public long? UsePack { get; set; }
+
+                [NameInMap("userRights")]
+                [Validation(Required=false)]
+                public string UserRights { get; set; }
 
             }
 

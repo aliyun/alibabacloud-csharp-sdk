@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.CustomerService20231228.Models
 
             [NameInMap("customerId")]
             [Validation(Required=false)]
-            public long? CustomerId { get; set; }
+            public string CustomerId { get; set; }
 
             [NameInMap("docs")]
             [Validation(Required=false)]
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.CustomerService20231228.Models
 
                     [NameInMap("uid")]
                     [Validation(Required=false)]
-                    public long? Uid { get; set; }
+                    public string Uid { get; set; }
 
                 }
 
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.CustomerService20231228.Models
 
                     [NameInMap("uid")]
                     [Validation(Required=false)]
-                    public long? Uid { get; set; }
+                    public string Uid { get; set; }
 
                 }
 
@@ -206,6 +206,24 @@ namespace AlibabaCloud.SDK.CustomerService20231228.Models
                 [NameInMap("status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }
+
+            }
+
+            [NameInMap("operateInfos")]
+            [Validation(Required=false)]
+            public List<ListEnterpriseSupportPlanSimpleResponseBodyDataOperateInfos> OperateInfos { get; set; }
+            public class ListEnterpriseSupportPlanSimpleResponseBodyDataOperateInfos : TeaModel {
+                [NameInMap("canClick")]
+                [Validation(Required=false)]
+                public bool? CanClick { get; set; }
+
+                [NameInMap("text")]
+                [Validation(Required=false)]
+                public string Text { get; set; }
+
+                [NameInMap("url")]
+                [Validation(Required=false)]
+                public string Url { get; set; }
 
             }
 

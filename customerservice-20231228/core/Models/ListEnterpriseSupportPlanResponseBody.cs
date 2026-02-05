@@ -23,15 +23,65 @@ namespace AlibabaCloud.SDK.CustomerService20231228.Models
 
             [NameInMap("customerId")]
             [Validation(Required=false)]
-            public long? CustomerId { get; set; }
+            public string CustomerId { get; set; }
 
             [NameInMap("docs")]
             [Validation(Required=false)]
             public List<ListEnterpriseSupportPlanResponseBodyDataDocs> Docs { get; set; }
             public class ListEnterpriseSupportPlanResponseBodyDataDocs : TeaModel {
+                [NameInMap("attachments")]
+                [Validation(Required=false)]
+                public List<ListEnterpriseSupportPlanResponseBodyDataDocsAttachments> Attachments { get; set; }
+                public class ListEnterpriseSupportPlanResponseBodyDataDocsAttachments : TeaModel {
+                    [NameInMap("docId")]
+                    [Validation(Required=false)]
+                    public long? DocId { get; set; }
+
+                    [NameInMap("evaluated")]
+                    [Validation(Required=false)]
+                    public bool? Evaluated { get; set; }
+
+                    [NameInMap("evaluationUrl")]
+                    [Validation(Required=false)]
+                    public string EvaluationUrl { get; set; }
+
+                    [NameInMap("fileName")]
+                    [Validation(Required=false)]
+                    public string FileName { get; set; }
+
+                    [NameInMap("freeOrderApplyCode")]
+                    [Validation(Required=false)]
+                    public string FreeOrderApplyCode { get; set; }
+
+                    [NameInMap("name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                    [NameInMap("orderId")]
+                    [Validation(Required=false)]
+                    public string OrderId { get; set; }
+
+                    [NameInMap("uploadTime")]
+                    [Validation(Required=false)]
+                    public string UploadTime { get; set; }
+
+                    [NameInMap("url")]
+                    [Validation(Required=false)]
+                    public string Url { get; set; }
+
+                }
+
                 [NameInMap("docId")]
                 [Validation(Required=false)]
                 public long? DocId { get; set; }
+
+                [NameInMap("evaluated")]
+                [Validation(Required=false)]
+                public bool? Evaluated { get; set; }
+
+                [NameInMap("evaluationUrl")]
+                [Validation(Required=false)]
+                public string EvaluationUrl { get; set; }
 
                 [NameInMap("fileName")]
                 [Validation(Required=false)]
@@ -87,6 +137,10 @@ namespace AlibabaCloud.SDK.CustomerService20231228.Models
             [Validation(Required=false)]
             public string FreeOrderExpectStartTime { get; set; }
 
+            [NameInMap("gtspProjectId")]
+            [Validation(Required=false)]
+            public long? GtspProjectId { get; set; }
+
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
@@ -99,6 +153,10 @@ namespace AlibabaCloud.SDK.CustomerService20231228.Models
                 [Validation(Required=false)]
                 public ListEnterpriseSupportPlanResponseBodyDataNodesDocNode DocNode { get; set; }
                 public class ListEnterpriseSupportPlanResponseBodyDataNodesDocNode : TeaModel {
+                    [NameInMap("attachments")]
+                    [Validation(Required=false)]
+                    public List<object> Attachments { get; set; }
+
                     [NameInMap("docId")]
                     [Validation(Required=false)]
                     public long? DocId { get; set; }
@@ -163,7 +221,7 @@ namespace AlibabaCloud.SDK.CustomerService20231228.Models
 
                     [NameInMap("uid")]
                     [Validation(Required=false)]
-                    public long? Uid { get; set; }
+                    public string Uid { get; set; }
 
                 }
 
@@ -185,7 +243,7 @@ namespace AlibabaCloud.SDK.CustomerService20231228.Models
 
                     [NameInMap("uid")]
                     [Validation(Required=false)]
-                    public long? Uid { get; set; }
+                    public string Uid { get; set; }
 
                 }
 
@@ -254,6 +312,28 @@ namespace AlibabaCloud.SDK.CustomerService20231228.Models
             [NameInMap("startTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
+
+            [NameInMap("tags")]
+            [Validation(Required=false)]
+            public List<ListEnterpriseSupportPlanResponseBodyDataTags> Tags { get; set; }
+            public class ListEnterpriseSupportPlanResponseBodyDataTags : TeaModel {
+                [NameInMap("extendInfos")]
+                [Validation(Required=false)]
+                public List<string> ExtendInfos { get; set; }
+
+                [NameInMap("show")]
+                [Validation(Required=false)]
+                public bool? Show { get; set; }
+
+                [NameInMap("tagCode")]
+                [Validation(Required=false)]
+                public string TagCode { get; set; }
+
+                [NameInMap("tagName")]
+                [Validation(Required=false)]
+                public string TagName { get; set; }
+
+            }
 
             [NameInMap("taskNum")]
             [Validation(Required=false)]
