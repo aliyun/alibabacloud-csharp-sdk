@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
     public class GetRecallManagementJobRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pairec-1324***</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 
         [NameInMap("Fields")]
         [Validation(Required=false)]
-        public GetRecallManagementTableResponseBodyFields Fields { get; set; }
+        public List<GetRecallManagementTableResponseBodyFields> Fields { get; set; }
         public class GetRecallManagementTableResponseBodyFields : TeaModel {
             [NameInMap("Attributes")]
             [Validation(Required=false)]
