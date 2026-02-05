@@ -6211,6 +6211,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DescribeGlobalQuestionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>任务组数据统计</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGroupExecutingInfoRequest
         /// </param>
@@ -6252,6 +6257,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeGroupExecutingInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>任务组数据统计</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGroupExecutingInfoRequest
         /// </param>
@@ -6293,6 +6303,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeGroupExecutingInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>任务组数据统计</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGroupExecutingInfoRequest
         /// </param>
@@ -6306,6 +6321,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DescribeGroupExecutingInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>任务组数据统计</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGroupExecutingInfoRequest
         /// </param>

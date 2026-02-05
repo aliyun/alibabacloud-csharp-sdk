@@ -387,6 +387,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             [Validation(Required=false)]
             public string ScriptName { get; set; }
 
+            [NameInMap("ScriptNluEngine")]
+            [Validation(Required=false)]
+            public string ScriptNluEngine { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>49f00b0d-78ac-4d51-91de-a9e8e92b8470</para>

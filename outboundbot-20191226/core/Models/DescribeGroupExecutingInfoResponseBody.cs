@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public DescribeGroupExecutingInfoResponseBodyExecutingInfo ExecutingInfo { get; set; }
         public class DescribeGroupExecutingInfoResponseBodyExecutingInfo : TeaModel {
+            [NameInMap("AvgTalkTime")]
+            [Validation(Required=false)]
+            public int? AvgTalkTime { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>5</para>
@@ -48,6 +52,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             [NameInMap("CreatorName")]
             [Validation(Required=false)]
             public string CreatorName { get; set; }
+
+            [NameInMap("DurationDistribution")]
+            [Validation(Required=false)]
+            public string DurationDistribution { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -158,6 +166,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public long? StartTime { get; set; }
+
+            [NameInMap("TalkTurnsDistribution")]
+            [Validation(Required=false)]
+            public string TalkTurnsDistribution { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
