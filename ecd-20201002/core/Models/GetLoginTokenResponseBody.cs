@@ -275,6 +275,10 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string WindowDisplayMode { get; set; }
 
+        [NameInMap("WyId")]
+        [Validation(Required=false)]
+        public string WyId { get; set; }
+
     }
 
 }
