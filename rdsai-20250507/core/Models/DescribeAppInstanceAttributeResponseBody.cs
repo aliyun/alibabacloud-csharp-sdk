@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
+        [NameInMap("EipId")]
+        [Validation(Required=false)]
+        public string EipId { get; set; }
+
         [NameInMap("EipStatus")]
         [Validation(Required=false)]
         public string EipStatus { get; set; }
@@ -72,6 +76,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
+
+        [NameInMap("NatCreatedBy")]
+        [Validation(Required=false)]
+        public string NatCreatedBy { get; set; }
+
+        [NameInMap("NatGatewayId")]
+        [Validation(Required=false)]
+        public string NatGatewayId { get; set; }
 
         [NameInMap("NatStatus")]
         [Validation(Required=false)]
