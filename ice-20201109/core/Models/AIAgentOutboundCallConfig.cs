@@ -111,8 +111,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
+        /// <term><b>Obsolete</b></term>
         [NameInMap("BackChannelingConfig")]
         [Validation(Required=false)]
+        [Obsolete]
         public AIAgentOutboundCallConfigBackChannelingConfig BackChannelingConfig { get; set; }
         public class AIAgentOutboundCallConfigBackChannelingConfig : TeaModel {
             [NameInMap("Enabled")]
@@ -131,6 +133,38 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public AIAgentOutboundCallConfigBackChannelingConfigWords Words { get; set; }
             public class AIAgentOutboundCallConfigBackChannelingConfigWords : TeaModel {
+                [NameInMap("Probability")]
+                [Validation(Required=false)]
+                public double? Probability { get; set; }
+
+                [NameInMap("Text")]
+                [Validation(Required=false)]
+                public string Text { get; set; }
+
+            }
+
+        }
+
+        [NameInMap("BackChannelingConfigs")]
+        [Validation(Required=false)]
+        public List<AIAgentOutboundCallConfigBackChannelingConfigs> BackChannelingConfigs { get; set; }
+        public class AIAgentOutboundCallConfigBackChannelingConfigs : TeaModel {
+            [NameInMap("Enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+
+            [NameInMap("Probability")]
+            [Validation(Required=false)]
+            public double? Probability { get; set; }
+
+            [NameInMap("TriggerStage")]
+            [Validation(Required=false)]
+            public string TriggerStage { get; set; }
+
+            [NameInMap("Words")]
+            [Validation(Required=false)]
+            public List<AIAgentOutboundCallConfigBackChannelingConfigsWords> Words { get; set; }
+            public class AIAgentOutboundCallConfigBackChannelingConfigsWords : TeaModel {
                 [NameInMap("Probability")]
                 [Validation(Required=false)]
                 public double? Probability { get; set; }

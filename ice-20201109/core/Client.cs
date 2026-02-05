@@ -2886,6 +2886,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegistrationMode))
+            {
+                query["RegistrationMode"] = request.RegistrationMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceprintId))
             {
                 query["VoiceprintId"] = request.VoiceprintId;
@@ -2935,6 +2939,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegistrationMode))
+            {
+                query["RegistrationMode"] = request.RegistrationMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceprintId))
             {
                 query["VoiceprintId"] = request.VoiceprintId;
@@ -27589,6 +27597,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegistrationMode))
+            {
+                query["RegistrationMode"] = request.RegistrationMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceprintId))
             {
                 query["VoiceprintId"] = request.VoiceprintId;
@@ -27638,6 +27650,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegistrationMode))
+            {
+                query["RegistrationMode"] = request.RegistrationMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceprintId))
             {

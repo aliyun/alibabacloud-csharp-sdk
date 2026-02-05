@@ -129,8 +129,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string AvatarUrlType { get; set; }
 
+        /// <term><b>Obsolete</b></term>
         [NameInMap("BackChannelingConfig")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<AIAgentConfigBackChannelingConfig> BackChannelingConfig { get; set; }
         public class AIAgentConfigBackChannelingConfig : TeaModel {
             [NameInMap("Enabled")]
@@ -149,6 +151,38 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public List<AIAgentConfigBackChannelingConfigWords> Words { get; set; }
             public class AIAgentConfigBackChannelingConfigWords : TeaModel {
+                [NameInMap("Probability")]
+                [Validation(Required=false)]
+                public double? Probability { get; set; }
+
+                [NameInMap("Text")]
+                [Validation(Required=false)]
+                public string Text { get; set; }
+
+            }
+
+        }
+
+        [NameInMap("BackChannelingConfigs")]
+        [Validation(Required=false)]
+        public List<AIAgentConfigBackChannelingConfigs> BackChannelingConfigs { get; set; }
+        public class AIAgentConfigBackChannelingConfigs : TeaModel {
+            [NameInMap("Enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+
+            [NameInMap("Probability")]
+            [Validation(Required=false)]
+            public double? Probability { get; set; }
+
+            [NameInMap("TriggerStage")]
+            [Validation(Required=false)]
+            public string TriggerStage { get; set; }
+
+            [NameInMap("Words")]
+            [Validation(Required=false)]
+            public List<AIAgentConfigBackChannelingConfigsWords> Words { get; set; }
+            public class AIAgentConfigBackChannelingConfigsWords : TeaModel {
                 [NameInMap("Probability")]
                 [Validation(Required=false)]
                 public double? Probability { get; set; }
@@ -425,6 +459,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public AIAgentConfigVoiceprintConfig VoiceprintConfig { get; set; }
         public class AIAgentConfigVoiceprintConfig : TeaModel {
+            [NameInMap("RegistrationMode")]
+            [Validation(Required=false)]
+            public string RegistrationMode { get; set; }
+
             [NameInMap("UseVoiceprint")]
             [Validation(Required=false)]
             public bool? UseVoiceprint { get; set; }

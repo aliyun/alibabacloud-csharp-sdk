@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("RegistrationMode")]
+        [Validation(Required=false)]
+        public string RegistrationMode { get; set; }
+
         /// <summary>
         /// <para>A unique identifier for the voiceprint. This parameter is optional. If provided, only the information for that ID is returned. If not specified, all voiceprints under the account are returned.</para>
         /// 

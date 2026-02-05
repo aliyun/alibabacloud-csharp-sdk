@@ -85,6 +85,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             }
 
+            [NameInMap("Score")]
+            [Validation(Required=false)]
+            public double? Score { get; set; }
+
             [NameInMap("Sharp")]
             [Validation(Required=false)]
             public MediaQualityAnalysisJobVqaResultScoreResultSharp Sharp { get; set; }
