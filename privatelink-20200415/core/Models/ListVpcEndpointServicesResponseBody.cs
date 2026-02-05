@@ -279,9 +279,15 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
                 [Validation(Required=false)]
                 public string RegionServiceStatus { get; set; }
 
+                /// <term><b>Obsolete</b></term>
                 [NameInMap("ServiceRegionId")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public string ServiceRegionId { get; set; }
+
+                [NameInMap("SupportedRegionId")]
+                [Validation(Required=false)]
+                public string SupportedRegionId { get; set; }
 
             }
 
