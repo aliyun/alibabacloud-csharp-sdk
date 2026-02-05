@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI搜索流式接口</para>
+        /// <para>AI搜索流式接口(废弃)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI搜索流式接口</para>
+        /// <para>AI搜索流式接口(废弃)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI搜索流式接口</para>
+        /// <para>AI搜索流式接口(废弃)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI搜索流式接口</para>
+        /// <para>AI搜索流式接口(废弃)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -873,6 +873,126 @@ namespace AlibabaCloud.SDK.IQS20241111
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GlobalSearchWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多模态搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MultimodalSearchRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultimodalSearchResponse
+        /// </returns>
+        public MultimodalSearchResponse MultimodalSearchWithOptions(MultimodalSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MultimodalSearch",
+                Version = "2024-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-entry/v1/iqs/multimodal/unified",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MultimodalSearchResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多模态搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MultimodalSearchRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultimodalSearchResponse
+        /// </returns>
+        public async Task<MultimodalSearchResponse> MultimodalSearchWithOptionsAsync(MultimodalSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MultimodalSearch",
+                Version = "2024-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-entry/v1/iqs/multimodal/unified",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MultimodalSearchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多模态搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MultimodalSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultimodalSearchResponse
+        /// </returns>
+        public MultimodalSearchResponse MultimodalSearch(MultimodalSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return MultimodalSearchWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多模态搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MultimodalSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultimodalSearchResponse
+        /// </returns>
+        public async Task<MultimodalSearchResponse> MultimodalSearchAsync(MultimodalSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await MultimodalSearchWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
