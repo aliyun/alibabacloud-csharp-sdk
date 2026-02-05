@@ -21,11 +21,18 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string SandboxId { get; set; }
 
+        [NameInMap("sandboxIdleTimeoutInSeconds")]
+        [Validation(Required=false)]
+        public int? SandboxIdleTimeoutInSeconds { get; set; }
+
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>沙箱空闲超时时间（秒）</para>
         /// </summary>
         [NameInMap("sandboxIdleTimeoutSeconds")]
         [Validation(Required=false)]
+        [Obsolete]
         public int? SandboxIdleTimeoutSeconds { get; set; }
 
         /// <summary>
