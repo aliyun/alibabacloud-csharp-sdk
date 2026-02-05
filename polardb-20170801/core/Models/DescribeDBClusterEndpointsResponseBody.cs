@@ -293,6 +293,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string SccMode { get; set; }
 
+            [NameInMap("ServiceName")]
+            [Validation(Required=false)]
+            public string ServiceName { get; set; }
+
         }
 
         /// <summary>
