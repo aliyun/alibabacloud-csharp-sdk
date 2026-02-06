@@ -4302,6 +4302,182 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Add configurations for modifying the response code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCustomResponseCodeRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomResponseCodeRuleResponse
+        /// </returns>
+        public CreateCustomResponseCodeRuleResponse CreateCustomResponseCodeRuleWithOptions(CreateCustomResponseCodeRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageId))
+            {
+                query["PageId"] = request.PageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnCode))
+            {
+                query["ReturnCode"] = request.ReturnCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
+            {
+                query["SiteVersion"] = request.SiteVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCustomResponseCodeRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCustomResponseCodeRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add configurations for modifying the response code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCustomResponseCodeRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomResponseCodeRuleResponse
+        /// </returns>
+        public async Task<CreateCustomResponseCodeRuleResponse> CreateCustomResponseCodeRuleWithOptionsAsync(CreateCustomResponseCodeRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageId))
+            {
+                query["PageId"] = request.PageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnCode))
+            {
+                query["ReturnCode"] = request.ReturnCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
+            {
+                query["SiteVersion"] = request.SiteVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCustomResponseCodeRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCustomResponseCodeRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add configurations for modifying the response code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCustomResponseCodeRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomResponseCodeRuleResponse
+        /// </returns>
+        public CreateCustomResponseCodeRuleResponse CreateCustomResponseCodeRule(CreateCustomResponseCodeRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCustomResponseCodeRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add configurations for modifying the response code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCustomResponseCodeRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomResponseCodeRuleResponse
+        /// </returns>
+        public async Task<CreateCustomResponseCodeRuleResponse> CreateCustomResponseCodeRuleAsync(CreateCustomResponseCodeRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCustomResponseCodeRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates an account-level custom scenario policy. You can execute a policy after you associate the policy with a website.</para>
         /// </summary>
         /// 
@@ -13432,6 +13608,134 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCustomHostnameWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the configuration of response code modification for a website.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCustomResponseCodeRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCustomResponseCodeRuleResponse
+        /// </returns>
+        public DeleteCustomResponseCodeRuleResponse DeleteCustomResponseCodeRuleWithOptions(DeleteCustomResponseCodeRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCustomResponseCodeRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCustomResponseCodeRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the configuration of response code modification for a website.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCustomResponseCodeRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCustomResponseCodeRuleResponse
+        /// </returns>
+        public async Task<DeleteCustomResponseCodeRuleResponse> DeleteCustomResponseCodeRuleWithOptionsAsync(DeleteCustomResponseCodeRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCustomResponseCodeRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCustomResponseCodeRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the configuration of response code modification for a website.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCustomResponseCodeRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCustomResponseCodeRuleResponse
+        /// </returns>
+        public DeleteCustomResponseCodeRuleResponse DeleteCustomResponseCodeRule(DeleteCustomResponseCodeRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteCustomResponseCodeRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the configuration of response code modification for a website.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCustomResponseCodeRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCustomResponseCodeRuleResponse
+        /// </returns>
+        public async Task<DeleteCustomResponseCodeRuleResponse> DeleteCustomResponseCodeRuleAsync(DeleteCustomResponseCodeRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteCustomResponseCodeRuleWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -24024,6 +24328,134 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询修改响应码规则详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomResponseCodeRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomResponseCodeRuleResponse
+        /// </returns>
+        public GetCustomResponseCodeRuleResponse GetCustomResponseCodeRuleWithOptions(GetCustomResponseCodeRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCustomResponseCodeRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCustomResponseCodeRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询修改响应码规则详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomResponseCodeRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomResponseCodeRuleResponse
+        /// </returns>
+        public async Task<GetCustomResponseCodeRuleResponse> GetCustomResponseCodeRuleWithOptionsAsync(GetCustomResponseCodeRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCustomResponseCodeRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCustomResponseCodeRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询修改响应码规则详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomResponseCodeRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomResponseCodeRuleResponse
+        /// </returns>
+        public GetCustomResponseCodeRuleResponse GetCustomResponseCodeRule(GetCustomResponseCodeRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCustomResponseCodeRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询修改响应码规则详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomResponseCodeRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomResponseCodeRuleResponse
+        /// </returns>
+        public async Task<GetCustomResponseCodeRuleResponse> GetCustomResponseCodeRuleAsync(GetCustomResponseCodeRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCustomResponseCodeRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Query Site Developer Mode Configuration</para>
         /// </summary>
         /// 
@@ -33520,6 +33952,174 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListCustomHostnamesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration list of an HTTP response header modification rule for a website.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomResponseCodeRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomResponseCodeRulesResponse
+        /// </returns>
+        public ListCustomResponseCodeRulesResponse ListCustomResponseCodeRulesWithOptions(ListCustomResponseCodeRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
+            {
+                query["ConfigType"] = request.ConfigType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
+            {
+                query["SiteVersion"] = request.SiteVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCustomResponseCodeRules",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCustomResponseCodeRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration list of an HTTP response header modification rule for a website.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomResponseCodeRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomResponseCodeRulesResponse
+        /// </returns>
+        public async Task<ListCustomResponseCodeRulesResponse> ListCustomResponseCodeRulesWithOptionsAsync(ListCustomResponseCodeRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
+            {
+                query["ConfigType"] = request.ConfigType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
+            {
+                query["SiteVersion"] = request.SiteVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCustomResponseCodeRules",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCustomResponseCodeRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration list of an HTTP response header modification rule for a website.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomResponseCodeRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomResponseCodeRulesResponse
+        /// </returns>
+        public ListCustomResponseCodeRulesResponse ListCustomResponseCodeRules(ListCustomResponseCodeRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCustomResponseCodeRulesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration list of an HTTP response header modification rule for a website.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomResponseCodeRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomResponseCodeRulesResponse
+        /// </returns>
+        public async Task<ListCustomResponseCodeRulesResponse> ListCustomResponseCodeRulesAsync(ListCustomResponseCodeRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCustomResponseCodeRulesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -46616,6 +47216,182 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateCustomHostnameWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the response code configurations for a website.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCustomResponseCodeRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCustomResponseCodeRuleResponse
+        /// </returns>
+        public UpdateCustomResponseCodeRuleResponse UpdateCustomResponseCodeRuleWithOptions(UpdateCustomResponseCodeRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageId))
+            {
+                query["PageId"] = request.PageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnCode))
+            {
+                query["ReturnCode"] = request.ReturnCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCustomResponseCodeRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCustomResponseCodeRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the response code configurations for a website.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCustomResponseCodeRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCustomResponseCodeRuleResponse
+        /// </returns>
+        public async Task<UpdateCustomResponseCodeRuleResponse> UpdateCustomResponseCodeRuleWithOptionsAsync(UpdateCustomResponseCodeRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageId))
+            {
+                query["PageId"] = request.PageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnCode))
+            {
+                query["ReturnCode"] = request.ReturnCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCustomResponseCodeRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCustomResponseCodeRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the response code configurations for a website.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCustomResponseCodeRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCustomResponseCodeRuleResponse
+        /// </returns>
+        public UpdateCustomResponseCodeRuleResponse UpdateCustomResponseCodeRule(UpdateCustomResponseCodeRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateCustomResponseCodeRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the response code configurations for a website.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCustomResponseCodeRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCustomResponseCodeRuleResponse
+        /// </returns>
+        public async Task<UpdateCustomResponseCodeRuleResponse> UpdateCustomResponseCodeRuleAsync(UpdateCustomResponseCodeRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateCustomResponseCodeRuleWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
