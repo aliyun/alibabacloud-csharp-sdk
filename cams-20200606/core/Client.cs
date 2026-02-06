@@ -5003,6 +5003,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 query["CustSpaceId"] = request.CustSpaceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointUri))
+            {
+                query["EndpointUri"] = request.EndpointUri;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowName))
             {
                 query["FlowName"] = request.FlowName;
@@ -5075,6 +5079,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustSpaceId))
             {
                 query["CustSpaceId"] = request.CustSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointUri))
+            {
+                query["EndpointUri"] = request.EndpointUri;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowName))
             {
@@ -21215,6 +21223,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 query["CustSpaceId"] = request.CustSpaceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointUri))
+            {
+                query["EndpointUri"] = request.EndpointUri;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowId))
             {
                 query["FlowId"] = request.FlowId;
@@ -21291,6 +21303,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustSpaceId))
             {
                 query["CustSpaceId"] = request.CustSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointUri))
+            {
+                query["EndpointUri"] = request.EndpointUri;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowId))
             {

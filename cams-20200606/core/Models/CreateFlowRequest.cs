@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="http://www.***.com">http://www.***.com</a></para>
+        /// </summary>
+        [NameInMap("EndpointUri")]
+        [Validation(Required=false)]
+        public string EndpointUri { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

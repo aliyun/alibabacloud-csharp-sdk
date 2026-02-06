@@ -26,6 +26,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para><a href="http://www.***.com">http://www.***.com</a></para>
+        /// </summary>
+        [NameInMap("EndpointUri")]
+        [Validation(Required=false)]
+        public string EndpointUri { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>示例值</para>
         /// </summary>
         [NameInMap("FlowId")]
