@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
-    public class AuthorizeSkillShrinkRequest : TeaModel {
-        [NameInMap("PermissionCodes")]
+    public class GetSkillsShrinkHeaders : TeaModel {
+        [NameInMap("commonHeaders")]
         [Validation(Required=false)]
-        public string PermissionCodesShrink { get; set; }
+        public Dictionary<string, string> CommonHeaders { get; set; }
 
-        [NameInMap("SourceIdOfAssistantId")]
+        [NameInMap("AccountContext")]
         [Validation(Required=false)]
-        public string SourceIdOfAssistantId { get; set; }
+        public string AccountContextShrink { get; set; }
 
     }
 
