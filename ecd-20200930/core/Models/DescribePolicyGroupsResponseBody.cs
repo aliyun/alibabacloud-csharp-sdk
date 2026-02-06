@@ -211,6 +211,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ClientCreateSnapshot { get; set; }
 
+            [NameInMap("ClientHibernate")]
+            [Validation(Required=false)]
+            public string ClientHibernate { get; set; }
+
+            [NameInMap("ClientRestart")]
+            [Validation(Required=false)]
+            public string ClientRestart { get; set; }
+
+            [NameInMap("ClientShutdown")]
+            [Validation(Required=false)]
+            public string ClientShutdown { get; set; }
+
             /// <summary>
             /// <para>The logon method control rules to limit the type of the Alibaba Cloud Workspace client used by end users to connect to cloud computers.</para>
             /// </summary>
@@ -695,6 +707,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("HoverConfigMsg")]
             [Validation(Required=false)]
             public string HoverConfigMsg { get; set; }
+
+            [NameInMap("HoverHibernate")]
+            [Validation(Required=false)]
+            public string HoverHibernate { get; set; }
+
+            [NameInMap("HoverRestart")]
+            [Validation(Required=false)]
+            public string HoverRestart { get; set; }
+
+            [NameInMap("HoverShutdown")]
+            [Validation(Required=false)]
+            public string HoverShutdown { get; set; }
 
             /// <summary>
             /// <para>Specifies whether to allow web client access.</para>
