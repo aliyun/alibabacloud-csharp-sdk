@@ -114,6 +114,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string SubInstanceId { get; set; }
 
+        [NameInMap("TagList")]
+        [Validation(Required=false)]
+        public List<CreateImageByInstanceRequestTagList> TagList { get; set; }
+        public class CreateImageByInstanceRequestTagList : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }
