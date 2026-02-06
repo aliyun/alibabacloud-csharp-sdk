@@ -51,6 +51,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? AuthTimeout { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>H264</para>
+        /// </summary>
+        [NameInMap("CodecName")]
+        [Validation(Required=false)]
+        public string CodecName { get; set; }
+
+        /// <summary>
         /// <para>The quality of the video stream. Separate multiple qualities with commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>FD</b>: low definition</description></item>

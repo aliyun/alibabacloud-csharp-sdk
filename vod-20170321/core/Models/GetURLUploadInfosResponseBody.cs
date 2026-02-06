@@ -104,6 +104,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string MediaId { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>93ab850b4f654b6e91d24d81d44****</para>
+            /// </summary>
+            [NameInMap("RegisteredMediaId")]
+            [Validation(Required=false)]
+            public string RegisteredMediaId { get; set; }
+
+            /// <summary>
             /// <para>The status of the URL-based upload job. For more information about the valid values and value description of the parameter, see the &quot;Status: the status of a video&quot; section of the <a href="https://help.aliyun.com/document_detail/52839.html">Basic structures</a> topic.</para>
             /// 
             /// <b>Example:</b>

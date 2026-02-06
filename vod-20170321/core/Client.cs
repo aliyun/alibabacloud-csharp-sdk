@@ -21172,6 +21172,10 @@ namespace AlibabaCloud.SDK.Vod20170321
             {
                 query["AuthTimeout"] = request.AuthTimeout;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodecName))
+            {
+                query["CodecName"] = request.CodecName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Definition))
             {
                 query["Definition"] = request.Definition;
@@ -21270,6 +21274,10 @@ namespace AlibabaCloud.SDK.Vod20170321
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthTimeout))
             {
                 query["AuthTimeout"] = request.AuthTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodecName))
+            {
+                query["CodecName"] = request.CodecName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Definition))
             {
