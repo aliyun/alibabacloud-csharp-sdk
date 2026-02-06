@@ -359,6 +359,142 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除具身智能平台</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEmbodiedAIPlatformRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEmbodiedAIPlatformResponse
+        /// </returns>
+        public DeleteEmbodiedAIPlatformResponse DeleteEmbodiedAIPlatformWithOptions(DeleteEmbodiedAIPlatformRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformName))
+            {
+                query["PlatformName"] = request.PlatformName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEmbodiedAIPlatform",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEmbodiedAIPlatformResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除具身智能平台</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEmbodiedAIPlatformRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEmbodiedAIPlatformResponse
+        /// </returns>
+        public async Task<DeleteEmbodiedAIPlatformResponse> DeleteEmbodiedAIPlatformWithOptionsAsync(DeleteEmbodiedAIPlatformRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformName))
+            {
+                query["PlatformName"] = request.PlatformName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEmbodiedAIPlatform",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEmbodiedAIPlatformResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除具身智能平台</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEmbodiedAIPlatformRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEmbodiedAIPlatformResponse
+        /// </returns>
+        public DeleteEmbodiedAIPlatformResponse DeleteEmbodiedAIPlatform(DeleteEmbodiedAIPlatformRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteEmbodiedAIPlatformWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除具身智能平台</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEmbodiedAIPlatformRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEmbodiedAIPlatformResponse
+        /// </returns>
+        public async Task<DeleteEmbodiedAIPlatformResponse> DeleteEmbodiedAIPlatformAsync(DeleteEmbodiedAIPlatformRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteEmbodiedAIPlatformWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询具身智能平台</para>
         /// </summary>
         /// 
