@@ -1318,6 +1318,158 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>添加云产品接入的扩展证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCloudResourceExtensionCertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCloudResourceExtensionCertResponse
+        /// </returns>
+        public CreateCloudResourceExtensionCertResponse CreateCloudResourceExtensionCertWithOptions(CreateCloudResourceExtensionCertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudResourceId))
+            {
+                query["CloudResourceId"] = request.CloudResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCloudResourceExtensionCert",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCloudResourceExtensionCertResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加云产品接入的扩展证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCloudResourceExtensionCertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCloudResourceExtensionCertResponse
+        /// </returns>
+        public async Task<CreateCloudResourceExtensionCertResponse> CreateCloudResourceExtensionCertWithOptionsAsync(CreateCloudResourceExtensionCertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudResourceId))
+            {
+                query["CloudResourceId"] = request.CloudResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCloudResourceExtensionCert",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCloudResourceExtensionCertResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加云产品接入的扩展证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCloudResourceExtensionCertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCloudResourceExtensionCertResponse
+        /// </returns>
+        public CreateCloudResourceExtensionCertResponse CreateCloudResourceExtensionCert(CreateCloudResourceExtensionCertRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCloudResourceExtensionCertWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加云产品接入的扩展证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCloudResourceExtensionCertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCloudResourceExtensionCertResponse
+        /// </returns>
+        public async Task<CreateCloudResourceExtensionCertResponse> CreateCloudResourceExtensionCertAsync(CreateCloudResourceExtensionCertRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCloudResourceExtensionCertWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建防护对象</para>
         /// </summary>
         /// 
@@ -4466,6 +4618,158 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCloudResourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除云产品接入的扩展证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCloudResourceExtensionCertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCloudResourceExtensionCertResponse
+        /// </returns>
+        public DeleteCloudResourceExtensionCertResponse DeleteCloudResourceExtensionCertWithOptions(DeleteCloudResourceExtensionCertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudResourceId))
+            {
+                query["CloudResourceId"] = request.CloudResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCloudResourceExtensionCert",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCloudResourceExtensionCertResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除云产品接入的扩展证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCloudResourceExtensionCertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCloudResourceExtensionCertResponse
+        /// </returns>
+        public async Task<DeleteCloudResourceExtensionCertResponse> DeleteCloudResourceExtensionCertWithOptionsAsync(DeleteCloudResourceExtensionCertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudResourceId))
+            {
+                query["CloudResourceId"] = request.CloudResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCloudResourceExtensionCert",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCloudResourceExtensionCertResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除云产品接入的扩展证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCloudResourceExtensionCertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCloudResourceExtensionCertResponse
+        /// </returns>
+        public DeleteCloudResourceExtensionCertResponse DeleteCloudResourceExtensionCert(DeleteCloudResourceExtensionCertRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteCloudResourceExtensionCertWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除云产品接入的扩展证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCloudResourceExtensionCertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCloudResourceExtensionCertResponse
+        /// </returns>
+        public async Task<DeleteCloudResourceExtensionCertResponse> DeleteCloudResourceExtensionCertAsync(DeleteCloudResourceExtensionCertRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteCloudResourceExtensionCertWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -32278,6 +32582,158 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyCloudResourceCertWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改云产品接入的默认证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCloudResourceDefaultCertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCloudResourceDefaultCertResponse
+        /// </returns>
+        public ModifyCloudResourceDefaultCertResponse ModifyCloudResourceDefaultCertWithOptions(ModifyCloudResourceDefaultCertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudResourceId))
+            {
+                query["CloudResourceId"] = request.CloudResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyCloudResourceDefaultCert",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyCloudResourceDefaultCertResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改云产品接入的默认证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCloudResourceDefaultCertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCloudResourceDefaultCertResponse
+        /// </returns>
+        public async Task<ModifyCloudResourceDefaultCertResponse> ModifyCloudResourceDefaultCertWithOptionsAsync(ModifyCloudResourceDefaultCertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudResourceId))
+            {
+                query["CloudResourceId"] = request.CloudResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyCloudResourceDefaultCert",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyCloudResourceDefaultCertResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改云产品接入的默认证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCloudResourceDefaultCertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCloudResourceDefaultCertResponse
+        /// </returns>
+        public ModifyCloudResourceDefaultCertResponse ModifyCloudResourceDefaultCert(ModifyCloudResourceDefaultCertRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyCloudResourceDefaultCertWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改云产品接入的默认证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCloudResourceDefaultCertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCloudResourceDefaultCertResponse
+        /// </returns>
+        public async Task<ModifyCloudResourceDefaultCertResponse> ModifyCloudResourceDefaultCertAsync(ModifyCloudResourceDefaultCertRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyCloudResourceDefaultCertWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
