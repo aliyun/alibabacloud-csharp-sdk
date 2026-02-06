@@ -17463,6 +17463,134 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>RDS MySQL删除修改参数运行任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteParameterTimedScheduleTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteParameterTimedScheduleTaskResponse
+        /// </returns>
+        public DeleteParameterTimedScheduleTaskResponse DeleteParameterTimedScheduleTaskWithOptions(DeleteParameterTimedScheduleTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteParameterTimedScheduleTask",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteParameterTimedScheduleTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>RDS MySQL删除修改参数运行任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteParameterTimedScheduleTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteParameterTimedScheduleTaskResponse
+        /// </returns>
+        public async Task<DeleteParameterTimedScheduleTaskResponse> DeleteParameterTimedScheduleTaskWithOptionsAsync(DeleteParameterTimedScheduleTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteParameterTimedScheduleTask",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteParameterTimedScheduleTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>RDS MySQL删除修改参数运行任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteParameterTimedScheduleTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteParameterTimedScheduleTaskResponse
+        /// </returns>
+        public DeleteParameterTimedScheduleTaskResponse DeleteParameterTimedScheduleTask(DeleteParameterTimedScheduleTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteParameterTimedScheduleTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>RDS MySQL删除修改参数运行任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteParameterTimedScheduleTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteParameterTimedScheduleTaskResponse
+        /// </returns>
+        public async Task<DeleteParameterTimedScheduleTaskResponse> DeleteParameterTimedScheduleTaskAsync(DeleteParameterTimedScheduleTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteParameterTimedScheduleTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes an extension from a database.</para>
         /// </summary>
         /// 
@@ -40811,6 +40939,118 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeParameterTemplatesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>RDS MySQL查询修改参数运行时间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeParameterTimedScheduleTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParameterTimedScheduleTaskResponse
+        /// </returns>
+        public DescribeParameterTimedScheduleTaskResponse DescribeParameterTimedScheduleTaskWithOptions(DescribeParameterTimedScheduleTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeParameterTimedScheduleTask",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeParameterTimedScheduleTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>RDS MySQL查询修改参数运行时间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeParameterTimedScheduleTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParameterTimedScheduleTaskResponse
+        /// </returns>
+        public async Task<DescribeParameterTimedScheduleTaskResponse> DescribeParameterTimedScheduleTaskWithOptionsAsync(DescribeParameterTimedScheduleTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeParameterTimedScheduleTask",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeParameterTimedScheduleTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>RDS MySQL查询修改参数运行时间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeParameterTimedScheduleTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParameterTimedScheduleTaskResponse
+        /// </returns>
+        public DescribeParameterTimedScheduleTaskResponse DescribeParameterTimedScheduleTask(DescribeParameterTimedScheduleTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeParameterTimedScheduleTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>RDS MySQL查询修改参数运行时间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeParameterTimedScheduleTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeParameterTimedScheduleTaskResponse
+        /// </returns>
+        public async Task<DescribeParameterTimedScheduleTaskResponse> DescribeParameterTimedScheduleTaskAsync(DescribeParameterTimedScheduleTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeParameterTimedScheduleTaskWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
