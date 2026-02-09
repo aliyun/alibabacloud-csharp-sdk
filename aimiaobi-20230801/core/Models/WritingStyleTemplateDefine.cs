@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public List<WritingStyleTemplateDefineExample> Example { get; set; }
         public class WritingStyleTemplateDefineExample : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>topic</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>123</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

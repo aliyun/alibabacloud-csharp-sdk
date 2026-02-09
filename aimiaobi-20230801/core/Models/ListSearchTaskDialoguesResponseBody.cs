@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public class ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParamSearchSources : TeaModel {
                         /// <summary>
                         /// <b>Example:</b>
-                        /// <para>x&quot;x</para>
+                        /// <para>x\&quot;x</para>
                         /// </summary>
                         [NameInMap("Code")]
                         [Validation(Required=false)]

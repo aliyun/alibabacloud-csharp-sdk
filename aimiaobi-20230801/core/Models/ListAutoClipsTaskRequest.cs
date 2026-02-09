@@ -8,53 +8,62 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
-    public class AsyncUploadVideoShrinkRequest : TeaModel {
+    public class ListAutoClipsTaskRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>3</para>
+        /// <para>2023-03-18 02:00:00</para>
         /// </summary>
-        [NameInMap("AdaptiveThreshold")]
+        [NameInMap("CreateTimeEnd")]
         [Validation(Required=false)]
-        public float? AdaptiveThreshold { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>重点理解视频中的风景信息</para>
-        /// </summary>
-        [NameInMap("AnlysisPrompt")]
-        [Validation(Required=false)]
-        public string AnlysisPrompt { get; set; }
+        public string CreateTimeEnd { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>0.7</para>
+        /// <para>2023-02-19 07:28:11</para>
         /// </summary>
-        [NameInMap("FaceIdentitySimilarityMinScore")]
+        [NameInMap("CreateTimeStart")]
         [Validation(Required=false)]
-        public double? FaceIdentitySimilarityMinScore { get; set; }
-
-        [NameInMap("ReferenceVideo")]
-        [Validation(Required=false)]
-        public string ReferenceVideoShrink { get; set; }
-
-        [NameInMap("RemoveSubtitle")]
-        [Validation(Required=false)]
-        public bool? RemoveSubtitle { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
-        [NameInMap("SourceVideos")]
-        [Validation(Required=false)]
-        public string SourceVideosShrink { get; set; }
+        public string CreateTimeStart { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>默认1</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("SplitInterval")]
+        [NameInMap("Current")]
         [Validation(Required=false)]
-        public int? SplitInterval { get; set; }
+        public int? Current { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("Size")]
+        [Validation(Required=false)]
+        public int? Size { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
+        [NameInMap("Skip")]
+        [Validation(Required=false)]
+        public int? Skip { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -66,29 +75,23 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("TaskStatus")]
+        [Validation(Required=false)]
+        public int? TaskStatus { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>type001</para>
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]
         public string TaskType { get; set; }
 
-        [NameInMap("VideoRoles")]
-        [Validation(Required=false)]
-        public string VideoRolesShrink { get; set; }
-
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2</para>
-        /// </summary>
-        [NameInMap("VideoShotFaceIdentityCount")]
-        [Validation(Required=false)]
-        public int? VideoShotFaceIdentityCount { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>llm-xxxx</para>
+        /// <para>llm-2setzb9x4ewsd</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public List<AsyncUploadVideoResponseBodyDataVideoInfos> VideoInfos { get; set; }
             public class AsyncUploadVideoResponseBodyDataVideoInfos : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>视频中有一个房子</para>
+                /// </summary>
                 [NameInMap("VideoExtraInfo")]
                 [Validation(Required=false)]
                 public string VideoExtraInfo { get; set; }
@@ -65,10 +69,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>success</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -83,6 +95,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

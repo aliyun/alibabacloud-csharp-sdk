@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Title { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="http://www.example.com/xxx.html">http://www.example.com/xxx.html</a></para>
+        /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]
         public string Url { get; set; }

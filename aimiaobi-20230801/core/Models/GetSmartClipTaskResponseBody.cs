@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public class GetSmartClipTaskResponseBodyDataSubJobs : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>x&quot;x&quot;x&quot;x</para>
+                /// <para>x\&quot;x\&quot;x\&quot;x</para>
                 /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public bool? CloseVoice { get; set; }
 
+        [NameInMap("ClosingCreditsUrl")]
+        [Validation(Required=false)]
+        public string ClosingCreditsUrl { get; set; }
+
         [NameInMap("ColorWords")]
         [Validation(Required=false)]
         public List<AsyncCreateClipsTaskRequestColorWords> ColorWords { get; set; }
@@ -71,6 +75,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         }
 
+        [NameInMap("CosyVoiceAppKey")]
+        [Validation(Required=false)]
+        public string CosyVoiceAppKey { get; set; }
+
+        [NameInMap("CosyVoiceToken")]
+        [Validation(Required=false)]
+        public string CosyVoiceToken { get; set; }
+
+        [NameInMap("CustomVoiceStyle")]
+        [Validation(Required=false)]
+        public string CustomVoiceStyle { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para><a href="http://xxx/xxx.mp4">http://xxx/xxx.mp4</a></para>
@@ -95,6 +111,28 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public int? Height { get; set; }
 
+        [NameInMap("HighDefSourceVideos")]
+        [Validation(Required=false)]
+        public List<AsyncCreateClipsTaskRequestHighDefSourceVideos> HighDefSourceVideos { get; set; }
+        public class AsyncCreateClipsTaskRequestHighDefSourceVideos : TeaModel {
+            [NameInMap("VideoId")]
+            [Validation(Required=false)]
+            public string VideoId { get; set; }
+
+            [NameInMap("VideoName")]
+            [Validation(Required=false)]
+            public string VideoName { get; set; }
+
+            [NameInMap("VideoUrl")]
+            [Validation(Required=false)]
+            public string VideoUrl { get; set; }
+
+        }
+
+        [NameInMap("MusicStyle")]
+        [Validation(Required=false)]
+        public string MusicStyle { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para><a href="http://music.mp4">http://music.mp4</a></para>
@@ -106,6 +144,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [NameInMap("MusicVolume")]
         [Validation(Required=false)]
         public int? MusicVolume { get; set; }
+
+        [NameInMap("OpeningCreditsUrl")]
+        [Validation(Required=false)]
+        public string OpeningCreditsUrl { get; set; }
 
         [NameInMap("Stickers")]
         [Validation(Required=false)]

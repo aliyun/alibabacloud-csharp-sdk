@@ -389,6 +389,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 request.ColorWordsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ColorWords, "ColorWords", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HighDefSourceVideos))
+            {
+                request.HighDefSourceVideosShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HighDefSourceVideos, "HighDefSourceVideos", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Stickers))
             {
                 request.StickersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Stickers, "Stickers", "json");
@@ -406,9 +410,25 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["CloseVoice"] = request.CloseVoice;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClosingCreditsUrl))
+            {
+                body["ClosingCreditsUrl"] = request.ClosingCreditsUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColorWordsShrink))
             {
                 body["ColorWords"] = request.ColorWordsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CosyVoiceAppKey))
+            {
+                body["CosyVoiceAppKey"] = request.CosyVoiceAppKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CosyVoiceToken))
+            {
+                body["CosyVoiceToken"] = request.CosyVoiceToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomVoiceStyle))
+            {
+                body["CustomVoiceStyle"] = request.CustomVoiceStyle;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomVoiceUrl))
             {
@@ -422,6 +442,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["Height"] = request.Height;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HighDefSourceVideosShrink))
+            {
+                body["HighDefSourceVideos"] = request.HighDefSourceVideosShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MusicStyle))
+            {
+                body["MusicStyle"] = request.MusicStyle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MusicUrl))
             {
                 body["MusicUrl"] = request.MusicUrl;
@@ -429,6 +457,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MusicVolume))
             {
                 body["MusicVolume"] = request.MusicVolume;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpeningCreditsUrl))
+            {
+                body["OpeningCreditsUrl"] = request.OpeningCreditsUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StickersShrink))
             {
@@ -501,6 +533,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 request.ColorWordsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ColorWords, "ColorWords", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HighDefSourceVideos))
+            {
+                request.HighDefSourceVideosShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HighDefSourceVideos, "HighDefSourceVideos", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Stickers))
             {
                 request.StickersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Stickers, "Stickers", "json");
@@ -518,9 +554,25 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["CloseVoice"] = request.CloseVoice;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClosingCreditsUrl))
+            {
+                body["ClosingCreditsUrl"] = request.ClosingCreditsUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColorWordsShrink))
             {
                 body["ColorWords"] = request.ColorWordsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CosyVoiceAppKey))
+            {
+                body["CosyVoiceAppKey"] = request.CosyVoiceAppKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CosyVoiceToken))
+            {
+                body["CosyVoiceToken"] = request.CosyVoiceToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomVoiceStyle))
+            {
+                body["CustomVoiceStyle"] = request.CustomVoiceStyle;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomVoiceUrl))
             {
@@ -534,6 +586,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["Height"] = request.Height;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HighDefSourceVideosShrink))
+            {
+                body["HighDefSourceVideos"] = request.HighDefSourceVideosShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MusicStyle))
+            {
+                body["MusicStyle"] = request.MusicStyle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MusicUrl))
             {
                 body["MusicUrl"] = request.MusicUrl;
@@ -541,6 +601,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MusicVolume))
             {
                 body["MusicVolume"] = request.MusicVolume;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpeningCreditsUrl))
+            {
+                body["OpeningCreditsUrl"] = request.OpeningCreditsUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StickersShrink))
             {
@@ -1110,6 +1174,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
                 request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "VideoRoles", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdaptiveThreshold))
+            {
+                body["AdaptiveThreshold"] = request.AdaptiveThreshold;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnlysisPrompt))
             {
                 body["AnlysisPrompt"] = request.AnlysisPrompt;
@@ -1133,6 +1201,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SplitInterval))
             {
                 body["SplitInterval"] = request.SplitInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                body["TaskName"] = request.TaskName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["TaskType"] = request.TaskType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoRolesShrink))
             {
@@ -1198,6 +1274,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
                 request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "VideoRoles", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdaptiveThreshold))
+            {
+                body["AdaptiveThreshold"] = request.AdaptiveThreshold;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnlysisPrompt))
             {
                 body["AnlysisPrompt"] = request.AnlysisPrompt;
@@ -1221,6 +1301,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SplitInterval))
             {
                 body["SplitInterval"] = request.SplitInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                body["TaskName"] = request.TaskName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["TaskType"] = request.TaskType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoRolesShrink))
             {
@@ -4615,6 +4703,134 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteMaterialByIdWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除PPT作品</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePptArtifactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePptArtifactResponse
+        /// </returns>
+        public DeletePptArtifactResponse DeletePptArtifactWithOptions(DeletePptArtifactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PptArtifactId))
+            {
+                body["PptArtifactId"] = request.PptArtifactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePptArtifact",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePptArtifactResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除PPT作品</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePptArtifactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePptArtifactResponse
+        /// </returns>
+        public async Task<DeletePptArtifactResponse> DeletePptArtifactWithOptionsAsync(DeletePptArtifactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PptArtifactId))
+            {
+                body["PptArtifactId"] = request.PptArtifactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePptArtifact",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePptArtifactResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除PPT作品</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePptArtifactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePptArtifactResponse
+        /// </returns>
+        public DeletePptArtifactResponse DeletePptArtifact(DeletePptArtifactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeletePptArtifactWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除PPT作品</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePptArtifactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePptArtifactResponse
+        /// </returns>
+        public async Task<DeletePptArtifactResponse> DeletePptArtifactAsync(DeletePptArtifactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeletePptArtifactWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8068,6 +8284,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowAnalysisResults))
+            {
+                body["ShowAnalysisResults"] = request.ShowAnalysisResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowResourceInfo))
+            {
+                body["ShowResourceInfo"] = request.ShowResourceInfo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 body["TaskId"] = request.TaskId;
@@ -8114,6 +8338,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowAnalysisResults))
+            {
+                body["ShowAnalysisResults"] = request.ShowAnalysisResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowResourceInfo))
+            {
+                body["ShowResourceInfo"] = request.ShowResourceInfo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 body["TaskId"] = request.TaskId;
@@ -8687,6 +8919,134 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetCategoriesByTaskIdWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获得智能混剪内置资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClipsBuildInResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClipsBuildInResourceResponse
+        /// </returns>
+        public GetClipsBuildInResourceResponse GetClipsBuildInResourceWithOptions(GetClipsBuildInResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                body["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetClipsBuildInResource",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetClipsBuildInResourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获得智能混剪内置资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClipsBuildInResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClipsBuildInResourceResponse
+        /// </returns>
+        public async Task<GetClipsBuildInResourceResponse> GetClipsBuildInResourceWithOptionsAsync(GetClipsBuildInResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                body["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetClipsBuildInResource",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetClipsBuildInResourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获得智能混剪内置资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClipsBuildInResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClipsBuildInResourceResponse
+        /// </returns>
+        public GetClipsBuildInResourceResponse GetClipsBuildInResource(GetClipsBuildInResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetClipsBuildInResourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获得智能混剪内置资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClipsBuildInResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClipsBuildInResourceResponse
+        /// </returns>
+        public async Task<GetClipsBuildInResourceResponse> GetClipsBuildInResourceAsync(GetClipsBuildInResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetClipsBuildInResourceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11715,6 +12075,134 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询PPT作品信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPptArtifactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPptArtifactResponse
+        /// </returns>
+        public GetPptArtifactResponse GetPptArtifactWithOptions(GetPptArtifactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PptArtifactId))
+            {
+                body["PptArtifactId"] = request.PptArtifactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPptArtifact",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPptArtifactResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询PPT作品信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPptArtifactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPptArtifactResponse
+        /// </returns>
+        public async Task<GetPptArtifactResponse> GetPptArtifactWithOptionsAsync(GetPptArtifactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PptArtifactId))
+            {
+                body["PptArtifactId"] = request.PptArtifactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPptArtifact",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPptArtifactResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询PPT作品信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPptArtifactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPptArtifactResponse
+        /// </returns>
+        public GetPptArtifactResponse GetPptArtifact(GetPptArtifactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetPptArtifactWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询PPT作品信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPptArtifactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPptArtifactResponse
+        /// </returns>
+        public async Task<GetPptArtifactResponse> GetPptArtifactAsync(GetPptArtifactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetPptArtifactWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取PPT组件的配置</para>
         /// </summary>
         /// 
@@ -14007,6 +14495,206 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAuditTermsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出智能混剪任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAutoClipsTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAutoClipsTaskResponse
+        /// </returns>
+        public ListAutoClipsTaskResponse ListAutoClipsTaskWithOptions(ListAutoClipsTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
+            {
+                body["CreateTimeEnd"] = request.CreateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeStart))
+            {
+                body["CreateTimeStart"] = request.CreateTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
+            {
+                body["Current"] = request.Current;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                body["Size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skip))
+            {
+                body["Skip"] = request.Skip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                body["TaskName"] = request.TaskName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskStatus))
+            {
+                body["TaskStatus"] = request.TaskStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["TaskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAutoClipsTask",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAutoClipsTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出智能混剪任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAutoClipsTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAutoClipsTaskResponse
+        /// </returns>
+        public async Task<ListAutoClipsTaskResponse> ListAutoClipsTaskWithOptionsAsync(ListAutoClipsTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
+            {
+                body["CreateTimeEnd"] = request.CreateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeStart))
+            {
+                body["CreateTimeStart"] = request.CreateTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
+            {
+                body["Current"] = request.Current;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                body["Size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skip))
+            {
+                body["Skip"] = request.Skip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                body["TaskName"] = request.TaskName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskStatus))
+            {
+                body["TaskStatus"] = request.TaskStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["TaskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAutoClipsTask",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAutoClipsTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出智能混剪任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAutoClipsTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAutoClipsTaskResponse
+        /// </returns>
+        public ListAutoClipsTaskResponse ListAutoClipsTask(ListAutoClipsTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAutoClipsTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出智能混剪任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAutoClipsTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAutoClipsTaskResponse
+        /// </returns>
+        public async Task<ListAutoClipsTaskResponse> ListAutoClipsTaskAsync(ListAutoClipsTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAutoClipsTaskWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -18031,6 +18719,154 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListPlanningProposalWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>PPT作品-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPptArtifactsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPptArtifactsResponse
+        /// </returns>
+        public ListPptArtifactsResponse ListPptArtifactsWithOptions(ListPptArtifactsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPptArtifacts",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPptArtifactsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>PPT作品-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPptArtifactsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPptArtifactsResponse
+        /// </returns>
+        public async Task<ListPptArtifactsResponse> ListPptArtifactsWithOptionsAsync(ListPptArtifactsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPptArtifacts",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPptArtifactsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>PPT作品-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPptArtifactsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPptArtifactsResponse
+        /// </returns>
+        public ListPptArtifactsResponse ListPptArtifacts(ListPptArtifactsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListPptArtifactsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>PPT作品-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPptArtifactsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPptArtifactsResponse
+        /// </returns>
+        public async Task<ListPptArtifactsResponse> ListPptArtifactsAsync(ListPptArtifactsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListPptArtifactsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

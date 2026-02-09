@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string PrimaryOutline { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2023-04-11 06:14:07</para>
+        /// </summary>
         [NameInMap("PubTime")]
         [Validation(Required=false)]
         public string PubTime { get; set; }
@@ -37,6 +41,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Title { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="http://www.example.com/xxxx.html">http://www.example.com/xxxx.html</a></para>
+        /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]
         public string Url { get; set; }

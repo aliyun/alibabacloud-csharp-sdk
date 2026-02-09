@@ -21,6 +21,78 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public GetAutoClipsTaskInfoResponseBodyData Data { get; set; }
         public class GetAutoClipsTaskInfoResponseBodyData : TeaModel {
+            [NameInMap("AnalysisResults")]
+            [Validation(Required=false)]
+            public List<GetAutoClipsTaskInfoResponseBodyDataAnalysisResults> AnalysisResults { get; set; }
+            public class GetAutoClipsTaskInfoResponseBodyDataAnalysisResults : TeaModel {
+                [NameInMap("LensInfos")]
+                [Validation(Required=false)]
+                public List<GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfos> LensInfos { get; set; }
+                public class GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfos : TeaModel {
+                    [NameInMap("AnalysisContent")]
+                    [Validation(Required=false)]
+                    public string AnalysisContent { get; set; }
+
+                    [NameInMap("EndTime")]
+                    [Validation(Required=false)]
+                    public GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosEndTime EndTime { get; set; }
+                    public class GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosEndTime : TeaModel {
+                        [NameInMap("Hour")]
+                        [Validation(Required=false)]
+                        public int? Hour { get; set; }
+
+                        [NameInMap("MillSecond")]
+                        [Validation(Required=false)]
+                        public int? MillSecond { get; set; }
+
+                        [NameInMap("Minute")]
+                        [Validation(Required=false)]
+                        public int? Minute { get; set; }
+
+                        [NameInMap("Second")]
+                        [Validation(Required=false)]
+                        public int? Second { get; set; }
+
+                    }
+
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
+                    public GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosStartTime StartTime { get; set; }
+                    public class GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosStartTime : TeaModel {
+                        [NameInMap("Hour")]
+                        [Validation(Required=false)]
+                        public int? Hour { get; set; }
+
+                        [NameInMap("MillSecond")]
+                        [Validation(Required=false)]
+                        public int? MillSecond { get; set; }
+
+                        [NameInMap("Minute")]
+                        [Validation(Required=false)]
+                        public int? Minute { get; set; }
+
+                        [NameInMap("Second")]
+                        [Validation(Required=false)]
+                        public int? Second { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("MediaId")]
+                [Validation(Required=false)]
+                public string MediaId { get; set; }
+
+                [NameInMap("MediaName")]
+                [Validation(Required=false)]
+                public string MediaName { get; set; }
+
+                [NameInMap("MediaUrl")]
+                [Validation(Required=false)]
+                public string MediaUrl { get; set; }
+
+            }
+
             [NameInMap("CloseMusic")]
             [Validation(Required=false)]
             public bool? CloseMusic { get; set; }
@@ -32,6 +104,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [NameInMap("CloseVoice")]
             [Validation(Required=false)]
             public bool? CloseVoice { get; set; }
+
+            [NameInMap("ClosingCreditsUrl")]
+            [Validation(Required=false)]
+            public string ClosingCreditsUrl { get; set; }
 
             [NameInMap("ColorWords")]
             [Validation(Required=false)]
@@ -95,6 +171,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string Content { get; set; }
 
+            [NameInMap("CustomVoiceStyle")]
+            [Validation(Required=false)]
+            public string CustomVoiceStyle { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para><a href="http://xxx/xxx.mp4">http://xxx/xxx.mp4</a></para>
@@ -139,6 +219,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public int? MusicVolume { get; set; }
 
+            [NameInMap("OpeningCreditsUrl")]
+            [Validation(Required=false)]
+            public string OpeningCreditsUrl { get; set; }
+
+            [NameInMap("OutputVideoFileKey")]
+            [Validation(Required=false)]
+            public string OutputVideoFileKey { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para><a href="http://output.mp4">http://output.mp4</a></para>
@@ -146,6 +234,42 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [NameInMap("OutputVideoUrl")]
             [Validation(Required=false)]
             public string OutputVideoUrl { get; set; }
+
+            [NameInMap("ReferenceVideo")]
+            [Validation(Required=false)]
+            public GetAutoClipsTaskInfoResponseBodyDataReferenceVideo ReferenceVideo { get; set; }
+            public class GetAutoClipsTaskInfoResponseBodyDataReferenceVideo : TeaModel {
+                [NameInMap("VideoId")]
+                [Validation(Required=false)]
+                public string VideoId { get; set; }
+
+                [NameInMap("VideoName")]
+                [Validation(Required=false)]
+                public string VideoName { get; set; }
+
+                [NameInMap("VideoUrl")]
+                [Validation(Required=false)]
+                public string VideoUrl { get; set; }
+
+            }
+
+            [NameInMap("SourceVideos")]
+            [Validation(Required=false)]
+            public List<GetAutoClipsTaskInfoResponseBodyDataSourceVideos> SourceVideos { get; set; }
+            public class GetAutoClipsTaskInfoResponseBodyDataSourceVideos : TeaModel {
+                [NameInMap("VideoId")]
+                [Validation(Required=false)]
+                public string VideoId { get; set; }
+
+                [NameInMap("VideoName")]
+                [Validation(Required=false)]
+                public string VideoName { get; set; }
+
+                [NameInMap("VideoUrl")]
+                [Validation(Required=false)]
+                public string VideoUrl { get; set; }
+
+            }
 
             [NameInMap("Status")]
             [Validation(Required=false)]

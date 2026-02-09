@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetAutoClipsTaskInfoRequest : TeaModel {
+        [NameInMap("ShowAnalysisResults")]
+        [Validation(Required=false)]
+        public bool? ShowAnalysisResults { get; set; }
+
+        [NameInMap("ShowResourceInfo")]
+        [Validation(Required=false)]
+        public bool? ShowResourceInfo { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
