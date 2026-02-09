@@ -1574,6 +1574,558 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             return await CreateMcdpZoneWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建热修复资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcubeHotpatchResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcubeHotpatchResourceResponse
+        /// </returns>
+        public CreateMcubeHotpatchResourceResponse CreateMcubeHotpatchResourceWithOptions(CreateMcubeHotpatchResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                body["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FixDesc))
+            {
+                body["FixDesc"] = request.FixDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnexFlag))
+            {
+                body["OnexFlag"] = request.OnexFlag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
+            {
+                body["Platform"] = request.Platform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductVersion))
+            {
+                body["ProductVersion"] = request.ProductVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMcubeHotpatchResource",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMcubeHotpatchResourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建热修复资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcubeHotpatchResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcubeHotpatchResourceResponse
+        /// </returns>
+        public async Task<CreateMcubeHotpatchResourceResponse> CreateMcubeHotpatchResourceWithOptionsAsync(CreateMcubeHotpatchResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                body["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FixDesc))
+            {
+                body["FixDesc"] = request.FixDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnexFlag))
+            {
+                body["OnexFlag"] = request.OnexFlag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
+            {
+                body["Platform"] = request.Platform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductVersion))
+            {
+                body["ProductVersion"] = request.ProductVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMcubeHotpatchResource",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMcubeHotpatchResourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建热修复资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcubeHotpatchResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcubeHotpatchResourceResponse
+        /// </returns>
+        public CreateMcubeHotpatchResourceResponse CreateMcubeHotpatchResource(CreateMcubeHotpatchResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateMcubeHotpatchResourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建热修复资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcubeHotpatchResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcubeHotpatchResourceResponse
+        /// </returns>
+        public async Task<CreateMcubeHotpatchResourceResponse> CreateMcubeHotpatchResourceAsync(CreateMcubeHotpatchResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateMcubeHotpatchResourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建热修复回滚任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcubeHotpatchRollbackTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcubeHotpatchRollbackTaskResponse
+        /// </returns>
+        public CreateMcubeHotpatchRollbackTaskResponse CreateMcubeHotpatchRollbackTaskWithOptions(CreateMcubeHotpatchRollbackTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
+            {
+                body["ProductId"] = request.ProductId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductVersion))
+            {
+                body["ProductVersion"] = request.ProductVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMcubeHotpatchRollbackTask",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMcubeHotpatchRollbackTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建热修复回滚任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcubeHotpatchRollbackTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcubeHotpatchRollbackTaskResponse
+        /// </returns>
+        public async Task<CreateMcubeHotpatchRollbackTaskResponse> CreateMcubeHotpatchRollbackTaskWithOptionsAsync(CreateMcubeHotpatchRollbackTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
+            {
+                body["ProductId"] = request.ProductId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductVersion))
+            {
+                body["ProductVersion"] = request.ProductVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMcubeHotpatchRollbackTask",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMcubeHotpatchRollbackTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建热修复回滚任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcubeHotpatchRollbackTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcubeHotpatchRollbackTaskResponse
+        /// </returns>
+        public CreateMcubeHotpatchRollbackTaskResponse CreateMcubeHotpatchRollbackTask(CreateMcubeHotpatchRollbackTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateMcubeHotpatchRollbackTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建热修复回滚任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcubeHotpatchRollbackTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcubeHotpatchRollbackTaskResponse
+        /// </returns>
+        public async Task<CreateMcubeHotpatchRollbackTaskResponse> CreateMcubeHotpatchRollbackTaskAsync(CreateMcubeHotpatchRollbackTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateMcubeHotpatchRollbackTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建热修复发布任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcubeHotpatchTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcubeHotpatchTaskResponse
+        /// </returns>
+        public CreateMcubeHotpatchTaskResponse CreateMcubeHotpatchTaskWithOptions(CreateMcubeHotpatchTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GreyConfigInfo))
+            {
+                body["GreyConfigInfo"] = request.GreyConfigInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GreyEndtimeData))
+            {
+                body["GreyEndtimeData"] = request.GreyEndtimeData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GreyNum))
+            {
+                body["GreyNum"] = request.GreyNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memo))
+            {
+                body["Memo"] = request.Memo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageId))
+            {
+                body["PackageId"] = request.PackageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
+            {
+                body["Platform"] = request.Platform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublishMode))
+            {
+                body["PublishMode"] = request.PublishMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublishType))
+            {
+                body["PublishType"] = request.PublishType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncMode))
+            {
+                body["SyncMode"] = request.SyncMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhitelistIds))
+            {
+                body["WhitelistIds"] = request.WhitelistIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMcubeHotpatchTask",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMcubeHotpatchTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建热修复发布任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcubeHotpatchTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcubeHotpatchTaskResponse
+        /// </returns>
+        public async Task<CreateMcubeHotpatchTaskResponse> CreateMcubeHotpatchTaskWithOptionsAsync(CreateMcubeHotpatchTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GreyConfigInfo))
+            {
+                body["GreyConfigInfo"] = request.GreyConfigInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GreyEndtimeData))
+            {
+                body["GreyEndtimeData"] = request.GreyEndtimeData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GreyNum))
+            {
+                body["GreyNum"] = request.GreyNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memo))
+            {
+                body["Memo"] = request.Memo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageId))
+            {
+                body["PackageId"] = request.PackageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
+            {
+                body["Platform"] = request.Platform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublishMode))
+            {
+                body["PublishMode"] = request.PublishMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublishType))
+            {
+                body["PublishType"] = request.PublishType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncMode))
+            {
+                body["SyncMode"] = request.SyncMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhitelistIds))
+            {
+                body["WhitelistIds"] = request.WhitelistIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMcubeHotpatchTask",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMcubeHotpatchTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建热修复发布任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcubeHotpatchTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcubeHotpatchTaskResponse
+        /// </returns>
+        public CreateMcubeHotpatchTaskResponse CreateMcubeHotpatchTask(CreateMcubeHotpatchTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateMcubeHotpatchTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建热修复发布任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcubeHotpatchTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcubeHotpatchTaskResponse
+        /// </returns>
+        public async Task<CreateMcubeHotpatchTaskResponse> CreateMcubeHotpatchTaskAsync(CreateMcubeHotpatchTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateMcubeHotpatchTaskWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// CreateMcubeMiniAppRequest
         /// </param>
@@ -5398,6 +5950,158 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             return await DeleteMcdpZoneWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除热修复资源包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMcubeHotpatchResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMcubeHotpatchResourceResponse
+        /// </returns>
+        public DeleteMcubeHotpatchResourceResponse DeleteMcubeHotpatchResourceWithOptions(DeleteMcubeHotpatchResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppCode))
+            {
+                body["AppCode"] = request.AppCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMcubeHotpatchResource",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMcubeHotpatchResourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除热修复资源包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMcubeHotpatchResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMcubeHotpatchResourceResponse
+        /// </returns>
+        public async Task<DeleteMcubeHotpatchResourceResponse> DeleteMcubeHotpatchResourceWithOptionsAsync(DeleteMcubeHotpatchResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppCode))
+            {
+                body["AppCode"] = request.AppCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMcubeHotpatchResource",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMcubeHotpatchResourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除热修复资源包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMcubeHotpatchResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMcubeHotpatchResourceResponse
+        /// </returns>
+        public DeleteMcubeHotpatchResourceResponse DeleteMcubeHotpatchResource(DeleteMcubeHotpatchResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteMcubeHotpatchResourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除热修复资源包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMcubeHotpatchResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMcubeHotpatchResourceResponse
+        /// </returns>
+        public async Task<DeleteMcubeHotpatchResourceResponse> DeleteMcubeHotpatchResourceAsync(DeleteMcubeHotpatchResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteMcubeHotpatchResourceWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// DeleteMcubeMiniAppRequest
         /// </param>
@@ -6696,6 +7400,182 @@ namespace AlibabaCloud.SDK.MPaaS20201028
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetFileTokenForUploadToMsaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看全部审核记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGameReviewByStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGameReviewByStatusResponse
+        /// </returns>
+        public GetGameReviewByStatusResponse GetGameReviewByStatusWithOptions(GetGameReviewByStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                body["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                body["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReviewStatus))
+            {
+                body["ReviewStatus"] = request.ReviewStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortMode))
+            {
+                body["SortMode"] = request.SortMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGameReviewByStatus",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGameReviewByStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看全部审核记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGameReviewByStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGameReviewByStatusResponse
+        /// </returns>
+        public async Task<GetGameReviewByStatusResponse> GetGameReviewByStatusWithOptionsAsync(GetGameReviewByStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                body["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                body["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReviewStatus))
+            {
+                body["ReviewStatus"] = request.ReviewStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortMode))
+            {
+                body["SortMode"] = request.SortMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGameReviewByStatus",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGameReviewByStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看全部审核记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGameReviewByStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGameReviewByStatusResponse
+        /// </returns>
+        public GetGameReviewByStatusResponse GetGameReviewByStatus(GetGameReviewByStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetGameReviewByStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看全部审核记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGameReviewByStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGameReviewByStatusResponse
+        /// </returns>
+        public async Task<GetGameReviewByStatusResponse> GetGameReviewByStatusAsync(GetGameReviewByStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetGameReviewByStatusWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
@@ -8674,6 +9554,302 @@ namespace AlibabaCloud.SDK.MPaaS20201028
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListMcdpAimWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询热修复资源包列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMcubeHotpatchResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcubeHotpatchResourcesResponse
+        /// </returns>
+        public ListMcubeHotpatchResourcesResponse ListMcubeHotpatchResourcesWithOptions(ListMcubeHotpatchResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                body["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMcubeHotpatchResources",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMcubeHotpatchResourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询热修复资源包列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMcubeHotpatchResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcubeHotpatchResourcesResponse
+        /// </returns>
+        public async Task<ListMcubeHotpatchResourcesResponse> ListMcubeHotpatchResourcesWithOptionsAsync(ListMcubeHotpatchResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                body["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMcubeHotpatchResources",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMcubeHotpatchResourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询热修复资源包列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMcubeHotpatchResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcubeHotpatchResourcesResponse
+        /// </returns>
+        public ListMcubeHotpatchResourcesResponse ListMcubeHotpatchResources(ListMcubeHotpatchResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListMcubeHotpatchResourcesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询热修复资源包列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMcubeHotpatchResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcubeHotpatchResourcesResponse
+        /// </returns>
+        public async Task<ListMcubeHotpatchResourcesResponse> ListMcubeHotpatchResourcesAsync(ListMcubeHotpatchResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListMcubeHotpatchResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询热修复发布任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMcubeHotpatchTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcubeHotpatchTasksResponse
+        /// </returns>
+        public ListMcubeHotpatchTasksResponse ListMcubeHotpatchTasksWithOptions(ListMcubeHotpatchTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMcubeHotpatchTasks",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMcubeHotpatchTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询热修复发布任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMcubeHotpatchTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcubeHotpatchTasksResponse
+        /// </returns>
+        public async Task<ListMcubeHotpatchTasksResponse> ListMcubeHotpatchTasksWithOptionsAsync(ListMcubeHotpatchTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMcubeHotpatchTasks",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMcubeHotpatchTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询热修复发布任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMcubeHotpatchTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcubeHotpatchTasksResponse
+        /// </returns>
+        public ListMcubeHotpatchTasksResponse ListMcubeHotpatchTasks(ListMcubeHotpatchTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListMcubeHotpatchTasksWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询热修复发布任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMcubeHotpatchTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcubeHotpatchTasksResponse
+        /// </returns>
+        public async Task<ListMcubeHotpatchTasksResponse> ListMcubeHotpatchTasksAsync(ListMcubeHotpatchTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListMcubeHotpatchTasksWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
@@ -13672,6 +14848,150 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             return await QueryMcdpZoneWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询热修复发布任务详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMcubeHotpatchTaskDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMcubeHotpatchTaskDetailResponse
+        /// </returns>
+        public QueryMcubeHotpatchTaskDetailResponse QueryMcubeHotpatchTaskDetailWithOptions(QueryMcubeHotpatchTaskDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryMcubeHotpatchTaskDetail",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryMcubeHotpatchTaskDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询热修复发布任务详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMcubeHotpatchTaskDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMcubeHotpatchTaskDetailResponse
+        /// </returns>
+        public async Task<QueryMcubeHotpatchTaskDetailResponse> QueryMcubeHotpatchTaskDetailWithOptionsAsync(QueryMcubeHotpatchTaskDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryMcubeHotpatchTaskDetail",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryMcubeHotpatchTaskDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询热修复发布任务详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMcubeHotpatchTaskDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMcubeHotpatchTaskDetailResponse
+        /// </returns>
+        public QueryMcubeHotpatchTaskDetailResponse QueryMcubeHotpatchTaskDetail(QueryMcubeHotpatchTaskDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryMcubeHotpatchTaskDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询热修复发布任务详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMcubeHotpatchTaskDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMcubeHotpatchTaskDetailResponse
+        /// </returns>
+        public async Task<QueryMcubeHotpatchTaskDetailResponse> QueryMcubeHotpatchTaskDetailAsync(QueryMcubeHotpatchTaskDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryMcubeHotpatchTaskDetailWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// QueryMcubeMiniPackageRequest
         /// </param>
@@ -14814,6 +16134,158 @@ namespace AlibabaCloud.SDK.MPaaS20201028
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryMpsSchedulerListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询风险信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMscpRiskInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMscpRiskInfoResponse
+        /// </returns>
+        public QueryMscpRiskInfoResponse QueryMscpRiskInfoWithOptions(QueryMscpRiskInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApdidToken))
+            {
+                body["ApdidToken"] = request.ApdidToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerminalType))
+            {
+                body["TerminalType"] = request.TerminalType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryMscpRiskInfo",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryMscpRiskInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询风险信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMscpRiskInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMscpRiskInfoResponse
+        /// </returns>
+        public async Task<QueryMscpRiskInfoResponse> QueryMscpRiskInfoWithOptionsAsync(QueryMscpRiskInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApdidToken))
+            {
+                body["ApdidToken"] = request.ApdidToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerminalType))
+            {
+                body["TerminalType"] = request.TerminalType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryMscpRiskInfo",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryMscpRiskInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询风险信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMscpRiskInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMscpRiskInfoResponse
+        /// </returns>
+        public QueryMscpRiskInfoResponse QueryMscpRiskInfo(QueryMscpRiskInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryMscpRiskInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询风险信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMscpRiskInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMscpRiskInfoResponse
+        /// </returns>
+        public async Task<QueryMscpRiskInfoResponse> QueryMscpRiskInfoAsync(QueryMscpRiskInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryMscpRiskInfoWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
@@ -16366,6 +17838,174 @@ namespace AlibabaCloud.SDK.MPaaS20201028
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateLinkWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新热修复发布任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMcubeHotpatchTaskStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMcubeHotpatchTaskStatusResponse
+        /// </returns>
+        public UpdateMcubeHotpatchTaskStatusResponse UpdateMcubeHotpatchTaskStatusWithOptions(UpdateMcubeHotpatchTaskStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageId))
+            {
+                body["PackageId"] = request.PackageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskStatus))
+            {
+                body["TaskStatus"] = request.TaskStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMcubeHotpatchTaskStatus",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMcubeHotpatchTaskStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新热修复发布任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMcubeHotpatchTaskStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMcubeHotpatchTaskStatusResponse
+        /// </returns>
+        public async Task<UpdateMcubeHotpatchTaskStatusResponse> UpdateMcubeHotpatchTaskStatusWithOptionsAsync(UpdateMcubeHotpatchTaskStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageId))
+            {
+                body["PackageId"] = request.PackageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskStatus))
+            {
+                body["TaskStatus"] = request.TaskStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMcubeHotpatchTaskStatus",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMcubeHotpatchTaskStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新热修复发布任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMcubeHotpatchTaskStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMcubeHotpatchTaskStatusResponse
+        /// </returns>
+        public UpdateMcubeHotpatchTaskStatusResponse UpdateMcubeHotpatchTaskStatus(UpdateMcubeHotpatchTaskStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateMcubeHotpatchTaskStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新热修复发布任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMcubeHotpatchTaskStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMcubeHotpatchTaskStatusResponse
+        /// </returns>
+        public async Task<UpdateMcubeHotpatchTaskStatusResponse> UpdateMcubeHotpatchTaskStatusAsync(UpdateMcubeHotpatchTaskStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateMcubeHotpatchTaskStatusWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
