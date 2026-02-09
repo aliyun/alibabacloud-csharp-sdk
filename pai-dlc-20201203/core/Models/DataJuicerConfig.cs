@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class DataJuicerConfig : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>config</para>
+        /// </summary>
         [NameInMap("CommandType")]
         [Validation(Required=false)]
         public string CommandType { get; set; }
@@ -17,6 +21,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public bool? EnableResourceEstimation { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>standalone</para>
+        /// </summary>
         [NameInMap("ExecutionMode")]
         [Validation(Required=false)]
         public string ExecutionMode { get; set; }

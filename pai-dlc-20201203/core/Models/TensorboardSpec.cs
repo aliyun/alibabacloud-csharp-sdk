@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class TensorboardSpec : TeaModel {
         /// <summary>
+        /// <para>The specifications of the ECS instance configured for the pay-as-you-go Tensorboard task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ecs.g6.large</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string EcsType { get; set; }
 
         /// <summary>
+        /// <para>The ID of the security group configured for the pay-as-you-go Tensorboard task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sg-xxxxx</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the vSwitch configured for the pay-as-you-go Tensorboard task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vsw-xxxx</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SwitchId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the virtual private cloud (VPC) configured for the pay-as-you-go Tensorboard task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-xxxx</para>
         /// </summary>

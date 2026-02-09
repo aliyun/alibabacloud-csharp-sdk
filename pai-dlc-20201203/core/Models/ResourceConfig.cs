@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ResourceConfig : TeaModel {
         /// <summary>
+        /// <para>The number of vCPUs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string CPU { get; set; }
 
         /// <summary>
+        /// <para>The number of GPUs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GPU { get; set; }
 
         /// <summary>
+        /// <para>The GPU type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Tesla-V100-16G</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GPUType { get; set; }
 
         /// <summary>
+        /// <para>The memory size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10Gi</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Memory { get; set; }
 
         /// <summary>
+        /// <para>The shared memory capacity.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5Gi</para>
         /// </summary>

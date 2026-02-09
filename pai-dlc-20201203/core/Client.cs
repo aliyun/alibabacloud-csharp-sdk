@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</para>
+        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and compute resources of each node on which a job runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</para>
+        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and compute resources of each node on which a job runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -355,7 +355,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</para>
+        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and compute resources of each node on which a job runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -379,7 +379,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</para>
+        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and compute resources of each node on which a job runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1351,7 +1351,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the monitoring data of a job, including the CPU, GPU, and memory utilization, network, and disk read/write rate.</para>
+        /// <para>Obtains the monitoring data of a job, including the CPU, GPU, and memory utilization, network, and disk read/write rate. ⚠️ Note: Except for pay-as-you-go tasks based on general-purpose computing resources, all task types are connected to CloudMonitor. Use the CloudMonitor API to call related monitoring. The overwritten features in the original API are no longer maintained. For more information, see \[Training monitoring and alerting]\\(<a href="https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting">https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting</a>).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1413,7 +1413,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the monitoring data of a job, including the CPU, GPU, and memory utilization, network, and disk read/write rate.</para>
+        /// <para>Obtains the monitoring data of a job, including the CPU, GPU, and memory utilization, network, and disk read/write rate. ⚠️ Note: Except for pay-as-you-go tasks based on general-purpose computing resources, all task types are connected to CloudMonitor. Use the CloudMonitor API to call related monitoring. The overwritten features in the original API are no longer maintained. For more information, see \[Training monitoring and alerting]\\(<a href="https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting">https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting</a>).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1475,7 +1475,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the monitoring data of a job, including the CPU, GPU, and memory utilization, network, and disk read/write rate.</para>
+        /// <para>Obtains the monitoring data of a job, including the CPU, GPU, and memory utilization, network, and disk read/write rate. ⚠️ Note: Except for pay-as-you-go tasks based on general-purpose computing resources, all task types are connected to CloudMonitor. Use the CloudMonitor API to call related monitoring. The overwritten features in the original API are no longer maintained. For more information, see \[Training monitoring and alerting]\\(<a href="https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting">https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting</a>).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1494,7 +1494,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the monitoring data of a job, including the CPU, GPU, and memory utilization, network, and disk read/write rate.</para>
+        /// <para>Obtains the monitoring data of a job, including the CPU, GPU, and memory utilization, network, and disk read/write rate. ⚠️ Note: Except for pay-as-you-go tasks based on general-purpose computing resources, all task types are connected to CloudMonitor. Use the CloudMonitor API to call related monitoring. The overwritten features in the original API are no longer maintained. For more information, see \[Training monitoring and alerting]\\(<a href="https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting">https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting</a>).</para>
         /// </summary>
         /// 
         /// <param name="request">

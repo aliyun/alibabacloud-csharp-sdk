@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class EnvVar : TeaModel {
         /// <summary>
+        /// <para>The name of the environment variable.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENABLE_DEBUG</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The value of the environment variable.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
