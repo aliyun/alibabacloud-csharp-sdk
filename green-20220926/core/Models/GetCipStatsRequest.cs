@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string Label { get; set; }
 
+        [NameInMap("Query")]
+        [Validation(Required=false)]
+        public string Query { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

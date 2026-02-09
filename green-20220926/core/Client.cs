@@ -1868,7 +1868,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在线测试</para>
+        /// <para>Online Test</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1922,7 +1922,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在线测试</para>
+        /// <para>Online Test</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1976,7 +1976,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在线测试</para>
+        /// <para>Online Test</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1994,7 +1994,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在线测试</para>
+        /// <para>Online Test</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3224,7 +3224,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除在线测试接口</para>
+        /// <para>Delete online test</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3270,7 +3270,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除在线测试接口</para>
+        /// <para>Delete online test</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3316,7 +3316,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除在线测试接口</para>
+        /// <para>Delete online test</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3334,7 +3334,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除在线测试接口</para>
+        /// <para>Delete online test</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5280,7 +5280,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调用量</para>
+        /// <para>Query Call Volume</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5297,6 +5297,10 @@ namespace AlibabaCloud.SDK.Green20220926
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -5356,7 +5360,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调用量</para>
+        /// <para>Query Call Volume</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5373,6 +5377,10 @@ namespace AlibabaCloud.SDK.Green20220926
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -5432,7 +5440,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调用量</para>
+        /// <para>Query Call Volume</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5450,7 +5458,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调用量</para>
+        /// <para>Query Call Volume</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10380,7 +10388,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存特性配置</para>
+        /// <para>Save Feature Configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10448,7 +10456,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存特性配置</para>
+        /// <para>Save Feature Configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10516,7 +10524,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存特性配置</para>
+        /// <para>Save Feature Configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10534,7 +10542,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存特性配置</para>
+        /// <para>Save Feature Configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10708,7 +10716,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>oss扫描结果查询</para>
+        /// <para>OSS scan result query</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10788,7 +10796,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>oss扫描结果查询</para>
+        /// <para>OSS scan result query</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10868,7 +10876,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>oss扫描结果查询</para>
+        /// <para>OSS scan result query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10886,7 +10894,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>oss扫描结果查询</para>
+        /// <para>OSS scan result query</para>
         /// </summary>
         /// 
         /// <param name="request">

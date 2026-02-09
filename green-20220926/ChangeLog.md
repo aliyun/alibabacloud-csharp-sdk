@@ -1,3 +1,7 @@
+2026-02-09 Version: 1.5.7
+- Update API GetCipStats: add request parameters Query.
+
+
 2026-01-16 Version: 1.5.6
 - Update API CreatStockOssCheckTask: add request parameters BucketPrefixFilterConfig.
 - Update API CreatePreCheck: add request parameters BucketPrefixFilterConfig.
