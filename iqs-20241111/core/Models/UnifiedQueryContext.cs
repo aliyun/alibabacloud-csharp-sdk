@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class UnifiedQueryContext : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Generic</para>
+        /// </summary>
         [NameInMap("engineType")]
         [Validation(Required=false)]
         public string EngineType { get; set; }

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public string Detail { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>answerBox</para>
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }

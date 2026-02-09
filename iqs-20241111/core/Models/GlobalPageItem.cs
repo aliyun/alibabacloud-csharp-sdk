@@ -19,19 +19,12 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public string Link { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>100km/h-0制动能力上，仅有33.3m，不黑不吹，单看这个，小米SU7确实表现不错。而续航方面，101kWh电池容量，实现CLTC续航800km，还有现5分钟补能220km，15分钟补能510km的800V高压平台。而在...</para>
-        /// </summary>
         [NameInMap("snippet")]
         [Validation(Required=false)]
         public string Snippet { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>小米SU7售价22.99万元起 高管亲自辟谣：发布前不会有价格</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]

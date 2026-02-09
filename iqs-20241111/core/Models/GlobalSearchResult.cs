@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public GlobalQueryContext QueryContext { get; set; }
 
         /// <summary>
+        /// <para>requestId</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456</para>
         /// </summary>

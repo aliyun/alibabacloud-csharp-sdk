@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public double? HostAuthorityScore { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="https://www.china.com/zh_cn/img1905/2023/logo.png">https://www.china.com/zh_cn/img1905/2023/logo.png</a></para>
+        /// </summary>
         [NameInMap("hostLogo")]
         [Validation(Required=false)]
         public string HostLogo { get; set; }
@@ -29,6 +33,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public List<string> Images { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="https://hea.china.com/articles/20250427/202504271666343.html">https://hea.china.com/articles/20250427/202504271666343.html</a></para>
+        /// </summary>
         [NameInMap("link")]
         [Validation(Required=false)]
         public string Link { get; set; }
@@ -43,12 +51,16 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2025-04-07T10:15:30.123+08:00</para>
+        /// <para>2025-04-27T20:36:04+08:00</para>
         /// </summary>
         [NameInMap("publishedTime")]
         [Validation(Required=false)]
         public string PublishedTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0.7786493301391602</para>
+        /// </summary>
         [NameInMap("rerankScore")]
         [Validation(Required=false)]
         public double? RerankScore { get; set; }

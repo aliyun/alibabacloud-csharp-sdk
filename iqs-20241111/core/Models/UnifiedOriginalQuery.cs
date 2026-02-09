@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public string Query { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>NoLimit</para>
+        /// </summary>
         [NameInMap("timeRange")]
         [Validation(Required=false)]
         public string TimeRange { get; set; }

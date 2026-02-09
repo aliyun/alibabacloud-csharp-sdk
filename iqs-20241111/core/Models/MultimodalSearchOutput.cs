@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public MultimodalQueryContext QueryContext { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>sdfsd234-2vxcg345-345vc</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
