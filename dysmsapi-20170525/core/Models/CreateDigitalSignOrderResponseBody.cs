@@ -1,0 +1,62 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
+{
+    public class CreateDigitalSignOrderResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>OK</para>
+        /// </summary>
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{\&quot;signId\&quot;: \&quot;20067468291\&quot;, \&quot;signCode\&quot;: \&quot;SIGN_100000184736042_1744164758835_hpMd1\&quot;, \&quot;signOrderId\&quot;: 22469795330, \&quot;signName\&quot;: u\&quot;\u8d5b\u745e\u5a05\u808c\u80a4\u7ba1\u7406\&quot;}</para>
+        /// </summary>
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Data { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值示例值</para>
+        /// </summary>
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2D0133B9-6C0D-0BAE-8161-1EEF9E2D4069</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+    }
+
+}

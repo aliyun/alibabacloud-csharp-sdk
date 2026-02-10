@@ -1068,7 +1068,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a mobile phone number can receive card messages.</para>
+        /// <para>Queries whether some mobile phone numbers support card messages.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1120,7 +1120,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a mobile phone number can receive card messages.</para>
+        /// <para>Queries whether some mobile phone numbers support card messages.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1172,7 +1172,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a mobile phone number can receive card messages.</para>
+        /// <para>Queries whether some mobile phone numbers support card messages.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1196,7 +1196,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a mobile phone number can receive card messages.</para>
+        /// <para>Queries whether some mobile phone numbers support card messages.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1572,7 +1572,403 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建短链</para>
+        /// <para>数字短信签名操作订单</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDigitalSignOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDigitalSignOrderResponse
+        /// </returns>
+        public CreateDigitalSignOrderResponse CreateDigitalSignOrderWithOptions(CreateDigitalSignOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDigitalSignOrderShrinkRequest request = new CreateDigitalSignOrderShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OrderContext))
+            {
+                request.OrderContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OrderContext, "OrderContext", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendMessage))
+            {
+                query["ExtendMessage"] = request.ExtendMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderContextShrink))
+            {
+                query["OrderContext"] = request.OrderContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualificationId))
+            {
+                query["QualificationId"] = request.QualificationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualificationVersion))
+            {
+                query["QualificationVersion"] = request.QualificationVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignId))
+            {
+                query["SignId"] = request.SignId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignIndustry))
+            {
+                query["SignIndustry"] = request.SignIndustry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignName))
+            {
+                query["SignName"] = request.SignName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignSource))
+            {
+                query["SignSource"] = request.SignSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Submitter))
+            {
+                query["Submitter"] = request.Submitter;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDigitalSignOrder",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDigitalSignOrderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>数字短信签名操作订单</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDigitalSignOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDigitalSignOrderResponse
+        /// </returns>
+        public async Task<CreateDigitalSignOrderResponse> CreateDigitalSignOrderWithOptionsAsync(CreateDigitalSignOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDigitalSignOrderShrinkRequest request = new CreateDigitalSignOrderShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OrderContext))
+            {
+                request.OrderContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OrderContext, "OrderContext", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendMessage))
+            {
+                query["ExtendMessage"] = request.ExtendMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderContextShrink))
+            {
+                query["OrderContext"] = request.OrderContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualificationId))
+            {
+                query["QualificationId"] = request.QualificationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualificationVersion))
+            {
+                query["QualificationVersion"] = request.QualificationVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignId))
+            {
+                query["SignId"] = request.SignId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignIndustry))
+            {
+                query["SignIndustry"] = request.SignIndustry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignName))
+            {
+                query["SignName"] = request.SignName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignSource))
+            {
+                query["SignSource"] = request.SignSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Submitter))
+            {
+                query["Submitter"] = request.Submitter;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDigitalSignOrder",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDigitalSignOrderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>数字短信签名操作订单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDigitalSignOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDigitalSignOrderResponse
+        /// </returns>
+        public CreateDigitalSignOrderResponse CreateDigitalSignOrder(CreateDigitalSignOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDigitalSignOrderWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>数字短信签名操作订单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDigitalSignOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDigitalSignOrderResponse
+        /// </returns>
+        public async Task<CreateDigitalSignOrderResponse> CreateDigitalSignOrderAsync(CreateDigitalSignOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDigitalSignOrderWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数字短信模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDigitalSmsTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDigitalSmsTemplateResponse
+        /// </returns>
+        public CreateDigitalSmsTemplateResponse CreateDigitalSmsTemplateWithOptions(CreateDigitalSmsTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignName))
+            {
+                query["SignName"] = request.SignName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateContents))
+            {
+                query["TemplateContents"] = request.TemplateContents;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDigitalSmsTemplate",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDigitalSmsTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数字短信模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDigitalSmsTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDigitalSmsTemplateResponse
+        /// </returns>
+        public async Task<CreateDigitalSmsTemplateResponse> CreateDigitalSmsTemplateWithOptionsAsync(CreateDigitalSmsTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignName))
+            {
+                query["SignName"] = request.SignName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateContents))
+            {
+                query["TemplateContents"] = request.TemplateContents;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDigitalSmsTemplate",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDigitalSmsTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数字短信模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDigitalSmsTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDigitalSmsTemplateResponse
+        /// </returns>
+        public CreateDigitalSmsTemplateResponse CreateDigitalSmsTemplate(CreateDigitalSmsTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDigitalSmsTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数字短信模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDigitalSmsTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDigitalSmsTemplateResponse
+        /// </returns>
+        public async Task<CreateDigitalSmsTemplateResponse> CreateDigitalSmsTemplateAsync(CreateDigitalSmsTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDigitalSmsTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates personalized short URLs. You can specify multiple mobile numbers and source URLs in the request. The operation returns the short URLs corresponding to the specified mobile numbers. You can obtain the click information of end users based on different short URLs. The click information helps you realize secondary marketing. QPS limit You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1634,7 +2030,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建短链</para>
+        /// <para>Creates personalized short URLs. You can specify multiple mobile numbers and source URLs in the request. The operation returns the short URLs corresponding to the specified mobile numbers. You can obtain the click information of end users based on different short URLs. The click information helps you realize secondary marketing. QPS limit You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1696,7 +2092,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建短链</para>
+        /// <para>Creates personalized short URLs. You can specify multiple mobile numbers and source URLs in the request. The operation returns the short URLs corresponding to the specified mobile numbers. You can obtain the click information of end users based on different short URLs. The click information helps you realize secondary marketing. QPS limit You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1714,7 +2110,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建短链</para>
+        /// <para>Creates personalized short URLs. You can specify multiple mobile numbers and source URLs in the request. The operation returns the short URLs corresponding to the specified mobile numbers. You can obtain the click information of end users based on different short URLs. The click information helps you realize secondary marketing. QPS limit You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6438,6 +6834,150 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取数字短信签名通过签名name</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDigitalSignByNameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDigitalSignByNameResponse
+        /// </returns>
+        public QueryDigitalSignByNameResponse QueryDigitalSignByNameWithOptions(QueryDigitalSignByNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignName))
+            {
+                query["SignName"] = request.SignName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDigitalSignByName",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDigitalSignByNameResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数字短信签名通过签名name</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDigitalSignByNameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDigitalSignByNameResponse
+        /// </returns>
+        public async Task<QueryDigitalSignByNameResponse> QueryDigitalSignByNameWithOptionsAsync(QueryDigitalSignByNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignName))
+            {
+                query["SignName"] = request.SignName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDigitalSignByName",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDigitalSignByNameResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数字短信签名通过签名name</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDigitalSignByNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDigitalSignByNameResponse
+        /// </returns>
+        public QueryDigitalSignByNameResponse QueryDigitalSignByName(QueryDigitalSignByNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryDigitalSignByNameWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数字短信签名通过签名name</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDigitalSignByNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDigitalSignByNameResponse
+        /// </returns>
+        public async Task<QueryDigitalSignByNameResponse> QueryDigitalSignByNameAsync(QueryDigitalSignByNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryDigitalSignByNameWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询验证码签名</para>
         /// </summary>
         /// 
@@ -6606,7 +7146,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a mobile phone number can receive card messages.</para>
+        /// <para>Queries whether some mobile phone numbers support card messages.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6662,7 +7202,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a mobile phone number can receive card messages.</para>
+        /// <para>Queries whether some mobile phone numbers support card messages.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6718,7 +7258,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a mobile phone number can receive card messages.</para>
+        /// <para>Queries whether some mobile phone numbers support card messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6736,7 +7276,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a mobile phone number can receive card messages.</para>
+        /// <para>Queries whether some mobile phone numbers support card messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6754,7 +7294,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>点击明细查询</para>
+        /// <para>Queries the information about clicks within a specific time range or related to a mobile number. QPS limit You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6828,7 +7368,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>点击明细查询</para>
+        /// <para>Queries the information about clicks within a specific time range or related to a mobile number. QPS limit You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6902,7 +7442,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>点击明细查询</para>
+        /// <para>Queries the information about clicks within a specific time range or related to a mobile number. QPS limit You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6920,7 +7460,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>点击明细查询</para>
+        /// <para>Queries the information about clicks within a specific time range or related to a mobile number. QPS limit You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">

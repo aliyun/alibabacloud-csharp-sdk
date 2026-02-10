@@ -43,9 +43,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The list of tags.</para>
-        /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public ListTagResourcesResponseBodyTagResources TagResources { get; set; }
@@ -54,42 +51,18 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             [Validation(Required=false)]
             public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
-                /// <summary>
-                /// <para>The code of the message template.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>SMS_23423****</para>
-                /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
-                /// <summary>
-                /// <para>The type of resource.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ALIYUN::DYSMS::TEMPLATE</para>
-                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
-                /// <summary>
-                /// <para>The tag key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>TestKey</para>
-                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
-                /// <summary>
-                /// <para>The tag value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>TestValue</para>
-                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

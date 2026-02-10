@@ -72,9 +72,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string CreateDate { get; set; }
 
-        /// <summary>
-        /// <para>File information, compatible with signatures created by the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-addsmstemplate?spm">AddSmsSign</a> API.</para>
-        /// </summary>
         [NameInMap("FileUrlList")]
         [Validation(Required=false)]
         public GetSmsTemplateResponseBodyFileUrlList FileUrlList { get; set; }
@@ -110,9 +107,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// <para>Additional documentation information, supplementing uploaded business proof files or operational screenshots file list.</para>
-        /// </summary>
         [NameInMap("MoreDataFileUrlList")]
         [Validation(Required=false)]
         public GetSmsTemplateResponseBodyMoreDataFileUrlList MoreDataFileUrlList { get; set; }
