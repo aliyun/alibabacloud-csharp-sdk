@@ -1,3 +1,6 @@
+2026-02-10 Version: 1.39.1
+- Generated csharp 2023-08-01 for AiMiaoBi.
+
 2026-02-09 Version: 1.39.0
 - Support API DeletePptArtifact.
 - Support API GetClipsBuildInResource.
