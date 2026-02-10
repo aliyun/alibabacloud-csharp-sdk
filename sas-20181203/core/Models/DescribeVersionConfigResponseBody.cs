@@ -183,6 +183,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
+        [NameInMap("IntelligentAnalysisFlow")]
+        [Validation(Required=false)]
+        public int? IntelligentAnalysisFlow { get; set; }
+
+        /// <summary>
         /// <para>Indicates whether Security Center runs the latest version of the Ultimate edition.</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: yes</description></item>
@@ -318,6 +326,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("NewThreatAnalysis")]
         [Validation(Required=false)]
         public int? NewThreatAnalysis { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("OnboardedAssets")]
+        [Validation(Required=false)]
+        public int? OnboardedAssets { get; set; }
 
         /// <summary>
         /// <para>The timestamp when Security Center is purchased. Unit: milliseconds.</para>

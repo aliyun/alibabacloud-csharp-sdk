@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckCountStatisticRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>zh</para>
+        /// </summary>
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
+        /// <summary>
         /// <para>The type of the statistics. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>user</b>: the top five users that are granted excessive permissions.</description></item>

@@ -108,6 +108,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Agentless { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("AiDigital")]
+            [Validation(Required=false)]
+            public int? AiDigital { get; set; }
+
+            /// <summary>
             /// <para>Anti-Ransomware Module. Values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: Off</description></item>

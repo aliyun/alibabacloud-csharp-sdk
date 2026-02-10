@@ -189,6 +189,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string ScaVersion { get; set; }
 
+        [NameInMap("SearchCriteriaList")]
+        [Validation(Required=false)]
+        public List<DescribePropertyScaDetailRequestSearchCriteriaList> SearchCriteriaList { get; set; }
+        public class DescribePropertyScaDetailRequestSearchCriteriaList : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Name</para>
+            /// </summary>
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The search keyword. You must specify this parameter based on the value of the <b>SearchItem</b> parameter.</para>
         /// <list type="bullet">

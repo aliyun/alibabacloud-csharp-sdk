@@ -229,6 +229,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string VpcInstanceIds { get; set; }
 
+        [NameInMap("VulEntityList")]
+        [Validation(Required=false)]
+        public List<ExportVulRequestVulEntityList> VulEntityList { get; set; }
+        public class ExportVulRequestVulEntityList : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Ollama</para>
+            /// </summary>
+            [NameInMap("EntityName")]
+            [Validation(Required=false)]
+            public string EntityName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1.0.0</para>
+            /// </summary>
+            [NameInMap("EntityVersion")]
+            [Validation(Required=false)]
+            public string EntityVersion { get; set; }
+
+        }
+
     }
 
 }

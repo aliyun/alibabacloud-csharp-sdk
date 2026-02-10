@@ -24,6 +24,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<GetCheckCountStatisticResponseBodyCheckCountStatisticDTOCheckCountStatisticItems> CheckCountStatisticItems { get; set; }
             public class GetCheckCountStatisticResponseBodyCheckCountStatisticDTOCheckCountStatisticItems : TeaModel {
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>开启公网访问</para>
+                /// </summary>
+                [NameInMap("CheckShowName")]
+                [Validation(Required=false)]
+                public string CheckShowName { get; set; }
+
+                /// <summary>
                 /// <para>The number of the CPU cores used by the host instance.</para>
                 /// 
                 /// <b>Example:</b>
@@ -235,6 +243,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [NameInMap("Vendor")]
                 [Validation(Required=false)]
                 public int? Vendor { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>阿里云</para>
+                /// </summary>
+                [NameInMap("VendorShowName")]
+                [Validation(Required=false)]
+                public string VendorShowName { get; set; }
 
                 /// <summary>
                 /// <para>The ID of the VPC to which the host instance belongs.</para>

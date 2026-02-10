@@ -150,6 +150,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Filepath { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>ImageDigest</para>
+            /// </summary>
+            [NameInMap("ImageDigest")]
+            [Validation(Required=false)]
+            public string ImageDigest { get; set; }
+
+            /// <summary>
             /// <para>Image name.</para>
             /// 
             /// <b>Example:</b>
@@ -356,6 +364,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>ACR-Example</para>
+            /// </summary>
+            [NameInMap("RepoName")]
+            [Validation(Required=false)]
+            public string RepoName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Default</para>
+            /// </summary>
+            [NameInMap("RepoNamespace")]
+            [Validation(Required=false)]
+            public string RepoNamespace { get; set; }
+
+            /// <summary>
             /// <para>Web site type.</para>
             /// <remarks>
             /// <para>Returned only when <b>Biz</b> is <b>web_server</b>.</para>
@@ -384,6 +408,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("SkillsName")]
             [Validation(Required=false)]
             public string SkillsName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>AI</para>
+            /// </summary>
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public string Tag { get; set; }
 
             [NameInMap("TransportName")]
             [Validation(Required=false)]
