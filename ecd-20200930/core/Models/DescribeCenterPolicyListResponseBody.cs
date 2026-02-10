@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<DescribeCenterPolicyListResponseBodyDescribePolicyGroups> DescribePolicyGroups { get; set; }
         public class DescribeCenterPolicyListResponseBodyDescribePolicyGroups : TeaModel {
+            [NameInMap("AcademicProxy")]
+            [Validation(Required=false)]
+            public string AcademicProxy { get; set; }
+
             /// <summary>
             /// <para>Indicates whether the admin permissions are granted to end users.</para>
             /// <remarks>
@@ -160,6 +164,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("ClientControlMenu")]
             [Validation(Required=false)]
             public string ClientControlMenu { get; set; }
+
+            [NameInMap("ClientHibernate")]
+            [Validation(Required=false)]
+            public string ClientHibernate { get; set; }
+
+            [NameInMap("ClientRestart")]
+            [Validation(Required=false)]
+            public string ClientRestart { get; set; }
+
+            [NameInMap("ClientShutdown")]
+            [Validation(Required=false)]
+            public string ClientShutdown { get; set; }
 
             /// <summary>
             /// <para>The logon method control rules.</para>
@@ -531,6 +547,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string HoverConfigMsg { get; set; }
 
+            [NameInMap("HoverHibernate")]
+            [Validation(Required=false)]
+            public string HoverHibernate { get; set; }
+
+            [NameInMap("HoverRestart")]
+            [Validation(Required=false)]
+            public string HoverRestart { get; set; }
+
+            [NameInMap("HoverShutdown")]
+            [Validation(Required=false)]
+            public string HoverShutdown { get; set; }
+
             /// <summary>
             /// <para>The web client access policy.</para>
             /// 
@@ -655,6 +683,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string MobileRestart { get; set; }
 
+            [NameInMap("MobileSafeMenu")]
+            [Validation(Required=false)]
+            public string MobileSafeMenu { get; set; }
+
             /// <summary>
             /// <para>Indicates whether the Stop button is displayed in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</para>
             /// <remarks>
@@ -667,6 +699,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("MobileShutdown")]
             [Validation(Required=false)]
             public string MobileShutdown { get; set; }
+
+            [NameInMap("MobileWuyingKeeper")]
+            [Validation(Required=false)]
+            public string MobileWuyingKeeper { get; set; }
+
+            [NameInMap("MobileWyAssistant")]
+            [Validation(Required=false)]
+            public string MobileWyAssistant { get; set; }
+
+            [NameInMap("ModelLibrary")]
+            [Validation(Required=false)]
+            public string ModelLibrary { get; set; }
+
+            [NameInMap("MultiScreen")]
+            [Validation(Required=false)]
+            public string MultiScreen { get; set; }
 
             /// <summary>
             /// <para>The policy name.</para>
@@ -788,6 +836,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("PolicyStatus")]
             [Validation(Required=false)]
             public string PolicyStatus { get; set; }
+
+            [NameInMap("PortProxy")]
+            [Validation(Required=false)]
+            public string PortProxy { get; set; }
 
             /// <summary>
             /// <para>The printer redirection policy.</para>
@@ -1311,6 +1363,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("WatermarkSecurity")]
             [Validation(Required=false)]
             public string WatermarkSecurity { get; set; }
+
+            [NameInMap("WatermarkShadow")]
+            [Validation(Required=false)]
+            public string WatermarkShadow { get; set; }
 
             /// <summary>
             /// <para>The watermark transparency. A higher value means the watermark is less transparent. Valid values: 10 to 100.</para>
