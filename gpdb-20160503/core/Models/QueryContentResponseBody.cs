@@ -22,9 +22,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string EmbeddingTokens { get; set; }
 
-        /// <summary>
-        /// <para>The entities.</para>
-        /// </summary>
         [NameInMap("Entities")]
         [Validation(Required=false)]
         public QueryContentResponseBodyEntities Entities { get; set; }
@@ -33,52 +30,22 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<QueryContentResponseBodyEntitiesEntities> Entities { get; set; }
             public class QueryContentResponseBodyEntitiesEntities : TeaModel {
-                /// <summary>
-                /// <para>Entity description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>A former advisor at DeepMind.</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The entity name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Dr. Wang</para>
-                /// </summary>
                 [NameInMap("Entity")]
                 [Validation(Required=false)]
                 public string Entity { get; set; }
 
-                /// <summary>
-                /// <para>The file name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>my_doc.txt</para>
-                /// </summary>
                 [NameInMap("FileName")]
                 [Validation(Required=false)]
                 public string FileName { get; set; }
 
-                /// <summary>
-                /// <para>The entity ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
-                /// <summary>
-                /// <para>The entity type.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Figure</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -87,9 +54,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         }
 
-        /// <summary>
-        /// <para>The retrieved data.</para>
-        /// </summary>
         [NameInMap("Matches")]
         [Validation(Required=false)]
         public QueryContentResponseBodyMatches Matches { get; set; }
@@ -98,110 +62,42 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<QueryContentResponseBodyMatchesMatchList> MatchList { get; set; }
             public class QueryContentResponseBodyMatchesMatchList : TeaModel {
-                /// <summary>
-                /// <para>The content that is used for full-text search. If you leave this parameter empty, only vector search is used. If you do not leave this parameter empty, two-way retrieval based on vector search and full-text search is used.</para>
-                /// <remarks>
-                /// <para> You must specify at least one of the Content and Vector parameters.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Cloud-native data warehouse AnalyticDB PostgreSQL Edition provides a simple, fast, and cost-effective PB-level cloud data warehouse solution.</para>
-                /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
-                /// <summary>
-                /// <para>The name of the document.</para>
-                /// <remarks>
-                /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2618453.html">ListDocuments</a> operation to query a list of documents.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>my_doc.txt</para>
-                /// </summary>
                 [NameInMap("FileName")]
                 [Validation(Required=false)]
                 public string FileName { get; set; }
 
-                /// <summary>
-                /// <para>The public URL of the query result image, valid for 2 hours</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="https://xxx-cn-beijing.aliyuncs.com/image/test.png">https://xxx-cn-beijing.aliyuncs.com/image/test.png</a></para>
-                /// </summary>
                 [NameInMap("FileURL")]
                 [Validation(Required=false)]
                 public string FileURL { get; set; }
 
-                /// <summary>
-                /// <para>The unique ID of the vector data.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>doca-1234</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
-                /// <summary>
-                /// <para>Metadata during document loader loading.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>{&quot;page_pos&quot;: 1}</para>
-                /// </summary>
                 [NameInMap("LoaderMetadata")]
                 [Validation(Required=false)]
                 public string LoaderMetadata { get; set; }
 
-                /// <summary>
-                /// <para>The metadata.</para>
-                /// </summary>
                 [NameInMap("Metadata")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> Metadata { get; set; }
 
-                /// <summary>
-                /// <para>Re-ranking score.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>6.2345</para>
-                /// </summary>
                 [NameInMap("RerankScore")]
                 [Validation(Required=false)]
                 public double? RerankScore { get; set; }
 
-                /// <summary>
-                /// <para>Source of the retrieval results:</para>
-                /// <list type="bullet">
-                /// <item><description>1 indicates vector retrieval</description></item>
-                /// <item><description>2 indicates full-text retrieval</description></item>
-                /// <item><description>3 indicates dual-path recall</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("RetrievalSource")]
                 [Validation(Required=false)]
                 public int? RetrievalSource { get; set; }
 
-                /// <summary>
-                /// <para>The similarity score of the data. It is related to the <c>l2, ip, or cosine</c> algorithm that is specified when you create an index.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.12345</para>
-                /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public double? Score { get; set; }
 
-                /// <summary>
-                /// <para>The vector data. The length of the value must be the same as that of the Dimension parameter in the <a href="https://help.aliyun.com/document_detail/2401497.html">CreateCollection</a> operation.</para>
-                /// <remarks>
-                /// <para> If you leave this parameter empty, only full-text search results are returned.</para>
-                /// </remarks>
-                /// </summary>
                 [NameInMap("Vector")]
                 [Validation(Required=false)]
                 public QueryContentResponseBodyMatchesMatchListVector Vector { get; set; }
@@ -226,9 +122,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// <para>The list of relationship edges.</para>
-        /// </summary>
         [NameInMap("Relations")]
         [Validation(Required=false)]
         public QueryContentResponseBodyRelations Relations { get; set; }
@@ -237,52 +130,22 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<QueryContentResponseBodyRelationsRelations> Relations { get; set; }
             public class QueryContentResponseBodyRelationsRelations : TeaModel {
-                /// <summary>
-                /// <para>The description of the relationship edge.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Dr. Wang previously served as an advisor at DeepMind.</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The file name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>my_doc.txt</para>
-                /// </summary>
                 [NameInMap("FileName")]
                 [Validation(Required=false)]
                 public string FileName { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the relationship edge.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
-                /// <summary>
-                /// <para>The source entity.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Former DeepMind consultant</para>
-                /// </summary>
                 [NameInMap("SourceEntity")]
                 [Validation(Required=false)]
                 public string SourceEntity { get; set; }
 
-                /// <summary>
-                /// <para>The destination entity.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Dr. Wang</para>
-                /// </summary>
                 [NameInMap("TargetEntity")]
                 [Validation(Required=false)]
                 public string TargetEntity { get; set; }
@@ -350,9 +213,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         }
 
-        /// <summary>
-        /// <para>List of windowed matches.</para>
-        /// </summary>
         [NameInMap("WindowMatches")]
         [Validation(Required=false)]
         public QueryContentResponseBodyWindowMatches WindowMatches { get; set; }
@@ -361,9 +221,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<QueryContentResponseBodyWindowMatchesWindowMatches> WindowMatches { get; set; }
             public class QueryContentResponseBodyWindowMatchesWindowMatches : TeaModel {
-                /// <summary>
-                /// <para>List of individual top windowed matches.</para>
-                /// </summary>
                 [NameInMap("WindowMatch")]
                 [Validation(Required=false)]
                 public QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatch WindowMatch { get; set; }
@@ -372,49 +229,22 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     [Validation(Required=false)]
                     public List<QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatchWindowMatch> WindowMatch { get; set; }
                     public class QueryContentResponseBodyWindowMatchesWindowMatchesWindowMatchWindowMatch : TeaModel {
-                        /// <summary>
-                        /// <para>Text content.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>AnalyticDB for PostgreSQL is a cloud-native data warehouse service that provides large-scale parallel processing (MPP) capabilities for massive online data analysis.</para>
-                        /// </summary>
                         [NameInMap("Content")]
                         [Validation(Required=false)]
                         public string Content { get; set; }
 
-                        /// <summary>
-                        /// <para>File name.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>my_doc.txt</para>
-                        /// </summary>
                         [NameInMap("FileName")]
                         [Validation(Required=false)]
                         public string FileName { get; set; }
 
-                        /// <summary>
-                        /// <para>Unique ID of the vector data.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>doca-2345</para>
-                        /// </summary>
                         [NameInMap("Id")]
                         [Validation(Required=false)]
                         public string Id { get; set; }
 
-                        /// <summary>
-                        /// <para>Metadata information when the document loader was loaded.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>{&quot;page_pos&quot;: 2}</para>
-                        /// </summary>
                         [NameInMap("LoaderMetadata")]
                         [Validation(Required=false)]
                         public string LoaderMetadata { get; set; }
 
-                        /// <summary>
-                        /// <para>Metadata map.</para>
-                        /// </summary>
                         [NameInMap("Metadata")]
                         [Validation(Required=false)]
                         public Dictionary<string, string> Metadata { get; set; }

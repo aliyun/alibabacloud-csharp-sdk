@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public int? Count { get; set; }
 
-        /// <summary>
-        /// <para>The queried document collections.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public ListDocumentCollectionsResponseBodyItems Items { get; set; }
@@ -30,72 +27,30 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<ListDocumentCollectionsResponseBodyItemsCollectionList> CollectionList { get; set; }
             public class ListDocumentCollectionsResponseBodyItemsCollectionList : TeaModel {
-                /// <summary>
-                /// <para>The name of the document collection.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>document</para>
-                /// </summary>
                 [NameInMap("CollectionName")]
                 [Validation(Required=false)]
                 public string CollectionName { get; set; }
 
-                /// <summary>
-                /// <para>The number of vector dimensions.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1536</para>
-                /// </summary>
                 [NameInMap("Dimension")]
                 [Validation(Required=false)]
                 public int? Dimension { get; set; }
 
-                /// <summary>
-                /// <para>The name of the vector algorithm.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>text-embeddding-v1</para>
-                /// </summary>
                 [NameInMap("EmbeddingModel")]
                 [Validation(Required=false)]
                 public string EmbeddingModel { get; set; }
 
-                /// <summary>
-                /// <para>The fields that are used for full-text search. Multiple fields are separated by commas (,).</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>title</para>
-                /// </summary>
                 [NameInMap("FullTextRetrievalFields")]
                 [Validation(Required=false)]
                 public string FullTextRetrievalFields { get; set; }
 
-                /// <summary>
-                /// <para>The metadata.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>{\&quot;page\&quot;: \&quot;int\&quot;, \&quot;title\&quot;: \&quot;text\&quot;}</para>
-                /// </summary>
                 [NameInMap("Metadata")]
                 [Validation(Required=false)]
                 public string Metadata { get; set; }
 
-                /// <summary>
-                /// <para>The vector similarity algorithm.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cosine</para>
-                /// </summary>
                 [NameInMap("Metrics")]
                 [Validation(Required=false)]
                 public string Metrics { get; set; }
 
-                /// <summary>
-                /// <para>The analyzer that is used for full-text search.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>zh_cn</para>
-                /// </summary>
                 [NameInMap("Parser")]
                 [Validation(Required=false)]
                 public string Parser { get; set; }

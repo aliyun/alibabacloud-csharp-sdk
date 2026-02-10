@@ -16,9 +16,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public GetStatementResultResponseBodyData Data { get; set; }
         public class GetStatementResultResponseBodyData : TeaModel {
-            /// <summary>
-            /// <para>List of column metadata.</para>
-            /// </summary>
             [NameInMap("ColumnMetadata")]
             [Validation(Required=false)]
             public GetStatementResultResponseBodyDataColumnMetadata ColumnMetadata { get; set; }
@@ -29,9 +26,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
             }
 
-            /// <summary>
-            /// <para>Multiple rows of data.</para>
-            /// </summary>
             [NameInMap("Records")]
             [Validation(Required=false)]
             public GetStatementResultResponseBodyDataRecords Records { get; set; }

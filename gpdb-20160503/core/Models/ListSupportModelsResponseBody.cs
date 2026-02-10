@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListSupportModelsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The list of supported model names.</para>
-        /// </summary>
         [NameInMap("ModelNames")]
         [Validation(Required=false)]
         public ListSupportModelsResponseBodyModelNames ModelNames { get; set; }

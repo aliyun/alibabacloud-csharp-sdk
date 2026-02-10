@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The queried schemas.</para>
-        /// </summary>
         [NameInMap("Schemas")]
         [Validation(Required=false)]
         public ListSchemasResponseBodySchemas Schemas { get; set; }

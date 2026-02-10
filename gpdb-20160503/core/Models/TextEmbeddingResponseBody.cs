@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The embedding results.</para>
-        /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public TextEmbeddingResponseBodyResults Results { get; set; }
@@ -40,9 +37,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<TextEmbeddingResponseBodyResultsResults> Results { get; set; }
             public class TextEmbeddingResponseBodyResultsResults : TeaModel {
-                /// <summary>
-                /// <para>The embedding values.</para>
-                /// </summary>
                 [NameInMap("Embedding")]
                 [Validation(Required=false)]
                 public TextEmbeddingResponseBodyResultsResultsEmbedding Embedding { get; set; }
@@ -53,12 +47,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
                 }
 
-                /// <summary>
-                /// <para>The number of the embedding in the Input request parameter, which starts from 0.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("Index")]
                 [Validation(Required=false)]
                 public int? Index { get; set; }

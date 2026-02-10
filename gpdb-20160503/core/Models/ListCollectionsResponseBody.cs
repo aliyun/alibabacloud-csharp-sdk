@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListCollectionsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The queried vector collections.</para>
-        /// </summary>
         [NameInMap("Collections")]
         [Validation(Required=false)]
         public ListCollectionsResponseBodyCollections Collections { get; set; }

@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// <para>The queried namespaces.</para>
-        /// </summary>
         [NameInMap("Namespaces")]
         [Validation(Required=false)]
         public ListNamespacesResponseBodyNamespaces Namespaces { get; set; }

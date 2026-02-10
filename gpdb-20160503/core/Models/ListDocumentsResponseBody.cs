@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public int? Count { get; set; }
 
-        /// <summary>
-        /// <para>The queried documents.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public ListDocumentsResponseBodyItems Items { get; set; }
@@ -30,22 +27,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<ListDocumentsResponseBodyItemsDocumentList> DocumentList { get; set; }
             public class ListDocumentsResponseBodyItemsDocumentList : TeaModel {
-                /// <summary>
-                /// <para>The name of the document.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>music.txt</para>
-                /// </summary>
                 [NameInMap("FileName")]
                 [Validation(Required=false)]
                 public string FileName { get; set; }
 
-                /// <summary>
-                /// <para>The source of the document.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="http://oss.xxx/music.txt">http://oss.xxx/music.txt</a></para>
-                /// </summary>
                 [NameInMap("Source")]
                 [Validation(Required=false)]
                 public string Source { get; set; }

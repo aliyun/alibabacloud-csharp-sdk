@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListDatabasesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The queried databases.</para>
-        /// </summary>
         [NameInMap("Databases")]
         [Validation(Required=false)]
         public ListDatabasesResponseBodyDatabases Databases { get; set; }

@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>Rerank results.</para>
-        /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public RerankResponseBodyResults Results { get; set; }
@@ -40,32 +37,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<RerankResponseBodyResultsResults> Results { get; set; }
             public class RerankResponseBodyResultsResults : TeaModel {
-                /// <summary>
-                /// <para>Re-ordered document information.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ADBPG is the OLAP database of Alibaba Cloud.</para>
-                /// </summary>
                 [NameInMap("Document")]
                 [Validation(Required=false)]
                 public string Document { get; set; }
 
-                /// <summary>
-                /// <para>Index of this document in the request parameter Documents, starting from 0.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Index")]
                 [Validation(Required=false)]
                 public int? Index { get; set; }
 
-                /// <summary>
-                /// <para>Rerank similarity score.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2.31412</para>
-                /// </summary>
                 [NameInMap("RelevanceScore")]
                 [Validation(Required=false)]
                 public float? RelevanceScore { get; set; }

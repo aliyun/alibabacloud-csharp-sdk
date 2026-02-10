@@ -75,6 +75,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The vector data that you want to upload.</para>
+        /// </summary>
         [NameInMap("Rows")]
         [Validation(Required=false)]
         public string RowsShrink { get; set; }

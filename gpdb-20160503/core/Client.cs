@@ -1980,7 +1980,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check Hadoop Cluster Network Connectivity</para>
+        /// <para>Checks the network connectivity of a Hadoop external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2034,7 +2034,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check Hadoop Cluster Network Connectivity</para>
+        /// <para>Checks the network connectivity of a Hadoop external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2088,7 +2088,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check Hadoop Cluster Network Connectivity</para>
+        /// <para>Checks the network connectivity of a Hadoop external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2106,7 +2106,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check Hadoop Cluster Network Connectivity</para>
+        /// <para>Checks the network connectivity of a Hadoop external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2268,7 +2268,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a service-linked role is created.</para>
+        /// <para>Checks whether a service-linked role is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2310,7 +2310,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a service-linked role is created.</para>
+        /// <para>Checks whether a service-linked role is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2352,7 +2352,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a service-linked role is created.</para>
+        /// <para>Checks whether a service-linked role is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2370,7 +2370,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a service-linked role is created.</para>
+        /// <para>Checks whether a service-linked role is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4672,7 +4672,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install extensions.</para>
+        /// <para>Installs extensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4726,7 +4726,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install extensions.</para>
+        /// <para>Installs extensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4780,7 +4780,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install extensions.</para>
+        /// <para>Installs extensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4798,7 +4798,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install extensions.</para>
+        /// <para>Installs extensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6792,7 +6792,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create External Data Source Configuration</para>
+        /// <para>Creates a real-time data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6858,7 +6858,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create External Data Source Configuration</para>
+        /// <para>Creates a real-time data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6924,7 +6924,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create External Data Source Configuration</para>
+        /// <para>Creates a real-time data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6942,7 +6942,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create External Data Source Configuration</para>
+        /// <para>Creates a real-time data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7318,6 +7318,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["DiskPerformanceLevel"] = request.DiskPerformanceLevel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 query["ProjectName"] = request.ProjectName;
@@ -7337,6 +7345,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
             {
                 query["StorageSize"] = request.StorageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
+            {
+                query["UsedTime"] = request.UsedTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -7405,6 +7417,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["DiskPerformanceLevel"] = request.DiskPerformanceLevel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
                 query["ProjectName"] = request.ProjectName;
@@ -7424,6 +7444,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
             {
                 query["StorageSize"] = request.StorageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
+            {
+                query["UsedTime"] = request.UsedTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -7904,7 +7928,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据库账号</para>
+        /// <para>Deletes a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7950,7 +7974,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据库账号</para>
+        /// <para>Deletes a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7996,7 +8020,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据库账号</para>
+        /// <para>Deletes a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8014,7 +8038,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据库账号</para>
+        /// <para>Deletes a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9580,7 +9604,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstall an extension.</para>
+        /// <para>Uninstalls extensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9634,7 +9658,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstall an extension.</para>
+        /// <para>Uninstalls extensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9688,7 +9712,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstall an extension.</para>
+        /// <para>Uninstalls extensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9706,7 +9730,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstall an extension.</para>
+        /// <para>Uninstalls extensions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9860,7 +9884,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除hadoop数据源</para>
+        /// <para>Deletes a Hadoop external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9910,7 +9934,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除hadoop数据源</para>
+        /// <para>Deletes a Hadoop external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9960,7 +9984,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除hadoop数据源</para>
+        /// <para>Deletes a Hadoop external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9978,7 +10002,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除hadoop数据源</para>
+        /// <para>Deletes a Hadoop external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11040,7 +11064,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a real-time data service.</para>
+        /// <para>Deletes the configurations of an external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11090,7 +11114,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a real-time data service.</para>
+        /// <para>Deletes the configurations of an external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11140,7 +11164,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a real-time data service.</para>
+        /// <para>Deletes the configurations of an external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11158,7 +11182,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a real-time data service.</para>
+        /// <para>Deletes the configurations of an external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11312,7 +11336,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a real-time data service job.</para>
+        /// <para>Deletes a real-time data synchronization job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11362,7 +11386,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a real-time data service job.</para>
+        /// <para>Deletes a real-time data synchronization job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11412,7 +11436,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a real-time data service job.</para>
+        /// <para>Deletes a real-time data synchronization job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11430,7 +11454,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a real-time data service job.</para>
+        /// <para>Deletes a real-time data synchronization job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16448,7 +16472,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the state of data sharing for AnalyticDB for PostgreSQL instances.</para>
+        /// <para>Queries the status of data sharing for AnalyticDB for PostgreSQL instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16515,7 +16539,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the state of data sharing for AnalyticDB for PostgreSQL instances.</para>
+        /// <para>Queries the status of data sharing for AnalyticDB for PostgreSQL instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16582,7 +16606,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the state of data sharing for AnalyticDB for PostgreSQL instances.</para>
+        /// <para>Queries the status of data sharing for AnalyticDB for PostgreSQL instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16605,7 +16629,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the state of data sharing for AnalyticDB for PostgreSQL instances.</para>
+        /// <para>Queries the status of data sharing for AnalyticDB for PostgreSQL instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16936,7 +16960,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all databases and database accounts for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Queries all databases and database accounts of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16985,7 +17009,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all databases and database accounts for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Queries all databases and database accounts of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17034,7 +17058,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all databases and database accounts for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Queries all databases and database accounts of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17059,7 +17083,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all databases and database accounts for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Queries all databases and database accounts of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17972,7 +17996,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get download records</para>
+        /// <para>Queries the last five download records of slow query logs for an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18014,7 +18038,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get download records</para>
+        /// <para>Queries the last five download records of slow query logs for an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18056,7 +18080,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get download records</para>
+        /// <para>Queries the last five download records of slow query logs for an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18074,7 +18098,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get download records</para>
+        /// <para>Queries the last five download records of slow query logs for an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18364,7 +18388,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries E-MapReduce (EMR) Hadoop clusters in a specific virtual private cloud (VPC).</para>
+        /// <para>Queries a list of E-MapReduce (EMR) clusters in a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18410,7 +18434,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries E-MapReduce (EMR) Hadoop clusters in a specific virtual private cloud (VPC).</para>
+        /// <para>Queries a list of E-MapReduce (EMR) clusters in a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18456,7 +18480,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries E-MapReduce (EMR) Hadoop clusters in a specific virtual private cloud (VPC).</para>
+        /// <para>Queries a list of E-MapReduce (EMR) clusters in a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18474,7 +18498,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries E-MapReduce (EMR) Hadoop clusters in a specific virtual private cloud (VPC).</para>
+        /// <para>Queries a list of E-MapReduce (EMR) clusters in a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20668,7 +20692,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述一个实例是否处于平衡状态</para>
+        /// <para>Queries the rebalance status of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20710,7 +20734,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述一个实例是否处于平衡状态</para>
+        /// <para>Queries the rebalance status of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20752,7 +20776,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述一个实例是否处于平衡状态</para>
+        /// <para>Queries the rebalance status of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20770,7 +20794,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述一个实例是否处于平衡状态</para>
+        /// <para>Queries the rebalance status of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22256,7 +22280,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete External Data Source Configuration</para>
+        /// <para>Queries a real-time data synchronization job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22306,7 +22330,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete External Data Source Configuration</para>
+        /// <para>Queries a real-time data synchronization job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22356,7 +22380,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete External Data Source Configuration</para>
+        /// <para>Queries a real-time data synchronization job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22374,7 +22398,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete External Data Source Configuration</para>
+        /// <para>Queries a real-time data synchronization job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24948,7 +24972,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特定的账号信息</para>
+        /// <para>Queries the information about a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24994,7 +25018,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特定的账号信息</para>
+        /// <para>Queries the information about a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25040,7 +25064,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特定的账号信息</para>
+        /// <para>Queries the information about a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25058,7 +25082,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特定的账号信息</para>
+        /// <para>Queries the information about a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28120,7 +28144,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例外表配置列表</para>
+        /// <para>Queries a list of data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28174,7 +28198,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例外表配置列表</para>
+        /// <para>Queries a list of data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28228,7 +28252,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例外表配置列表</para>
+        /// <para>Queries a list of data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28246,7 +28270,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例外表配置列表</para>
+        /// <para>Queries a list of data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29064,7 +29088,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Homogeneous Data Source</para>
+        /// <para>Queries remote AnalyticDB data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29114,7 +29138,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Homogeneous Data Source</para>
+        /// <para>Queries remote AnalyticDB data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29164,7 +29188,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Homogeneous Data Source</para>
+        /// <para>Queries remote AnalyticDB data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29182,7 +29206,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Homogeneous Data Source</para>
+        /// <para>Queries remote AnalyticDB data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29872,7 +29896,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries real-time service data sources.</para>
+        /// <para>Queries a list of real-time service data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29926,7 +29950,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries real-time service data sources.</para>
+        /// <para>Queries a list of real-time service data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29980,7 +30004,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries real-time service data sources.</para>
+        /// <para>Queries a list of real-time service data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29998,7 +30022,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries real-time service data sources.</para>
+        /// <para>Queries a list of real-time service data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30656,7 +30680,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags that are added to AnalyticDB for PostgreSQL instances.</para>
+        /// <para>Queries a list of AnalyticDB for PostgreSQL instances that have specific tags added.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30730,7 +30754,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags that are added to AnalyticDB for PostgreSQL instances.</para>
+        /// <para>Queries a list of AnalyticDB for PostgreSQL instances that have specific tags added.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30804,7 +30828,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags that are added to AnalyticDB for PostgreSQL instances.</para>
+        /// <para>Queries a list of AnalyticDB for PostgreSQL instances that have specific tags added.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30822,7 +30846,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags that are added to AnalyticDB for PostgreSQL instances.</para>
+        /// <para>Queries a list of AnalyticDB for PostgreSQL instances that have specific tags added.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32288,7 +32312,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>包年包月/按量付费转换改造</para>
+        /// <para>Switches between billing methods for an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32342,7 +32366,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>包年包月/按量付费转换改造</para>
+        /// <para>Switches between billing methods for an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32396,7 +32420,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>包年包月/按量付费转换改造</para>
+        /// <para>Switches between billing methods for an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32414,7 +32438,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>包年包月/按量付费转换改造</para>
+        /// <para>Switches between billing methods for an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33788,7 +33812,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Homogeneous Data Source</para>
+        /// <para>Modifies a remote AnalyticDB data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33850,7 +33874,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Homogeneous Data Source</para>
+        /// <para>Modifies a remote AnalyticDB data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33912,7 +33936,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Homogeneous Data Source</para>
+        /// <para>Modifies a remote AnalyticDB data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33930,7 +33954,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Homogeneous Data Source</para>
+        /// <para>Modifies a remote AnalyticDB data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34296,7 +34320,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a real-time data service.</para>
+        /// <para>Modifies the configurations of an external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34354,7 +34378,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a real-time data service.</para>
+        /// <para>Modifies the configurations of an external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34412,7 +34436,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a real-time data service.</para>
+        /// <para>Modifies the configurations of an external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34430,7 +34454,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a real-time data service.</para>
+        /// <para>Modifies the configurations of an external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35064,7 +35088,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the vector engine optimization configuration of an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Modifies the vector search engine optimization configuration of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35114,7 +35138,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the vector engine optimization configuration of an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Modifies the vector search engine optimization configuration of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35164,7 +35188,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the vector engine optimization configuration of an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Modifies the vector search engine optimization configuration of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35182,7 +35206,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the vector engine optimization configuration of an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Modifies the vector search engine optimization configuration of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35820,7 +35844,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query</para>
+        /// <para>Retrieves vector data and metadata from a document collection by using natural statements.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35974,7 +35998,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query</para>
+        /// <para>Retrieves vector data and metadata from a document collection by using natural statements.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36128,7 +36152,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query</para>
+        /// <para>Retrieves vector data and metadata from a document collection by using natural statements.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36146,7 +36170,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query</para>
+        /// <para>Retrieves vector data and metadata from a document collection by using natural statements.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36824,7 +36848,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Score and re-order documents using a model</para>
+        /// <para>The Rerank operation can resolve the issue of inaccurate ranking of vector and full-text search results. It re-scores and reranks the retrieved data through semantic understanding to significantly improve the relevance and accuracy of the results. AnalyticDB for PostgreSQL allows you to rerank search results by using Rerank models, but does not provide models.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36906,7 +36930,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Score and re-order documents using a model</para>
+        /// <para>The Rerank operation can resolve the issue of inaccurate ranking of vector and full-text search results. It re-scores and reranks the retrieved data through semantic understanding to significantly improve the relevance and accuracy of the results. AnalyticDB for PostgreSQL allows you to rerank search results by using Rerank models, but does not provide models.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36988,7 +37012,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Score and re-order documents using a model</para>
+        /// <para>The Rerank operation can resolve the issue of inaccurate ranking of vector and full-text search results. It re-scores and reranks the retrieved data through semantic understanding to significantly improve the relevance and accuracy of the results. AnalyticDB for PostgreSQL allows you to rerank search results by using Rerank models, but does not provide models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37006,7 +37030,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Score and re-order documents using a model</para>
+        /// <para>The Rerank operation can resolve the issue of inaccurate ranking of vector and full-text search results. It re-scores and reranks the retrieved data through semantic understanding to significantly improve the relevance and accuracy of the results. AnalyticDB for PostgreSQL allows you to rerank search results by using Rerank models, but does not provide models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38920,7 +38944,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a sample dataset from an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Releases the sample dataset from an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -38973,7 +38997,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a sample dataset from an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Releases the sample dataset from an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -39026,7 +39050,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a sample dataset from an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Releases the sample dataset from an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -39051,7 +39075,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a sample dataset from an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Releases the sample dataset from an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -39076,7 +39100,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Remove resource tags</para>
+        /// <para>Removes tags from AnalyticDB for PostgreSQL instances. If the tags that you remove are not added to other instances, the tags are automatically deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39150,7 +39174,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Remove resource tags</para>
+        /// <para>Removes tags from AnalyticDB for PostgreSQL instances. If the tags that you remove are not added to other instances, the tags are automatically deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39224,7 +39248,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Remove resource tags</para>
+        /// <para>Removes tags from AnalyticDB for PostgreSQL instances. If the tags that you remove are not added to other instances, the tags are automatically deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39242,7 +39266,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Remove resource tags</para>
+        /// <para>Removes tags from AnalyticDB for PostgreSQL instances. If the tags that you remove are not added to other instances, the tags are automatically deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">

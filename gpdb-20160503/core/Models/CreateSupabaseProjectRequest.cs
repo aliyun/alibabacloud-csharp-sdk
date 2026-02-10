@@ -49,6 +49,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string DiskPerformanceLevel { get; set; }
 
+        [NameInMap("PayType")]
+        [Validation(Required=false)]
+        public string PayType { get; set; }
+
+        [NameInMap("Period")]
+        [Validation(Required=false)]
+        public string Period { get; set; }
+
         /// <summary>
         /// <para>The name of the Supabase project. The name must meet the following requirements:</para>
         /// <list type="bullet">
@@ -107,6 +115,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("StorageSize")]
         [Validation(Required=false)]
         public long? StorageSize { get; set; }
+
+        [NameInMap("UsedTime")]
+        [Validation(Required=false)]
+        public string UsedTime { get; set; }
 
         /// <summary>
         /// <para>The vSwitch ID.</para>

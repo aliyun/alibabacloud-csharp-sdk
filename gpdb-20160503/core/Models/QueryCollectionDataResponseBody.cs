@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class QueryCollectionDataResponseBody : TeaModel {
-        /// <summary>
-        /// <para>Data list.</para>
-        /// </summary>
         [NameInMap("Matches")]
         [Validation(Required=false)]
         public QueryCollectionDataResponseBodyMatches Matches { get; set; }
@@ -20,19 +17,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<QueryCollectionDataResponseBodyMatchesMatch> Match { get; set; }
             public class QueryCollectionDataResponseBodyMatchesMatch : TeaModel {
-                /// <summary>
-                /// <para>The unique ID of the vector data.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>doca-1234</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
-                /// <summary>
-                /// <para>Metadata.</para>
-                /// </summary>
                 [NameInMap("Metadata")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> Metadata { get; set; }
@@ -41,12 +29,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public Dictionary<string, object> MetadataV2 { get; set; }
 
-                /// <summary>
-                /// <para>The similarity score of this data, which is related to the algorithm <c>(l2/ip/cosine)</c> specified when creating the index.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.12345</para>
-                /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public double? Score { get; set; }
@@ -77,9 +59,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
                 }
 
-                /// <summary>
-                /// <para>List of vector data.</para>
-                /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
                 public QueryCollectionDataResponseBodyMatchesMatchValues Values { get; set; }

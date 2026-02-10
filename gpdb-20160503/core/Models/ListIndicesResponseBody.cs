@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListIndicesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The queried indexes.</para>
-        /// </summary>
         [NameInMap("Indices")]
         [Validation(Required=false)]
         public ListIndicesResponseBodyIndices Indices { get; set; }
@@ -20,42 +17,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<ListIndicesResponseBodyIndicesIndices> Indices { get; set; }
             public class ListIndicesResponseBodyIndicesIndices : TeaModel {
-                /// <summary>
-                /// <para>The name of the collection.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testcollection</para>
-                /// </summary>
                 [NameInMap("Collection")]
                 [Validation(Required=false)]
                 public string Collection { get; set; }
 
-                /// <summary>
-                /// <para>The definition of the index.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>CREATE INDEX testindex ON mynamespace. testcollection</para>
-                /// </summary>
                 [NameInMap("IndexDef")]
                 [Validation(Required=false)]
                 public string IndexDef { get; set; }
 
-                /// <summary>
-                /// <para>The name of the index.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testindex</para>
-                /// </summary>
                 [NameInMap("IndexName")]
                 [Validation(Required=false)]
                 public string IndexName { get; set; }
 
-                /// <summary>
-                /// <para>The namespace to which the pod belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>mynamespace</para>
-                /// </summary>
                 [NameInMap("Namespace")]
                 [Validation(Required=false)]
                 public string Namespace { get; set; }

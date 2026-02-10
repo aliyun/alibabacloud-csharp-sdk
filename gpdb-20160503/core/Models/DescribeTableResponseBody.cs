@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeTableResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The columns of the table.</para>
-        /// </summary>
         [NameInMap("ColumnList")]
         [Validation(Required=false)]
         public DescribeTableResponseBodyColumnList ColumnList { get; set; }

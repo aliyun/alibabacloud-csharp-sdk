@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The roles.</para>
-        /// </summary>
         [NameInMap("RoleList")]
         [Validation(Required=false)]
         public DescribeRolesResponseBodyRoleList RoleList { get; set; }

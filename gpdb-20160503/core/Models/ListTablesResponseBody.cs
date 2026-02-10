@@ -53,9 +53,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
-        /// <summary>
-        /// <para>The queried tables.</para>
-        /// </summary>
         [NameInMap("Tables")]
         [Validation(Required=false)]
         public ListTablesResponseBodyTables Tables { get; set; }

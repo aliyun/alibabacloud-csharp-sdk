@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateSupabaseProjectResponseBody : TeaModel {
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public string OrderId { get; set; }
+
         /// <summary>
         /// <para>The Supabase project ID.</para>
         /// 

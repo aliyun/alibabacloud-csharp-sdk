@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceNetInfoResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The connection information of the instance.</para>
-        /// </summary>
         [NameInMap("DBInstanceNetInfos")]
         [Validation(Required=false)]
         public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfos DBInstanceNetInfos { get; set; }
@@ -20,86 +17,34 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo> DBInstanceNetInfo { get; set; }
             public class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo : TeaModel {
-                /// <summary>
-                /// <para>The type of the endpoint.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Intranet</para>
-                /// </summary>
                 [NameInMap("AddressType")]
                 [Validation(Required=false)]
                 public string AddressType { get; set; }
 
-                /// <summary>
-                /// <para>The endpoint that is used to connect to the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>gp-xxxxxxx.gpdb.rds.aliyuncs.com</para>
-                /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
                 public string ConnectionString { get; set; }
 
-                /// <summary>
-                /// <para>The IP address.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>127.0.0.1</para>
-                /// </summary>
                 [NameInMap("IPAddress")]
                 [Validation(Required=false)]
                 public string IPAddress { get; set; }
 
-                /// <summary>
-                /// <para>The type of the IP address.</para>
-                /// <list type="bullet">
-                /// <item><description>Valid values for instances in the classic network: Inner and Public.</description></item>
-                /// <item><description>Valid values for instances in a virtual private cloud (VPC): Private and Public.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Inner</para>
-                /// </summary>
                 [NameInMap("IPType")]
                 [Validation(Required=false)]
                 public string IPType { get; set; }
 
-                /// <summary>
-                /// <para>The port number.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3432</para>
-                /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
-                /// <summary>
-                /// <para>The VPC ID of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vpc-xxxxxxx</para>
-                /// </summary>
                 [NameInMap("VPCId")]
                 [Validation(Required=false)]
                 public string VPCId { get; set; }
 
-                /// <summary>
-                /// <para>The vSwitch ID. Multiple IDs are separated by commas (,).</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vsw-xxxxxxxx</para>
-                /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the instance that is deployed in a VPC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vpc-xxxxxxx</para>
-                /// </summary>
                 [NameInMap("VpcInstanceId")]
                 [Validation(Required=false)]
                 public string VpcInstanceId { get; set; }

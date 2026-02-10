@@ -22,9 +22,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string EmbeddingTokens { get; set; }
 
-        /// <summary>
-        /// <para>The details of the entity.</para>
-        /// </summary>
         [NameInMap("Entities")]
         [Validation(Required=false)]
         public QueryKnowledgeBasesContentResponseBodyEntities Entities { get; set; }
@@ -33,49 +30,22 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<QueryKnowledgeBasesContentResponseBodyEntitiesEntities> Entities { get; set; }
             public class QueryKnowledgeBasesContentResponseBodyEntitiesEntities : TeaModel {
-                /// <summary>
-                /// <para>The entity description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>A former advisor at DeepMind.</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The name of the entity.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Dr. Wang</para>
-                /// </summary>
                 [NameInMap("Entity")]
                 [Validation(Required=false)]
                 public string Entity { get; set; }
 
-                /// <summary>
-                /// <para>The name of the file.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>my_doc.txt</para>
-                /// </summary>
                 [NameInMap("FileName")]
                 [Validation(Required=false)]
                 public string FileName { get; set; }
 
-                /// <summary>
-                /// <para>The entity ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
-                /// <summary>
-                /// <para>The entity type.</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -84,9 +54,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         }
 
-        /// <summary>
-        /// <para>A single data record.</para>
-        /// </summary>
         [NameInMap("Matches")]
         [Validation(Required=false)]
         public QueryKnowledgeBasesContentResponseBodyMatches Matches { get; set; }
@@ -95,87 +62,38 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<QueryKnowledgeBasesContentResponseBodyMatchesMatchList> MatchList { get; set; }
             public class QueryKnowledgeBasesContentResponseBodyMatchesMatchList : TeaModel {
-                /// <summary>
-                /// <para>The content of the text.</para>
-                /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
-                /// <summary>
-                /// <para>The name of the file.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>my_doc.txt</para>
-                /// </summary>
                 [NameInMap("FileName")]
                 [Validation(Required=false)]
                 public string FileName { get; set; }
 
-                /// <summary>
-                /// <para>The public network URL of the image result. By default, the URL is valid for 2 hours.</para>
-                /// <para>You can use the UrlExpiration parameter to specify a validity period.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="https://xxx-cn-beijing.aliyuncs.com/image/test.png">https://xxx-cn-beijing.aliyuncs.com/image/test.png</a></para>
-                /// </summary>
                 [NameInMap("FileURL")]
                 [Validation(Required=false)]
                 public string FileURL { get; set; }
 
-                /// <summary>
-                /// <para>The unique ID of the vector data.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>doca-1234</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
-                /// <summary>
-                /// <para>Document loader metadata.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>{&quot;page_pos&quot;: 1}</para>
-                /// </summary>
                 [NameInMap("LoaderMetadata")]
                 [Validation(Required=false)]
                 public string LoaderMetadata { get; set; }
 
-                /// <summary>
-                /// <para>The metadata map.</para>
-                /// </summary>
                 [NameInMap("Metadata")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> Metadata { get; set; }
 
-                /// <summary>
-                /// <para>The rerank score.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>6.2345</para>
-                /// </summary>
                 [NameInMap("RerankScore")]
                 [Validation(Required=false)]
                 public double? RerankScore { get; set; }
 
-                /// <summary>
-                /// <para>The source of the retrieval results. 1 indicates vector retrieval, 2 indicates full-text retrieval, and 3 indicates dual-path retrieval.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("RetrievalSource")]
                 [Validation(Required=false)]
                 public int? RetrievalSource { get; set; }
 
-                /// <summary>
-                /// <para>The similarity score of the data. It is related to the algorithm (l2, ip, or cosine) that is specified when you create an index.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.12345</para>
-                /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public double? Score { get; set; }
@@ -194,9 +112,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// <para>The details of the relationship edge.</para>
-        /// </summary>
         [NameInMap("Relations")]
         [Validation(Required=false)]
         public QueryKnowledgeBasesContentResponseBodyRelations Relations { get; set; }
@@ -205,49 +120,22 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<QueryKnowledgeBasesContentResponseBodyRelationsRelations> Relations { get; set; }
             public class QueryKnowledgeBasesContentResponseBodyRelationsRelations : TeaModel {
-                /// <summary>
-                /// <para>The description of the relationship edge.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Dr. Wang previously served as an advisor at DeepMind.</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The name of the file.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>my_doc.txt</para>
-                /// </summary>
                 [NameInMap("FileName")]
                 [Validation(Required=false)]
                 public string FileName { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the link.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
-                /// <summary>
-                /// <para>The source entity.</para>
-                /// </summary>
                 [NameInMap("SourceEntity")]
                 [Validation(Required=false)]
                 public string SourceEntity { get; set; }
 
-                /// <summary>
-                /// <para>The destination entity.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Dr. Wang</para>
-                /// </summary>
                 [NameInMap("TargetEntity")]
                 [Validation(Required=false)]
                 public string TargetEntity { get; set; }

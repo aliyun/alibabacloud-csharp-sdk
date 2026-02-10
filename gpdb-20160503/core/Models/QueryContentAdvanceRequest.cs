@@ -23,6 +23,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Collection { get; set; }
 
+        /// <summary>
+        /// <para>Text content for retrieval.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>What is ADBPG?</para>
+        /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
