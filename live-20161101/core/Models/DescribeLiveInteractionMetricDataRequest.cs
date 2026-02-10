@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? BeginTs { get; set; }
 
+        [NameInMap("ChannelId")]
+        [Validation(Required=false)]
+        public string ChannelId { get; set; }
+
         /// <summary>
         /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
