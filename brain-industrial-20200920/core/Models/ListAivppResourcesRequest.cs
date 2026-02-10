@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.Brain_industrial20200920.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>DATA</para>
+        /// </summary>
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]

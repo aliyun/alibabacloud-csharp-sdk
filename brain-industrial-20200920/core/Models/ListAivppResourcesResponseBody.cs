@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Brain_industrial20200920.Models
         [Validation(Required=false)]
         public List<ListAivppResourcesResponseBodyData> Data { get; set; }
         public class ListAivppResourcesResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10000</para>
+            /// </summary>
+            [NameInMap("ConnectNum")]
+            [Validation(Required=false)]
+            public int? ConnectNum { get; set; }
+
             [NameInMap("Detail")]
             [Validation(Required=false)]
             public string Detail { get; set; }
@@ -56,6 +64,14 @@ namespace AlibabaCloud.SDK.Brain_industrial20200920.Models
             [NameInMap("LeftQuantity")]
             [Validation(Required=false)]
             public string LeftQuantity { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>500</para>
+            /// </summary>
+            [NameInMap("MessageTps")]
+            [Validation(Required=false)]
+            public int? MessageTps { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
