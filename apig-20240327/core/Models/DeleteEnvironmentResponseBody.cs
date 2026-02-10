@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class DeleteEnvironmentResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code.</para>
+        /// <para>The status code returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID, used for tracing the request chain.</para>
+        /// <para>The request ID. You can use the ID to trace the request link.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C61E30D3-579A-5B43-994E-31E02EDC9129</para>

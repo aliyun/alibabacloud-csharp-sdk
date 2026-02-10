@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class RiskCheckResults : TeaModel {
+        /// <summary>
+        /// <para>The check time</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1234567890000</para>
+        /// </summary>
         [NameInMap("checkTime")]
         [Validation(Required=false)]
         public long? CheckTime { get; set; }
 
         /// <summary>
-        /// <para>网关实例的唯一标识符</para>
+        /// <para>The gateway ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-0364f863b1a04474911b48cd6d51d03d</para>
@@ -24,13 +30,15 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>实例的基本信息</para>
+        /// <para>The instance metadata</para>
         /// </summary>
         [NameInMap("metadata")]
         [Validation(Required=false)]
         public RiskCheckResultsMetadata Metadata { get; set; }
         public class RiskCheckResultsMetadata : TeaModel {
             /// <summary>
+            /// <para>The cluster type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Ingress</para>
             /// </summary>
@@ -39,6 +47,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ClusterType { get; set; }
 
             /// <summary>
+            /// <para>The replica count</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -47,6 +57,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? Replica { get; set; }
 
             /// <summary>
+            /// <para>The specification</para>
+            /// 
             /// <b>Example:</b>
             /// <para>apigw.small.x1</para>
             /// </summary>
@@ -55,6 +67,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Spec { get; set; }
 
             /// <summary>
+            /// <para>The version</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2.0.14</para>
             /// </summary>
@@ -65,14 +79,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>详细的风险项信息列表</para>
+        /// <para>The risk details list</para>
         /// </summary>
         [NameInMap("riskDetails")]
         [Validation(Required=false)]
         public List<RiskCheckResultsRiskDetails> RiskDetails { get; set; }
         public class RiskCheckResultsRiskDetails : TeaModel {
             /// <summary>
-            /// <para>执行检测的模块名称</para>
+            /// <para>The check module</para>
             /// 
             /// <b>Example:</b>
             /// <para>BaseInfo</para>
@@ -82,24 +96,24 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string CheckModule { get; set; }
 
             /// <summary>
-            /// <para>风险相关的详细数据，不同风险类型数据结构不同</para>
+            /// <para>The risk detailed data</para>
             /// </summary>
             [NameInMap("data")]
             [Validation(Required=false)]
             public Dictionary<string, string> Data { get; set; }
 
             /// <summary>
-            /// <para>风险的详细描述，JSON字符串格式</para>
+            /// <para>The risk description</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;desc&quot;:&quot;单节点实例存在架构风险，单点故障会导致服务不可用。建议扩容到2节点及以上。&quot;}</para>
+            /// <para>The version is outdated</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>该风险项的告警通知是否已被屏蔽</para>
+            /// <para>Whether to mute notifications</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -109,7 +123,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? IsNoticeMute { get; set; }
 
             /// <summary>
-            /// <para>风险项的唯一标识码</para>
+            /// <para>The risk code</para>
             /// 
             /// <b>Example:</b>
             /// <para>30010010001</para>
@@ -119,7 +133,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string RiskCode { get; set; }
 
             /// <summary>
-            /// <para>该风险项的等级，可选值：LOW、MEDIUM、HIGH、CRITICAL</para>
+            /// <para>The risk level</para>
             /// 
             /// <b>Example:</b>
             /// <para>HIGH</para>
@@ -129,17 +143,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>风险项的名称</para>
+            /// <para>The risk title</para>
             /// 
             /// <b>Example:</b>
-            /// <para>单节点架构风险</para>
+            /// <para>Version Risk</para>
             /// </summary>
             [NameInMap("riskName")]
             [Validation(Required=false)]
             public string RiskName { get; set; }
 
             /// <summary>
-            /// <para>风险分类，可选值：SYSTEM（系统风险）、VERSION（版本风险）、SAFE（安全风险）、CAPACITY（容量风险）</para>
+            /// <para>The risk type</para>
             /// 
             /// <b>Example:</b>
             /// <para>SYSTEM</para>
@@ -149,20 +163,20 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string RiskType { get; set; }
 
             /// <summary>
-            /// <para>当前实例的风险现状，JSON字符串格式</para>
+            /// <para>The risk situation</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;desc&quot;:&quot;集群节点数为1，不具备高可用能力&quot;}</para>
+            /// <para>Current version is 2 releases behind</para>
             /// </summary>
             [NameInMap("situation")]
             [Validation(Required=false)]
             public string Situation { get; set; }
 
             /// <summary>
-            /// <para>针对该风险的优化建议，JSON字符串格式，包含描述和操作链接</para>
+            /// <para>The fix suggestion</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;desc&quot;:&quot;扩容到2节点及以上&quot;,&quot;links&quot;:[{&quot;descEn&quot;:&quot;click to upgrade specification&quot;,&quot;type&quot;:&quot;upgrade&quot;,&quot;desc&quot;:&quot;点击扩容&quot;}]}</para>
+            /// <para>Upgrade to the latest version</para>
             /// </summary>
             [NameInMap("suggestion")]
             [Validation(Required=false)]
@@ -171,7 +185,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>整体风险等级，可选值：LOW（低风险）、MEDIUM（中风险）、HIGH（高风险）、CRITICAL（严重风险）</para>
+        /// <para>The risk level</para>
         /// 
         /// <b>Example:</b>
         /// <para>MEDIUM</para>
@@ -181,7 +195,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string RiskLevel { get; set; }
 
         /// <summary>
-        /// <para>风险综合评分，取值范围0-100分，分数越高表示风险越低</para>
+        /// <para>The risk score</para>
         /// 
         /// <b>Example:</b>
         /// <para>85</para>
@@ -190,12 +204,18 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public int? Score { get; set; }
 
+        /// <summary>
+        /// <para>The snapshot time</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1234567890000</para>
+        /// </summary>
         [NameInMap("snapshotTime")]
         [Validation(Required=false)]
         public long? SnapshotTime { get; set; }
 
         /// <summary>
-        /// <para>风险检测状态，可选值：SUCCESS（成功）、FAIL（失败）、RUNNING（运行中）</para>
+        /// <para>The execution status</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -205,7 +225,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>检测到的风险项总数量</para>
+        /// <para>The total number of risks</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

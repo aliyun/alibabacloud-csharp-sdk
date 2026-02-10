@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class AddGatewaySecurityGroupRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Description of the security group rule.</para>
+        /// <para>The description of security group rule N.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>商品中心访问安全组</para>
+        /// <para>ProductCenterSG</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Port ranges.</para>
+        /// <para>The port ranges.</para>
         /// </summary>
         [NameInMap("portRanges")]
         [Validation(Required=false)]
         public List<string> PortRanges { get; set; }
 
         /// <summary>
-        /// <para>Security group ID.</para>
+        /// <para>The security group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-wz929kxhcdp****</para>

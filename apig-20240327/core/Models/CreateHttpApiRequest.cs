@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateHttpApiRequest : TeaModel {
+        /// <summary>
+        /// <para>Agent protocols</para>
+        /// </summary>
         [NameInMap("agentProtocols")]
         [Validation(Required=false)]
         public List<string> AgentProtocols { get; set; }
 
         /// <summary>
-        /// <para>The AI API protocols. Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>OpenAI/v1</description></item>
-        /// </list>
+        /// <para>$.parameters[0].schema.properties.authConfig.enumValueTitles</para>
         /// </summary>
         [NameInMap("aiProtocols")]
         [Validation(Required=false)]
         public List<string> AiProtocols { get; set; }
 
         /// <summary>
-        /// <para>The authentication configurations.</para>
+        /// <para>The request parameters for API creation.</para>
         /// </summary>
         [NameInMap("authConfig")]
         [Validation(Required=false)]
         public AuthConfig AuthConfig { get; set; }
 
         /// <summary>
-        /// <para>The API base path, which must start with a forward slash (/).</para>
+        /// <para>$.parameters[0].schema.properties.deployConfigs.items.example</para>
         /// 
         /// <b>Example:</b>
         /// <para>/v1</para>
@@ -41,46 +41,61 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string BasePath { get; set; }
 
         /// <summary>
-        /// <para>The API deployment configurations. Currently, only AI APIs support deployment configurations, and only a single deployment configuration can be passed.</para>
+        /// <para>$.parameters[0].schema.example</para>
         /// </summary>
         [NameInMap("deployConfigs")]
         [Validation(Required=false)]
         public List<HttpApiDeployConfig> DeployConfigs { get; set; }
 
         /// <summary>
-        /// <para>The API description.</para>
+        /// <para>$.parameters[0].schema.properties.aiProtocols.items.description</para>
         /// 
         /// <b>Example:</b>
-        /// <para>API for testing</para>
+        /// <para>$.parameters[0].schema.properties.aiProtocols.items.example</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable authentication.</para>
+        /// <para>Create an API of HTTP type</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("enableAuth")]
         [Validation(Required=false)]
         public bool? EnableAuth { get; set; }
 
+        /// <summary>
+        /// <para>First byte timeout</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
         [NameInMap("firstByteTimeout")]
         [Validation(Required=false)]
         public int? FirstByteTimeout { get; set; }
 
         /// <summary>
-        /// <para>The HTTP Ingress configurations.</para>
+        /// <para>$.parameters[0].schema.properties.deployConfigs.example</para>
         /// </summary>
         [NameInMap("ingressConfig")]
         [Validation(Required=false)]
         public CreateHttpApiRequestIngressConfig IngressConfig { get; set; }
         public class CreateHttpApiRequestIngressConfig : TeaModel {
+            /// <summary>
+            /// <para>Cluster ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>k7v5eobfzttudni2pw***</para>
+            /// </summary>
             [NameInMap("clusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The environment ID.</para>
+            /// <para>$.parameters[0].schema.properties.deployConfigs.enumValueTitles</para>
             /// 
             /// <b>Example:</b>
             /// <para>env-cq146allhtgk***</para>
@@ -90,7 +105,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string EnvironmentId { get; set; }
 
             /// <summary>
-            /// <para>The Ingress Class for listening.</para>
+            /// <para>$.parameters[0].schema.properties.enableAuth.example</para>
             /// 
             /// <b>Example:</b>
             /// <para>mse</para>
@@ -100,7 +115,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string IngressClass { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to update the address in Ingress Status.</para>
+            /// <para>$.parameters[0].schema.properties.authConfig.description</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -112,7 +127,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The source ID.</para>
+            /// <para>$.parameters[0].schema.properties.enableAuth.description</para>
             /// 
             /// <b>Example:</b>
             /// <para>src-crdddallhtgtr***</para>
@@ -123,7 +138,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string SourceId { get; set; }
 
             /// <summary>
-            /// <para>The namespace for listening.</para>
+            /// <para>$.parameters[0].schema.properties.enableAuth.enumValueTitles</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -134,12 +149,18 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         }
 
+        /// <summary>
+        /// <para>Model category</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>llm/text-to-image</para>
+        /// </summary>
         [NameInMap("modelCategory")]
         [Validation(Required=false)]
         public string ModelCategory { get; set; }
 
         /// <summary>
-        /// <para>The API name.</para>
+        /// <para>$.parameters[0].schema.example</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -150,34 +171,34 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The protocols that are used to call the API.</para>
+        /// <para>$.parameters[0].schema.properties.aiProtocols.description</para>
         /// </summary>
         [NameInMap("protocols")]
         [Validation(Required=false)]
         public List<string> Protocols { get; set; }
 
+        /// <summary>
+        /// <para>Whether to remove base path when forwarding</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("removeBasePathOnForward")]
         [Validation(Required=false)]
         public bool? RemoveBasePathOnForward { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>$.parameters[0].schema.properties.authConfig.example</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-aekzgvmlotionbi</para>
+        /// <para>rg-xxx</para>
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The API type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Http</description></item>
-        /// <item><description>Rest</description></item>
-        /// <item><description>WebSocket</description></item>
-        /// <item><description>HttpIngress</description></item>
-        /// </list>
+        /// <para>$.parameters[0].schema.properties.deployConfigs.description</para>
         /// 
         /// <b>Example:</b>
         /// <para>Http</para>
@@ -187,7 +208,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The versioning configuration of the API.</para>
+        /// <para>$.parameters[0].schema.properties.deployConfigs.items.enumValueTitles</para>
         /// </summary>
         [NameInMap("versionConfig")]
         [Validation(Required=false)]

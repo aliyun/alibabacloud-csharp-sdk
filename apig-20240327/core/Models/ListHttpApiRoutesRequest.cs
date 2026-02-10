@@ -59,6 +59,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
+        /// <summary>
+        /// <para>Whether to filter for deployment scenario</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("forDeploy")]
         [Validation(Required=false)]
         public bool? ForDeploy { get; set; }

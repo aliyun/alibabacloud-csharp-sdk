@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateEnvironmentResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response data.</para>
+        /// <para>Schema of Response</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateEnvironmentResponseBodyData Data { get; set; }
         public class CreateEnvironmentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Environment ID.</para>
+            /// <para>The request ID, which is used to trace the call link.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env-cq7l5s5lhtgi6qasrdc0</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>rg-acfmycs5expl7oq</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID, used for tracing the API call chain.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3C3B9A12-3868-5EB9-8BEA-F99E03DD125C</para>

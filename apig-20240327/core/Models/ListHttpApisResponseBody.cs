@@ -13,28 +13,28 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Ok</para>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The APIs.</para>
+        /// <para>Response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListHttpApisResponseBodyData Data { get; set; }
         public class ListHttpApisResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The API information.</para>
+            /// <para>object</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<HttpApiInfoByName> Items { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>Page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>Page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>Total number of items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>Response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Get HTTP API List</para>
         /// 
         /// <b>Example:</b>
         /// <para>585657D2-1C20-5B8A-AF17-D727C6490BE4</para>

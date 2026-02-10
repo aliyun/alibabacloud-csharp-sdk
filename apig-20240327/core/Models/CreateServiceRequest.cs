@@ -37,12 +37,15 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<CreateServiceRequestServiceConfigs> ServiceConfigs { get; set; }
         public class CreateServiceRequestServiceConfigs : TeaModel {
             /// <summary>
-            /// <para>The list of domain names or fixed addresses.</para>
+            /// <para>The list of domain names or fixed IP addresses.</para>
             /// </summary>
             [NameInMap("addresses")]
             [Validation(Required=false)]
             public List<string> Addresses { get; set; }
 
+            /// <summary>
+            /// <para>Agent service configuration</para>
+            /// </summary>
             [NameInMap("agentServiceConfig")]
             [Validation(Required=false)]
             public AgentServiceConfig AgentServiceConfig { get; set; }
@@ -61,6 +64,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public List<string> DnsServers { get; set; }
 
+            /// <summary>
+            /// <para>Express type</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Standard</para>
+            /// </summary>
             [NameInMap("expressType")]
             [Validation(Required=false)]
             public string ExpressType { get; set; }
@@ -91,6 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <item><description>If sourceType is set to K8S, this parameter specifies the namespace where the K8s service resides.</description></item>
             /// <item><description>If sourceType is set to MSE_NACOS, this parameter specifies a namespace in Nacos.</description></item>
             /// </list>
+            /// <para>This parameter is required if sourceType is set to K8S or MSE_NACOS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PUBLIC</para>
@@ -100,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The function version or alias.</para>
+            /// <para>The function version/alias.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LATEST</para>
@@ -109,14 +119,26 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string Qualifier { get; set; }
 
+            /// <summary>
+            /// <para>Service source ID</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>nacos-instance-001</para>
+            /// </summary>
             [NameInMap("sourceId")]
             [Validation(Required=false)]
             public string SourceId { get; set; }
 
+            /// <summary>
+            /// <para>Validation options</para>
+            /// </summary>
             [NameInMap("validationOptions")]
             [Validation(Required=false)]
             public CreateServiceRequestServiceConfigsValidationOptions ValidationOptions { get; set; }
             public class CreateServiceRequestServiceConfigsValidationOptions : TeaModel {
+                /// <summary>
+                /// <para>Skip AI chat completion verification</para>
+                /// </summary>
                 [NameInMap("skipVerifyAIChatCompletion")]
                 [Validation(Required=false)]
                 public bool? SkipVerifyAIChatCompletion { get; set; }
@@ -126,16 +148,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The service source. Valid values:</para>
+        /// <para>The service source type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MSE_NACOS: a service in an MSE Nacos instance</description></item>
-        /// <item><description>K8S: a service in a Kubernetes (K8s) cluster in Container Service for Kubernetes (ACK)</description></item>
-        /// <item><description>VIP: a fixed IP address</description></item>
-        /// <item><description>DNS: a Domain Name System (DNS) domain name</description></item>
-        /// <item><description>FC3: a service in Function Compute</description></item>
-        /// <item><description>SAE_K8S_SERVICE: a service in a K8s cluster in Serverless App Engine (SAE)</description></item>
+        /// <item><description>MSE_NACOS: MSE Nacos instance services</description></item>
+        /// <item><description>K8S: Container Service for Kubernetes (ACK) cluster services</description></item>
+        /// <item><description>VIP: fixed IP addresses</description></item>
+        /// <item><description>DNS: Domain Name System (DNS) domains</description></item>
+        /// <item><description>FC3: Function Compute services</description></item>
+        /// <item><description>SAE_K8S_SERVICE: Serverless App Engine (SAE) Kubernetes services</description></item>
         /// </list>
-        /// <para>Enumerated values:</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>SAE_K8S_SERVICE</description></item>
         /// <item><description>K8S</description></item>
@@ -152,6 +174,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string SourceType { get; set; }
 
+        /// <summary>
+        /// <para>clientToken</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx</para>
+        /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateEnvironmentRequest : TeaModel {
         /// <summary>
-        /// <para>Environment alias.</para>
+        /// <para>Schema of Response</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试环境</para>
+        /// <para>The request ID, which is used to trace the API call link.</para>
         /// </summary>
         [NameInMap("alias")]
         [Validation(Required=false)]
         public string Alias { get; set; }
 
         /// <summary>
-        /// <para>Description of the environment, which can include information such as the purpose of the environment and its users.</para>
+        /// <para>The status code returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>这是xx的xx项目测试环境</para>
+        /// <para>The response message returned.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

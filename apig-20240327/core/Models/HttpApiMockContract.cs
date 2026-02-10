@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiMockContract : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable the Mock feature.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? Enable { get; set; }
 
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -25,6 +29,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public int? ResponseCode { get; set; }
 
+        /// <summary>
+        /// <para>The response content.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Mock content.</para>
+        /// </summary>
         [NameInMap("responseContent")]
         [Validation(Required=false)]
         public string ResponseContent { get; set; }

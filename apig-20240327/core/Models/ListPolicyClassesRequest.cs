@@ -9,20 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListPolicyClassesRequest : TeaModel {
+        /// <summary>
+        /// <para>The resource ID to attach the policy</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>route-001</para>
+        /// </summary>
         [NameInMap("attachResourceId")]
         [Validation(Required=false)]
         public string AttachResourceId { get; set; }
 
         /// <summary>
-        /// <para>Types of attachment points supported by the policy.</para>
+        /// <para>The supported mount point type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>HttpApi: HttpApi.</description></item>
-        /// <item><description>Operation: Operation of HttpApi.</description></item>
-        /// <item><description>GatewayRoute: Gateway route.</description></item>
-        /// <item><description>GatewayService: Gateway service.</description></item>
-        /// <item><description>GatewayServicePort: Gateway service port.</description></item>
-        /// <item><description>Domain: Gateway domain.</description></item>
-        /// <item><description>Gateway: Gateway.</description></item>
+        /// <item><description>HttpApi: an HTTP API</description></item>
+        /// <item><description>Operation: an operation in an HTTP API</description></item>
+        /// <item><description>GatewayRoute: a route</description></item>
+        /// <item><description>GatewayService: a service</description></item>
+        /// <item><description>GatewayServicePort: a service port</description></item>
+        /// <item><description>Domain: a domain name</description></item>
+        /// <item><description>Gateway: an instance</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,11 +39,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceType { get; set; }
 
         /// <summary>
-        /// <para>Direction of the policy.</para>
+        /// <para>The direction of traffic on which the policy takes effect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Outbound: OutBound.</description></item>
-        /// <item><description>Inbound: InBound.</description></item>
-        /// <item><description>Both directions: Both.</description></item>
+        /// <item><description>OutBound</description></item>
+        /// <item><description>InBound</description></item>
+        /// <item><description>Both</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,12 +53,18 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Direction { get; set; }
 
+        /// <summary>
+        /// <para>The gateway ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gw-001</para>
+        /// </summary>
         [NameInMap("gatewayId")]
         [Validation(Required=false)]
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>Page number, default is 1.</para>
+        /// <para>The page number of the page to return. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -62,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -72,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Type of the policy template.</para>
+        /// <para>The template type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FlowControl</para>

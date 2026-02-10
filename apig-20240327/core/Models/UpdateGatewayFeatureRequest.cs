@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateGatewayFeatureRequest : TeaModel {
         /// <summary>
-        /// <para>Parameter value.</para>
+        /// <para>The parameter value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;true&quot;</para>

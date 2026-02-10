@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string PluginId { get; set; }
 
             /// <summary>
-            /// <para>The resource details.</para>
+            /// <para>The resource information.</para>
             /// </summary>
             [NameInMap("resourceInfos")]
             [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>C61E30D3-579A-5B43-994E-31E02EDC9129</para>

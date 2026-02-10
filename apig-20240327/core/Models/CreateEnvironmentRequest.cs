@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateEnvironmentRequest : TeaModel {
         /// <summary>
-        /// <para>Environment alias.</para>
+        /// <para>The request body.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试环境</para>
+        /// <para>The environment name.</para>
         /// </summary>
         [NameInMap("alias")]
         [Validation(Required=false)]
         public string Alias { get; set; }
 
         /// <summary>
-        /// <para>Description of the environment, which can include information such as the purpose of the environment and its owner.</para>
+        /// <para>The environment alias.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>这是xxx的xx项目测试环境</para>
+        /// <para>Test environment</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Gateway ID.</para>
+        /// <para>The environment description, such as its purpose and owner.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>Environment name.</para>
+        /// <para>Create environment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,10 +53,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>Testing environment for xx project of xxx</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmycs5expl7oq</para>
+        /// <para>rg-ahr5uil8raz0rq3b</para>
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]

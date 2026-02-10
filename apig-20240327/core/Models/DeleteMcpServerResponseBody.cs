@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class DeleteMcpServerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The status message.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The MCP server ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>393E2630-DBE7-5221-AB35-9E740675491A</para>

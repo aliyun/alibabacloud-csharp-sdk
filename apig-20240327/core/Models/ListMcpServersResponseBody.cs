@@ -35,6 +35,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public class ListMcpServersResponseBodyDataItems : TeaModel {
                 /// <summary>
                 /// <para>The API ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>api-xxx</para>
                 /// </summary>
                 [NameInMap("apiId")]
                 [Validation(Required=false)]
@@ -110,6 +113,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
                 /// <summary>
                 /// <para>The description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>My MCP Server</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -168,6 +174,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
                 /// <summary>
                 /// <para>The HTTP-to-MCP configurations.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mcp spec content</para>
                 /// </summary>
                 [NameInMap("mcpServerConfig")]
                 [Validation(Required=false)]
@@ -222,6 +231,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
                     /// <summary>
                     /// <para>The synchronized MCP server ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>nacos-mcp-001</para>
                     /// </summary>
                     [NameInMap("importMcpServerId")]
                     [Validation(Required=false)]

@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetTraceConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Language Type:
-        /// zh: Chinese
-        /// en: English</para>
+        /// <para>The language in which you want results to be returned. Valid values: zh: Chinese. en: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

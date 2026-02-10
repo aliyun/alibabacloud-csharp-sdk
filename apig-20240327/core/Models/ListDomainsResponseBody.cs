@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>Response parameters.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListDomainsResponseBodyData Data { get; set; }
         public class ListDomainsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The information about the domain names.</para>
+            /// <para>The list of domain information.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]

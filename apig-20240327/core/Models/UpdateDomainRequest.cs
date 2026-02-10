@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ClientCACert { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable HTTPS redirection. If protocol is set to HTTPS, forceHttps is required.</para>
+        /// <para>Specifies whether to enable forcible HTTPS redirection. If protocol is set to HTTPS, forceHttps is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

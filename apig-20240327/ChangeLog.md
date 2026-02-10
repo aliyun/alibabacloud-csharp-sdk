@@ -1,3 +1,7 @@
+2026-02-10 Version: 6.0.2
+- Update API DeployHttpApi: add request parameters body.restApiConfig.operationDeployments.
+
+
 2026-01-30 Version: 6.0.1
 - Update API CreateHttpApiRoute: add request parameters body.policyConfigs.
 - Update API CreateService: add request parameters clientToken.

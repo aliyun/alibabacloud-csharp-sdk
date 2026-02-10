@@ -109,6 +109,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>The resource types.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>K8S</para>
+        /// </summary>
         [NameInMap("resourceTypes")]
         [Validation(Required=false)]
         public string ResourceTypes { get; set; }

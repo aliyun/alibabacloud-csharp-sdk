@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpgradeGatewayRequest : TeaModel {
         /// <summary>
-        /// <para>Gateway version.</para>
+        /// <para>The destination instance version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0.2</para>

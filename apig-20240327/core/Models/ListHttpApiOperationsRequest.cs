@@ -19,14 +19,32 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string ConsumerAuthorizationRuleId { get; set; }
 
+        /// <summary>
+        /// <para>Filter operations by authentication status</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("enableAuth")]
         [Validation(Required=false)]
         public bool? EnableAuth { get; set; }
 
+        /// <summary>
+        /// <para>Whether to filter for deployment scenario</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("forDeploy")]
         [Validation(Required=false)]
         public bool? ForDeploy { get; set; }
 
+        /// <summary>
+        /// <para>The gateway ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gw-001</para>
+        /// </summary>
         [NameInMap("gatewayId")]
         [Validation(Required=false)]
         public string GatewayId { get; set; }

@@ -84,6 +84,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string SourceType { get; set; }
 
+        /// <summary>
+        /// <para>List of service source types</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;K8S&quot;, &quot;FC3&quot;]</para>
+        /// </summary>
         [NameInMap("sourceTypes")]
         [Validation(Required=false)]
         public string SourceTypes { get; set; }

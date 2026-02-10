@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class DeleteDomainResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code.</para>
+        /// <para>The status code returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID, used for tracing the API call chain.</para>
+        /// <para>The request ID, which is used to trace the API call link.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A60EE5CA-1294-532A-9775-8D2FD1C6EFBF</para>

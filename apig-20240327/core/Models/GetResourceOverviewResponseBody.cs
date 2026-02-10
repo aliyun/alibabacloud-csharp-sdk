@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Resource information.</para>
+        /// <para>The resource information.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -84,11 +84,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
             }
 
+            /// <summary>
+            /// <para>The risk overview.</para>
+            /// </summary>
             [NameInMap("riskOverview")]
             [Validation(Required=false)]
             public List<GetResourceOverviewResponseBodyDataRiskOverview> RiskOverview { get; set; }
             public class GetResourceOverviewResponseBodyDataRiskOverview : TeaModel {
                 /// <summary>
+                /// <para>The number of instances at a risk level.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -96,11 +101,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [Validation(Required=false)]
                 public string Count { get; set; }
 
+                /// <summary>
+                /// <para>The risk details list.</para>
+                /// </summary>
                 [NameInMap("riskDetails")]
                 [Validation(Required=false)]
                 public List<GetResourceOverviewResponseBodyDataRiskOverviewRiskDetails> RiskDetails { get; set; }
                 public class GetResourceOverviewResponseBodyDataRiskOverviewRiskDetails : TeaModel {
                     /// <summary>
+                    /// <para>The gateway ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>gw-xxxxxx</para>
                     /// </summary>
@@ -109,6 +119,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string GatewayId { get; set; }
 
                     /// <summary>
+                    /// <para>The gateway name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>test-gateway</para>
                     /// </summary>
@@ -117,6 +129,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string GatewayName { get; set; }
 
                     /// <summary>
+                    /// <para>The risk level.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>LOW</para>
                     /// </summary>
@@ -124,11 +138,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     [Validation(Required=false)]
                     public string RiskLevel { get; set; }
 
+                    /// <summary>
+                    /// <para>The risk name list.</para>
+                    /// </summary>
                     [NameInMap("riskNames")]
                     [Validation(Required=false)]
                     public List<string> RiskNames { get; set; }
 
                     /// <summary>
+                    /// <para>The risk score.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
                     /// </summary>
@@ -139,6 +158,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
+                /// <para>The risk level.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>LOW</para>
                 /// </summary>

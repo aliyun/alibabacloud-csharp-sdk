@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiBackendMatchConditions : TeaModel {
+        /// <summary>
+        /// <para>The configurations of the matching conditions.</para>
+        /// </summary>
         [NameInMap("conditions")]
         [Validation(Required=false)]
         public List<HttpApiBackendMatchCondition> Conditions { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the matching condition is the default one.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

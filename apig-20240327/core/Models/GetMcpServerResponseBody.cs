@@ -96,6 +96,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
             /// <summary>
             /// <para>The description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>A sample MCP server</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -177,38 +180,83 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string GatewayId { get; set; }
 
+            /// <summary>
+            /// <para>List of gray MCP server configurations</para>
+            /// </summary>
             [NameInMap("grayMcpServerConfigs")]
             [Validation(Required=false)]
             public List<GetMcpServerResponseBodyDataGrayMcpServerConfigs> GrayMcpServerConfigs { get; set; }
             public class GetMcpServerResponseBodyDataGrayMcpServerConfigs : TeaModel {
+                /// <summary>
+                /// <para>The gray route backend configuration</para>
+                /// </summary>
                 [NameInMap("backendConfig")]
                 [Validation(Required=false)]
                 public GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfig BackendConfig { get; set; }
                 public class GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfig : TeaModel {
+                    /// <summary>
+                    /// <para>The backend scene type</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>SingleService</para>
+                    /// </summary>
                     [NameInMap("scene")]
                     [Validation(Required=false)]
                     public string Scene { get; set; }
 
+                    /// <summary>
+                    /// <para>List of backend services</para>
+                    /// </summary>
                     [NameInMap("services")]
                     [Validation(Required=false)]
                     public List<GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfigServices> Services { get; set; }
                     public class GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfigServices : TeaModel {
+                        /// <summary>
+                        /// <para>The service port</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>8080</para>
+                        /// </summary>
                         [NameInMap("port")]
                         [Validation(Required=false)]
                         public int? Port { get; set; }
 
+                        /// <summary>
+                        /// <para>The service protocol</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>HTTP</para>
+                        /// </summary>
                         [NameInMap("protocol")]
                         [Validation(Required=false)]
                         public string Protocol { get; set; }
 
+                        /// <summary>
+                        /// <para>The gray service ID</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>svc-xxx</para>
+                        /// </summary>
                         [NameInMap("serviceId")]
                         [Validation(Required=false)]
                         public string ServiceId { get; set; }
 
+                        /// <summary>
+                        /// <para>The service version</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>v2.0.0</para>
+                        /// </summary>
                         [NameInMap("version")]
                         [Validation(Required=false)]
                         public string Version { get; set; }
 
+                        /// <summary>
+                        /// <para>The service weight</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>100</para>
+                        /// </summary>
                         [NameInMap("weight")]
                         [Validation(Required=false)]
                         public int? Weight { get; set; }
@@ -217,10 +265,19 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
                 }
 
+                /// <summary>
+                /// <para>The gray route matching rules</para>
+                /// </summary>
                 [NameInMap("match")]
                 [Validation(Required=false)]
                 public HttpRouteMatch Match { get; set; }
 
+                /// <summary>
+                /// <para>The gray route ID</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>gray-route-xxx</para>
+                /// </summary>
                 [NameInMap("routeId")]
                 [Validation(Required=false)]
                 public string RouteId { get; set; }
@@ -239,6 +296,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
             /// <summary>
             /// <para>The HTTP-to-MCP configurations.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>config-yaml-content</para>
             /// </summary>
             [NameInMap("mcpServerConfig")]
             [Validation(Required=false)]

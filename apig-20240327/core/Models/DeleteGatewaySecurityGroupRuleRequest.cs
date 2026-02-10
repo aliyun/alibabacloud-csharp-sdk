@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class DeleteGatewaySecurityGroupRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to cascade delete the security group rules.</para>
+        /// <para>Specifies whether to delete the cascaded security group rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

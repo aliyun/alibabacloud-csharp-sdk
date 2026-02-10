@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The plug-in ID.</para>
+        /// <para>The plug-in type ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pls-dn82a9djd8z****</para>
@@ -60,10 +60,22 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string PluginClassId { get; set; }
 
+        /// <summary>
+        /// <para>The plug-in ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>inner-ai-search-cvd3mcum1hks660icn10</para>
+        /// </summary>
         [NameInMap("pluginId")]
         [Validation(Required=false)]
         public string PluginId { get; set; }
 
+        /// <summary>
+        /// <para>The route ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>route-xxx</para>
+        /// </summary>
         [NameInMap("routeId")]
         [Validation(Required=false)]
         public string RouteId { get; set; }
@@ -81,6 +93,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Source { get; set; }
 
+        /// <summary>
+        /// <para>The AI service identifier.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>outbound|443||ds.ai</para>
+        /// </summary>
         [NameInMap("upstreamCluster")]
         [Validation(Required=false)]
         public string UpstreamCluster { get; set; }

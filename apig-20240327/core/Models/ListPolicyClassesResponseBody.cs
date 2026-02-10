@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListPolicyClassesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code.</para>
+        /// <para>The status code returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Policy template information.</para>
+        /// <para>An array of policy template information.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListPolicyClassesResponseBodyData Data { get; set; }
         public class ListPolicyClassesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>List of policy templates</para>
+            /// <para>The templates.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<PolicyClassInfo> Items { get; set; }
 
             /// <summary>
-            /// <para>Page number.</para>
+            /// <para>The page number of the returned page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>Page size</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Total number of items.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>ResponseMessage</para>
+        /// <para>The response message returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23B45FA9-7208-5E55-B5CE-B6B2567DD822</para>

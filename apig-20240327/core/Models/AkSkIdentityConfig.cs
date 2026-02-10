@@ -9,18 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class AkSkIdentityConfig : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xxxx</para>
+        /// </summary>
         [NameInMap("ak")]
         [Validation(Required=false)]
         public string Ak { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>System</para>
+        /// </summary>
         [NameInMap("generateMode")]
         [Validation(Required=false)]
         public string GenerateMode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xxxx</para>
+        /// </summary>
         [NameInMap("sk")]
         [Validation(Required=false)]
         public string Sk { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Jwt</para>
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }

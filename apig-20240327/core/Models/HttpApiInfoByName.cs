@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
+        /// <para>The API name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-api</para>
         /// </summary>
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The API type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Http</para>
         /// </summary>
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable versioning.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -41,6 +47,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public bool? VersionEnabled { get; set; }
 
+        /// <summary>
+        /// <para>The information about the versioned API.</para>
+        /// </summary>
         [NameInMap("versionedHttpApis")]
         [Validation(Required=false)]
         public List<HttpApiApiInfo> VersionedHttpApis { get; set; }

@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateMcpServerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>code</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Ok</para>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response payload.</para>
+        /// <para>object</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateMcpServerResponseBodyData Data { get; set; }
         public class CreateMcpServerResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the MCP server.</para>
+            /// <para>MCP Server ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>mcp-afegaijoijaoji24a</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string McpServerId { get; set; }
 
             /// <summary>
-            /// <para>The name of the MCP server.</para>
+            /// <para>MCP server name</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-mcp</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The status message.</para>
+        /// <para>message</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>464F9EA0-1052-51BD-8187-D292AA2D8D24</para>

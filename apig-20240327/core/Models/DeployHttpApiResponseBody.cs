@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>响应消息。</para>
+        /// <para>Response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

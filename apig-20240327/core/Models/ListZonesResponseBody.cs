@@ -20,25 +20,31 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListZonesResponseBodyData Data { get; set; }
         public class ListZonesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>List of availability zones.</para>
+            /// <para>The list of queried zones.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<ListZonesResponseBodyDataItems> Items { get; set; }
             public class ListZonesResponseBodyDataItems : TeaModel {
+                /// <summary>
+                /// <para>Whether QAT (Quality Assurance Testing) is supported in this zone</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("supportQat")]
                 [Validation(Required=false)]
                 public string SupportQat { get; set; }
 
                 /// <summary>
-                /// <para>可用区ID。</para>
+                /// <para>The zone identifier</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shenzhen-c</para>

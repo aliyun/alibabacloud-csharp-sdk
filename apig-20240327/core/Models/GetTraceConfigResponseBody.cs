@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetTraceConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response Code</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,16 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Response Data</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetTraceConfigResponseBodyData Data { get; set; }
         public class GetTraceConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Whether to Enable Tracing:
-            /// true: Enabled
-            /// false: Disabled</para>
+            /// <para>Indicates whether tracing analysis is enabled. Valid values: true and false</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -39,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>Sampling Rate</para>
+            /// <para>The sampling rate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -49,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? SampleRatio { get; set; }
 
             /// <summary>
-            /// <para>Service ID, present when the tracing type is SKYWALKING</para>
+            /// <para>The service ID. This parameter exists when the traceType value is SKYWALKING.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ss-co370icmjeu****</para>
@@ -59,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// <para>服务端口，链路追踪类型为SKYWALKING时存在该参数</para>
+            /// <para>The service port. This parameter exists when the traceType value is SKYWALKING.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8090</para>
@@ -69,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ServicePort { get; set; }
 
             /// <summary>
-            /// <para>Tracing Type:</para>
+            /// <para>The type of tracing analysis. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>XTRACE</description></item>
             /// <item><description>SKYWALKING</description></item>
@@ -87,7 +85,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Error Message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -97,7 +95,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2F46B9E7-67EF-5C8A-BA52-D38D5B32AF2C</para>
@@ -107,9 +105,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Boolean	Request Result, with the following values:
-        /// true: Request succeeded.
-        /// false: Request failed.</para>
+        /// <para>Indicates whether the request was successful. Valid values: true false</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

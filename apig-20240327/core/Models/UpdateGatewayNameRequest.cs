@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateGatewayNameRequest : TeaModel {
         /// <summary>
-        /// <para>Gateway name.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>dev-itemcenter-router</para>
         /// </summary>

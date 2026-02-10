@@ -130,6 +130,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <para>Specifies the type of source for MCP server creation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ApiGatewayMcpHosting</para>
         /// </summary>
         [NameInMap("createFromType")]
         [Validation(Required=false)]
@@ -137,6 +140,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <para>The description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Updated MCP server description</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -159,38 +165,83 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string ExposedUriPath { get; set; }
 
+        /// <summary>
+        /// <para>The gray MCP server configurations</para>
+        /// </summary>
         [NameInMap("grayMcpServerConfigs")]
         [Validation(Required=false)]
         public List<UpdateMcpServerRequestGrayMcpServerConfigs> GrayMcpServerConfigs { get; set; }
         public class UpdateMcpServerRequestGrayMcpServerConfigs : TeaModel {
+            /// <summary>
+            /// <para>The backend configuration</para>
+            /// </summary>
             [NameInMap("backendConfig")]
             [Validation(Required=false)]
             public UpdateMcpServerRequestGrayMcpServerConfigsBackendConfig BackendConfig { get; set; }
             public class UpdateMcpServerRequestGrayMcpServerConfigsBackendConfig : TeaModel {
+                /// <summary>
+                /// <para>The backend scene</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>SingleService</para>
+                /// </summary>
                 [NameInMap("scene")]
                 [Validation(Required=false)]
                 public string Scene { get; set; }
 
+                /// <summary>
+                /// <para>The list of backend services</para>
+                /// </summary>
                 [NameInMap("services")]
                 [Validation(Required=false)]
                 public List<UpdateMcpServerRequestGrayMcpServerConfigsBackendConfigServices> Services { get; set; }
                 public class UpdateMcpServerRequestGrayMcpServerConfigsBackendConfigServices : TeaModel {
+                    /// <summary>
+                    /// <para>The service port</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>8080</para>
+                    /// </summary>
                     [NameInMap("port")]
                     [Validation(Required=false)]
                     public int? Port { get; set; }
 
+                    /// <summary>
+                    /// <para>The service protocol</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>HTTP</para>
+                    /// </summary>
                     [NameInMap("protocol")]
                     [Validation(Required=false)]
                     public string Protocol { get; set; }
 
+                    /// <summary>
+                    /// <para>The service ID</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>gray-svc-123</para>
+                    /// </summary>
                     [NameInMap("serviceId")]
                     [Validation(Required=false)]
                     public string ServiceId { get; set; }
 
+                    /// <summary>
+                    /// <para>The service version</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>v1</para>
+                    /// </summary>
                     [NameInMap("version")]
                     [Validation(Required=false)]
                     public string Version { get; set; }
 
+                    /// <summary>
+                    /// <para>The service weight</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>100</para>
+                    /// </summary>
                     [NameInMap("weight")]
                     [Validation(Required=false)]
                     public int? Weight { get; set; }
@@ -199,10 +250,19 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
             }
 
+            /// <summary>
+            /// <para>The route match rules</para>
+            /// </summary>
             [NameInMap("match")]
             [Validation(Required=false)]
             public HttpRouteMatch Match { get; set; }
 
+            /// <summary>
+            /// <para>The route ID</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>route-123</para>
+            /// </summary>
             [NameInMap("routeId")]
             [Validation(Required=false)]
             public string RouteId { get; set; }
@@ -216,14 +276,29 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public HttpRouteMatch Match { get; set; }
 
+        /// <summary>
+        /// <para>The MCP server configuration</para>
+        /// </summary>
         [NameInMap("mcpServerConfig")]
         [Validation(Required=false)]
         public UpdateMcpServerRequestMcpServerConfig McpServerConfig { get; set; }
         public class UpdateMcpServerRequestMcpServerConfig : TeaModel {
+            /// <summary>
+            /// <para>The converted mcp server spec yaml</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mcp-server-spec-yaml</para>
+            /// </summary>
             [NameInMap("mcpServerSpec")]
             [Validation(Required=false)]
             public string McpServerSpec { get; set; }
 
+            /// <summary>
+            /// <para>The raw swagger/openapi document</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>swagger-content</para>
+            /// </summary>
             [NameInMap("swaggerConfig")]
             [Validation(Required=false)]
             public string SwaggerConfig { get; set; }

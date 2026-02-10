@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetResourceOverviewRequest : TeaModel {
         /// <summary>
+        /// <para>The gateway type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AI</para>
         /// </summary>

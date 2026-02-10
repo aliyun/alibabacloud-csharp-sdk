@@ -9,14 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class DeployHttpApiRequest : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// <para>httpApiConfig</para>
+        /// </summary>
         [NameInMap("httpApiConfig")]
         [Validation(Required=false)]
+        [Obsolete]
         public DeployHttpApiRequestHttpApiConfig HttpApiConfig { get; set; }
         public class DeployHttpApiRequestHttpApiConfig : TeaModel {
+            /// <summary>
+            /// <para>The gateway ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>gw-csrhgfmm1hknf0hu6o3g</para>
+            /// </summary>
             [NameInMap("gatewayId")]
             [Validation(Required=false)]
             public string GatewayId { get; set; }
 
+            /// <summary>
+            /// <para>routeIds</para>
+            /// </summary>
             [NameInMap("routeIds")]
             [Validation(Required=false)]
             public List<string> RouteIds { get; set; }
@@ -24,72 +39,91 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Rest API deployment configuration. Required when deploying an HTTP API as a Rest API.</para>
+        /// <para>The REST API deployment configuration. This parameter is required when you publish a REST API.</para>
         /// </summary>
         [NameInMap("restApiConfig")]
         [Validation(Required=false)]
         public DeployHttpApiRequestRestApiConfig RestApiConfig { get; set; }
         public class DeployHttpApiRequestRestApiConfig : TeaModel {
             /// <summary>
-            /// <para>Publication description.</para>
+            /// <para>The publish description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>用户服务API发布。</para>
+            /// <para>The user service API</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Publication environment configuration.</para>
+            /// <para>The environment configurations.</para>
             /// </summary>
             [NameInMap("environment")]
             [Validation(Required=false)]
             public DeployHttpApiRequestRestApiConfigEnvironment Environment { get; set; }
             public class DeployHttpApiRequestRestApiConfigEnvironment : TeaModel {
+                /// <term><b>Obsolete</b></term>
+                /// 
                 /// <summary>
-                /// <para>API publication scenario.</para>
+                /// <para>The publishing scenario.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>SingleService</description></item>
+                /// <item><description>MultiServiceByRatio</description></item>
+                /// <item><description>MultiServiceByContent</description></item>
+                /// <item><description>Mock</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SingleService</para>
                 /// </summary>
                 [NameInMap("backendScene")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public string BackendScene { get; set; }
 
                 /// <summary>
-                /// <para>List of user domains.</para>
+                /// <para>The custom domain names.</para>
                 /// </summary>
                 [NameInMap("customDomainIds")]
                 [Validation(Required=false)]
                 public List<string> CustomDomainIds { get; set; }
 
+                /// <term><b>Obsolete</b></term>
+                /// 
                 /// <summary>
-                /// <para>Environment ID.</para>
+                /// <para>The environment ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>env-cpqnr6tlhtgubc***</para>
                 /// </summary>
                 [NameInMap("environmentId")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public string EnvironmentId { get; set; }
 
+                /// <term><b>Obsolete</b></term>
+                /// 
                 /// <summary>
-                /// <para>Existing service configurations. Only one entry is allowed in a single-service scenario, while multiple entries are allowed in scenarios such as by ratio or by content.</para>
+                /// <para>The configurations of existing services. For single-service publishing, only one entry is allowed. For other scenarios, multiple entries are allowed.</para>
                 /// </summary>
                 [NameInMap("serviceConfigs")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public List<DeployHttpApiRequestRestApiConfigEnvironmentServiceConfigs> ServiceConfigs { get; set; }
                 public class DeployHttpApiRequestRestApiConfigEnvironmentServiceConfigs : TeaModel {
                     /// <summary>
-                    /// <para>Configuration of matching conditions related to API deployment.</para>
+                    /// <para>The matching condition configurations related to API publishing.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>{\&quot;change_order_revision\&quot;:\&quot;3.657.33_fc-hz-yunqi.1662568293908382_faas-eerouter\&quot;}</para>
                     /// </summary>
                     [NameInMap("match")]
                     [Validation(Required=false)]
                     public HttpApiBackendMatchConditions Match { get; set; }
 
                     /// <summary>
-                    /// <para>Service port, do not provide for dynamic ports.</para>
+                    /// <para>The service port. If you want to use a dynamic port, do not pass this parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>8080</para>
@@ -99,10 +133,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// <para>Service protocol:</para>
+                    /// <para>The service protocol. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>HTTP.</description></item>
-                    /// <item><description>HTTPS.</description></item>
+                    /// <item><description>HTTP</description></item>
+                    /// <item><description>HTTPS</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -113,7 +147,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Protocol { get; set; }
 
                     /// <summary>
-                    /// <para>Service ID.</para>
+                    /// <para>The service ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>svc-cr6pk4tlhtgm58e***</para>
@@ -123,7 +157,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ServiceId { get; set; }
 
                     /// <summary>
-                    /// <para>Service version.</para>
+                    /// <para>The version of the microservice.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>v1</para>
@@ -133,7 +167,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Version { get; set; }
 
                     /// <summary>
-                    /// <para>Weight, range [1,100], valid only in the by-ratio scenario.</para>
+                    /// <para>The weight. Valid values: [1,100]. This parameter is valid only in proportional routing.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>49</para>
@@ -146,16 +180,50 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
             }
 
+            /// <summary>
+            /// <para>The gateway ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>gw-cvn2u46m1hkun04oll8g</para>
+            /// </summary>
             [NameInMap("gatewayId")]
             [Validation(Required=false)]
             public string GatewayId { get; set; }
 
+            [NameInMap("operationDeployments")]
+            [Validation(Required=false)]
+            public List<DeployHttpApiRequestRestApiConfigOperationDeployments> OperationDeployments { get; set; }
+            public class DeployHttpApiRequestRestApiConfigOperationDeployments : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Publish</para>
+                /// </summary>
+                [NameInMap("action")]
+                [Validation(Required=false)]
+                public string Action { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>op-d5s57hmm1hks653u9dkg</para>
+                /// </summary>
+                [NameInMap("operationId")]
+                [Validation(Required=false)]
+                public string OperationId { get; set; }
+
+            }
+
+            /// <term><b>Obsolete</b></term>
+            /// 
+            /// <summary>
+            /// <para>operationIds</para>
+            /// </summary>
             [NameInMap("operationIds")]
             [Validation(Required=false)]
+            [Obsolete]
             public List<string> OperationIds { get; set; }
 
             /// <summary>
-            /// <para>Historical version number. If this field is specified, the publication information will be based on the historical version information.</para>
+            /// <para>The historical version of the API. If you specify this parameter, the corresponding version of the API is published.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apr-xxx</para>
@@ -167,7 +235,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Route ID. This must be provided when publishing the route of an HTTP API.</para>
+        /// <para>The route ID. You must specify this parameter when you publish an HTTP API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hr-cr82undlhtgrl***</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The response payload.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]

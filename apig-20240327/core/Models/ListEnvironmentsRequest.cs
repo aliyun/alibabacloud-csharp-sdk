@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>Environment alias, fuzzy search.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试</para>
+        /// <para>production</para>
         /// </summary>
         [NameInMap("aliasLike")]
         [Validation(Required=false)]
@@ -39,6 +39,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string GatewayNameLike { get; set; }
 
+        /// <summary>
+        /// <para>The gateway type</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>APIGateway</para>
+        /// </summary>
         [NameInMap("gatewayType")]
         [Validation(Required=false)]
         public string GatewayType { get; set; }

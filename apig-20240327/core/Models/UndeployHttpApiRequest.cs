@@ -19,10 +19,22 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
+        /// <summary>
+        /// <para>Gateway ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gw-cq7l5s5lhtg***</para>
+        /// </summary>
         [NameInMap("gatewayId")]
         [Validation(Required=false)]
         public string GatewayId { get; set; }
 
+        /// <summary>
+        /// <para>The operation ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>op-d4favr6m1hk***</para>
+        /// </summary>
         [NameInMap("operationId")]
         [Validation(Required=false)]
         public string OperationId { get; set; }
