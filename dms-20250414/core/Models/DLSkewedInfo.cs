@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public List<string> SkewedColNames { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{“col1”:&quot;val1&quot;}</para>
+        /// </summary>
         [NameInMap("SkewedColValueLocationMaps")]
         [Validation(Required=false)]
         public Dictionary<string, object> SkewedColValueLocationMaps { get; set; }

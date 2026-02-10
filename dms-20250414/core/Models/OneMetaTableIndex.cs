@@ -25,6 +25,18 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string IndexType { get; set; }
 
+        [NameInMap("Primary")]
+        [Validation(Required=false)]
+        public bool? Primary { get; set; }
+
+        [NameInMap("RealColumnNames")]
+        [Validation(Required=false)]
+        public List<string> RealColumnNames { get; set; }
+
+        [NameInMap("Unique")]
+        [Validation(Required=false)]
+        public bool? Unique { get; set; }
+
     }
 
 }

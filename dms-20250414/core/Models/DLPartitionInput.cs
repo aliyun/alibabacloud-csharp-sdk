@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DLPartitionInput : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1735109884</para>
+        /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public int? CreateTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1735109884</para>
+        /// </summary>
         [NameInMap("LastAccessTime")]
         [Validation(Required=false)]
         public int? LastAccessTime { get; set; }

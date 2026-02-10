@@ -99,6 +99,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [Validation(Required=false)]
                 public bool? EnableSearch { get; set; }
 
+                [NameInMap("EncryptKey")]
+                [Validation(Required=false)]
+                public string EncryptKey { get; set; }
+
+                [NameInMap("EncryptType")]
+                [Validation(Required=false)]
+                public string EncryptType { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>CHINESE</para>
@@ -118,6 +126,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [NameInMap("Mode")]
                 [Validation(Required=false)]
                 public string Mode { get; set; }
+
+                [NameInMap("ReportPageWidth")]
+                [Validation(Required=false)]
+                public long? ReportPageWidth { get; set; }
+
+                [NameInMap("ReportWaterMark")]
+                [Validation(Required=false)]
+                public string ReportWaterMark { get; set; }
 
                 [NameInMap("UserOssBucket")]
                 [Validation(Required=false)]
