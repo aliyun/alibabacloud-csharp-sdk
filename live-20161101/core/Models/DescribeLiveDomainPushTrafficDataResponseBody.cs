@@ -59,9 +59,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        /// <summary>
-        /// <para>The traffic data that was collected at each interval.</para>
-        /// </summary>
         [NameInMap("TrafficDataPerInterval")]
         [Validation(Required=false)]
         public DescribeLiveDomainPushTrafficDataResponseBodyTrafficDataPerInterval TrafficDataPerInterval { get; set; }
@@ -70,22 +67,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveDomainPushTrafficDataResponseBodyTrafficDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeLiveDomainPushTrafficDataResponseBodyTrafficDataPerIntervalDataModule : TeaModel {
-                /// <summary>
-                /// <para>The timestamp of the data returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2017-12-10T20:05:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The traffic. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1288111</para>
-                /// </summary>
                 [NameInMap("TrafficValue")]
                 [Validation(Required=false)]
                 public string TrafficValue { get; set; }

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveSnapshotDetectPornConfigResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The list of video moderation configurations.</para>
-        /// </summary>
         [NameInMap("LiveSnapshotDetectPornConfigList")]
         [Validation(Required=false)]
         public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigList LiveSnapshotDetectPornConfigList { get; set; }
@@ -20,69 +17,30 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfig> LiveSnapshotDetectPornConfig { get; set; }
             public class DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfig : TeaModel {
-                /// <summary>
-                /// <para>The application name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>liveApp****</para>
-                /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
-                /// <summary>
-                /// <para>The main streaming domain.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>example.com</para>
-                /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
-                /// <summary>
-                /// <para>The interval at which snapshots are captured from the live stream. Unit: seconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>80</para>
-                /// </summary>
                 [NameInMap("Interval")]
                 [Validation(Required=false)]
                 public int? Interval { get; set; }
 
-                /// <summary>
-                /// <para>The name of the OSS bucket.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>liveBucket****</para>
-                /// </summary>
                 [NameInMap("OssBucket")]
                 [Validation(Required=false)]
                 public string OssBucket { get; set; }
 
-                /// <summary>
-                /// <para>The endpoint of the OSS bucket.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-oss-****.aliyuncs.com</para>
-                /// </summary>
                 [NameInMap("OssEndpoint")]
                 [Validation(Required=false)]
                 public string OssEndpoint { get; set; }
 
-                /// <summary>
-                /// <para>The name of the storage file in Object Storage Service (OSS).</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>{liveApp****}/{liveStream****}/{Date}/{Hour}/{Minute}_{Second}.jpg</para>
-                /// </summary>
                 [NameInMap("OssObject")]
                 [Validation(Required=false)]
                 public string OssObject { get; set; }
 
-                /// <summary>
-                /// <para>The moderation scenario array.</para>
-                /// </summary>
                 [NameInMap("Scenes")]
                 [Validation(Required=false)]
                 public DescribeLiveSnapshotDetectPornConfigResponseBodyLiveSnapshotDetectPornConfigListLiveSnapshotDetectPornConfigScenes Scenes { get; set; }

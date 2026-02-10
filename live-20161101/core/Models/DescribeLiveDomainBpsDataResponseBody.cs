@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainBpsDataResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The bandwidth data returned at each interval.</para>
-        /// </summary>
         [NameInMap("BpsDataPerInterval")]
         [Validation(Required=false)]
         public DescribeLiveDomainBpsDataResponseBodyBpsDataPerInterval BpsDataPerInterval { get; set; }
@@ -20,42 +17,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveDomainBpsDataResponseBodyBpsDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeLiveDomainBpsDataResponseBodyBpsDataPerIntervalDataModule : TeaModel {
-                /// <summary>
-                /// <para>The bandwidth. Unit: bit/s.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>11288111</para>
-                /// </summary>
                 [NameInMap("BpsValue")]
                 [Validation(Required=false)]
                 public string BpsValue { get; set; }
 
-                /// <summary>
-                /// <para>The bandwidth over HTTP. Unit: bit/s.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>11286111</para>
-                /// </summary>
                 [NameInMap("HttpBpsValue")]
                 [Validation(Required=false)]
                 public string HttpBpsValue { get; set; }
 
-                /// <summary>
-                /// <para>The bandwidth over HTTPS. Unit: bit/s.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2000</para>
-                /// </summary>
                 [NameInMap("HttpsBpsValue")]
                 [Validation(Required=false)]
                 public string HttpsBpsValue { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp of the data returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2017-12-10T08:00:05Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }

@@ -168,9 +168,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public string OssEndpoint { get; set; }
 
-            /// <summary>
-            /// <para>The recording configuration.</para>
-            /// </summary>
             [NameInMap("RecordFormat")]
             [Validation(Required=false)]
             public DescribeCasterConfigResponseBodyRecordConfigRecordFormat RecordFormat { get; set; }
@@ -179,42 +176,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 [Validation(Required=false)]
                 public List<DescribeCasterConfigResponseBodyRecordConfigRecordFormatRecordFormat> RecordFormat { get; set; }
                 public class DescribeCasterConfigResponseBodyRecordConfigRecordFormatRecordFormat : TeaModel {
-                    /// <summary>
-                    /// <para>The length of the recording.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>3600</para>
-                    /// </summary>
                     [NameInMap("CycleDuration")]
                     [Validation(Required=false)]
                     public int? CycleDuration { get; set; }
 
-                    /// <summary>
-                    /// <para>The format of the recording.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>M3U8</para>
-                    /// </summary>
                     [NameInMap("Format")]
                     [Validation(Required=false)]
                     public string Format { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the recording.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>record/{liveApp****}/{liveStream****}</para>
-                    /// </summary>
                     [NameInMap("OssObjectPrefix")]
                     [Validation(Required=false)]
                     public string OssObjectPrefix { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the segment.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>record/{liveApp****}/{liveStream****}/{UnixTimestamp****}</para>
-                    /// </summary>
                     [NameInMap("SliceOssObjectPrefix")]
                     [Validation(Required=false)]
                     public string SliceOssObjectPrefix { get; set; }
@@ -255,9 +228,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string SideOutputUrlList { get; set; }
 
-        /// <summary>
-        /// <para>The storage configuration.</para>
-        /// </summary>
         [NameInMap("SyncGroupsConfig")]
         [Validation(Required=false)]
         public DescribeCasterConfigResponseBodySyncGroupsConfig SyncGroupsConfig { get; set; }
@@ -266,34 +236,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeCasterConfigResponseBodySyncGroupsConfigSyncGroup> SyncGroup { get; set; }
             public class DescribeCasterConfigResponseBodySyncGroupsConfigSyncGroup : TeaModel {
-                /// <summary>
-                /// <para>The ID of the resource in the production studio.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>28768383240243****</para>
-                /// </summary>
                 [NameInMap("HostResourceId")]
                 [Validation(Required=false)]
                 public string HostResourceId { get; set; }
 
-                /// <summary>
-                /// <para>The cache mode of the Static Page Caching policy. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>0: standard mode</description></item>
-                /// <item><description>1: force mode</description></item>
-                /// <item><description>2: no cache</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("Mode")]
                 [Validation(Required=false)]
                 public int? Mode { get; set; }
 
-                /// <summary>
-                /// <para>The IDs of the resources for which you want to modify the resource group. The number of resource IDs is 1 to 50.</para>
-                /// </summary>
                 [NameInMap("ResourceIds")]
                 [Validation(Required=false)]
                 public DescribeCasterConfigResponseBodySyncGroupsConfigSyncGroupResourceIds ResourceIds { get; set; }
@@ -393,9 +343,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 
             }
 
-            /// <summary>
-            /// <para>The transcoding setting for live streams.</para>
-            /// </summary>
             [NameInMap("LiveTemplateIds")]
             [Validation(Required=false)]
             public DescribeCasterConfigResponseBodyTranscodeConfigLiveTemplateIds LiveTemplateIds { get; set; }

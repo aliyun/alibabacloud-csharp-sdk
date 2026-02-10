@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveUserBillPredictionResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The estimated bill data.</para>
-        /// </summary>
         [NameInMap("BillPredictionData")]
         [Validation(Required=false)]
         public DescribeLiveUserBillPredictionResponseBodyBillPredictionData BillPredictionData { get; set; }
@@ -20,44 +17,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem> BillPredictionDataItem { get; set; }
             public class DescribeLiveUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem : TeaModel {
-                /// <summary>
-                /// <para>The billable region. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>CN: Chinese mainland</description></item>
-                /// <item><description>OverSeas: countries and regions outside the Chinese mainland</description></item>
-                /// <item><description>AP1: Asia Pacific 1, including Hong Kong (China), Macao (China), Taiwan (China), Japan, and other Southeast Asia countries and regions except Vietnam and Indonesia</description></item>
-                /// <item><description>AP2: Asia Pacific 2, including Indonesia, South Korea, and Vietnam</description></item>
-                /// <item><description>AP3: Asia Pacific 3, including Australia and New Zealand</description></item>
-                /// <item><description>NA: North America, including US and Canada</description></item>
-                /// <item><description>SA: South America, specifically meaning Brazil</description></item>
-                /// <item><description>EU: Europe, including Ukraine, UK, France, Netherlands, Spain, Italy, Sweden, and Germany</description></item>
-                /// <item><description>MEAA: Middle East and Africa, including South Africa, Oman, UAE, and Kuwait</description></item>
-                /// </list>
-                /// <para>By default, data of all regions is aggregated and returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>CN</para>
-                /// </summary>
                 [NameInMap("Area")]
                 [Validation(Required=false)]
                 public string Area { get; set; }
 
-                /// <summary>
-                /// <para>The time at which the estimated value occurs. This parameter is returned only if the metering method is pay by 95th percentile bandwidth, pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00, or pay by 4th peak bandwidth per month.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2018-10-15T16:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStp")]
                 [Validation(Required=false)]
                 public string TimeStp { get; set; }
 
-                /// <summary>
-                /// <para>The estimated value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>10000</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public float? Value { get; set; }

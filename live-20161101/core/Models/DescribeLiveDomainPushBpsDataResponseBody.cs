@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainPushBpsDataResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The bandwidth data that was collected at each interval.</para>
-        /// </summary>
         [NameInMap("BpsDataPerInterval")]
         [Validation(Required=false)]
         public DescribeLiveDomainPushBpsDataResponseBodyBpsDataPerInterval BpsDataPerInterval { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveDomainPushBpsDataResponseBodyBpsDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeLiveDomainPushBpsDataResponseBodyBpsDataPerIntervalDataModule : TeaModel {
-                /// <summary>
-                /// <para>The bandwidth. Unit: bit/s.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>11288111</para>
-                /// </summary>
                 [NameInMap("BpsValue")]
                 [Validation(Required=false)]
                 public string BpsValue { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp of the data returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2017-12-10T20:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }

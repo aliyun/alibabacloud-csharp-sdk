@@ -49,9 +49,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The complete URL of each live stream.</para>
-        /// </summary>
         [NameInMap("StreamUrls")]
         [Validation(Required=false)]
         public DescribeLiveStreamsBlockListResponseBodyStreamUrls StreamUrls { get; set; }

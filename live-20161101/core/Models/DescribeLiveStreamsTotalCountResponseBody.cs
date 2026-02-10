@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The statistics about the live streams.</para>
-        /// </summary>
         [NameInMap("StreamCountList")]
         [Validation(Required=false)]
         public DescribeLiveStreamsTotalCountResponseBodyStreamCountList StreamCountList { get; set; }
@@ -30,22 +27,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveStreamsTotalCountResponseBodyStreamCountListStreamCountInfos> StreamCountInfos { get; set; }
             public class DescribeLiveStreamsTotalCountResponseBodyStreamCountListStreamCountInfos : TeaModel {
-                /// <summary>
-                /// <para>The total number of live streams.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>934</para>
-                /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public int? Count { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2023-07-24T16:00:00Z</para>
-                /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]
                 public string Timestamp { get; set; }

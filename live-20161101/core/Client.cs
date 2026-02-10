@@ -8467,7 +8467,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据一个或多个用户uid查询用户是否在线</para>
+        /// <para>Queries whether users are online by UID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8525,7 +8525,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据一个或多个用户uid查询用户是否在线</para>
+        /// <para>Queries whether users are online by UID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8583,7 +8583,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据一个或多个用户uid查询用户是否在线</para>
+        /// <para>Queries whether users are online by UID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8609,7 +8609,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据一个或多个用户uid查询用户是否在线</para>
+        /// <para>Queries whether users are online by UID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13843,7 +13843,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Real-Time Messaging Protocol (RTMP) ingest URL for a channel.</para>
+        /// <para>Generates a Real-Time Messaging Protocol (RTMP) ingest URL for a channel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13901,7 +13901,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Real-Time Messaging Protocol (RTMP) ingest URL for a channel.</para>
+        /// <para>Generates a Real-Time Messaging Protocol (RTMP) ingest URL for a channel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13959,7 +13959,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Real-Time Messaging Protocol (RTMP) ingest URL for a channel.</para>
+        /// <para>Generates a Real-Time Messaging Protocol (RTMP) ingest URL for a channel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13997,7 +13997,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Real-Time Messaging Protocol (RTMP) ingest URL for a channel.</para>
+        /// <para>Generates a Real-Time Messaging Protocol (RTMP) ingest URL for a channel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19809,6 +19809,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return await DeleteLiveMessageUserMessageWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除直播封装配置</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to delete a live stream encapsulation configuration. The deletion takes effect after you re-ingest the stream.</para>
@@ -19869,6 +19874,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return TeaModel.ToObject<DeleteLivePackageConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除直播封装配置</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to delete a live stream encapsulation configuration. The deletion takes effect after you re-ingest the stream.</para>
@@ -19929,6 +19939,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return TeaModel.ToObject<DeleteLivePackageConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除直播封装配置</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to delete a live stream encapsulation configuration. The deletion takes effect after you re-ingest the stream.</para>
@@ -19949,6 +19964,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return DeleteLivePackageConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除直播封装配置</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to delete a live stream encapsulation configuration. The deletion takes effect after you re-ingest the stream.</para>
@@ -37801,6 +37821,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return await DescribeLiveMessageGroupBandWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询直播封装配置</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Obtain the main streaming domain, and then call this operation to query live stream encapsulation configurations.</para>
@@ -37873,6 +37898,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return TeaModel.ToObject<DescribeLivePackageConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询直播封装配置</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Obtain the main streaming domain, and then call this operation to query live stream encapsulation configurations.</para>
@@ -37945,6 +37975,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return TeaModel.ToObject<DescribeLivePackageConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询直播封装配置</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Obtain the main streaming domain, and then call this operation to query live stream encapsulation configurations.</para>
@@ -37965,6 +38000,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return DescribeLivePackageConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询直播封装配置</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Obtain the main streaming domain, and then call this operation to query live stream encapsulation configurations.</para>
@@ -40775,7 +40815,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time shifting configurations under a domain name.</para>
+        /// <para>Queries the time shifting configurations of a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -40832,7 +40872,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time shifting configurations under a domain name.</para>
+        /// <para>Queries the time shifting configurations of a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -40889,7 +40929,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time shifting configurations under a domain name.</para>
+        /// <para>Queries the time shifting configurations of a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -40914,7 +40954,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time shifting configurations under a domain name.</para>
+        /// <para>Queries the time shifting configurations of a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -45623,7 +45663,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the blacklist of live stream URLs under a main streaming domain.</para>
+        /// <para>Queries the live streams that are blacklisted under a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -45688,7 +45728,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the blacklist of live stream URLs under a main streaming domain.</para>
+        /// <para>Queries the live streams that are blacklisted under a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -45753,7 +45793,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the blacklist of live stream URLs under a main streaming domain.</para>
+        /// <para>Queries the live streams that are blacklisted under a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -45778,7 +45818,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the blacklist of live stream URLs under a main streaming domain.</para>
+        /// <para>Queries the live streams that are blacklisted under a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -50151,7 +50191,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询rtc云端录制文件与任务信息</para>
+        /// <para>Queries the information about a real-time communication (RTC) cloud-based recording task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50193,7 +50233,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询rtc云端录制文件与任务信息</para>
+        /// <para>Queries the information about a real-time communication (RTC) cloud-based recording task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50235,7 +50275,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询rtc云端录制文件与任务信息</para>
+        /// <para>Queries the information about a real-time communication (RTC) cloud-based recording task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50253,7 +50293,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询rtc云端录制文件与任务信息</para>
+        /// <para>Queries the information about a real-time communication (RTC) cloud-based recording task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50267,6 +50307,134 @@ namespace AlibabaCloud.SDK.Live20161101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRtcCloudRecordingFilesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询云端转码任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRtcCloudTranscodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRtcCloudTranscodeResponse
+        /// </returns>
+        public DescribeRtcCloudTranscodeResponse DescribeRtcCloudTranscodeWithOptions(DescribeRtcCloudTranscodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRtcCloudTranscode",
+                Version = "2016-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRtcCloudTranscodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询云端转码任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRtcCloudTranscodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRtcCloudTranscodeResponse
+        /// </returns>
+        public async Task<DescribeRtcCloudTranscodeResponse> DescribeRtcCloudTranscodeWithOptionsAsync(DescribeRtcCloudTranscodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRtcCloudTranscode",
+                Version = "2016-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRtcCloudTranscodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询云端转码任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRtcCloudTranscodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRtcCloudTranscodeResponse
+        /// </returns>
+        public DescribeRtcCloudTranscodeResponse DescribeRtcCloudTranscode(DescribeRtcCloudTranscodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeRtcCloudTranscodeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询云端转码任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRtcCloudTranscodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRtcCloudTranscodeResponse
+        /// </returns>
+        public async Task<DescribeRtcCloudTranscodeResponse> DescribeRtcCloudTranscodeAsync(DescribeRtcCloudTranscodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeRtcCloudTranscodeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -63175,7 +63343,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a user.</para>
+        /// <para>Modifies the information about one or more users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63229,7 +63397,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a user.</para>
+        /// <para>Modifies the information about one or more users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63283,7 +63451,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a user.</para>
+        /// <para>Modifies the information about one or more users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63301,7 +63469,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a user.</para>
+        /// <para>Modifies the information about one or more users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66187,7 +66355,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a specified episode from an episode list.</para>
+        /// <para>Removes an episode from an episode list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -66257,7 +66425,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a specified episode from an episode list.</para>
+        /// <para>Removes an episode from an episode list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -66327,7 +66495,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a specified episode from an episode list.</para>
+        /// <para>Removes an episode from an episode list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -66353,7 +66521,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a specified episode from an episode list.</para>
+        /// <para>Removes an episode from an episode list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -73471,6 +73639,178 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建云端转码任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// StartRtcCloudTranscodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartRtcCloudTranscodeResponse
+        /// </returns>
+        public StartRtcCloudTranscodeResponse StartRtcCloudTranscodeWithOptions(StartRtcCloudTranscodeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StartRtcCloudTranscodeShrinkRequest request = new StartRtcCloudTranscodeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InputParam))
+            {
+                request.InputParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InputParam, "InputParam", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutputParams))
+            {
+                request.OutputParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutputParams, "OutputParams", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                query["ChannelId"] = request.ChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParamShrink))
+            {
+                query["InputParam"] = request.InputParamShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxIdleTime))
+            {
+                query["MaxIdleTime"] = request.MaxIdleTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputParamsShrink))
+            {
+                query["OutputParams"] = request.OutputParamsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartRtcCloudTranscode",
+                Version = "2016-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartRtcCloudTranscodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建云端转码任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// StartRtcCloudTranscodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartRtcCloudTranscodeResponse
+        /// </returns>
+        public async Task<StartRtcCloudTranscodeResponse> StartRtcCloudTranscodeWithOptionsAsync(StartRtcCloudTranscodeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StartRtcCloudTranscodeShrinkRequest request = new StartRtcCloudTranscodeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InputParam))
+            {
+                request.InputParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InputParam, "InputParam", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutputParams))
+            {
+                request.OutputParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutputParams, "OutputParams", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                query["ChannelId"] = request.ChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParamShrink))
+            {
+                query["InputParam"] = request.InputParamShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxIdleTime))
+            {
+                query["MaxIdleTime"] = request.MaxIdleTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputParamsShrink))
+            {
+                query["OutputParams"] = request.OutputParamsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartRtcCloudTranscode",
+                Version = "2016-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartRtcCloudTranscodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建云端转码任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartRtcCloudTranscodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartRtcCloudTranscodeResponse
+        /// </returns>
+        public StartRtcCloudTranscodeResponse StartRtcCloudTranscode(StartRtcCloudTranscodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartRtcCloudTranscodeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建云端转码任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartRtcCloudTranscodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartRtcCloudTranscodeResponse
+        /// </returns>
+        public async Task<StartRtcCloudTranscodeResponse> StartRtcCloudTranscodeAsync(StartRtcCloudTranscodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartRtcCloudTranscodeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Stops a production studio. This stops the PVW and PGM scenes of the production studio.</para>
         /// </summary>
         /// 
@@ -73635,7 +73975,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a specified preview scene.</para>
+        /// <para>Stops a specified preview (PVW) scene.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -73695,7 +74035,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a specified preview scene.</para>
+        /// <para>Stops a specified preview (PVW) scene.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -73755,7 +74095,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a specified preview scene.</para>
+        /// <para>Stops a specified preview (PVW) scene.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -73779,7 +74119,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a specified preview scene.</para>
+        /// <para>Stops a specified preview (PVW) scene.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -74955,7 +75295,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止rtc云端录制任务</para>
+        /// <para>Stops a real-time communication (RTC) cloud-based recording task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -74997,7 +75337,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止rtc云端录制任务</para>
+        /// <para>Stops a real-time communication (RTC) cloud-based recording task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -75039,7 +75379,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止rtc云端录制任务</para>
+        /// <para>Stops a real-time communication (RTC) cloud-based recording task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -75057,7 +75397,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止rtc云端录制任务</para>
+        /// <para>Stops a real-time communication (RTC) cloud-based recording task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -75075,7 +75415,135 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The N tags that you want to add for the resource.</para>
+        /// <para>停止云端转码任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopRtcCloudTranscodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopRtcCloudTranscodeResponse
+        /// </returns>
+        public StopRtcCloudTranscodeResponse StopRtcCloudTranscodeWithOptions(StopRtcCloudTranscodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopRtcCloudTranscode",
+                Version = "2016-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopRtcCloudTranscodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止云端转码任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopRtcCloudTranscodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopRtcCloudTranscodeResponse
+        /// </returns>
+        public async Task<StopRtcCloudTranscodeResponse> StopRtcCloudTranscodeWithOptionsAsync(StopRtcCloudTranscodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopRtcCloudTranscode",
+                Version = "2016-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopRtcCloudTranscodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止云端转码任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopRtcCloudTranscodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopRtcCloudTranscodeResponse
+        /// </returns>
+        public StopRtcCloudTranscodeResponse StopRtcCloudTranscode(StopRtcCloudTranscodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopRtcCloudTranscodeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止云端转码任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopRtcCloudTranscodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopRtcCloudTranscodeResponse
+        /// </returns>
+        public async Task<StopRtcCloudTranscodeResponse> StopRtcCloudTranscodeAsync(StopRtcCloudTranscodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopRtcCloudTranscodeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags for domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -75138,7 +75606,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The N tags that you want to add for the resource.</para>
+        /// <para>Adds tags for domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -75201,7 +75669,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The N tags that you want to add for the resource.</para>
+        /// <para>Adds tags for domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -75224,7 +75692,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The N tags that you want to add for the resource.</para>
+        /// <para>Adds tags for domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -75247,7 +75715,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑标签</para>
+        /// <para>Deletes tags of domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -75309,7 +75777,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑标签</para>
+        /// <para>Deletes tags of domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -75371,7 +75839,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑标签</para>
+        /// <para>Deletes tags of domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -75389,7 +75857,7 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑标签</para>
+        /// <para>Deletes tags of domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">

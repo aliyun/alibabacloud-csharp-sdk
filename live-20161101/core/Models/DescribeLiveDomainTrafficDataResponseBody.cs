@@ -59,9 +59,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        /// <summary>
-        /// <para>The network traffic data that was collected at each interval.</para>
-        /// </summary>
         [NameInMap("TrafficDataPerInterval")]
         [Validation(Required=false)]
         public DescribeLiveDomainTrafficDataResponseBodyTrafficDataPerInterval TrafficDataPerInterval { get; set; }
@@ -70,42 +67,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeLiveDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule : TeaModel {
-                /// <summary>
-                /// <para>The traffic over HTTP. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("HttpTrafficValue")]
                 [Validation(Required=false)]
                 public string HttpTrafficValue { get; set; }
 
-                /// <summary>
-                /// <para>The traffic over HTTPS. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>454680793</para>
-                /// </summary>
                 [NameInMap("HttpsTrafficValue")]
                 [Validation(Required=false)]
                 public string HttpsTrafficValue { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp of the data returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2017-12-10T15:00:05Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The total traffic. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>454680793</para>
-                /// </summary>
                 [NameInMap("TrafficValue")]
                 [Validation(Required=false)]
                 public string TrafficValue { get; set; }

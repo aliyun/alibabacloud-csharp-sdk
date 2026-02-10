@@ -66,9 +66,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public string StreamName { get; set; }
 
-            /// <summary>
-            /// <para>The streaming URLs.</para>
-            /// </summary>
             [NameInMap("Streams")]
             [Validation(Required=false)]
             public StartPlaylistResponseBodyStreamInfoStreams Streams { get; set; }
@@ -77,42 +74,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 [Validation(Required=false)]
                 public List<StartPlaylistResponseBodyStreamInfoStreamsStream> Stream { get; set; }
                 public class StartPlaylistResponseBodyStreamInfoStreamsStream : TeaModel {
-                    /// <summary>
-                    /// <para>The streaming URL in the Flash Video (FLV) format.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para><a href="http://aliyundoc.com/caster/liveStream****.flv?auth_key=1612772224-0-0-3632be7cd9907169e8b09e91099c">http://aliyundoc.com/caster/liveStream****.flv?auth_key=1612772224-0-0-3632be7cd9907169e8b09e91099c</a>****</para>
-                    /// </summary>
                     [NameInMap("PullFlvUrl")]
                     [Validation(Required=false)]
                     public string PullFlvUrl { get; set; }
 
-                    /// <summary>
-                    /// <para>The streaming URL in the Real-Time Messaging Protocol (RTMP) format.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>rtmp:///aliyundoc.com/caster/liveStream****?auth_key=1612772224-0-0-4404ca59c0246226d49d01f734b1****</para>
-                    /// </summary>
                     [NameInMap("PullM3U8Url")]
                     [Validation(Required=false)]
                     public string PullM3U8Url { get; set; }
 
-                    /// <summary>
-                    /// <para>The streaming URL in the M3U8 format.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para><a href="http://aliyundoc.com/caster/liveStream****.m3u8?auth_key=1612772224-0-0-919a023a127156fe82e3562c3b3b">http://aliyundoc.com/caster/liveStream****.m3u8?auth_key=1612772224-0-0-919a023a127156fe82e3562c3b3b</a>****</para>
-                    /// </summary>
                     [NameInMap("PullRtmpUrl")]
                     [Validation(Required=false)]
                     public string PullRtmpUrl { get; set; }
 
-                    /// <summary>
-                    /// <para>The video quality of the live stream. Valid values: <b>original</b>: original quality</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>original</para>
-                    /// </summary>
                     [NameInMap("Quality")]
                     [Validation(Required=false)]
                     public string Quality { get; set; }

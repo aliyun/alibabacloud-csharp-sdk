@@ -83,9 +83,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public string HighPriorityShowStartTime { get; set; }
 
-            /// <summary>
-            /// <para>The episodes in the episode list.</para>
-            /// </summary>
             [NameInMap("ShowList")]
             [Validation(Required=false)]
             public DescribeShowListResponseBodyShowListInfoShowList ShowList { get; set; }
@@ -94,89 +91,40 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 [Validation(Required=false)]
                 public List<DescribeShowListResponseBodyShowListInfoShowListShow> Show { get; set; }
                 public class DescribeShowListResponseBodyShowListInfoShowListShow : TeaModel {
-                    /// <summary>
-                    /// <para>The duration of the episode. Unit: seconds.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>20</para>
-                    /// </summary>
                     [NameInMap("Duration")]
                     [Validation(Required=false)]
                     public long? Duration { get; set; }
 
-                    /// <summary>
-                    /// <para>The number of times the episode repeats after the first playback is complete.</para>
-                    /// <para>For example, if you set the value to 0, the episode is to be played once. If you set the value to 1, the episode is to be played twice.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>5</para>
-                    /// </summary>
                     [NameInMap("RepeatTimes")]
                     [Validation(Required=false)]
                     public int? RepeatTimes { get; set; }
 
-                    /// <summary>
-                    /// <para>The resource information.</para>
-                    /// </summary>
                     [NameInMap("ResourceInfo")]
                     [Validation(Required=false)]
                     public DescribeShowListResponseBodyShowListInfoShowListShowResourceInfo ResourceInfo { get; set; }
                     public class DescribeShowListResponseBodyShowListInfoShowListShowResourceInfo : TeaModel {
-                        /// <summary>
-                        /// <para>The custom type label.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>1</para>
-                        /// </summary>
                         [NameInMap("LiveInputType")]
                         [Validation(Required=false)]
                         public int? LiveInputType { get; set; }
 
-                        /// <summary>
-                        /// <para>The ID of the video-on-demand (VOD) file.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>a2b8e671-2fe5-4642-a2ec-bf93880e****</para>
-                        /// </summary>
                         [NameInMap("ResourceId")]
                         [Validation(Required=false)]
                         public string ResourceId { get; set; }
 
-                        /// <summary>
-                        /// <para>The type of the resource.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>vod</para>
-                        /// </summary>
                         [NameInMap("ResourceType")]
                         [Validation(Required=false)]
                         public string ResourceType { get; set; }
 
-                        /// <summary>
-                        /// <para>The URL of the resource.</para>
-                        /// </summary>
                         [NameInMap("ResourceUrl")]
                         [Validation(Required=false)]
                         public string ResourceUrl { get; set; }
 
                     }
 
-                    /// <summary>
-                    /// <para>The ID of the episode.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>a2b8e671-2fe5-4642-a2ec-bf93880e****</para>
-                    /// </summary>
                     [NameInMap("ShowId")]
                     [Validation(Required=false)]
                     public string ShowId { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the episode.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>liveShow****</para>
-                    /// </summary>
                     [NameInMap("ShowName")]
                     [Validation(Required=false)]
                     public string ShowName { get; set; }

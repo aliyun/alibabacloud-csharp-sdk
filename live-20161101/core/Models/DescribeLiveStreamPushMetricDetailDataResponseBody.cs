@@ -70,9 +70,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        /// <summary>
-        /// <para>The data array returned.</para>
-        /// </summary>
         [NameInMap("StreamDetailData")]
         [Validation(Required=false)]
         public DescribeLiveStreamPushMetricDetailDataResponseBodyStreamDetailData StreamDetailData { get; set; }
@@ -81,52 +78,22 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveStreamPushMetricDetailDataResponseBodyStreamDetailDataStreamData> StreamData { get; set; }
             public class DescribeLiveStreamPushMetricDetailDataResponseBodyStreamDetailDataStreamData : TeaModel {
-                /// <summary>
-                /// <para>The name of the application.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>app</para>
-                /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
-                /// <summary>
-                /// <para>The total bandwidth consumed by the stream per minute. Unit: bit/s.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>423304182</para>
-                /// </summary>
                 [NameInMap("ReqBps")]
                 [Validation(Required=false)]
                 public float? ReqBps { get; set; }
 
-                /// <summary>
-                /// <para>The total amount of traffic consumed by the stream per minute. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>423304182.66</para>
-                /// </summary>
                 [NameInMap("ReqTraffic")]
                 [Validation(Required=false)]
                 public long? ReqTraffic { get; set; }
 
-                /// <summary>
-                /// <para>The name of the stream.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test.flv</para>
-                /// </summary>
                 [NameInMap("StreamName")]
                 [Validation(Required=false)]
                 public string StreamName { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp of the returned data.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2022-09-10T20:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }

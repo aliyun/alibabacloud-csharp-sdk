@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The daily statistics on the number of snapshots.</para>
-        /// </summary>
         [NameInMap("SnapshotDataInfos")]
         [Validation(Required=false)]
         public DescribeLiveDomainSnapshotDataResponseBodySnapshotDataInfos SnapshotDataInfos { get; set; }
@@ -30,22 +27,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveDomainSnapshotDataResponseBodySnapshotDataInfosSnapshotDataInfo> SnapshotDataInfo { get; set; }
             public class DescribeLiveDomainSnapshotDataResponseBodySnapshotDataInfosSnapshotDataInfo : TeaModel {
-                /// <summary>
-                /// <para>The date.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>20180209</para>
-                /// </summary>
                 [NameInMap("Date")]
                 [Validation(Required=false)]
                 public string Date { get; set; }
 
-                /// <summary>
-                /// <para>The total number of snapshots that were captured on the day.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>110</para>
-                /// </summary>
                 [NameInMap("Total")]
                 [Validation(Required=false)]
                 public int? Total { get; set; }

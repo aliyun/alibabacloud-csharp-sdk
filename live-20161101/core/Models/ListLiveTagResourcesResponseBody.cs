@@ -33,34 +33,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<ListLiveTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListLiveTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>my-resource-id</para>
-                /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>DOMAIN</para>
-                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>env</para>
-                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>dev</para>
-                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

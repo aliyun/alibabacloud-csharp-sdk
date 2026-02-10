@@ -70,9 +70,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        /// <summary>
-        /// <para>The data array returned.</para>
-        /// </summary>
         [NameInMap("StreamDetailData")]
         [Validation(Required=false)]
         public DescribeLiveStreamTranscodeMetricDataResponseBodyStreamDetailData StreamDetailData { get; set; }
@@ -81,119 +78,34 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveStreamTranscodeMetricDataResponseBodyStreamDetailDataStreamData> StreamData { get; set; }
             public class DescribeLiveStreamTranscodeMetricDataResponseBodyStreamDetailDataStreamData : TeaModel {
-                /// <summary>
-                /// <para>The name of the application.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>app</para>
-                /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
-                /// <summary>
-                /// <para>The duration. Unit: seconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>300</para>
-                /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public long? Duration { get; set; }
 
-                /// <summary>
-                /// <para>The frame rate.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <para>normal</para>
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <para>high</para>
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <para>def</para>
-                /// <!-- --></description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>high</para>
-                /// </summary>
                 [NameInMap("Fps")]
                 [Validation(Required=false)]
                 public string Fps { get; set; }
 
-                /// <summary>
-                /// <para>The region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-shanghai</para>
-                /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
-                /// <summary>
-                /// <para>The resolution. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>2K: 2K resolution</description></item>
-                /// <item><description>4K: 4K resolution</description></item>
-                /// <item><description>LD: low definition</description></item>
-                /// <item><description>SD: standard definition</description></item>
-                /// <item><description>HD: high definition</description></item>
-                /// <item><description>def: audio</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>4K</para>
-                /// </summary>
                 [NameInMap("Resolution")]
                 [Validation(Required=false)]
                 public string Resolution { get; set; }
 
-                /// <summary>
-                /// <para>The name of the stream.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>stream</para>
-                /// </summary>
                 [NameInMap("StreamName")]
                 [Validation(Required=false)]
                 public string StreamName { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp of the returned data.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2023-06-11T02:45:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The transcoding type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>H264STD: standard transcoding based on H.264</description></item>
-                /// <item><description>H264NBHD: Narrowband HD™ transcoding based on H.264</description></item>
-                /// <item><description>H265STD: standard transcoding based on H.265</description></item>
-                /// <item><description>AUDIO: audio transcoding</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>H264STD</para>
-                /// </summary>
                 [NameInMap("TranscodeType")]
                 [Validation(Required=false)]
                 public string TranscodeType { get; set; }

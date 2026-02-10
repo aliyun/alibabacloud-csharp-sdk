@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddCasterEpisodeGroupResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The IDs of the episodes.</para>
-        /// </summary>
         [NameInMap("ItemIds")]
         [Validation(Required=false)]
         public AddCasterEpisodeGroupResponseBodyItemIds ItemIds { get; set; }

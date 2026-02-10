@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeCasterSceneAudioResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The configurations of the audio layers.</para>
-        /// </summary>
         [NameInMap("AudioLayers")]
         [Validation(Required=false)]
         public DescribeCasterSceneAudioResponseBodyAudioLayers AudioLayers { get; set; }
@@ -20,37 +17,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeCasterSceneAudioResponseBodyAudioLayersAudioLayer> AudioLayer { get; set; }
             public class DescribeCasterSceneAudioResponseBodyAudioLayersAudioLayer : TeaModel {
-                /// <summary>
-                /// <para>The fixed delay of the audio layer. Unit: milliseconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2000</para>
-                /// </summary>
                 [NameInMap("FixedDelayDuration")]
                 [Validation(Required=false)]
                 public int? FixedDelayDuration { get; set; }
 
-                /// <summary>
-                /// <para>The sound channel type of the audio layer. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>left</b>: the left channel</description></item>
-                /// <item><description><b>right</b>: the right channel</description></item>
-                /// <item><description><b>all</b> (default): both the left and right channels</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>all</para>
-                /// </summary>
                 [NameInMap("ValidChannel")]
                 [Validation(Required=false)]
                 public string ValidChannel { get; set; }
 
-                /// <summary>
-                /// <para>The volume of the audio layer.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("VolumeRate")]
                 [Validation(Required=false)]
                 public float? VolumeRate { get; set; }

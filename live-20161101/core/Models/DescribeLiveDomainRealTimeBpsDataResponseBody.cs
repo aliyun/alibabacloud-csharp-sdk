@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        /// <summary>
-        /// <para>The bandwidth data that was collected every minute.</para>
-        /// </summary>
         [NameInMap("RealTimeBpsDataPerInterval")]
         [Validation(Required=false)]
         public DescribeLiveDomainRealTimeBpsDataResponseBodyRealTimeBpsDataPerInterval RealTimeBpsDataPerInterval { get; set; }
@@ -50,22 +47,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveDomainRealTimeBpsDataResponseBodyRealTimeBpsDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeLiveDomainRealTimeBpsDataResponseBodyRealTimeBpsDataPerIntervalDataModule : TeaModel {
-                /// <summary>
-                /// <para>The timestamp of the returned data.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-11-30T05:39:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The bandwidth. Unit: bit/s.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>59392614.8</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

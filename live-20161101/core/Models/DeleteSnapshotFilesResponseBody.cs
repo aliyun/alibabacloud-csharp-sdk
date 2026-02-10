@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The information about the snapshots.</para>
-        /// </summary>
         [NameInMap("SnapshotDeleteInfoList")]
         [Validation(Required=false)]
         public DeleteSnapshotFilesResponseBodySnapshotDeleteInfoList SnapshotDeleteInfoList { get; set; }
@@ -40,26 +37,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DeleteSnapshotFilesResponseBodySnapshotDeleteInfoListSnapshotDeleteInfo> SnapshotDeleteInfo { get; set; }
             public class DeleteSnapshotFilesResponseBodySnapshotDeleteInfoListSnapshotDeleteInfo : TeaModel {
-                /// <summary>
-                /// <para>The timestamp when the snapshot was captured. Unit: milliseconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1653641526637</para>
-                /// </summary>
                 [NameInMap("CreateTimestamp")]
                 [Validation(Required=false)]
                 public long? CreateTimestamp { get; set; }
 
-                /// <summary>
-                /// <para>The processing result of the snapshot. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>OK</b>: The snapshot was deleted.</description></item>
-                /// <item><description><b>FileNotFound</b>: The snapshot was not found.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>OK</para>
-                /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }

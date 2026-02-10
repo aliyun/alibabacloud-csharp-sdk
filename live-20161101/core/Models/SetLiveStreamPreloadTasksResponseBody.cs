@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? FailedURL { get; set; }
 
-        /// <summary>
-        /// <para>The details of the prefetch task.</para>
-        /// </summary>
         [NameInMap("PreloadTasksMessages")]
         [Validation(Required=false)]
         public SetLiveStreamPreloadTasksResponseBodyPreloadTasksMessages PreloadTasksMessages { get; set; }
@@ -30,33 +27,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<SetLiveStreamPreloadTasksResponseBodyPreloadTasksMessagesPreloadTasksMessage> PreloadTasksMessage { get; set; }
             public class SetLiveStreamPreloadTasksResponseBodyPreloadTasksMessagesPreloadTasksMessage : TeaModel {
-                /// <summary>
-                /// <para>Indicates whether the prefetch task is successful. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Successfully</description></item>
-                /// <item><description>InternalError</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Successfully</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The streaming URL.</para>
-                /// </summary>
                 [NameInMap("PlayUrl")]
                 [Validation(Required=false)]
                 public string PlayUrl { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the prefetch task.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>yourTaskId</para>
-                /// </summary>
                 [NameInMap("TaskId")]
                 [Validation(Required=false)]
                 public string TaskId { get; set; }

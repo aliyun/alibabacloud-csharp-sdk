@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDelayedStreamingUsageResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The details about the stream delay usage data.</para>
-        /// </summary>
         [NameInMap("DelayData")]
         [Validation(Required=false)]
         public DescribeLiveDelayedStreamingUsageResponseBodyDelayData DelayData { get; set; }
@@ -20,52 +17,22 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveDelayedStreamingUsageResponseBodyDelayDataDelayDataItem> DelayDataItem { get; set; }
             public class DescribeLiveDelayedStreamingUsageResponseBodyDelayDataDelayDataItem : TeaModel {
-                /// <summary>
-                /// <para>The domain name. If SplitBy is set to domain, the data returned is grouped by domain name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>example.com</para>
-                /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
-                /// <summary>
-                /// <para>The duration of stream delay.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>84</para>
-                /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public long? Duration { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the region. If SplitBy is set to region, the data returned is grouped by region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-shanghai</para>
-                /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
-                /// <summary>
-                /// <para>The name of the stream. If SplitBy is set to stream, the data returned is grouped by stream.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>liveStream****</para>
-                /// </summary>
                 [NameInMap("StreamName")]
                 [Validation(Required=false)]
                 public string StreamName { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp of the data returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2022-10-10T20:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }

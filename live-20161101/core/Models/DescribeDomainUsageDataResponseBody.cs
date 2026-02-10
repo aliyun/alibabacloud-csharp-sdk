@@ -79,9 +79,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string Type { get; set; }
 
-        /// <summary>
-        /// <para>The resource usage data that was collected for each time interval.</para>
-        /// </summary>
         [NameInMap("UsageDataPerInterval")]
         [Validation(Required=false)]
         public DescribeDomainUsageDataResponseBodyUsageDataPerInterval UsageDataPerInterval { get; set; }
@@ -90,27 +87,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule : TeaModel {
-                /// <summary>
-                /// <para>The timestamp of the returned data. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-12-10T20:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The amount of resource usage.</para>
-                /// <list type="bullet">
-                /// <item><description>If the value of the Field parameter is traf or req_traf, the returned data is measured in bytes.</description></item>
-                /// <item><description>If the value of the Field parameter is bps or req_bps, the returned data is measured in bit/s.</description></item>
-                /// <item><description>If the value of the Field parameter is acc, the returned data is measured by count.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>423304182</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
