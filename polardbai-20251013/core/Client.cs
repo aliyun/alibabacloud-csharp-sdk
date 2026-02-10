@@ -39,6 +39,142 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>导入OSS数据集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddOSSMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddOSSMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public AddOSSMultimodalFineTuneDatasetResponse AddOSSMultimodalFineTuneDatasetWithOptions(AddOSSMultimodalFineTuneDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                query["DatasetId"] = request.DatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssUrl))
+            {
+                query["OssUrl"] = request.OssUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddOSSMultimodalFineTuneDataset",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddOSSMultimodalFineTuneDatasetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入OSS数据集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddOSSMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddOSSMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public async Task<AddOSSMultimodalFineTuneDatasetResponse> AddOSSMultimodalFineTuneDatasetWithOptionsAsync(AddOSSMultimodalFineTuneDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                query["DatasetId"] = request.DatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssUrl))
+            {
+                query["OssUrl"] = request.OssUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddOSSMultimodalFineTuneDataset",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddOSSMultimodalFineTuneDatasetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入OSS数据集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddOSSMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddOSSMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public AddOSSMultimodalFineTuneDatasetResponse AddOSSMultimodalFineTuneDataset(AddOSSMultimodalFineTuneDatasetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddOSSMultimodalFineTuneDatasetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入OSS数据集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddOSSMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddOSSMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public async Task<AddOSSMultimodalFineTuneDatasetResponse> AddOSSMultimodalFineTuneDatasetAsync(AddOSSMultimodalFineTuneDatasetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddOSSMultimodalFineTuneDatasetWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建chatbi配置表</para>
         /// </summary>
         /// 
@@ -4099,6 +4235,298 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建多模态微调数据集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public CreateMultimodalFineTuneDatasetResponse CreateMultimodalFineTuneDatasetWithOptions(CreateMultimodalFineTuneDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetDescription))
+            {
+                query["DatasetDescription"] = request.DatasetDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
+            {
+                query["DatasetName"] = request.DatasetName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMultimodalFineTuneDataset",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMultimodalFineTuneDatasetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建多模态微调数据集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public async Task<CreateMultimodalFineTuneDatasetResponse> CreateMultimodalFineTuneDatasetWithOptionsAsync(CreateMultimodalFineTuneDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetDescription))
+            {
+                query["DatasetDescription"] = request.DatasetDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
+            {
+                query["DatasetName"] = request.DatasetName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMultimodalFineTuneDataset",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMultimodalFineTuneDatasetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建多模态微调数据集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public CreateMultimodalFineTuneDatasetResponse CreateMultimodalFineTuneDataset(CreateMultimodalFineTuneDatasetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateMultimodalFineTuneDatasetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建多模态微调数据集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public async Task<CreateMultimodalFineTuneDatasetResponse> CreateMultimodalFineTuneDatasetAsync(CreateMultimodalFineTuneDatasetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateMultimodalFineTuneDatasetWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>部署打标服务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateMultimodalLabelStudioServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultimodalLabelStudioServiceResponse
+        /// </returns>
+        public CreateMultimodalLabelStudioServiceResponse CreateMultimodalLabelStudioServiceWithOptions(CreateMultimodalLabelStudioServiceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateMultimodalLabelStudioServiceShrinkRequest request = new CreateMultimodalLabelStudioServiceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DatasetIds))
+            {
+                request.DatasetIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetIds, "DatasetIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetIdsShrink))
+            {
+                query["DatasetIds"] = request.DatasetIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                query["Username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMultimodalLabelStudioService",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMultimodalLabelStudioServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>部署打标服务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateMultimodalLabelStudioServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultimodalLabelStudioServiceResponse
+        /// </returns>
+        public async Task<CreateMultimodalLabelStudioServiceResponse> CreateMultimodalLabelStudioServiceWithOptionsAsync(CreateMultimodalLabelStudioServiceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateMultimodalLabelStudioServiceShrinkRequest request = new CreateMultimodalLabelStudioServiceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DatasetIds))
+            {
+                request.DatasetIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetIds, "DatasetIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetIdsShrink))
+            {
+                query["DatasetIds"] = request.DatasetIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                query["Username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMultimodalLabelStudioService",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMultimodalLabelStudioServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>部署打标服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMultimodalLabelStudioServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultimodalLabelStudioServiceResponse
+        /// </returns>
+        public CreateMultimodalLabelStudioServiceResponse CreateMultimodalLabelStudioService(CreateMultimodalLabelStudioServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateMultimodalLabelStudioServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>部署打标服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMultimodalLabelStudioServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultimodalLabelStudioServiceResponse
+        /// </returns>
+        public async Task<CreateMultimodalLabelStudioServiceResponse> CreateMultimodalLabelStudioServiceAsync(CreateMultimodalLabelStudioServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateMultimodalLabelStudioServiceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建SearchTask</para>
         /// </summary>
         /// 
@@ -4275,6 +4703,186 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateMultimodalSearchTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从检索结果中创建微调数据集</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateMultimodalSearchTaskResultFineTuneDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultimodalSearchTaskResultFineTuneDatasetResponse
+        /// </returns>
+        public CreateMultimodalSearchTaskResultFineTuneDatasetResponse CreateMultimodalSearchTaskResultFineTuneDatasetWithOptions(CreateMultimodalSearchTaskResultFineTuneDatasetRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateMultimodalSearchTaskResultFineTuneDatasetShrinkRequest request = new CreateMultimodalSearchTaskResultFineTuneDatasetShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResultIndex))
+            {
+                request.ResultIndexShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResultIndex, "ResultIndex", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetDescription))
+            {
+                query["DatasetDescription"] = request.DatasetDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
+            {
+                query["DatasetName"] = request.DatasetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultIndexShrink))
+            {
+                query["ResultIndex"] = request.ResultIndexShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultMode))
+            {
+                query["ResultMode"] = request.ResultMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopN))
+            {
+                query["TopN"] = request.TopN;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMultimodalSearchTaskResultFineTuneDataset",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMultimodalSearchTaskResultFineTuneDatasetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从检索结果中创建微调数据集</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateMultimodalSearchTaskResultFineTuneDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultimodalSearchTaskResultFineTuneDatasetResponse
+        /// </returns>
+        public async Task<CreateMultimodalSearchTaskResultFineTuneDatasetResponse> CreateMultimodalSearchTaskResultFineTuneDatasetWithOptionsAsync(CreateMultimodalSearchTaskResultFineTuneDatasetRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateMultimodalSearchTaskResultFineTuneDatasetShrinkRequest request = new CreateMultimodalSearchTaskResultFineTuneDatasetShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResultIndex))
+            {
+                request.ResultIndexShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResultIndex, "ResultIndex", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetDescription))
+            {
+                query["DatasetDescription"] = request.DatasetDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
+            {
+                query["DatasetName"] = request.DatasetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultIndexShrink))
+            {
+                query["ResultIndex"] = request.ResultIndexShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultMode))
+            {
+                query["ResultMode"] = request.ResultMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopN))
+            {
+                query["TopN"] = request.TopN;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMultimodalSearchTaskResultFineTuneDataset",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMultimodalSearchTaskResultFineTuneDatasetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从检索结果中创建微调数据集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMultimodalSearchTaskResultFineTuneDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultimodalSearchTaskResultFineTuneDatasetResponse
+        /// </returns>
+        public CreateMultimodalSearchTaskResultFineTuneDatasetResponse CreateMultimodalSearchTaskResultFineTuneDataset(CreateMultimodalSearchTaskResultFineTuneDatasetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateMultimodalSearchTaskResultFineTuneDatasetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从检索结果中创建微调数据集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMultimodalSearchTaskResultFineTuneDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultimodalSearchTaskResultFineTuneDatasetResponse
+        /// </returns>
+        public async Task<CreateMultimodalSearchTaskResultFineTuneDatasetResponse> CreateMultimodalSearchTaskResultFineTuneDatasetAsync(CreateMultimodalSearchTaskResultFineTuneDatasetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateMultimodalSearchTaskResultFineTuneDatasetWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4531,6 +5139,390 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteMultimodalEmbeddingWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除多模态微调数据集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public DeleteMultimodalFineTuneDatasetResponse DeleteMultimodalFineTuneDatasetWithOptions(DeleteMultimodalFineTuneDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                query["DatasetId"] = request.DatasetId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMultimodalFineTuneDataset",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMultimodalFineTuneDatasetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除多模态微调数据集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public async Task<DeleteMultimodalFineTuneDatasetResponse> DeleteMultimodalFineTuneDatasetWithOptionsAsync(DeleteMultimodalFineTuneDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                query["DatasetId"] = request.DatasetId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMultimodalFineTuneDataset",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMultimodalFineTuneDatasetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除多模态微调数据集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public DeleteMultimodalFineTuneDatasetResponse DeleteMultimodalFineTuneDataset(DeleteMultimodalFineTuneDatasetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteMultimodalFineTuneDatasetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除多模态微调数据集</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public async Task<DeleteMultimodalFineTuneDatasetResponse> DeleteMultimodalFineTuneDatasetAsync(DeleteMultimodalFineTuneDatasetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteMultimodalFineTuneDatasetWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模型mode可选列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMultimodalLabelStudioServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultimodalLabelStudioServiceResponse
+        /// </returns>
+        public DeleteMultimodalLabelStudioServiceResponse DeleteMultimodalLabelStudioServiceWithOptions(DeleteMultimodalLabelStudioServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMultimodalLabelStudioService",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMultimodalLabelStudioServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模型mode可选列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMultimodalLabelStudioServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultimodalLabelStudioServiceResponse
+        /// </returns>
+        public async Task<DeleteMultimodalLabelStudioServiceResponse> DeleteMultimodalLabelStudioServiceWithOptionsAsync(DeleteMultimodalLabelStudioServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMultimodalLabelStudioService",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMultimodalLabelStudioServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模型mode可选列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMultimodalLabelStudioServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultimodalLabelStudioServiceResponse
+        /// </returns>
+        public DeleteMultimodalLabelStudioServiceResponse DeleteMultimodalLabelStudioService(DeleteMultimodalLabelStudioServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteMultimodalLabelStudioServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模型mode可选列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMultimodalLabelStudioServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultimodalLabelStudioServiceResponse
+        /// </returns>
+        public async Task<DeleteMultimodalLabelStudioServiceResponse> DeleteMultimodalLabelStudioServiceAsync(DeleteMultimodalLabelStudioServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteMultimodalLabelStudioServiceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>微调数据集删除导入的OSS路径</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOSSMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOSSMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public DeleteOSSMultimodalFineTuneDatasetResponse DeleteOSSMultimodalFineTuneDatasetWithOptions(DeleteOSSMultimodalFineTuneDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                query["DatasetId"] = request.DatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssUrl))
+            {
+                query["OssUrl"] = request.OssUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOSSMultimodalFineTuneDataset",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOSSMultimodalFineTuneDatasetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>微调数据集删除导入的OSS路径</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOSSMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOSSMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public async Task<DeleteOSSMultimodalFineTuneDatasetResponse> DeleteOSSMultimodalFineTuneDatasetWithOptionsAsync(DeleteOSSMultimodalFineTuneDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                query["DatasetId"] = request.DatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssUrl))
+            {
+                query["OssUrl"] = request.OssUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOSSMultimodalFineTuneDataset",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOSSMultimodalFineTuneDatasetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>微调数据集删除导入的OSS路径</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOSSMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOSSMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public DeleteOSSMultimodalFineTuneDatasetResponse DeleteOSSMultimodalFineTuneDataset(DeleteOSSMultimodalFineTuneDatasetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteOSSMultimodalFineTuneDatasetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>微调数据集删除导入的OSS路径</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOSSMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOSSMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public async Task<DeleteOSSMultimodalFineTuneDatasetResponse> DeleteOSSMultimodalFineTuneDatasetAsync(DeleteOSSMultimodalFineTuneDatasetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteOSSMultimodalFineTuneDatasetWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5199,6 +6191,270 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询多模态数据集列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public ListMultimodalFineTuneDatasetResponse ListMultimodalFineTuneDatasetWithOptions(ListMultimodalFineTuneDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputField))
+            {
+                query["InputField"] = request.InputField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMultimodalFineTuneDataset",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMultimodalFineTuneDatasetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询多模态数据集列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public async Task<ListMultimodalFineTuneDatasetResponse> ListMultimodalFineTuneDatasetWithOptionsAsync(ListMultimodalFineTuneDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputField))
+            {
+                query["InputField"] = request.InputField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMultimodalFineTuneDataset",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMultimodalFineTuneDatasetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询多模态数据集列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public ListMultimodalFineTuneDatasetResponse ListMultimodalFineTuneDataset(ListMultimodalFineTuneDatasetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListMultimodalFineTuneDatasetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询多模态数据集列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public async Task<ListMultimodalFineTuneDatasetResponse> ListMultimodalFineTuneDatasetAsync(ListMultimodalFineTuneDatasetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListMultimodalFineTuneDatasetWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询打标服务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalLabelStudioServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalLabelStudioServiceResponse
+        /// </returns>
+        public ListMultimodalLabelStudioServiceResponse ListMultimodalLabelStudioServiceWithOptions(ListMultimodalLabelStudioServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMultimodalLabelStudioService",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMultimodalLabelStudioServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询打标服务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalLabelStudioServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalLabelStudioServiceResponse
+        /// </returns>
+        public async Task<ListMultimodalLabelStudioServiceResponse> ListMultimodalLabelStudioServiceWithOptionsAsync(ListMultimodalLabelStudioServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMultimodalLabelStudioService",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMultimodalLabelStudioServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询打标服务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalLabelStudioServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalLabelStudioServiceResponse
+        /// </returns>
+        public ListMultimodalLabelStudioServiceResponse ListMultimodalLabelStudioService(ListMultimodalLabelStudioServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListMultimodalLabelStudioServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询打标服务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalLabelStudioServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalLabelStudioServiceResponse
+        /// </returns>
+        public async Task<ListMultimodalLabelStudioServiceResponse> ListMultimodalLabelStudioServiceAsync(ListMultimodalLabelStudioServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListMultimodalLabelStudioServiceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询search模型列表</para>
         /// </summary>
         /// 
@@ -5338,7 +6594,7 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         /// <para>查询search task列表</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListMultimodalSearchTaskRequest
         /// </param>
         /// <param name="runtime">
@@ -5348,13 +6604,31 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         /// <returns>
         /// ListMultimodalSearchTaskResponse
         /// </returns>
-        public ListMultimodalSearchTaskResponse ListMultimodalSearchTaskWithOptions(ListMultimodalSearchTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListMultimodalSearchTaskResponse ListMultimodalSearchTaskWithOptions(ListMultimodalSearchTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListMultimodalSearchTaskShrinkRequest request = new ListMultimodalSearchTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DatasetIds))
+            {
+                request.DatasetIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetIds, "DatasetIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetIdsShrink))
+            {
+                query["DatasetIds"] = request.DatasetIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputField))
+            {
+                query["InputField"] = request.InputField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelMode))
+            {
+                query["ModelMode"] = request.ModelMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -5388,7 +6662,7 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         /// <para>查询search task列表</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListMultimodalSearchTaskRequest
         /// </param>
         /// <param name="runtime">
@@ -5398,13 +6672,31 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         /// <returns>
         /// ListMultimodalSearchTaskResponse
         /// </returns>
-        public async Task<ListMultimodalSearchTaskResponse> ListMultimodalSearchTaskWithOptionsAsync(ListMultimodalSearchTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListMultimodalSearchTaskResponse> ListMultimodalSearchTaskWithOptionsAsync(ListMultimodalSearchTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListMultimodalSearchTaskShrinkRequest request = new ListMultimodalSearchTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DatasetIds))
+            {
+                request.DatasetIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetIds, "DatasetIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetIdsShrink))
+            {
+                query["DatasetIds"] = request.DatasetIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputField))
+            {
+                query["InputField"] = request.InputField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelMode))
+            {
+                query["ModelMode"] = request.ModelMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -5755,6 +7047,290 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateMultimodalDatasetWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新微调数据集信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public UpdateMultimodalFineTuneDatasetResponse UpdateMultimodalFineTuneDatasetWithOptions(UpdateMultimodalFineTuneDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetDescription))
+            {
+                query["DatasetDescription"] = request.DatasetDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                query["DatasetId"] = request.DatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
+            {
+                query["DatasetName"] = request.DatasetName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMultimodalFineTuneDataset",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMultimodalFineTuneDatasetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新微调数据集信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public async Task<UpdateMultimodalFineTuneDatasetResponse> UpdateMultimodalFineTuneDatasetWithOptionsAsync(UpdateMultimodalFineTuneDatasetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetDescription))
+            {
+                query["DatasetDescription"] = request.DatasetDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                query["DatasetId"] = request.DatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
+            {
+                query["DatasetName"] = request.DatasetName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMultimodalFineTuneDataset",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMultimodalFineTuneDatasetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新微调数据集信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public UpdateMultimodalFineTuneDatasetResponse UpdateMultimodalFineTuneDataset(UpdateMultimodalFineTuneDatasetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateMultimodalFineTuneDatasetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新微调数据集信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMultimodalFineTuneDatasetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultimodalFineTuneDatasetResponse
+        /// </returns>
+        public async Task<UpdateMultimodalFineTuneDatasetResponse> UpdateMultimodalFineTuneDatasetAsync(UpdateMultimodalFineTuneDatasetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateMultimodalFineTuneDatasetWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为打标服务覆盖配置白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMultimodalLabelStudioServiceWhiteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultimodalLabelStudioServiceWhiteListResponse
+        /// </returns>
+        public UpdateMultimodalLabelStudioServiceWhiteListResponse UpdateMultimodalLabelStudioServiceWhiteListWithOptions(UpdateMultimodalLabelStudioServiceWhiteListRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMultimodalLabelStudioServiceWhiteListShrinkRequest request = new UpdateMultimodalLabelStudioServiceWhiteListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WhiteList))
+            {
+                request.WhiteListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WhiteList, "WhiteList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteListShrink))
+            {
+                query["WhiteList"] = request.WhiteListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMultimodalLabelStudioServiceWhiteList",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMultimodalLabelStudioServiceWhiteListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为打标服务覆盖配置白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMultimodalLabelStudioServiceWhiteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultimodalLabelStudioServiceWhiteListResponse
+        /// </returns>
+        public async Task<UpdateMultimodalLabelStudioServiceWhiteListResponse> UpdateMultimodalLabelStudioServiceWhiteListWithOptionsAsync(UpdateMultimodalLabelStudioServiceWhiteListRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMultimodalLabelStudioServiceWhiteListShrinkRequest request = new UpdateMultimodalLabelStudioServiceWhiteListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WhiteList))
+            {
+                request.WhiteListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WhiteList, "WhiteList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteListShrink))
+            {
+                query["WhiteList"] = request.WhiteListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMultimodalLabelStudioServiceWhiteList",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMultimodalLabelStudioServiceWhiteListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为打标服务覆盖配置白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMultimodalLabelStudioServiceWhiteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultimodalLabelStudioServiceWhiteListResponse
+        /// </returns>
+        public UpdateMultimodalLabelStudioServiceWhiteListResponse UpdateMultimodalLabelStudioServiceWhiteList(UpdateMultimodalLabelStudioServiceWhiteListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateMultimodalLabelStudioServiceWhiteListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为打标服务覆盖配置白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMultimodalLabelStudioServiceWhiteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultimodalLabelStudioServiceWhiteListResponse
+        /// </returns>
+        public async Task<UpdateMultimodalLabelStudioServiceWhiteListResponse> UpdateMultimodalLabelStudioServiceWhiteListAsync(UpdateMultimodalLabelStudioServiceWhiteListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateMultimodalLabelStudioServiceWhiteListWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

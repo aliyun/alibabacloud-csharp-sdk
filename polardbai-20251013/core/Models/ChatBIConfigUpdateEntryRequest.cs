@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.PolardbAI20251013.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>若sql_function={&quot;replace&quot;:{&quot;status = &quot;请假&quot;&quot;:&quot;status = 0&quot;,&quot;status = &quot;出勤&quot;&quot;:&quot;status = 1&quot;}}，则表示：在sql_condition匹配的情况下，将SQL中的status = &quot;请假&quot;替换为status = 0，status = &quot;出勤&quot;替换为status = 1。</para>
+        /// <para>若sql_function={&quot;replace&quot;:{&quot;status = \&quot;请假\&quot;&quot;:&quot;status = 0&quot;,&quot;status = \&quot;出勤\&quot;&quot;:&quot;status = 1&quot;}}，则表示：在sql_condition匹配的情况下，将SQL中的status = \&quot;请假\&quot;替换为status = 0，status = \&quot;出勤\&quot;替换为status = 1。</para>
         /// </summary>
         [NameInMap("SqlFunction")]
         [Validation(Required=false)]

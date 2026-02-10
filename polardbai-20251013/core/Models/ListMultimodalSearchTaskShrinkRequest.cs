@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PolardbAI20251013.Models
 {
-    public class ListMultimodalSearchTaskRequest : TeaModel {
+    public class ListMultimodalSearchTaskShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.PolardbAI20251013.Models
 
         [NameInMap("DatasetIds")]
         [Validation(Required=false)]
-        public List<string> DatasetIds { get; set; }
+        public string DatasetIdsShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

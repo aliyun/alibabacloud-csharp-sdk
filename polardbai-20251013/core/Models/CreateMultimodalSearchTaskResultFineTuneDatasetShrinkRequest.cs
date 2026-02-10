@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PolardbAI20251013.Models
 {
-    public class ListMultimodalSearchTaskRequest : TeaModel {
+    public class CreateMultimodalSearchTaskResultFineTuneDatasetShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -19,41 +19,51 @@ namespace AlibabaCloud.SDK.PolardbAI20251013.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
-        [NameInMap("DatasetIds")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>多模态数据集</para>
+        /// </summary>
+        [NameInMap("DatasetDescription")]
         [Validation(Required=false)]
-        public List<string> DatasetIds { get; set; }
+        public string DatasetDescription { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>红绿灯</para>
+        /// <para>dataset-1</para>
         /// </summary>
-        [NameInMap("InputField")]
+        [NameInMap("DatasetName")]
         [Validation(Required=false)]
-        public string InputField { get; set; }
+        public string DatasetName { get; set; }
+
+        [NameInMap("ResultIndex")]
+        [Validation(Required=false)]
+        public string ResultIndexShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>flash，plus</para>
+        /// <para>[&quot;raw&quot;, &quot;rerank&quot;]</para>
         /// </summary>
-        [NameInMap("ModelMode")]
+        [NameInMap("ResultMode")]
         [Validation(Required=false)]
-        public string ModelMode { get; set; }
+        public string ResultMode { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>476751c5-*****-39f6aff1df96</para>
+        /// </summary>
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>100</para>
         /// </summary>
-        [NameInMap("PageNumber")]
+        [NameInMap("TopN")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>20</para>
-        /// </summary>
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public int? TopN { get; set; }
 
     }
 

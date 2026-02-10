@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.PolardbAI20251013.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>空字符串, &quot;graph_info.time,text_info.ext&quot;</para>
+        /// <para>空字符串, \&quot;graph_info.time,text_info.ext\&quot;</para>
         /// </summary>
         [NameInMap("ColumnsExcluded")]
         [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.PolardbAI20251013.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>空字符串, &quot;graph_info,image_info,text_info&quot;</para>
+        /// <para>空字符串, \&quot;graph_info,image_info,text_info\&quot;</para>
         /// </summary>
         [NameInMap("TablesIncluded")]
         [Validation(Required=false)]

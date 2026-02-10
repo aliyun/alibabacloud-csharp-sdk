@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PolardbAI20251013.Models
 {
-    public class ListMultimodalSearchTaskRequest : TeaModel {
+    public class UpdateMultimodalFineTuneDatasetRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -19,41 +19,29 @@ namespace AlibabaCloud.SDK.PolardbAI20251013.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
-        [NameInMap("DatasetIds")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>车辆图片</para>
+        /// </summary>
+        [NameInMap("DatasetDescription")]
         [Validation(Required=false)]
-        public List<string> DatasetIds { get; set; }
+        public string DatasetDescription { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>红绿灯</para>
+        /// <para>ds-****</para>
         /// </summary>
-        [NameInMap("InputField")]
+        [NameInMap("DatasetId")]
         [Validation(Required=false)]
-        public string InputField { get; set; }
+        public string DatasetId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>flash，plus</para>
+        /// <para>车辆</para>
         /// </summary>
-        [NameInMap("ModelMode")]
+        [NameInMap("DatasetName")]
         [Validation(Required=false)]
-        public string ModelMode { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>20</para>
-        /// </summary>
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string DatasetName { get; set; }
 
     }
 
