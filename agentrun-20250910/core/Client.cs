@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动模板的MCP服务器</para>
+        /// <para>Enable the TemplateMCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动模板的MCP服务器</para>
+        /// <para>Enable the TemplateMCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动模板的MCP服务器</para>
+        /// <para>Enable the TemplateMCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动模板的MCP服务器</para>
+        /// <para>Enable the TemplateMCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an agent runtime</para>
+        /// <para>CreateAgentRuntime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an agent runtime</para>
+        /// <para>CreateAgentRuntime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an agent runtime</para>
+        /// <para>CreateAgentRuntime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -293,7 +293,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an agent runtime</para>
+        /// <para>CreateAgentRuntime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1597,7 +1597,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板</para>
+        /// <para>Create a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1643,7 +1643,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板</para>
+        /// <para>Create a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1689,7 +1689,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板</para>
+        /// <para>Create a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1713,7 +1713,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板</para>
+        /// <para>Create a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4539,7 +4539,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能体运行时端点</para>
+        /// <para>Retrieve the list of access endpoints for an agent runtime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4602,7 +4602,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能体运行时端点</para>
+        /// <para>Retrieve the list of access endpoints for an agent runtime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4665,7 +4665,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能体运行时端点</para>
+        /// <para>Retrieve the list of access endpoints for an agent runtime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4689,7 +4689,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能体运行时端点</para>
+        /// <para>Retrieve the list of access endpoints for an agent runtime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7141,7 +7141,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止模板的MCP服务器</para>
+        /// <para>Stop the TemplateMCP service.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7177,7 +7177,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止模板的MCP服务器</para>
+        /// <para>Stop the TemplateMCP service.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7213,7 +7213,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止模板的MCP服务器</para>
+        /// <para>Stop the TemplateMCP service.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7228,7 +7228,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止模板的MCP服务器</para>
+        /// <para>Stop the TemplateMCP service.</para>
         /// </summary>
         /// 
         /// <returns>

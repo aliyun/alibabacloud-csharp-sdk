@@ -10,6 +10,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateTemplateInput : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -31,6 +34,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         /// <summary>
         /// <para>CPU资源配置（单位：核心）</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("cpu")]
         [Validation(Required=false)]
@@ -44,14 +50,26 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10240</para>
+        /// </summary>
         [NameInMap("diskSize")]
         [Validation(Required=false)]
         public int? DiskSize { get; set; }
+
+        [NameInMap("enableAgent")]
+        [Validation(Required=false)]
+        public bool? EnableAgent { get; set; }
 
         [NameInMap("environmentVariables")]
         [Validation(Required=false)]
         public Dictionary<string, string> EnvironmentVariables { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>acs:ram::123456789:role/aliyunfcdefaultrole</para>
+        /// </summary>
         [NameInMap("executionRoleArn")]
         [Validation(Required=false)]
         public string ExecutionRoleArn { get; set; }
@@ -63,10 +81,17 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         /// <summary>
         /// <para>内存资源配置（单位：MB）</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2048</para>
         /// </summary>
         [NameInMap("memory")]
         [Validation(Required=false)]
         public int? Memory { get; set; }
+
+        [NameInMap("nasConfig")]
+        [Validation(Required=false)]
+        public NASConfig NasConfig { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -81,6 +106,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
         /// <summary>
         /// <para>沙箱空闲超时时间（秒）</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1800</para>
         /// </summary>
         [NameInMap("sandboxIdleTimeoutInSeconds")]
         [Validation(Required=false)]
@@ -90,6 +118,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         /// 
         /// <summary>
         /// <para>沙箱存活时间（秒）</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>26000</para>
         /// </summary>
         [NameInMap("sandboxTTLInSeconds")]
         [Validation(Required=false)]
@@ -106,6 +137,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         /// <summary>
         /// <para>模板名称（要求账号唯一的）</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>browser-1766687911567</para>
         /// </summary>
         [NameInMap("templateName")]
         [Validation(Required=false)]
@@ -113,6 +147,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Browser</para>
         /// </summary>
         [NameInMap("templateType")]
         [Validation(Required=false)]

@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public OSSMountConfig OssMountConfig { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>01KE8DAJ35JC8SKP9CNFRZ8CW7</para>
+        /// </summary>
         [NameInMap("sandboxId")]
         [Validation(Required=false)]
         public string SandboxId { get; set; }
@@ -29,6 +33,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         /// 
         /// <summary>
         /// <para>沙箱空闲超时时间（秒）</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1800</para>
         /// </summary>
         [NameInMap("sandboxIdleTimeoutSeconds")]
         [Validation(Required=false)]
@@ -38,6 +45,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         /// <summary>
         /// <para>模板名称（系统内部通过 templateName 查询 template_id）</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>templateName</para>
         /// </summary>
         [NameInMap("templateName")]
         [Validation(Required=false)]

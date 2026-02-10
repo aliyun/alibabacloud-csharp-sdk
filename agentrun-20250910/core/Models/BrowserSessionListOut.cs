@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>100</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("total")]
         [Validation(Required=false)]

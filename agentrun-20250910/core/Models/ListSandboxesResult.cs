@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
     public class ListSandboxesResult : TeaModel {
         /// <summary>
         /// <para>SUCCESS 为成功，失败情况返回对应错误类型，比如 ERR_BAD_REQUEST ERR_VALIDATION_FAILED ERR_INTERNAL_SERVER_ERROR</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SUCCESS</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
         /// <summary>
         /// <para>唯一的请求标识符，用于问题追踪</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>55D4BE40-2811-5CFB-8482-E0E98D575B1E</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

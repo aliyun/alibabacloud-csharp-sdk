@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public int? DiskSize { get; set; }
 
+        [NameInMap("enableAgent")]
+        [Validation(Required=false)]
+        public bool? EnableAgent { get; set; }
+
         [NameInMap("environmentVariables")]
         [Validation(Required=false)]
         public Dictionary<string, string> EnvironmentVariables { get; set; }
@@ -98,6 +102,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [NameInMap("memory")]
         [Validation(Required=false)]
         public int? Memory { get; set; }
+
+        [NameInMap("nasConfig")]
+        [Validation(Required=false)]
+        public NASConfig NasConfig { get; set; }
 
         [NameInMap("networkConfiguration")]
         [Validation(Required=false)]
