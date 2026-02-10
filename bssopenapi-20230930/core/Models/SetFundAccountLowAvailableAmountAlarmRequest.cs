@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? FundAccountId { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

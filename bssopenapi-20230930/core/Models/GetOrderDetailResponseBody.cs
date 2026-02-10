@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 [Validation(Required=false)]
                 public List<GetOrderDetailResponseBodyDataOrderListOrder> Order { get; set; }
                 public class GetOrderDetailResponseBodyDataOrderListOrder : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("AfterTaxAmount")]
                     [Validation(Required=false)]
                     public string AfterTaxAmount { get; set; }
@@ -53,12 +49,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                         [Validation(Required=false)]
                         public List<GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfig> BillModuleConfig { get; set; }
                         public class GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfig : TeaModel {
-                            /// <summary>
-                            /// <para>apiCode</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>datadisk</para>
-                            /// </summary>
                             [NameInMap("ApiCode")]
                             [Validation(Required=false)]
                             public string ApiCode { get; set; }
@@ -71,26 +61,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                                 [Validation(Required=false)]
                                 public List<GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModulePropertiesBillModuleProperties> BillModuleProperties { get; set; }
                                 public class GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModulePropertiesBillModuleProperties : TeaModel {
-                                    /// <summary>
-                                    /// <b>Example:</b>
-                                    /// <para>cloud_ssd</para>
-                                    /// </summary>
                                     [NameInMap("AttrApiCode")]
                                     [Validation(Required=false)]
                                     public string AttrApiCode { get; set; }
 
-                                    /// <summary>
-                                    /// <b>Example:</b>
-                                    /// <para>cloud_ssd</para>
-                                    /// </summary>
                                     [NameInMap("ModuleApiCode")]
                                     [Validation(Required=false)]
                                     public string ModuleApiCode { get; set; }
 
-                                    /// <summary>
-                                    /// <b>Example:</b>
-                                    /// <para>cloud_ssd</para>
-                                    /// </summary>
                                     [NameInMap("Value")]
                                     [Validation(Required=false)]
                                     public string Value { get; set; }
@@ -99,10 +77,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 
                             }
 
-                            /// <summary>
-                            /// <b>Example:</b>
-                            /// <para>datadisk</para>
-                            /// </summary>
                             [NameInMap("Code")]
                             [Validation(Required=false)]
                             public string Code { get; set; }
@@ -115,34 +89,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 
                     }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>rds</para>
-                    /// </summary>
                     [NameInMap("CommodityCode")]
                     [Validation(Required=false)]
                     public string CommodityCode { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>DBInstanceClass:[DBInstanceClass:rds.mysql.s1.small;EngineVersion:8.0;Region:cn-qingdao;]DBFlowType:[Region:cn-qingdao;]</para>
-                    /// </summary>
                     [NameInMap("Config")]
                     [Validation(Required=false)]
                     public string Config { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>2017-06-08T09:41:30Z</para>
-                    /// </summary>
                     [NameInMap("CreateTime")]
                     [Validation(Required=false)]
                     public string CreateTime { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>CNY</para>
-                    /// </summary>
                     [NameInMap("Currency")]
                     [Validation(Required=false)]
                     public string Currency { get; set; }
@@ -151,50 +109,26 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                     [Validation(Required=false)]
                     public Dictionary<string, string> ExtendInfos { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>[&quot;rm-bp1a2vsr018313t6o&quot;]</para>
-                    /// </summary>
                     [NameInMap("InstanceIds")]
                     [Validation(Required=false)]
                     public string InstanceIds { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>322315</para>
-                    /// </summary>
                     [NameInMap("Operator")]
                     [Validation(Required=false)]
                     public string Operator { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>241559391310333</para>
-                    /// </summary>
                     [NameInMap("OrderId")]
                     [Validation(Required=false)]
                     public string OrderId { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>productsuborder</para>
-                    /// </summary>
                     [NameInMap("OrderSubType")]
                     [Validation(Required=false)]
                     public string OrderSubType { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>new</para>
-                    /// </summary>
                     [NameInMap("OrderType")]
                     [Validation(Required=false)]
                     public string OrderType { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>DBInstanceClass:[DBInstanceClass:rds.mysql.s1.small;EngineVersion:8.0;Region:cn-qingdao;]DBFlowType:[Region:cn-qingdao;]</para>
-                    /// </summary>
                     [NameInMap("OriginalConfig")]
                     [Validation(Required=false)]
                     public string OriginalConfig { get; set; }
@@ -207,10 +141,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                         [Validation(Required=false)]
                         public List<GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfig> OriginalModuleConfig { get; set; }
                         public class GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfig : TeaModel {
-                            /// <summary>
-                            /// <b>Example:</b>
-                            /// <para>systemdisk</para>
-                            /// </summary>
                             [NameInMap("Code")]
                             [Validation(Required=false)]
                             public string Code { get; set; }
@@ -223,10 +153,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                                 [Validation(Required=false)]
                                 public List<GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModulePropertiesModuleProperties> ModuleProperties { get; set; }
                                 public class GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModulePropertiesModuleProperties : TeaModel {
-                                    /// <summary>
-                                    /// <b>Example:</b>
-                                    /// <para>cloud_efficiency</para>
-                                    /// </summary>
                                     [NameInMap("Code")]
                                     [Validation(Required=false)]
                                     public string Code { get; set; }
@@ -235,10 +161,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                                     [Validation(Required=false)]
                                     public string Name { get; set; }
 
-                                    /// <summary>
-                                    /// <b>Example:</b>
-                                    /// <para>cloud_efficiency</para>
-                                    /// </summary>
                                     [NameInMap("Value")]
                                     [Validation(Required=false)]
                                     public string Value { get; set; }
@@ -255,130 +177,66 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 
                     }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>CNY</para>
-                    /// </summary>
                     [NameInMap("PaymentCurrency")]
                     [Validation(Required=false)]
                     public string PaymentCurrency { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>paid</para>
-                    /// </summary>
                     [NameInMap("PaymentStatus")]
                     [Validation(Required=false)]
                     public string PaymentStatus { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>2017-06-08T09:41:30Z</para>
-                    /// </summary>
                     [NameInMap("PaymentTime")]
                     [Validation(Required=false)]
                     public string PaymentTime { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("PretaxAmount")]
                     [Validation(Required=false)]
                     public string PretaxAmount { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("PretaxAmountLocal")]
                     [Validation(Required=false)]
                     public string PretaxAmountLocal { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("PretaxGrossAmount")]
                     [Validation(Required=false)]
                     public string PretaxGrossAmount { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>rds</para>
-                    /// </summary>
                     [NameInMap("ProductCode")]
                     [Validation(Required=false)]
                     public string ProductCode { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>rds</para>
-                    /// </summary>
                     [NameInMap("ProductType")]
                     [Validation(Required=false)]
                     public string ProductType { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>3</para>
-                    /// </summary>
                     [NameInMap("Quantity")]
                     [Validation(Required=false)]
                     public string Quantity { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>cn-hangzhou</para>
-                    /// </summary>
                     [NameInMap("Region")]
                     [Validation(Required=false)]
                     public string Region { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>241559391310332</para>
-                    /// </summary>
                     [NameInMap("RelatedOrderId")]
                     [Validation(Required=false)]
                     public string RelatedOrderId { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>234343</para>
-                    /// </summary>
                     [NameInMap("SubOrderId")]
                     [Validation(Required=false)]
                     public string SubOrderId { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>Subscription</para>
-                    /// </summary>
                     [NameInMap("SubscriptionType")]
                     [Validation(Required=false)]
                     public string SubscriptionType { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("Tax")]
                     [Validation(Required=false)]
                     public string Tax { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>2117-06-08T16:00:00Z</para>
-                    /// </summary>
                     [NameInMap("UsageEndTime")]
                     [Validation(Required=false)]
                     public string UsageEndTime { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>2017-06-08T16:00:00Z</para>
-                    /// </summary>
                     [NameInMap("UsageStartTime")]
                     [Validation(Required=false)]
                     public string UsageStartTime { get; set; }
