@@ -77,6 +77,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         [Validation(Required=false)]
         public string TrafficStatisticType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>agentAnalysisLogTraffic</para>
+        /// </summary>
+        [NameInMap("TrafficType")]
+        [Validation(Required=false)]
+        public string TrafficType { get; set; }
+
     }
 
 }

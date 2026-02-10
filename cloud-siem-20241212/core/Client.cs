@@ -9562,6 +9562,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             {
                 body["TrafficStatisticType"] = request.TrafficStatisticType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficType))
+            {
+                body["TrafficType"] = request.TrafficType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -9641,6 +9645,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficStatisticType))
             {
                 body["TrafficStatisticType"] = request.TrafficStatisticType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficType))
+            {
+                body["TrafficType"] = request.TrafficType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
