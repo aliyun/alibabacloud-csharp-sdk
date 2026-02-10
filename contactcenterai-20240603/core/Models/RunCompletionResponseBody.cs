@@ -33,9 +33,61 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         [Validation(Required=false)]
         public string OutputTokens { get; set; }
 
+        [NameInMap("ragStatus")]
+        [Validation(Required=false)]
+        public string RagStatus { get; set; }
+
         [NameInMap("totalTokens")]
         [Validation(Required=false)]
         public string TotalTokens { get; set; }
+
+        [NameInMap("usage")]
+        [Validation(Required=false)]
+        public RunCompletionResponseBodyUsage Usage { get; set; }
+        public class RunCompletionResponseBodyUsage : TeaModel {
+            [NameInMap("rag")]
+            [Validation(Required=false)]
+            public RunCompletionResponseBodyUsageRag Rag { get; set; }
+            public class RunCompletionResponseBodyUsageRag : TeaModel {
+                [NameInMap("adaptive")]
+                [Validation(Required=false)]
+                public RunCompletionResponseBodyUsageRagAdaptive Adaptive { get; set; }
+                public class RunCompletionResponseBodyUsageRagAdaptive : TeaModel {
+                    [NameInMap("inputTokens")]
+                    [Validation(Required=false)]
+                    public int? InputTokens { get; set; }
+
+                    [NameInMap("invokeCount")]
+                    [Validation(Required=false)]
+                    public int? InvokeCount { get; set; }
+
+                    [NameInMap("outputTokens")]
+                    [Validation(Required=false)]
+                    public int? OutputTokens { get; set; }
+
+                }
+
+                [NameInMap("dialogSummary")]
+                [Validation(Required=false)]
+                public RunCompletionResponseBodyUsageRagDialogSummary DialogSummary { get; set; }
+                public class RunCompletionResponseBodyUsageRagDialogSummary : TeaModel {
+                    [NameInMap("inputTokens")]
+                    [Validation(Required=false)]
+                    public int? InputTokens { get; set; }
+
+                    [NameInMap("invokeCount")]
+                    [Validation(Required=false)]
+                    public int? InvokeCount { get; set; }
+
+                    [NameInMap("outputTokens")]
+                    [Validation(Required=false)]
+                    public int? OutputTokens { get; set; }
+
+                }
+
+            }
+
+        }
 
     }
 

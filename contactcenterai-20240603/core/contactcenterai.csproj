@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.ContactCenterAI20240603</AssemblyName>
-    <Version>3.7.0</Version>
+    <Version>3.7.1</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud ContactCenterAI (20240603) SDK Library for .NET</Description>
@@ -42,7 +42,7 @@
     </PackageReference>
     <PackageReference Include="AlibabaCloud.TeaUtil" Version="0.1.19"/>
     <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.1.15"/>
-    <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.1.2"/>
+    <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.1.4"/>
     <PackageReference Include="AlibabaCloud.EndpointUtil" Version="0.1.2"/>
     <PackageReference Include="Tea" Version="1.1.3"/>
   </ItemGroup>

@@ -51,6 +51,18 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
             [Validation(Required=false)]
             public string Extra { get; set; }
 
+            [NameInMap("ragErrorMessage")]
+            [Validation(Required=false)]
+            public string RagErrorMessage { get; set; }
+
+            [NameInMap("ragResult")]
+            [Validation(Required=false)]
+            public string RagResult { get; set; }
+
+            [NameInMap("ragStatus")]
+            [Validation(Required=false)]
+            public string RagStatus { get; set; }
+
             [NameInMap("taskErrorMessage")]
             [Validation(Required=false)]
             public string TaskErrorMessage { get; set; }
@@ -74,6 +86,54 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
             [NameInMap("text")]
             [Validation(Required=false)]
             public string Text { get; set; }
+
+            [NameInMap("usage")]
+            [Validation(Required=false)]
+            public GetTaskResultResponseBodyDataUsage Usage { get; set; }
+            public class GetTaskResultResponseBodyDataUsage : TeaModel {
+                [NameInMap("rag")]
+                [Validation(Required=false)]
+                public GetTaskResultResponseBodyDataUsageRag Rag { get; set; }
+                public class GetTaskResultResponseBodyDataUsageRag : TeaModel {
+                    [NameInMap("adaptive")]
+                    [Validation(Required=false)]
+                    public GetTaskResultResponseBodyDataUsageRagAdaptive Adaptive { get; set; }
+                    public class GetTaskResultResponseBodyDataUsageRagAdaptive : TeaModel {
+                        [NameInMap("inputTokens")]
+                        [Validation(Required=false)]
+                        public int? InputTokens { get; set; }
+
+                        [NameInMap("invokeCount")]
+                        [Validation(Required=false)]
+                        public int? InvokeCount { get; set; }
+
+                        [NameInMap("outputTokens")]
+                        [Validation(Required=false)]
+                        public int? OutputTokens { get; set; }
+
+                    }
+
+                    [NameInMap("dialogSummary")]
+                    [Validation(Required=false)]
+                    public GetTaskResultResponseBodyDataUsageRagDialogSummary DialogSummary { get; set; }
+                    public class GetTaskResultResponseBodyDataUsageRagDialogSummary : TeaModel {
+                        [NameInMap("inputTokens")]
+                        [Validation(Required=false)]
+                        public int? InputTokens { get; set; }
+
+                        [NameInMap("invokeCount")]
+                        [Validation(Required=false)]
+                        public int? InvokeCount { get; set; }
+
+                        [NameInMap("outputTokens")]
+                        [Validation(Required=false)]
+                        public int? OutputTokens { get; set; }
+
+                    }
+
+                }
+
+            }
 
         }
 
