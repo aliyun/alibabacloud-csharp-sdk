@@ -54,6 +54,27 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationRuleName { get; set; }
 
             /// <summary>
+            /// <para>授权规则主体ID，主体类型对应的主体ID。</para>
+            /// </summary>
+            [NameInMap("AuthorizationRuleSubjectId")]
+            [Validation(Required=false)]
+            public string AuthorizationRuleSubjectId { get; set; }
+
+            /// <summary>
+            /// <para>授权规则主体范围，枚举类型：shared（共享型，即支持所有主体，包括账户、应用），exclusive（专属类型）</para>
+            /// </summary>
+            [NameInMap("AuthorizationRuleSubjectScope")]
+            [Validation(Required=false)]
+            public string AuthorizationRuleSubjectScope { get; set; }
+
+            /// <summary>
+            /// <para>授权规则主体类型，枚举类型：application（应用)，user（账户)。</para>
+            /// </summary>
+            [NameInMap("AuthorizationRuleSubjectType")]
+            [Validation(Required=false)]
+            public string AuthorizationRuleSubjectType { get; set; }
+
+            /// <summary>
             /// <para>创建时间，Unix时间戳格式，单位为毫秒。</para>
             /// 
             /// <b>Example:</b>

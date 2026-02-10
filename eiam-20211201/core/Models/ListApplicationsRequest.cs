@@ -18,6 +18,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationCreationType { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>application</para>
+        /// </summary>
+        [NameInMap("ApplicationIdentityType")]
+        [Validation(Required=false)]
+        public string ApplicationIdentityType { get; set; }
+
+        /// <summary>
         /// <para>The IDs of the applications.</para>
         /// 
         /// <b>Example:</b>

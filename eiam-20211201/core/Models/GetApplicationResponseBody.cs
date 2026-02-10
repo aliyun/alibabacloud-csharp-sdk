@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string ApplicationId { get; set; }
 
+            [NameInMap("ApplicationIdentityType")]
+            [Validation(Required=false)]
+            public string ApplicationIdentityType { get; set; }
+
             /// <summary>
             /// <para>The name of the application.</para>
             /// 

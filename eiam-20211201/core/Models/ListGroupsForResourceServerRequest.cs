@@ -66,6 +66,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>权限唯一标识。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ress_nbte4bb3qqqnaq73rlmkqixxxx</para>
+        /// </summary>
+        [NameInMap("ResourceServerScopeId")]
+        [Validation(Required=false)]
+        public string ResourceServerScopeId { get; set; }
+
     }
 
 }

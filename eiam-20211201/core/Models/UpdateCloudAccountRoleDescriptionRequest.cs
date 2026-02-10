@@ -42,7 +42,6 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// <para>描述</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_account_role_description</para>
