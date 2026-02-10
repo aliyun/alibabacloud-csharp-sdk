@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
-        public string ResourceDirectoryAccountId { get; set; }
+        public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
         /// <para>The source IP address of the request.</para>

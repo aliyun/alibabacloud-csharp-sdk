@@ -26,6 +26,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? AliUid { get; set; }
 
+            /// <summary>
+            /// <para>Business categories under cloud monitoring notification configuration. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Incident</b>: Security incidents. </description></item>
+            /// <item><description><b>Suspicious</b>: Security alerts. </description></item>
+            /// <item><description><b>Hc</b>: Baseline checks. </description></item>
+            /// <item><description><b>Cspm</b>: Cloud Security Posture Management. </description></item>
+            /// <item><description><b>Agentless</b>: Agentless detection. </description></item>
+            /// <item><description><b>Filedetect</b>: Malicious file SDK. </description></item>
+            /// <item><description><b>Vul</b>: Vulnerabilities. </description></item>
+            /// <item><description><b>Rasp</b>: Application protection.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Cspm</para>
+            /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }

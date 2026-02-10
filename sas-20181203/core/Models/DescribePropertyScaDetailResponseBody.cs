@@ -36,6 +36,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
+            /// <summary>
+            /// <para>The value of NextToken that is returned when the NextToken method is used.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>B60***</para>
+            /// </summary>
             [NameInMap("NextToken")]
             [Validation(Required=false)]
             public string NextToken { get; set; }

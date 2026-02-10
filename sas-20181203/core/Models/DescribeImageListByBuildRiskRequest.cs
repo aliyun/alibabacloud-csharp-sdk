@@ -10,6 +10,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageListByBuildRiskRequest : TeaModel {
         /// <summary>
+        /// <para>The attribute value of the condition parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sas</para>
+        /// </summary>
+        [NameInMap("Criteria")]
+        [Validation(Required=false)]
+        public string Criteria { get; set; }
+
+        /// <summary>
+        /// <para>The property name of the condition parameters. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>RepoNamespace</b>: Namespace.</description></item>
+        /// <item><description><b>RepoName</b>: Repository name.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RepoNamespace</para>
+        /// </summary>
+        [NameInMap("CriteriaType")]
+        [Validation(Required=false)]
+        public string CriteriaType { get; set; }
+
+        /// <summary>
         /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>

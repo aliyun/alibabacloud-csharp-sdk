@@ -9,14 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCloudAssetInstancesRequest : TeaModel {
+        /// <summary>
+        /// <para>Query data list based on keywords.</para>
+        /// </summary>
         [NameInMap("CloudAssetQueryData")]
         [Validation(Required=false)]
         public List<ListCloudAssetInstancesRequestCloudAssetQueryData> CloudAssetQueryData { get; set; }
         public class ListCloudAssetInstancesRequestCloudAssetQueryData : TeaModel {
+            /// <summary>
+            /// <para>Query content.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>163.8.8.9</para>
+            /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public string Data { get; set; }
 
+            /// <summary>
+            /// <para>Query operator, currently only supports: INCLUDE.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>INCLUDE</para>
+            /// </summary>
             [NameInMap("Operator")]
             [Validation(Required=false)]
             public string Operator { get; set; }

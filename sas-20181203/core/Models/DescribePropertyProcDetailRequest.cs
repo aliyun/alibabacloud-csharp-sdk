@@ -49,6 +49,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The value of NextToken that is returned when the NextToken method is used. You do not need to specify this parameter for the first request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6k+AtdhNE3kgQEK36GujZ5on+tWdc+4WoaoMP/kUNxxxx</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -106,6 +112,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to use the NextToken method to retrieve a new page of results. If you set UseNextToken to true, the value of TotalCount is not returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The NextToken method is used.</description></item>
+        /// <item><description><b>false</b>: The NextToken method is not used.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("UseNextToken")]
         [Validation(Required=false)]
         public bool? UseNextToken { get; set; }

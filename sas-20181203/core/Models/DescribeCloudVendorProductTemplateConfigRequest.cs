@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCloudVendorProductTemplateConfigRequest : TeaModel {
         /// <summary>
+        /// <para>Set the language type for request and response messages, default is <b>zh</b>. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +24,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>Cloud asset vendor. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>CHAITIN</b>: Chaitin Technology</description></item>
+        /// <item><description><b>FORTINET</b>: Fortinet</description></item>
+        /// <item><description><b>THREATBOOK</b>: ThreatBook</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>CHAITIN</para>
         /// </summary>

@@ -26,14 +26,36 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The information about the regions.</para>
+        /// </summary>
         [NameInMap("VendorRegionList")]
         [Validation(Required=false)]
         public List<ListAgentlessRegionResponseBodyVendorRegionList> VendorRegionList { get; set; }
         public class ListAgentlessRegionResponseBodyVendorRegionList : TeaModel {
+            /// <summary>
+            /// <para>The region ID of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-shanghai</para>
+            /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <para>The type of the server. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Alibaba Cloud</description></item>
+            /// <item><description><b>3</b>: Tencent Cloud</description></item>
+            /// <item><description><b>4</b>: Huawei Cloud</description></item>
+            /// <item><description><b>5</b>: Azure</description></item>
+            /// <item><description><b>7</b>: AWS</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("Vendor")]
             [Validation(Required=false)]
             public int? Vendor { get; set; }

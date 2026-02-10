@@ -146,6 +146,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? Bind { get; set; }
 
             /// <summary>
+            /// <para>Whether to bind tamper-proof authorization. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>block</b>: Yes</description></item>
+            /// <item><description><b>none</b>: No</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>block</para>
+            /// </summary>
+            [NameInMap("BindFileProtectType")]
+            [Validation(Required=false)]
+            public string BindFileProtectType { get; set; }
+
+            /// <summary>
             /// <para>The status of the Security Center agent installed on the asset. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>online</b>: The Security Center agent is <b>enabled</b>.</description></item>

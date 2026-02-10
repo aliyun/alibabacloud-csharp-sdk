@@ -10,9 +10,40 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyPostPayModuleSwitchRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the pay-as-you-go instance. This parameter is required.</para>
+        /// <para>Automatic binding switch for new assets in host and container protection. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: Off</description></item>
+        /// <item><description><b>1</b>: On</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("PostPaidHostAutoBind")]
+        [Validation(Required=false)]
+        public int? PostPaidHostAutoBind { get; set; }
+
+        /// <summary>
+        /// <para>Version for automatic binding of new assets in host and container protection. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: Free Edition </description></item>
+        /// <item><description><b>3</b>: Enterprise Edition</description></item>
+        /// <item><description><b>5</b>: Advanced Edition</description></item>
+        /// <item><description><b>6</b>: Antivirus Edition    </description></item>
+        /// <item><description><b>7</b>: Flagship Edition</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
+        [NameInMap("PostPaidHostAutoBindVersion")]
+        [Validation(Required=false)]
+        public int? PostPaidHostAutoBindVersion { get; set; }
+
+        /// <summary>
+        /// <para>Pay-as-you-go instance ID, which must be filled in.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/421770.html">DescribeVersionConfig</a> operation to obtain the ID.</para>
+        /// <para>Call the <a href="~~DescribeVersionConfig~~">DescribeVersionConfig</a> interface to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,26 +54,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PostPayInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The switch status of the pay-as-you-go module. The value is a JSON string. Valid values:</para>
+        /// <para>Status of the pay-as-you-go module switch, in JsonString format. Values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Key:</para>
-        /// <list type="bullet">
-        /// <item><description><b>VUL</b>: vulnerability fixing module</description></item>
-        /// <item><description><b>CSPM</b>: cloud service configuration check module</description></item>
-        /// <item><description><b>AGENTLESS</b>: agentless detection module</description></item>
-        /// <item><description><b>SERVERLESS</b>: serverless asset module</description></item>
+        /// <item><description>Key:<list type="bullet">
+        /// <item><description><b>VUL</b>: Vulnerability Repair Module</description></item>
+        /// <item><description><b>CSPM</b>: Cloud Security Posture Management Module</description></item>
+        /// <item><description><b>AGENTLESS</b>: Agentless Detection Module</description></item>
+        /// <item><description><b>SERVERLESS</b>: Serverless Security Module</description></item>
         /// <item><description><b>CTDR</b>: Threat Analysis and Response Module</description></item>
         /// <item><description><b>POST_HOST</b>: Host and Container Security Module</description></item>
         /// <item><description><b>SDK</b>: Malicious File Detection SDK Module</description></item>
         /// <item><description><b>RASP</b>: Application Protection Module</description></item>
+        /// <item><description><b>CTDR_STORAGE</b>: Log Management Module</description></item>
+        /// <item><description><b>ANTI_RANSOMWARE</b>: Anti-Ransomware Management</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Value: A value of 0 specifies disabled. A value of 1 specifies enabled.</para>
-        /// </description></item>
+        /// <item><description>Value: 0 means off, 1 means on</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify a value for a module, the original value of the module is retained.</para>
+        /// <para>The values of modules not passed will not change.</para>
         /// </remarks>
+        /// <para><notice>The meaning is the same as the PostPayModuleSwitchObj field. When both exist, the value of PostPayModuleSwitch takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;VUL&quot;:1,&quot;CSPM&quot;:0}</para>
@@ -50,6 +82,189 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("PostPayModuleSwitch")]
         [Validation(Required=false)]
         public string PostPayModuleSwitch { get; set; }
+
+        /// <summary>
+        /// <para>Pay-as-you-go module switch.</para>
+        /// <remarks>
+        /// <para>Notice:  The meaning is the same as the PostPayModuleSwitch field. When both exist, the value of PostPayModuleSwitch takes precedence.</para>
+        /// </remarks>
+        /// </summary>
+        [NameInMap("PostPayModuleSwitchObj")]
+        [Validation(Required=false)]
+        public ModifyPostPayModuleSwitchRequestPostPayModuleSwitchObj PostPayModuleSwitchObj { get; set; }
+        public class ModifyPostPayModuleSwitchRequestPostPayModuleSwitchObj : TeaModel {
+            /// <summary>
+            /// <para>Agentless Detection Module. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Off</description></item>
+            /// <item><description><b>1</b>: On</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("Agentless")]
+            [Validation(Required=false)]
+            public int? Agentless { get; set; }
+
+            /// <summary>
+            /// <para>Anti-Ransomware Module. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Off</description></item>
+            /// <item><description><b>1</b>: On</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("AntiRansomware")]
+            [Validation(Required=false)]
+            public int? AntiRansomware { get; set; }
+
+            /// <summary>
+            /// <para>Basic service module. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Off</description></item>
+            /// <item><description><b>1</b>: On</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>Notice: The basic service module switch does not support active modification. When other modules are on, this module is also on. If all other modules are off, then this module is off.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("BasicService")]
+            [Validation(Required=false)]
+            public int? BasicService { get; set; }
+
+            /// <summary>
+            /// <para>Cloud Security Configuration Check Module. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Off</description></item>
+            /// <item><description><b>1</b>: On</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("Cspm")]
+            [Validation(Required=false)]
+            public int? Cspm { get; set; }
+
+            /// <summary>
+            /// <para>Threat Analysis and Response Module. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Off</description></item>
+            /// <item><description><b>1</b>: On</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("Ctdr")]
+            [Validation(Required=false)]
+            public int? Ctdr { get; set; }
+
+            /// <summary>
+            /// <para>Log Management Module. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Off</description></item>
+            /// <item><description><b>1</b>: On</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("CtdrStorage")]
+            [Validation(Required=false)]
+            public int? CtdrStorage { get; set; }
+
+            /// <summary>
+            /// <para>Host and Container Security Module. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Off</description></item>
+            /// <item><description><b>1</b>: On</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("PostHost")]
+            [Validation(Required=false)]
+            public int? PostHost { get; set; }
+
+            /// <summary>
+            /// <para>Application Protection Module. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Off</description></item>
+            /// <item><description><b>1</b>: On</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("Rasp")]
+            [Validation(Required=false)]
+            public int? Rasp { get; set; }
+
+            /// <summary>
+            /// <para>Malicious File Detection SDK Module. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Off</description></item>
+            /// <item><description><b>1</b>: On</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("Sdk")]
+            [Validation(Required=false)]
+            public int? Sdk { get; set; }
+
+            /// <summary>
+            /// <para>Serverless Security Module. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Off</description></item>
+            /// <item><description><b>1</b>: On</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("Serverless")]
+            [Validation(Required=false)]
+            public int? Serverless { get; set; }
+
+            /// <summary>
+            /// <para>Vulnerability Repair Module. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Off</description></item>
+            /// <item><description><b>1</b>: On</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("Vul")]
+            [Validation(Required=false)]
+            public int? Vul { get; set; }
+
+            /// <summary>
+            /// <para>File Tamper Protection Module. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Off</description></item>
+            /// <item><description><b>1</b>: On</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("WebLock")]
+            [Validation(Required=false)]
+            public int? WebLock { get; set; }
+
+        }
 
     }
 

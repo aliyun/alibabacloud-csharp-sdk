@@ -9,6 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyNoticeConfigRequest : TeaModel {
+        /// <summary>
+        /// <para>Notification configuration type, default is SMS/email/in-site message. Value:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cms</b>: Cloud Monitor push</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cms</para>
+        /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public string BizType { get; set; }

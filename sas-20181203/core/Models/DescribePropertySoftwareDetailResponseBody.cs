@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertySoftwareDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>Information displayed on the query result page.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribePropertySoftwareDetailResponseBodyPageInfo PageInfo { get; set; }
         public class DescribePropertySoftwareDetailResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of fingerprint information of software assets displayed on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page during pagination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -36,12 +36,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
+            /// <summary>
+            /// <para>The NextToken value returned using the NextToken method.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>B604532DEF982B875E8360A6EFA3B***</para>
+            /// </summary>
             [NameInMap("NextToken")]
             [Validation(Required=false)]
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page. Default value: <b>10</b>.</para>
+            /// <para>The number of software asset fingerprint information displayed per page when performing a paginated query. The default value is <b>10</b>, indicating that 10 pieces of software asset fingerprint information are displayed per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of fingerprint information for the queried software assets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -63,14 +69,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The details of the software asset.</para>
+        /// <para>Details list of the queried software asset\&quot;s fingerprint information.</para>
         /// </summary>
         [NameInMap("Propertys")]
         [Validation(Required=false)]
         public List<DescribePropertySoftwareDetailResponseBodyPropertys> Propertys { get; set; }
         public class DescribePropertySoftwareDetailResponseBodyPropertys : TeaModel {
             /// <summary>
-            /// <para>The timestamp generated when the last asset fingerprint collection is performed. Unit: milliseconds.</para>
+            /// <para>The timestamp of the latest scan of the asset fingerprint. The unit is milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649149566000</para>
@@ -80,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The time at which the software is installed.</para>
+            /// <para>The installation time of the software.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-07 10:54:49</para>
@@ -90,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstallTime { get; set; }
 
             /// <summary>
-            /// <para>The timestamp generated when the software is installed. Unit: milliseconds.</para>
+            /// <para>The installation timestamp of the software. The unit is in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649066826000</para>
@@ -100,7 +106,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? InstallTimeDt { get; set; }
 
             /// <summary>
-            /// <para>The ID of the server.</para>
+            /// <para>The instance ID of the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-hp35tftuh52wbp1g****</para>
@@ -110,7 +116,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the server.</para>
+            /// <para>The name of the server instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hc-host-****</para>
@@ -140,7 +146,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The IP addresses of the server.</para>
+            /// <para>List of server IPs</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -160,7 +166,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The installation path of the software.</para>
+            /// <para>The installation directory information of the software asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/etc/test</para>
@@ -180,7 +186,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Uuid { get; set; }
 
             /// <summary>
-            /// <para>The version of the software.</para>
+            /// <para>The version information of the software asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3.10.0</para>
@@ -192,7 +198,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the current request, generated by Alibaba Cloud as a unique identifier for the request, which can be used for troubleshooting and problem localization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6AEE7412-0065-1135-B790-AE2C38BA68FB</para>

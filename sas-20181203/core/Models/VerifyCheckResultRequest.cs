@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<long?> CheckIds { get; set; }
 
+        /// <summary>
+        /// <para>List of instance IDs for the check item assets.</para>
+        /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }

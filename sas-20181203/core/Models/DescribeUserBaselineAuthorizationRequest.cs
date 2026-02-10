@@ -23,12 +23,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        /// <summary>
-        /// <para>资产所有者ID。</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1519712934213764</para>
-        /// </summary>
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
