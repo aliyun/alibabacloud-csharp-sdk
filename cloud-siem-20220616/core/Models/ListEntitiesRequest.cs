@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public string EntityUuid { get; set; }
 
+        [NameInMap("EntityUuids")]
+        [Validation(Required=false)]
+        public string EntityUuids { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

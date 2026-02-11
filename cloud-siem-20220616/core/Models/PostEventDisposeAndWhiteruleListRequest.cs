@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class PostEventDisposeAndWhiteruleListRequest : TeaModel {
+        [NameInMap("DisposeStrategyIds")]
+        [Validation(Required=false)]
+        public string DisposeStrategyIds { get; set; }
+
         /// <summary>
         /// <para>The configuration of event handling. The value is a JSON object.</para>
         /// 
@@ -54,6 +58,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string IncidentUuid { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1234567890xxxxxx</para>
+        /// </summary>
+        [NameInMap("Owner")]
+        [Validation(Required=false)]
+        public string Owner { get; set; }
+
+        /// <summary>
         /// <para>The configuration of the alert recipient. The value is a JSON object.</para>
         /// 
         /// <b>Example:</b>
@@ -90,6 +102,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
+
+        [NameInMap("ResponseSource")]
+        [Validation(Required=false)]
+        public string ResponseSource { get; set; }
 
         /// <summary>
         /// <para>The ID of the account that you switch from the management account.</para>

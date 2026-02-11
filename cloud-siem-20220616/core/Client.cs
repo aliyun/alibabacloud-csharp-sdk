@@ -2636,6 +2636,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["AlertName"] = request.AlertName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertStatus))
+            {
+                body["AlertStatus"] = request.AlertStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertTitle))
             {
                 body["AlertTitle"] = request.AlertTitle;
@@ -2753,6 +2757,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertName))
             {
                 body["AlertName"] = request.AlertName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertStatus))
+            {
+                body["AlertStatus"] = request.AlertStatus;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertTitle))
             {
@@ -3907,158 +3915,6 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAutomateResponseConfigFeatureWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries user-defined playbooks.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeAutomateResponseConfigPlayBooksRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeAutomateResponseConfigPlayBooksResponse
-        /// </returns>
-        public DescribeAutomateResponseConfigPlayBooksResponse DescribeAutomateResponseConfigPlayBooksWithOptions(DescribeAutomateResponseConfigPlayBooksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoResponseType))
-            {
-                body["AutoResponseType"] = request.AutoResponseType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
-            {
-                body["EntityType"] = request.EntityType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                body["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
-            {
-                body["RoleFor"] = request.RoleFor;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
-            {
-                body["RoleType"] = request.RoleType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeAutomateResponseConfigPlayBooks",
-                Version = "2022-06-16",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeAutomateResponseConfigPlayBooksResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries user-defined playbooks.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeAutomateResponseConfigPlayBooksRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeAutomateResponseConfigPlayBooksResponse
-        /// </returns>
-        public async Task<DescribeAutomateResponseConfigPlayBooksResponse> DescribeAutomateResponseConfigPlayBooksWithOptionsAsync(DescribeAutomateResponseConfigPlayBooksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoResponseType))
-            {
-                body["AutoResponseType"] = request.AutoResponseType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
-            {
-                body["EntityType"] = request.EntityType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                body["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
-            {
-                body["RoleFor"] = request.RoleFor;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
-            {
-                body["RoleType"] = request.RoleType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeAutomateResponseConfigPlayBooks",
-                Version = "2022-06-16",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeAutomateResponseConfigPlayBooksResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries user-defined playbooks.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeAutomateResponseConfigPlayBooksRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeAutomateResponseConfigPlayBooksResponse
-        /// </returns>
-        public DescribeAutomateResponseConfigPlayBooksResponse DescribeAutomateResponseConfigPlayBooks(DescribeAutomateResponseConfigPlayBooksRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeAutomateResponseConfigPlayBooksWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries user-defined playbooks.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeAutomateResponseConfigPlayBooksRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeAutomateResponseConfigPlayBooksResponse
-        /// </returns>
-        public async Task<DescribeAutomateResponseConfigPlayBooksResponse> DescribeAutomateResponseConfigPlayBooksAsync(DescribeAutomateResponseConfigPlayBooksRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeAutomateResponseConfigPlayBooksWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10612,6 +10468,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["StartTime"] = request.StartTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -10718,6 +10578,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["StartTime"] = request.StartTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -10775,7 +10639,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实体列表</para>
+        /// <para>Queries entities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10807,6 +10671,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityUuid))
             {
                 body["EntityUuid"] = request.EntityUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityUuids))
+            {
+                body["EntityUuids"] = request.EntityUuids;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentUuid))
             {
@@ -10861,7 +10729,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实体列表</para>
+        /// <para>Queries entities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10893,6 +10761,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityUuid))
             {
                 body["EntityUuid"] = request.EntityUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityUuids))
+            {
+                body["EntityUuids"] = request.EntityUuids;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentUuid))
             {
@@ -10947,7 +10819,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实体列表</para>
+        /// <para>Queries entities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10965,7 +10837,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实体列表</para>
+        /// <para>Queries entities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12728,6 +12600,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisposeStrategyIds))
+            {
+                body["DisposeStrategyIds"] = request.DisposeStrategyIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventDispose))
             {
                 body["EventDispose"] = request.EventDispose;
@@ -12735,6 +12611,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentUuid))
             {
                 body["IncidentUuid"] = request.IncidentUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["Owner"] = request.Owner;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReceiverInfo))
             {
@@ -12747,6 +12627,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 body["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseSource))
+            {
+                body["ResponseSource"] = request.ResponseSource;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
             {
@@ -12802,6 +12686,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisposeStrategyIds))
+            {
+                body["DisposeStrategyIds"] = request.DisposeStrategyIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventDispose))
             {
                 body["EventDispose"] = request.EventDispose;
@@ -12809,6 +12697,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentUuid))
             {
                 body["IncidentUuid"] = request.IncidentUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["Owner"] = request.Owner;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReceiverInfo))
             {
@@ -12821,6 +12713,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 body["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseSource))
+            {
+                body["ResponseSource"] = request.ResponseSource;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
             {

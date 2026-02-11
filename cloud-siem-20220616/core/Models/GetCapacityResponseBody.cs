@@ -17,6 +17,22 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public GetCapacityResponseBodyData Data { get; set; }
         public class GetCapacityResponseBodyData : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("AgentManagedAssetQuota")]
+            [Validation(Required=false)]
+            public long? AgentManagedAssetQuota { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("AgentManagedAssetUsed")]
+            [Validation(Required=false)]
+            public long? AgentManagedAssetUsed { get; set; }
+
+            /// <summary>
             /// <para>Indicates whether the Logstores for the threat analysis feature exist on the user side. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: The logs are in the normal state. The log analysis feature is available.</description></item>

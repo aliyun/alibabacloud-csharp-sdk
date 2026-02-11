@@ -59,6 +59,22 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public List<ListEntitiesResponseBodyDataResponseData> ResponseData { get; set; }
             public class ListEntitiesResponseBodyDataResponseData : TeaModel {
+                [NameInMap("AgentConfidence")]
+                [Validation(Required=false)]
+                public string AgentConfidence { get; set; }
+
+                [NameInMap("AgentDisposalMethod")]
+                [Validation(Required=false)]
+                public string AgentDisposalMethod { get; set; }
+
+                [NameInMap("AgentDisposalPlaybookUuid")]
+                [Validation(Required=false)]
+                public string AgentDisposalPlaybookUuid { get; set; }
+
+                [NameInMap("AgentDisposalSuggestion")]
+                [Validation(Required=false)]
+                public string AgentDisposalSuggestion { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>1</para>

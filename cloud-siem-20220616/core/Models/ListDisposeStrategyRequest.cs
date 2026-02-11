@@ -210,6 +210,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public int? Status { get; set; }
+
     }
 
 }

@@ -223,6 +223,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertSrcProdModule { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("AlertStatus")]
+                [Validation(Required=false)]
+                public string AlertStatus { get; set; }
+
+                /// <summary>
                 /// <para>The title of the alert.</para>
                 /// 
                 /// <b>Example:</b>

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeAlertsRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>异常连接-TFTP恶意扫描</para>
-        /// </summary>
         [NameInMap("AlertName")]
         [Validation(Required=false)]
         public string AlertName { get; set; }
+
+        [NameInMap("AlertStatus")]
+        [Validation(Required=false)]
+        public List<string> AlertStatus { get; set; }
 
         /// <summary>
         /// <para>The title of the alert.</para>
@@ -27,10 +27,6 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public string AlertTitle { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>异常连接-TFTP恶意扫描</para>
-        /// </summary>
         [NameInMap("AlertType")]
         [Validation(Required=false)]
         public string AlertType { get; set; }
@@ -45,18 +41,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public string AlertUuid { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>异常连接-TFTP恶意扫描</para>
-        /// </summary>
         [NameInMap("AssetId")]
         [Validation(Required=false)]
         public string AssetId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>异常连接-TFTP恶意扫描</para>
-        /// </summary>
         [NameInMap("AssetName")]
         [Validation(Required=false)]
         public string AssetName { get; set; }
@@ -82,18 +70,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>异常连接-TFTP恶意扫描</para>
-        /// </summary>
         [NameInMap("EntityId")]
         [Validation(Required=false)]
         public string EntityId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>异常连接-TFTP恶意扫描</para>
-        /// </summary>
         [NameInMap("EntityName")]
         [Validation(Required=false)]
         public string EntityName { get; set; }

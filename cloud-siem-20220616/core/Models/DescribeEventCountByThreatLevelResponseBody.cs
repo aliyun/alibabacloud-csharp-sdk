@@ -29,6 +29,24 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public DescribeEventCountByThreatLevelResponseBodyData Data { get; set; }
         public class DescribeEventCountByThreatLevelResponseBodyData : TeaModel {
+            [NameInMap("EventDailyNum")]
+            [Validation(Required=false)]
+            public List<DescribeEventCountByThreatLevelResponseBodyDataEventDailyNum> EventDailyNum { get; set; }
+            public class DescribeEventCountByThreatLevelResponseBodyDataEventDailyNum : TeaModel {
+                [NameInMap("Date")]
+                [Validation(Required=false)]
+                public string Date { get; set; }
+
+                [NameInMap("EventNum")]
+                [Validation(Required=false)]
+                public long? EventNum { get; set; }
+
+                [NameInMap("UndealEventNum")]
+                [Validation(Required=false)]
+                public long? UndealEventNum { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The total number of events.</para>
             /// 
