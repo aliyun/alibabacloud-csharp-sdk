@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>授权用户</para>
+        /// <para>Adds assigned users to or removes assigned users from a delivery group. Only users added to the assigned user list can access App Streaming.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>授权用户</para>
+        /// <para>Adds assigned users to or removes assigned users from a delivery group. Only users added to the assigned user list can access App Streaming.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -363,7 +363,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>授权用户</para>
+        /// <para>Adds assigned users to or removes assigned users from a delivery group. Only users added to the assigned user list can access App Streaming.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -381,7 +381,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>授权用户</para>
+        /// <para>Adds assigned users to or removes assigned users from a delivery group. Only users added to the assigned user list can access App Streaming.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5343,6 +5343,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["BizRegionId"] = request.BizRegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
                 body["ChargeType"] = request.ChargeType;
@@ -5363,6 +5367,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerInstanceType))
             {
                 body["ServerInstanceType"] = request.ServerInstanceType;
@@ -5370,6 +5378,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Users))
+            {
+                bodyFlat["Users"] = request.Users;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualNodePoolId))
             {
@@ -5435,6 +5447,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["BizRegionId"] = request.BizRegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
                 body["ChargeType"] = request.ChargeType;
@@ -5455,6 +5471,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerInstanceType))
             {
                 body["ServerInstanceType"] = request.ServerInstanceType;
@@ -5462,6 +5482,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Users))
+            {
+                bodyFlat["Users"] = request.Users;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualNodePoolId))
             {
@@ -6798,6 +6822,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["Password"] = request.Password;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerId))
             {
                 body["WuyingServerId"] = request.WuyingServerId;
@@ -6847,6 +6875,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
             {
                 body["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerId))
             {
@@ -7442,6 +7474,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
             Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerIdList))
             {
@@ -7490,6 +7526,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
             Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerIdList))
             {
@@ -7734,6 +7774,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
             Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerIdList))
             {
@@ -7782,6 +7826,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
             Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerIdList))
             {
@@ -7870,6 +7918,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["Force"] = request.Force;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
             Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerIdList))
             {
@@ -7921,6 +7973,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
             {
                 body["Force"] = request.Force;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
             }
             Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerIdList))
@@ -7989,7 +8045,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为云资源创建并绑定标签</para>
+        /// <para>Creates and adds tags to cloud resources and updates the values of existing cloud resource tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8039,7 +8095,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为云资源创建并绑定标签</para>
+        /// <para>Creates and adds tags to cloud resources and updates the values of existing cloud resource tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8089,7 +8145,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为云资源创建并绑定标签</para>
+        /// <para>Creates and adds tags to cloud resources and updates the values of existing cloud resource tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8107,7 +8163,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为云资源创建并绑定标签</para>
+        /// <para>Creates and adds tags to cloud resources and updates the values of existing cloud resource tags.</para>
         /// </summary>
         /// 
         /// <param name="request">

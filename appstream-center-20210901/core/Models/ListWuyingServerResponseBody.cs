@@ -60,6 +60,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string AddVirtualNodePoolStatus { get; set; }
 
+            [NameInMap("AliUid")]
+            [Validation(Required=false)]
+            public long? AliUid { get; set; }
+
+            [NameInMap("Bandwidth")]
+            [Validation(Required=false)]
+            public int? Bandwidth { get; set; }
+
             /// <summary>
             /// <para>Region.</para>
             /// 
@@ -107,6 +115,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 [Validation(Required=false)]
                 public string DataDiskCategory { get; set; }
 
+                [NameInMap("DataDiskId")]
+                [Validation(Required=false)]
+                public string DataDiskId { get; set; }
+
+                [NameInMap("DataDiskNo")]
+                [Validation(Required=false)]
+                public string DataDiskNo { get; set; }
+
                 /// <summary>
                 /// <para>The PL of the data disk.</para>
                 /// 
@@ -138,6 +154,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("ExpiredTime")]
             [Validation(Required=false)]
             public string ExpiredTime { get; set; }
+
+            [NameInMap("FotaVersion")]
+            [Validation(Required=false)]
+            public string FotaVersion { get; set; }
 
             /// <summary>
             /// <para>The ID of the custom image.</para>
@@ -239,6 +259,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string OsType { get; set; }
 
+            [NameInMap("PolicyGroupIdList")]
+            [Validation(Required=false)]
+            public List<string> PolicyGroupIdList { get; set; }
+
+            [NameInMap("ResourceSessionStatus")]
+            [Validation(Required=false)]
+            public string ResourceSessionStatus { get; set; }
+
             [NameInMap("SecurityGroupIds")]
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
@@ -280,6 +308,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 [Validation(Required=false)]
                 public int? GpuMemory { get; set; }
 
+                [NameInMap("GpuSpec")]
+                [Validation(Required=false)]
+                public string GpuSpec { get; set; }
+
                 /// <summary>
                 /// <para>The memory size. Unit: MB.</para>
                 /// 
@@ -299,6 +331,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 [NameInMap("ServerInstanceType")]
                 [Validation(Required=false)]
                 public string ServerInstanceType { get; set; }
+
+            }
+
+            [NameInMap("Sessions")]
+            [Validation(Required=false)]
+            public List<ListWuyingServerResponseBodyWuyingServerListSessions> Sessions { get; set; }
+            public class ListWuyingServerResponseBodyWuyingServerListSessions : TeaModel {
+                [NameInMap("ResourceSessionStartTime")]
+                [Validation(Required=false)]
+                public string ResourceSessionStartTime { get; set; }
+
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
+                public string UserId { get; set; }
 
             }
 
@@ -326,6 +372,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
 
+            [NameInMap("SystemDiskId")]
+            [Validation(Required=false)]
+            public string SystemDiskId { get; set; }
+
             /// <summary>
             /// <para>The performance level (PL) of the system disk.</para>
             /// 
@@ -345,6 +395,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("SystemDiskSize")]
             [Validation(Required=false)]
             public int? SystemDiskSize { get; set; }
+
+            [NameInMap("TimerGroupId")]
+            [Validation(Required=false)]
+            public string TimerGroupId { get; set; }
+
+            [NameInMap("Users")]
+            [Validation(Required=false)]
+            public List<string> Users { get; set; }
 
             [NameInMap("VirtualKubeletIp")]
             [Validation(Required=false)]

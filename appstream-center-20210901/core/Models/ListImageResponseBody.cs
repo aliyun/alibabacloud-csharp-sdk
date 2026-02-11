@@ -490,6 +490,40 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string SessionType { get; set; }
 
+            [NameInMap("SnapshotList")]
+            [Validation(Required=false)]
+            public List<ListImageResponseBodyDataSnapshotList> SnapshotList { get; set; }
+            public class ListImageResponseBodyDataSnapshotList : TeaModel {
+                [NameInMap("BindType")]
+                [Validation(Required=false)]
+                public string BindType { get; set; }
+
+                [NameInMap("DiskCategory")]
+                [Validation(Required=false)]
+                public string DiskCategory { get; set; }
+
+                [NameInMap("DiskSubType")]
+                [Validation(Required=false)]
+                public string DiskSubType { get; set; }
+
+                [NameInMap("DiskType")]
+                [Validation(Required=false)]
+                public string DiskType { get; set; }
+
+                [NameInMap("Size")]
+                [Validation(Required=false)]
+                public int? Size { get; set; }
+
+                [NameInMap("SnapshotId")]
+                [Validation(Required=false)]
+                public string SnapshotId { get; set; }
+
+                [NameInMap("VersionId")]
+                [Validation(Required=false)]
+                public string VersionId { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The state of the image.</para>
             /// 

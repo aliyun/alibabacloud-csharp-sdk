@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string BizRegionId { get; set; }
 
+        [NameInMap("BizType")]
+        [Validation(Required=false)]
+        public int? BizType { get; set; }
+
         /// <summary>
         /// <para>The billing method of the Internet access package.</para>
         /// 
@@ -73,6 +77,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("ProductType")]
+        [Validation(Required=false)]
+        public string ProductType { get; set; }
+
         /// <summary>
         /// <para>Workstation specifications.</para>
         /// 
@@ -92,6 +100,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("Users")]
+        [Validation(Required=false)]
+        public List<string> Users { get; set; }
 
         [NameInMap("VirtualNodePoolId")]
         [Validation(Required=false)]

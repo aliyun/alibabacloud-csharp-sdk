@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        [NameInMap("ProductType")]
+        [Validation(Required=false)]
+        public string ProductType { get; set; }
+
         /// <summary>
         /// <para>The ID of the workstation.</para>
         /// 
