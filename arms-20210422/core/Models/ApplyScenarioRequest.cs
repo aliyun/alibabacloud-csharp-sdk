@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20210422.Models
 {
     public class ApplyScenarioRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public Dictionary<string, object> Config { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -49,6 +58,9 @@ namespace AlibabaCloud.SDK.ARMS20210422.Models
         [Validation(Required=false)]
         public bool? SnTransfer { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("UpdateOption")]
         [Validation(Required=false)]
         public bool? UpdateOption { get; set; }

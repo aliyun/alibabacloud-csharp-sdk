@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20210422.Models
 {
     public class UpdateAlertRuleRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("AlertId")]
         [Validation(Required=false)]
         public long? AlertId { get; set; }
@@ -21,10 +24,16 @@ namespace AlibabaCloud.SDK.ARMS20210422.Models
         [Validation(Required=false)]
         public bool? IsAutoStart { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("TemplageAlertConfig")]
         [Validation(Required=false)]
         public string TemplageAlertConfig { get; set; }

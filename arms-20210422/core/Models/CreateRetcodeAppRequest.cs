@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20210422.Models
 {
     public class CreateRetcodeAppRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("RetcodeAppName")]
         [Validation(Required=false)]
         public string RetcodeAppName { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("RetcodeAppType")]
         [Validation(Required=false)]
         public string RetcodeAppType { get; set; }

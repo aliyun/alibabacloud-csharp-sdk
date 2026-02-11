@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20210422.Models
 {
     public class UpdateDispatchRuleRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DispatchRule")]
         [Validation(Required=false)]
         public string DispatchRule { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

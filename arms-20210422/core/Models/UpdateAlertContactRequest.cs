@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20210422.Models
 {
     public class UpdateAlertContactRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("ContactId")]
         [Validation(Required=false)]
         public long? ContactId { get; set; }
@@ -29,6 +32,9 @@ namespace AlibabaCloud.SDK.ARMS20210422.Models
         [Validation(Required=false)]
         public string PhoneNum { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

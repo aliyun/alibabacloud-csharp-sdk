@@ -21,10 +21,16 @@ namespace AlibabaCloud.SDK.ARMS20210422.Models
         [Validation(Required=false)]
         public string MatchExpressions { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -33,10 +39,16 @@ namespace AlibabaCloud.SDK.ARMS20210422.Models
         [Validation(Required=false)]
         public string ParentId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Rule")]
         [Validation(Required=false)]
         public string Rule { get; set; }
@@ -45,6 +57,9 @@ namespace AlibabaCloud.SDK.ARMS20210422.Models
         [Validation(Required=false)]
         public string TemplateProvider { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

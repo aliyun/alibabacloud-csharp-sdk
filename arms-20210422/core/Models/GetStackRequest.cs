@@ -17,10 +17,16 @@ namespace AlibabaCloud.SDK.ARMS20210422.Models
         [Validation(Required=false)]
         public string Pid { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("RpcID")]
         [Validation(Required=false)]
         public string RpcID { get; set; }
@@ -29,6 +35,9 @@ namespace AlibabaCloud.SDK.ARMS20210422.Models
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("TraceID")]
         [Validation(Required=false)]
         public string TraceID { get; set; }

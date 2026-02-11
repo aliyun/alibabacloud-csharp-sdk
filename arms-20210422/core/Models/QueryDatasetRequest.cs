@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20210422.Models
 {
     public class QueryDatasetRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DatasetId")]
         [Validation(Required=false)]
         public long? DatasetId { get; set; }
@@ -39,6 +42,9 @@ namespace AlibabaCloud.SDK.ARMS20210422.Models
         [Validation(Required=false)]
         public bool? HungryMode { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("IntervalInSec")]
         [Validation(Required=false)]
         public int? IntervalInSec { get; set; }
@@ -51,6 +57,9 @@ namespace AlibabaCloud.SDK.ARMS20210422.Models
         [Validation(Required=false)]
         public int? Limit { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("MaxTime")]
         [Validation(Required=false)]
         public long? MaxTime { get; set; }
@@ -59,6 +68,9 @@ namespace AlibabaCloud.SDK.ARMS20210422.Models
         [Validation(Required=false)]
         public List<string> Measures { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("MinTime")]
         [Validation(Required=false)]
         public long? MinTime { get; set; }

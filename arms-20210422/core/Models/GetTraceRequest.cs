@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20210422.Models
 {
     public class GetTraceRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("TraceID")]
         [Validation(Required=false)]
         public string TraceID { get; set; }

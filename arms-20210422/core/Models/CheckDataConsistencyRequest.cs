@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20210422.Models
 {
     public class CheckDataConsistencyRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("AppType")]
         [Validation(Required=false)]
         public string AppType { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.ARMS20210422.Models
         [Validation(Required=false)]
         public long? CurrentTimestamp { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Pid")]
         [Validation(Required=false)]
         public string Pid { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.ARMS20210422.Models
         [Validation(Required=false)]
         public string ProxyUserId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
