@@ -9,12 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ProtocolSettings : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>A2A Agent Card</para>
         /// </summary>
         [NameInMap("A2AAgentCard")]
         [Validation(Required=false)]
+        [Obsolete]
         public string A2AAgentCard { get; set; }
+
+        [NameInMap("a2aAgentCard")]
+        [Validation(Required=false)]
+        public string A2aAgentCard { get; set; }
+
+        [NameInMap("a2aAgentCardUrl")]
+        [Validation(Required=false)]
+        public string A2aAgentCardUrl { get; set; }
 
         /// <summary>
         /// <para>请求头</para>

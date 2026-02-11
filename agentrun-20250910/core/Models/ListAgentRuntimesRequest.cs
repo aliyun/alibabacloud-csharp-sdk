@@ -19,6 +19,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string AgentRuntimeName { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>用于服务发现的资源组标识符</para>
         /// 
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         /// </summary>
         [NameInMap("discoveryResourceGroupId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string DiscoveryResourceGroupId { get; set; }
 
         /// <summary>
@@ -49,8 +52,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <term><b>Obsolete</b></term>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
@@ -72,6 +77,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        /// <summary>
+        /// <para>根据工作空间ID进行过滤，用于资源隔离和权限管理</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ws-1234567890abcdef</para>
+        /// </summary>
+        [NameInMap("workspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

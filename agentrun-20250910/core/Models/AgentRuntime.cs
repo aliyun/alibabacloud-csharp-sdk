@@ -239,8 +239,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public ProtocolConfiguration ProtocolConfiguration { get; set; }
 
+        /// <term><b>Obsolete</b></term>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
@@ -282,6 +284,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [NameInMap("statusReason")]
         [Validation(Required=false)]
         public string StatusReason { get; set; }
+
+        /// <summary>
+        /// <para>智能体运行时所属的工作空间标识符，用于资源隔离和权限管理</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ws-1234567890abcdef</para>
+        /// </summary>
+        [NameInMap("workspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 
