@@ -1667,7 +1667,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询作业输出</para>
+        /// <para>Query job logs</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1729,7 +1729,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询作业输出</para>
+        /// <para>Query job logs</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1791,7 +1791,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询作业输出</para>
+        /// <para>Query job logs</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1809,7 +1809,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询作业输出</para>
+        /// <para>Query job logs</para>
         /// </summary>
         /// 
         /// <param name="request">

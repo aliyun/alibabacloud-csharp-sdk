@@ -550,6 +550,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         [Validation(Required=false)]
                         public string Image { get; set; }
 
+                        [NameInMap("ImageRegistryOptions")]
+                        [Validation(Required=false)]
+                        public string ImageRegistryOptions { get; set; }
+
                         /// <summary>
                         /// <para>The working directory of the container.</para>
                         /// 
