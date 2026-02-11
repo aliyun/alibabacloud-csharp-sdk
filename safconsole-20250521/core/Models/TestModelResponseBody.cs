@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
 {
     public class TestModelResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code. A return value of 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public long? Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public long? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Return result.</para>
+        /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public TestModelResponseBodyResultObject ResultObject { get; set; }
         public class TestModelResponseBodyResultObject : TeaModel {
             /// <summary>
+            /// <para>Number of consistencies.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>49.0</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
             public long? ConsistencyCount { get; set; }
 
             /// <summary>
+            /// <para>Consistency rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>98.0</para>
             /// </summary>
@@ -53,11 +66,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
             [Validation(Required=false)]
             public double? ConsistencyRate { get; set; }
 
+            /// <summary>
+            /// <para>Test results.</para>
+            /// </summary>
             [NameInMap("TestResult")]
             [Validation(Required=false)]
             public List<TestModelResponseBodyResultObjectTestResult> TestResult { get; set; }
             public class TestModelResponseBodyResultObjectTestResult : TeaModel {
                 /// <summary>
+                /// <para>Actual output.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0.00</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
                 public string ActualResult { get; set; }
 
                 /// <summary>
+                /// <para>Whether it is consistent.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
                 public bool? Consistency { get; set; }
 
                 /// <summary>
+                /// <para>Test output.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0.00</para>
                 /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
                 public string TestResult { get; set; }
 
                 /// <summary>
+                /// <para>Training output.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0.00</para>
                 /// </summary>
@@ -92,6 +116,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
             }
 
             /// <summary>
+            /// <para>Total number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>50</para>
             /// </summary>
@@ -102,6 +128,12 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful.</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Call succeeded.</description></item>
+        /// <item><description><b>false</b>: Call failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
 {
     public class DescribeModuleStatusResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public long? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Returned result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public string ResultObject { get; set; }
 
         /// <summary>
+        /// <para>Whether the operation was successful</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
 {
     public class DescribeCustomerModuleOutputInfoRequest : TeaModel {
         /// <summary>
+        /// <para>Authorization type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>READ</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public string AuthType { get; set; }
 
         /// <summary>
+        /// <para>Customer model ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>456</para>
         /// </summary>

@@ -39,6 +39,514 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Apply for Bastion Host Account</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This interface is used for customers to create a modeling project for the first time.</description></item>
+        /// <item><description><c>projectName</c> is a required field, with a maximum length of 50 characters.</description></item>
+        /// <item><description><c>remark</c> and <c>instanceSpec</c> are optional, where <c>remark</c> has a maximum length of 200 characters.</description></item>
+        /// <item><description>The available values for <c>instanceSpec</c> include <c>SECURE_ENV_LITE</c> and <c>SECURE_ENV_PRO</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ApplyBastionAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyBastionAccountResponse
+        /// </returns>
+        public ApplyBastionAccountResponse ApplyBastionAccountWithOptions(ApplyBastionAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                query["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApplyBastionAccount",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ApplyBastionAccountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Apply for Bastion Host Account</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This interface is used for customers to create a modeling project for the first time.</description></item>
+        /// <item><description><c>projectName</c> is a required field, with a maximum length of 50 characters.</description></item>
+        /// <item><description><c>remark</c> and <c>instanceSpec</c> are optional, where <c>remark</c> has a maximum length of 200 characters.</description></item>
+        /// <item><description>The available values for <c>instanceSpec</c> include <c>SECURE_ENV_LITE</c> and <c>SECURE_ENV_PRO</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ApplyBastionAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyBastionAccountResponse
+        /// </returns>
+        public async Task<ApplyBastionAccountResponse> ApplyBastionAccountWithOptionsAsync(ApplyBastionAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                query["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApplyBastionAccount",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ApplyBastionAccountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Apply for Bastion Host Account</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This interface is used for customers to create a modeling project for the first time.</description></item>
+        /// <item><description><c>projectName</c> is a required field, with a maximum length of 50 characters.</description></item>
+        /// <item><description><c>remark</c> and <c>instanceSpec</c> are optional, where <c>remark</c> has a maximum length of 200 characters.</description></item>
+        /// <item><description>The available values for <c>instanceSpec</c> include <c>SECURE_ENV_LITE</c> and <c>SECURE_ENV_PRO</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ApplyBastionAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyBastionAccountResponse
+        /// </returns>
+        public ApplyBastionAccountResponse ApplyBastionAccount(ApplyBastionAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ApplyBastionAccountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Apply for Bastion Host Account</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This interface is used for customers to create a modeling project for the first time.</description></item>
+        /// <item><description><c>projectName</c> is a required field, with a maximum length of 50 characters.</description></item>
+        /// <item><description><c>remark</c> and <c>instanceSpec</c> are optional, where <c>remark</c> has a maximum length of 200 characters.</description></item>
+        /// <item><description>The available values for <c>instanceSpec</c> include <c>SECURE_ENV_LITE</c> and <c>SECURE_ENV_PRO</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ApplyBastionAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyBastionAccountResponse
+        /// </returns>
+        public async Task<ApplyBastionAccountResponse> ApplyBastionAccountAsync(ApplyBastionAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ApplyBastionAccountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associate Retrospective Task</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociatePocTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociatePocTaskResponse
+        /// </returns>
+        public AssociatePocTaskResponse AssociatePocTaskWithOptions(AssociatePocTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociatePocTask",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssociatePocTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associate Retrospective Task</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociatePocTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociatePocTaskResponse
+        /// </returns>
+        public async Task<AssociatePocTaskResponse> AssociatePocTaskWithOptionsAsync(AssociatePocTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociatePocTask",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssociatePocTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associate Retrospective Task</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociatePocTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociatePocTaskResponse
+        /// </returns>
+        public AssociatePocTaskResponse AssociatePocTask(AssociatePocTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AssociatePocTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associate Retrospective Task</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociatePocTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociatePocTaskResponse
+        /// </returns>
+        public async Task<AssociatePocTaskResponse> AssociatePocTaskAsync(AssociatePocTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AssociatePocTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Complete project and release resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CompleteModelingProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CompleteModelingProjectResponse
+        /// </returns>
+        public CompleteModelingProjectResponse CompleteModelingProjectWithOptions(CompleteModelingProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CompleteModelingProject",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CompleteModelingProjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Complete project and release resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CompleteModelingProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CompleteModelingProjectResponse
+        /// </returns>
+        public async Task<CompleteModelingProjectResponse> CompleteModelingProjectWithOptionsAsync(CompleteModelingProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CompleteModelingProject",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CompleteModelingProjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Complete project and release resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CompleteModelingProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CompleteModelingProjectResponse
+        /// </returns>
+        public CompleteModelingProjectResponse CompleteModelingProject(CompleteModelingProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CompleteModelingProjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Complete project and release resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CompleteModelingProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CompleteModelingProjectResponse
+        /// </returns>
+        public async Task<CompleteModelingProjectResponse> CompleteModelingProjectAsync(CompleteModelingProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CompleteModelingProjectWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Create basic model information</para>
         /// </summary>
         /// 
@@ -503,6 +1011,186 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Initialize a modeling project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This interface is used for customers to create a modeling project for the first time.</description></item>
+        /// <item><description><c>projectName</c> is a required field, with a maximum length of 50 characters.</description></item>
+        /// <item><description><c>remark</c> and <c>instanceSpec</c> are optional, where <c>remark</c> has a maximum length of 200 characters.</description></item>
+        /// <item><description>The available values for <c>instanceSpec</c> include <c>SECURE_ENV_LITE</c> and <c>SECURE_ENV_PRO</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateModelingProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateModelingProjectResponse
+        /// </returns>
+        public CreateModelingProjectResponse CreateModelingProjectWithOptions(CreateModelingProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceSpec))
+            {
+                query["InstanceSpec"] = request.InstanceSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateModelingProject",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateModelingProjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initialize a modeling project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This interface is used for customers to create a modeling project for the first time.</description></item>
+        /// <item><description><c>projectName</c> is a required field, with a maximum length of 50 characters.</description></item>
+        /// <item><description><c>remark</c> and <c>instanceSpec</c> are optional, where <c>remark</c> has a maximum length of 200 characters.</description></item>
+        /// <item><description>The available values for <c>instanceSpec</c> include <c>SECURE_ENV_LITE</c> and <c>SECURE_ENV_PRO</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateModelingProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateModelingProjectResponse
+        /// </returns>
+        public async Task<CreateModelingProjectResponse> CreateModelingProjectWithOptionsAsync(CreateModelingProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceSpec))
+            {
+                query["InstanceSpec"] = request.InstanceSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateModelingProject",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateModelingProjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initialize a modeling project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This interface is used for customers to create a modeling project for the first time.</description></item>
+        /// <item><description><c>projectName</c> is a required field, with a maximum length of 50 characters.</description></item>
+        /// <item><description><c>remark</c> and <c>instanceSpec</c> are optional, where <c>remark</c> has a maximum length of 200 characters.</description></item>
+        /// <item><description>The available values for <c>instanceSpec</c> include <c>SECURE_ENV_LITE</c> and <c>SECURE_ENV_PRO</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateModelingProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateModelingProjectResponse
+        /// </returns>
+        public CreateModelingProjectResponse CreateModelingProject(CreateModelingProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateModelingProjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initialize a modeling project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This interface is used for customers to create a modeling project for the first time.</description></item>
+        /// <item><description><c>projectName</c> is a required field, with a maximum length of 50 characters.</description></item>
+        /// <item><description><c>remark</c> and <c>instanceSpec</c> are optional, where <c>remark</c> has a maximum length of 200 characters.</description></item>
+        /// <item><description>The available values for <c>instanceSpec</c> include <c>SECURE_ENV_LITE</c> and <c>SECURE_ENV_PRO</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateModelingProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateModelingProjectResponse
+        /// </returns>
+        public async Task<CreateModelingProjectResponse> CreateModelingProjectAsync(CreateModelingProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateModelingProjectWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes the specified customer model based on the provided customer model ID.</para>
         /// </summary>
         /// 
@@ -659,6 +1347,178 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deploy Model File</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeployModelFileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployModelFileResponse
+        /// </returns>
+        public DeployModelFileResponse DeployModelFileWithOptions(DeployModelFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeployModelFile",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeployModelFileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deploy Model File</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeployModelFileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployModelFileResponse
+        /// </returns>
+        public async Task<DeployModelFileResponse> DeployModelFileWithOptionsAsync(DeployModelFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeployModelFile",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeployModelFileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deploy Model File</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeployModelFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployModelFileResponse
+        /// </returns>
+        public DeployModelFileResponse DeployModelFile(DeployModelFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeployModelFileWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deploy Model File</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeployModelFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployModelFileResponse
+        /// </returns>
+        public async Task<DeployModelFileResponse> DeployModelFileAsync(DeployModelFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeployModelFileWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Query basic model information based on the customer model ID</para>
         /// </summary>
         /// 
@@ -811,13 +1671,13 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据客户模型ID查询模型特征信息</para>
+        /// <para>Query model feature information based on the customer model ID</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过提供<c>customerModuleId</c>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</para>
+        /// <h2>Request Description</h2>
+        /// <para>By providing the <c>customerModuleId</c> parameter, you can query the current status of a specified customer model. The status values may include, but are not limited to, &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -859,13 +1719,13 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据客户模型ID查询模型特征信息</para>
+        /// <para>Query model feature information based on the customer model ID</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过提供<c>customerModuleId</c>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</para>
+        /// <h2>Request Description</h2>
+        /// <para>By providing the <c>customerModuleId</c> parameter, you can query the current status of a specified customer model. The status values may include, but are not limited to, &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -907,13 +1767,13 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据客户模型ID查询模型特征信息</para>
+        /// <para>Query model feature information based on the customer model ID</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过提供<c>customerModuleId</c>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</para>
+        /// <h2>Request Description</h2>
+        /// <para>By providing the <c>customerModuleId</c> parameter, you can query the current status of a specified customer model. The status values may include, but are not limited to, &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -931,13 +1791,13 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据客户模型ID查询模型特征信息</para>
+        /// <para>Query model feature information based on the customer model ID</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过提供<c>customerModuleId</c>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</para>
+        /// <h2>Request Description</h2>
+        /// <para>By providing the <c>customerModuleId</c> parameter, you can query the current status of a specified customer model. The status values may include, but are not limited to, &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -955,13 +1815,13 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据客户模型ID查询模型出参信息</para>
+        /// <para>Query model output information based on the customer model ID</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过提供<c>customerModuleId</c>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</para>
+        /// <h2>Request Description</h2>
+        /// <para>By providing the <c>customerModuleId</c> parameter, you can query the current status of a specified customer model. The status values may include but are not limited to &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1007,13 +1867,13 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据客户模型ID查询模型出参信息</para>
+        /// <para>Query model output information based on the customer model ID</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过提供<c>customerModuleId</c>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</para>
+        /// <h2>Request Description</h2>
+        /// <para>By providing the <c>customerModuleId</c> parameter, you can query the current status of a specified customer model. The status values may include but are not limited to &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1059,13 +1919,13 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据客户模型ID查询模型出参信息</para>
+        /// <para>Query model output information based on the customer model ID</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过提供<c>customerModuleId</c>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</para>
+        /// <h2>Request Description</h2>
+        /// <para>By providing the <c>customerModuleId</c> parameter, you can query the current status of a specified customer model. The status values may include but are not limited to &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1083,13 +1943,13 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据客户模型ID查询模型出参信息</para>
+        /// <para>Query model output information based on the customer model ID</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过提供<c>customerModuleId</c>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</para>
+        /// <h2>Request Description</h2>
+        /// <para>By providing the <c>customerModuleId</c> parameter, you can query the current status of a specified customer model. The status values may include but are not limited to &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1107,16 +1967,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据特征模板返回特征模板具体特征选项</para>
+        /// <para>Return specific feature options based on the feature template</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1159,16 +2019,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据特征模板返回特征模板具体特征选项</para>
+        /// <para>Return specific feature options based on the feature template</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1211,16 +2071,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据特征模板返回特征模板具体特征选项</para>
+        /// <para>Return specific feature options based on the feature template</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1239,16 +2099,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据特征模板返回特征模板具体特征选项</para>
+        /// <para>Return specific feature options based on the feature template</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1267,16 +2127,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可用的特征模板列表，用于模型配置。</para>
+        /// <para>Get the list of available feature templates for model configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which consists of a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1310,16 +2170,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可用的特征模板列表，用于模型配置。</para>
+        /// <para>Get the list of available feature templates for model configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which consists of a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1353,16 +2213,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可用的特征模板列表，用于模型配置。</para>
+        /// <para>Get the list of available feature templates for model configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which consists of a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1377,16 +2237,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可用的特征模板列表，用于模型配置。</para>
+        /// <para>Get the list of available feature templates for model configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which consists of a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1401,16 +2261,188 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>渲染模型的特征配置</para>
+        /// <para>Get File Download Link</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>请求说明</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeFileDownloadUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFileDownloadUrlResponse
+        /// </returns>
+        public DescribeFileDownloadUrlResponse DescribeFileDownloadUrlWithOptions(DescribeFileDownloadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFileDownloadUrl",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFileDownloadUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get File Download Link</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeFileDownloadUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFileDownloadUrlResponse
+        /// </returns>
+        public async Task<DescribeFileDownloadUrlResponse> DescribeFileDownloadUrlWithOptionsAsync(DescribeFileDownloadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFileDownloadUrl",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFileDownloadUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get File Download Link</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeFileDownloadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFileDownloadUrlResponse
+        /// </returns>
+        public DescribeFileDownloadUrlResponse DescribeFileDownloadUrl(DescribeFileDownloadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeFileDownloadUrlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get File Download Link</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeFileDownloadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFileDownloadUrlResponse
+        /// </returns>
+        public async Task<DescribeFileDownloadUrlResponse> DescribeFileDownloadUrlAsync(DescribeFileDownloadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeFileDownloadUrlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Render the feature configuration of the model</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each including a label (label) and value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1457,16 +2489,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>渲染模型的特征配置</para>
+        /// <para>Render the feature configuration of the model</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each including a label (label) and value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1513,16 +2545,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>渲染模型的特征配置</para>
+        /// <para>Render the feature configuration of the model</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each including a label (label) and value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1541,16 +2573,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>渲染模型的特征配置</para>
+        /// <para>Render the feature configuration of the model</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each including a label (label) and value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1569,7 +2601,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取上传oss鉴权数据</para>
+        /// <para>Obtain OSS Authentication Data for Upload</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1602,7 +2634,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取上传oss鉴权数据</para>
+        /// <para>Obtain OSS Authentication Data for Upload</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1635,7 +2667,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取上传oss鉴权数据</para>
+        /// <para>Obtain OSS Authentication Data for Upload</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1649,7 +2681,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取上传oss鉴权数据</para>
+        /// <para>Obtain OSS Authentication Data for Upload</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1663,17 +2695,361 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据客户模型ID查询指定模型对应服务是否存在</para>
+        /// <para>Get detailed project data</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>请求说明</h2>
-        /// <para>该接口用于通过提供的<c>customerModuleId</c>来检查特定的模型服务是否已经存在。如果存在，则返回<c>true</c>；反之则返回<c>false</c>。</para>
-        /// <h3>注意事项</h3>
         /// <list type="bullet">
-        /// <item><description><c>customerModuleId</c>是必须提供的参数，且为字符串类型。</description></item>
-        /// <item><description>此API主要用于前端页面展示或逻辑判断时使用，以确认用户所选模型是否有对应的服务被创建。</description></item>
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeModelingProjectDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeModelingProjectDetailResponse
+        /// </returns>
+        public DescribeModelingProjectDetailResponse DescribeModelingProjectDetailWithOptions(DescribeModelingProjectDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeModelingProjectDetail",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeModelingProjectDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get detailed project data</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeModelingProjectDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeModelingProjectDetailResponse
+        /// </returns>
+        public async Task<DescribeModelingProjectDetailResponse> DescribeModelingProjectDetailWithOptionsAsync(DescribeModelingProjectDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeModelingProjectDetail",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeModelingProjectDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get detailed project data</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeModelingProjectDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeModelingProjectDetailResponse
+        /// </returns>
+        public DescribeModelingProjectDetailResponse DescribeModelingProjectDetail(DescribeModelingProjectDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeModelingProjectDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get detailed project data</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeModelingProjectDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeModelingProjectDetailResponse
+        /// </returns>
+        public async Task<DescribeModelingProjectDetailResponse> DescribeModelingProjectDetailAsync(DescribeModelingProjectDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeModelingProjectDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Paginated query for the list of modeling projects under the current user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API用于获取指定租户下的所有建模项目的概览信息。</description></item>
+        /// <item><description>支持通过<c>pageSize</c>和<c>currentPage</c>参数进行分页查询，默认每页显示10条记录。</description></item>
+        /// <item><description>可选地，使用<c>status</c>参数来过滤特定状态（如<c>active</c>, <c>released</c>等）的项目。</description></item>
+        /// <item><description>返回结果中包含每个项目的ID、名称、环境状态、建模状态、开始时间及结束时间（如果有的话），以及创建该项目的登录账号。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeModelingProjectListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeModelingProjectListResponse
+        /// </returns>
+        public DescribeModelingProjectListResponse DescribeModelingProjectListWithOptions(DescribeModelingProjectListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeModelingProjectList",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeModelingProjectListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Paginated query for the list of modeling projects under the current user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API用于获取指定租户下的所有建模项目的概览信息。</description></item>
+        /// <item><description>支持通过<c>pageSize</c>和<c>currentPage</c>参数进行分页查询，默认每页显示10条记录。</description></item>
+        /// <item><description>可选地，使用<c>status</c>参数来过滤特定状态（如<c>active</c>, <c>released</c>等）的项目。</description></item>
+        /// <item><description>返回结果中包含每个项目的ID、名称、环境状态、建模状态、开始时间及结束时间（如果有的话），以及创建该项目的登录账号。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeModelingProjectListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeModelingProjectListResponse
+        /// </returns>
+        public async Task<DescribeModelingProjectListResponse> DescribeModelingProjectListWithOptionsAsync(DescribeModelingProjectListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeModelingProjectList",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeModelingProjectListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Paginated query for the list of modeling projects under the current user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API用于获取指定租户下的所有建模项目的概览信息。</description></item>
+        /// <item><description>支持通过<c>pageSize</c>和<c>currentPage</c>参数进行分页查询，默认每页显示10条记录。</description></item>
+        /// <item><description>可选地，使用<c>status</c>参数来过滤特定状态（如<c>active</c>, <c>released</c>等）的项目。</description></item>
+        /// <item><description>返回结果中包含每个项目的ID、名称、环境状态、建模状态、开始时间及结束时间（如果有的话），以及创建该项目的登录账号。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeModelingProjectListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeModelingProjectListResponse
+        /// </returns>
+        public DescribeModelingProjectListResponse DescribeModelingProjectList(DescribeModelingProjectListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeModelingProjectListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Paginated query for the list of modeling projects under the current user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API用于获取指定租户下的所有建模项目的概览信息。</description></item>
+        /// <item><description>支持通过<c>pageSize</c>和<c>currentPage</c>参数进行分页查询，默认每页显示10条记录。</description></item>
+        /// <item><description>可选地，使用<c>status</c>参数来过滤特定状态（如<c>active</c>, <c>released</c>等）的项目。</description></item>
+        /// <item><description>返回结果中包含每个项目的ID、名称、环境状态、建模状态、开始时间及结束时间（如果有的话），以及创建该项目的登录账号。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeModelingProjectListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeModelingProjectListResponse
+        /// </returns>
+        public async Task<DescribeModelingProjectListResponse> DescribeModelingProjectListAsync(DescribeModelingProjectListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeModelingProjectListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query Whether the Service Corresponding to a Specific Model Exists Based on Customer Model ID</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request Description</h2>
+        /// <para>This interface is used to check whether a specific model service exists by providing the <c>customerModuleId</c>. If it exists, it returns <c>true</c>; otherwise, it returns <c>false</c>.</para>
+        /// <h3>Notes</h3>
+        /// <list type="bullet">
+        /// <item><description><c>customerModuleId</c> is a required parameter and must be of string type.</description></item>
+        /// <item><description>This API is mainly used for front-end page display or logical judgment to confirm whether the service corresponding to the user\&quot;s selected model has been created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1716,17 +3092,17 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据客户模型ID查询指定模型对应服务是否存在</para>
+        /// <para>Query Whether the Service Corresponding to a Specific Model Exists Based on Customer Model ID</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该接口用于通过提供的<c>customerModuleId</c>来检查特定的模型服务是否已经存在。如果存在，则返回<c>true</c>；反之则返回<c>false</c>。</para>
-        /// <h3>注意事项</h3>
+        /// <h2>Request Description</h2>
+        /// <para>This interface is used to check whether a specific model service exists by providing the <c>customerModuleId</c>. If it exists, it returns <c>true</c>; otherwise, it returns <c>false</c>.</para>
+        /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description><c>customerModuleId</c>是必须提供的参数，且为字符串类型。</description></item>
-        /// <item><description>此API主要用于前端页面展示或逻辑判断时使用，以确认用户所选模型是否有对应的服务被创建。</description></item>
+        /// <item><description><c>customerModuleId</c> is a required parameter and must be of string type.</description></item>
+        /// <item><description>This API is mainly used for front-end page display or logical judgment to confirm whether the service corresponding to the user\&quot;s selected model has been created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1769,17 +3145,17 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据客户模型ID查询指定模型对应服务是否存在</para>
+        /// <para>Query Whether the Service Corresponding to a Specific Model Exists Based on Customer Model ID</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该接口用于通过提供的<c>customerModuleId</c>来检查特定的模型服务是否已经存在。如果存在，则返回<c>true</c>；反之则返回<c>false</c>。</para>
-        /// <h3>注意事项</h3>
+        /// <h2>Request Description</h2>
+        /// <para>This interface is used to check whether a specific model service exists by providing the <c>customerModuleId</c>. If it exists, it returns <c>true</c>; otherwise, it returns <c>false</c>.</para>
+        /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description><c>customerModuleId</c>是必须提供的参数，且为字符串类型。</description></item>
-        /// <item><description>此API主要用于前端页面展示或逻辑判断时使用，以确认用户所选模型是否有对应的服务被创建。</description></item>
+        /// <item><description><c>customerModuleId</c> is a required parameter and must be of string type.</description></item>
+        /// <item><description>This API is mainly used for front-end page display or logical judgment to confirm whether the service corresponding to the user\&quot;s selected model has been created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1798,17 +3174,17 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据客户模型ID查询指定模型对应服务是否存在</para>
+        /// <para>Query Whether the Service Corresponding to a Specific Model Exists Based on Customer Model ID</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该接口用于通过提供的<c>customerModuleId</c>来检查特定的模型服务是否已经存在。如果存在，则返回<c>true</c>；反之则返回<c>false</c>。</para>
-        /// <h3>注意事项</h3>
+        /// <h2>Request Description</h2>
+        /// <para>This interface is used to check whether a specific model service exists by providing the <c>customerModuleId</c>. If it exists, it returns <c>true</c>; otherwise, it returns <c>false</c>.</para>
+        /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description><c>customerModuleId</c>是必须提供的参数，且为字符串类型。</description></item>
-        /// <item><description>此API主要用于前端页面展示或逻辑判断时使用，以确认用户所选模型是否有对应的服务被创建。</description></item>
+        /// <item><description><c>customerModuleId</c> is a required parameter and must be of string type.</description></item>
+        /// <item><description>This API is mainly used for front-end page display or logical judgment to confirm whether the service corresponding to the user\&quot;s selected model has been created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1827,13 +3203,13 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据客户模型ID查询模型当前状态</para>
+        /// <para>Query the current status of a model based on the customer model ID</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过提供<c>customerModuleId</c>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</para>
+        /// <h2>Request Description</h2>
+        /// <para>By providing the <c>customerModuleId</c> parameter, you can query the current status of a specified customer model. The status values may include, but are not limited to, &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1875,13 +3251,13 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据客户模型ID查询模型当前状态</para>
+        /// <para>Query the current status of a model based on the customer model ID</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过提供<c>customerModuleId</c>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</para>
+        /// <h2>Request Description</h2>
+        /// <para>By providing the <c>customerModuleId</c> parameter, you can query the current status of a specified customer model. The status values may include, but are not limited to, &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1923,13 +3299,13 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据客户模型ID查询模型当前状态</para>
+        /// <para>Query the current status of a model based on the customer model ID</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过提供<c>customerModuleId</c>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</para>
+        /// <h2>Request Description</h2>
+        /// <para>By providing the <c>customerModuleId</c> parameter, you can query the current status of a specified customer model. The status values may include, but are not limited to, &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1947,13 +3323,13 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据客户模型ID查询模型当前状态</para>
+        /// <para>Query the current status of a model based on the customer model ID</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过提供<c>customerModuleId</c>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</para>
+        /// <h2>Request Description</h2>
+        /// <para>By providing the <c>customerModuleId</c> parameter, you can query the current status of a specified customer model. The status values may include, but are not limited to, &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1971,7 +3347,101 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型托管订单</para>
+        /// <para>Query POC task list.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePocTaskListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePocTaskListResponse
+        /// </returns>
+        public DescribePocTaskListResponse DescribePocTaskListWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePocTaskList",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePocTaskListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query POC task list.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePocTaskListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePocTaskListResponse
+        /// </returns>
+        public async Task<DescribePocTaskListResponse> DescribePocTaskListWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePocTaskList",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePocTaskListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query POC task list.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribePocTaskListResponse
+        /// </returns>
+        public DescribePocTaskListResponse DescribePocTaskList()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePocTaskListWithOptions(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query POC task list.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribePocTaskListResponse
+        /// </returns>
+        public async Task<DescribePocTaskListResponse> DescribePocTaskListAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePocTaskListWithOptionsAsync(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query Model Hosting Orders</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2004,7 +3474,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型托管订单</para>
+        /// <para>Query Model Hosting Orders</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2037,7 +3507,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型托管订单</para>
+        /// <para>Query Model Hosting Orders</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2051,7 +3521,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型托管订单</para>
+        /// <para>Query Model Hosting Orders</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2065,7 +3535,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询场景和服务</para>
+        /// <para>Query Scene and Service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2111,7 +3581,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询场景和服务</para>
+        /// <para>Query Scene and Service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2157,7 +3627,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询场景和服务</para>
+        /// <para>Query Scene and Service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2175,7 +3645,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询场景和服务</para>
+        /// <para>Query Scene and Service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2193,18 +3663,18 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定用户下的所有模型信息，支持分页查询</para>
+        /// <para>Get all model information for a specified user, supporting pagination</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于查询特定用户下的所有模型信息，并支持通过分页参数进行分页查询。可以通过 <c>name</c> 参数进行模糊搜索。</para>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to query all model information under a specific user and supports pagination through page parameters. Fuzzy search can be performed using the <c>name</c> parameter.</para>
         /// <list type="bullet">
-        /// <item><description><c>regId</c>: 地域标识，必填。</description></item>
-        /// <item><description><c>pageSize</c>: 每页显示的条目数，必填。</description></item>
-        /// <item><description><c>currentPage</c>: 当前页码，从1开始计数，必填。</description></item>
-        /// <item><description><c>userId</c>: 用户ID，必填。</description></item>
+        /// <item><description><c>regId</c>: Region identifier, required.</description></item>
+        /// <item><description><c>pageSize</c>: Number of items per page, required.</description></item>
+        /// <item><description><c>currentPage</c>: Current page number, starting from 1, required.</description></item>
+        /// <item><description><c>userId</c>: User ID, required.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2259,18 +3729,18 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定用户下的所有模型信息，支持分页查询</para>
+        /// <para>Get all model information for a specified user, supporting pagination</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于查询特定用户下的所有模型信息，并支持通过分页参数进行分页查询。可以通过 <c>name</c> 参数进行模糊搜索。</para>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to query all model information under a specific user and supports pagination through page parameters. Fuzzy search can be performed using the <c>name</c> parameter.</para>
         /// <list type="bullet">
-        /// <item><description><c>regId</c>: 地域标识，必填。</description></item>
-        /// <item><description><c>pageSize</c>: 每页显示的条目数，必填。</description></item>
-        /// <item><description><c>currentPage</c>: 当前页码，从1开始计数，必填。</description></item>
-        /// <item><description><c>userId</c>: 用户ID，必填。</description></item>
+        /// <item><description><c>regId</c>: Region identifier, required.</description></item>
+        /// <item><description><c>pageSize</c>: Number of items per page, required.</description></item>
+        /// <item><description><c>currentPage</c>: Current page number, starting from 1, required.</description></item>
+        /// <item><description><c>userId</c>: User ID, required.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2325,18 +3795,18 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定用户下的所有模型信息，支持分页查询</para>
+        /// <para>Get all model information for a specified user, supporting pagination</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于查询特定用户下的所有模型信息，并支持通过分页参数进行分页查询。可以通过 <c>name</c> 参数进行模糊搜索。</para>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to query all model information under a specific user and supports pagination through page parameters. Fuzzy search can be performed using the <c>name</c> parameter.</para>
         /// <list type="bullet">
-        /// <item><description><c>regId</c>: 地域标识，必填。</description></item>
-        /// <item><description><c>pageSize</c>: 每页显示的条目数，必填。</description></item>
-        /// <item><description><c>currentPage</c>: 当前页码，从1开始计数，必填。</description></item>
-        /// <item><description><c>userId</c>: 用户ID，必填。</description></item>
+        /// <item><description><c>regId</c>: Region identifier, required.</description></item>
+        /// <item><description><c>pageSize</c>: Number of items per page, required.</description></item>
+        /// <item><description><c>currentPage</c>: Current page number, starting from 1, required.</description></item>
+        /// <item><description><c>userId</c>: User ID, required.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2355,18 +3825,18 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定用户下的所有模型信息，支持分页查询</para>
+        /// <para>Get all model information for a specified user, supporting pagination</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于查询特定用户下的所有模型信息，并支持通过分页参数进行分页查询。可以通过 <c>name</c> 参数进行模糊搜索。</para>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to query all model information under a specific user and supports pagination through page parameters. Fuzzy search can be performed using the <c>name</c> parameter.</para>
         /// <list type="bullet">
-        /// <item><description><c>regId</c>: 地域标识，必填。</description></item>
-        /// <item><description><c>pageSize</c>: 每页显示的条目数，必填。</description></item>
-        /// <item><description><c>currentPage</c>: 当前页码，从1开始计数，必填。</description></item>
-        /// <item><description><c>userId</c>: 用户ID，必填。</description></item>
+        /// <item><description><c>regId</c>: Region identifier, required.</description></item>
+        /// <item><description><c>pageSize</c>: Number of items per page, required.</description></item>
+        /// <item><description><c>currentPage</c>: Current page number, starting from 1, required.</description></item>
+        /// <item><description><c>userId</c>: User ID, required.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2385,15 +3855,15 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>迭代模型</para>
+        /// <para>Iterate Model</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API用于从系统中删除指定的客户模型。调用时必须提供<c>customerModuleId</c>参数，该参数标识了要删除的具体模型。</para>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to delete a specified customer model from the system. When calling, you must provide the <c>customerModuleId</c> parameter, which identifies the specific model to be deleted.</para>
         /// <list type="bullet">
-        /// <item><description><b>注意</b>：删除操作不可逆，请谨慎使用。</description></item>
+        /// <item><description><b>Note</b>: The deletion operation is irreversible, please use with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2436,15 +3906,15 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>迭代模型</para>
+        /// <para>Iterate Model</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API用于从系统中删除指定的客户模型。调用时必须提供<c>customerModuleId</c>参数，该参数标识了要删除的具体模型。</para>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to delete a specified customer model from the system. When calling, you must provide the <c>customerModuleId</c> parameter, which identifies the specific model to be deleted.</para>
         /// <list type="bullet">
-        /// <item><description><b>注意</b>：删除操作不可逆，请谨慎使用。</description></item>
+        /// <item><description><b>Note</b>: The deletion operation is irreversible, please use with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2487,15 +3957,15 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>迭代模型</para>
+        /// <para>Iterate Model</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API用于从系统中删除指定的客户模型。调用时必须提供<c>customerModuleId</c>参数，该参数标识了要删除的具体模型。</para>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to delete a specified customer model from the system. When calling, you must provide the <c>customerModuleId</c> parameter, which identifies the specific model to be deleted.</para>
         /// <list type="bullet">
-        /// <item><description><b>注意</b>：删除操作不可逆，请谨慎使用。</description></item>
+        /// <item><description><b>Note</b>: The deletion operation is irreversible, please use with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2514,15 +3984,15 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>迭代模型</para>
+        /// <para>Iterate Model</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API用于从系统中删除指定的客户模型。调用时必须提供<c>customerModuleId</c>参数，该参数标识了要删除的具体模型。</para>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to delete a specified customer model from the system. When calling, you must provide the <c>customerModuleId</c> parameter, which identifies the specific model to be deleted.</para>
         /// <list type="bullet">
-        /// <item><description><b>注意</b>：删除操作不可逆，请谨慎使用。</description></item>
+        /// <item><description><b>Note</b>: The deletion operation is irreversible, please use with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2541,7 +4011,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑模型</para>
+        /// <para>Edit Model</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2583,7 +4053,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑模型</para>
+        /// <para>Edit Model</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2625,7 +4095,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑模型</para>
+        /// <para>Edit Model</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2643,7 +4113,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑模型</para>
+        /// <para>Edit Model</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2661,15 +4131,179 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>迭代模型</para>
+        /// <para>View Bastion Host Initial Password</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>请求说明</h2>
-        /// <para>本API用于从系统中删除指定的客户模型。调用时必须提供<c>customerModuleId</c>参数，该参数标识了要删除的具体模型。</para>
         /// <list type="bullet">
-        /// <item><description><b>注意</b>：删除操作不可逆，请谨慎使用。</description></item>
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetBastionHostCertificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBastionHostCertificationResponse
+        /// </returns>
+        public GetBastionHostCertificationResponse GetBastionHostCertificationWithOptions(GetBastionHostCertificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBastionHostCertification",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBastionHostCertificationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>View Bastion Host Initial Password</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetBastionHostCertificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBastionHostCertificationResponse
+        /// </returns>
+        public async Task<GetBastionHostCertificationResponse> GetBastionHostCertificationWithOptionsAsync(GetBastionHostCertificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBastionHostCertification",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBastionHostCertificationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>View Bastion Host Initial Password</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetBastionHostCertificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBastionHostCertificationResponse
+        /// </returns>
+        public GetBastionHostCertificationResponse GetBastionHostCertification(GetBastionHostCertificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetBastionHostCertificationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>View Bastion Host Initial Password</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetBastionHostCertificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBastionHostCertificationResponse
+        /// </returns>
+        public async Task<GetBastionHostCertificationResponse> GetBastionHostCertificationAsync(GetBastionHostCertificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetBastionHostCertificationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Iterate Model</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to delete a specified customer model from the system. When calling, you must provide the <c>customerModuleId</c> parameter, which identifies the specific model to be deleted.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Note</b>: The deletion operation is irreversible, please use with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2712,15 +4346,15 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>迭代模型</para>
+        /// <para>Iterate Model</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API用于从系统中删除指定的客户模型。调用时必须提供<c>customerModuleId</c>参数，该参数标识了要删除的具体模型。</para>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to delete a specified customer model from the system. When calling, you must provide the <c>customerModuleId</c> parameter, which identifies the specific model to be deleted.</para>
         /// <list type="bullet">
-        /// <item><description><b>注意</b>：删除操作不可逆，请谨慎使用。</description></item>
+        /// <item><description><b>Note</b>: The deletion operation is irreversible, please use with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2763,15 +4397,15 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>迭代模型</para>
+        /// <para>Iterate Model</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API用于从系统中删除指定的客户模型。调用时必须提供<c>customerModuleId</c>参数，该参数标识了要删除的具体模型。</para>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to delete a specified customer model from the system. When calling, you must provide the <c>customerModuleId</c> parameter, which identifies the specific model to be deleted.</para>
         /// <list type="bullet">
-        /// <item><description><b>注意</b>：删除操作不可逆，请谨慎使用。</description></item>
+        /// <item><description><b>Note</b>: The deletion operation is irreversible, please use with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2790,15 +4424,15 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>迭代模型</para>
+        /// <para>Iterate Model</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API用于从系统中删除指定的客户模型。调用时必须提供<c>customerModuleId</c>参数，该参数标识了要删除的具体模型。</para>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to delete a specified customer model from the system. When calling, you must provide the <c>customerModuleId</c> parameter, which identifies the specific model to be deleted.</para>
         /// <list type="bullet">
-        /// <item><description><b>注意</b>：删除操作不可逆，请谨慎使用。</description></item>
+        /// <item><description><b>Note</b>: The deletion operation is irreversible, please use with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2817,7 +4451,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线模型</para>
+        /// <para>Offline Model</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2859,7 +4493,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线模型</para>
+        /// <para>Offline Model</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2901,7 +4535,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线模型</para>
+        /// <para>Offline Model</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2919,7 +4553,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线模型</para>
+        /// <para>Offline Model</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2937,15 +4571,15 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线模型</para>
+        /// <para>Online Model</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API用于从系统中删除指定的客户模型。调用时必须提供<c>customerModuleId</c>参数，该参数标识了要删除的具体模型。</para>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to delete a specified customer model from the system. When calling, you must provide the <c>customerModuleId</c> parameter, which identifies the specific model to be deleted.</para>
         /// <list type="bullet">
-        /// <item><description><b>注意</b>：删除操作不可逆，请谨慎使用。</description></item>
+        /// <item><description><b>Note</b>: Deletion is irreversible, please use with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2988,15 +4622,15 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线模型</para>
+        /// <para>Online Model</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API用于从系统中删除指定的客户模型。调用时必须提供<c>customerModuleId</c>参数，该参数标识了要删除的具体模型。</para>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to delete a specified customer model from the system. When calling, you must provide the <c>customerModuleId</c> parameter, which identifies the specific model to be deleted.</para>
         /// <list type="bullet">
-        /// <item><description><b>注意</b>：删除操作不可逆，请谨慎使用。</description></item>
+        /// <item><description><b>Note</b>: Deletion is irreversible, please use with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3039,15 +4673,15 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线模型</para>
+        /// <para>Online Model</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API用于从系统中删除指定的客户模型。调用时必须提供<c>customerModuleId</c>参数，该参数标识了要删除的具体模型。</para>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to delete a specified customer model from the system. When calling, you must provide the <c>customerModuleId</c> parameter, which identifies the specific model to be deleted.</para>
         /// <list type="bullet">
-        /// <item><description><b>注意</b>：删除操作不可逆，请谨慎使用。</description></item>
+        /// <item><description><b>Note</b>: Deletion is irreversible, please use with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3066,15 +4700,15 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线模型</para>
+        /// <para>Online Model</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API用于从系统中删除指定的客户模型。调用时必须提供<c>customerModuleId</c>参数，该参数标识了要删除的具体模型。</para>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to delete a specified customer model from the system. When calling, you must provide the <c>customerModuleId</c> parameter, which identifies the specific model to be deleted.</para>
         /// <list type="bullet">
-        /// <item><description><b>注意</b>：删除操作不可逆，请谨慎使用。</description></item>
+        /// <item><description><b>Note</b>: Deletion is irreversible, please use with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3093,16 +4727,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解析表达式参数</para>
+        /// <para>Parse Expression Parameters</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3145,16 +4779,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解析表达式参数</para>
+        /// <para>Parse Expression Parameters</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3197,16 +4831,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解析表达式参数</para>
+        /// <para>Parse Expression Parameters</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3225,16 +4859,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解析表达式参数</para>
+        /// <para>Parse Expression Parameters</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3253,7 +4887,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预发布模型</para>
+        /// <para>Pre-release Model</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3295,7 +4929,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预发布模型</para>
+        /// <para>Pre-release Model</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3337,7 +4971,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预发布模型</para>
+        /// <para>Pre-release Model</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3355,7 +4989,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预发布模型</para>
+        /// <para>Pre-release Model</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3369,6 +5003,170 @@ namespace AlibabaCloud.SDK.Safconsole20250521
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PrepublishModelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Request to Sync Model Files</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RequestModelFileSyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RequestModelFileSyncResponse
+        /// </returns>
+        public RequestModelFileSyncResponse RequestModelFileSyncWithOptions(RequestModelFileSyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RequestModelFileSync",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RequestModelFileSyncResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Request to Sync Model Files</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RequestModelFileSyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RequestModelFileSyncResponse
+        /// </returns>
+        public async Task<RequestModelFileSyncResponse> RequestModelFileSyncWithOptionsAsync(RequestModelFileSyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RequestModelFileSync",
+                Version = "2025-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RequestModelFileSyncResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Request to Sync Model Files</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RequestModelFileSyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RequestModelFileSyncResponse
+        /// </returns>
+        public RequestModelFileSyncResponse RequestModelFileSync(RequestModelFileSyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RequestModelFileSyncWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Request to Sync Model Files</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口用于客户首次创建建模项目。</description></item>
+        /// <item><description><c>projectName</c> 是必填项，长度不超过50个字符。</description></item>
+        /// <item><description><c>remark</c> 和 <c>instanceSpec</c> 为可选项，其中 <c>remark</c> 长度不超过200个字符。</description></item>
+        /// <item><description><c>instanceSpec</c> 可选值包括 <c>SECURE_ENV_LITE</c> 和 <c>SECURE_ENV_PRO</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RequestModelFileSyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RequestModelFileSyncResponse
+        /// </returns>
+        public async Task<RequestModelFileSyncResponse> RequestModelFileSyncAsync(RequestModelFileSyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RequestModelFileSyncWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3529,16 +5327,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预发布测试模型</para>
+        /// <para>Pre-release Model Testing</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3581,16 +5379,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预发布测试模型</para>
+        /// <para>Pre-release Model Testing</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3633,16 +5431,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预发布测试模型</para>
+        /// <para>Pre-release Model Testing</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3661,16 +5459,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预发布测试模型</para>
+        /// <para>Pre-release Model Testing</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3689,16 +5487,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预发布测试模型</para>
+        /// <para>Pre-release Test Model</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3741,16 +5539,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预发布测试模型</para>
+        /// <para>Pre-release Test Model</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3793,16 +5591,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预发布测试模型</para>
+        /// <para>Pre-release Test Model</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3821,16 +5619,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预发布测试模型</para>
+        /// <para>Pre-release Test Model</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3849,16 +5647,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试表达式</para>
+        /// <para>Test Expression</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3905,16 +5703,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试表达式</para>
+        /// <para>Test Expression</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3961,16 +5759,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试表达式</para>
+        /// <para>Test Expression</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3989,16 +5787,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试表达式</para>
+        /// <para>Test Expression</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询系统中所有可用的特征模板。</description></item>
-        /// <item><description>请求方式为 GET，无需提供额外参数。</description></item>
-        /// <item><description>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</description></item>
+        /// <item><description>This interface is used to query all available feature templates in the system.</description></item>
+        /// <item><description>The request method is GET, and no additional parameters are required.</description></item>
+        /// <item><description>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</description></item>
         /// </list>
         /// </description>
         /// 

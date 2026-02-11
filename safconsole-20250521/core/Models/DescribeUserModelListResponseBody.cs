@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>Current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public long? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Pagination parameter: number of items per page, default value is 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -44,6 +50,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</para>
         /// </summary>
@@ -51,11 +59,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Return result.</para>
+        /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public List<DescribeUserModelListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeUserModelListResponseBodyResultObject : TeaModel {
             /// <summary>
+            /// <para>Authorization type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>READ</para>
             /// </summary>
@@ -64,6 +77,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
             public string AuthType { get; set; }
 
             /// <summary>
+            /// <para>Model name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Model_A</para>
             /// </summary>
@@ -71,11 +86,19 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
             [Validation(Required=false)]
             public string CustomerModuleName { get; set; }
 
+            /// <summary>
+            /// <para>Remarks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>备注。</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>Associated features.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>template_a</para>
             /// </summary>
@@ -84,6 +107,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
             public string FeatureTemplate { get; set; }
 
             /// <summary>
+            /// <para>Modification time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1673578656000</para>
             /// </summary>
@@ -92,6 +117,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
+            /// <para>Primary key ID of the model.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -100,6 +127,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>Publication status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ONLINE</para>
             /// </summary>
@@ -108,6 +137,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
             public string InnerDefineStatus { get; set; }
 
             /// <summary>
+            /// <para>Model identifier.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>inner_model_a</para>
             /// </summary>
@@ -116,6 +147,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
             public string InnerModuleName { get; set; }
 
             /// <summary>
+            /// <para>Whether iteration is allowed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -124,6 +157,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
             public bool? IsAllowIterate { get; set; }
 
             /// <summary>
+            /// <para>Whether rollback is allowed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -132,6 +167,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
             public bool? IsAllowRollback { get; set; }
 
             /// <summary>
+            /// <para>Iteration version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -140,6 +177,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
             public long? IterationVersion { get; set; }
 
             /// <summary>
+            /// <para>Root model ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -150,6 +189,12 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful, with values as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>true, request succeeded</description></item>
+        /// <item><description>false, request failed</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -158,6 +203,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -166,6 +213,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public long? TotalItem { get; set; }
 
         /// <summary>
+        /// <para>Total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

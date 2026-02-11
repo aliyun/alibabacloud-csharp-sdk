@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
 {
     public class DescribeCustomerModuleOutputInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code. A return value of 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public long? Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public long? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Return message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>055f1546-f465-4c92-a2da-bfb86abe6f56</para>
         /// </summary>
@@ -41,11 +49,16 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Returned result.</para>
+        /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public DescribeCustomerModuleOutputInfoResponseBodyResultObject ResultObject { get; set; }
         public class DescribeCustomerModuleOutputInfoResponseBodyResultObject : TeaModel {
             /// <summary>
+            /// <para>Number of decimal places for the output.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
             public string FinalScoreFormat { get; set; }
 
             /// <summary>
+            /// <para>Score processing logic.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>score</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
             public string ProcessExpression { get; set; }
 
             /// <summary>
+            /// <para>Test file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>customer/xxxxxxxxx/xxxxxxxx.pmml</para>
             /// </summary>
@@ -72,6 +89,12 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful, with possible values as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>true, indicating the request was successful</description></item>
+        /// <item><description>false, indicating the request failed</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

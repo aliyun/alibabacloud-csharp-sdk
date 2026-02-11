@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
 {
     public class DescribeModelFeatureRequest : TeaModel {
         /// <summary>
+        /// <para>Customer model ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>456</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public int? CustomerModuleId { get; set; }
 
         /// <summary>
+        /// <para>Feature template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FINANCE_51</para>
         /// </summary>

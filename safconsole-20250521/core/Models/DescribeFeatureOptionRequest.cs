@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
 {
     public class DescribeFeatureOptionRequest : TeaModel {
         /// <summary>
+        /// <para>Feature template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
 {
     public class ParseExpressionParametersRequest : TeaModel {
         /// <summary>
+        /// <para>Expression.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>score</para>
         /// </summary>

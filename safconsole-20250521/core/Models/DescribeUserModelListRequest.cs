@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
 {
     public class DescribeUserModelListRequest : TeaModel {
         /// <summary>
+        /// <para>Authorization type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>READ</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public string AuthType { get; set; }
 
         /// <summary>
+        /// <para>Current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>Model name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>StudyX</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>Pagination parameter: number of items per page, default value 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

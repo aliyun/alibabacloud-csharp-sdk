@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
 {
     public class PrepublishModelRequest : TeaModel {
         /// <summary>
+        /// <para>Customer model ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>456</para>
         /// </summary>

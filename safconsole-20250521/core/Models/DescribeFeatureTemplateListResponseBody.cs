@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
 {
     public class DescribeFeatureTemplateListResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public long? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</para>
         /// </summary>
@@ -33,15 +39,26 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Returned result.</para>
+        /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public List<DescribeFeatureTemplateListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeFeatureTemplateListResponseBodyResultObject : TeaModel {
+            /// <summary>
+            /// <para>Parameter label.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>51维特征</para>
+            /// </summary>
             [NameInMap("Label")]
             [Validation(Required=false)]
             public string Label { get; set; }
 
             /// <summary>
+            /// <para>Label value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>FINANCE_51</para>
             /// </summary>
@@ -52,6 +69,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         }
 
         /// <summary>
+        /// <para>Success flag</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

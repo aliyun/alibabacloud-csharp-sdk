@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
 {
     public class TestProcessExpressionRequest : TeaModel {
         /// <summary>
+        /// <para>Expression.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>score</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Safconsole20250521.Models
         public string Expression { get; set; }
 
         /// <summary>
+        /// <para>Parameter list.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;score&quot;: &quot;1&quot;}</para>
         /// </summary>
