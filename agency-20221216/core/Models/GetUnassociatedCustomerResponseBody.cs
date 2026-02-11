@@ -23,9 +23,6 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>List of Invitation Information</para>
-        /// </summary>
         [NameInMap("InviteInfoList")]
         [Validation(Required=false)]
         public GetUnassociatedCustomerResponseBodyInviteInfoList InviteInfoList { get; set; }
@@ -34,58 +31,22 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             [Validation(Required=false)]
             public List<GetUnassociatedCustomerResponseBodyInviteInfoListInviteInfo> InviteInfo { get; set; }
             public class GetUnassociatedCustomerResponseBodyInviteInfoListInviteInfo : TeaModel {
-                /// <summary>
-                /// <para>The name of Customer who are to be invited.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>My Client</para>
-                /// </summary>
                 [NameInMap("AccountNickname")]
                 [Validation(Required=false)]
                 public string AccountNickname { get; set; }
 
-                /// <summary>
-                /// <para>The Email of Customer who are to be invited.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="mailto:12345@qq.com">12345@qq.com</a></para>
-                /// </summary>
                 [NameInMap("Email")]
                 [Validation(Required=false)]
                 public string Email { get; set; }
 
-                /// <summary>
-                /// <para>The time of email been sent out.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2023-05-10</para>
-                /// </summary>
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
 
-                /// <summary>
-                /// <para>Invitation ID</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>190</para>
-                /// </summary>
                 [NameInMap("InviteId")]
                 [Validation(Required=false)]
                 public long? InviteId { get; set; }
 
-                /// <summary>
-                /// <para>Invitation Status:</para>
-                /// <list type="bullet">
-                /// <item><description>0 No visit on registration URL</description></item>
-                /// <item><description>1 Successful Registration</description></item>
-                /// <item><description>2 Unsuccessful Registration</description></item>
-                /// <item><description>3 Registration URL have been visited, but no submitted sheet/ticket.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }

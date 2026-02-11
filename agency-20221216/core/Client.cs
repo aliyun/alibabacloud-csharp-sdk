@@ -1734,7 +1734,7 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Export quota amount adjustment history as a Distribution Customer from International Site. Only available on International Site.</para>
+        /// <para>The ExportCustomerQuotaRecord interface corresponds to the export function of &quot;Quota Adjust Details&quot; on ACPN.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1797,7 +1797,7 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Export quota amount adjustment history as a Distribution Customer from International Site. Only available on International Site.</para>
+        /// <para>The ExportCustomerQuotaRecord interface corresponds to the export function of &quot;Quota Adjust Details&quot; on ACPN.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1860,7 +1860,7 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Export quota amount adjustment history as a Distribution Customer from International Site. Only available on International Site.</para>
+        /// <para>The ExportCustomerQuotaRecord interface corresponds to the export function of &quot;Quota Adjust Details&quot; on ACPN.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1883,7 +1883,7 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Export quota amount adjustment history as a Distribution Customer from International Site. Only available on International Site.</para>
+        /// <para>The ExportCustomerQuotaRecord interface corresponds to the export function of &quot;Quota Adjust Details&quot; on ACPN.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1906,7 +1906,7 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>额度冲减明细列表导出接口</para>
+        /// <para>The ExportReversedDeductionHistory interface corresponds to the export function of &quot;Quota Offsetting Details&quot; on ACPN.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1960,7 +1960,7 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>额度冲减明细列表导出接口</para>
+        /// <para>The ExportReversedDeductionHistory interface corresponds to the export function of &quot;Quota Offsetting Details&quot; on ACPN.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2014,7 +2014,7 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>额度冲减明细列表导出接口</para>
+        /// <para>The ExportReversedDeductionHistory interface corresponds to the export function of &quot;Quota Offsetting Details&quot; on ACPN.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2032,7 +2032,7 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>额度冲减明细列表导出接口</para>
+        /// <para>The ExportReversedDeductionHistory interface corresponds to the export function of &quot;Quota Offsetting Details&quot; on ACPN.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4127,6 +4127,12 @@ namespace AlibabaCloud.SDK.Agency20221216
         /// <para>优惠券使用量列表查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>确保当前调用账号身份为分销伙伴 
+        /// <notice>仅国际提供</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListCouponUsageRequest
         /// </param>
@@ -4192,6 +4198,12 @@ namespace AlibabaCloud.SDK.Agency20221216
         /// <summary>
         /// <para>优惠券使用量列表查询</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>确保当前调用账号身份为分销伙伴 
+        /// <notice>仅国际提供</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCouponUsageRequest
@@ -4259,6 +4271,12 @@ namespace AlibabaCloud.SDK.Agency20221216
         /// <para>优惠券使用量列表查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>确保当前调用账号身份为分销伙伴 
+        /// <notice>仅国际提供</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListCouponUsageRequest
         /// </param>
@@ -4277,6 +4295,12 @@ namespace AlibabaCloud.SDK.Agency20221216
         /// <para>优惠券使用量列表查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>确保当前调用账号身份为分销伙伴 
+        /// <notice>仅国际提供</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListCouponUsageRequest
         /// </param>
@@ -4292,7 +4316,7 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用查询导出任务列表</para>
+        /// <para>Query the list of exported files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4350,7 +4374,7 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用查询导出任务列表</para>
+        /// <para>Query the list of exported files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4408,7 +4432,7 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用查询导出任务列表</para>
+        /// <para>Query the list of exported files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4426,7 +4450,7 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用查询导出任务列表</para>
+        /// <para>Query the list of exported files.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
             [Validation(Required=false)]
             public string OutstandingBalance { get; set; }
 
+            [NameInMap("PAYGFreezeStatus")]
+            [Validation(Required=false)]
+            public string PAYGFreezeStatus { get; set; }
+
             /// <summary>
             /// <para>The systematic controlling policy for resource management, specifically when the available Credit of Sub Account falls to 0 or less.</br></para>
             /// <list type="bullet">
