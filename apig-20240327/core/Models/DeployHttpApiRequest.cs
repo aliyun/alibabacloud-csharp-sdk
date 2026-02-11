@@ -190,11 +190,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string GatewayId { get; set; }
 
+            /// <summary>
+            /// <para>Operation-level deployment control list</para>
+            /// </summary>
             [NameInMap("operationDeployments")]
             [Validation(Required=false)]
             public List<DeployHttpApiRequestRestApiConfigOperationDeployments> OperationDeployments { get; set; }
             public class DeployHttpApiRequestRestApiConfigOperationDeployments : TeaModel {
                 /// <summary>
+                /// <para>Operation type</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Publish</para>
                 /// </summary>
@@ -203,8 +208,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Action { get; set; }
 
                 /// <summary>
+                /// <para>Unique identifier of the operation</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>op-d5s57hmm1hks653u9dkg</para>
+                /// <para>op-xxx</para>
                 /// </summary>
                 [NameInMap("operationId")]
                 [Validation(Required=false)]

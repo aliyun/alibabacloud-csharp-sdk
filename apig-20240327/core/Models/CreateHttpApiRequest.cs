@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string BasePath { get; set; }
 
+        [NameInMap("belongGatewayId")]
+        [Validation(Required=false)]
+        public string BelongGatewayId { get; set; }
+
         /// <summary>
         /// <para>$.parameters[0].schema.example</para>
         /// </summary>
@@ -56,6 +60,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("dryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
 
         /// <summary>
         /// <para>Create an API of HTTP type</para>
@@ -196,6 +204,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("strategy")]
+        [Validation(Required=false)]
+        public string Strategy { get; set; }
 
         /// <summary>
         /// <para>$.parameters[0].schema.properties.deployConfigs.description</para>

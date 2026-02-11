@@ -702,6 +702,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<HttpApiDeployConfigServiceConfigs> ServiceConfigs { get; set; }
         public class HttpApiDeployConfigServiceConfigs : TeaModel {
             /// <summary>
+            /// <para>Legacy gateway service ID for backward compatibility</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>gw-svc-abc123</para>
+            /// </summary>
+            [NameInMap("gatewayServiceId")]
+            [Validation(Required=false)]
+            public string GatewayServiceId { get; set; }
+
+            /// <summary>
             /// <para>Intent classification code</para>
             /// 
             /// <b>Example:</b>
@@ -739,6 +749,85 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelNamePattern { get; set; }
 
             /// <summary>
+            /// <para>Multi-service routing strategy type</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ByWeight</para>
+            /// </summary>
+            [NameInMap("multiServiceRouteStrategy")]
+            [Validation(Required=false)]
+            public string MultiServiceRouteStrategy { get; set; }
+
+            /// <summary>
+            /// <para>Service display name</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Qwen-Max-Service</para>
+            /// </summary>
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            /// <summary>
+            /// <para>Observability metrics-based routing config</para>
+            /// </summary>
+            [NameInMap("observabilityRouteConfig")]
+            [Validation(Required=false)]
+            public HttpApiDeployConfigServiceConfigsObservabilityRouteConfig ObservabilityRouteConfig { get; set; }
+            public class HttpApiDeployConfigServiceConfigsObservabilityRouteConfig : TeaModel {
+                /// <summary>
+                /// <para>Routing mode</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>LeastBusy</para>
+                /// </summary>
+                [NameInMap("mode")]
+                [Validation(Required=false)]
+                public string Mode { get; set; }
+
+                /// <summary>
+                /// <para>Queue size</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
+                /// </summary>
+                [NameInMap("queueSize")]
+                [Validation(Required=false)]
+                public int? QueueSize { get; set; }
+
+                /// <summary>
+                /// <para>Max traffic ratio per single service</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.8</para>
+                /// </summary>
+                [NameInMap("rateLimit")]
+                [Validation(Required=false)]
+                public float? RateLimit { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>Service port number</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
+            /// </summary>
+            [NameInMap("port")]
+            [Validation(Required=false)]
+            public int? Port { get; set; }
+
+            /// <summary>
+            /// <para>Service protocol</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>HTTP</para>
+            /// </summary>
+            [NameInMap("protocol")]
+            [Validation(Required=false)]
+            public string Protocol { get; set; }
+
+            /// <summary>
             /// <para>The service ID.</para>
             /// 
             /// <b>Example:</b>
@@ -747,6 +836,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [NameInMap("serviceId")]
             [Validation(Required=false)]
             public string ServiceId { get; set; }
+
+            /// <summary>
+            /// <para>Service version tag for tag-based routing scenarios</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>v2</para>
+            /// </summary>
+            [NameInMap("version")]
+            [Validation(Required=false)]
+            public string Version { get; set; }
 
             /// <summary>
             /// <para>The service weight.</para>
