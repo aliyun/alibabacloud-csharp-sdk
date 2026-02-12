@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public EmbedderConfig EmbedderConfig { get; set; }
 
+        [NameInMap("enableConversationHistory")]
+        [Validation(Required=false)]
+        public bool? EnableConversationHistory { get; set; }
+
+        [NameInMap("enableConversationState")]
+        [Validation(Required=false)]
+        public bool? EnableConversationState { get; set; }
+
         [NameInMap("executionRoleArn")]
         [Validation(Required=false)]
         public string ExecutionRoleArn { get; set; }
