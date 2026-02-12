@@ -51,9 +51,6 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             [Validation(Required=false)]
             public bool? Online { get; set; }
 
-            /// <summary>
-            /// <para>The topics to which consumers in the consumer group subscribe. If all consumers in the specified group are offline, no topics are returned.</para>
-            /// </summary>
             [NameInMap("SubscriptionDataList")]
             [Validation(Required=false)]
             public OnsGroupSubDetailResponseBodyDataSubscriptionDataList SubscriptionDataList { get; set; }
@@ -62,24 +59,10 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 [Validation(Required=false)]
                 public List<OnsGroupSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList> SubscriptionDataList { get; set; }
                 public class OnsGroupSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList : TeaModel {
-                    /// <summary>
-                    /// <para>The expression based on which consumers in the consumer group subscribe to the topic.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <list type="bullet">
-                    /// <item><description></description></item>
-                    /// </list>
-                    /// </summary>
                     [NameInMap("SubString")]
                     [Validation(Required=false)]
                     public string SubString { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the topic to which consumers in the consumer group subscribe.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>test-mq_topic</para>
-                    /// </summary>
                     [NameInMap("Topic")]
                     [Validation(Required=false)]
                     public string Topic { get; set; }

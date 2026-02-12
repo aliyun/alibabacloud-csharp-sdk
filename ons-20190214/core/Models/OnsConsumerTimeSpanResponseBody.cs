@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The point in time when the earliest stored message was published to the topic.</para>
+            /// <para>The point in time when the most recently stored message was published to the topic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1570761026804</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             public long? MaxTimeStamp { get; set; }
 
             /// <summary>
-            /// <para>The point in time when the most recently stored message was published to the topic.</para>
+            /// <para>The point in time when the earliest stored message was published to the topic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1570701231122</para>

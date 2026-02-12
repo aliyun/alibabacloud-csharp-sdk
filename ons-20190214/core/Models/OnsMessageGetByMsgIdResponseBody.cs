@@ -66,9 +66,6 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             [Validation(Required=false)]
             public string MsgId { get; set; }
 
-            /// <summary>
-            /// <para>The attributes of the message.</para>
-            /// </summary>
             [NameInMap("PropertyList")]
             [Validation(Required=false)]
             public OnsMessageGetByMsgIdResponseBodyDataPropertyList PropertyList { get; set; }
@@ -77,29 +74,10 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 [Validation(Required=false)]
                 public List<OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty> MessageProperty { get; set; }
                 public class OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty : TeaModel {
-                    /// <summary>
-                    /// <para>The name of the attribute. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>TRACE_ON</b>: indicates whether a trace of the message exists.</description></item>
-                    /// <item><description><b>KEYS</b>: indicates the key of the message.</description></item>
-                    /// <item><description><b>TAGS</b>: indicates the tag that is attached to the message.</description></item>
-                    /// <item><description><b>INSTANCE_ID</b>: indicates the ID of the instance which contains the message.</description></item>
-                    /// </list>
-                    /// <para>For information about the terms that are used in Message Queue for Apache RocketMQ, see <a href="https://help.aliyun.com/document_detail/29533.html">Terms</a>.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>TAGS</para>
-                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
-                    /// <summary>
-                    /// <para>The value of the attribute.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>TagA</para>
-                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }

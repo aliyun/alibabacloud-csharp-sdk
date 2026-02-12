@@ -36,9 +36,6 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             [Validation(Required=false)]
             public long? DelayTime { get; set; }
 
-            /// <summary>
-            /// <para>The information about each topic to which the consumer group subscribes. If the <b>Detail</b> parameter in the request is set to <b>false</b>, the value of this parameter is empty.</para>
-            /// </summary>
             [NameInMap("DetailInTopicList")]
             [Validation(Required=false)]
             public OnsConsumerAccumulateResponseBodyDataDetailInTopicList DetailInTopicList { get; set; }
@@ -47,42 +44,18 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 [Validation(Required=false)]
                 public List<OnsConsumerAccumulateResponseBodyDataDetailInTopicListDetailInTopicDo> DetailInTopicDo { get; set; }
                 public class OnsConsumerAccumulateResponseBodyDataDetailInTopicListDetailInTopicDo : TeaModel {
-                    /// <summary>
-                    /// <para>The maximum latency of message consumption in the topic.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>10000</para>
-                    /// </summary>
                     [NameInMap("DelayTime")]
                     [Validation(Required=false)]
                     public long? DelayTime { get; set; }
 
-                    /// <summary>
-                    /// <para>The point in time when the latest consumed message in the topic was produced.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1566231000000</para>
-                    /// </summary>
                     [NameInMap("LastTimestamp")]
                     [Validation(Required=false)]
                     public long? LastTimestamp { get; set; }
 
-                    /// <summary>
-                    /// <para>The topic name.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>test-mq-topic</para>
-                    /// </summary>
                     [NameInMap("Topic")]
                     [Validation(Required=false)]
                     public string Topic { get; set; }
 
-                    /// <summary>
-                    /// <para>The number of accumulated messages in the topic.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>100</para>
-                    /// </summary>
                     [NameInMap("TotalDiff")]
                     [Validation(Required=false)]
                     public long? TotalDiff { get; set; }

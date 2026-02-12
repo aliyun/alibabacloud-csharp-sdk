@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ons20190214.Models
 {
     public class OnsDLQMessageResendByIdResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The returned messages.</para>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public OnsDLQMessageResendByIdResponseBodyData Data { get; set; }

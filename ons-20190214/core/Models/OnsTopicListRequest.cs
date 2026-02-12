@@ -68,16 +68,6 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         [Validation(Required=false)]
         public string Topic { get; set; }
 
-        /// <summary>
-        /// <para>The user ID of the topic owner. Set this parameter to an Alibaba Cloud account ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>138015630679****</para>
-        /// </summary>
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
-
     }
 
 }

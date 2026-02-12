@@ -16,9 +16,6 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         [Validation(Required=false)]
         public OnsTrendGroupOutputTpsResponseBodyData Data { get; set; }
         public class OnsTrendGroupOutputTpsResponseBodyData : TeaModel {
-            /// <summary>
-            /// <para>The data set returned based on sampling period.</para>
-            /// </summary>
             [NameInMap("Records")]
             [Validation(Required=false)]
             public OnsTrendGroupOutputTpsResponseBodyDataRecords Records { get; set; }
@@ -27,22 +24,10 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 [Validation(Required=false)]
                 public List<OnsTrendGroupOutputTpsResponseBodyDataRecordsStatsDataDo> StatsDataDo { get; set; }
                 public class OnsTrendGroupOutputTpsResponseBodyDataRecordsStatsDataDo : TeaModel {
-                    /// <summary>
-                    /// <para>The X axis. The value of this parameter is a UNIX timestamp in milliseconds.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1570867800000</para>
-                    /// </summary>
                     [NameInMap("X")]
                     [Validation(Required=false)]
                     public long? X { get; set; }
 
-                    /// <summary>
-                    /// <para>The Y axis. This parameter indicates the TPS for message consumption or the number of messages that are consumed.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("Y")]
                     [Validation(Required=false)]
                     public float? Y { get; set; }

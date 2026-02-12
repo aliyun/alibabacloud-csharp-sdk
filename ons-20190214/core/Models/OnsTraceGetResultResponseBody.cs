@@ -101,9 +101,6 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             [Validation(Required=false)]
             public string Topic { get; set; }
 
-            /// <summary>
-            /// <para>The details of the message trace.</para>
-            /// </summary>
             [NameInMap("TraceList")]
             [Validation(Required=false)]
             public OnsTraceGetResultResponseBodyTraceDataTraceList TraceList { get; set; }
@@ -112,86 +109,34 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                 [Validation(Required=false)]
                 public List<OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo> TraceMapDo { get; set; }
                 public class OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo : TeaModel {
-                    /// <summary>
-                    /// <para>The address of the producer that generated the message.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para><c>30.5.**.**</c></para>
-                    /// </summary>
                     [NameInMap("BornHost")]
                     [Validation(Required=false)]
                     public string BornHost { get; set; }
 
-                    /// <summary>
-                    /// <para>The period of time that the system took to send the message. Unit: milliseconds.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>24</para>
-                    /// </summary>
                     [NameInMap("CostTime")]
                     [Validation(Required=false)]
                     public int? CostTime { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the message.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>0BC1F01800002A9F000000531246****</para>
-                    /// </summary>
                     [NameInMap("MsgId")]
                     [Validation(Required=false)]
                     public string MsgId { get; set; }
 
-                    /// <summary>
-                    /// <para>The key of the message.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>ORDERID_100</para>
-                    /// </summary>
                     [NameInMap("MsgKey")]
                     [Validation(Required=false)]
                     public string MsgKey { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the group that contains the producer.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>GID_test</para>
-                    /// </summary>
                     [NameInMap("PubGroupName")]
                     [Validation(Required=false)]
                     public string PubGroupName { get; set; }
 
-                    /// <summary>
-                    /// <para>The point in time when the message was sent.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1570850870478</para>
-                    /// </summary>
                     [NameInMap("PubTime")]
                     [Validation(Required=false)]
                     public long? PubTime { get; set; }
 
-                    /// <summary>
-                    /// <para>Indicates whether the message is sent. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>SEND_SUCCESS</b>: The message is sent.</description></item>
-                    /// <item><description><b>SEND_FAILED</b>: The message failed to be sent.</description></item>
-                    /// <item><description><b>SEND_ROLLBACK:</b> The message is a transactional message and is rolled back.</description></item>
-                    /// <item><description><b>SEND_UNKNOWN:</b> The message is a transactional message and is not committed.</description></item>
-                    /// <item><description><b>SEND_DELAY:</b> The message is a scheduled or delayed message and is waiting to be consumed at the specified point in time.</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>SEND_SUCCESS</para>
-                    /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
 
-                    /// <summary>
-                    /// <para>The consumption traces of the message.</para>
-                    /// </summary>
                     [NameInMap("SubList")]
                     [Validation(Required=false)]
                     public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubList SubList { get; set; }
@@ -200,9 +145,6 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                         [Validation(Required=false)]
                         public List<OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDo> SubMapDo { get; set; }
                         public class OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDo : TeaModel {
-                            /// <summary>
-                            /// <para>The information about message consumption by consumers in the group.</para>
-                            /// </summary>
                             [NameInMap("ClientList")]
                             [Validation(Required=false)]
                             public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientList ClientList { get; set; }
@@ -211,69 +153,26 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                                 [Validation(Required=false)]
                                 public List<OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientListSubClientInfoDo> SubClientInfoDo { get; set; }
                                 public class OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientListSubClientInfoDo : TeaModel {
-                                    /// <summary>
-                                    /// <para>The address of the consumer.</para>
-                                    /// 
-                                    /// <b>Example:</b>
-                                    /// <para><c>30.5.**.**</c></para>
-                                    /// </summary>
                                     [NameInMap("ClientHost")]
                                     [Validation(Required=false)]
                                     public string ClientHost { get; set; }
 
-                                    /// <summary>
-                                    /// <para>The period of time that the system took to consume the message. Unit: milliseconds.</para>
-                                    /// 
-                                    /// <b>Example:</b>
-                                    /// <para>43</para>
-                                    /// </summary>
                                     [NameInMap("CostTime")]
                                     [Validation(Required=false)]
                                     public int? CostTime { get; set; }
 
-                                    /// <summary>
-                                    /// <para>The number of attempts that the ApsaraMQ for RocketMQ broker tried to send the message to the consumer.</para>
-                                    /// 
-                                    /// <b>Example:</b>
-                                    /// <para>1</para>
-                                    /// </summary>
                                     [NameInMap("ReconsumeTimes")]
                                     [Validation(Required=false)]
                                     public int? ReconsumeTimes { get; set; }
 
-                                    /// <summary>
-                                    /// <para>Indicates whether the message is consumed. Valid values:</para>
-                                    /// <list type="bullet">
-                                    /// <item><description><b>CONSUME_FAILED</b>: The message failed to be consumed.</description></item>
-                                    /// <item><description><b>CONSUME_SUCCESS</b>: The message is consumed.</description></item>
-                                    /// <item><description><b>CONSUME_NOT_RETURN:</b> No responses are returned.</description></item>
-                                    /// <item><description><b>SEND_UNKNOWN:</b> The message is a transactional message and is not committed.</description></item>
-                                    /// <item><description><b>SEND_DELAY:</b> The message is a scheduled or delayed message and is waiting to be consumed at the specified point in time.</description></item>
-                                    /// </list>
-                                    /// 
-                                    /// <b>Example:</b>
-                                    /// <para>CONSUME_SUCCESS</para>
-                                    /// </summary>
                                     [NameInMap("Status")]
                                     [Validation(Required=false)]
                                     public string Status { get; set; }
 
-                                    /// <summary>
-                                    /// <para>The ID of the group that contains the consumer.</para>
-                                    /// 
-                                    /// <b>Example:</b>
-                                    /// <para>GID_test</para>
-                                    /// </summary>
                                     [NameInMap("SubGroupName")]
                                     [Validation(Required=false)]
                                     public string SubGroupName { get; set; }
 
-                                    /// <summary>
-                                    /// <para>The earliest point in time when the message was consumed.</para>
-                                    /// 
-                                    /// <b>Example:</b>
-                                    /// <para>1570851590511</para>
-                                    /// </summary>
                                     [NameInMap("SubTime")]
                                     [Validation(Required=false)]
                                     public long? SubTime { get; set; }
@@ -282,32 +181,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 
                             }
 
-                            /// <summary>
-                            /// <para>The number of consumption failures.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>0</para>
-                            /// </summary>
                             [NameInMap("FailCount")]
                             [Validation(Required=false)]
                             public int? FailCount { get; set; }
 
-                            /// <summary>
-                            /// <para>The ID of the consumer group.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>GID_test</para>
-                            /// </summary>
                             [NameInMap("SubGroupName")]
                             [Validation(Required=false)]
                             public string SubGroupName { get; set; }
 
-                            /// <summary>
-                            /// <para>The number of successful consumptions.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>1</para>
-                            /// </summary>
                             [NameInMap("SuccessCount")]
                             [Validation(Required=false)]
                             public int? SuccessCount { get; set; }
@@ -316,22 +197,10 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 
                     }
 
-                    /// <summary>
-                    /// <para>The tag of the message.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>TagA</para>
-                    /// </summary>
                     [NameInMap("Tag")]
                     [Validation(Required=false)]
                     public string Tag { get; set; }
 
-                    /// <summary>
-                    /// <para>The topic to which the message belongs.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>test</para>
-                    /// </summary>
                     [NameInMap("Topic")]
                     [Validation(Required=false)]
                     public string Topic { get; set; }

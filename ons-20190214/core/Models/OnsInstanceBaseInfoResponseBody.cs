@@ -198,6 +198,14 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             public string Remark { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
+            [NameInMap("SupportClassic")]
+            [Validation(Required=false)]
+            public int? SupportClassic { get; set; }
+
+            /// <summary>
             /// <para>The maximum number of topics that can be created on the instance. Valid values: 25, 50, 100, 300, and 500.</para>
             /// <remarks>
             /// <para>This parameter is available only to the ApsaraMQ for RocketMQ Enterprise Platinum Edition instances.</para>
