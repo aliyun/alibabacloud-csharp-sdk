@@ -296,6 +296,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
 
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public string TemplateId { get; set; }
+
         [NameInMap("TimeRangeField")]
         [Validation(Required=false)]
         public string TimeRangeField { get; set; }

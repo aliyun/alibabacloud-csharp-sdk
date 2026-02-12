@@ -312,6 +312,26 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SuccessPolicy { get; set; }
 
         /// <summary>
+        /// <para>任务模板的 ID。指定后将基于模板创建作业，作业参数需符合模板约束规则。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tplxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public string TemplateId { get; set; }
+
+        /// <summary>
+        /// <para>指定使用的模板版本号，不传则使用模板默认版本。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("TemplateVersion")]
+        [Validation(Required=false)]
+        public int? TemplateVersion { get; set; }
+
+        /// <summary>
         /// <para>The folder in which the third-party Python library file requirements.txt is stored. Before the startup command specified by the UserCommand parameter is run on each node, DLC fetches the requirements.txt file from the folder and runs <c>pip install -r</c> to install the required package and library.</para>
         /// 
         /// <b>Example:</b>

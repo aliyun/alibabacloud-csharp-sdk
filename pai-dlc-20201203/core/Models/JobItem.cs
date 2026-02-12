@@ -503,6 +503,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public Dictionary<string, string> SystemEnvs { get; set; }
 
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public string TemplateId { get; set; }
+
+        [NameInMap("TemplateName")]
+        [Validation(Required=false)]
+        public string TemplateName { get; set; }
+
         /// <summary>
         /// <para>The tenant ID.</para>
         /// 

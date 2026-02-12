@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and compute resources of each node on which a job runs.</para>
+        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -178,6 +178,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 body["SuccessPolicy"] = request.SuccessPolicy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateVersion))
+            {
+                body["TemplateVersion"] = request.TemplateVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartyLibDir))
             {
                 body["ThirdpartyLibDir"] = request.ThirdpartyLibDir;
@@ -220,7 +228,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and compute resources of each node on which a job runs.</para>
+        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -313,6 +321,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 body["SuccessPolicy"] = request.SuccessPolicy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateVersion))
+            {
+                body["TemplateVersion"] = request.TemplateVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdpartyLibDir))
             {
                 body["ThirdpartyLibDir"] = request.ThirdpartyLibDir;
@@ -355,7 +371,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and compute resources of each node on which a job runs.</para>
+        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -379,7 +395,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and compute resources of each node on which a job runs.</para>
+        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3143,6 +3159,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["Tags"] = request.TagsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRangeField))
             {
                 query["TimeRangeField"] = request.TimeRangeField;
@@ -3326,6 +3346,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {
                 query["Tags"] = request.TagsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeRangeField))
             {

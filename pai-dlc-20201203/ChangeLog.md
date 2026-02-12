@@ -1,3 +1,9 @@
+2026-02-12 Version: 1.7.11
+- Update API CreateJob: add request parameters body.TemplateId.
+- Update API CreateJob: add request parameters body.TemplateVersion.
+- Update API ListJobs: add request parameters TemplateId.
+
+
 2026-02-09 Version: 1.7.10
 - Generated csharp 2020-12-03 for pai-dlc.
 
