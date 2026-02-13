@@ -244,6 +244,748 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>添加AISearch项目中的结构化元素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchResourceAddRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchResourceAddResponse
+        /// </returns>
+        public AISearchResourceAddResponse AISearchResourceAddWithOptions(AISearchResourceAddRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Data))
+            {
+                body["data"] = request.Data;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AISearchResourceAdd",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiSearch/resource/add",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AISearchResourceAddResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加AISearch项目中的结构化元素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchResourceAddRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchResourceAddResponse
+        /// </returns>
+        public async Task<AISearchResourceAddResponse> AISearchResourceAddWithOptionsAsync(AISearchResourceAddRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Data))
+            {
+                body["data"] = request.Data;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AISearchResourceAdd",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiSearch/resource/add",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AISearchResourceAddResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加AISearch项目中的结构化元素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchResourceAddRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchResourceAddResponse
+        /// </returns>
+        public AISearchResourceAddResponse AISearchResourceAdd(AISearchResourceAddRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AISearchResourceAddWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加AISearch项目中的结构化元素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchResourceAddRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchResourceAddResponse
+        /// </returns>
+        public async Task<AISearchResourceAddResponse> AISearchResourceAddAsync(AISearchResourceAddRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AISearchResourceAddWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除AISearch项目中的结构化元素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchResourceDeleteRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchResourceDeleteResponse
+        /// </returns>
+        public AISearchResourceDeleteResponse AISearchResourceDeleteWithOptions(AISearchResourceDeleteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["resourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AISearchResourceDelete",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiSearch/resource/delete",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AISearchResourceDeleteResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除AISearch项目中的结构化元素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchResourceDeleteRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchResourceDeleteResponse
+        /// </returns>
+        public async Task<AISearchResourceDeleteResponse> AISearchResourceDeleteWithOptionsAsync(AISearchResourceDeleteRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["resourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AISearchResourceDelete",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiSearch/resource/delete",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AISearchResourceDeleteResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除AISearch项目中的结构化元素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchResourceDeleteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchResourceDeleteResponse
+        /// </returns>
+        public AISearchResourceDeleteResponse AISearchResourceDelete(AISearchResourceDeleteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AISearchResourceDeleteWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除AISearch项目中的结构化元素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchResourceDeleteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchResourceDeleteResponse
+        /// </returns>
+        public async Task<AISearchResourceDeleteResponse> AISearchResourceDeleteAsync(AISearchResourceDeleteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AISearchResourceDeleteWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查找AISearch资源</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AISearchResourceGetListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchResourceGetListResponse
+        /// </returns>
+        public AISearchResourceGetListResponse AISearchResourceGetListWithOptions(AISearchResourceGetListRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AISearchResourceGetListShrinkRequest request = new AISearchResourceGetListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceIds))
+            {
+                request.ResourceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceIds, "resourceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["currentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsShrink))
+            {
+                query["resourceIds"] = request.ResourceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AISearchResourceGetList",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiSearch/resource/list",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AISearchResourceGetListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查找AISearch资源</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AISearchResourceGetListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchResourceGetListResponse
+        /// </returns>
+        public async Task<AISearchResourceGetListResponse> AISearchResourceGetListWithOptionsAsync(AISearchResourceGetListRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AISearchResourceGetListShrinkRequest request = new AISearchResourceGetListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceIds))
+            {
+                request.ResourceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceIds, "resourceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["currentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsShrink))
+            {
+                query["resourceIds"] = request.ResourceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AISearchResourceGetList",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiSearch/resource/list",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AISearchResourceGetListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查找AISearch资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchResourceGetListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchResourceGetListResponse
+        /// </returns>
+        public AISearchResourceGetListResponse AISearchResourceGetList(AISearchResourceGetListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AISearchResourceGetListWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查找AISearch资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchResourceGetListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchResourceGetListResponse
+        /// </returns>
+        public async Task<AISearchResourceGetListResponse> AISearchResourceGetListAsync(AISearchResourceGetListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AISearchResourceGetListWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改AISearch项目中的结构化元素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchResourceUpdateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchResourceUpdateResponse
+        /// </returns>
+        public AISearchResourceUpdateResponse AISearchResourceUpdateWithOptions(AISearchResourceUpdateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Data))
+            {
+                body["data"] = request.Data;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                body["resourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AISearchResourceUpdate",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiSearch/resource/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AISearchResourceUpdateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改AISearch项目中的结构化元素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchResourceUpdateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchResourceUpdateResponse
+        /// </returns>
+        public async Task<AISearchResourceUpdateResponse> AISearchResourceUpdateWithOptionsAsync(AISearchResourceUpdateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Data))
+            {
+                body["data"] = request.Data;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                body["resourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AISearchResourceUpdate",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiSearch/resource/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AISearchResourceUpdateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改AISearch项目中的结构化元素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchResourceUpdateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchResourceUpdateResponse
+        /// </returns>
+        public AISearchResourceUpdateResponse AISearchResourceUpdate(AISearchResourceUpdateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AISearchResourceUpdateWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改AISearch项目中的结构化元素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchResourceUpdateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchResourceUpdateResponse
+        /// </returns>
+        public async Task<AISearchResourceUpdateResponse> AISearchResourceUpdateAsync(AISearchResourceUpdateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AISearchResourceUpdateWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>aisearch问答接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchStreamRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchStreamResponse
+        /// </returns>
+        public AISearchStreamResponse AISearchStreamWithOptions(AISearchStreamRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderId))
+            {
+                body["folderId"] = request.FolderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                body["message"] = request.Message;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Question))
+            {
+                body["question"] = request.Question;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypeNeeded))
+            {
+                body["resourceTypeNeeded"] = request.ResourceTypeNeeded;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AISearchStream",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiSearch/searchStream",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AISearchStreamResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>aisearch问答接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchStreamRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchStreamResponse
+        /// </returns>
+        public async Task<AISearchStreamResponse> AISearchStreamWithOptionsAsync(AISearchStreamRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderId))
+            {
+                body["folderId"] = request.FolderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                body["message"] = request.Message;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Question))
+            {
+                body["question"] = request.Question;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypeNeeded))
+            {
+                body["resourceTypeNeeded"] = request.ResourceTypeNeeded;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AISearchStream",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aiSearch/searchStream",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AISearchStreamResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>aisearch问答接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchStreamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchStreamResponse
+        /// </returns>
+        public AISearchStreamResponse AISearchStream(AISearchStreamRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AISearchStreamWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>aisearch问答接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AISearchStreamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AISearchStreamResponse
+        /// </returns>
+        public async Task<AISearchStreamResponse> AISearchStreamAsync(AISearchStreamRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AISearchStreamWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建文件夹</para>
         /// </summary>
         /// 
@@ -1310,7 +2052,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Knowledge Base Q&amp;A</para>
+        /// <para>Knowledge Base Q\&amp;A</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1373,7 +2115,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Knowledge Base Q&amp;A</para>
+        /// <para>Knowledge Base Q\&amp;A</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1436,7 +2178,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Knowledge Base Q&amp;A</para>
+        /// <para>Knowledge Base Q\&amp;A</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1464,7 +2206,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Knowledge Base Q&amp;A</para>
+        /// <para>Knowledge Base Q\&amp;A</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1492,7 +2234,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Q&amp;A Window</para>
+        /// <para>Create Q\&amp;A Window</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1546,7 +2288,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Q&amp;A Window</para>
+        /// <para>Create Q\&amp;A Window</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1600,7 +2342,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Q&amp;A Window</para>
+        /// <para>Create Q\&amp;A Window</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1619,7 +2361,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Q&amp;A Window</para>
+        /// <para>Create Q\&amp;A Window</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2786,7 +3528,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Q&amp;A folder List</para>
+        /// <para>Get Q\&amp;A folder List</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2822,7 +3564,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Q&amp;A folder List</para>
+        /// <para>Get Q\&amp;A folder List</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2858,7 +3600,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Q&amp;A folder List</para>
+        /// <para>Get Q\&amp;A folder List</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2873,7 +3615,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Q&amp;A folder List</para>
+        /// <para>Get Q\&amp;A folder List</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3070,7 +3812,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Q&amp;A Session List</para>
+        /// <para>Get Q\&amp;A Session List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3128,7 +3870,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Q&amp;A Session List</para>
+        /// <para>Get Q\&amp;A Session List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3186,7 +3928,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Q&amp;A Session List</para>
+        /// <para>Get Q\&amp;A Session List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3205,7 +3947,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Q&amp;A Session List</para>
+        /// <para>Get Q\&amp;A Session List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4220,7 +4962,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>[Important] The api is no longer maintained, please use GetDocExtractionResult, GetVLExtractionResult to get the extraction results.</para>
+        /// <para>null null</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4266,7 +5008,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>[Important] The api is no longer maintained, please use GetDocExtractionResult, GetVLExtractionResult to get the extraction results.</para>
+        /// <para>null null</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4312,7 +5054,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>[Important] The api is no longer maintained, please use GetDocExtractionResult, GetVLExtractionResult to get the extraction results.</para>
+        /// <para>null null</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4331,7 +5073,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>[Important] The api is no longer maintained, please use GetDocExtractionResult, GetVLExtractionResult to get the extraction results.</para>
+        /// <para>null null</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8052,7 +8794,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>[Important] This api is no longer maintained, please use the Chat api.</para>
+        /// <para>null null</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8106,7 +8848,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>[Important] This api is no longer maintained, please use the Chat api.</para>
+        /// <para>null null</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8160,7 +8902,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>[Important] This api is no longer maintained, please use the Chat api.</para>
+        /// <para>null null</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8179,7 +8921,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>[Important] This api is no longer maintained, please use the Chat api.</para>
+        /// <para>null null</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9172,9 +9914,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>[Important] The api is no longer maintained, please use the following api: 
-        /// Document parsing using SubmitDocParsingTask. 
-        /// Document extraction using SubmitVLExtractionTask, SubmitDocExtractionTask.</para>
+        /// <para>The document parsing operation is used to extract the key content of a document and extract the key-value information from the document based on the preset key-value template. The document parsing operation is an asynchronous operation. You need to call the asynchronous submission service for document parsing and then call the GetDocumentAnalyzeResult operation to perform result polling. The asynchronous submission service supports two methods: local files and URL files. Call the SubmitDocumentAnalyzeJob operation to upload URL files. Call the SubmitDocumentAnalyzeJobAdvance operation to upload local files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9236,9 +9976,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>[Important] The api is no longer maintained, please use the following api: 
-        /// Document parsing using SubmitDocParsingTask. 
-        /// Document extraction using SubmitVLExtractionTask, SubmitDocExtractionTask.</para>
+        /// <para>The document parsing operation is used to extract the key content of a document and extract the key-value information from the document based on the preset key-value template. The document parsing operation is an asynchronous operation. You need to call the asynchronous submission service for document parsing and then call the GetDocumentAnalyzeResult operation to perform result polling. The asynchronous submission service supports two methods: local files and URL files. Call the SubmitDocumentAnalyzeJob operation to upload URL files. Call the SubmitDocumentAnalyzeJobAdvance operation to upload local files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9300,9 +10038,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>[Important] The api is no longer maintained, please use the following api: 
-        /// Document parsing using SubmitDocParsingTask. 
-        /// Document extraction using SubmitVLExtractionTask, SubmitDocExtractionTask.</para>
+        /// <para>The document parsing operation is used to extract the key content of a document and extract the key-value information from the document based on the preset key-value template. The document parsing operation is an asynchronous operation. You need to call the asynchronous submission service for document parsing and then call the GetDocumentAnalyzeResult operation to perform result polling. The asynchronous submission service supports two methods: local files and URL files. Call the SubmitDocumentAnalyzeJob operation to upload URL files. Call the SubmitDocumentAnalyzeJobAdvance operation to upload local files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9321,9 +10057,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>[Important] The api is no longer maintained, please use the following api: 
-        /// Document parsing using SubmitDocParsingTask. 
-        /// Document extraction using SubmitVLExtractionTask, SubmitDocExtractionTask.</para>
+        /// <para>The document parsing operation is used to extract the key content of a document and extract the key-value information from the document based on the preset key-value template. The document parsing operation is an asynchronous operation. You need to call the asynchronous submission service for document parsing and then call the GetDocumentAnalyzeResult operation to perform result polling. The asynchronous submission service supports two methods: local files and URL files. Call the SubmitDocumentAnalyzeJob operation to upload URL files. Call the SubmitDocumentAnalyzeJobAdvance operation to upload local files.</para>
         /// </summary>
         /// 
         /// <param name="request">

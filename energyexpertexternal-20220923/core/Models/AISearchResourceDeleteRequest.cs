@@ -8,26 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
-    public class ChatRefDocPostion : TeaModel {
+    public class AISearchResourceDeleteRequest : TeaModel {
         /// <summary>
-        /// <para>The x-coordinate of the layout.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>22</para>
+        /// <para>WzMGQZwB7nQEs3Qk3ajH</para>
         /// </summary>
-        [NameInMap("x")]
+        [NameInMap("resourceId")]
         [Validation(Required=false)]
-        public int? X { get; set; }
+        public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The y-coordinate of the layout.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>86</para>
+        /// <para>miniapp</para>
         /// </summary>
-        [NameInMap("y")]
+        [NameInMap("type")]
         [Validation(Required=false)]
-        public int? Y { get; set; }
+        public string Type { get; set; }
 
     }
 

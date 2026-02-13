@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class ChatDocumentPageNum : TeaModel {
+        /// <summary>
+        /// <para>Page numbers of related documents.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12</para>
+        /// </summary>
         [NameInMap("num")]
         [Validation(Required=false)]
         public int? Num { get; set; }
 
+        /// <summary>
+        /// <para>Location information of the document.</para>
+        /// </summary>
         [NameInMap("pos")]
         [Validation(Required=false)]
         public List<List<ChatRefDocPostion>> Pos { get; set; }
