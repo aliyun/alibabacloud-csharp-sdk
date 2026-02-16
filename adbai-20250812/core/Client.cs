@@ -839,6 +839,142 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>解锁具身智能平台</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LockEmbodiedAIPlatformRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LockEmbodiedAIPlatformResponse
+        /// </returns>
+        public LockEmbodiedAIPlatformResponse LockEmbodiedAIPlatformWithOptions(LockEmbodiedAIPlatformRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformName))
+            {
+                query["PlatformName"] = request.PlatformName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LockEmbodiedAIPlatform",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LockEmbodiedAIPlatformResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解锁具身智能平台</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LockEmbodiedAIPlatformRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LockEmbodiedAIPlatformResponse
+        /// </returns>
+        public async Task<LockEmbodiedAIPlatformResponse> LockEmbodiedAIPlatformWithOptionsAsync(LockEmbodiedAIPlatformRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformName))
+            {
+                query["PlatformName"] = request.PlatformName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LockEmbodiedAIPlatform",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LockEmbodiedAIPlatformResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解锁具身智能平台</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LockEmbodiedAIPlatformRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LockEmbodiedAIPlatformResponse
+        /// </returns>
+        public LockEmbodiedAIPlatformResponse LockEmbodiedAIPlatform(LockEmbodiedAIPlatformRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return LockEmbodiedAIPlatformWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解锁具身智能平台</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LockEmbodiedAIPlatformRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LockEmbodiedAIPlatformResponse
+        /// </returns>
+        public async Task<LockEmbodiedAIPlatformResponse> LockEmbodiedAIPlatformAsync(LockEmbodiedAIPlatformRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await LockEmbodiedAIPlatformWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>重置具身智能平台密码</para>
         /// </summary>
         /// 
@@ -979,6 +1115,142 @@ namespace AlibabaCloud.SDK.ADBAI20250812
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetEmbodiedAIPlatformPasswordWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解锁具身智能平台</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnlockEmbodiedAIPlatformRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockEmbodiedAIPlatformResponse
+        /// </returns>
+        public UnlockEmbodiedAIPlatformResponse UnlockEmbodiedAIPlatformWithOptions(UnlockEmbodiedAIPlatformRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformName))
+            {
+                query["PlatformName"] = request.PlatformName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnlockEmbodiedAIPlatform",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnlockEmbodiedAIPlatformResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解锁具身智能平台</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnlockEmbodiedAIPlatformRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockEmbodiedAIPlatformResponse
+        /// </returns>
+        public async Task<UnlockEmbodiedAIPlatformResponse> UnlockEmbodiedAIPlatformWithOptionsAsync(UnlockEmbodiedAIPlatformRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformName))
+            {
+                query["PlatformName"] = request.PlatformName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnlockEmbodiedAIPlatform",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnlockEmbodiedAIPlatformResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解锁具身智能平台</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnlockEmbodiedAIPlatformRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockEmbodiedAIPlatformResponse
+        /// </returns>
+        public UnlockEmbodiedAIPlatformResponse UnlockEmbodiedAIPlatform(UnlockEmbodiedAIPlatformRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UnlockEmbodiedAIPlatformWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解锁具身智能平台</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnlockEmbodiedAIPlatformRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockEmbodiedAIPlatformResponse
+        /// </returns>
+        public async Task<UnlockEmbodiedAIPlatformResponse> UnlockEmbodiedAIPlatformAsync(UnlockEmbodiedAIPlatformRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UnlockEmbodiedAIPlatformWithOptionsAsync(request, runtime);
         }
 
     }
