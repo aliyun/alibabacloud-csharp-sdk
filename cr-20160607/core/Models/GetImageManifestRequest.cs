@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20160607.Models
 {
-    public class GetImageManifestRequest : TeaModel {
+    public class GetImageManifestRequest : BaseModel {
         [NameInMap("SchemaVersion")]
         [Validation(Required=false)]
         public int? SchemaVersion { get; set; }

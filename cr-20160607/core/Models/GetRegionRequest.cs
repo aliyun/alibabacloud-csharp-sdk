@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20160607.Models
 {
-    public class GetRegionRequest : TeaModel {
+    public class GetRegionRequest : BaseModel {
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
