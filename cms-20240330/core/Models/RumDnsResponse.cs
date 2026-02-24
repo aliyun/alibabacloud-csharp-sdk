@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class RumDnsResponse : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rum</para>
+        /// </summary>
         [NameInMap("domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>&quot;&quot;</para>
+        /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public bool? Result { get; set; }

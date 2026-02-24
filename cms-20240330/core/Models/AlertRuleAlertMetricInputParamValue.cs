@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
     public class AlertRuleAlertMetricInputParamValue : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>paramName</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>paramValue</para>
         /// </summary>
         [NameInMap("value")]
         [Validation(Required=false)]

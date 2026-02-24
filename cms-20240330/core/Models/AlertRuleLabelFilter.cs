@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public Dictionary<string, string> Labels { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>AND</para>
+        /// </summary>
         [NameInMap("opt")]
         [Validation(Required=false)]
         public string Opt { get; set; }

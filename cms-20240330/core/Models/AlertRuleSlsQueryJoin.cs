@@ -9,26 +9,38 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class AlertRuleSlsQueryJoin : TeaModel {
+        /// <summary>
+        /// <para>List of connection conditions.</para>
+        /// </summary>
         [NameInMap("conditions")]
         [Validation(Required=false)]
         public List<AlertRuleSlsQueryJoinConditions> Conditions { get; set; }
         public class AlertRuleSlsQueryJoinConditions : TeaModel {
             /// <summary>
-            /// <para>条件的左操作参数，格式为$<query_idx>.&lt;结果集字段名&gt;</para>
+            /// <para>Left-hand operand of the condition, formatted as $<query_idx>.<result_set_field_name>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>$0.<b>topic</b></para>
             /// </summary>
             [NameInMap("firstField")]
             [Validation(Required=false)]
             public string FirstField { get; set; }
 
             /// <summary>
-            /// <para>&lt;, &gt;, ==, !=, &lt;=, &gt;=</para>
+            /// <para>Comparison operator; valid values: &lt;, &gt;, ==, !=, &lt;=, &gt;=.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>==</para>
             /// </summary>
             [NameInMap("oper")]
             [Validation(Required=false)]
             public string Oper { get; set; }
 
             /// <summary>
-            /// <para>条件的右操作参数，格式为$<query_idx>.&lt;结果集字段名&gt;</para>
+            /// <para>Right-hand operand of the condition, formatted as $<query_idx>.<result_set_field_name>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>$0.<b>topic</b></para>
             /// </summary>
             [NameInMap("secondField")]
             [Validation(Required=false)]
@@ -37,18 +49,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>集合操作类型。
-        ///   ● CrossJoin： 笛卡尔积
-        ///   ● FullJoin：全联
-        ///   ● InnerJoin：内联
-        ///   ● LeftExclude： 左斥
-        ///   ● RightExclude：右斥
-        ///   ● LeftJoin：左联
-        ///   ● RightJoin：右联
-        ///   ● NoJoin：不合并
-        ///   ● Concat： 拼接
-        ///   <a href="https://help.aliyun.com/zh/sls/user-guide/set-query-statistics-statement">https://help.aliyun.com/zh/sls/user-guide/set-query-statistics-statement</a></para>
+        /// <para>Set operation type.
+        /// CrossJoin: Cartesian product
+        /// FullJoin: Full outer join
+        /// InnerJoin: Inner join
+        /// LeftExclude: Left anti join
+        /// RightExclude: Right anti join
+        /// LeftJoin: Left outer join
+        /// RightJoin: Right outer join
+        /// NoJoin: No merge
+        /// Concat: Concatenation</para>
+        /// <para>See also: <a href="https://help.aliyun.com/zh/sls/user-guide/set-query-statistics-statement">https://help.aliyun.com/zh/sls/user-guide/set-query-statistics-statement</a></para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CrossJoin</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

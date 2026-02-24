@@ -17,14 +17,26 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Extend { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2025-03-11T08:21:58.789Z</para>
+        /// </summary>
         [NameInMap("gmtCreate")]
         [Validation(Required=false)]
         public string GmtCreate { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2025-03-11T08:21:58.789Z</para>
+        /// </summary>
         [NameInMap("gmtModified")]
         [Validation(Required=false)]
         public string GmtModified { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>group-12345</para>
+        /// </summary>
         [NameInMap("identifier")]
         [Validation(Required=false)]
         public string Identifier { get; set; }
@@ -33,6 +45,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dingtalk</para>
+        /// </summary>
         [NameInMap("source")]
         [Validation(Required=false)]
         public string Source { get; set; }

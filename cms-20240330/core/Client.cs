@@ -1459,6 +1459,176 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建技能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDigitalEmployeeSkillRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDigitalEmployeeSkillResponse
+        /// </returns>
+        public CreateDigitalEmployeeSkillResponse CreateDigitalEmployeeSkillWithOptions(string name, CreateDigitalEmployeeSkillRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["displayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Files))
+            {
+                body["files"] = request.Files;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                body["remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillName))
+            {
+                body["skillName"] = request.SkillName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDigitalEmployeeSkill",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/skill",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDigitalEmployeeSkillResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建技能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDigitalEmployeeSkillRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDigitalEmployeeSkillResponse
+        /// </returns>
+        public async Task<CreateDigitalEmployeeSkillResponse> CreateDigitalEmployeeSkillWithOptionsAsync(string name, CreateDigitalEmployeeSkillRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["displayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Files))
+            {
+                body["files"] = request.Files;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                body["remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillName))
+            {
+                body["skillName"] = request.SkillName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDigitalEmployeeSkill",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/skill",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDigitalEmployeeSkillResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建技能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDigitalEmployeeSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDigitalEmployeeSkillResponse
+        /// </returns>
+        public CreateDigitalEmployeeSkillResponse CreateDigitalEmployeeSkill(string name, CreateDigitalEmployeeSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateDigitalEmployeeSkillWithOptions(name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建技能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDigitalEmployeeSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDigitalEmployeeSkillResponse
+        /// </returns>
+        public async Task<CreateDigitalEmployeeSkillResponse> CreateDigitalEmployeeSkillAsync(string name, CreateDigitalEmployeeSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateDigitalEmployeeSkillWithOptionsAsync(name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Create storage related to EntityStore</para>
         /// </summary>
         /// 
@@ -3755,6 +3925,108 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteDigitalEmployeeWithOptionsAsync(name, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除技能</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDigitalEmployeeSkillResponse
+        /// </returns>
+        public DeleteDigitalEmployeeSkillResponse DeleteDigitalEmployeeSkillWithOptions(string name, string skillName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDigitalEmployeeSkill",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/skill/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDigitalEmployeeSkillResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除技能</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDigitalEmployeeSkillResponse
+        /// </returns>
+        public async Task<DeleteDigitalEmployeeSkillResponse> DeleteDigitalEmployeeSkillWithOptionsAsync(string name, string skillName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDigitalEmployeeSkill",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/skill/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDigitalEmployeeSkillResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除技能</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteDigitalEmployeeSkillResponse
+        /// </returns>
+        public DeleteDigitalEmployeeSkillResponse DeleteDigitalEmployeeSkill(string name, string skillName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteDigitalEmployeeSkillWithOptions(name, skillName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除技能</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteDigitalEmployeeSkillResponse
+        /// </returns>
+        public async Task<DeleteDigitalEmployeeSkillResponse> DeleteDigitalEmployeeSkillAsync(string name, string skillName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteDigitalEmployeeSkillWithOptionsAsync(name, skillName, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6309,6 +6581,136 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetDigitalEmployeeWithOptionsAsync(name, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取技能详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDigitalEmployeeSkillRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDigitalEmployeeSkillResponse
+        /// </returns>
+        public GetDigitalEmployeeSkillResponse GetDigitalEmployeeSkillWithOptions(string name, string skillName, GetDigitalEmployeeSkillRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDigitalEmployeeSkill",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/skill/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDigitalEmployeeSkillResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取技能详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDigitalEmployeeSkillRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDigitalEmployeeSkillResponse
+        /// </returns>
+        public async Task<GetDigitalEmployeeSkillResponse> GetDigitalEmployeeSkillWithOptionsAsync(string name, string skillName, GetDigitalEmployeeSkillRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDigitalEmployeeSkill",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/skill/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDigitalEmployeeSkillResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取技能详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDigitalEmployeeSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDigitalEmployeeSkillResponse
+        /// </returns>
+        public GetDigitalEmployeeSkillResponse GetDigitalEmployeeSkill(string name, string skillName, GetDigitalEmployeeSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetDigitalEmployeeSkillWithOptions(name, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取技能详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDigitalEmployeeSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDigitalEmployeeSkillResponse
+        /// </returns>
+        public async Task<GetDigitalEmployeeSkillResponse> GetDigitalEmployeeSkillAsync(string name, string skillName, GetDigitalEmployeeSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetDigitalEmployeeSkillWithOptionsAsync(name, skillName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9189,6 +9591,254 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListBizTracesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出技能版本</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDigitalEmployeeSkillVersionsResponse
+        /// </returns>
+        public ListDigitalEmployeeSkillVersionsResponse ListDigitalEmployeeSkillVersionsWithOptions(string name, string skillName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDigitalEmployeeSkillVersions",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/skill/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/versions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDigitalEmployeeSkillVersionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出技能版本</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDigitalEmployeeSkillVersionsResponse
+        /// </returns>
+        public async Task<ListDigitalEmployeeSkillVersionsResponse> ListDigitalEmployeeSkillVersionsWithOptionsAsync(string name, string skillName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDigitalEmployeeSkillVersions",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/skill/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/versions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDigitalEmployeeSkillVersionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出技能版本</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListDigitalEmployeeSkillVersionsResponse
+        /// </returns>
+        public ListDigitalEmployeeSkillVersionsResponse ListDigitalEmployeeSkillVersions(string name, string skillName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListDigitalEmployeeSkillVersionsWithOptions(name, skillName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出技能版本</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListDigitalEmployeeSkillVersionsResponse
+        /// </returns>
+        public async Task<ListDigitalEmployeeSkillVersionsResponse> ListDigitalEmployeeSkillVersionsAsync(string name, string skillName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListDigitalEmployeeSkillVersionsWithOptionsAsync(name, skillName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出技能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDigitalEmployeeSkillsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDigitalEmployeeSkillsResponse
+        /// </returns>
+        public ListDigitalEmployeeSkillsResponse ListDigitalEmployeeSkillsWithOptions(string name, ListDigitalEmployeeSkillsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillName))
+            {
+                query["skillName"] = request.SkillName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDigitalEmployeeSkills",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/skills",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDigitalEmployeeSkillsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出技能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDigitalEmployeeSkillsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDigitalEmployeeSkillsResponse
+        /// </returns>
+        public async Task<ListDigitalEmployeeSkillsResponse> ListDigitalEmployeeSkillsWithOptionsAsync(string name, ListDigitalEmployeeSkillsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillName))
+            {
+                query["skillName"] = request.SkillName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDigitalEmployeeSkills",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/skills",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDigitalEmployeeSkillsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出技能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDigitalEmployeeSkillsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDigitalEmployeeSkillsResponse
+        /// </returns>
+        public ListDigitalEmployeeSkillsResponse ListDigitalEmployeeSkills(string name, ListDigitalEmployeeSkillsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListDigitalEmployeeSkillsWithOptions(name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出技能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDigitalEmployeeSkillsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDigitalEmployeeSkillsResponse
+        /// </returns>
+        public async Task<ListDigitalEmployeeSkillsResponse> ListDigitalEmployeeSkillsAsync(string name, ListDigitalEmployeeSkillsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListDigitalEmployeeSkillsWithOptionsAsync(name, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13179,7 +13829,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Webhook</para>
+        /// <para>修改已存在的告警 Webhook 通知配置。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13245,7 +13895,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Webhook</para>
+        /// <para>修改已存在的告警 Webhook 通知配置。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13311,7 +13961,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Webhook</para>
+        /// <para>修改已存在的告警 Webhook 通知配置。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13330,7 +13980,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Webhook</para>
+        /// <para>修改已存在的告警 Webhook 通知配置。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13665,6 +14315,168 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新技能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDigitalEmployeeSkillRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDigitalEmployeeSkillResponse
+        /// </returns>
+        public UpdateDigitalEmployeeSkillResponse UpdateDigitalEmployeeSkillWithOptions(string name, string skillName, UpdateDigitalEmployeeSkillRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["displayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Files))
+            {
+                body["files"] = request.Files;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                body["remark"] = request.Remark;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDigitalEmployeeSkill",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/skill/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDigitalEmployeeSkillResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新技能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDigitalEmployeeSkillRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDigitalEmployeeSkillResponse
+        /// </returns>
+        public async Task<UpdateDigitalEmployeeSkillResponse> UpdateDigitalEmployeeSkillWithOptionsAsync(string name, string skillName, UpdateDigitalEmployeeSkillRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["displayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Files))
+            {
+                body["files"] = request.Files;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                body["remark"] = request.Remark;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDigitalEmployeeSkill",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/skill/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDigitalEmployeeSkillResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新技能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDigitalEmployeeSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDigitalEmployeeSkillResponse
+        /// </returns>
+        public UpdateDigitalEmployeeSkillResponse UpdateDigitalEmployeeSkill(string name, string skillName, UpdateDigitalEmployeeSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateDigitalEmployeeSkillWithOptions(name, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新技能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDigitalEmployeeSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDigitalEmployeeSkillResponse
+        /// </returns>
+        public async Task<UpdateDigitalEmployeeSkillResponse> UpdateDigitalEmployeeSkillAsync(string name, string skillName, UpdateDigitalEmployeeSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateDigitalEmployeeSkillWithOptionsAsync(name, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Update the specified policy</para>
         /// </summary>
         /// 
@@ -13819,7 +14631,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新通知策略</para>
+        /// <para>修改已存在的告警通知策略</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13866,7 +14678,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新通知策略</para>
+        /// <para>修改已存在的告警通知策略</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13913,7 +14725,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新通知策略</para>
+        /// <para>修改已存在的告警通知策略</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13932,7 +14744,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新通知策略</para>
+        /// <para>修改已存在的告警通知策略</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14663,7 +15475,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新订阅</para>
+        /// <para>更新一个已存在的订阅配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14710,7 +15522,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新订阅</para>
+        /// <para>更新一个已存在的订阅配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14757,7 +15569,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新订阅</para>
+        /// <para>更新一个已存在的订阅配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14776,7 +15588,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新订阅</para>
+        /// <para>更新一个已存在的订阅配置</para>
         /// </summary>
         /// 
         /// <param name="request">
