@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CreateRemediationRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <c>token</c> can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token to ensure the idempotence of the request. The token must be unique for each request. The <c>ClientToken</c> parameter contains only ASCII characters and must not exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The rule ID.</para>
-        /// <para>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,12 +32,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ConfigRuleId { get; set; }
 
         /// <summary>
-        /// <para>The execution mode of the remediation template. Valid values:</para>
+        /// <para>The execution mode of the remediation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NON_EXECUTION: The remediation template is not executed.</description></item>
-        /// <item><description>AUTO_EXECUTION: The remediation template is automatically executed.</description></item>
-        /// <item><description>MANUAL_EXECUTION: The remediation template is manually executed.</description></item>
-        /// <item><description>NOT_CONFIG: The execution mode is not specified.</description></item>
+        /// <item><description><para>NON_EXECUTION: The remediation is not executed.</para>
+        /// </description></item>
+        /// <item><description><para>AUTO_EXECUTION: The remediation is automatically executed.</para>
+        /// </description></item>
+        /// <item><description><para>MANUAL_EXECUTION: The remediation is manually executed.</para>
+        /// </description></item>
+        /// <item><description><para>NOT_CONFIG: The execution mode is not set.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,8 +53,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string InvokeType { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the remediation template.</para>
-        /// <para>For more information about how to obtain the remediation template configuration, see the <c>TemplateDefinition</c> response parameter provided in <a href="https://help.aliyun.com/document_detail/416781.html">ListRemediationTemplates</a>.</para>
+        /// <para>The remediation parameters.</para>
+        /// <para>For more information, see the <c>TemplateDefinition</c> parameter in <a href="https://help.aliyun.com/document_detail/416781.html">ListRemediationTemplates</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,8 +70,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>The ID of the remediation template.</para>
         /// <list type="bullet">
-        /// <item><description>If you set the <c>RemediationType</c> parameter to <c>OOS</c>, set this parameter to the identifier of the relevant official remediation template, such as <c>ACS-OSS-PutBucketAcl</c>. For more information about how to obtain the remediation template identifier, see <a href="https://help.aliyun.com/document_detail/416781.html">ListRemediationTemplates</a>.</description></item>
-        /// <item><description>If you set the <c>RemediationType</c> parameter to <c>FC</c>, set this parameter to the Alibaba Cloud Resource Name (ARN) of the relevant Function Compute resource, such as <c>acs:fc:cn-hangzhou:100931896542****:services/ConfigService.LATEST/functions/test-php</c>.</description></item>
+        /// <item><description><para>If <c>RemediationType</c> is set to <c>OOS</c>, set this parameter to <c>ACS-OSS-PutBucketAcl</c>. For more information, see <a href="https://help.aliyun.com/document_detail/416781.html">ListRemediationTemplates</a>.</para>
+        /// </description></item>
+        /// <item><description><para>If <c>RemediationType</c> is set to <c>FC</c>, set this parameter to the Alibaba Cloud Resource Name (ARN) of the function in Function Compute. Example: <c>acs:fc:cn-hangzhou:100931896542****:services/ConfigService.LATEST/functions/test-php</c>.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -79,10 +85,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string RemediationTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The type of the remediation template. Valid values:</para>
+        /// <para>The type of the remediation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OOS: Operation Orchestration Service (official remediation)</description></item>
-        /// <item><description>FC: Function Compute (custom remediation)</description></item>
+        /// <item><description><para>OOS: template-based remediation using OOS.</para>
+        /// </description></item>
+        /// <item><description><para>FC: custom remediation using FC.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -94,11 +102,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string RemediationType { get; set; }
 
         /// <summary>
-        /// <para>The source of remediation. Valid values:</para>
+        /// <para>The source of the remediation template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ALIYUN (default): official template.</description></item>
-        /// <item><description>CUSTOM: custom template.</description></item>
-        /// <item><description>NONE: none.</description></item>
+        /// <item><description><para>ALIYUN (default): an official template.</para>
+        /// </description></item>
+        /// <item><description><para>CUSTOM: a custom template. This value is required for custom FC remediations.</para>
+        /// </description></item>
+        /// <item><description><para>NONE: no source.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

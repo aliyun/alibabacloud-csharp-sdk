@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class DeleteReportTemplateResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the report template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>crt-xxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ReportTemplateId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DE9FFFE5-FCAD-4B24-9546-BF49273C562B</para>
         /// </summary>

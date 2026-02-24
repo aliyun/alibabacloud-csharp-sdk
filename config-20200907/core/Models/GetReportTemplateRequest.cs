@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetReportTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>ID of the report template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

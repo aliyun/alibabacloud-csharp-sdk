@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class DescribeDiscoveredResourceBatchRequest : TeaModel {
         /// <summary>
+        /// <para>The regions where the resources reside. Separate multiple regions with commas (<c>,</c>).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai,cn-hongkong,cn-zhangjiakou,cn-hangzhou</para>
         /// </summary>
@@ -18,16 +20,20 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string Regions { get; set; }
 
         /// <summary>
+        /// <para>The resource IDs. Separate multiple resource IDs with commas (<c>,</c>).</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>r-wz998f311e21exxx,r-wz97f4a734789xxx</para>
+        /// <para>r-wz998f311e21****,r-wz97f4a73478****</para>
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public string ResourceIds { get; set; }
 
         /// <summary>
+        /// <para>The resource types. Separate multiple resource types with commas (<c>,</c>).</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>ACS::ECS::Disk</para>
+        /// <para>ACS::ECS::Disk,ACS::ECS::Instance</para>
         /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]

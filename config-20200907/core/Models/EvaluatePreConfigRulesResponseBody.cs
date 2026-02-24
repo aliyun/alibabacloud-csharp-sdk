@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the compliance evaluation result.</para>
+        /// <para>The array that contains the compliance evaluation results.</para>
         /// </summary>
         [NameInMap("ResourceEvaluations")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// <para>The logical ID of the resource.</para>
             /// <remarks>
-            /// <para> If the ResourceLogicalId request parameter is left empty, the value of the ResourceLogicalId response parameter is generated based on the value of the <c>ResourceProperties</c> parameter.</para>
+            /// <para>If the request parameter is empty, it is automatically generated based on the Base64 value of <c>ResourceProperties</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -69,9 +69,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// <para>The compliance type of the resource that was evaluated by using the evaluation rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>COMPLIANT: The resource was evaluated as compliant.</description></item>
-                /// <item><description>NON_COMPLIANT: The resource was evaluated as incompliant.</description></item>
-                /// <item><description>NOT_APPLICABLE: The evaluation rule does not apply to the resource.</description></item>
+                /// <item><description><para>COMPLIANT: The resource is evaluated as compliant.</para>
+                /// </description></item>
+                /// <item><description><para>NON_COMPLIANT: The resource is evaluated as non-compliant.</para>
+                /// </description></item>
+                /// <item><description><para>NOT_APPLICABLE: The rule does not apply to the resource.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -82,7 +85,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ComplianceType { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the topic that describes how the managed rule remediates the incompliant configurations.</para>
+                /// <para>The URL of the topic that describes how the managed rule remediates the non-compliant configurations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.aliyundoc.com">https://example.aliyundoc.com</a></para>
@@ -92,7 +95,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string HelpUrl { get; set; }
 
                 /// <summary>
-                /// <para>The identifier of the evaluation rule.</para>
+                /// <para>The identifier of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs-instance-deletion-protection-enabled</para>

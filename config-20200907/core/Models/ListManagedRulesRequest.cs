@@ -10,23 +10,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListManagedRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The scope for filtering managed rules allows you to filter out managed rules without resource coverage. The possible values are:</para>
-        /// <list type="bullet">
-        /// <item><description><para>ALL: All rules.</para>
-        /// </description></item>
-        /// <item><description><para>UNCOVERED_RESOURCE: Filters managed rules where some resources are not covered.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The scope of the filter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ALL</para>
+        /// <para>托管规则筛选范围，可以筛选无资源覆盖的托管规则。取值：</para>
+        /// <list type="bullet">
+        /// <item><description>ALL 全部</description></item>
+        /// <item><description>UNCOVERED_RESOURCE 筛选有资源未覆盖的托管规则</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("FilterType")]
         [Validation(Required=false)]
         public string FilterType { get; set; }
 
         /// <summary>
-        /// <para>The keyword of the managed rule.</para>
+        /// <para>The keyword of the rule template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CDN</para>
@@ -36,8 +34,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return.</para>
-        /// <para>Pages start from page 1. Default value: 1</para>
+        /// <para>The page number.</para>
+        /// <para>The value must be greater than or equal to 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -47,8 +45,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</para>
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -58,7 +56,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the resources to be evaluated based on the rule.</para>
+        /// <para>The resource type that is evaluated by the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACS::ECS::Instance</para>
@@ -68,11 +66,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceTypes { get; set; }
 
         /// <summary>
-        /// <para>The risk level of the managed rule. Valid values:</para>
+        /// <para>The risk level of the rule template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: high</description></item>
-        /// <item><description>2: medium</description></item>
-        /// <item><description>3: low</description></item>
+        /// <item><description><para>1: high</para>
+        /// </description></item>
+        /// <item><description><para>2: medium</para>
+        /// </description></item>
+        /// <item><description><para>3: low</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

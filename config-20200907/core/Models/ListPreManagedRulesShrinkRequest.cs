@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListPreManagedRulesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
-        /// <para>Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number.</para>
+        /// <para>The value starts from 1. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The number of entries to return on each page.</para>
-        /// <para>Default value: 10.</para>
+        /// <para>The default value is 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource.</para>
+        /// <para>A list of resource types.</para>
         /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]

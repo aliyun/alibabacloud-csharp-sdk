@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// <para>The SQL query statement.</para>
+        /// <para>The SQL search statement.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

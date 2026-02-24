@@ -39,9 +39,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// <para>The risk level of the resources that are not compliant with the rules. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: high risk level.</description></item>
-            /// <item><description>2: medium risk level.</description></item>
-            /// <item><description>3: low risk level.</description></item>
+            /// <item><description><para>1: high risk level.</para>
+            /// </description></item>
+            /// <item><description><para>2: medium risk level.</para>
+            /// </description></item>
+            /// <item><description><para>3: low risk level.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetManagedRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the managed rule.</para>
+        /// <para>The details of the rule template.</para>
         /// </summary>
         [NameInMap("ManagedRule")]
         [Validation(Required=false)]
         public GetManagedRuleResponseBodyManagedRule ManagedRule { get; set; }
         public class GetManagedRuleResponseBodyManagedRule : TeaModel {
             /// <summary>
-            /// <para>The details of the required input parameters for the managed rule.</para>
+            /// <para>The information about the required input parameters for the rule template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -27,27 +27,27 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public Dictionary<string, object> CompulsoryInputParameterDetails { get; set; }
 
             /// <summary>
-            /// <para>The name of the managed rule.</para>
+            /// <para>The name of the rule template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cdn-domain-https-enabled</para>
+            /// <para>CDN域名开启HTTPS加密</para>
             /// </summary>
             [NameInMap("ConfigRuleName")]
             [Validation(Required=false)]
             public string ConfigRuleName { get; set; }
 
             /// <summary>
-            /// <para>The description of the managed rule.</para>
+            /// <para>The description of the rule template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>If HTTPS encryption is enabled for the CDN domain name, the configuration is considered compliant.</para>
+            /// <para>CDN域名开启HTTPS协议加密，视为“合规”。</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The URL of the topic that provides guidance on remediation for the managed rule.</para>
+            /// <para>The URL of the document that provides guidance on how to fix the issue.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.aliyundoc.com">https://example.aliyundoc.com</a></para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string HelpUrls { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the managed rule.</para>
+            /// <para>The identifier of the rule template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cdn-domain-https-enabled</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string Identifier { get; set; }
 
             /// <summary>
-            /// <para>The tags of the managed rule.</para>
+            /// <para>The labels of the rule template.</para>
             /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public List<string> Labels { get; set; }
 
             /// <summary>
-            /// <para>The details of the optional input parameters for the managed rule.</para>
+            /// <para>The information about the optional input parameters for the rule template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -84,11 +84,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public Dictionary<string, object> OptionalInputParameterDetails { get; set; }
 
             /// <summary>
-            /// <para>The risk level of the managed rule. Valid values:</para>
+            /// <para>The risk level of the rule template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: high</description></item>
-            /// <item><description>2: medium</description></item>
-            /// <item><description>3: low</description></item>
+            /// <item><description><para>1: high risk.</para>
+            /// </description></item>
+            /// <item><description><para>2: medium risk.</para>
+            /// </description></item>
+            /// <item><description><para>3: low risk.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,14 +102,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The effective scope of the managed rule.</para>
+            /// <para>The effective scope of the rule template.</para>
             /// </summary>
             [NameInMap("Scope")]
             [Validation(Required=false)]
             public GetManagedRuleResponseBodyManagedRuleScope Scope { get; set; }
             public class GetManagedRuleResponseBodyManagedRuleScope : TeaModel {
                 /// <summary>
-                /// <para>The types of resources to which the managed rule applies.</para>
+                /// <para>The resource types for which the rule template is effective.</para>
                 /// </summary>
                 [NameInMap("ComplianceResourceTypes")]
                 [Validation(Required=false)]
@@ -115,20 +118,25 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The information about the trigger type of the managed rule.</para>
+            /// <para>The trigger methods for the rule.</para>
             /// </summary>
             [NameInMap("SourceDetails")]
             [Validation(Required=false)]
             public List<GetManagedRuleResponseBodyManagedRuleSourceDetails> SourceDetails { get; set; }
             public class GetManagedRuleResponseBodyManagedRuleSourceDetails : TeaModel {
                 /// <summary>
-                /// <para>The interval at which the rule is triggered. Valid values: Valid values:</para>
+                /// <para>The execution period of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>One_Hour</description></item>
-                /// <item><description>Three_Hours</description></item>
-                /// <item><description>Six_Hours</description></item>
-                /// <item><description>Twelve_Hours</description></item>
-                /// <item><description>TwentyFour_Hours</description></item>
+                /// <item><description><para>One_Hour: 1 hour.</para>
+                /// </description></item>
+                /// <item><description><para>Three_Hours: 3 hours.</para>
+                /// </description></item>
+                /// <item><description><para>Six_Hours: 6 hours.</para>
+                /// </description></item>
+                /// <item><description><para>Twelve_Hours: 12 hours.</para>
+                /// </description></item>
+                /// <item><description><para>TwentyFour_Hours: 24 hours.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -141,8 +149,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// <para>The trigger type of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</description></item>
-                /// <item><description>ScheduledNotification: The rule is periodically triggered.</description></item>
+                /// <item><description><para>ConfigurationItemChangeNotification: The rule is triggered by a configuration change.</para>
+                /// </description></item>
+                /// <item><description><para>ScheduledNotification: The rule is triggered periodically.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -157,7 +167,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7E6DDC09-87C1-5310-A924-3491EAAE6F90</para>

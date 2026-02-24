@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListDiscoveredResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the resources.</para>
+        /// <para>The list of resources.</para>
         /// </summary>
         [NameInMap("DiscoveredResourceProfiles")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? AccountId { get; set; }
 
                 /// <summary>
-                /// <para>The zone ID.</para>
+                /// <para>The availability zone of the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-h</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the resource was created. Unit: milliseconds.</para>
+                /// <para>The time when the resource was created. This is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1618675206000</para>
@@ -66,8 +66,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// <para>The status of the resource. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: The resource is deleted.</description></item>
-                /// <item><description>1: The resource is retained.</description></item>
+                /// <item><description><para>0: Deleted.</para>
+                /// </description></item>
+                /// <item><description><para>1: Active.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -78,6 +80,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public int? ResourceDeleted { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the resource group to which the resource belongs. Example: rg-acfmvoh45rhxxxx</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -111,10 +114,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ResourceName { get; set; }
 
                 /// <summary>
-                /// <para>The status of the resource. The value of this parameter varies based on the resource type and may be empty. Examples:</para>
+                /// <para>The status of the resource. The status is defined by the corresponding Alibaba Cloud service. This parameter can be empty. For example:</para>
                 /// <list type="bullet">
-                /// <item><description>If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</description></item>
-                /// <item><description>If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.</description></item>
+                /// <item><description><para>If the resource type is ACS::ECS::Instance, the resource is stateful. The value can be Running or Stopped.</para>
+                /// </description></item>
+                /// <item><description><para>If the resource type is ACS::OSS::Bucket, the resource is stateless. The value is empty.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -125,7 +130,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ResourceStatus { get; set; }
 
                 /// <summary>
-                /// <para>The type of the resource.</para>
+                /// <para>The resource type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ACS::ECS::NetworkInterface</para>
@@ -145,7 +150,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Tags { get; set; }
 
                 /// <summary>
-                /// <para>The time when the resource was last updated. The value must be a timestamp in milliseconds.</para>
+                /// <para>The time when the resource was last updated. This is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1722441600000</para>
@@ -155,6 +160,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? UpdateTime { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the vSwitch to which the resource belongs. Multiple vSwitch IDs are separated by commas (,). An empty string (&quot;&quot;) is returned if the resource does not belong to a vSwitch.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -178,6 +184,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? Version { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the virtual private cloud (VPC) to which the resource belongs. An empty string (&quot;&quot;) is returned if the resource does not belong to a VPC.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -203,10 +210,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+            /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>161259599160****</para>
+            /// <para>IWBjqMYSy0is7zSMGu16****</para>
             /// </summary>
             [NameInMap("NextToken")]
             [Validation(Required=false)]

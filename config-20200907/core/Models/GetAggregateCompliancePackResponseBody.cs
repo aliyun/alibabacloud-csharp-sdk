@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateCompliancePackResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the compliance package.</para>
+        /// <para>The details of the compliance pack.</para>
         /// </summary>
         [NameInMap("CompliancePack")]
         [Validation(Required=false)]
         public GetAggregateCompliancePackResponseBodyCompliancePack CompliancePack { get; set; }
         public class GetAggregateCompliancePackResponseBodyCompliancePack : TeaModel {
             /// <summary>
-            /// <para>The ID of the management account to which the compliance package belongs.</para>
+            /// <para>The ID of the management account to which the compliance pack belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100931896542****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string AggregatorId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the compliance package.</para>
+            /// <para>The ID of the compliance pack.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cp-fdc8626622af00f9****</para>
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string CompliancePackId { get; set; }
 
             /// <summary>
-            /// <para>The name of the compliance package.</para>
+            /// <para>The name of the compliance pack.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The name of the compliance package.</para>
+            /// <para>等保三级预检合规包</para>
             /// </summary>
             [NameInMap("CompliancePackName")]
             [Validation(Required=false)]
             public string CompliancePackName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the compliance package template.</para>
+            /// <para>The ID of the compliance pack template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ct-5f26ff4e06a300c4****</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string CompliancePackTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The rules in the compliance package.</para>
+            /// <para>The list of rules in the compliance pack.</para>
             /// </summary>
             [NameInMap("ConfigRules")]
             [Validation(Required=false)]
             public List<GetAggregateCompliancePackResponseBodyCompliancePackConfigRules> ConfigRules { get; set; }
             public class GetAggregateCompliancePackResponseBodyCompliancePackConfigRules : TeaModel {
                 /// <summary>
-                /// <para>The rule ID.</para>
+                /// <para>The ID of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cr-a260626622af0005****</para>
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <para>The name of the rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The name of the rule.</para>
+                /// <para>弹性IP实例带宽满足最低要求</para>
                 /// </summary>
                 [NameInMap("ConfigRuleName")]
                 [Validation(Required=false)]
                 public string ConfigRuleName { get; set; }
 
                 /// <summary>
-                /// <para>The details of the input parameter of the rule.</para>
+                /// <para>The input parameters of the rule.</para>
                 /// </summary>
                 [NameInMap("ConfigRuleParameters")]
                 [Validation(Required=false)]
@@ -121,10 +121,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public string ParameterValue { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the input parameter was required. Valid values:</para>
+                    /// <para>Indicates whether the input parameter is required. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>true</description></item>
-                    /// <item><description>false</description></item>
+                    /// <item><description><para>true: The input parameter is required.</para>
+                    /// </description></item>
+                    /// <item><description><para>false: The input parameter is not required.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -140,14 +142,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <para>The description of the rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The description of the rule.</para>
+                /// <para>弹性IP实例可用带宽大于等于指定参数值，视为“合规”。默认值：10 MB。</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the rule template.</para>
+                /// <para>The identifier of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eip-bandwidth-limit</para>
@@ -157,7 +159,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ManagedRuleIdentifier { get; set; }
 
                 /// <summary>
-                /// <para>The type of the resource evaluated based on the rule. Multiple resource types are separated with commas (,).</para>
+                /// <para>The types of the resources that are evaluated by the rule. Separate multiple resource types with commas (,).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ACS::EIP::EipAddress</para>
@@ -167,11 +169,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ResourceTypesScope { get; set; }
 
                 /// <summary>
-                /// <para>The risk level of the resources that do not comply with the rule. Valid values:</para>
+                /// <para>The risk level of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: high</description></item>
-                /// <item><description>2: medium</description></item>
-                /// <item><description>3: low</description></item>
+                /// <item><description><para>1: high</para>
+                /// </description></item>
+                /// <item><description><para>2: medium</para>
+                /// </description></item>
+                /// <item><description><para>3: low</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -184,7 +189,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The timestamp when the compliance package was created. Unit: milliseconds.</para>
+            /// <para>The timestamp when the compliance pack was created. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1624243657000</para>
@@ -194,21 +199,24 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The description of the compliance package.</para>
+            /// <para>The description of the compliance pack.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The description of the compliance package.</para>
+            /// <para>基于等保2.0三级标准，提供持续检测合规性的建议模板，帮助您提前自检并修复问题，以便快速通过正式检测。</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</para>
+            /// <para>The risk level of the compliance pack. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: high</description></item>
-            /// <item><description>2: medium</description></item>
-            /// <item><description>3: low</description></item>
+            /// <item><description><para>1: high</para>
+            /// </description></item>
+            /// <item><description><para>2: medium</para>
+            /// </description></item>
+            /// <item><description><para>3: low</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -219,14 +227,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The evaluation scope of the compliance package.</para>
+            /// <para>The evaluation scope of the compliance pack.</para>
             /// </summary>
             [NameInMap("Scope")]
             [Validation(Required=false)]
             public GetAggregateCompliancePackResponseBodyCompliancePackScope Scope { get; set; }
             public class GetAggregateCompliancePackResponseBodyCompliancePackScope : TeaModel {
                 /// <summary>
-                /// <para>The IDs of regions that are excluded. Separate multiple region IDs with commas (,).</para>
+                /// <para>The IDs of the regions to exclude. Separate multiple region IDs with commas (,).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -236,7 +244,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ExcludeRegionIdsScope { get; set; }
 
                 /// <summary>
-                /// <para>The IDs of the resource groups whose resources you do not want to evaluate by using the compliance package. Separate multiple resource group IDs with commas (,).</para>
+                /// <para>The IDs of the resource groups to exclude. The compliance pack does not apply to resources in these groups. Separate multiple resource group IDs with commas (,).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rg-aekzc7r7rhx****</para>
@@ -246,7 +254,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ExcludeResourceGroupIdsScope { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource that is not evaluated by using the compliance package.</para>
+                /// <para>The IDs of the resources to exclude. The compliance pack does not apply to these resources. Separate multiple resource IDs with commas (,).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eip-8vbf3x310fn56ijfd****</para>
@@ -256,14 +264,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ExcludeResourceIdsScope { get; set; }
 
                 /// <summary>
-                /// <para>The scope of the tag that is excluded.</para>
+                /// <para>The excluded tag scope.</para>
                 /// </summary>
                 [NameInMap("ExcludeTagsScope")]
                 [Validation(Required=false)]
                 public List<GetAggregateCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope> ExcludeTagsScope { get; set; }
                 public class GetAggregateCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope : TeaModel {
                     /// <summary>
-                    /// <para>The key of the tag.</para>
+                    /// <para>The tag key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>key-2</para>
@@ -273,7 +281,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public string TagKey { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the tag.</para>
+                    /// <para>The tag value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>value-2</para>
@@ -285,7 +293,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the region whose resources were evaluated by using the compliance package.</para>
+                /// <para>The IDs of the regions where the compliance pack applies. Separate multiple region IDs with commas (,).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -295,7 +303,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string RegionIdsScope { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource group whose resources are evaluated by using the compliance package.</para>
+                /// <para>The IDs of the resource groups where the compliance pack applies. Separate multiple resource group IDs with commas (,).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rg-aekzc7r7rhx****</para>
@@ -315,7 +323,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ResourceIdsScope { get; set; }
 
                 /// <summary>
-                /// <para>The tag key of the resource that is evaluated by using the compliance package.</para>
+                /// <para>The tag key of the resources to which the compliance pack applies.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ECS</para>
@@ -325,7 +333,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string TagKeyScope { get; set; }
 
                 /// <summary>
-                /// <para>The tag value of the resource that is evaluated by using the compliance package.</para>
+                /// <para>The tag value of the resources to which the compliance pack applies.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -342,7 +350,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public List<GetAggregateCompliancePackResponseBodyCompliancePackScopeTagsScope> TagsScope { get; set; }
                 public class GetAggregateCompliancePackResponseBodyCompliancePackScopeTagsScope : TeaModel {
                     /// <summary>
-                    /// <para>The key of the tag.</para>
+                    /// <para>The tag key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>key-1</para>
@@ -352,7 +360,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public string TagKey { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the tag.</para>
+                    /// <para>The tag value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>value-1</para>
@@ -366,10 +374,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The status of the compliance package. Valid values:</para>
+            /// <para>The status of the compliance pack. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ACTIVE: The compliance package was normal.</description></item>
-            /// <item><description>CREATING: The compliance package was being created.</description></item>
+            /// <item><description><para>ACTIVE: The compliance pack is active.</para>
+            /// </description></item>
+            /// <item><description><para>CREATING: The compliance pack is being created.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -380,14 +390,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>The tags of the resource.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<GetAggregateCompliancePackResponseBodyCompliancePackTags> Tags { get; set; }
             public class GetAggregateCompliancePackResponseBodyCompliancePackTags : TeaModel {
                 /// <summary>
-                /// <para>The tag keys of the resource.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>key-1</para>
@@ -397,7 +407,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The tag values of the resource.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>value-1</para>
@@ -409,34 +419,58 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The information about the current compliance package template. The rules in the template do not contain custom function rules. You can quickly create the same compliance package for other accounts or account groups based on the template information.</para>
+            /// <para>The information about the compliance pack template. The list of rules in the template does not include user-defined function rules. You can use the template to quickly create the same compliance pack for other accounts or account groups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
-            ///   &quot;configRuleTemplates&quot;: [
-            ///     {
-            ///       &quot;configRuleName&quot;: &quot;OSS-test-name&quot;,
-            ///       &quot;scope&quot;: {
-            ///         &quot;complianceResourceTypes&quot;: [
-            ///           &quot;ACS::OSS::Bucket&quot;
-            ///         ]
-            ///       },
-            ///       &quot;description&quot;: &quot;test-description&quot;,
-            ///       &quot;source&quot;: {
-            ///         &quot;owner&quot;: &quot;ALIYUN&quot;,
-            ///         &quot;identifier&quot;: &quot;oss-bucket-referer-xxx&quot;,
-            ///         &quot;sourceDetails&quot;: [
-            ///           {
-            ///             &quot;messageType&quot;: &quot;ConfigurationItemChangeNotification&quot;
-            ///           }
-            ///         ]
-            ///       },
-            ///       &quot;inputParameters&quot;: {
-            ///         &quot;allowEmptyReferer&quot;: &quot;true&quot;,
-            ///         &quot;allowReferers&quot;: &quot;<a href="http://www.aliyun.com">http://www.aliyun.com</a>&quot;
-            ///       }
-            ///     }
-            ///   ]
+            ///     &quot;configRuleTemplates&quot;: [
+            ///         {
+            ///             &quot;configRuleName&quot;: &quot;自定义条件规则示例&quot;,
+            ///             &quot;scope&quot;: {
+            ///                 &quot;complianceResourceTypes&quot;: [
+            ///                     &quot;ACS::ECS::Instance&quot;
+            ///                 ]
+            ///             },
+            ///             &quot;description&quot;: &quot;&quot;,
+            ///             &quot;source&quot;: {
+            ///                 &quot;owner&quot;: &quot;CUSTOM_CONFIGURATION&quot;,
+            ///                 &quot;identifier&quot;: &quot;acs-config-configuration&quot;,
+            ///                 &quot;sourceDetails&quot;: [
+            ///                     {
+            ///                         &quot;messageType&quot;: &quot;ScheduledNotification&quot;,
+            ///                         &quot;maximumExecutionFrequency&quot;: &quot;Twelve_Hours&quot;
+            ///                     },
+            ///                     {
+            ///                         &quot;messageType&quot;: &quot;ConfigurationItemChangeNotification&quot;
+            ///                     }
+            ///                 ],
+            ///                 &quot;conditions&quot;: &quot;{\&quot;ComplianceConditions\&quot;:\&quot;{\\\&quot;operator\\\&quot;:\\\&quot;and\\\&quot;,\\\&quot;children\\\&quot;:[{\\\&quot;operator\\\&quot;:\\\&quot;GreaterOrEquals\\\&quot;,\\\&quot;featurePath\\\&quot;:\\\&quot;$.Cpu\\\&quot;,\\\&quot;featureSource\\\&quot;:\\\&quot;CONFIGURATION\\\&quot;,\\\&quot;desired\\\&quot;:\\\&quot;2\\\&quot;}]}\&quot;}&quot;
+            ///             },
+            ///             &quot;inputParameters&quot;: {}
+            ///         },
+            ///         {
+            ///             &quot;configRuleName&quot;: &quot;OSS存储空间Referer在指定的防盗链白名单中&quot;,
+            ///             &quot;scope&quot;: {
+            ///                 &quot;complianceResourceTypes&quot;: [
+            ///                     &quot;ACS::OSS::Bucket&quot;
+            ///                 ]
+            ///             },
+            ///             &quot;description&quot;: &quot;OSS存储空间开启防盗链并且Referer在指定白名单中，视为“合规”。&quot;,
+            ///             &quot;source&quot;: {
+            ///                 &quot;owner&quot;: &quot;ALIYUN&quot;,
+            ///                 &quot;identifier&quot;: &quot;oss-bucket-referer-limit&quot;,
+            ///                 &quot;sourceDetails&quot;: [
+            ///                     {
+            ///                         &quot;messageType&quot;: &quot;ConfigurationItemChangeNotification&quot;
+            ///                     }
+            ///                 ]
+            ///             },
+            ///             &quot;inputParameters&quot;: {
+            ///                 &quot;allowEmptyReferer&quot;: &quot;true&quot;,
+            ///                 &quot;allowReferers&quot;: &quot;<a href="http://www.aliyun.com">http://www.aliyun.com</a>&quot;
+            ///             }
+            ///         }
+            ///     ]
             /// }</para>
             /// </summary>
             [NameInMap("TemplateContent")]
@@ -446,7 +480,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6EC7AED1-172F-42AE-9C12-295BC2ADB751</para>

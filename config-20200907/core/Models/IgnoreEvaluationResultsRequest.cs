@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class IgnoreEvaluationResultsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the rule.</para>
-        /// <para>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</para>
+        /// <para>The rule ID.</para>
+        /// <para>For more information about how to obtain the rule ID, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ConfigRuleId { get; set; }
 
         /// <summary>
-        /// <para>The date from which the system automatically re-evaluates the ignored incompliant resources.</para>
+        /// <para>The date on which the ignored evaluation results are automatically restored.</para>
         /// <remarks>
-        /// <para> If you leave this parameter empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</para>
+        /// <para>If this parameter is left empty, the ignored evaluation results are not automatically restored. You must manually restore them.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,17 +35,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string IgnoreDate { get; set; }
 
         /// <summary>
-        /// <para>The reason why you want to ignore the resource.</para>
+        /// <para>The reason for ignoring the resources.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test ignore.</para>
+        /// <para>无需检测。</para>
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]
         public string Reason { get; set; }
 
         /// <summary>
-        /// <para>The resources to be ignored.</para>
+        /// <para>The list of resources to be ignored.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Resources")]
@@ -53,8 +53,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public List<IgnoreEvaluationResultsRequestResources> Resources { get; set; }
         public class IgnoreEvaluationResultsRequestResources : TeaModel {
             /// <summary>
-            /// <para>The ID of the region in which the resource resides.</para>
-            /// <para>For more information about how to obtain the ID of the region in which a resource resides, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</para>
+            /// <para>The ID of the region to which the resource belongs.</para>
+            /// <para>For more information about how to obtain the ID of the region to which the resource belongs, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the resources belong.</para>
+            /// <para>The ID of the Alibaba Cloud account to which the resource belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -76,8 +76,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public long? ResourceAccountId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource.</para>
-            /// <para>For more information about how to obtain the ID of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</para>
+            /// <para>The resource ID.</para>
+            /// <para>For more information about how to obtain the resource ID, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -88,8 +88,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource.</para>
-            /// <para>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</para>
+            /// <para>The resource type.</para>
+            /// <para>For more information about how to obtain the resource type, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

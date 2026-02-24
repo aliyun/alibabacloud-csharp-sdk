@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class TriggerReportSendRequest : TeaModel {
         /// <summary>
+        /// <para>The report template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

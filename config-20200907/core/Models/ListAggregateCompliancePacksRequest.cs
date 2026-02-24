@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
-        /// <para>Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number.</para>
+        /// <para>Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The number of entries to return on each page.</para>
-        /// <para>Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -43,15 +43,31 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The risk level of the compliance pack. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>1: high</para>
+        /// </description></item>
+        /// <item><description><para>2: medium</para>
+        /// </description></item>
+        /// <item><description><para>3: low</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]
         public int? RiskLevel { get; set; }
 
         /// <summary>
-        /// <para>The status of the one or more compliance packages to be queried. Valid values:</para>
+        /// <para>The status of the compliance pack. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ACTIVE: compliance packages that are available for use.</description></item>
-        /// <item><description>CREATING: compliance packages that are being created.</description></item>
+        /// <item><description><para>ACTIVE: The compliance pack is active.</para>
+        /// </description></item>
+        /// <item><description><para>CREATING: The compliance pack is being created.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,15 +78,15 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tags of the resource.</para>
+        /// <para>You can add up to 20 tags to a resource.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListAggregateCompliancePacksRequestTag> Tag { get; set; }
         public class ListAggregateCompliancePacksRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. You can specify up to 20 tag keys.</para>
-            /// <para>The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs</c>:. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key-1</para>
@@ -80,9 +96,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag values.</para>
-            /// <para>The tag values can be an empty string or up to 128 characters in length. The tag values cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>Each key-value must be unique. You can specify at most 20 tag values in each call.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value-1</para>

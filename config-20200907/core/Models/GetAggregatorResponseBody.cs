@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregatorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the account group.</para>
+        /// <para>The information about the account group.</para>
         /// </summary>
         [NameInMap("Aggregator")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public List<GetAggregatorResponseBodyAggregatorAggregatorAccounts> AggregatorAccounts { get; set; }
             public class GetAggregatorResponseBodyAggregatorAggregatorAccounts : TeaModel {
                 /// <summary>
-                /// <para>The ID of the member.</para>
+                /// <para>The member ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>171322098523****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? AccountId { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the member.</para>
+                /// <para>The member name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Alice</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string AccountName { get; set; }
 
                 /// <summary>
-                /// <para>The resource directory to which the member belongs. Valid value: ResourceDirectory. ResourceDirectory indicates that the member belongs to a resource directory.</para>
+                /// <para>The type of the account. Only ResourceDirectory is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ResourceDirectory</para>
@@ -77,12 +77,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string AccountType { get; set; }
 
                 /// <summary>
-                /// <para>The status of the configuration recorder for the member. Valid values:</para>
+                /// <para>The status of Resource Monitoring for the member. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>REGISTRABLE: The configuration recorder is not registered.</description></item>
-                /// <item><description>BUILDING: The configuration recorder is being deployed.</description></item>
-                /// <item><description>REGISTERED: The configuration recorder is registered.</description></item>
-                /// <item><description>REBUILDING: The configuration recorder is being redeployed.</description></item>
+                /// <item><description><para>REGISTRABLE: Not registered.</para>
+                /// </description></item>
+                /// <item><description><para>BUILDING: Building.</para>
+                /// </description></item>
+                /// <item><description><para>REGISTERED: Registered.</para>
+                /// </description></item>
+                /// <item><description><para>REBUILDING: Rebuilding.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -95,7 +99,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The timestamp generated when the account group was created.</para>
+            /// <para>The timestamp when the account group was created.</para>
             /// <para>Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
@@ -119,7 +123,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <para>The name of the account group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test-Group</para>
+            /// <para>Test_Group</para>
             /// </summary>
             [NameInMap("AggregatorName")]
             [Validation(Required=false)]
@@ -128,8 +132,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// <para>The status of the account group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: The account group is being created.</description></item>
-            /// <item><description>1: The account group was created.</description></item>
+            /// <item><description><para>0: The account group is being created.</para>
+            /// </description></item>
+            /// <item><description><para>1: The account group is created.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -142,9 +148,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// <para>The type of the account group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>RD: a global account group.</description></item>
-            /// <item><description>FOLDER: an account group for a folder.</description></item>
-            /// <item><description>CUSTOM: a custom account group.</description></item>
+            /// <item><description><para>RD: global account group.</para>
+            /// </description></item>
+            /// <item><description><para>FOLDER: folder account group.</para>
+            /// </description></item>
+            /// <item><description><para>CUSTOM: custom account group.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -158,14 +167,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <para>The description of the account group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The description of the test account group.</para>
+            /// <para>The description of the aggregator.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the attached folder of the account group.</para>
+            /// <para>The ID of the folder to which the folder account group is attached.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fd-brHdgv****</para>
@@ -174,12 +183,18 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public string FolderId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the folder to which the folder account group is attached. Multiple names are separated by commas (,).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Example-name</para>
+            /// </summary>
             [NameInMap("FolderName")]
             [Validation(Required=false)]
             public string FolderName { get; set; }
 
             /// <summary>
-            /// <para>tags</para>
+            /// <para>The resource tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

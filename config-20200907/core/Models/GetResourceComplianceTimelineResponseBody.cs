@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetResourceComplianceTimelineResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8D53A78F-1EB8-4264-A554-72F07E34FAE6</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the compliance timeline.</para>
+        /// <para>The compliance evaluation history of the resource.</para>
         /// </summary>
         [NameInMap("ResourceComplianceTimeline")]
         [Validation(Required=false)]
         public GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline ResourceComplianceTimeline { get; set; }
         public class GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline : TeaModel {
             /// <summary>
-            /// <para>The compliance evaluation records on the compliance timeline.</para>
+            /// <para>The list of compliance evaluation history records.</para>
             /// </summary>
             [NameInMap("ComplianceList")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string AccountId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the zone in which the resource resides.</para>
+                /// <para>The zone where the resource resides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-f</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string AvailabilityZone { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the compliance evaluation was recorded. Unit: milliseconds.</para>
+                /// <para>The timestamp when the compliance evaluation of the resource was recorded. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1625200295276</para>
@@ -64,20 +64,20 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? CaptureTime { get; set; }
 
                 /// <summary>
-                /// <para>The rules associated with the resource and the compliance details of the rules.</para>
+                /// <para>The list of rules associated with the resource and the compliance details of the rules.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;Compliance\&quot;:{\&quot;complianceType\&quot;:\&quot;COMPLIANT\&quot;,\&quot;count\&quot;:1},\&quot;ConfigRuleList\&quot;:[{\&quot;accountId\&quot;:100931896542****,\&quot;configRuleId\&quot;:\&quot;cr-9524626622af003d****\&quot;,\&quot;configRuleArn\&quot;:\&quot;acs:config::100931896542****:rule/cr-9524626622af003d****\&quot;,\&quot;configRuleName\&quot;:\&quot;test-rule-name\&quot;,\&quot;complianceType\&quot;:\&quot;COMPLIANT\&quot;,\&quot;riskLevel\&quot;:1,\&quot;annotation\&quot;:\&quot;\&quot;,\&quot;invokingEventMessageType\&quot;:\&quot;ScheduledNotification\&quot;}]}</para>
+                /// <para>{\&quot;Compliance\&quot;:{\&quot;complianceType\&quot;:\&quot;COMPLIANT\&quot;,\&quot;count\&quot;:1},\&quot;ConfigRuleList\&quot;:[{\&quot;accountId\&quot;:100931896542****,\&quot;configRuleId\&quot;:\&quot;cr-9524626622af003d****\&quot;,\&quot;configRuleArn\&quot;:\&quot;acs:config::100931896542****:rule/cr-9524626622af003d****\&quot;,\&quot;configRuleName\&quot;:\&quot;OSS存储空间ACL禁止公共读写\&quot;,\&quot;complianceType\&quot;:\&quot;COMPLIANT\&quot;,\&quot;riskLevel\&quot;:1,\&quot;annotation\&quot;:\&quot;\&quot;,\&quot;invokingEventMessageType\&quot;:\&quot;ScheduledNotification\&quot;}]}</para>
                 /// </summary>
                 [NameInMap("Configuration")]
                 [Validation(Required=false)]
                 public string Configuration { get; set; }
 
                 /// <summary>
-                /// <para>The details of the resource changes that trigger the compliance evaluation.</para>
+                /// <para>The details of the resource change that triggered this evaluation.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;test-rule-name\&quot;:[{\&quot;accountId\&quot;:100931896542****,\&quot;configRuleId\&quot;:\&quot;cr-965f626622af003d****\&quot;,\&quot;configRuleArn\&quot;:\&quot;acs:config::100931896542****:rule/cr-965f626622af003d****\&quot;,\&quot;configRuleName\&quot;:\&quot;test-rule-name\&quot;,\&quot;complianceType\&quot;:\&quot;COMPLIANT\&quot;,\&quot;riskLevel\&quot;:1,\&quot;annotation\&quot;:\&quot;\&quot;,\&quot;invokingEventMessageType\&quot;:\&quot;ScheduledNotification\&quot;},{}]}</para>
+                /// <para>{\&quot;OSS存储空间ACL禁止公共读写\&quot;:[{\&quot;accountId\&quot;:100931896542****,\&quot;configRuleId\&quot;:\&quot;cr-965f626622af003d****\&quot;,\&quot;configRuleArn\&quot;:\&quot;acs:config::100931896542****:rule/cr-965f626622af003d****\&quot;,\&quot;configRuleName\&quot;:\&quot;OSS存储空间ACL禁止公共读写\&quot;,\&quot;complianceType\&quot;:\&quot;COMPLIANT\&quot;,\&quot;riskLevel\&quot;:1,\&quot;annotation\&quot;:\&quot;\&quot;,\&quot;invokingEventMessageType\&quot;:\&quot;ScheduledNotification\&quot;},{}]}</para>
                 /// </summary>
                 [NameInMap("ConfigurationDiff")]
                 [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>The time when the resource was created. Unit: milliseconds.</para>
+                /// <para>The timestamp when the resource was created. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1624961112000</para>
@@ -124,21 +124,23 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ResourceName { get; set; }
 
                 /// <summary>
-                /// <para>The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:</para>
+                /// <para>The resource status. The resource status is defined by each Alibaba Cloud service. This parameter can be empty. For example:</para>
                 /// <list type="bullet">
-                /// <item><description>If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</description></item>
-                /// <item><description>If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.</description></item>
+                /// <item><description><para>If the resource type is \<c>ACS::ECS::Instance\\</c>, this parameter can be \<c>Running\\</c> or \<c>Stopped\\</c> because ECS instances are stateful.</para>
+                /// </description></item>
+                /// <item><description><para>If the resource type is \<c>ACS::OSS::Bucket\\</c>, this parameter is empty because OSS buckets are stateless.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Running</para>
+                /// <para>null</para>
                 /// </summary>
                 [NameInMap("ResourceStatus")]
                 [Validation(Required=false)]
                 public string ResourceStatus { get; set; }
 
                 /// <summary>
-                /// <para>The type of the resource.</para>
+                /// <para>The resource type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ACS::OSS::Bucket</para>
@@ -148,7 +150,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// <para>The tags of the resource.</para>
+                /// <para>The resource tags.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;\&quot;hc\&quot;\&quot;:[\&quot;\&quot;value2\&quot;\&quot;]}</para>
@@ -160,7 +162,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The maximum number of entries that can be returned for a single request.</para>
+            /// <para>The maximum number of entries returned per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -170,7 +172,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token that is used to initiate the next request.</para>
+            /// <para>The token that you use to retrieve the next page of results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5OVS5J4I1/UKTkHV5oNs****</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GenerateReportFromTemplateResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6CE4ABA1-9A57-41A9-8EA9-E8B17D4671CD</para>
         /// </summary>

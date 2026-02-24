@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListAggregateResourceEvaluationResultsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the compliance evaluation results returned.</para>
+        /// <para>The evaluation results of the resources.</para>
         /// </summary>
         [NameInMap("EvaluationResults")]
         [Validation(Required=false)]
         public ListAggregateResourceEvaluationResultsResponseBodyEvaluationResults EvaluationResults { get; set; }
         public class ListAggregateResourceEvaluationResultsResponseBodyEvaluationResults : TeaModel {
             /// <summary>
-            /// <para>The details of the compliance evaluation result.</para>
+            /// <para>A list of resource evaluation results.</para>
             /// </summary>
             [NameInMap("EvaluationResultList")]
             [Validation(Required=false)]
             public List<ListAggregateResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList> EvaluationResultList { get; set; }
             public class ListAggregateResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList : TeaModel {
                 /// <summary>
-                /// <para>The annotation to the resource that is evaluated as incompliant.</para>
+                /// <para>The supplementary information about the non-compliant resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;configuration\&quot;:\&quot;false\&quot;,\&quot;desiredValue\&quot;:\&quot;True\&quot;,\&quot;operator\&quot;:\&quot;StringEquals\&quot;,\&quot;property\&quot;:\&quot;$.LoginProfile.MFABindRequired\&quot;}</para>
@@ -34,13 +34,18 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Annotation { get; set; }
 
                 /// <summary>
-                /// <para>The compliance evaluation result of the resources. Valid values:</para>
+                /// <para>The compliance evaluation result. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>COMPLIANT: The resources are evaluated as compliant.</description></item>
-                /// <item><description>NON_COMPLIANT: The resources are evaluated as incompliant.</description></item>
-                /// <item><description>NOT_APPLICABLE: The rule does not apply to your resources.</description></item>
-                /// <item><description>INSUFFICIENT_DATA: No resource data is available.</description></item>
-                /// <item><description>IGNORED: The resource is ignored during compliance evaluation.</description></item>
+                /// <item><description><para>COMPLIANT: The resource is compliant.</para>
+                /// </description></item>
+                /// <item><description><para>NON_COMPLIANT: The resource is non-compliant.</para>
+                /// </description></item>
+                /// <item><description><para>NOT_APPLICABLE: The rule does not apply to the resource.</para>
+                /// </description></item>
+                /// <item><description><para>INSUFFICIENT_DATA: No data is available for the resource.</para>
+                /// </description></item>
+                /// <item><description><para>IGNORED: The evaluation result is ignored.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -51,7 +56,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ComplianceType { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the rule was triggered. Unit: milliseconds.</para>
+                /// <para>The timestamp when the rule was invoked to evaluate the resource. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1624932227157</para>
@@ -61,6 +66,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? ConfigRuleInvokedTimestamp { get; set; }
 
                 /// <summary>
+                /// <para>The unique ID of the evaluation result.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>00000089-4e0d-58b5-a96a-8e54112110f3</para>
                 /// </summary>
@@ -69,21 +76,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string EvaluationId { get; set; }
 
                 /// <summary>
-                /// <para>The identifying information about the compliance evaluation result.</para>
+                /// <para>The identifier of the resource evaluation result.</para>
                 /// </summary>
                 [NameInMap("EvaluationResultIdentifier")]
                 [Validation(Required=false)]
                 public ListAggregateResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier EvaluationResultIdentifier { get; set; }
                 public class ListAggregateResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier : TeaModel {
                     /// <summary>
-                    /// <para>The information about the evaluated resource in the compliance evaluation result.</para>
+                    /// <para>The resource information in the evaluation result.</para>
                     /// </summary>
                     [NameInMap("EvaluationResultQualifier")]
                     [Validation(Required=false)]
                     public ListAggregateResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier EvaluationResultQualifier { get; set; }
                     public class ListAggregateResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier : TeaModel {
                         /// <summary>
-                        /// <para>The Alibaba Cloud Resource Name (ARN) of the rule.</para>
+                        /// <para>The ARN of the rule.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>acs:config::100931896542****:rule/cr-7f7d626622af0041****</para>
@@ -93,7 +100,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                         public string ConfigRuleArn { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the rule.</para>
+                        /// <para>The rule ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>cr-7f7d626622af0041****</para>
@@ -103,19 +110,19 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                         public string ConfigRuleId { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the monitoring rule.</para>
+                        /// <para>The rule name.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>test-rule-name</para>
+                        /// <para>ram-user-mfa-check</para>
                         /// </summary>
                         [NameInMap("ConfigRuleName")]
                         [Validation(Required=false)]
                         public string ConfigRuleName { get; set; }
 
                         /// <summary>
-                        /// <para>The date from which the system automatically re-evaluates the ignored incompliant resources.</para>
+                        /// <para>The date on which the ignored evaluation result is automatically resumed.</para>
                         /// <remarks>
-                        /// <para> If the value of this parameter is left empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</para>
+                        /// <para>If this parameter is empty, the result is not automatically resumed. You must manually resume the result.</para>
                         /// </remarks>
                         /// 
                         /// <b>Example:</b>
@@ -136,7 +143,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                         public string RegionId { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the resource.</para>
+                        /// <para>The resource ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>23642660635396****</para>
@@ -146,7 +153,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                         public string ResourceId { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the resource.</para>
+                        /// <para>The resource name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>rd_member</para>
@@ -155,12 +162,18 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                         [Validation(Required=false)]
                         public string ResourceName { get; set; }
 
+                        /// <summary>
+                        /// <para>The ID of the Alibaba Cloud account to which the resource belongs.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>120886317861****</para>
+                        /// </summary>
                         [NameInMap("ResourceOwnerId")]
                         [Validation(Required=false)]
                         public int? ResourceOwnerId { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the resource.</para>
+                        /// <para>The resource type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ACS::RAM::User</para>
@@ -172,7 +185,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     }
 
                     /// <summary>
-                    /// <para>The timestamp when the compliance evaluation was performed. Unit: milliseconds.</para>
+                    /// <para>The timestamp displayed on the timeline. Unit: milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1624932227157</para>
@@ -184,10 +197,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 }
 
                 /// <summary>
-                /// <para>The trigger type of the managed rule. Valid values:</para>
+                /// <para>The trigger type of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.</description></item>
-                /// <item><description>ScheduledNotification: The managed rule is periodically triggered.</description></item>
+                /// <item><description><para>ConfigurationItemChangeNotification: The rule is triggered by a configuration change.</para>
+                /// </description></item>
+                /// <item><description><para>ScheduledNotification: The rule is triggered periodically.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -198,6 +213,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string InvokingEventMessageType { get; set; }
 
                 /// <summary>
+                /// <para>The timestamp when the resource last became non-compliant.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1744696665000</para>
                 /// </summary>
@@ -206,10 +223,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? LastNonCompliantRecordTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the remediation template is enabled. Valid values:</para>
+                /// <para>Indicates whether remediation is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The remediation template is enabled.</description></item>
-                /// <item><description>false: The remediation template is disabled.</description></item>
+                /// <item><description><para>true: Remediation is enabled.</para>
+                /// </description></item>
+                /// <item><description><para>false: Remediation is not enabled.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -220,7 +239,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public bool? RemediationEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the compliance evaluation result was recorded. Unit: milliseconds.</para>
+                /// <para>The timestamp when the evaluation result was recorded. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1624932227595</para>
@@ -230,11 +249,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? ResultRecordedTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The risk level of the resources that are not compliant with the rule. Valid values:</para>
+                /// <para>The risk level of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: high risk level</description></item>
-                /// <item><description>2: medium risk level</description></item>
-                /// <item><description>3: low risk level</description></item>
+                /// <item><description><para>1: high</para>
+                /// </description></item>
+                /// <item><description><para>2: medium</para>
+                /// </description></item>
+                /// <item><description><para>3: low</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -247,7 +269,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The maximum number of entries returned on each page.</para>
+            /// <para>The maximum number of entries returned per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -257,7 +279,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token that was used to initiate the next request.</para>
+            /// <para>The token that is used to retrieve the next page of results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IWBjqMYSy0is7zSMGu16****</para>
@@ -269,7 +291,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25C89DDB-BB79-487D-88C3-4A561F21EFC4</para>

@@ -10,19 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CreateAggregatorShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The information about the member accounts in the account group. Example:</para>
-        /// <pre><c>[{
-        ///     &quot;accountId&quot;: 171322098523****,
-        ///     &quot;accountType&quot;:&quot;ResourceDirectory&quot;,
-        ///                 &quot;accountName&quot;:&quot;Alice&quot;
-        /// }, {
-        ///     &quot;accountId&quot;: 100532098349****,
-        ///     &quot;accountType&quot;:&quot;ResourceDirectory&quot;,
-        ///                 &quot;accountName&quot;:&quot;Tom&quot;
-        /// }]
-        /// </c></pre>
+        /// <para>The member accounts of the account group.</para>
         /// <remarks>
-        /// <para> If <c>AggregatorType</c> is set to <c>RD</c> or <c>FOLDER</c>, this parameter can be left empty, which indicates that all accounts in the resource directory are added to the global account group.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If you set <c>AggregatorType</c> to \`RD, you can leave this parameter empty. This indicates that all members in the resource directory are added to the global account group.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <c>AggregatorType</c> to <c>FOLDER</c>, you can leave this parameter empty. This indicates that all members in a specific folder in the resource directory are added to the folder account group.</para>
+        /// </description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>if can be null:</b>
@@ -37,7 +32,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test_Group</para>
+        /// <para>Example_Aggregator</para>
         /// </summary>
         [NameInMap("AggregatorName")]
         [Validation(Required=false)]
@@ -46,9 +41,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>The type of the account group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RD: global account group.</description></item>
-        /// <item><description>FOLDER: account group of the folder.</description></item>
-        /// <item><description>CUSTOM (default): custom account group.</description></item>
+        /// <item><description><para>RD: global account group.</para>
+        /// </description></item>
+        /// <item><description><para>FOLDER: folder account group. You must also set the <c>FolderId</c> parameter. For more information about how to obtain a folder ID, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</para>
+        /// </description></item>
+        /// <item><description><para>CUSTOM (default): custom account group. You must also set the <c>AccountId</c> and <c>AccountType</c> parameters for <c>AggregatorAccounts</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +57,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string AggregatorType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <c>token</c> can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token that is used to ensure the idempotence of the request. You must make sure that the token is unique for different requests. The <c>ClientToken</c> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1594295238-f9361358-5843-4294-8d30-b5183fac****</para>
@@ -72,14 +70,15 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <para>The description of the account group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Aggregator description.</para>
+        /// <para>Example aggregator used to demonstrate how to create an aggregator.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the folder to which the account group is attached. You must specify this parameter if <c>AggregatorType</c> is set to <c>FOLDER</c>. Multiple resource folder IDs should be separated by commas (,).</para>
+        /// <para>The ID of the attached folder. You can specify multiple folder IDs. Separate the IDs with commas (,).</para>
+        /// <para>This parameter is required if you set <c>AggregatorType</c> to <c>FOLDER</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fd-brHdgv****,fd-brHdgk****</para>
@@ -90,7 +89,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The tags of the resource.</para>
-        /// <para>You can add up to 20 tags to a resource.</para>
+        /// <para>You can attach a maximum of 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListPreManagedRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The evaluation rules.</para>
+        /// <para>The list of proactive rules.</para>
         /// </summary>
         [NameInMap("ManagedRules")]
         [Validation(Required=false)]
         public List<ListPreManagedRulesResponseBodyManagedRules> ManagedRules { get; set; }
         public class ListPreManagedRulesResponseBodyManagedRules : TeaModel {
             /// <summary>
-            /// <para>The details of the required input parameters of the rule.</para>
+            /// <para>The details of the required input parameters for the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <para>The name of the rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ram-user-ak-used-expired-check</para>
+            /// <para>ECS实例开启释放保护</para>
             /// </summary>
             [NameInMap("ConfigRuleName")]
             [Validation(Required=false)]
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <para>The description of the rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Example description</para>
+            /// <para>ECS实例开启释放保护，视为“合规”。</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The URL of the topic that describes how the evaluation rule remediates the incompliant configurations.</para>
+            /// <para>The URL of the documentation that provides guidance on how to fix a non-compliant resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.aliyundoc.com">https://example.aliyundoc.com</a></para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string Identifier { get; set; }
 
             /// <summary>
-            /// <para>The details of the optional input parameters of the rule.</para>
+            /// <para>The details of the optional input parameters for the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public Dictionary<string, object> OptionalInputParameterDetails { get; set; }
 
             /// <summary>
-            /// <para>The type of resource.</para>
+            /// <para>The resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACS::ECS::Instance</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A2A9F1BE-0712-1B26-9899-D82F7DA8476C</para>

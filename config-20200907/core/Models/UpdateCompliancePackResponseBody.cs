@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class UpdateCompliancePackResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the compliance package.</para>
+        /// <para>The ID of the compliance pack.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cp-a8a8626622af0082****</para>

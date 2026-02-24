@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>The members in the account group.</para>
         /// <remarks>
-        /// <para> When you modify the configurations of an account group, this parameter can be left empty. In this case, the member list is not updated. If you want to update the member list, you must configure both the <c>AccountId</c> and <c>AccountType</c> parameters.</para>
+        /// <para>You can leave this parameter empty to skip updating the member list. To update the member list, you must specify both <c>AccountId</c> and <c>AccountType</c>.</para>
         /// </remarks>
         /// 
         /// <b>if can be null:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string AggregatorName { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token that ensures the idempotence of the request. Generate a unique token for each request. The token can contain only ASCII characters and must be no more than 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1594295238-f9361358-5843-4294-8d30-b5183fac****</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <para>For more information about how to obtain the description of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test_Aggregator_Description</para>
+        /// <para>测试组</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The folder ID. Separate multiple folder IDs with commas (,).</para>
+        /// <para>The ID of the folder. You can enter multiple folder IDs. Separate the IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>fd-brHdgv****,fd-brHdgk****</para>
@@ -79,8 +79,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The tags of the resource.</para>
-        /// <para>You can add up to 20 tags to a resource.</para>
+        /// <para>The tags of the resource. This parameter is deprecated and no longer takes effect. Ignore this parameter.</para>
+        /// <para>You can attach up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

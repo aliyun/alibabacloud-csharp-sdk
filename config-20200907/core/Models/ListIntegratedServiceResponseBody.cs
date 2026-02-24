@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListIntegratedServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the cloud service that can be integrated.</para>
+        /// <para>The information about the integrated services.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListIntegratedServiceResponseBodyData> Data { get; set; }
         public class ListIntegratedServiceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The type of the event that is integrated across accounts. Valid values:</para>
+            /// <para>The event type for cross-account integration. Supported event types:</para>
             /// <list type="bullet">
-            /// <item><description>NonCompliantNotification: non-compliance event</description></item>
+            /// <item><description>NonCompliantNotification: non-compliance events.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string AggregatorDeliveryDataType { get; set; }
 
             /// <summary>
-            /// <para>The types of the integrated events. Separate multiple event types with commas (,). Valid values:</para>
+            /// <para>The event types for the integration. Separate multiple types with commas (,). Supported event types:</para>
             /// <list type="bullet">
-            /// <item><description>ConfigurationItemChangeNotification: resource change event</description></item>
-            /// <item><description>NonCompliantNotification: non-compliance event</description></item>
+            /// <item><description><para>ConfigurationItemChangeNotification: resource change events.</para>
+            /// </description></item>
+            /// <item><description><para>NonCompliantNotification: non-compliance events.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -44,11 +46,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string IntegratedTypes { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the cloud service. Valid values:</para>
+            /// <para>The identifier of the integrable Alibaba Cloud service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>eventbridge: EventBridge</description></item>
-            /// <item><description>cms: CloudMonitor</description></item>
-            /// <item><description>bpstudio: Cloud Architect Design Tools</description></item>
+            /// <item><description><para>eventbridge: EventBridge.</para>
+            /// </description></item>
+            /// <item><description><para>cms: Cloud Monitor.</para>
+            /// </description></item>
+            /// <item><description><para>bpstudio: Cloud Architect Design Tools.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,20 +64,22 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ServiceCode { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud service.</para>
+            /// <para>The name of the integrated service.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cms</para>
+            /// <para>云监控</para>
             /// </summary>
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>The integration status of the cloud service. Valid values:</para>
+            /// <para>The integration status of the Alibaba Cloud service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: The service is integrated.</para>
+            /// </description></item>
+            /// <item><description><para>false: The service is not integrated.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

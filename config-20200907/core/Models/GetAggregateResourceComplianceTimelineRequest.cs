@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
     public class GetAggregateResourceComplianceTimelineRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the account group.</para>
-        /// <para>For information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
+        /// <para>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The default value indicates the time when the GetAggregateResourceConfigurationTimeline operation is called. Unit: milliseconds.</para>
+        /// <para>The end timestamp. By default, data up to the current time is queried. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1625821156000</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned for a single request. Valid values: 1 to 100.</para>
+        /// <para>The maximum number of entries to return on each page. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The <c>token</c> that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</para>
+        /// <para>If the output of a request is truncated, you can use this token to query the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5OVS5J4I1/UKTkHV5oNs****</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The ID of the region where the resource resides.</para>
-        /// <para>For more information about how to obtain the ID of a region, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</para>
+        /// <para>For more information about how to obtain the ID of the region where a resource resides, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,9 +64,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the resources in the account group belong.</para>
+        /// <para>The ID of the Alibaba Cloud account to which the resource in the account group belongs.</para>
         /// <remarks>
-        /// <para>You can use either the ResourceAccountId or ResourceOwnerId parameter. We recommend that you use the ResourceAccountId parameter.</para>
+        /// <para>Set either the ResourceAccountId or ResourceOwnerId parameter. This parameter is recommended.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The resource ID.</para>
-        /// <para>For more information about how to query the ID of a resource, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</para>
+        /// <para>For more information about how to obtain the resource ID, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The resource type.</para>
-        /// <para>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</para>
+        /// <para>For more information about how to obtain the resource type, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. By default, Cloud Config retrieves the configuration changes in the last 30 days for the specified resource. Unit: milliseconds.</para>
+        /// <para>The start timestamp. By default, data from the last 30 days is queried. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1623211156000</para>

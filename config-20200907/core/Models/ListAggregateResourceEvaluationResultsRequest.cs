@@ -22,13 +22,18 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// <para>The compliance evaluation result of the resource. Valid values:</para>
+        /// <para>The compliance evaluation result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>COMPLIANT: The resource is evaluated as compliant.</description></item>
-        /// <item><description>NON_COMPLIANT: The resource is evaluated as non-compliant.</description></item>
-        /// <item><description>NOT_APPLICABLE: The rule does not apply to the resource.</description></item>
-        /// <item><description>INSUFFICIENT_DATA: No data is available.</description></item>
-        /// <item><description>IGNORED: The resource is ignored during compliance evaluation.</description></item>
+        /// <item><description><para>COMPLIANT: The resource is compliant.</para>
+        /// </description></item>
+        /// <item><description><para>NON_COMPLIANT: The resource is non-compliant.</para>
+        /// </description></item>
+        /// <item><description><para>NOT_APPLICABLE: The rule does not apply to the resource.</para>
+        /// </description></item>
+        /// <item><description><para>INSUFFICIENT_DATA: No data is available for the resource.</para>
+        /// </description></item>
+        /// <item><description><para>IGNORED: The evaluation result is ignored.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +44,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ComplianceType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return for a single request. Valid values: 1 to 100.</para>
+        /// <para>The maximum number of entries to return on each page. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -49,7 +54,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.``</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the response is truncated, you can use this token to initiate another request to retrieve the remaining records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IWBjqMYSy0is7zSMGu16****</para>
@@ -59,8 +64,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where one or more resources that you want to query reside. For example, the value <c>global</c> indicates global regions and the value <c>cn-hangzhou</c> indicates the China (Hangzhou) region.</para>
-        /// <para>For more information about how to obtain the ID of a region, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</para>
+        /// <para>The ID of the region where the resource resides. For example, <c>global</c> indicates Global and <c>cn-hangzhou</c> indicates China (Hangzhou).</para>
+        /// <para>For more information about how to obtain the region ID of a resource, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>global</para>
@@ -70,8 +75,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource.</para>
-        /// <para>For more information about how to obtain the ID of a resource, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</para>
+        /// <para>The resource ID.</para>
+        /// <para>For more information about how to obtain the resource ID, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23642660635396****</para>
@@ -81,8 +86,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource.</para>
-        /// <para>For more information about how to query the type of a resource, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</para>
+        /// <para>The resource type.</para>
+        /// <para>For more information about how to obtain the resource type, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACS::RAM::User</para>
@@ -91,10 +96,30 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>The risk level of the compliance package. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>1: high</para>
+        /// </description></item>
+        /// <item><description><para>2: medium</para>
+        /// </description></item>
+        /// <item><description><para>3: low</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]
         public int? RiskLevel { get; set; }
 
+        /// <summary>
+        /// <para>The sorting method. By default, this parameter is not specified. The supported value is <c>LastNonCompliantRecordTimestamp-Asc</c>. This value sorts resources based on the time when they first became non-compliant, in ascending order. You must set the <c>ComplianceType</c> parameter to <c>NON_COMPLIANT</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LastNonCompliantRecordTimestamp-Asc</para>
+        /// </summary>
         [NameInMap("SortBy")]
         [Validation(Required=false)]
         public string SortBy { get; set; }

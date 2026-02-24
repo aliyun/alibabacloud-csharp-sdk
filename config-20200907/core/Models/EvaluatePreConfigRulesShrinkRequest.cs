@@ -10,14 +10,13 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class EvaluatePreConfigRulesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the managed rule. Valid values:</para>
+        /// <para>Specifies whether to enable rule templates. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables the managed rule.</description></item>
-        /// <item><description>false: does not enable the managed rule. This is the default value.</description></item>
+        /// <item><description><para>true: enables rule templates.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): does not enable rule templates.</para>
+        /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para> After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -27,7 +26,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public bool? EnableManagedRules { get; set; }
 
         /// <summary>
-        /// <para>The resources that you want to evaluate.</para>
+        /// <para>An array that contains the resources that you want to evaluate.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceEvaluateItems")]
@@ -35,7 +34,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceEvaluateItemsShrink { get; set; }
 
         /// <summary>
-        /// <para>下一个查询开始Token</para>
+        /// <para>The query start token</para>
         /// 
         /// <b>Example:</b>
         /// <para>ros</para>

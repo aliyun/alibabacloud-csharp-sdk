@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The configuration timeline of the resource.</para>
+        /// <para>The configuration history of the resource.</para>
         /// </summary>
         [NameInMap("ResourceConfigurationTimeline")]
         [Validation(Required=false)]
         public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline ResourceConfigurationTimeline { get; set; }
         public class GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline : TeaModel {
             /// <summary>
-            /// <para>The configuration changes on the configuration timeline.</para>
+            /// <para>A list of configuration history records for the resource.</para>
             /// </summary>
             [NameInMap("ConfigurationList")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? AccountId { get; set; }
 
                 /// <summary>
-                /// <para>The zone ID.</para>
+                /// <para>The zone.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-h</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string AvailabilityZone { get; set; }
 
                 /// <summary>
-                /// <para>The time when the resource change snapshot was recorded. Unit: milliseconds.</para>
+                /// <para>The timestamp when the resource change snapshot was recorded. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1624961156000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string CaptureTime { get; set; }
 
                 /// <summary>
-                /// <para>The details of the resource changes that trigger the compliance evaluation.</para>
+                /// <para>The details of the resource configuration change.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;AccessControlList\&quot;:[null,{\&quot;Grant\&quot;:\&quot;private\&quot;}],\&quot;ServerSideEncryptionRule\&quot;:[null,{\&quot;SSEAlgorithm\&quot;:\&quot;None\&quot;}],\&quot;CreationDate\&quot;:[null,\&quot;2021-06-29T10:05:12.000Z\&quot;],\&quot;Owner\&quot;:[null,{\&quot;DisplayName\&quot;:\&quot;100931896542****\&quot;,\&quot;ID\&quot;:\&quot;100931896542****\&quot;}],\&quot;BucketPolicy\&quot;:[null,{\&quot;LogPrefix\&quot;:\&quot;\&quot;,\&quot;LogBucket\&quot;:\&quot;\&quot;}],\&quot;StorageClass\&quot;:[null,\&quot;Standard\&quot;],\&quot;ExtranetEndpoint\&quot;:[null,\&quot;oss-cn-hangzhou.aliyuncs.com\&quot;],\&quot;DataRedundancyType\&quot;:[null,\&quot;LRS\&quot;],\&quot;AllowEmptyReferer\&quot;:[null,\&quot;true\&quot;],\&quot;IntranetEndpoint\&quot;:[null,\&quot;oss-cn-hangzhou-internal.aliyuncs.com\&quot;],\&quot;Name\&quot;:[null,\&quot;new-bucket\&quot;],\&quot;Location\&quot;:[null,\&quot;oss-cn-hangzhou\&quot;]}</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>The details of each resource that is associated with the current resource, including the region ID, resource relationship, resource ID, and resource type.</para>
+                /// <para>Details of related resources, including their region ID, relationship, resource ID, and resource type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>&quot;&quot;</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Relationship { get; set; }
 
                 /// <summary>
-                /// <para>The change records of the resource relationship.</para>
+                /// <para>The changes to the related resources.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>&quot;&quot;</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string RelationshipDiff { get; set; }
 
                 /// <summary>
-                /// <para>The time when the resource was created. Unit: milliseconds.</para>
+                /// <para>The timestamp when the resource was created. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1624961112000</para>
@@ -116,20 +116,25 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// <para>The type of the resource change event. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DISCOVERED: A resource is created.</description></item>
-                /// <item><description>DISCOVERED_REVISED: A resource is created by periodic remediation tasks.</description></item>
-                /// <item><description>MODIFY: A resource is modified.</description></item>
-                /// <item><description>MODIFY_REVISED: A resource is modified by periodic remediation tasks.</description></item>
-                /// <item><description>REMOVE: A resource is deleted.</description></item>
+                /// <item><description><para>DISCOVERED: A resource is discovered by Cloud Config.</para>
+                /// </description></item>
+                /// <item><description><para>DISCOVERED_REVISED: A resource is discovered by Cloud Config through a periodic reconciliation task.</para>
+                /// </description></item>
+                /// <item><description><para>MODIFY: A resource is modified.</para>
+                /// </description></item>
+                /// <item><description><para>MODIFY_REVISED: A resource modification is recorded through a periodic reconciliation task.</para>
+                /// </description></item>
+                /// <item><description><para>REMOVE: A resource is deleted.</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// </remarks>
                 /// <list type="bullet">
-                /// <item><description><para>To ensure the integrity of resources, periodic remediation tasks are run to check data and generate events that indicate the creation of new resources. Such events are infrequent.</para>
+                /// <item><description><para>To ensure data integrity, Cloud Config periodically reconciles resource data. This process can generate resource discovery events, which occur infrequently.</para>
                 /// </description></item>
-                /// <item><description><para>The time when a resource change event is generated by a periodic remediation task is considered as the detection time of Cloud Config. The detection time is later than the time when the resource is modified.</para>
+                /// <item><description><para>The time of an event generated by a reconciliation task is the time when the task discovers the change. This is later than the actual time of the change.</para>
                 /// </description></item>
                 /// </list>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DISCOVERED</para>
@@ -191,7 +196,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+            /// <para>The token that is used to retrieve the next page of results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IWBjqMYSy0is7zSMGu16****</para>

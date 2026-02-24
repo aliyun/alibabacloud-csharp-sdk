@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class UpdateConfigRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.``</para>
+        /// <para>A client token used to ensure the idempotence of the request. You can use a client to generate the token, but you must make sure that the token is unique for different requests. The <c>ClientToken</c> parameter can contain only ASCII characters and cannot be more than 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1594295238-f9361358-5843-4294-8d30-b5183fac****</para>
@@ -20,8 +20,19 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the rule.</para>
-        /// <para>For more information about how to query the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</para>
+        /// <b>Example:</b>
+        /// <para>{&quot;ComplianceConditions&quot;:&quot;{&quot;operator&quot;:&quot;and&quot;,&quot;children&quot;:[{&quot;operator&quot;:&quot;StringEquals&quot;,&quot;featurePath&quot;:&quot;$.Status&quot;,&quot;desired&quot;:&quot;1&quot;,&quot;featureSource&quot;:&quot;CONFIGURATION&quot;}]}&quot;}</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("Conditions")]
+        [Validation(Required=false)]
+        public string Conditions { get; set; }
+
+        /// <summary>
+        /// <para>The rule ID.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,10 +44,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The name of the rule.</para>
-        /// <para>For more information about how to query the name of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The name of the rule.</para>
+        /// <para>存在所有指定标签</para>
         /// </summary>
         [NameInMap("ConfigRuleName")]
         [Validation(Required=false)]
@@ -45,11 +56,13 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>The trigger type of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</description></item>
-        /// <item><description>ScheduledNotification: The rule is periodically triggered.</description></item>
+        /// <item><description><para>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</para>
+        /// </description></item>
+        /// <item><description><para>ScheduledNotification: The rule is triggered on a regular basis.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter applies only to custom rules.</para>
+        /// <para>This parameter can be modified only for custom rules.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,17 +73,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ConfigRuleTriggerTypes { get; set; }
 
         /// <summary>
-        /// <para>The description of the rule. You can enter up to 500 characters.</para>
+        /// <para>The description of the rule. The description can be up to 500 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The description of the rule.</para>
+        /// <para>最多可以定义6组标签。如果资源同时具有指定的所有标签，则视为“合规”。</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the regions excluded from the compliance evaluations performed by the rule. Separate multiple region IDs with commas (,).</para>
+        /// <para>The regions where the rule is not effective. The system does not evaluate resources in these regions. To specify multiple region IDs, separate them with a comma (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -80,7 +93,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ExcludeRegionIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the resource groups excluded from the compliance evaluations performed by the rule. Separate multiple resource group IDs with commas (,).</para>
+        /// <para>The resource groups where the rule is not effective. The system does not evaluate resources in these resource groups. To specify multiple resource group IDs, separate them with a comma (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bnczc6r7rml****</para>
@@ -90,9 +103,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ExcludeResourceGroupIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the resources excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</para>
+        /// <para>The resources that are not evaluated by the rule. The system does not evaluate these resources. To specify multiple resource IDs, separate them with a comma (,).</para>
         /// <remarks>
-        /// <para> This parameter applies only to a managed rule.</para>
+        /// <para>This parameter applies only to managed rules.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -103,14 +116,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ExcludeResourceIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The scope of the tag that is excluded.</para>
+        /// <para>The tags that are used to exclude resources.</para>
         /// </summary>
         [NameInMap("ExcludeTagsScope")]
         [Validation(Required=false)]
         public List<UpdateConfigRuleRequestExcludeTagsScope> ExcludeTagsScope { get; set; }
         public class UpdateConfigRuleRequestExcludeTagsScope : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key-2</para>
@@ -120,7 +133,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value-2</para>
@@ -132,7 +145,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>Optional. The extended content of the resource. This parameter can be used together with the MaximumExecutionFrequency parameter when the MaximumExecutionFrequency parameter is set to TwentyFour_Hours to specify the trigger time.</para>
+        /// <para>The extended content. This parameter is optional. You can use this parameter with a 24-hour trigger period to set the trigger time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;fixedHour&quot;:&quot;12&quot;}</para>
@@ -155,16 +168,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public Dictionary<string, object> InputParameters { get; set; }
 
         /// <summary>
-        /// <para>The interval at which the rule is triggered. Valid values:</para>
+        /// <para>The frequency at which the rule is run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>One_Hour</description></item>
-        /// <item><description>Three_Hours</description></item>
-        /// <item><description>Six_Hours</description></item>
-        /// <item><description>Twelve_Hours</description></item>
-        /// <item><description>TwentyFour_Hours (default)</description></item>
+        /// <item><description><para>One_Hour: 1 hour.</para>
+        /// </description></item>
+        /// <item><description><para>Three_Hours: 3 hours.</para>
+        /// </description></item>
+        /// <item><description><para>Six_Hours: 6 hours.</para>
+        /// </description></item>
+        /// <item><description><para>Twelve_Hours: 12 hours.</para>
+        /// </description></item>
+        /// <item><description><para>TwentyFour_Hours (default): 24 hours.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required if the <c>ConfigRuleTriggerTypes</c> parameter is set to <c>ScheduledNotification</c>.</para>
+        /// <para>This parameter is required when <c>ConfigRuleTriggerTypes</c> is set to <c>ScheduledNotification</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -175,9 +193,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string MaximumExecutionFrequency { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the regions to which the rule applies. Separate multiple region IDs with commas (,).</para>
+        /// <para>The regions where the rule is effective. The rule evaluates only resources in these regions. To specify multiple region IDs, separate them with a comma (,).</para>
         /// <remarks>
-        /// <para> This parameter applies only to a managed rule.</para>
+        /// <para>This parameter applies only to managed rules.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -188,9 +206,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string RegionIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the resource groups to which the rule applies. Separate multiple resource group IDs with commas (,).</para>
+        /// <para>The resource groups where the rule is effective. The rule evaluates only resources in these resource groups. To specify multiple resource group IDs, separate them with a comma (,).</para>
         /// <remarks>
-        /// <para> This parameter applies only to a managed rule.</para>
+        /// <para>This parameter applies only to managed rules.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -201,7 +219,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceGroupIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the resources to which the rule applies. Separate multiple resource IDs with commas (,).</para>
+        /// <para>The resources that the rule evaluates. To specify multiple resource IDs, separate them with a comma (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb-5cmbowstbkss9ta03****</para>
@@ -211,7 +229,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The names of the resource to which the rule applies.</para>
+        /// <para>The names of the resources that the rule evaluates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-xxx</para>
@@ -224,7 +242,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceNameScope { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource to be evaluated by the rule. Separate multiple resource types with commas (,).</para>
+        /// <para>The resource types that the rule evaluates. To specify multiple resource types, separate them with a comma (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACS::ECS::Instance</para>
@@ -234,11 +252,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public List<string> ResourceTypesScope { get; set; }
 
         /// <summary>
-        /// <para>The risk level of the resources that do not comply with the rule. Valid values:</para>
+        /// <para>The risk level of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: high</description></item>
-        /// <item><description>2: medium</description></item>
-        /// <item><description>3: low</description></item>
+        /// <item><description><para>1: high risk.</para>
+        /// </description></item>
+        /// <item><description><para>2: medium risk.</para>
+        /// </description></item>
+        /// <item><description><para>3: low risk.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -251,8 +272,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The tags of the resource.</para>
-        /// <para>You can add up to 20 tags to a resource.</para>
+        /// <para>The tags of the resource. This parameter is deprecated. The value that you specify for this parameter does not take effect.</para>
+        /// <para>You can add up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -260,7 +281,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public List<UpdateConfigRuleRequestTag> Tag { get; set; }
         public class UpdateConfigRuleRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key-1</para>
@@ -270,7 +291,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N. Valid values of N: <b>1 to 20</b>. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>aliyun</c> and <c>acs:</c>.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value-1</para>
@@ -282,13 +303,13 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>The logical relationship when parameter <c>TagsScope</c> takes multiple values, for example: When the parameter <c>TagsScope</c> is <c>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;, &quot;TagsScope.1.TagValue&quot;:&quot;a&quot;, &quot;TagsScope.2.TagKey&quot;:&quot;b&quot;, &quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</c>, if this parameter is set to<c> AND</c>, it means that the rule only applies to resources bound with both tags <c>a:a</c> and <c>b:b</c>. If not specified, the default logic is <c>OR</c>.</para>
-        /// <para>It can also be used for the deprecated field <c>TagKeyScope</c> (not recommended), for example: When the parameter <c>TagKeyScope</c> has a value of <c>ECS</c>,<c>OSS</c>, if this parameter is set to <c>AND</c>, it means that the rule only applies to resources bound with both labels <c>ECS</c> and <c>OSS</c>.</para>
-        /// <para>Values:</para>
+        /// <para>The logical relationship for the tags that you specify for the <c>TagsScope</c> parameter. For example, if you set the <c>TagsScope</c> parameter to <c>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;,&quot;TagsScope.1.TagValue&quot;:&quot;a&quot;,&quot;TagsScope.2.TagKey&quot;:&quot;b&quot;,&quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</c> and set this parameter to <c>AND</c>, the rule applies only to resources that have both the <c>a:a</c> and <c>b:b</c> tags. If you do not specify this parameter, the <c>OR</c> logic is used by default.</para>
+        /// <para>This parameter also applies to the deprecated <c>TagKeyScope</c> parameter, but this is not recommended. For example, if you set the <c>TagKeyScope</c> parameter to <c>ECS,OSS</c> and set this parameter to <c>AND</c>, the rule applies only to resources that have both the <c>ECS</c> and <c>OSS</c> tags.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>AND: And.</para>
+        /// <item><description><para>AND</para>
         /// </description></item>
-        /// <item><description><para>OR: Or.</para>
+        /// <item><description><para>OR</para>
         /// </description></item>
         /// </list>
         /// 
@@ -302,10 +323,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated. We recommend that you use the <c>TagsScope</c> parameter.</para>
-        /// <para>The tag key used to filter resources. The rule applies only to the resources with the specified tag key.</para>
+        /// <para>This parameter is deprecated. Use the <c>TagsScope</c> parameter instead.</para>
+        /// <para>The rule is effective only for resources that have the specified tag.</para>
         /// <remarks>
-        /// <para> This parameter applies only to a managed rule. You must configure the <c>TagKeyScope</c> and <c>TagValueScope</c> parameters at the same time.</para>
+        /// <para>This parameter applies only to managed rules. The <c>TagKeyScope</c> and <c>TagValueScope</c> parameters must be specified at the same time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -319,10 +340,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated. We recommend that you use the <c>TagsScope</c> parameter.</para>
-        /// <para>The tag value used to filter resources. The rule applies only to the resources that use the specified tag value.</para>
+        /// <para>This parameter is deprecated. Use the <c>TagsScope</c> parameter instead.</para>
+        /// <para>The rule is effective only for resources that have the specified tag.</para>
         /// <remarks>
-        /// <para> This parameter applies only to a managed rule. You must configure the <c>TagKeyScope</c> and <c>TagValueScope</c> parameters at the same time.</para>
+        /// <para>This parameter applies only to managed rules. The <c>TagKeyScope</c> and <c>TagValueScope</c> parameters must be specified at the same time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -334,14 +355,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string TagValueScope { get; set; }
 
         /// <summary>
-        /// <para>The tag scope.</para>
+        /// <para>The tags that are used to filter resources.</para>
         /// </summary>
         [NameInMap("TagsScope")]
         [Validation(Required=false)]
         public List<UpdateConfigRuleRequestTagsScope> TagsScope { get; set; }
         public class UpdateConfigRuleRequestTagsScope : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key-1</para>
@@ -351,7 +372,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value-1</para>

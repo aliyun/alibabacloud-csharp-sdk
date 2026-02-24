@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CreateAggregateConfigRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The rule ID.</para>
+        /// <para>The ID of the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cr-4e3d626622af0080****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ConfigRuleId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5895065A-196C-4254-8AD8-14EFC31EEF50</para>

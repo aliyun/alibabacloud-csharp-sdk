@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class DescribeIntegratedServiceStatusRequest : TeaModel {
         /// <summary>
+        /// <para>The code of the cloud service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

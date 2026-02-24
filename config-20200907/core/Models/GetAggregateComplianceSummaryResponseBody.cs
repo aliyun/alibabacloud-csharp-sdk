@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateComplianceSummaryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The compliance statistics.</para>
+        /// <para>The compliance summary.</para>
         /// </summary>
         [NameInMap("ComplianceSummary")]
         [Validation(Required=false)]
         public GetAggregateComplianceSummaryResponseBodyComplianceSummary ComplianceSummary { get; set; }
         public class GetAggregateComplianceSummaryResponseBodyComplianceSummary : TeaModel {
             /// <summary>
-            /// <para>The summary of compliance statistics from the rule dimension.</para>
+            /// <para>The compliance summary by rule.</para>
             /// </summary>
             [NameInMap("ComplianceSummaryByConfigRule")]
             [Validation(Required=false)]
             public GetAggregateComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule ComplianceSummaryByConfigRule { get; set; }
             public class GetAggregateComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule : TeaModel {
                 /// <summary>
-                /// <para>The time when the compliance statistics were collected. Unit: milliseconds.</para>
+                /// <para>The timestamp of the compliance summary. This value is a UNIX timestamp. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1589853822103</para>
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The summary of compliance statistics from the resource dimension.</para>
+            /// <para>The compliance summary by resource.</para>
             /// </summary>
             [NameInMap("ComplianceSummaryByResource")]
             [Validation(Required=false)]
             public GetAggregateComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource ComplianceSummaryByResource { get; set; }
             public class GetAggregateComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource : TeaModel {
                 /// <summary>
-                /// <para>The time when the compliance statistics were collected. Unit: milliseconds.</para>
+                /// <para>The timestamp of the compliance summary. This value is a UNIX timestamp. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1589853822103</para>
@@ -92,14 +92,32 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [Validation(Required=false)]
                 public int? CompliantCount { get; set; }
 
+                /// <summary>
+                /// <para>The number of non-compliant resources detected by high-risk rules. Note: This value is not deduplicated by resource. If a resource is evaluated as non-compliant by two different rules, it is counted twice.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("HighRiskRuleNonCompliantResourceCount")]
                 [Validation(Required=false)]
                 public int? HighRiskRuleNonCompliantResourceCount { get; set; }
 
+                /// <summary>
+                /// <para>The number of non-compliant resources detected by low-risk rules. Note: This value is not deduplicated by resource. If a resource is evaluated as non-compliant by two different rules, it is counted twice.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("LowRiskRuleNonCompliantResourceCount")]
                 [Validation(Required=false)]
                 public int? LowRiskRuleNonCompliantResourceCount { get; set; }
 
+                /// <summary>
+                /// <para>The number of non-compliant resources detected by medium-risk rules. Note: This value is not deduplicated by resource. If a resource is evaluated as non-compliant by two different rules, it is counted twice.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>6</para>
+                /// </summary>
                 [NameInMap("MediumRiskRuleNonCompliantResourceCount")]
                 [Validation(Required=false)]
                 public int? MediumRiskRuleNonCompliantResourceCount { get; set; }

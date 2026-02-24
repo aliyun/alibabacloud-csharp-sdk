@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CreateRemediationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the remediation template.</para>
+        /// <para>The ID of the remediation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crr-909ba2d4716700eb****</para>

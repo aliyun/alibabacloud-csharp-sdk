@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListAggregateConfigRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried rules.</para>
+        /// <para>The rules.</para>
         /// </summary>
         [NameInMap("ConfigRules")]
         [Validation(Required=false)]
         public ListAggregateConfigRulesResponseBodyConfigRules ConfigRules { get; set; }
         public class ListAggregateConfigRulesResponseBodyConfigRules : TeaModel {
             /// <summary>
-            /// <para>The details of the rule.</para>
+            /// <para>The details of the rules.</para>
             /// </summary>
             [NameInMap("ConfigRuleList")]
             [Validation(Required=false)]
             public List<ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList> ConfigRuleList { get; set; }
             public class ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList : TeaModel {
                 /// <summary>
-                /// <para>The ID of the management account to which the rules belong.</para>
+                /// <para>The ID of the management account to which the rule belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100931896542****</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? AccountId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the remediation template. Only OOS is returned, which indicates CloudOps Orchestration Service.</para>
+                /// <para>The remediation type. The value is fixed to OOS, which indicates Operation Orchestration Service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>OOS</para>
@@ -51,12 +51,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCompliance Compliance { get; set; }
                 public class ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCompliance : TeaModel {
                     /// <summary>
-                    /// <para>The compliance evaluation result. Valid values:</para>
+                    /// <para>The summary of the compliance evaluation result. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>COMPLIANT: The resources are evaluated as compliant.</description></item>
-                    /// <item><description>NON_COMPLIANT: The resources are evaluated as non-compliant.</description></item>
-                    /// <item><description>NOT_APPLICABLE: The rule does not apply to the resources.</description></item>
-                    /// <item><description>INSUFFICIENT_DATA: No data is available.</description></item>
+                    /// <item><description><para>COMPLIANT: The resource is compliant.</para>
+                    /// </description></item>
+                    /// <item><description><para>NON_COMPLIANT: The resource is non-compliant.</para>
+                    /// </description></item>
+                    /// <item><description><para>NOT_APPLICABLE: The rule does not apply to the resource.</para>
+                    /// </description></item>
+                    /// <item><description><para>INSUFFICIENT_DATA: No data is available.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -67,7 +71,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public string ComplianceType { get; set; }
 
                     /// <summary>
-                    /// <para>The number of evaluation resources that correspond to the summary result of the rule compliance evaluation.</para>
+                    /// <para>The number of resources that are evaluated based on the summary of the compliance evaluation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -89,7 +93,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ConfigRuleArn { get; set; }
 
                 /// <summary>
-                /// <para>The rule ID.</para>
+                /// <para>The ID of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cr-fdc8626622af00f9****</para>
@@ -102,19 +106,23 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <para>The name of the rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test-rule-name</para>
+                /// <para>The name of the rule.</para>
                 /// </summary>
                 [NameInMap("ConfigRuleName")]
                 [Validation(Required=false)]
                 public string ConfigRuleName { get; set; }
 
                 /// <summary>
-                /// <para>The status of the rule. Valid values:</para>
+                /// <para>The state of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ACTIVE: The rule is being used to monitor resource configurations.</description></item>
-                /// <item><description>DELETING: The rule is being deleted.</description></item>
-                /// <item><description>EVALUATING: The rule is triggered and is being used to monitor resource configurations.</description></item>
-                /// <item><description>INACTIVE: The rule is disabled.</description></item>
+                /// <item><description><para>ACTIVE: The rule is enabled.</para>
+                /// </description></item>
+                /// <item><description><para>DELETING: The rule is being deleted.</para>
+                /// </description></item>
+                /// <item><description><para>EVALUATING: The rule is being evaluated.</para>
+                /// </description></item>
+                /// <item><description><para>INACTIVE: The rule is disabled.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -125,14 +133,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ConfigRuleState { get; set; }
 
                 /// <summary>
-                /// <para>The information about the creation of the rule.</para>
+                /// <para>The information about the creator of the rule.</para>
                 /// </summary>
                 [NameInMap("CreateBy")]
                 [Validation(Required=false)]
                 public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy CreateBy { get; set; }
                 public class ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy : TeaModel {
                     /// <summary>
-                    /// <para>The account group ID.</para>
+                    /// <para>The ID of the account group.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ca-f632626622af0079****</para>
@@ -152,7 +160,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public string AggregatorName { get; set; }
 
                     /// <summary>
-                    /// <para>The compliance package ID.</para>
+                    /// <para>The ID of the compliance package.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cp-fdc8626622af00f9****</para>
@@ -165,7 +173,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     /// <para>The name of the compliance package.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>test-pack-name</para>
+                    /// <para>The name of the compliance package.</para>
                     /// </summary>
                     [NameInMap("CompliancePackName")]
                     [Validation(Required=false)]
@@ -182,7 +190,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public string CreatorId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the management account that create the rule.</para>
+                    /// <para>The name of the management account that created the rule.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Alice</para>
@@ -192,7 +200,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public string CreatorName { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the creator of the rule. The value is fixed to AGGREGATOR, which indicates an account group.</para>
+                    /// <para>The type of the creator. The value is fixed to AGGREGATOR.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>AGGREGATOR</para>
@@ -203,6 +211,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
                 }
 
+                /// <summary>
+                /// <para>The time when the rule was created. The time is displayed in UTC+8.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2025-09-19T15:51:00</para>
+                /// </summary>
                 [NameInMap("CreateDate")]
                 [Validation(Required=false)]
                 public string CreateDate { get; set; }
@@ -211,14 +225,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <para>The description of the rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The description of the test rule.</para>
+                /// <para>The description of the rule.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The types of resources evaluated by the rule. Multiple resource types are separated with commas (,).</para>
+                /// <para>The types of the resources that are evaluated by the rule. Multiple resource types are separated by commas (,).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ACS::EIP::EipAddress</para>
@@ -228,11 +242,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ResourceTypesScope { get; set; }
 
                 /// <summary>
-                /// <para>The risk level of the resources that do not comply with the rule. Valid values:</para>
+                /// <para>The risk level of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: high</description></item>
-                /// <item><description>2: medium</description></item>
-                /// <item><description>3: low</description></item>
+                /// <item><description><para>1: high</para>
+                /// </description></item>
+                /// <item><description><para>2: medium</para>
+                /// </description></item>
+                /// <item><description><para>3: low</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -245,8 +262,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// <para>The identifier of the rule.</para>
                 /// <list type="bullet">
-                /// <item><description>If the rule is a managed rule, the value of this parameter is the name of the managed rule.</description></item>
-                /// <item><description>If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of a function.</description></item>
+                /// <item><description><para>If the rule is a managed rule, the value of this parameter is the identifier of the rule template.</para>
+                /// </description></item>
+                /// <item><description><para>If the rule is a custom rule, the value of this parameter is the ARN of the function.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -257,10 +276,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string SourceIdentifier { get; set; }
 
                 /// <summary>
-                /// <para>The type of the rule. Valid values:</para>
+                /// <para>The owner of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>CUSTOM_FC: a custom rule.</description></item>
-                /// <item><description>ALIYUN: a managed rule.</description></item>
+                /// <item><description><para>CUSTOM_FC: a custom rule.</para>
+                /// </description></item>
+                /// <item><description><para>ALIYUN: a managed rule.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -278,7 +299,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public List<ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListTags> Tags { get; set; }
                 public class ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListTags : TeaModel {
                     /// <summary>
-                    /// <para>The tag key of the rule.</para>
+                    /// <para>The key of the tag.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>env</para>
@@ -288,7 +309,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The tag value of the rule.</para>
+                    /// <para>The value of the tag.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>prod</para>
@@ -302,7 +323,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The number of the page returned.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -312,7 +333,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries returned on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -334,7 +355,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22EF8287-2C9A-4F1F-80A6-CEFA7612689D</para>

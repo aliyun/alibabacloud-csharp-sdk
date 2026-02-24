@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetManagedRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The identifier of the managed rule.</para>
-        /// <para>For more information about how to obtain the identifier of a managed rule, see <a href="https://help.aliyun.com/document_detail/421144.html">ListManagedRules</a>.</para>
+        /// <para>The identifier of the rule template.</para>
+        /// <para>For more information about how to obtain the rule template identifier, see <a href="https://help.aliyun.com/document_detail/421144.html">ListManagedRules</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

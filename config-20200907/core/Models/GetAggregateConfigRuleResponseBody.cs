@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateConfigRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the rules.</para>
+        /// <para>The details of the rule.</para>
         /// </summary>
         [NameInMap("ConfigRule")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public long? AccountId { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the members to which the rule applies. Separate multiple member IDs with commas (,).</para>
+            /// <para>The rule applies only to resources in the specified member accounts. Separate multiple member account IDs with a comma (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>120886317861****</para>
@@ -37,19 +37,23 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string AccountIdsScope { get; set; }
 
             /// <summary>
-            /// <para>The details of compliance evaluation results.</para>
+            /// <para>The compliance statistics of the rule.</para>
             /// </summary>
             [NameInMap("Compliance")]
             [Validation(Required=false)]
             public GetAggregateConfigRuleResponseBodyConfigRuleCompliance Compliance { get; set; }
             public class GetAggregateConfigRuleResponseBodyConfigRuleCompliance : TeaModel {
                 /// <summary>
-                /// <para>The statistics on the compliance evaluation results by compliance type. Valid values:</para>
+                /// <para>The compliance evaluation result. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>COMPLIANT: The resources are evaluated as compliant.</description></item>
-                /// <item><description>NON_COMPLIANT: The resources are evaluated as non-compliant.</description></item>
-                /// <item><description>NOT_APPLICABLE: The rule does not apply to your resources.</description></item>
-                /// <item><description>INSUFFICIENT_DATA: No resource data is available.</description></item>
+                /// <item><description><para>COMPLIANT: The resource is compliant.</para>
+                /// </description></item>
+                /// <item><description><para>NON_COMPLIANT: The resource is not compliant.</para>
+                /// </description></item>
+                /// <item><description><para>NOT_APPLICABLE: The rule does not apply to the resource.</para>
+                /// </description></item>
+                /// <item><description><para>INSUFFICIENT_DATA: No data is available.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -60,7 +64,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ComplianceType { get; set; }
 
                 /// <summary>
-                /// <para>The number of evaluated resources.</para>
+                /// <para>The number of resources that have the corresponding compliance evaluation result.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -72,7 +76,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The ARN of the managed rule.</para>
+            /// <para>The ARN of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:config::100931896542****:rule/cr-7f7d626622af0041****</para>
@@ -82,14 +86,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ConfigRuleArn { get; set; }
 
             /// <summary>
-            /// <para>The information about compliance evaluations performed by the rule.</para>
+            /// <para>The execution status of the rule.</para>
             /// </summary>
             [NameInMap("ConfigRuleEvaluationStatus")]
             [Validation(Required=false)]
             public GetAggregateConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus ConfigRuleEvaluationStatus { get; set; }
             public class GetAggregateConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus : TeaModel {
                 /// <summary>
-                /// <para>The timestamp when the rule was first triggered.</para>
+                /// <para>The timestamp when the rule was first activated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1624932221993</para>
@@ -99,10 +103,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? FirstActivatedTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether resources were evaluated based on the rule. Valid values:</para>
+                /// <para>Indicates whether the rule has been evaluated. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: Resources were evaluated based on the rule.</description></item>
-                /// <item><description>false: Resources were not evaluated based on the rule.</description></item>
+                /// <item><description><para>true: The rule has been evaluated.</para>
+                /// </description></item>
+                /// <item><description><para>false: The rule has not been evaluated.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -113,7 +119,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public bool? FirstEvaluationStarted { get; set; }
 
                 /// <summary>
-                /// <para>The error code returned for the last failed compliance evaluation.</para>
+                /// <para>The error code returned for the last failed execution of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TimeOut</para>
@@ -123,7 +129,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string LastErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>The error message returned for the last failed compliance evaluation.</para>
+                /// <para>The error message returned for the last failed execution of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>time out</para>
@@ -133,7 +139,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string LastErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the last failed compliance evaluation of the rule ended. Unit: milliseconds.</para>
+                /// <para>The timestamp of the last failed evaluation. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1614687022000</para>
@@ -143,7 +149,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? LastFailedEvaluationTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the last failed compliance evaluation of the rule started. Unit: milliseconds.</para>
+                /// <para>The timestamp of the last failed invocation. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1614687022000</para>
@@ -153,7 +159,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? LastFailedInvocationTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the last successful compliance evaluation of the rule ended. Unit: milliseconds.</para>
+                /// <para>The timestamp of the last successful evaluation. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1624932227486</para>
@@ -163,7 +169,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? LastSuccessfulEvaluationTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the last successful compliance evaluation of the rule started. Unit: milliseconds.</para>
+                /// <para>The timestamp of the last successful invocation. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1624932227476</para>
@@ -175,7 +181,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The ID of the rule.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cr-7f7d626622af0041****</para>
@@ -185,10 +191,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ConfigRuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the monitoring rule.</para>
+            /// <para>The name of the rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The name of the rule.</para>
+            /// <para>RAM用户开启MFA</para>
             /// </summary>
             [NameInMap("ConfigRuleName")]
             [Validation(Required=false)]
@@ -197,10 +203,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// <para>The status of the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ACTIVE: The rule is being used to monitor resource configurations.</description></item>
-            /// <item><description>DELETING: The rule is being deleted.</description></item>
-            /// <item><description>EVALUATING: The rule is triggered and is being used to monitor resource configurations.</description></item>
-            /// <item><description>INACTIVE: The rule is disabled and is no longer used to monitor resource configurations.</description></item>
+            /// <item><description><para>ACTIVE: The rule is enabled.</para>
+            /// </description></item>
+            /// <item><description><para>DELETING: The rule is being deleted.</para>
+            /// </description></item>
+            /// <item><description><para>EVALUATING: The rule is being evaluated.</para>
+            /// </description></item>
+            /// <item><description><para>INACTIVE: The rule is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -213,8 +223,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// <para>The trigger type of the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.</description></item>
-            /// <item><description>ScheduledNotification: The managed rule is periodically triggered.</description></item>
+            /// <item><description><para>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</para>
+            /// </description></item>
+            /// <item><description><para>ScheduledNotification: The rule is triggered periodically.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -225,7 +237,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ConfigRuleTriggerTypes { get; set; }
 
             /// <summary>
-            /// <para>The information about the creation of the rule.</para>
+            /// <para>The information about the creator of the rule.</para>
             /// </summary>
             [NameInMap("CreateBy")]
             [Validation(Required=false)]
@@ -265,14 +277,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <para>The name of the compliance package.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The name of the compliance package.</para>
+                /// <para>OSS合规基线</para>
                 /// </summary>
                 [NameInMap("CompliancePackName")]
                 [Validation(Required=false)]
                 public string CompliancePackName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the account that was used to create the rule.</para>
+                /// <para>The ID of the account that created the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100931896542****</para>
@@ -282,7 +294,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string CreatorId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the account that was used to create the rule.</para>
+                /// <para>The name of the rule creator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Alice</para>
@@ -292,7 +304,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string CreatorName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the entity to which the rule belongs. The value is fixed to <c>AGGREGATOR</c>, which indicates an account group.</para>
+                /// <para>The type of the rule creator. Only <c>AGGREGATOR</c> (account group) is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AGGREGATOR</para>
@@ -314,20 +326,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The description of the managed rule.</para>
+            /// <para>The description of the rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The description of the managed rule.</para>
+            /// <para>RAM用户开启MFA，视为“合规”。</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the member account to which the rule does not apply, which means that the resources within the member account are not evaluated based on the rule.</para>
-            /// <remarks>
-            /// <para> This parameter applies only to a managed rule.</para>
-            /// </remarks>
+            /// <para>The rule does not apply to resources in the specified member accounts. The system does not evaluate resources in these accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120886317861****</para>
@@ -337,13 +346,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ExcludeAccountIdsScope { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource directory to which the rule does not apply, which means that the resources within member accounts in the resource directory are not evaluated based on the rule.</para>
-            /// <remarks>
-            /// </remarks>
-            /// <list type="bullet">
-            /// <item><description>This parameter applies only to a rule of a global account group.</description></item>
-            /// <item><description>This parameter applies only to a managed rule.</description></item>
-            /// </list>
+            /// <para>The rule does not apply to resources within the member accounts in the specified folders of the resource directory. The system does not evaluate resources in these folders.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fd-pWmkqZ****</para>
@@ -353,7 +356,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ExcludeFolderIdsScope { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the regions excluded from the compliance evaluations performed by the rule. Separate multiple region IDs with commas (,).</para>
+            /// <para>The rule does not apply to resources in the specified regions. The system does not evaluate resources in these regions. Separate multiple region IDs with a comma (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -363,7 +366,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ExcludeRegionIdsScope { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the resource groups excluded from the compliance evaluations performed by the rule. Separate multiple resource group IDs with commas (,).</para>
+            /// <para>The rule does not apply to resources in the specified resource groups. The system does not evaluate resources in these resource groups. Separate multiple resource group IDs with a comma (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aekzdibsjjc****</para>
@@ -373,7 +376,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ExcludeResourceGroupIdsScope { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource excluded from the compliance evaluations performed by the rule.</para>
+            /// <para>The IDs of the resources that are not evaluated by the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23642660635687****</para>
@@ -383,14 +386,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ExcludeResourceIdsScope { get; set; }
 
             /// <summary>
-            /// <para>The scope of the tag that is excluded.</para>
+            /// <para>The excluded scope of the tags.</para>
             /// </summary>
             [NameInMap("ExcludeTagsScope")]
             [Validation(Required=false)]
             public List<GetAggregateConfigRuleResponseBodyConfigRuleExcludeTagsScope> ExcludeTagsScope { get; set; }
             public class GetAggregateConfigRuleResponseBodyConfigRuleExcludeTagsScope : TeaModel {
                 /// <summary>
-                /// <para>The key of the tag.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>key-2</para>
@@ -400,7 +403,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The value of the tag.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>value-2</para>
@@ -412,7 +415,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The extended content, which is temporarily only used to configure the trigger time with a 24-hour cycle trigger.</para>
+            /// <para>The extended content. This parameter is used to configure the trigger time for a rule that is triggered on a 24-hour cycle.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;fixedHour&quot;:&quot;12&quot;}</para>
@@ -422,13 +425,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ExtendContent { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource directory to which the rule applies, which means that the resources within member accounts in the resource directory are evaluated based on the rule.</para>
-            /// <remarks>
-            /// </remarks>
-            /// <list type="bullet">
-            /// <item><description>This parameter applies only to rules of a global account group.</description></item>
-            /// <item><description>This parameter applies only to managed rules.</description></item>
-            /// </list>
+            /// <para>The rule applies only to resources within the member accounts in the specified folders of the resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fd-ZtHsRH****</para>
@@ -455,7 +452,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public GetAggregateConfigRuleResponseBodyConfigRuleManagedRule ManagedRule { get; set; }
             public class GetAggregateConfigRuleResponseBodyConfigRuleManagedRule : TeaModel {
                 /// <summary>
-                /// <para>The required input parameters of the managed rule.</para>
+                /// <para>The details of the required input parameters for the managed rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -468,7 +465,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <para>The description of the managed rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The description of the managed rule.</para>
+                /// <para>ECS磁盘未因欠费或安全等原因而被锁定，视为“合规”。</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -485,7 +482,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Identifier { get; set; }
 
                 /// <summary>
-                /// <para>The tags of the managed rule.</para>
+                /// <para>A list of labels for the managed rule.</para>
                 /// </summary>
                 [NameInMap("Labels")]
                 [Validation(Required=false)]
@@ -495,14 +492,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <para>The name of the managed rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ram-user-mfa-check</para>
+                /// <para>RAM用户开启MFA</para>
                 /// </summary>
                 [NameInMap("ManagedRuleName")]
                 [Validation(Required=false)]
                 public string ManagedRuleName { get; set; }
 
                 /// <summary>
-                /// <para>The optional input parameters of the managed rule.</para>
+                /// <para>The details of the optional input parameters for the managed rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -512,16 +509,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public Dictionary<string, object> OptionalInputParameterDetails { get; set; }
 
                 /// <summary>
-                /// <para>The details of the source of the managed rule.</para>
+                /// <para>The details of the managed rule source.</para>
                 /// </summary>
                 [NameInMap("SourceDetails")]
                 [Validation(Required=false)]
                 public List<GetAggregateConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails> SourceDetails { get; set; }
                 public class GetAggregateConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails : TeaModel {
                     /// <summary>
-                    /// <para>The event source of the managed rule.</para>
+                    /// <para>The event source.</para>
                     /// <remarks>
-                    /// <para> Only events related to Cloud Config are supported. The value is fixed to aliyun.config.</para>
+                    /// <para>Only Cloud Config events are supported: aliyun.config.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -532,13 +529,18 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public string EventSource { get; set; }
 
                     /// <summary>
-                    /// <para>The intervals at which the managed rule is triggered. Valid values:</para>
+                    /// <para>The frequency at which the rule is executed.</para>
                     /// <list type="bullet">
-                    /// <item><description>One_Hour: 1 hour.</description></item>
-                    /// <item><description>Three_Hours: 3 hours.</description></item>
-                    /// <item><description>Six_Hours: 6 hours.</description></item>
-                    /// <item><description>Twelve_Hours: 12 hours</description></item>
-                    /// <item><description>TwentyFour_Hours: 24 hours</description></item>
+                    /// <item><description><para>One_Hour: 1 hour.</para>
+                    /// </description></item>
+                    /// <item><description><para>Three_Hours: 3 hours.</para>
+                    /// </description></item>
+                    /// <item><description><para>Six_Hours: 6 hours.</para>
+                    /// </description></item>
+                    /// <item><description><para>Twelve_Hours: 12 hours.</para>
+                    /// </description></item>
+                    /// <item><description><para>TwentyFour_Hours: 24 hours.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -551,8 +553,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     /// <summary>
                     /// <para>The trigger type of the rule. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.</description></item>
-                    /// <item><description>ScheduledNotification: The managed rule is periodically triggered.</description></item>
+                    /// <item><description><para>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</para>
+                    /// </description></item>
+                    /// <item><description><para>ScheduledNotification: The rule is triggered periodically.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -567,13 +571,18 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The intervals at which the managed rule is triggered. Valid values:</para>
+            /// <para>The frequency at which the rule is executed.</para>
             /// <list type="bullet">
-            /// <item><description>One_Hour: 1 hour.</description></item>
-            /// <item><description>Three_Hours: 3 hours.</description></item>
-            /// <item><description>Six_Hours: 6 hours.</description></item>
-            /// <item><description>Twelve_Hours: 12 hours</description></item>
-            /// <item><description>TwentyFour_Hours: 24 hours</description></item>
+            /// <item><description><para>One_Hour: 1 hour.</para>
+            /// </description></item>
+            /// <item><description><para>Three_Hours: 3 hours.</para>
+            /// </description></item>
+            /// <item><description><para>Six_Hours: 6 hours.</para>
+            /// </description></item>
+            /// <item><description><para>Twelve_Hours: 12 hours.</para>
+            /// </description></item>
+            /// <item><description><para>TwentyFour_Hours: 24 hours.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -594,7 +603,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public long? ModifiedTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region to which the rule applies.</para>
+            /// <para>The rule applies only to resources in the specified regions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>global</para>
@@ -604,7 +613,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string RegionIdsScope { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group to which the rule applies.</para>
+            /// <para>The rule applies only to resources in the specified resource groups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aekzdibsjjc****</para>
@@ -614,7 +623,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ResourceGroupIdsScope { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the resources to which the rule applies. Separate multiple resource IDs with commas (,).</para>
+            /// <para>The rule applies only to the specified resources. Separate multiple resource IDs with a comma (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>eip-8vbf3x310fn56ijfd****</para>
@@ -624,7 +633,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ResourceIdsScope { get; set; }
 
             /// <summary>
-            /// <para>The names of the resource to which the rule applies.</para>
+            /// <para>The rule applies only to resources that have the specified names.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-xxx</para>
@@ -637,7 +646,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ResourceNameScope { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource evaluated by the rule.</para>
+            /// <para>The resource types that are evaluated by the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACS::RAM::User</para>
@@ -647,11 +656,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ResourceTypesScope { get; set; }
 
             /// <summary>
-            /// <para>The risk level of the resources that are not compliant with the rule. Valid values:</para>
+            /// <para>The risk level of the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: high risk level</description></item>
-            /// <item><description>2: medium risk level</description></item>
-            /// <item><description>3: low risk level</description></item>
+            /// <item><description><para>1: high</para>
+            /// </description></item>
+            /// <item><description><para>2: medium</para>
+            /// </description></item>
+            /// <item><description><para>3: low</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -662,7 +674,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The information about how the rule was created.</para>
+            /// <para>The source of the rule.</para>
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
@@ -671,8 +683,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// <para>The identifier of the rule.</para>
                 /// <list type="bullet">
-                /// <item><description>If the rule was created based on a managed rule, the value of this parameter is the name of the managed rule.</description></item>
-                /// <item><description>If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.</description></item>
+                /// <item><description><para>If the rule is a managed rule, the value of this parameter is the identifier of the managed rule.</para>
+                /// </description></item>
+                /// <item><description><para>If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of the function.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -683,10 +697,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Identifier { get; set; }
 
                 /// <summary>
-                /// <para>The way in which the rule was created. Valid values:</para>
+                /// <para>The owner of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>CUSTOM_FC: The rule is a custom rule.</description></item>
-                /// <item><description>ALIYUN: The rule was created based on a managed rule of Alibaba Cloud.</description></item>
+                /// <item><description><para>CUSTOM_FC: a custom rule.</para>
+                /// </description></item>
+                /// <item><description><para>ALIYUN: a managed rule.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -697,16 +713,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The details of the source of the rule.</para>
+                /// <para>The details of the rule source.</para>
                 /// </summary>
                 [NameInMap("SourceDetails")]
                 [Validation(Required=false)]
                 public List<GetAggregateConfigRuleResponseBodyConfigRuleSourceSourceDetails> SourceDetails { get; set; }
                 public class GetAggregateConfigRuleResponseBodyConfigRuleSourceSourceDetails : TeaModel {
                     /// <summary>
-                    /// <para>The event source of the managed rule.</para>
+                    /// <para>The event source.</para>
                     /// <remarks>
-                    /// <para> Only events related to Cloud Config are supported. The value is fixed to aliyun.config.</para>
+                    /// <para>Only Cloud Config events are supported: aliyun.config.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -717,13 +733,18 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public string EventSource { get; set; }
 
                     /// <summary>
-                    /// <para>The intervals at which the managed rule is triggered. Valid values:</para>
+                    /// <para>The frequency at which the rule is executed. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>One_Hour: 1 hour.</description></item>
-                    /// <item><description>Three_Hours: 3 hours.</description></item>
-                    /// <item><description>Six_Hours: 6 hours.</description></item>
-                    /// <item><description>Twelve_Hours: 12 hours</description></item>
-                    /// <item><description>TwentyFour_Hours: 24 hours</description></item>
+                    /// <item><description><para>One_Hour: 1 hour.</para>
+                    /// </description></item>
+                    /// <item><description><para>Three_Hours: 3 hours.</para>
+                    /// </description></item>
+                    /// <item><description><para>Six_Hours: 6 hours.</para>
+                    /// </description></item>
+                    /// <item><description><para>Twelve_Hours: 12 hours.</para>
+                    /// </description></item>
+                    /// <item><description><para>TwentyFour_Hours: 24 hours.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -736,8 +757,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     /// <summary>
                     /// <para>The trigger type of the rule. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.</description></item>
-                    /// <item><description>ScheduledNotification: The managed rule is periodically triggered.</description></item>
+                    /// <item><description><para>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</para>
+                    /// </description></item>
+                    /// <item><description><para>ScheduledNotification: The rule is triggered periodically.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -752,13 +775,13 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>When retrieving details of rules created using the parameter <c>TagsScope</c>, this field will not be returned.</para>
-            /// <para>To retrieve rules created using the deprecated field <c>TagKeyScope</c> (not recommended): for example, when the parameter <c>TagKeyScope</c> has a value of ECS,OSS, if this parameter is set to <c>AND</c>, it means that the rule only applies to resources bound with both labels ECS and OSS.</para>
-            /// <para>Values:</para>
+            /// <para>This parameter is not returned for rules that are created using the <c>TagsScope</c> parameter.</para>
+            /// <para>This parameter is returned only for rules that are created using the deprecated <c>TagKeyScope</c> parameter. For example, if <c>TagKeyScope</c> is set to <c>ECS,OSS</c> and this parameter is set to <c>AND</c>, the rule applies to resources that have both the <c>ECS</c> and <c>OSS</c> tags.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>AND: And.</para>
+            /// <item><description><para>AND</para>
             /// </description></item>
-            /// <item><description><para>OR: Or.</para>
+            /// <item><description><para>OR</para>
             /// </description></item>
             /// </list>
             /// 
@@ -772,8 +795,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>This parameter is deprecated. We recommend that you use the <c>TagsScope</c> parameter.</para>
-            /// <para>The tag key used to filter resources. The rule applies only to the resources with the specified tag key.</para>
+            /// <para>This parameter is deprecated. Use the <c>TagsScope</c> parameter instead.</para>
+            /// <para>The rule applies only to resources that have the specified tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RAM</para>
@@ -786,8 +809,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>This parameter is deprecated. We recommend that you use the <c>TagsScope</c> parameter.</para>
-            /// <para>The tag value used to filter resources. The rule applies only to the resources with the specified tag value.</para>
+            /// <para>This parameter is deprecated. Use the <c>TagsScope</c> parameter instead.</para>
+            /// <para>The rule applies only to resources that have the specified tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MFA</para>
@@ -798,7 +821,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string TagValueScope { get; set; }
 
             /// <summary>
-            /// <para>The list of tags.</para>
+            /// <para>The resource tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -827,14 +850,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The tag scope.</para>
+            /// <para>The scope of the tags.</para>
             /// </summary>
             [NameInMap("TagsScope")]
             [Validation(Required=false)]
             public List<GetAggregateConfigRuleResponseBodyConfigRuleTagsScope> TagsScope { get; set; }
             public class GetAggregateConfigRuleResponseBodyConfigRuleTagsScope : TeaModel {
                 /// <summary>
-                /// <para>The key of the tag.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>key-1</para>
@@ -844,7 +867,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The value of the tag.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>value-1</para>
@@ -858,7 +881,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>811234F4-C3AB-4D15-B90B-F55016D1B5AA</para>
