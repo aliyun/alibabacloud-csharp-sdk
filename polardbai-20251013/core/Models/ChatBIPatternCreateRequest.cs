@@ -39,6 +39,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>cn-beijing</para>
+        /// </summary>
+        [NameInMap("SourceRegionId")]
+        [Validation(Required=false)]
+        public string SourceRegionId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>空字符串</para>
         /// </summary>
         [NameInMap("TableNameSuffix")]

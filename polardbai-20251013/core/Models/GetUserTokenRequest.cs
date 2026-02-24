@@ -30,6 +30,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013.Models
         public string Password { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
+        /// </summary>
+        [NameInMap("SourceRegionId")]
+        [Validation(Required=false)]
+        public string SourceRegionId { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

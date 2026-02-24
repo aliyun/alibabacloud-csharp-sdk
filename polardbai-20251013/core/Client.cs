@@ -68,6 +68,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["OssUrl"] = request.OssUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -117,6 +121,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssUrl))
             {
                 query["OssUrl"] = request.OssUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -208,6 +216,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["InstanceName"] = request.InstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -261,6 +273,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -352,6 +368,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["InstanceName"] = request.InstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -405,6 +425,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -500,6 +524,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["InstanceName"] = request.InstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -557,6 +585,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -660,6 +692,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -725,6 +761,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -820,6 +860,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["InstanceName"] = request.InstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -877,6 +921,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -984,6 +1032,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["QueryFunction"] = request.QueryFunction;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlCondition))
             {
                 query["SqlCondition"] = request.SqlCondition;
@@ -1065,6 +1117,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryFunction))
             {
                 query["QueryFunction"] = request.QueryFunction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlCondition))
             {
@@ -1164,6 +1220,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["InstanceName"] = request.InstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableType))
             {
                 query["TableType"] = request.TableType;
@@ -1217,6 +1277,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableType))
             {
@@ -1312,6 +1376,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["InstanceName"] = request.InstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1365,6 +1433,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1464,6 +1536,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["InstanceName"] = request.InstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
                 query["TableName"] = request.TableName;
@@ -1533,6 +1609,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
@@ -1632,6 +1712,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["InstanceName"] = request.InstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableNameSuffix))
             {
                 query["TableNameSuffix"] = request.TableNameSuffix;
@@ -1689,6 +1773,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableNameSuffix))
             {
@@ -1784,6 +1872,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["InstanceName"] = request.InstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
                 query["TableName"] = request.TableName;
@@ -1841,6 +1933,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
@@ -1940,6 +2036,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["InstanceName"] = request.InstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
                 query["TableName"] = request.TableName;
@@ -2001,6 +2101,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
@@ -2100,6 +2204,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["PatternTableName"] = request.PatternTableName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableNameSuffix))
             {
                 query["TableNameSuffix"] = request.TableNameSuffix;
@@ -2161,6 +2269,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatternTableName))
             {
                 query["PatternTableName"] = request.PatternTableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableNameSuffix))
             {
@@ -2256,6 +2368,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["InstanceName"] = request.InstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
                 query["TableName"] = request.TableName;
@@ -2313,6 +2429,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
@@ -2420,6 +2540,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2485,6 +2609,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2588,6 +2716,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
                 query["TableName"] = request.TableName;
@@ -2657,6 +2789,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
@@ -2764,6 +2900,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2829,6 +2969,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2940,6 +3084,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["PatternSql"] = request.PatternSql;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
                 query["TableName"] = request.TableName;
@@ -3017,6 +3165,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatternSql))
             {
                 query["PatternSql"] = request.PatternSql;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
@@ -3146,6 +3298,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["SelectData"] = request.SelectData;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThinkingMode))
             {
                 query["ThinkingMode"] = request.ThinkingMode;
@@ -3237,6 +3393,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectData))
             {
                 query["SelectData"] = request.SelectData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThinkingMode))
             {
@@ -3336,6 +3496,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["InstanceName"] = request.InstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableNameSuffix))
             {
                 query["TableNameSuffix"] = request.TableNameSuffix;
@@ -3405,6 +3569,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableNameSuffix))
             {
@@ -3508,6 +3676,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["InstanceName"] = request.InstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
                 query["TableName"] = request.TableName;
@@ -3565,6 +3737,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
@@ -3672,6 +3848,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3737,6 +3917,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3828,6 +4012,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["InstanceName"] = request.InstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
                 query["TableName"] = request.TableName;
@@ -3889,6 +4077,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
@@ -3984,6 +4176,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["DatasetName"] = request.DatasetName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4033,6 +4229,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
             {
                 query["DatasetName"] = request.DatasetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4124,6 +4324,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["ModelMode"] = request.ModelMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4177,6 +4381,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelMode))
             {
                 query["ModelMode"] = request.ModelMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4264,6 +4472,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["DatasetName"] = request.DatasetName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4313,6 +4525,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
             {
                 query["DatasetName"] = request.DatasetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4406,6 +4622,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["Password"] = request.Password;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
             {
                 query["Username"] = request.Username;
@@ -4465,6 +4685,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
             {
                 query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
             {
@@ -4574,6 +4798,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["SearchModel"] = request.SearchModel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
             {
                 query["TopK"] = request.TopK;
@@ -4645,6 +4873,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchModel))
             {
                 query["SearchModel"] = request.SearchModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
             {
@@ -4750,6 +4982,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["ResultMode"] = request.ResultMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["TaskId"] = request.TaskId;
@@ -4821,6 +5057,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultMode))
             {
                 query["ResultMode"] = request.ResultMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
@@ -4912,6 +5152,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["DatasetId"] = request.DatasetId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4957,6 +5201,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
             {
                 query["DatasetId"] = request.DatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5040,6 +5288,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["Embedding"] = request.Embedding;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5085,6 +5337,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Embedding))
             {
                 query["Embedding"] = request.Embedding;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5168,6 +5424,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["DatasetId"] = request.DatasetId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5213,6 +5473,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
             {
                 query["DatasetId"] = request.DatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5292,6 +5556,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5333,6 +5601,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5420,6 +5692,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["OssUrl"] = request.OssUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5469,6 +5745,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssUrl))
             {
                 query["OssUrl"] = request.OssUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5548,6 +5828,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["TaskId"] = request.TaskId;
@@ -5593,6 +5877,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
@@ -5680,6 +5968,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["Password"] = request.Password;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
             {
                 query["Username"] = request.Username;
@@ -5729,6 +6021,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
             {
                 query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
             {
@@ -5824,6 +6120,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5877,6 +6177,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5964,6 +6268,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -6013,6 +6321,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6092,6 +6404,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -6133,6 +6449,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6224,6 +6544,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -6277,6 +6601,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6356,6 +6684,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -6397,6 +6729,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6484,6 +6820,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -6533,6 +6873,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6638,6 +6982,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -6705,6 +7053,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6792,6 +7144,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["TaskId"] = request.TaskId;
@@ -6845,6 +7201,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
@@ -6940,6 +7300,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["DatasetName"] = request.DatasetName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -6993,6 +7357,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
             {
                 query["DatasetName"] = request.DatasetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7084,6 +7452,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["DatasetName"] = request.DatasetName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -7137,6 +7509,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
             {
                 query["DatasetName"] = request.DatasetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7222,6 +7598,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteListShrink))
             {
                 query["WhiteList"] = request.WhiteListShrink;
@@ -7273,6 +7653,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteListShrink))
             {
@@ -7364,6 +7748,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["OssUrl"] = request.OssUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -7413,6 +7801,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssUrl))
             {
                 query["OssUrl"] = request.OssUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7504,6 +7896,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["DBName"] = request.DBName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -7557,6 +7953,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBName))
             {
                 query["DBName"] = request.DBName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7644,6 +8044,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -7693,6 +8097,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegionId))
+            {
+                query["SourceRegionId"] = request.SourceRegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
