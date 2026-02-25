@@ -17,26 +17,14 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public List<ListCustomEntitiesResponseBodyCustomEntitiesCustomEntity> CustomEntity { get; set; }
             public class ListCustomEntitiesResponseBodyCustomEntitiesCustomEntity : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("CustomEntityId")]
                 [Validation(Required=false)]
                 public string CustomEntityId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>{ &quot;finegrainName&quot;:&quot;example&quot; }</para>
-                /// </summary>
                 [NameInMap("CustomEntityInfo")]
                 [Validation(Required=false)]
                 public string CustomEntityInfo { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>exampleName</para>
-                /// </summary>
                 [NameInMap("CustomEntityName")]
                 [Validation(Required=false)]
                 public string CustomEntityName { get; set; }

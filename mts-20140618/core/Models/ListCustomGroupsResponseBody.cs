@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                 [Validation(Required=false)]
                 public string CustomGroupDescription { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("CustomGroupId")]
                 [Validation(Required=false)]
                 public string CustomGroupId { get; set; }

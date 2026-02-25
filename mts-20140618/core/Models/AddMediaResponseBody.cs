@@ -174,9 +174,6 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public string PublishState { get; set; }
 
-            /// <summary>
-            /// <para>The IDs of the media workflow execution instances.</para>
-            /// </summary>
             [NameInMap("RunIdList")]
             [Validation(Required=false)]
             public AddMediaResponseBodyMediaRunIdList RunIdList { get; set; }
@@ -197,9 +194,6 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public string Size { get; set; }
 
-            /// <summary>
-            /// <para>The tags of the media file.</para>
-            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public AddMediaResponseBodyMediaTags Tags { get; set; }

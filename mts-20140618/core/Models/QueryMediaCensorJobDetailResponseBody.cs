@@ -131,9 +131,6 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public string Code { get; set; }
 
-            /// <summary>
-            /// <para>The moderation results of thumbnails.</para>
-            /// </summary>
             [NameInMap("CoverImageCensorResults")]
             [Validation(Required=false)]
             public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailCoverImageCensorResults CoverImageCensorResults { get; set; }
@@ -142,39 +139,18 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                 [Validation(Required=false)]
                 public List<QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailCoverImageCensorResultsCoverImageCensorResult> CoverImageCensorResult { get; set; }
                 public class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailCoverImageCensorResultsCoverImageCensorResult : TeaModel {
-                    /// <summary>
-                    /// <para>The OSS bucket that stores the video thumbnail.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>bucket-out-test-****</para>
-                    /// </summary>
                     [NameInMap("Bucket")]
                     [Validation(Required=false)]
                     public string Bucket { get; set; }
 
-                    /// <summary>
-                    /// <para>The OSS region in which the video thumbnail resides.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>oss-cn-shanghai</para>
-                    /// </summary>
                     [NameInMap("Location")]
                     [Validation(Required=false)]
                     public string Location { get; set; }
 
-                    /// <summary>
-                    /// <para>The Object Storage Service (OSS) object that is used as the video thumbnail.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>test/ai/censor/v2/vme-****.jpg</para>
-                    /// </summary>
                     [NameInMap("Object")]
                     [Validation(Required=false)]
                     public string Object { get; set; }
 
-                    /// <summary>
-                    /// <para>The moderation results.</para>
-                    /// </summary>
                     [NameInMap("Results")]
                     [Validation(Required=false)]
                     public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailCoverImageCensorResultsCoverImageCensorResultResults Results { get; set; }
@@ -183,112 +159,18 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                         [Validation(Required=false)]
                         public List<QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailCoverImageCensorResultsCoverImageCensorResultResultsResult> Result { get; set; }
                         public class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailCoverImageCensorResultsCoverImageCensorResultResultsResult : TeaModel {
-                            /// <summary>
-                            /// <para>The labels of the moderation result. Multiple labels are separated with commas (,).</para>
-                            /// <list type="bullet">
-                            /// <item><description><para>Valid values in the pornographic content moderation scenario:</para>
-                            /// <list type="bullet">
-                            /// <item><description><b>normal</b>: normal content</description></item>
-                            /// <item><description><b>sexy</b>: sexy content</description></item>
-                            /// <item><description><b>porn</b>: pornographic content</description></item>
-                            /// </list>
-                            /// </description></item>
-                            /// <item><description><para>Valid values in the terrorist content moderation scenario:</para>
-                            /// <list type="bullet">
-                            /// <item><description><b>narmal</b>: normal content</description></item>
-                            /// <item><description><b>bloody</b>: bloody content</description></item>
-                            /// <item><description><b>explosion</b>: explosion and smoke</description></item>
-                            /// <item><description><b>outfit</b>: special costume</description></item>
-                            /// <item><description><b>logo</b>: special logo</description></item>
-                            /// <item><description><b>weapon</b>: weapon</description></item>
-                            /// <item><description><b>politics</b>: political content</description></item>
-                            /// <item><description><b>violence</b>: violence</description></item>
-                            /// <item><description><b>crowd</b>: crowd</description></item>
-                            /// <item><description><b>parade</b>: parade</description></item>
-                            /// <item><description><b>carcrash</b>: car accident</description></item>
-                            /// <item><description><b>flag</b>: flag</description></item>
-                            /// <item><description><b>location</b>: landmark</description></item>
-                            /// <item><description><b>others</b>: other content</description></item>
-                            /// </list>
-                            /// </description></item>
-                            /// <item><description><para>Valid values in the ad moderation scenario:</para>
-                            /// <list type="bullet">
-                            /// <item><description><b>normal</b>: normal content</description></item>
-                            /// <item><description><b>ad</b>: other ads</description></item>
-                            /// <item><description><b>politics</b>: political content in text</description></item>
-                            /// <item><description><b>porn</b>: pornographic content in text</description></item>
-                            /// <item><description><b>abuse</b>: abuse in text</description></item>
-                            /// <item><description><b>terrorism</b>: terrorist content in text</description></item>
-                            /// <item><description><b>contraband</b>: prohibited content in text</description></item>
-                            /// <item><description><b>spam</b>: spam in text</description></item>
-                            /// <item><description><b>npx</b>: illegal ads</description></item>
-                            /// <item><description><b>qrcode</b>: QR code</description></item>
-                            /// <item><description><b>programCode</b>: mini program code</description></item>
-                            /// </list>
-                            /// </description></item>
-                            /// <item><description><para>Valid values in the live moderation scenario:</para>
-                            /// <list type="bullet">
-                            /// <item><description><b>normal</b>: normal content</description></item>
-                            /// <item><description><b>meaningless</b>: meaningless content, such as a black or white screen</description></item>
-                            /// <item><description><b>PIP</b>: picture-in-picture</description></item>
-                            /// <item><description><b>smoking</b>: smoking</description></item>
-                            /// <item><description><b>drivelive</b>: live broadcasting in a running vehicle</description></item>
-                            /// </list>
-                            /// </description></item>
-                            /// <item><description><para>Valid values in the logo moderation scenario:</para>
-                            /// <list type="bullet">
-                            /// <item><description><b>normal</b>: normal content</description></item>
-                            /// <item><description><b>TV</b>: controlled TV station logo</description></item>
-                            /// <item><description><b>trademark</b>: trademark</description></item>
-                            /// </list>
-                            /// </description></item>
-                            /// </list>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>normal</para>
-                            /// </summary>
                             [NameInMap("Label")]
                             [Validation(Required=false)]
                             public string Label { get; set; }
 
-                            /// <summary>
-                            /// <para>The score. Valid values: <b>0 to 100</b>.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>100</para>
-                            /// </summary>
                             [NameInMap("Rate")]
                             [Validation(Required=false)]
                             public string Rate { get; set; }
 
-                            /// <summary>
-                            /// <para>The moderation scenario. Valid values:</para>
-                            /// <list type="bullet">
-                            /// <item><description><b>porn</b>: pornographic content moderation</description></item>
-                            /// <item><description><b>terrorism</b>: terrorist content moderation</description></item>
-                            /// <item><description><b>ad</b>: ad violation moderation</description></item>
-                            /// <item><description><b>live</b>: undesirable scene moderation</description></item>
-                            /// <item><description><b>logo</b>: logo moderation</description></item>
-                            /// </list>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>porn</para>
-                            /// </summary>
                             [NameInMap("Scene")]
                             [Validation(Required=false)]
                             public string Scene { get; set; }
 
-                            /// <summary>
-                            /// <para>The recommended subsequent operation. Valid values:</para>
-                            /// <list type="bullet">
-                            /// <item><description><b>pass</b>: The content passes the moderation.</description></item>
-                            /// <item><description><b>review</b>: The content needs to be manually reviewed again.</description></item>
-                            /// <item><description><b>block</b>: The content needs to be blocked.</description></item>
-                            /// </list>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>pass</para>
-                            /// </summary>
                             [NameInMap("Suggestion")]
                             [Validation(Required=false)]
                             public string Suggestion { get; set; }
@@ -559,9 +441,6 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResult VensorCensorResult { get; set; }
             public class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResult : TeaModel {
-                /// <summary>
-                /// <para>A collection of the moderation results. The information includes the summary of various scenarios such as pornographic content and terrorist content.</para>
-                /// </summary>
                 [NameInMap("CensorResults")]
                 [Validation(Required=false)]
                 public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultCensorResults CensorResults { get; set; }
@@ -570,112 +449,18 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     [Validation(Required=false)]
                     public List<QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultCensorResultsCensorResult> CensorResult { get; set; }
                     public class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultCensorResultsCensorResult : TeaModel {
-                        /// <summary>
-                        /// <para>The labels of the moderation result. Multiple labels are separated with commas (,). Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description><para>Valid values in the pornographic content moderation scenario:</para>
-                        /// <list type="bullet">
-                        /// <item><description><b>porn</b>: pornographic content</description></item>
-                        /// <item><description><b>sexy</b>: sexy content</description></item>
-                        /// <item><description><b>normal</b>: normal content</description></item>
-                        /// </list>
-                        /// </description></item>
-                        /// <item><description><para>Valid values in the terrorist content moderation scenario:</para>
-                        /// <list type="bullet">
-                        /// <item><description><b>normal</b>: normal content</description></item>
-                        /// <item><description><b>bloody</b>: bloody content</description></item>
-                        /// <item><description><b>explosion</b>: explosion and smoke</description></item>
-                        /// <item><description><b>outfit</b>: special costume</description></item>
-                        /// <item><description><b>logo</b>: special logo</description></item>
-                        /// <item><description><b>weapon</b>: weapon</description></item>
-                        /// <item><description><b>politics</b>: political content</description></item>
-                        /// <item><description><b>violence</b>: violence</description></item>
-                        /// <item><description><b>crowd</b>: crowd</description></item>
-                        /// <item><description><b>parade</b>: parade</description></item>
-                        /// <item><description><b>carcrash</b>: car accident</description></item>
-                        /// <item><description><b>flag</b>: flag</description></item>
-                        /// <item><description><b>location</b>: landmark</description></item>
-                        /// <item><description><b>others</b>: other content</description></item>
-                        /// </list>
-                        /// </description></item>
-                        /// <item><description><para>Valid values in the ad moderation scenario:</para>
-                        /// <list type="bullet">
-                        /// <item><description><b>normal</b>: normal content</description></item>
-                        /// <item><description><b>ad</b>: other ads</description></item>
-                        /// <item><description><b>politics</b>: political content in text</description></item>
-                        /// <item><description><b>porn</b>: pornographic content in text</description></item>
-                        /// <item><description><b>abuse</b>: abuse in text</description></item>
-                        /// <item><description><b>terrorism</b>: terrorist content in text</description></item>
-                        /// <item><description><b>contraband</b>: prohibited content in text</description></item>
-                        /// <item><description><b>spam</b>: spam in text</description></item>
-                        /// <item><description><b>npx</b>: illegal ads</description></item>
-                        /// <item><description><b>qrcode</b>: QR code</description></item>
-                        /// <item><description><b>programCode</b>: mini program code</description></item>
-                        /// </list>
-                        /// </description></item>
-                        /// <item><description><para>Valid values in the live moderation scenario:</para>
-                        /// <list type="bullet">
-                        /// <item><description><b>normal</b>: normal content</description></item>
-                        /// <item><description><b>meaningless</b>: meaningless content, such as a black or white screen</description></item>
-                        /// <item><description><b>PIP</b>: picture-in-picture</description></item>
-                        /// <item><description><b>smoking</b>: smoking</description></item>
-                        /// <item><description><b>drivelive</b>: live broadcasting in a running vehicle</description></item>
-                        /// </list>
-                        /// </description></item>
-                        /// <item><description><para>Valid values in the logo moderation scenario:</para>
-                        /// <list type="bullet">
-                        /// <item><description><b>normal</b>: normal content</description></item>
-                        /// <item><description><b>TV</b>: controlled TV station logo</description></item>
-                        /// <item><description><b>trademark</b>: trademark</description></item>
-                        /// </list>
-                        /// </description></item>
-                        /// </list>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>meaningless</para>
-                        /// </summary>
                         [NameInMap("Label")]
                         [Validation(Required=false)]
                         public string Label { get; set; }
 
-                        /// <summary>
-                        /// <para>The score.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>100</para>
-                        /// </summary>
                         [NameInMap("Rate")]
                         [Validation(Required=false)]
                         public string Rate { get; set; }
 
-                        /// <summary>
-                        /// <para>The moderation scenario. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description><b>porn</b>: pornographic content moderation</description></item>
-                        /// <item><description><b>terrorism</b>: terrorist content moderation</description></item>
-                        /// <item><description><b>ad</b>: ad violation moderation</description></item>
-                        /// <item><description><b>live</b>: undesirable scene moderation</description></item>
-                        /// <item><description><b>logo</b>: logo moderation</description></item>
-                        /// </list>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>terrorism</para>
-                        /// </summary>
                         [NameInMap("Scene")]
                         [Validation(Required=false)]
                         public string Scene { get; set; }
 
-                        /// <summary>
-                        /// <para>The recommended subsequent operation. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description><b>pass</b>: The content passes the moderation.</description></item>
-                        /// <item><description><b>review</b>: The content needs to be manually reviewed again.</description></item>
-                        /// <item><description><b>block</b>: The content needs to be blocked.</description></item>
-                        /// </list>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>review</para>
-                        /// </summary>
                         [NameInMap("Suggestion")]
                         [Validation(Required=false)]
                         public string Suggestion { get; set; }
@@ -694,9 +479,6 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                 [Validation(Required=false)]
                 public string NextPageToken { get; set; }
 
-                /// <summary>
-                /// <para>The moderation results that are sorted in ascending order by time.</para>
-                /// </summary>
                 [NameInMap("VideoTimelines")]
                 [Validation(Required=false)]
                 public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultVideoTimelines VideoTimelines { get; set; }
@@ -705,9 +487,6 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     [Validation(Required=false)]
                     public List<QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultVideoTimelinesVideoTimeline> VideoTimeline { get; set; }
                     public class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultVideoTimelinesVideoTimeline : TeaModel {
-                        /// <summary>
-                        /// <para>The moderation results that include information such as labels and scores.</para>
-                        /// </summary>
                         [NameInMap("CensorResults")]
                         [Validation(Required=false)]
                         public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultVideoTimelinesVideoTimelineCensorResults CensorResults { get; set; }
@@ -716,112 +495,18 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                             [Validation(Required=false)]
                             public List<QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultVideoTimelinesVideoTimelineCensorResultsCensorResult> CensorResult { get; set; }
                             public class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultVideoTimelinesVideoTimelineCensorResultsCensorResult : TeaModel {
-                                /// <summary>
-                                /// <para>The labels of the moderation result. Multiple labels are separated with commas (,). Valid values:</para>
-                                /// <list type="bullet">
-                                /// <item><description><para>Valid values in the pornographic content moderation scenario:</para>
-                                /// <list type="bullet">
-                                /// <item><description><b>porn</b>: pornographic content</description></item>
-                                /// <item><description><b>sexy</b>: sexy content</description></item>
-                                /// <item><description><b>normal</b>: normal content</description></item>
-                                /// </list>
-                                /// </description></item>
-                                /// <item><description><para>Valid values in the terrorist content moderation scenario:</para>
-                                /// <list type="bullet">
-                                /// <item><description><b>normal</b>: normal content</description></item>
-                                /// <item><description><b>bloody</b>: bloody content</description></item>
-                                /// <item><description><b>explosion</b>: explosion and smoke</description></item>
-                                /// <item><description><b>outfit</b>: special costume</description></item>
-                                /// <item><description><b>logo</b>: special logo</description></item>
-                                /// <item><description><b>weapon</b>: weapon</description></item>
-                                /// <item><description><b>politics</b>: political content</description></item>
-                                /// <item><description><b>violence</b>: violence</description></item>
-                                /// <item><description><b>crowd</b>: crowd</description></item>
-                                /// <item><description><b>parade</b>: parade</description></item>
-                                /// <item><description><b>carcrash</b>: car accident</description></item>
-                                /// <item><description><b>flag</b>: flag</description></item>
-                                /// <item><description><b>location</b>: landmark</description></item>
-                                /// <item><description><b>others</b>: other content</description></item>
-                                /// </list>
-                                /// </description></item>
-                                /// <item><description><para>Valid values in the ad moderation scenario:</para>
-                                /// <list type="bullet">
-                                /// <item><description><b>normal</b>: normal content</description></item>
-                                /// <item><description><b>ad</b>: other ads</description></item>
-                                /// <item><description><b>politics</b>: political content in text</description></item>
-                                /// <item><description><b>porn</b>: pornographic content in text</description></item>
-                                /// <item><description><b>abuse</b>: abuse in text</description></item>
-                                /// <item><description><b>terrorism</b>: terrorist content in text</description></item>
-                                /// <item><description><b>contraband</b>: prohibited content in text</description></item>
-                                /// <item><description><b>spam</b>: spam in text</description></item>
-                                /// <item><description><b>npx</b>: illegal ads</description></item>
-                                /// <item><description><b>qrcode</b>: QR code</description></item>
-                                /// <item><description><b>programCode</b>: mini program code</description></item>
-                                /// </list>
-                                /// </description></item>
-                                /// <item><description><para>Valid values in the live moderation scenario:</para>
-                                /// <list type="bullet">
-                                /// <item><description><b>normal</b>: normal content</description></item>
-                                /// <item><description><b>meaningless</b>: meaningless content, such as a black or white screen</description></item>
-                                /// <item><description><b>PIP</b>: picture-in-picture</description></item>
-                                /// <item><description><b>smoking</b>: smoking</description></item>
-                                /// <item><description><b>drivelive</b>: live broadcasting in a running vehicle</description></item>
-                                /// </list>
-                                /// </description></item>
-                                /// <item><description><para>Valid values in the logo moderation scenario:</para>
-                                /// <list type="bullet">
-                                /// <item><description><b>normal</b>: normal content</description></item>
-                                /// <item><description><b>TV</b>: controlled TV station logo</description></item>
-                                /// <item><description><b>trademark</b>: trademark</description></item>
-                                /// </list>
-                                /// </description></item>
-                                /// </list>
-                                /// 
-                                /// <b>Example:</b>
-                                /// <para>porn,ad</para>
-                                /// </summary>
                                 [NameInMap("Label")]
                                 [Validation(Required=false)]
                                 public string Label { get; set; }
 
-                                /// <summary>
-                                /// <para>The score.</para>
-                                /// 
-                                /// <b>Example:</b>
-                                /// <para>99.99</para>
-                                /// </summary>
                                 [NameInMap("Rate")]
                                 [Validation(Required=false)]
                                 public string Rate { get; set; }
 
-                                /// <summary>
-                                /// <para>The moderation scenario. Valid values:</para>
-                                /// <list type="bullet">
-                                /// <item><description><b>porn</b>: pornographic content moderation</description></item>
-                                /// <item><description><b>terrorism</b>: terrorist content moderation</description></item>
-                                /// <item><description><b>ad</b>: ad violation moderation</description></item>
-                                /// <item><description><b>live</b>: undesirable scene moderation</description></item>
-                                /// <item><description><b>logo</b>: logo moderation</description></item>
-                                /// </list>
-                                /// 
-                                /// <b>Example:</b>
-                                /// <para>porn</para>
-                                /// </summary>
                                 [NameInMap("Scene")]
                                 [Validation(Required=false)]
                                 public string Scene { get; set; }
 
-                                /// <summary>
-                                /// <para>The recommended subsequent operation. Valid values:</para>
-                                /// <list type="bullet">
-                                /// <item><description><b>pass</b>: The content passes the moderation.</description></item>
-                                /// <item><description><b>review</b>: The content needs to be manually reviewed again.</description></item>
-                                /// <item><description><b>block</b>: The content needs to be blocked.</description></item>
-                                /// </list>
-                                /// 
-                                /// <b>Example:</b>
-                                /// <para>block</para>
-                                /// </summary>
                                 [NameInMap("Suggestion")]
                                 [Validation(Required=false)]
                                 public string Suggestion { get; set; }
@@ -830,25 +515,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
 
                         }
 
-                        /// <summary>
-                        /// <para>The one or more OSS objects that are generated as the output snapshots.</para>
-                        /// <remarks>
-                        /// <para>In the example, {Count} is a placeholder. The OSS objects that are generated as output snapshots are named <c>output00001-****.jpg</c>, <c>output00002-****.jpg</c>, and so on.</para>
-                        /// </remarks>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>output{Count}.jpg</para>
-                        /// </summary>
                         [NameInMap("Object")]
                         [Validation(Required=false)]
                         public string Object { get; set; }
 
-                        /// <summary>
-                        /// <para>The position in the video. Format: <c>hh:mm:ss[.SSS]</c>.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>00:02:59.999</para>
-                        /// </summary>
                         [NameInMap("Timestamp")]
                         [Validation(Required=false)]
                         public string Timestamp { get; set; }

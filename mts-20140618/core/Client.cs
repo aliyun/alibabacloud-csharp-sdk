@@ -1108,7 +1108,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加labelVersion、knowledgeConfig配置</para>
+        /// <para>Adds an analysis template of a smart tagging job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1226,7 +1226,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加labelVersion、knowledgeConfig配置</para>
+        /// <para>Adds an analysis template of a smart tagging job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1344,7 +1344,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加labelVersion、knowledgeConfig配置</para>
+        /// <para>Adds an analysis template of a smart tagging job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1362,7 +1362,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加labelVersion、knowledgeConfig配置</para>
+        /// <para>Adds an analysis template of a smart tagging job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1976,7 +1976,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an output media bucket to the media library.</para>
+        /// <para>Binds an output media bucket. Media buckets are Object Storage Service (OSS) buckets that are used by ApsaraVideo Media Processing (MPS) to store media resources. After you bind an OSS bucket to MPS as an input media bucket or output media bucket, MPS has the permissions to listen to the messages of the bucket, which indicate that files are uploaded to the bucket. This way, MPS can trigger workflows and return files that are processed. You can all this operation to bind an output media bucket to the media library.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2041,7 +2041,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an output media bucket to the media library.</para>
+        /// <para>Binds an output media bucket. Media buckets are Object Storage Service (OSS) buckets that are used by ApsaraVideo Media Processing (MPS) to store media resources. After you bind an OSS bucket to MPS as an input media bucket or output media bucket, MPS has the permissions to listen to the messages of the bucket, which indicate that files are uploaded to the bucket. This way, MPS can trigger workflows and return files that are processed. You can all this operation to bind an output media bucket to the media library.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2106,7 +2106,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an output media bucket to the media library.</para>
+        /// <para>Binds an output media bucket. Media buckets are Object Storage Service (OSS) buckets that are used by ApsaraVideo Media Processing (MPS) to store media resources. After you bind an OSS bucket to MPS as an input media bucket or output media bucket, MPS has the permissions to listen to the messages of the bucket, which indicate that files are uploaded to the bucket. This way, MPS can trigger workflows and return files that are processed. You can all this operation to bind an output media bucket to the media library.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2131,7 +2131,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an output media bucket to the media library.</para>
+        /// <para>Binds an output media bucket. Media buckets are Object Storage Service (OSS) buckets that are used by ApsaraVideo Media Processing (MPS) to store media resources. After you bind an OSS bucket to MPS as an input media bucket or output media bucket, MPS has the permissions to listen to the messages of the bucket, which indicate that files are uploaded to the bucket. This way, MPS can trigger workflows and return files that are processed. You can all this operation to bind an output media bucket to the media library.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2346,6 +2346,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return await CancelJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom entity in a custom library.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCustomEntityRequest
         /// </param>
@@ -2411,6 +2416,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return TeaModel.ToObject<CreateCustomEntityResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom entity in a custom library.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCustomEntityRequest
         /// </param>
@@ -2476,6 +2486,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return TeaModel.ToObject<CreateCustomEntityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom entity in a custom library.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCustomEntityRequest
         /// </param>
@@ -2489,6 +2504,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return CreateCustomEntityWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom entity in a custom library.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCustomEntityRequest
         /// </param>
@@ -2502,6 +2522,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return await CreateCustomEntityWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom library.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCustomGroupRequest
         /// </param>
@@ -2563,6 +2588,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return TeaModel.ToObject<CreateCustomGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom library.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCustomGroupRequest
         /// </param>
@@ -2624,6 +2654,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return TeaModel.ToObject<CreateCustomGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom library.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCustomGroupRequest
         /// </param>
@@ -2637,6 +2672,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return CreateCustomGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom library.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCustomGroupRequest
         /// </param>
@@ -3398,6 +3438,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return await DeleteCustomGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an image of a custom entity in a custom library.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteCustomViewRequest
         /// </param>
@@ -3463,6 +3508,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return TeaModel.ToObject<DeleteCustomViewResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an image of a custom entity in a custom library.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteCustomViewRequest
         /// </param>
@@ -3528,6 +3578,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return TeaModel.ToObject<DeleteCustomViewResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an image of a custom entity in a custom library.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteCustomViewRequest
         /// </param>
@@ -3541,6 +3596,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return DeleteCustomViewWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an image of a custom entity in a custom library.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteCustomViewRequest
         /// </param>
@@ -5618,6 +5678,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return await ListCustomEntitiesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of custom libraries.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCustomGroupsRequest
         /// </param>
@@ -5679,6 +5744,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return TeaModel.ToObject<ListCustomGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of custom libraries.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCustomGroupsRequest
         /// </param>
@@ -5740,6 +5810,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return TeaModel.ToObject<ListCustomGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of custom libraries.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCustomGroupsRequest
         /// </param>
@@ -5753,6 +5828,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return ListCustomGroupsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of custom libraries.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCustomGroupsRequest
         /// </param>
@@ -5954,6 +6034,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return await ListCustomPersonsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of images of an entity in a custom library.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCustomViewsRequest
         /// </param>
@@ -6023,6 +6108,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return TeaModel.ToObject<ListCustomViewsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of images of an entity in a custom library.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCustomViewsRequest
         /// </param>
@@ -6092,6 +6182,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return TeaModel.ToObject<ListCustomViewsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of images of an entity in a custom library.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCustomViewsRequest
         /// </param>
@@ -6105,6 +6200,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return ListCustomViewsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of images of an entity in a custom library.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCustomViewsRequest
         /// </param>
@@ -7344,7 +7444,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询版权水印提取任务</para>
+        /// <para>Queries jobs for extracting copyright watermarks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7386,7 +7486,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询版权水印提取任务</para>
+        /// <para>Queries jobs for extracting copyright watermarks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7428,7 +7528,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询版权水印提取任务</para>
+        /// <para>Queries jobs for extracting copyright watermarks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7446,7 +7546,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询版权水印提取任务</para>
+        /// <para>Queries jobs for extracting copyright watermarks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7464,7 +7564,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频版权水印任务</para>
+        /// <para>Queries jobs for adding copyright watermarks to videos.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7526,7 +7626,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频版权水印任务</para>
+        /// <para>Queries jobs for adding copyright watermarks to videos.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7588,7 +7688,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频版权水印任务</para>
+        /// <para>Queries jobs for adding copyright watermarks to videos.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7606,7 +7706,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频版权水印任务</para>
+        /// <para>Queries jobs for adding copyright watermarks to videos.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8222,6 +8322,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return await QueryFpShotJobListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a smart production job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryIProductionJobRequest
         /// </param>
@@ -8275,6 +8380,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return TeaModel.ToObject<QueryIProductionJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a smart production job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryIProductionJobRequest
         /// </param>
@@ -8328,6 +8438,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return TeaModel.ToObject<QueryIProductionJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a smart production job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryIProductionJobRequest
         /// </param>
@@ -8341,6 +8456,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return QueryIProductionJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a smart production job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryIProductionJobRequest
         /// </param>
@@ -10176,7 +10296,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能标签任务</para>
+        /// <para>Queries a smart tagging job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10238,7 +10358,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能标签任务</para>
+        /// <para>Queries a smart tagging job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10300,7 +10420,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能标签任务</para>
+        /// <para>Queries a smart tagging job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10318,7 +10438,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能标签任务</para>
+        /// <para>Queries a smart tagging job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10932,7 +11052,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频溯源水印ab流任务</para>
+        /// <para>Queries jobs for adding tracing watermarks to AB video streams.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10978,7 +11098,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频溯源水印ab流任务</para>
+        /// <para>Queries jobs for adding tracing watermarks to AB video streams.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11024,7 +11144,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频溯源水印ab流任务</para>
+        /// <para>Queries jobs for adding tracing watermarks to AB video streams.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11042,7 +11162,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频溯源水印ab流任务</para>
+        /// <para>Queries jobs for adding tracing watermarks to AB video streams.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11060,7 +11180,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询溯源水印提取任务</para>
+        /// <para>Queries jobs for extracting tracing watermarks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11102,7 +11222,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询溯源水印提取任务</para>
+        /// <para>Queries jobs for extracting tracing watermarks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11144,7 +11264,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询溯源水印提取任务</para>
+        /// <para>Queries jobs for extracting tracing watermarks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11162,7 +11282,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询溯源水印提取任务</para>
+        /// <para>Queries jobs for extracting tracing watermarks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11180,7 +11300,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频溯源水印m3u8任务</para>
+        /// <para>Queries jobs for adding tracing watermarks to M3U8 videos.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11238,7 +11358,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频溯源水印m3u8任务</para>
+        /// <para>Queries jobs for adding tracing watermarks to M3U8 videos.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11296,7 +11416,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频溯源水印m3u8任务</para>
+        /// <para>Queries jobs for adding tracing watermarks to M3U8 videos.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11314,7 +11434,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频溯源水印m3u8任务</para>
+        /// <para>Queries jobs for adding tracing watermarks to M3U8 videos.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11728,7 +11848,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册自定义实体项</para>
+        /// <para>Registers an image of a custom entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11802,7 +11922,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册自定义实体项</para>
+        /// <para>Registers an image of a custom entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11876,7 +11996,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册自定义实体项</para>
+        /// <para>Registers an image of a custom entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11894,7 +12014,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册自定义实体项</para>
+        /// <para>Registers an image of a custom entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12912,7 +13032,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交版权水印提取任务</para>
+        /// <para>Submits a job for extracting a copyright watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12970,7 +13090,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交版权水印提取任务</para>
+        /// <para>Submits a job for extracting a copyright watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13028,7 +13148,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交版权水印提取任务</para>
+        /// <para>Submits a job for extracting a copyright watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13046,7 +13166,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交版权水印提取任务</para>
+        /// <para>Submits a job for extracting a copyright watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13064,7 +13184,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频版权水印</para>
+        /// <para>Submits a job for adding a copyright watermark to a video.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13146,7 +13266,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频版权水印</para>
+        /// <para>Submits a job for adding a copyright watermark to a video.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13228,7 +13348,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频版权水印</para>
+        /// <para>Submits a job for adding a copyright watermark to a video.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13246,7 +13366,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频版权水印</para>
+        /// <para>Submits a job for adding a copyright watermark to a video.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13938,6 +14058,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return await SubmitFpShotJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a smart production job.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  Jobs that are submitted by calling this operation run in an asynchronous manner. After a job is added to the ApsaraVideo Media Processing (MPS) queue, the job is scheduled to run. You can call the <a href="https://help.aliyun.com/document_detail/170217.html">QueryIProductionJob</a> operation or configure a callback to query the job result.</para>
@@ -14033,6 +14158,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return TeaModel.ToObject<SubmitIProductionJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a smart production job.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  Jobs that are submitted by calling this operation run in an asynchronous manner. After a job is added to the ApsaraVideo Media Processing (MPS) queue, the job is scheduled to run. You can call the <a href="https://help.aliyun.com/document_detail/170217.html">QueryIProductionJob</a> operation or configure a callback to query the job result.</para>
@@ -14128,6 +14258,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return TeaModel.ToObject<SubmitIProductionJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a smart production job.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  Jobs that are submitted by calling this operation run in an asynchronous manner. After a job is added to the ApsaraVideo Media Processing (MPS) queue, the job is scheduled to run. You can call the <a href="https://help.aliyun.com/document_detail/170217.html">QueryIProductionJob</a> operation or configure a callback to query the job result.</para>
@@ -14151,6 +14286,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return SubmitIProductionJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a smart production job.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  Jobs that are submitted by calling this operation run in an asynchronous manner. After a job is added to the ApsaraVideo Media Processing (MPS) queue, the job is scheduled to run. You can call the <a href="https://help.aliyun.com/document_detail/170217.html">QueryIProductionJob</a> operation or configure a callback to query the job result.</para>
@@ -14176,7 +14316,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交图片版权水印任务</para>
+        /// <para>Generates a transparent image watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14226,7 +14366,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交图片版权水印任务</para>
+        /// <para>Generates a transparent image watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14276,7 +14416,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交图片版权水印任务</para>
+        /// <para>Generates a transparent image watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14294,7 +14434,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交图片版权水印任务</para>
+        /// <para>Generates a transparent image watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15022,6 +15162,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return await SubmitMediaInfoJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a smart tagging job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitSmarttagJobRequest
         /// </param>
@@ -15115,6 +15260,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return TeaModel.ToObject<SubmitSmarttagJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a smart tagging job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitSmarttagJobRequest
         /// </param>
@@ -15208,6 +15358,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return TeaModel.ToObject<SubmitSmarttagJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a smart tagging job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitSmarttagJobRequest
         /// </param>
@@ -15221,6 +15376,11 @@ namespace AlibabaCloud.SDK.Mts20140618
             return SubmitSmarttagJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a smart tagging job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitSmarttagJobRequest
         /// </param>
@@ -15456,7 +15616,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频溯源水印ab流任务</para>
+        /// <para>Submits a job for adding a tracing watermark to an AB video stream.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15530,7 +15690,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频溯源水印ab流任务</para>
+        /// <para>Submits a job for adding a tracing watermark to an AB video stream.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15604,7 +15764,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频溯源水印ab流任务</para>
+        /// <para>Submits a job for adding a tracing watermark to an AB video stream.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15622,7 +15782,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频溯源水印ab流任务</para>
+        /// <para>Submits a job for adding a tracing watermark to an AB video stream.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15640,7 +15800,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交溯源水印提取任务</para>
+        /// <para>Submits a job for extracting a tracing watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15698,7 +15858,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交溯源水印提取任务</para>
+        /// <para>Submits a job for extracting a tracing watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15756,7 +15916,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交溯源水印提取任务</para>
+        /// <para>Submits a job for extracting a tracing watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15774,7 +15934,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交溯源水印提取任务</para>
+        /// <para>Submits a job for extracting a tracing watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15792,7 +15952,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频溯源水印m3u8文件任务</para>
+        /// <para>Submits a job for adding a tracing watermark to an M3U8 video.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15850,7 +16010,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频溯源水印m3u8文件任务</para>
+        /// <para>Submits a job for adding a tracing watermark to an M3U8 video.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15908,7 +16068,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频溯源水印m3u8文件任务</para>
+        /// <para>Submits a job for adding a tracing watermark to an M3U8 video.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15926,7 +16086,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频溯源水印m3u8文件任务</para>
+        /// <para>Submits a job for adding a tracing watermark to an M3U8 video.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15944,7 +16104,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The description of the figure. The description can be up to 512 characters in length.</para>
+        /// <para>Adds tags to a custom figure library or a figure.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16027,7 +16187,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The description of the figure. The description can be up to 512 characters in length.</para>
+        /// <para>Adds tags to a custom figure library or a figure.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16110,7 +16270,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The description of the figure. The description can be up to 512 characters in length.</para>
+        /// <para>Adds tags to a custom figure library or a figure.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16133,7 +16293,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The description of the figure. The description can be up to 512 characters in length.</para>
+        /// <para>Adds tags to a custom figure library or a figure.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16348,9 +16508,9 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to unbind an output media bucket from the media library based on the name of the output media bucket.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation. For more information, see <a href="https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit">QPS limits</a>.</para>
+        /// <para>You can call this operation to unbind an output media bucket from the media library based on the name of the output media bucket.
+        /// \## QPS limit
+        /// You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation. For more information, see [QPS limits]\(<a href="https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit">https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit</a>).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16413,9 +16573,9 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to unbind an output media bucket from the media library based on the name of the output media bucket.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation. For more information, see <a href="https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit">QPS limits</a>.</para>
+        /// <para>You can call this operation to unbind an output media bucket from the media library based on the name of the output media bucket.
+        /// \## QPS limit
+        /// You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation. For more information, see [QPS limits]\(<a href="https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit">https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit</a>).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16478,9 +16638,9 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to unbind an output media bucket from the media library based on the name of the output media bucket.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation. For more information, see <a href="https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit">QPS limits</a>.</para>
+        /// <para>You can call this operation to unbind an output media bucket from the media library based on the name of the output media bucket.
+        /// \## QPS limit
+        /// You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation. For more information, see [QPS limits]\(<a href="https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit">https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit</a>).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16503,9 +16663,9 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to unbind an output media bucket from the media library based on the name of the output media bucket.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation. For more information, see <a href="https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit">QPS limits</a>.</para>
+        /// <para>You can call this operation to unbind an output media bucket from the media library based on the name of the output media bucket.
+        /// \## QPS limit
+        /// You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation. For more information, see [QPS limits]\(<a href="https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit">https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit</a>).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -18148,7 +18308,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新智能标签模板接口支持cpv</para>
+        /// <para>Updates the analysis template of a smart tagging job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18262,7 +18422,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新智能标签模板接口支持cpv</para>
+        /// <para>Updates the analysis template of a smart tagging job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18376,7 +18536,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新智能标签模板接口支持cpv</para>
+        /// <para>Updates the analysis template of a smart tagging job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18394,7 +18554,7 @@ namespace AlibabaCloud.SDK.Mts20140618
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新智能标签模板接口支持cpv</para>
+        /// <para>Updates the analysis template of a smart tagging job.</para>
         /// </summary>
         /// 
         /// <param name="request">

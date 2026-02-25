@@ -37,18 +37,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public List<QuerySmarttagJobResponseBodyResultsResult> Result { get; set; }
             public class QuerySmarttagJobResponseBodyResultsResult : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>{&quot;title&quot;:&quot;example-title-****&quot;}</para>
-                /// </summary>
                 [NameInMap("Data")]
                 [Validation(Required=false)]
                 public string Data { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>Meta</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
