@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class WebAclEntryConfig : TeaModel {
         /// <summary>
+        /// <para>The IP address.</para>
+        /// <remarks>
+        /// <para> CIDR notation is not supported.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

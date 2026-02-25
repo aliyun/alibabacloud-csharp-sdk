@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateWebApplicationInput : TeaModel {
         /// <summary>
+        /// <para>The application description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sae-app</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The network configurations of the application.</para>
+        /// </summary>
         [NameInMap("WebNetworkConfig")]
         [Validation(Required=false)]
         public WebNetworkConfig WebNetworkConfig { get; set; }

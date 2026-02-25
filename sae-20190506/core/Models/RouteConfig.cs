@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class RouteConfig : TeaModel {
+        /// <summary>
+        /// <para>pathConfig</para>
+        /// </summary>
         [NameInMap("routes")]
         [Validation(Required=false)]
         public List<PathConfig> Routes { get; set; }

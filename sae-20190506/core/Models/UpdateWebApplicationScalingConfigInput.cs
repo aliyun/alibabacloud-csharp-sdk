@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateWebApplicationScalingConfigInput : TeaModel {
         /// <summary>
+        /// <para>The maximum number of instances.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +21,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public long? MaximumInstanceCount { get; set; }
 
         /// <summary>
+        /// <para>The minimum number of instances.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("MinimumInstanceCount")]
         [Validation(Required=false)]

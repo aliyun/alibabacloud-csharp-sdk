@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class WebScalingConfig : TeaModel {
         /// <summary>
+        /// <para>The maximum number of instances.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -17,6 +19,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public long? MaximumInstanceCount { get; set; }
 
+        /// <summary>
+        /// <para>The minimum number of instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("MinimumInstanceCount")]
         [Validation(Required=false)]
         public long? MinimumInstanceCount { get; set; }

@@ -9,11 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateWebCustomDomainInput : TeaModel {
+        /// <summary>
+        /// <para>The name of the application to which data is forwarded by the domain name by default.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demo-app</para>
+        /// </summary>
         [NameInMap("DefaultForwardingAppName")]
         [Validation(Required=false)]
         public string DefaultForwardingAppName { get; set; }
 
         /// <summary>
+        /// <para>The domain name. Enter a custom domain name that has obtained an Internet content provider (ICP) filing in the Alibaba Cloud ICP Filing system, or a custom domain name whose ICP filing information includes Alibaba Cloud as a service provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +31,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>The protocol type that is supported by the custom domain name. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>HTTP</b>: Only HTTP is supported.</description></item>
+        /// <item><description><b>HTTPS</b>: Only HTTPS is supported.</description></item>
+        /// <item><description><b>HTTP,HTTPS</b>: Both HTTP and HTTPS are supported.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>HTTP</para>
         /// </summary>
@@ -31,18 +45,30 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Protocol { get; set; }
 
+        /// <summary>
+        /// <para>The route configurations.</para>
+        /// </summary>
         [NameInMap("RouteConfig")]
         [Validation(Required=false)]
         public RouteConfig RouteConfig { get; set; }
 
+        /// <summary>
+        /// <para>The information about the HTTPS certificate.</para>
+        /// </summary>
         [NameInMap("WebCertConfig")]
         [Validation(Required=false)]
         public WebCertConfig WebCertConfig { get; set; }
 
+        /// <summary>
+        /// <para>The Transport Layer Security (TLS) configurations.</para>
+        /// </summary>
         [NameInMap("WebTLSConfig")]
         [Validation(Required=false)]
         public WebTLSConfig WebTLSConfig { get; set; }
 
+        /// <summary>
+        /// <para>The Web Application Firewall (WAF) configurations.</para>
+        /// </summary>
         [NameInMap("WebWAFConfig")]
         [Validation(Required=false)]
         public WebWAFConfig WebWAFConfig { get; set; }

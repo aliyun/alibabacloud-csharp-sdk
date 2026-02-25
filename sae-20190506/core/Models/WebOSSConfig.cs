@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class WebOSSConfig : TeaModel {
+        /// <summary>
+        /// <para>The mount point.</para>
+        /// </summary>
         [NameInMap("MountPoints")]
         [Validation(Required=false)]
         public List<WebOSSMountPoint> MountPoints { get; set; }

@@ -897,6 +897,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return await BindNlbWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Server Load Balancer (SLB) instance to the application.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindSlbRequest
         /// </param>
@@ -962,6 +967,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<BindSlbResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Server Load Balancer (SLB) instance to the application.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindSlbRequest
         /// </param>
@@ -1027,6 +1037,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<BindSlbResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Server Load Balancer (SLB) instance to the application.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindSlbRequest
         /// </param>
@@ -1041,6 +1056,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return BindSlbWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Server Load Balancer (SLB) instance to the application.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindSlbRequest
         /// </param>
@@ -1220,6 +1240,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 request.InitContainersConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InitContainersConfig, "InitContainersConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Labels))
+            {
+                request.LabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Labels, "Labels", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SidecarContainersConfig))
             {
                 request.SidecarContainersConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SidecarContainersConfig, "SidecarContainersConfig", "json");
@@ -1352,6 +1376,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KafkaConfigs))
             {
                 query["KafkaConfigs"] = request.KafkaConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsShrink))
+            {
+                query["Labels"] = request.LabelsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Liveness))
             {
@@ -1618,6 +1646,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 request.InitContainersConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InitContainersConfig, "InitContainersConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Labels))
+            {
+                request.LabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Labels, "Labels", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SidecarContainersConfig))
             {
                 request.SidecarContainersConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SidecarContainersConfig, "SidecarContainersConfig", "json");
@@ -1750,6 +1782,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KafkaConfigs))
             {
                 query["KafkaConfigs"] = request.KafkaConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsShrink))
+            {
+                query["Labels"] = request.LabelsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Liveness))
             {
@@ -4677,7 +4713,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69\<em>\</em>\<em>\</em></para>
+        /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69\\<em>\\</em>\\<em>\\</em></para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4727,7 +4763,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69\<em>\</em>\<em>\</em></para>
+        /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69\\<em>\\</em>\\<em>\\</em></para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4777,7 +4813,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69\<em>\</em>\<em>\</em></para>
+        /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69\\<em>\\</em>\\<em>\\</em></para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4796,7 +4832,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69\<em>\</em>\<em>\</em></para>
+        /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69\\<em>\\</em>\\<em>\\</em></para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5611,7 +5647,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a namespace.</para>
+        /// <para>Delete a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5661,7 +5697,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a namespace.</para>
+        /// <para>Delete a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5711,7 +5747,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a namespace.</para>
+        /// <para>Delete a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5730,7 +5766,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a namespace.</para>
+        /// <para>Delete a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6500,6 +6536,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 request.InitContainersConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InitContainersConfig, "InitContainersConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Labels))
+            {
+                request.LabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Labels, "Labels", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SidecarContainersConfig))
             {
                 request.SidecarContainersConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SidecarContainersConfig, "SidecarContainersConfig", "json");
@@ -6624,6 +6664,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KafkaConfigs))
             {
                 query["KafkaConfigs"] = request.KafkaConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsShrink))
+            {
+                query["Labels"] = request.LabelsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Liveness))
             {
@@ -6890,6 +6934,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 request.InitContainersConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InitContainersConfig, "InitContainersConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Labels))
+            {
+                request.LabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Labels, "Labels", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SidecarContainersConfig))
             {
                 request.SidecarContainersConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SidecarContainersConfig, "SidecarContainersConfig", "json");
@@ -7014,6 +7062,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KafkaConfigs))
             {
                 query["KafkaConfigs"] = request.KafkaConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsShrink))
+            {
+                query["Labels"] = request.LabelsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Liveness))
             {
@@ -8607,7 +8659,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>017f39b8-dfa4-4e16-a84b-1dcee4b1\<em>\</em>\<em>\</em></para>
+        /// <para>Obtain the SLB configuration of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8653,7 +8705,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>017f39b8-dfa4-4e16-a84b-1dcee4b1\<em>\</em>\<em>\</em></para>
+        /// <para>Obtain the SLB configuration of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8699,7 +8751,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>017f39b8-dfa4-4e16-a84b-1dcee4b1\<em>\</em>\<em>\</em></para>
+        /// <para>Obtain the SLB configuration of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8718,7 +8770,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>017f39b8-dfa4-4e16-a84b-1dcee4b1\<em>\</em>\<em>\</em></para>
+        /// <para>Obtain the SLB configuration of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12631,6 +12683,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return await DescribeWebInstanceLogsWithOptionsAsync(ApplicationId, InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableApplicationScalingRuleRequest
         /// </param>
@@ -12676,6 +12733,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<DisableApplicationScalingRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableApplicationScalingRuleRequest
         /// </param>
@@ -12721,6 +12783,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<DisableApplicationScalingRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableApplicationScalingRuleRequest
         /// </param>
@@ -12735,6 +12802,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return DisableApplicationScalingRuleWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableApplicationScalingRuleRequest
         /// </param>
@@ -13497,7 +13569,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>Queries the top N applications in Application Monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13567,7 +13639,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>Queries the top N applications in Application Monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13637,7 +13709,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>Queries the top N applications in Application Monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13656,7 +13728,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>Queries the top N applications in Application Monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14169,7 +14241,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The number of Warning events.</para>
+        /// <para>Queries the top N applications in which Warning events occur.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14235,7 +14307,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The number of Warning events.</para>
+        /// <para>Queries the top N applications in which Warning events occur.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14301,7 +14373,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The number of Warning events.</para>
+        /// <para>Queries the top N applications in which Warning events occur.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14320,7 +14392,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The number of Warning events.</para>
+        /// <para>Queries the top N applications in which Warning events occur.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15555,7 +15627,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of applications.</para>
+        /// <para>Query a list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15645,7 +15717,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of applications.</para>
+        /// <para>Query a list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15735,7 +15807,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of applications.</para>
+        /// <para>Query a list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15754,7 +15826,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of applications.</para>
+        /// <para>Query a list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22547,7 +22619,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a ConfigMap instance.</para>
+        /// <para>Update a ConfigMap.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22603,7 +22675,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a ConfigMap instance.</para>
+        /// <para>Update a ConfigMap.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22659,7 +22731,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a ConfigMap instance.</para>
+        /// <para>Update a ConfigMap.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22678,7 +22750,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a ConfigMap instance.</para>
+        /// <para>Update a ConfigMap.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23639,7 +23711,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a namespace.</para>
+        /// <para>Update the information about a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23701,7 +23773,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a namespace.</para>
+        /// <para>Update the information about a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23763,7 +23835,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a namespace.</para>
+        /// <para>Update the information about a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23782,7 +23854,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a namespace.</para>
+        /// <para>Update the information about a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23801,7 +23873,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新命名空间级别sls配置</para>
+        /// <para>Updates the Simple Log Service configuration for a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23859,7 +23931,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新命名空间级别sls配置</para>
+        /// <para>Updates the Simple Log Service configuration for a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23917,7 +23989,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新命名空间级别sls配置</para>
+        /// <para>Updates the Simple Log Service configuration for a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23936,7 +24008,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新命名空间级别sls配置</para>
+        /// <para>Updates the Simple Log Service configuration for a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24101,13 +24173,11 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
-        /// </list>
+        /// <para>The HTTP status code. Valid values:
+        /// \*   \<em>\<em>2xx\</em>\</em>: The call was successful.
+        /// \*   \<em>\<em>3xx\</em>\</em>: The call was redirected.
+        /// \*   \<em>\<em>4xx\</em>\</em>: The call failed.
+        /// \*   \<em>\<em>5xx\</em>\</em>: A server error occurred.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24167,13 +24237,11 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
-        /// </list>
+        /// <para>The HTTP status code. Valid values:
+        /// \*   \<em>\<em>2xx\</em>\</em>: The call was successful.
+        /// \*   \<em>\<em>3xx\</em>\</em>: The call was redirected.
+        /// \*   \<em>\<em>4xx\</em>\</em>: The call failed.
+        /// \*   \<em>\<em>5xx\</em>\</em>: A server error occurred.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24233,13 +24301,11 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
-        /// </list>
+        /// <para>The HTTP status code. Valid values:
+        /// \*   \<em>\<em>2xx\</em>\</em>: The call was successful.
+        /// \*   \<em>\<em>3xx\</em>\</em>: The call was redirected.
+        /// \*   \<em>\<em>4xx\</em>\</em>: The call failed.
+        /// \*   \<em>\<em>5xx\</em>\</em>: A server error occurred.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24258,13 +24324,11 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
-        /// </list>
+        /// <para>The HTTP status code. Valid values:
+        /// \*   \<em>\<em>2xx\</em>\</em>: The call was successful.
+        /// \*   \<em>\<em>3xx\</em>\</em>: The call was redirected.
+        /// \*   \<em>\<em>4xx\</em>\</em>: The call failed.
+        /// \*   \<em>\<em>5xx\</em>\</em>: A server error occurred.</para>
         /// </summary>
         /// 
         /// <param name="request">

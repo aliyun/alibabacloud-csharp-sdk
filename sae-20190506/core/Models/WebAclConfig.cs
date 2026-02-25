@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class WebAclConfig : TeaModel {
         /// <summary>
+        /// <para>The IP addresses.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>if can be null:</b>

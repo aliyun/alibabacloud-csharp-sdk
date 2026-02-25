@@ -439,6 +439,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string KafkaConfigs { get; set; }
 
+        [NameInMap("Labels")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Labels { get; set; }
+
         /// <summary>
         /// <para>The details of the availability check that was performed on the container. If the container fails this health check multiple times, the system disables and restarts the container. You can use one of the following methods to perform the health check:</para>
         /// <list type="bullet">
