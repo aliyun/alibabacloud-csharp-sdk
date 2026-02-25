@@ -4,6 +4,12 @@
 - Update API DescribeApplicationConfig: add response parameters Body.Data.Labels.
 
 
+2026-02-25 Version: 2.8.2
+- Update API CreateApplication: add request parameters Labels.
+- Update API DeployApplication: add request parameters Labels.
+- Update API DescribeApplicationConfig: add response parameters Body.Data.Labels.
+
+
 2026-02-03 Version: 2.8.1
 - Update API DescribeConfigurationPrice: add request parameters GpuA10.
 - Update API DescribeConfigurationPrice: add request parameters GpuPpu810e.
