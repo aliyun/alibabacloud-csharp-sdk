@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables CloudLens for EBS.</para>
+        /// <para>Cancels Elastic Block Storage data insight (CloudLens for EBS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables CloudLens for EBS.</para>
+        /// <para>Cancels Elastic Block Storage data insight (CloudLens for EBS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables CloudLens for EBS.</para>
+        /// <para>Cancels Elastic Block Storage data insight (CloudLens for EBS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -329,7 +329,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables CloudLens for EBS.</para>
+        /// <para>Cancels Elastic Block Storage data insight (CloudLens for EBS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -493,7 +493,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables CloudLens for EBS.</para>
+        /// <para>Cancels Elastic Block Storage data insight (CloudLens for EBS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -532,7 +532,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables CloudLens for EBS.</para>
+        /// <para>Cancels Elastic Block Storage data insight (CloudLens for EBS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -571,7 +571,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables CloudLens for EBS.</para>
+        /// <para>Cancels Elastic Block Storage data insight (CloudLens for EBS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -591,7 +591,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables CloudLens for EBS.</para>
+        /// <para>Cancels Elastic Block Storage data insight (CloudLens for EBS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3059,7 +3059,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more disks in a dedicated block storage cluster.</para>
+        /// <para>Queries information about cloud disks in a dedicated block storage cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3125,7 +3125,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more disks in a dedicated block storage cluster.</para>
+        /// <para>Queries information about cloud disks in a dedicated block storage cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3191,7 +3191,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more disks in a dedicated block storage cluster.</para>
+        /// <para>Queries information about cloud disks in a dedicated block storage cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3221,7 +3221,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more disks in a dedicated block storage cluster.</para>
+        /// <para>Queries information about cloud disks in a dedicated block storage cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3251,7 +3251,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dedicated block storage clusters that are created.</para>
+        /// <para>Queries dedicated clusters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3351,7 +3351,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dedicated block storage clusters that are created.</para>
+        /// <para>Queries dedicated clusters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3451,7 +3451,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dedicated block storage clusters that are created.</para>
+        /// <para>Queries dedicated clusters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3481,7 +3481,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dedicated block storage clusters that are created.</para>
+        /// <para>Queries dedicated clusters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3511,7 +3511,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the risk events of a disk.</para>
+        /// <para>Queries the risk events of a disk. The operation is getting offline. Switch to the new operation DescribeEvents.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3587,7 +3587,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the risk events of a disk.</para>
+        /// <para>Queries the risk events of a disk. The operation is getting offline. Switch to the new operation DescribeEvents.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3663,7 +3663,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the risk events of a disk.</para>
+        /// <para>Queries the risk events of a disk. The operation is getting offline. Switch to the new operation DescribeEvents.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3687,7 +3687,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the risk events of a disk.</para>
+        /// <para>Queries the risk events of a disk. The operation is getting offline. Switch to the new operation DescribeEvents.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3711,7 +3711,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the near real-time monitoring data of a disk.</para>
+        /// <para>Queries fine-grained monitoring data of a disk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3783,7 +3783,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the near real-time monitoring data of a disk.</para>
+        /// <para>Queries fine-grained monitoring data of a disk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3855,7 +3855,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the near real-time monitoring data of a disk.</para>
+        /// <para>Queries fine-grained monitoring data of a disk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3883,7 +3883,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the near real-time monitoring data of a disk.</para>
+        /// <para>Queries fine-grained monitoring data of a disk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3911,7 +3911,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the near real-time monitoring data of disks. You can query only the burst performance data of ESSD AutoPL disks. The data is aggregated by hour.</para>
+        /// <para>Queries fine-grained monitoring data of multiple disks. You can query only the burst performance data of ESSD AutoPL disks. The data is aggregated by hour.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3983,7 +3983,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the near real-time monitoring data of disks. You can query only the burst performance data of ESSD AutoPL disks. The data is aggregated by hour.</para>
+        /// <para>Queries fine-grained monitoring data of multiple disks. You can query only the burst performance data of ESSD AutoPL disks. The data is aggregated by hour.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4055,7 +4055,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the near real-time monitoring data of disks. You can query only the burst performance data of ESSD AutoPL disks. The data is aggregated by hour.</para>
+        /// <para>Queries fine-grained monitoring data of multiple disks. You can query only the burst performance data of ESSD AutoPL disks. The data is aggregated by hour.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4079,7 +4079,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the near real-time monitoring data of disks. You can query only the burst performance data of ESSD AutoPL disks. The data is aggregated by hour.</para>
+        /// <para>Queries fine-grained monitoring data of multiple disks. You can query only the burst performance data of ESSD AutoPL disks. The data is aggregated by hour.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5243,7 +5243,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户开通ebs数据洞察服务状态</para>
+        /// <para>Queries the status of CloudLens for EBS.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5282,7 +5282,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户开通ebs数据洞察服务状态</para>
+        /// <para>Queries the status of CloudLens for EBS.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5321,7 +5321,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户开通ebs数据洞察服务状态</para>
+        /// <para>Queries the status of CloudLens for EBS.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5341,7 +5341,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户开通ebs数据洞察服务状态</para>
+        /// <para>Queries the status of CloudLens for EBS.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6029,7 +6029,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询解决方案实例默认配置</para>
+        /// <para>Queries the default configurations of a solution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6083,7 +6083,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询解决方案实例默认配置</para>
+        /// <para>Queries the default configurations of a solution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6137,7 +6137,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询解决方案实例默认配置</para>
+        /// <para>Queries the default configurations of a solution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6155,7 +6155,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询解决方案实例默认配置</para>
+        /// <para>Queries the default configurations of a solution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7189,7 +7189,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Centralized Role: Query Historical Reports</para>
+        /// <para>Queries historical reports of a specific application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7253,7 +7253,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Centralized Role: Query Historical Reports</para>
+        /// <para>Queries historical reports of a specific application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7317,7 +7317,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Centralized Role: Query Historical Reports</para>
+        /// <para>Queries historical reports of a specific application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7335,7 +7335,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Centralized Role: Query Historical Reports</para>
+        /// <para>Queries historical reports of a specific application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7353,7 +7353,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to one or more Elastic Block Storage (EBS) resources, or queries the IDs and tags of resources in a specified non-default resource group.</para>
+        /// <para>Queries the tags that are added to EBS resources, or queries the IDs and tags of resources in a non-default resource group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7425,7 +7425,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to one or more Elastic Block Storage (EBS) resources, or queries the IDs and tags of resources in a specified non-default resource group.</para>
+        /// <para>Queries the tags that are added to EBS resources, or queries the IDs and tags of resources in a non-default resource group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7497,7 +7497,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to one or more Elastic Block Storage (EBS) resources, or queries the IDs and tags of resources in a specified non-default resource group.</para>
+        /// <para>Queries the tags that are added to EBS resources, or queries the IDs and tags of resources in a non-default resource group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7525,7 +7525,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to one or more Elastic Block Storage (EBS) resources, or queries the IDs and tags of resources in a specified non-default resource group.</para>
+        /// <para>Queries the tags that are added to EBS resources, or queries the IDs and tags of resources in a non-default resource group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7745,7 +7745,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改专属集群属性OpenApi</para>
+        /// <para>Modifies the information of a dedicated elastic block storage cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7808,7 +7808,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改专属集群属性OpenApi</para>
+        /// <para>Modifies the information of a dedicated elastic block storage cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7871,7 +7871,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改专属集群属性OpenApi</para>
+        /// <para>Modifies the information of a dedicated elastic block storage cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7894,7 +7894,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改专属集群属性OpenApi</para>
+        /// <para>Modifies the information of a dedicated elastic block storage cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8481,7 +8481,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query dedicated block storage cluster capacity trend data, includ available capacity size and total capacity size.</para>
+        /// <para>Queries the capacity trend data of a dedicated Elastic Block Storage (EBS) cluster within a specific time period, including the available capacity and total capacity.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8550,7 +8550,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query dedicated block storage cluster capacity trend data, includ available capacity size and total capacity size.</para>
+        /// <para>Queries the capacity trend data of a dedicated Elastic Block Storage (EBS) cluster within a specific time period, including the available capacity and total capacity.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8619,7 +8619,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query dedicated block storage cluster capacity trend data, includ available capacity size and total capacity size.</para>
+        /// <para>Queries the capacity trend data of a dedicated Elastic Block Storage (EBS) cluster within a specific time period, including the available capacity and total capacity.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8642,7 +8642,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query dedicated block storage cluster capacity trend data, includ available capacity size and total capacity size.</para>
+        /// <para>Queries the capacity trend data of a dedicated Elastic Block Storage (EBS) cluster within a specific time period, including the available capacity and total capacity.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9377,7 +9377,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the async replication feature for replication pairs that belong to a replication pair-consistent group. When the async replication feature is enabled for the pairs for the first time, the system first performs a full synchronization to synchronize all data from disks at the primary site (primary disks) to disks at the secondary site (secondary disks) and then periodically synchronizes incremental data based on the recovery point objective (RPO) of the replication pair-consistent group.</para>
+        /// <para>Enables the async replication feature for replication pairs that belong to a replication pair-consistent group. The first time the async replication feature is enabled for the replication pairs, the system performs a full synchronization to synchronize all data from disks at the primary site (primary disks) to disks at the secondary site (secondary disks). Then, the system periodically synchronizes incremental data based on the recovery point objective (RPO) of the replication pair-consistent group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9442,7 +9442,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the async replication feature for replication pairs that belong to a replication pair-consistent group. When the async replication feature is enabled for the pairs for the first time, the system first performs a full synchronization to synchronize all data from disks at the primary site (primary disks) to disks at the secondary site (secondary disks) and then periodically synchronizes incremental data based on the recovery point objective (RPO) of the replication pair-consistent group.</para>
+        /// <para>Enables the async replication feature for replication pairs that belong to a replication pair-consistent group. The first time the async replication feature is enabled for the replication pairs, the system performs a full synchronization to synchronize all data from disks at the primary site (primary disks) to disks at the secondary site (secondary disks). Then, the system periodically synchronizes incremental data based on the recovery point objective (RPO) of the replication pair-consistent group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9507,7 +9507,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the async replication feature for replication pairs that belong to a replication pair-consistent group. When the async replication feature is enabled for the pairs for the first time, the system first performs a full synchronization to synchronize all data from disks at the primary site (primary disks) to disks at the secondary site (secondary disks) and then periodically synchronizes incremental data based on the recovery point objective (RPO) of the replication pair-consistent group.</para>
+        /// <para>Enables the async replication feature for replication pairs that belong to a replication pair-consistent group. The first time the async replication feature is enabled for the replication pairs, the system performs a full synchronization to synchronize all data from disks at the primary site (primary disks) to disks at the secondary site (secondary disks). Then, the system periodically synchronizes incremental data based on the recovery point objective (RPO) of the replication pair-consistent group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9536,7 +9536,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the async replication feature for replication pairs that belong to a replication pair-consistent group. When the async replication feature is enabled for the pairs for the first time, the system first performs a full synchronization to synchronize all data from disks at the primary site (primary disks) to disks at the secondary site (secondary disks) and then periodically synchronizes incremental data based on the recovery point objective (RPO) of the replication pair-consistent group.</para>
+        /// <para>Enables the async replication feature for replication pairs that belong to a replication pair-consistent group. The first time the async replication feature is enabled for the replication pairs, the system performs a full synchronization to synchronize all data from disks at the primary site (primary disks) to disks at the secondary site (secondary disks). Then, the system periodically synchronizes incremental data based on the recovery point objective (RPO) of the replication pair-consistent group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9565,7 +9565,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates a replication pair.</para>
+        /// <para>Activates the async replication feature for a specific replication pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9629,7 +9629,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates a replication pair.</para>
+        /// <para>Activates the async replication feature for a specific replication pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9693,7 +9693,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates a replication pair.</para>
+        /// <para>Activates the async replication feature for a specific replication pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9721,7 +9721,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates a replication pair.</para>
+        /// <para>Activates the async replication feature for a specific replication pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11161,7 +11161,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新解决方案实例属性</para>
+        /// <para>Updates the attributes of a solution instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11219,7 +11219,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新解决方案实例属性</para>
+        /// <para>Updates the attributes of a solution instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11277,7 +11277,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新解决方案实例属性</para>
+        /// <para>Updates the attributes of a solution instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11295,7 +11295,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新解决方案实例属性</para>
+        /// <para>Updates the attributes of a solution instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

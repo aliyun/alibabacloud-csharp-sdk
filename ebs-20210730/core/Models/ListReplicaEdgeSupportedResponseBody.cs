@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [Validation(Required=false)]
             public List<ListReplicaEdgeSupportedResponseBodySupportedRegionsZones> Zones { get; set; }
             public class ListReplicaEdgeSupportedResponseBodySupportedRegionsZones : TeaModel {
+                [NameInMap("SupportRtc")]
+                [Validation(Required=false)]
+                public bool? SupportRtc { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-i</para>
