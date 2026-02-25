@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public long? Cpu { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1612285282502324</para>
+        /// </summary>
         [NameInMap("CreatorID")]
         [Validation(Required=false)]
         public string CreatorID { get; set; }
@@ -41,26 +45,50 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string DiskPL { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("EcsCount")]
         [Validation(Required=false)]
         public long? EcsCount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ecs.c6.large</para>
+        /// </summary>
         [NameInMap("EcsSpec")]
         [Validation(Required=false)]
         public string EcsSpec { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2023-06-22T00:00:00Z</para>
+        /// </summary>
         [NameInMap("GmtCreatedTime")]
         [Validation(Required=false)]
         public string GmtCreatedTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2023-08-22T00:00:00Z</para>
+        /// </summary>
         [NameInMap("GmtExpiredTime")]
         [Validation(Required=false)]
         public string GmtExpiredTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2023-06-22T00:00:00Z</para>
+        /// </summary>
         [NameInMap("GmtModifiedTime")]
         [Validation(Required=false)]
         public string GmtModifiedTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2023-06-22T00:00:00Z</para>
+        /// </summary>
         [NameInMap("GmtStartedTime")]
         [Validation(Required=false)]
         public string GmtStartedTime { get; set; }
@@ -89,30 +117,60 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public long? Memory { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>“”</para>
+        /// </summary>
         [NameInMap("OrderInstanceId")]
         [Validation(Required=false)]
         public string OrderInstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("PaymentDuration")]
         [Validation(Required=false)]
         public string PaymentDuration { get; set; }
 
+        /// <summary>
+        /// <para>region ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Monthly</para>
+        /// </summary>
         [NameInMap("PaymentDurationUnit")]
         [Validation(Required=false)]
         public string PaymentDurationUnit { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>PREPAY</para>
+        /// </summary>
         [NameInMap("PaymentType")]
         [Validation(Required=false)]
         public string PaymentType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>“”</para>
+        /// </summary>
         [NameInMap("ReasonCode")]
         [Validation(Required=false)]
         public string ReasonCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>“”</para>
+        /// </summary>
         [NameInMap("ReasonMessage")]
         [Validation(Required=false)]
         public string ReasonMessage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rgf0zhfqn1d4ity2</para>
+        /// </summary>
         [NameInMap("ResourceGroupID")]
         [Validation(Required=false)]
         public string ResourceGroupID { get; set; }
@@ -121,6 +179,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Success</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

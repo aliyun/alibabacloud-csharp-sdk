@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class MetricDefinition : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>train dataset oob score</para>
-        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -21,7 +17,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>train:oob_score</para>
+        /// <para>loss</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -31,7 +27,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>.<em>train:oob_score=([-+]?[0-9]</em>\.?[0-9]+(?:[eE][-+]?[0-9]+)?).*</para>
+        /// <para>.<em>train:loss=([-+]?[0-9]</em>\\.?[0-9]+(?:[eE][-+]?[0-9]+)?).*</para>
         /// </summary>
         [NameInMap("Regex")]
         [Validation(Required=false)]

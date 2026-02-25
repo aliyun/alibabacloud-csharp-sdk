@@ -8,66 +8,70 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
-    public class HyperParameterRange : TeaModel {
-        [NameInMap("Enum")]
+    public class ListQuotaActiveUserUsagesRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>desc</para>
+        /// </summary>
+        [NameInMap("Order")]
         [Validation(Required=false)]
-        public List<string> Enum { get; set; }
+        public string Order { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>999</para>
         /// </summary>
-        [NameInMap("ExclusiveMaximum")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public bool? ExclusiveMaximum { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
-        [NameInMap("ExclusiveMinimum")]
-        [Validation(Required=false)]
-        public bool? ExclusiveMinimum { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>30</para>
-        /// </summary>
-        [NameInMap("MaxLength")]
-        [Validation(Required=false)]
-        public long? MaxLength { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
-        [NameInMap("Maximum")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string Maximum { get; set; }
+        public int? PageSize { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>false</para>
         /// </summary>
-        [NameInMap("MinLength")]
+        [NameInMap("SelfOnly")]
         [Validation(Required=false)]
-        public long? MinLength { get; set; }
+        public bool? SelfOnly { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>GmtCreateTime</para>
         /// </summary>
-        [NameInMap("Minimum")]
+        [NameInMap("SortBy")]
         [Validation(Required=false)]
-        public string Minimum { get; set; }
+        public string SortBy { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>^\+?[1-9][0-9]*$</para>
+        /// <para>200xxxxxx</para>
         /// </summary>
-        [NameInMap("Pattern")]
+        [NameInMap("UserId")]
         [Validation(Required=false)]
-        public string Pattern { get; set; }
+        public string UserId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
+        [NameInMap("Username")]
+        [Validation(Required=false)]
+        public string Username { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>12345</para>
+        /// </summary>
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

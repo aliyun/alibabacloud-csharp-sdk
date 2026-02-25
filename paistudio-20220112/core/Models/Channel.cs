@@ -15,15 +15,26 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Model</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("Properties")]
         [Validation(Required=false)]
         public Dictionary<string, object> Properties { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Required")]
         [Validation(Required=false)]
         public bool? Required { get; set; }

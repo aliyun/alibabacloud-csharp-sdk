@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>ceeb37xxxx</para>
+        /// <para>ceeb3724255364664</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

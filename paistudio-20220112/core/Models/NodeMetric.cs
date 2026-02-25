@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class NodeMetric : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>GU108</para>
+        /// </summary>
         [NameInMap("GPUType")]
         [Validation(Required=false)]
         public string GPUType { get; set; }

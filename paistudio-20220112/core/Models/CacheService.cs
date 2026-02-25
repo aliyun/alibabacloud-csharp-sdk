@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string GmtCreated { get; set; }
 
+        [NameInMap("NetworkType")]
+        [Validation(Required=false)]
+        public string NetworkType { get; set; }
+
         [NameInMap("QuotaId")]
         [Validation(Required=false)]
         public string QuotaId { get; set; }
@@ -32,6 +36,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("SupportRDMA")]
+        [Validation(Required=false)]
+        public string SupportRDMA { get; set; }
 
         [NameInMap("SupportedClientQuotaIds")]
         [Validation(Required=false)]

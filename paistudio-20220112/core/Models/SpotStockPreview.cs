@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class SpotStockPreview : TeaModel {
+        [NameInMap("AvailableQuantity")]
+        [Validation(Required=false)]
+        public int? AvailableQuantity { get; set; }
+
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>ml.gu8xf.8xlarge-gu108</para>

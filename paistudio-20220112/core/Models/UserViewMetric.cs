@@ -69,14 +69,26 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public List<string> NodeNames { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
         [NameInMap("RequestCPU")]
         [Validation(Required=false)]
         public int? RequestCPU { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("RequestGPU")]
         [Validation(Required=false)]
         public int? RequestGPU { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>102400000</para>
+        /// </summary>
         [NameInMap("RequestMemory")]
         [Validation(Required=false)]
         public long? RequestMemory { get; set; }
@@ -89,6 +101,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
         [NameInMap("TotalCPU")]
         [Validation(Required=false)]
         public int? TotalCPU { get; set; }

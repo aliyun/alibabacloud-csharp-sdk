@@ -32,7 +32,11 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public AlgorithmSpecComputeResourcePolicy Policy { get; set; }
             public class AlgorithmSpecComputeResourcePolicy : TeaModel {
                 /// <summary>
+                /// <para>Policy Value</para>
                 /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -40,6 +44,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
                 /// <summary>
                 /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>V1</para>
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
@@ -53,6 +60,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public AlgorithmSpecCustomization Customization { get; set; }
         public class AlgorithmSpecCustomization : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("CodeDir")]
             [Validation(Required=false)]
             public bool? CodeDir { get; set; }
@@ -65,6 +76,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>registry.cn-shanghai.aliyuncs.com/pai-training/kmeans:v1.0.0</para>
         /// </summary>
         [NameInMap("Image")]
         [Validation(Required=false)]
@@ -76,6 +90,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TFJob</para>
         /// </summary>
         [NameInMap("JobType")]
         [Validation(Required=false)]
@@ -97,10 +114,18 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             [Validation(Required=false)]
             public AlgorithmSpecProgressDefinitionsOverallProgress OverallProgress { get; set; }
             public class AlgorithmSpecProgressDefinitionsOverallProgress : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>training progress</para>
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>^[0-9]+([.][0-9]+){0,1}$</para>
+                /// </summary>
                 [NameInMap("Regex")]
                 [Validation(Required=false)]
                 public string Regex { get; set; }
@@ -111,10 +136,18 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             [Validation(Required=false)]
             public AlgorithmSpecProgressDefinitionsRemainingTime RemainingTime { get; set; }
             public class AlgorithmSpecProgressDefinitionsRemainingTime : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>training remaining time</para>
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>^[0-9]+([.][0-9]+){0,1}$</para>
+                /// </summary>
                 [NameInMap("Regex")]
                 [Validation(Required=false)]
                 public string Regex { get; set; }
@@ -131,6 +164,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public List<string> SupportedInstanceTypes { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("SupportsDistributedTraining")]
         [Validation(Required=false)]
         public bool? SupportsDistributedTraining { get; set; }

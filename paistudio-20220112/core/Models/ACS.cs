@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ACS : TeaModel {
+        /// <summary>
+        /// <para>ACS Identifier</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rq-3kbt2gtimmyw7fgfgothocvh</para>
+        /// </summary>
         [NameInMap("ACSQuotaId")]
         [Validation(Required=false)]
         public string ACSQuotaId { get; set; }
