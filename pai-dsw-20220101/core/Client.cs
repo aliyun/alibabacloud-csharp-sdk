@@ -2909,6 +2909,11 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             return await GetMetricsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取资源组统计</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetResourceGroupStatisticsRequest
         /// </param>
@@ -2962,6 +2967,11 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             return TeaModel.ToObject<GetResourceGroupStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取资源组统计</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetResourceGroupStatisticsRequest
         /// </param>
@@ -3015,6 +3025,11 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             return TeaModel.ToObject<GetResourceGroupStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取资源组统计</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetResourceGroupStatisticsRequest
         /// </param>
@@ -3029,6 +3044,11 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             return GetResourceGroupStatisticsWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取资源组统计</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetResourceGroupStatisticsRequest
         /// </param>
@@ -3329,7 +3349,7 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义用户命令</para>
+        /// <para>Get the user defined command</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3379,7 +3399,7 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义用户命令</para>
+        /// <para>Get the user defined command</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3429,7 +3449,7 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义用户命令</para>
+        /// <para>Get the user defined command</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3448,7 +3468,7 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义用户命令</para>
+        /// <para>Get the user defined command</para>
         /// </summary>
         /// 
         /// <param name="request">

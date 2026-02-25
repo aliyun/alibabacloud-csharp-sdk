@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>{&quot;foo&quot;: &quot;bar&quot;}</para>
+        /// <para>{\&quot;foo\&quot;: \&quot;bar\&quot;}</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]

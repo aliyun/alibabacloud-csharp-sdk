@@ -135,6 +135,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string NatGatewayId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ssh-rsa AAAAB3****************************</para>
+        /// </summary>
         [NameInMap("SSHPublicKey")]
         [Validation(Required=false)]
         public string SSHPublicKey { get; set; }
