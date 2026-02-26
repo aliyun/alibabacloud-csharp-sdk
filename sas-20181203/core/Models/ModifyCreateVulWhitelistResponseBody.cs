@@ -24,13 +24,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </summary>
         [NameInMap("VulWhitelistList")]
         [Validation(Required=false)]
-        public List<ModifyCreateVulWhitelistResponseBodyVulWhitelistList> VulWhitelistList { get; set; }
+        public ModifyCreateVulWhitelistResponseBodyVulWhitelistList VulWhitelistList { get; set; }
         public class ModifyCreateVulWhitelistResponseBodyVulWhitelistList : TeaModel {
             /// <summary>
-            /// <para>The ID of the whitelist.</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>30376</para>
+            /// <para>1002</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
