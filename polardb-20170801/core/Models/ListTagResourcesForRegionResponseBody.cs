@@ -33,34 +33,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<ListTagResourcesForRegionResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesForRegionResponseBodyTagResourcesTagResource : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>pc-****************</para>
-                /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>cluster</para>
-                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>type</para>
-                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

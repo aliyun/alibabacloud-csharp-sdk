@@ -1021,7 +1021,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels O\&amp;M events at a time.</para>
+        /// <para>Cancels O\\\&amp;M events at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1087,7 +1087,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels O\&amp;M events at a time.</para>
+        /// <para>Cancels O\\\&amp;M events at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1153,7 +1153,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels O\&amp;M events at a time.</para>
+        /// <para>Cancels O\\\&amp;M events at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1171,7 +1171,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels O\&amp;M events at a time.</para>
+        /// <para>Cancels O\\\&amp;M events at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2917,7 +2917,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭DB4AI</para>
+        /// <para>Disables the PolarDB for AI feature for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2979,7 +2979,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭DB4AI</para>
+        /// <para>Disables the PolarDB for AI feature for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3041,7 +3041,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭DB4AI</para>
+        /// <para>Disables the PolarDB for AI feature for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3059,7 +3059,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭DB4AI</para>
+        /// <para>Disables the PolarDB for AI feature for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7845,7 +7845,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建全球数据网络</para>
+        /// <para>Creates a global data network (GDN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7923,7 +7923,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建全球数据网络</para>
+        /// <para>Creates a global data network (GDN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8001,7 +8001,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建全球数据网络</para>
+        /// <para>Creates a global data network (GDN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8019,7 +8019,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建全球数据网络</para>
+        /// <para>Creates a global data network (GDN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12393,7 +12393,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteGlobalDataNetwork</para>
+        /// <para>Deletes a global data network (GDN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12435,7 +12435,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteGlobalDataNetwork</para>
+        /// <para>Deletes a global data network (GDN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12477,7 +12477,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteGlobalDataNetwork</para>
+        /// <para>Deletes a global data network (GDN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12495,7 +12495,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteGlobalDataNetwork</para>
+        /// <para>Deletes a global data network (GDN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13221,7 +13221,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a parameter template of a PolarDB cluster.</para>
+        /// <para>Deletes a parameter template from a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13295,7 +13295,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a parameter template of a PolarDB cluster.</para>
+        /// <para>Deletes a parameter template from a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13369,7 +13369,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a parameter template of a PolarDB cluster.</para>
+        /// <para>Deletes a parameter template from a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13395,7 +13395,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a parameter template of a PolarDB cluster.</para>
+        /// <para>Deletes a parameter template from a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15597,7 +15597,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户侧查询运维任务</para>
+        /// <para>Queries the O\\\&amp;M event details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15695,7 +15695,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户侧查询运维任务</para>
+        /// <para>Queries the O\\\&amp;M event details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15793,7 +15793,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户侧查询运维任务</para>
+        /// <para>Queries the O\\\&amp;M event details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15811,7 +15811,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户侧查询运维任务</para>
+        /// <para>Queries the O\\\&amp;M event details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17217,7 +17217,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup tasks of a PolarDB cluster.</para>
+        /// <para>Queries the details of backup tasks of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17283,7 +17283,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup tasks of a PolarDB cluster.</para>
+        /// <para>Queries the details of backup tasks of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17349,7 +17349,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup tasks of a PolarDB cluster.</para>
+        /// <para>Queries the details of backup tasks of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17367,7 +17367,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup tasks of a PolarDB cluster.</para>
+        /// <para>Queries the details of backup tasks of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23013,7 +23013,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the database links of a PolarDB for PostgreSQL (Compatible with Oracle) cluster.</para>
+        /// <para>Queries the database links of a PolarDB for Oracle cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23082,7 +23082,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the database links of a PolarDB for PostgreSQL (Compatible with Oracle) cluster.</para>
+        /// <para>Queries the database links of a PolarDB for Oracle cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23151,7 +23151,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the database links of a PolarDB for PostgreSQL (Compatible with Oracle) cluster.</para>
+        /// <para>Queries the database links of a PolarDB for Oracle cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23176,7 +23176,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the database links of a PolarDB for PostgreSQL (Compatible with Oracle) cluster.</para>
+        /// <para>Queries the database links of a PolarDB for Oracle cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23201,7 +23201,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例日志</para>
+        /// <para>Queries logs for a PolarDB cluster such as primary/secondary switchover logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23299,7 +23299,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例日志</para>
+        /// <para>Queries logs for a PolarDB cluster such as primary/secondary switchover logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23397,7 +23397,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例日志</para>
+        /// <para>Queries logs for a PolarDB cluster such as primary/secondary switchover logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23415,7 +23415,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例日志</para>
+        /// <para>Queries logs for a PolarDB cluster such as primary/secondary switchover logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25757,7 +25757,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeGlobalDataNetworkList</para>
+        /// <para>Queries the PolarFS global data network (GDN) details in all regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25803,7 +25803,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeGlobalDataNetworkList</para>
+        /// <para>Queries the PolarFS global data network (GDN) details in all regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25849,7 +25849,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeGlobalDataNetworkList</para>
+        /// <para>Queries the PolarFS global data network (GDN) details in all regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25867,7 +25867,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeGlobalDataNetworkList</para>
+        /// <para>Queries the PolarFS global data network (GDN) details in all regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26613,7 +26613,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例高可用相关日志</para>
+        /// <para>Queries the HA logs of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26679,7 +26679,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例高可用相关日志</para>
+        /// <para>Queries the HA logs of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26745,7 +26745,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例高可用相关日志</para>
+        /// <para>Queries the HA logs of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26763,7 +26763,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例高可用相关日志</para>
+        /// <para>Queries the HA logs of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27013,7 +27013,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务中心任务列表</para>
+        /// <para>Queries historical tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27119,7 +27119,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务中心任务列表</para>
+        /// <para>Queries historical tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27225,7 +27225,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务中心任务列表</para>
+        /// <para>Queries historical tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27243,7 +27243,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务中心任务列表</para>
+        /// <para>Queries historical tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30905,7 +30905,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions and zones available for PolarDB.</para>
+        /// <para>Queries the regions and zones that are supported by PolarDB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30959,7 +30959,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions and zones available for PolarDB.</para>
+        /// <para>Queries the regions and zones that are supported by PolarDB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31013,7 +31013,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions and zones available for PolarDB.</para>
+        /// <para>Queries the regions and zones that are supported by PolarDB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31031,7 +31031,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions and zones available for PolarDB.</para>
+        /// <para>Queries the regions and zones that are supported by PolarDB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33427,6 +33427,126 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>关闭DynamoDB兼容性能力</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableDBClusterDynamoDBRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableDBClusterDynamoDBResponse
+        /// </returns>
+        public DisableDBClusterDynamoDBResponse DisableDBClusterDynamoDBWithOptions(DisableDBClusterDynamoDBRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableDBClusterDynamoDB",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableDBClusterDynamoDBResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭DynamoDB兼容性能力</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableDBClusterDynamoDBRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableDBClusterDynamoDBResponse
+        /// </returns>
+        public async Task<DisableDBClusterDynamoDBResponse> DisableDBClusterDynamoDBWithOptionsAsync(DisableDBClusterDynamoDBRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableDBClusterDynamoDB",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableDBClusterDynamoDBResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭DynamoDB兼容性能力</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableDBClusterDynamoDBRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableDBClusterDynamoDBResponse
+        /// </returns>
+        public DisableDBClusterDynamoDBResponse DisableDBClusterDynamoDB(DisableDBClusterDynamoDBRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DisableDBClusterDynamoDBWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭DynamoDB兼容性能力</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableDBClusterDynamoDBRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableDBClusterDynamoDBResponse
+        /// </returns>
+        public async Task<DisableDBClusterDynamoDBResponse> DisableDBClusterDynamoDBAsync(DisableDBClusterDynamoDBRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DisableDBClusterDynamoDBWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>关闭集群的关系性</para>
         /// </summary>
         /// 
@@ -33735,6 +33855,126 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableDBClusterServerlessWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启DynamoDB兼容性能力</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableDBClusterDynamoDBRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableDBClusterDynamoDBResponse
+        /// </returns>
+        public EnableDBClusterDynamoDBResponse EnableDBClusterDynamoDBWithOptions(EnableDBClusterDynamoDBRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableDBClusterDynamoDB",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableDBClusterDynamoDBResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启DynamoDB兼容性能力</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableDBClusterDynamoDBRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableDBClusterDynamoDBResponse
+        /// </returns>
+        public async Task<EnableDBClusterDynamoDBResponse> EnableDBClusterDynamoDBWithOptionsAsync(EnableDBClusterDynamoDBRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableDBClusterDynamoDB",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableDBClusterDynamoDBResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启DynamoDB兼容性能力</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableDBClusterDynamoDBRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableDBClusterDynamoDBResponse
+        /// </returns>
+        public EnableDBClusterDynamoDBResponse EnableDBClusterDynamoDB(EnableDBClusterDynamoDBRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnableDBClusterDynamoDBWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启DynamoDB兼容性能力</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableDBClusterDynamoDBRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableDBClusterDynamoDBResponse
+        /// </returns>
+        public async Task<EnableDBClusterDynamoDBResponse> EnableDBClusterDynamoDBAsync(EnableDBClusterDynamoDBRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnableDBClusterDynamoDBWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -37823,7 +38063,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switching time of scheduled O\&amp;M events for an instance.</para>
+        /// <para>Modifies the switching time of scheduled O\\\&amp;M events for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37897,7 +38137,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switching time of scheduled O\&amp;M events for an instance.</para>
+        /// <para>Modifies the switching time of scheduled O\\\&amp;M events for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37971,7 +38211,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switching time of scheduled O\&amp;M events for an instance.</para>
+        /// <para>Modifies the switching time of scheduled O\\\&amp;M events for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37989,7 +38229,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switching time of scheduled O\&amp;M events for an instance.</para>
+        /// <para>Modifies the switching time of scheduled O\\\&amp;M events for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43179,7 +43419,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改存储性能</para>
+        /// <para>Changes the storage performance of a PolarDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43253,7 +43493,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改存储性能</para>
+        /// <para>Changes the storage performance of a PolarDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43327,7 +43567,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改存储性能</para>
+        /// <para>Changes the storage performance of a PolarDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43345,7 +43585,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改存储性能</para>
+        /// <para>Changes the storage performance of a PolarDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50729,6 +50969,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await SetPolarFsFileQuotaWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches over the primary and secondary clusters in a global database network (GDN).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SwitchOverGlobalDatabaseNetworkRequest
         /// </param>
@@ -50802,6 +51047,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<SwitchOverGlobalDatabaseNetworkResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches over the primary and secondary clusters in a global database network (GDN).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SwitchOverGlobalDatabaseNetworkRequest
         /// </param>
@@ -50875,6 +51125,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<SwitchOverGlobalDatabaseNetworkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches over the primary and secondary clusters in a global database network (GDN).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SwitchOverGlobalDatabaseNetworkRequest
         /// </param>
@@ -50888,6 +51143,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return SwitchOverGlobalDatabaseNetworkWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches over the primary and secondary clusters in a global database network (GDN).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SwitchOverGlobalDatabaseNetworkRequest
         /// </param>

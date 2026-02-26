@@ -49,9 +49,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        /// <summary>
-        /// <para>The cluster performance metrics.</para>
-        /// </summary>
         [NameInMap("PerformanceKeys")]
         [Validation(Required=false)]
         public DescribeDBNodePerformanceResponseBodyPerformanceKeys PerformanceKeys { get; set; }
@@ -60,29 +57,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItem> PerformanceItem { get; set; }
             public class DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItem : TeaModel {
-                /// <summary>
-                /// <para>The performance metrics that you want to query.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>PolarDBDiskUsage</para>
-                /// </summary>
                 [NameInMap("Measurement")]
                 [Validation(Required=false)]
                 public string Measurement { get; set; }
 
-                /// <summary>
-                /// <para>The name of the performance metric.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>mean_sys_dir_size</para>
-                /// </summary>
                 [NameInMap("MetricName")]
                 [Validation(Required=false)]
                 public string MetricName { get; set; }
 
-                /// <summary>
-                /// <para>The performance metrics.</para>
-                /// </summary>
                 [NameInMap("Points")]
                 [Validation(Required=false)]
                 public DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItemPoints Points { get; set; }
@@ -91,22 +73,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                     [Validation(Required=false)]
                     public List<DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue> PerformanceItemValue { get; set; }
                     public class DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue : TeaModel {
-                        /// <summary>
-                        /// <para>The timestamp of the metric. This value is a UNIX timestamp. Unit: millisecond.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>1600822800000</para>
-                        /// </summary>
                         [NameInMap("Timestamp")]
                         [Validation(Required=false)]
                         public long? Timestamp { get; set; }
 
-                        /// <summary>
-                        /// <para>The value of the metric.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>9.33</para>
-                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }

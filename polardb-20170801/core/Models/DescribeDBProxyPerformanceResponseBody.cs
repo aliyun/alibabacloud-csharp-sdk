@@ -49,9 +49,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        /// <summary>
-        /// <para>Details about the performance metrics.</para>
-        /// </summary>
         [NameInMap("PerformanceKeys")]
         [Validation(Required=false)]
         public DescribeDBProxyPerformanceResponseBodyPerformanceKeys PerformanceKeys { get; set; }
@@ -60,39 +57,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceItem> PerformanceItem { get; set; }
             public class DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceItem : TeaModel {
-                /// <summary>
-                /// <para>The ID of the node.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>pi-*************</para>
-                /// </summary>
                 [NameInMap("DBNodeId")]
                 [Validation(Required=false)]
                 public string DBNodeId { get; set; }
 
-                /// <summary>
-                /// <para>The performance metric.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>PolarProxy_CpuUsage</para>
-                /// </summary>
                 [NameInMap("Measurement")]
                 [Validation(Required=false)]
                 public string Measurement { get; set; }
 
-                /// <summary>
-                /// <para>The name of the performance metric.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>service_connections_ps</para>
-                /// </summary>
                 [NameInMap("MetricName")]
                 [Validation(Required=false)]
                 public string MetricName { get; set; }
 
-                /// <summary>
-                /// <para>The list of the performance metrics.</para>
-                /// </summary>
                 [NameInMap("Points")]
                 [Validation(Required=false)]
                 public DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceItemPoints Points { get; set; }
@@ -101,22 +77,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                     [Validation(Required=false)]
                     public List<DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue> PerformanceItemValue { get; set; }
                     public class DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue : TeaModel {
-                        /// <summary>
-                        /// <para>The time when the metric value was collected. This value is a timestamp in milliseconds.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>1600822800000</para>
-                        /// </summary>
                         [NameInMap("Timestamp")]
                         [Validation(Required=false)]
                         public long? Timestamp { get; set; }
 
-                        /// <summary>
-                        /// <para>The value of the metric.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>10</para>
-                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }

@@ -57,18 +57,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceItem> PerformanceItem { get; set; }
             public class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceItem : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>PolarDBDiskUsage</para>
-                /// </summary>
                 [NameInMap("Measurement")]
                 [Validation(Required=false)]
                 public string Measurement { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>mean_data_size</para>
-                /// </summary>
                 [NameInMap("MetricName")]
                 [Validation(Required=false)]
                 public string MetricName { get; set; }
@@ -81,18 +73,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                     [Validation(Required=false)]
                     public List<DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue> PerformanceItemValue { get; set; }
                     public class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>1737424822</para>
-                        /// </summary>
                         [NameInMap("Timestamp")]
                         [Validation(Required=false)]
                         public long? Timestamp { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>12.33</para>
-                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }

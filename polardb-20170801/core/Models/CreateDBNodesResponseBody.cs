@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
-        /// <summary>
-        /// <para>Details about the nodes.</para>
-        /// </summary>
         [NameInMap("DBNodeIds")]
         [Validation(Required=false)]
         public CreateDBNodesResponseBodyDBNodeIds DBNodeIds { get; set; }
