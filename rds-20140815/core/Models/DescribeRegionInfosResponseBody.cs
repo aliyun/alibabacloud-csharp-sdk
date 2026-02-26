@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRegionInfosResponseBody : TeaModel {
-        /// <summary>
-        /// <para>A list of regions.</para>
-        /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public DescribeRegionInfosResponseBodyRegions Regions { get; set; }
@@ -20,12 +17,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeRegionInfosResponseBodyRegionsRDSRegion> RDSRegion { get; set; }
             public class DescribeRegionInfosResponseBodyRegionsRDSRegion : TeaModel {
-                /// <summary>
-                /// <para>The region ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }

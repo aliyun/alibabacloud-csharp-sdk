@@ -2327,7 +2327,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels O\&amp;M tasks that are not started.</para>
+        /// <para>Cancels O\\\&amp;M tasks that are not started.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2417,7 +2417,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels O\&amp;M tasks that are not started.</para>
+        /// <para>Cancels O\\\&amp;M tasks that are not started.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2507,7 +2507,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels O\&amp;M tasks that are not started.</para>
+        /// <para>Cancels O\\\&amp;M tasks that are not started.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2553,7 +2553,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels O\&amp;M tasks that are not started.</para>
+        /// <para>Cancels O\\\&amp;M tasks that are not started.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7923,6 +7923,182 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDBInstanceForRebuildWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>原生复制实例创建复制通道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDBInstanceReplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBInstanceReplicationResponse
+        /// </returns>
+        public CreateDBInstanceReplicationResponse CreateDBInstanceReplicationWithOptions(CreateDBInstanceReplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelName))
+            {
+                query["ChannelName"] = request.ChannelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbInstanceId))
+            {
+                query["DbInstanceId"] = request.DbInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterHost))
+            {
+                query["MasterHost"] = request.MasterHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterPassword))
+            {
+                query["MasterPassword"] = request.MasterPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterPort))
+            {
+                query["MasterPort"] = request.MasterPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterUser))
+            {
+                query["MasterUser"] = request.MasterUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDBInstanceReplication",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDBInstanceReplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>原生复制实例创建复制通道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDBInstanceReplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBInstanceReplicationResponse
+        /// </returns>
+        public async Task<CreateDBInstanceReplicationResponse> CreateDBInstanceReplicationWithOptionsAsync(CreateDBInstanceReplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelName))
+            {
+                query["ChannelName"] = request.ChannelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbInstanceId))
+            {
+                query["DbInstanceId"] = request.DbInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterHost))
+            {
+                query["MasterHost"] = request.MasterHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterPassword))
+            {
+                query["MasterPassword"] = request.MasterPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterPort))
+            {
+                query["MasterPort"] = request.MasterPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterUser))
+            {
+                query["MasterUser"] = request.MasterUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDBInstanceReplication",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDBInstanceReplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>原生复制实例创建复制通道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDBInstanceReplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBInstanceReplicationResponse
+        /// </returns>
+        public CreateDBInstanceReplicationResponse CreateDBInstanceReplication(CreateDBInstanceReplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDBInstanceReplicationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>原生复制实例创建复制通道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDBInstanceReplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBInstanceReplicationResponse
+        /// </returns>
+        public async Task<CreateDBInstanceReplicationResponse> CreateDBInstanceReplicationAsync(CreateDBInstanceReplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDBInstanceReplicationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -15991,6 +16167,150 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>原生复制实例删除复制通道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDBInstanceReplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBInstanceReplicationResponse
+        /// </returns>
+        public DeleteDBInstanceReplicationResponse DeleteDBInstanceReplicationWithOptions(DeleteDBInstanceReplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelName))
+            {
+                query["ChannelName"] = request.ChannelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbInstanceId))
+            {
+                query["DbInstanceId"] = request.DbInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDBInstanceReplication",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDBInstanceReplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>原生复制实例删除复制通道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDBInstanceReplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBInstanceReplicationResponse
+        /// </returns>
+        public async Task<DeleteDBInstanceReplicationResponse> DeleteDBInstanceReplicationWithOptionsAsync(DeleteDBInstanceReplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelName))
+            {
+                query["ChannelName"] = request.ChannelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbInstanceId))
+            {
+                query["DbInstanceId"] = request.DbInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDBInstanceReplication",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDBInstanceReplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>原生复制实例删除复制通道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDBInstanceReplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBInstanceReplicationResponse
+        /// </returns>
+        public DeleteDBInstanceReplicationResponse DeleteDBInstanceReplication(DeleteDBInstanceReplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDBInstanceReplicationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>原生复制实例删除复制通道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDBInstanceReplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBInstanceReplicationResponse
+        /// </returns>
+        public async Task<DeleteDBInstanceReplicationResponse> DeleteDBInstanceReplicationAsync(DeleteDBInstanceReplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDBInstanceReplicationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a security group rule that is configured for an ApsaraDB RDS for SQL Server instance.</para>
         /// </summary>
         /// 
@@ -20279,7 +20599,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全密态用户权限</para>
+        /// <para>Query the encryption or data masking permission configuration of an account in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20345,7 +20665,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全密态用户权限</para>
+        /// <para>Query the encryption or data masking permission configuration of an account in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20411,7 +20731,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全密态用户权限</para>
+        /// <para>Query the encryption or data masking permission configuration of an account in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20429,7 +20749,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全密态用户权限</para>
+        /// <para>Query the encryption or data masking permission configuration of an account in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29878,7 +30198,19 @@ namespace AlibabaCloud.SDK.Rds20140815
         public DescribeDBInstanceReplicationResponse DescribeDBInstanceReplicationWithOptions(DescribeDBInstanceReplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -29889,7 +30221,7 @@ namespace AlibabaCloud.SDK.Rds20140815
                 Version = "2014-08-15",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -29927,7 +30259,19 @@ namespace AlibabaCloud.SDK.Rds20140815
         public async Task<DescribeDBInstanceReplicationResponse> DescribeDBInstanceReplicationWithOptionsAsync(DescribeDBInstanceReplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -29938,7 +30282,7 @@ namespace AlibabaCloud.SDK.Rds20140815
                 Version = "2014-08-15",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -54051,7 +54395,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为实例安装云助手Agent</para>
+        /// <para>Installs Cloud Assistant Agent on one or more RDS Custom instances. After you install Cloud Assistant Agent on RDS Custom instances, restart the instances for the installation to take effect.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -54103,7 +54447,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为实例安装云助手Agent</para>
+        /// <para>Installs Cloud Assistant Agent on one or more RDS Custom instances. After you install Cloud Assistant Agent on RDS Custom instances, restart the instances for the installation to take effect.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -54155,7 +54499,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为实例安装云助手Agent</para>
+        /// <para>Installs Cloud Assistant Agent on one or more RDS Custom instances. After you install Cloud Assistant Agent on RDS Custom instances, restart the instances for the installation to take effect.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54173,7 +54517,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为实例安装云助手Agent</para>
+        /// <para>Installs Cloud Assistant Agent on one or more RDS Custom instances. After you install Cloud Assistant Agent on RDS Custom instances, restart the instances for the installation to take effect.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57887,7 +58231,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the switching time of scheduled O\\\&amp;M tasks for an instance.</para>
+        /// <para>Changes the switching time of scheduled O\\\\\\&amp;M tasks for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -57978,7 +58322,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the switching time of scheduled O\\\&amp;M tasks for an instance.</para>
+        /// <para>Changes the switching time of scheduled O\\\\\\&amp;M tasks for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -58069,7 +58413,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the switching time of scheduled O\\\&amp;M tasks for an instance.</para>
+        /// <para>Changes the switching time of scheduled O\\\\\\&amp;M tasks for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -58108,7 +58452,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the switching time of scheduled O\\\&amp;M tasks for an instance.</para>
+        /// <para>Changes the switching time of scheduled O\\\\\\&amp;M tasks for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -85315,6 +85659,190 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UntagResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>原生复制实例更新复制通道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDBInstanceReplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDBInstanceReplicationResponse
+        /// </returns>
+        public UpdateDBInstanceReplicationResponse UpdateDBInstanceReplicationWithOptions(UpdateDBInstanceReplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelName))
+            {
+                query["ChannelName"] = request.ChannelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbInstanceId))
+            {
+                query["DbInstanceId"] = request.DbInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterHost))
+            {
+                query["MasterHost"] = request.MasterHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterPassword))
+            {
+                query["MasterPassword"] = request.MasterPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterPort))
+            {
+                query["MasterPort"] = request.MasterPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterUser))
+            {
+                query["MasterUser"] = request.MasterUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operation))
+            {
+                query["Operation"] = request.Operation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDBInstanceReplication",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDBInstanceReplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>原生复制实例更新复制通道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDBInstanceReplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDBInstanceReplicationResponse
+        /// </returns>
+        public async Task<UpdateDBInstanceReplicationResponse> UpdateDBInstanceReplicationWithOptionsAsync(UpdateDBInstanceReplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelName))
+            {
+                query["ChannelName"] = request.ChannelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbInstanceId))
+            {
+                query["DbInstanceId"] = request.DbInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterHost))
+            {
+                query["MasterHost"] = request.MasterHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterPassword))
+            {
+                query["MasterPassword"] = request.MasterPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterPort))
+            {
+                query["MasterPort"] = request.MasterPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterUser))
+            {
+                query["MasterUser"] = request.MasterUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operation))
+            {
+                query["Operation"] = request.Operation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDBInstanceReplication",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDBInstanceReplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>原生复制实例更新复制通道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDBInstanceReplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDBInstanceReplicationResponse
+        /// </returns>
+        public UpdateDBInstanceReplicationResponse UpdateDBInstanceReplication(UpdateDBInstanceReplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateDBInstanceReplicationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>原生复制实例更新复制通道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDBInstanceReplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDBInstanceReplicationResponse
+        /// </returns>
+        public async Task<UpdateDBInstanceReplicationResponse> UpdateDBInstanceReplicationAsync(UpdateDBInstanceReplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateDBInstanceReplicationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

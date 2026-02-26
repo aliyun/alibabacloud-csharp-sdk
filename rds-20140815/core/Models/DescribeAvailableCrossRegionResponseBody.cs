@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAvailableCrossRegionResponseBody : TeaModel {
-        /// <summary>
-        /// <para>An array that consists of destination regions for cross-region backups.</para>
-        /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public DescribeAvailableCrossRegionResponseBodyRegions Regions { get; set; }

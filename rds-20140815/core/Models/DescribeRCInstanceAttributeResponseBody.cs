@@ -60,9 +60,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string CreditSpecification { get; set; }
 
-        /// <summary>
-        /// <para>The details of the data disk.</para>
-        /// </summary>
         [NameInMap("DataDisks")]
         [Validation(Required=false)]
         public DescribeRCInstanceAttributeResponseBodyDataDisks DataDisks { get; set; }
@@ -71,26 +68,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeRCInstanceAttributeResponseBodyDataDisksDataDisk> DataDisk { get; set; }
             public class DescribeRCInstanceAttributeResponseBodyDataDisksDataDisk : TeaModel {
-                /// <summary>
-                /// <para>The category of the data disk.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cloud_essd</para>
-                /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the data disk is released when the instance is released. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>true</b>: The data disk is released when the instance is released.</description></item>
-                /// <item><description><b>false</b>: The data disk is reserved when the instance is released.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("DeleteWithInstance")]
                 [Validation(Required=false)]
                 public bool? DeleteWithInstance { get; set; }
@@ -103,36 +84,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string Device { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the data disk is encrypted. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("Encrypted")]
                 [Validation(Required=false)]
                 public string Encrypted { get; set; }
 
-                /// <summary>
-                /// <para>The performance level of data disk. This parameter is available when the data disk is an Enterprise SSD (ESSD).</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>PL1</para>
-                /// </summary>
                 [NameInMap("PerformanceLevel")]
                 [Validation(Required=false)]
                 public string PerformanceLevel { get; set; }
 
-                /// <summary>
-                /// <para>The size of the data disk. Unit: GiB.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>40</para>
-                /// </summary>
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public long? Size { get; set; }
@@ -351,9 +310,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
-        /// <summary>
-        /// <para>The private IP addresses of the instance in the classic network.</para>
-        /// </summary>
         [NameInMap("InnerIpAddress")]
         [Validation(Required=false)]
         public DescribeRCInstanceAttributeResponseBodyInnerIpAddress InnerIpAddress { get; set; }
@@ -487,9 +443,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string NodeType { get; set; }
 
-        /// <summary>
-        /// <para>The reasons why the instance is locked.</para>
-        /// </summary>
         [NameInMap("OperationLocks")]
         [Validation(Required=false)]
         public DescribeRCInstanceAttributeResponseBodyOperationLocks OperationLocks { get; set; }
@@ -498,19 +451,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeRCInstanceAttributeResponseBodyOperationLocksLockReason> LockReason { get; set; }
             public class DescribeRCInstanceAttributeResponseBodyOperationLocksLockReason : TeaModel {
-                /// <summary>
-                /// <para>The reason why the instance is locked. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>financial</b>: The instance is locked due to overdue payments.</description></item>
-                /// <item><description><b>security</b>: The instance is locked for security purposes.</description></item>
-                /// <item><description><b>recycling</b>: The instance is locked because the instance is a preemptible instance and pending to be released.</description></item>
-                /// <item><description><b>dedicatedhostfinancial</b>: The instance is locked due to overdue payments for the dedicated host.</description></item>
-                /// <item><description><b>refunded</b>: The instance is locked because a refund was made for the instance.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>None</para>
-                /// </summary>
                 [NameInMap("LockReason")]
                 [Validation(Required=false)]
                 public string LockReason { get; set; }
@@ -519,9 +459,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
-        /// <summary>
-        /// <para>The public IP address of the instance.</para>
-        /// </summary>
         [NameInMap("PublicIpAddress")]
         [Validation(Required=false)]
         public DescribeRCInstanceAttributeResponseBodyPublicIpAddress PublicIpAddress { get; set; }
@@ -556,9 +493,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        /// <summary>
-        /// <para>The security groups.</para>
-        /// </summary>
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
         public DescribeRCInstanceAttributeResponseBodySecurityGroupIds SecurityGroupIds { get; set; }
@@ -706,9 +640,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string NatIpAddress { get; set; }
 
-            /// <summary>
-            /// <para>The private IP addresses of the instance.</para>
-            /// </summary>
             [NameInMap("PrivateIpAddress")]
             [Validation(Required=false)]
             public DescribeRCInstanceAttributeResponseBodyVpcAttributesPrivateIpAddress PrivateIpAddress { get; set; }

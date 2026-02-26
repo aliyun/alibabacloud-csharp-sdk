@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
-        /// <summary>
-        /// <para>An array that consists of information about the ECS security group.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public ModifySecurityGroupConfigurationResponseBodyItems Items { get; set; }
@@ -30,36 +27,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<ModifySecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation> EcsSecurityGroupRelation { get; set; }
             public class ModifySecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation : TeaModel {
-                /// <summary>
-                /// <para>The network type of the ECS security group. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Classic</b></description></item>
-                /// <item><description><b>VPC</b></description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>VPC</para>
-                /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
 
-                /// <summary>
-                /// <para>The region ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the ECS security group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>sg-xxxxxxx</para>
-                /// </summary>
                 [NameInMap("SecurityGroupId")]
                 [Validation(Required=false)]
                 public string SecurityGroupId { get; set; }

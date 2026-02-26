@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        /// <summary>
-        /// <para>The cross-region log backup files.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeCrossRegionLogBackupFilesResponseBodyItems Items { get; set; }
@@ -40,102 +37,42 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeCrossRegionLogBackupFilesResponseBodyItemsItem> Item { get; set; }
             public class DescribeCrossRegionLogBackupFilesResponseBodyItemsItem : TeaModel {
-                /// <summary>
-                /// <para>The ID of the destination region within which the cross-region backup file is stored.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-shanghai</para>
-                /// </summary>
                 [NameInMap("CrossBackupRegion")]
                 [Validation(Required=false)]
                 public string CrossBackupRegion { get; set; }
 
-                /// <summary>
-                /// <para>The external URL from which you can download the cross-region log backup file.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="http://rdsddrlog-zb.oss-cn-zhangjiakou.aliyuncs.com/xxxxx">http://rdsddrlog-zb.oss-cn-zhangjiakou.aliyuncs.com/xxxxx</a></para>
-                /// </summary>
                 [NameInMap("CrossDownloadLink")]
                 [Validation(Required=false)]
                 public string CrossDownloadLink { get; set; }
 
-                /// <summary>
-                /// <para>The internal URL from which you can download the cross-region log backup file.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="http://rdsddrlog-zb.oss-cn-zhangjiakou-internal.aliyuncs.com/xxxxx">http://rdsddrlog-zb.oss-cn-zhangjiakou-internal.aliyuncs.com/xxxxx</a></para>
-                /// </summary>
                 [NameInMap("CrossIntranetDownloadLink")]
                 [Validation(Required=false)]
                 public string CrossIntranetDownloadLink { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the cross-region log backup file.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>14567</para>
-                /// </summary>
                 [NameInMap("CrossLogBackupId")]
                 [Validation(Required=false)]
                 public int? CrossLogBackupId { get; set; }
 
-                /// <summary>
-                /// <para>The size of the cross-region log backup file. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>5312836</para>
-                /// </summary>
                 [NameInMap("CrossLogBackupSize")]
                 [Validation(Required=false)]
                 public long? CrossLogBackupSize { get; set; }
 
-                /// <summary>
-                /// <para>The instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>8161055</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public int? InstanceId { get; set; }
 
-                /// <summary>
-                /// <para>The time when the URL expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-06-30T15:00:00Z</para>
-                /// </summary>
                 [NameInMap("LinkExpiredTime")]
                 [Validation(Required=false)]
                 public string LinkExpiredTime { get; set; }
 
-                /// <summary>
-                /// <para>The start time of the cross-region log backup file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-05-30T12:10:00Z</para>
-                /// </summary>
                 [NameInMap("LogBeginTime")]
                 [Validation(Required=false)]
                 public string LogBeginTime { get; set; }
 
-                /// <summary>
-                /// <para>The end time of the cross-region log backup file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-05-30T20:10:00Z</para>
-                /// </summary>
                 [NameInMap("LogEndTime")]
                 [Validation(Required=false)]
                 public string LogEndTime { get; set; }
 
-                /// <summary>
-                /// <para>The name of the cross-region log backup file.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou_rm-bpxxxxx_7198739_mysql-bin.000230</para>
-                /// </summary>
                 [NameInMap("LogFileName")]
                 [Validation(Required=false)]
                 public string LogFileName { get; set; }

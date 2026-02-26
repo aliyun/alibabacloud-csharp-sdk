@@ -68,9 +68,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
             }
 
-            /// <summary>
-            /// <para>The information about the coupon.</para>
-            /// </summary>
             [NameInMap("Coupons")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyPriceInfoCoupons Coupons { get; set; }
@@ -79,42 +76,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public List<DescribePriceResponseBodyPriceInfoCouponsCoupon> Coupon { get; set; }
                 public class DescribePriceResponseBodyPriceInfoCouponsCoupon : TeaModel {
-                    /// <summary>
-                    /// <para>The coupon ID.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>123456</para>
-                    /// </summary>
                     [NameInMap("CouponNo")]
                     [Validation(Required=false)]
                     public string CouponNo { get; set; }
 
-                    /// <summary>
-                    /// <para>The description of the coupon.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>test</para>
-                    /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
-                    /// <summary>
-                    /// <para>Indicates whether the coupon is selected.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>true</para>
-                    /// </summary>
                     [NameInMap("IsSelected")]
                     [Validation(Required=false)]
                     public string IsSelected { get; set; }
 
-                    /// <summary>
-                    /// <para>The coupon name.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>test</para>
-                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
@@ -163,9 +136,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public float? OriginalPrice { get; set; }
 
-            /// <summary>
-            /// <para>An array that consists of the ID of the promotion rule.</para>
-            /// </summary>
             [NameInMap("RuleIds")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyPriceInfoRuleIds RuleIds { get; set; }
@@ -218,9 +188,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The details of the promotion rule.</para>
-        /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public DescribePriceResponseBodyRules Rules { get; set; }
@@ -229,32 +196,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribePriceResponseBodyRulesRule> Rule { get; set; }
             public class DescribePriceResponseBodyRulesRule : TeaModel {
-                /// <summary>
-                /// <para>The description of the promotion rule.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Activity Description</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The name of the promotion rule.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Rule1</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the promotion rule.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1020021003939076</para>
-                /// </summary>
                 [NameInMap("RuleId")]
                 [Validation(Required=false)]
                 public long? RuleId { get; set; }

@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The reserved keywords.</para>
-        /// </summary>
         [NameInMap("Words")]
         [Validation(Required=false)]
         public DescribeInstanceKeywordsResponseBodyWords Words { get; set; }

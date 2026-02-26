@@ -9,12 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeParametersResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The list of parameters that are being synchronized.</para>
-        /// <remarks>
-        /// <para>After you modify and submit the parameters, you must wait for the parameters to be synchronized to the instance. After the synchronization, you can delete the parameters from the list.</para>
-        /// </remarks>
-        /// </summary>
         [NameInMap("ConfigParameters")]
         [Validation(Required=false)]
         public DescribeParametersResponseBodyConfigParameters ConfigParameters { get; set; }
@@ -23,32 +17,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeParametersResponseBodyConfigParametersDBInstanceParameter> DBInstanceParameter { get; set; }
             public class DescribeParametersResponseBodyConfigParametersDBInstanceParameter : TeaModel {
-                /// <summary>
-                /// <para>The description of the parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>This parameter sets the default fill factor value at the server scope. A fill factor is provided to optimize index data storage and performance.</para>
-                /// </summary>
                 [NameInMap("ParameterDescription")]
                 [Validation(Required=false)]
                 public string ParameterDescription { get; set; }
 
-                /// <summary>
-                /// <para>The name of the parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>fill factor</para>
-                /// </summary>
                 [NameInMap("ParameterName")]
                 [Validation(Required=false)]
                 public string ParameterName { get; set; }
 
-                /// <summary>
-                /// <para>The value of the parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>50</para>
-                /// </summary>
                 [NameInMap("ParameterValue")]
                 [Validation(Required=false)]
                 public string ParameterValue { get; set; }
@@ -136,9 +112,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The parameters that are in use.</para>
-        /// </summary>
         [NameInMap("RunningParameters")]
         [Validation(Required=false)]
         public DescribeParametersResponseBodyRunningParameters RunningParameters { get; set; }
@@ -147,52 +120,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeParametersResponseBodyRunningParametersDBInstanceParameter> DBInstanceParameter { get; set; }
             public class DescribeParametersResponseBodyRunningParametersDBInstanceParameter : TeaModel {
-                /// <summary>
-                /// <para>The default value of the parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>100</para>
-                /// </summary>
                 [NameInMap("ParameterDefaultValue")]
                 [Validation(Required=false)]
                 public string ParameterDefaultValue { get; set; }
 
-                /// <summary>
-                /// <para>The description of the parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>This parameter sets the default fill factor value at the server scope. A fill factor is provided to optimize index data storage and performance.</para>
-                /// </summary>
                 [NameInMap("ParameterDescription")]
                 [Validation(Required=false)]
                 public string ParameterDescription { get; set; }
 
-                /// <summary>
-                /// <para>The name of the parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>fill factor</para>
-                /// </summary>
                 [NameInMap("ParameterName")]
                 [Validation(Required=false)]
                 public string ParameterName { get; set; }
 
-                /// <summary>
-                /// <para>The value of the parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("ParameterValue")]
                 [Validation(Required=false)]
                 public string ParameterValue { get; set; }
 
-                /// <summary>
-                /// <para>The valid values of the parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1~100</para>
-                /// </summary>
                 [NameInMap("ParameterValueRange")]
                 [Validation(Required=false)]
                 public string ParameterValueRange { get; set; }

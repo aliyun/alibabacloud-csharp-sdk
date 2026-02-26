@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCharacterSetNameResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The character sets that are supported.</para>
-        /// </summary>
         [NameInMap("CharacterSetNameItems")]
         [Validation(Required=false)]
         public DescribeCharacterSetNameResponseBodyCharacterSetNameItems CharacterSetNameItems { get; set; }

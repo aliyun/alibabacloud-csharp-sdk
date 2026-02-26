@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSQLLogFilesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>An array that consists of the returned audit log files.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeSQLLogFilesResponseBodyItems Items { get; set; }
@@ -20,67 +17,26 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeSQLLogFilesResponseBodyItemsLogFile> LogFile { get; set; }
             public class DescribeSQLLogFilesResponseBodyItemsLogFile : TeaModel {
-                /// <summary>
-                /// <para>The file name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>custinsxxxxx.csv</para>
-                /// </summary>
                 [NameInMap("FileID")]
                 [Validation(Required=false)]
                 public string FileID { get; set; }
 
-                /// <summary>
-                /// <para>The download URL of the file. If the audit log file cannot be downloaded, this parameter is null.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="http://rdslog-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdslog-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></para>
-                /// </summary>
                 [NameInMap("LogDownloadURL")]
                 [Validation(Required=false)]
                 public string LogDownloadURL { get; set; }
 
-                /// <summary>
-                /// <para>The time at which the last SQL statement recorded in the audit log file was executed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-05-24T07:00:00Z</para>
-                /// </summary>
                 [NameInMap("LogEndTime")]
                 [Validation(Required=false)]
                 public string LogEndTime { get; set; }
 
-                /// <summary>
-                /// <para>The size of the audit log file. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3000</para>
-                /// </summary>
                 [NameInMap("LogSize")]
                 [Validation(Required=false)]
                 public string LogSize { get; set; }
 
-                /// <summary>
-                /// <para>The time at which the first SQL statement recorded in the audit log file was executed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-05-23T07:00:00Z</para>
-                /// </summary>
                 [NameInMap("LogStartTime")]
                 [Validation(Required=false)]
                 public string LogStartTime { get; set; }
 
-                /// <summary>
-                /// <para>The status of the audit log file. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Success</b></description></item>
-                /// <item><description><b>Failed</b></description></item>
-                /// <item><description><b>Generating</b></description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Success</para>
-                /// </summary>
                 [NameInMap("LogStatus")]
                 [Validation(Required=false)]
                 public string LogStatus { get; set; }

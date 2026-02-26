@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeLogBackupFilesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The details of log files.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeLogBackupFilesResponseBodyItems Items { get; set; }
@@ -20,62 +17,26 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeLogBackupFilesResponseBodyItemsBinLogFile> BinLogFile { get; set; }
             public class DescribeLogBackupFilesResponseBodyItemsBinLogFile : TeaModel {
-                /// <summary>
-                /// <para>The HTTP-based download URL of the log file. If the log file cannot be downloaded, an empty string is returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></para>
-                /// </summary>
                 [NameInMap("DownloadLink")]
                 [Validation(Required=false)]
                 public string DownloadLink { get; set; }
 
-                /// <summary>
-                /// <para>The size of the log file. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>788480</para>
-                /// </summary>
                 [NameInMap("FileSize")]
                 [Validation(Required=false)]
                 public long? FileSize { get; set; }
 
-                /// <summary>
-                /// <para>The URL that is used to download the log file over an internal network. If the log file cannot be downloaded, an empty string is returned. This URL is valid for one hour.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></para>
-                /// </summary>
                 [NameInMap("IntranetDownloadLink")]
                 [Validation(Required=false)]
                 public string IntranetDownloadLink { get; set; }
 
-                /// <summary>
-                /// <para>The expiration time of the URL. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-03-01T15:04:13Z</para>
-                /// </summary>
                 [NameInMap("LinkExpiredTime")]
                 [Validation(Required=false)]
                 public string LinkExpiredTime { get; set; }
 
-                /// <summary>
-                /// <para>The start time of the log file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2018-10-31T08:40Z</para>
-                /// </summary>
                 [NameInMap("LogBeginTime")]
                 [Validation(Required=false)]
                 public string LogBeginTime { get; set; }
 
-                /// <summary>
-                /// <para>The end time of the log file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2018-10-31T08:40Z</para>
-                /// </summary>
                 [NameInMap("LogEndTime")]
                 [Validation(Required=false)]
                 public string LogEndTime { get; set; }

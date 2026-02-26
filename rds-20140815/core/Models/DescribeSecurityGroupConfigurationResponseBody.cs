@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
-        /// <summary>
-        /// <para>The information about the ECS security group.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeSecurityGroupConfigurationResponseBodyItems Items { get; set; }
@@ -30,46 +27,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation> EcsSecurityGroupRelation { get; set; }
             public class DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation : TeaModel {
-                /// <summary>
-                /// <para>The network type of the ECS security group. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Classic</b></description></item>
-                /// <item><description><b>VPC</b></description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>VPC</para>
-                /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
 
-                /// <summary>
-                /// <para>The region ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the ECS security group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>sg-xxxxxxx</para>
-                /// </summary>
                 [NameInMap("SecurityGroupId")]
                 [Validation(Required=false)]
                 public string SecurityGroupId { get; set; }
 
-                /// <summary>
-                /// <para>The security group name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>security-group-emraccess</para>
-                /// </summary>
                 [NameInMap("SecurityGroupName")]
                 [Validation(Required=false)]
                 public string SecurityGroupName { get; set; }

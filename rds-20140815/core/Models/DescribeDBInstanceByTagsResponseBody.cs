@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceByTagsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The details about the instance.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeDBInstanceByTagsResponseBodyItems Items { get; set; }
@@ -20,19 +17,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTag> DBInstanceTag { get; set; }
             public class DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTag : TeaModel {
-                /// <summary>
-                /// <para>The instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rm-uf6w**********</para>
-                /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
-                /// <summary>
-                /// <para>The details about the tag.</para>
-                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTagTags Tags { get; set; }
@@ -41,22 +29,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     [Validation(Required=false)]
                     public List<DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTagTagsTag> Tag { get; set; }
                     public class DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTagTagsTag : TeaModel {
-                        /// <summary>
-                        /// <para>The tag key.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>key1</para>
-                        /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
-                        /// <summary>
-                        /// <para>The tag value.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>value1</para>
-                        /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
                         public string TagValue { get; set; }

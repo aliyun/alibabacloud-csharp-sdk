@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        /// <summary>
-        /// <para>The performance list.</para>
-        /// </summary>
         [NameInMap("PerformanceKeys")]
         [Validation(Required=false)]
         public DescribeDBProxyPerformanceResponseBodyPerformanceKeys PerformanceKeys { get; set; }
@@ -50,12 +47,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKey> PerformanceKey { get; set; }
             public class DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKey : TeaModel {
-                /// <summary>
-                /// <para>The performance parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cpu_ratio</para>
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
@@ -68,29 +59,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string Server { get; set; }
 
-                /// <summary>
-                /// <para>The service dimension.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>reserve_3</para>
-                /// </summary>
                 [NameInMap("Service")]
                 [Validation(Required=false)]
                 public string Service { get; set; }
 
-                /// <summary>
-                /// <para>The format in which the value of the performance metric is returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>docker_container_cpu</para>
-                /// </summary>
                 [NameInMap("ValueFormat")]
                 [Validation(Required=false)]
                 public string ValueFormat { get; set; }
 
-                /// <summary>
-                /// <para>The performance metrics.</para>
-                /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
                 public DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValues Values { get; set; }
@@ -99,22 +75,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     [Validation(Required=false)]
                     public List<DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue> PerformanceValue { get; set; }
                     public class DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue : TeaModel {
-                        /// <summary>
-                        /// <para>The date and time when the value of the performance metric was recorded. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>2019-10-10T09:00:00Z</para>
-                        /// </summary>
                         [NameInMap("Date")]
                         [Validation(Required=false)]
                         public string Date { get; set; }
 
-                        /// <summary>
-                        /// <para>The value of the performance metric.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>2.83</para>
-                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }

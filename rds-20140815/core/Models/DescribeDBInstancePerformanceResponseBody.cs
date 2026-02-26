@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string Engine { get; set; }
 
-        /// <summary>
-        /// <para>Details of the performance metrics.</para>
-        /// </summary>
         [NameInMap("PerformanceKeys")]
         [Validation(Required=false)]
         public DescribeDBInstancePerformanceResponseBodyPerformanceKeys PerformanceKeys { get; set; }
@@ -50,42 +47,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey> PerformanceKey { get; set; }
             public class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey : TeaModel {
-                /// <summary>
-                /// <para>The name of the performance metric.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>MySQL_Sessions</para>
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
-                /// <summary>
-                /// <para>The unit of the performance metrics.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>KB</para>
-                /// </summary>
                 [NameInMap("Unit")]
                 [Validation(Required=false)]
                 public string Unit { get; set; }
 
-                /// <summary>
-                /// <para>The format in which the value of the performance metric is returned.</para>
-                /// <remarks>
-                /// <para> If a performance metric value consists of multiple fields, the values are separated with ampersands (&amp;). Example: com_delete\&amp;com_insert\&amp;com_insert_select\&amp;com_replace.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>recv_k&amp;sent_k</para>
-                /// </summary>
                 [NameInMap("ValueFormat")]
                 [Validation(Required=false)]
                 public string ValueFormat { get; set; }
 
-                /// <summary>
-                /// <para>The performance metric values.</para>
-                /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
                 public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyValues Values { get; set; }
@@ -94,22 +67,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     [Validation(Required=false)]
                     public List<DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue> PerformanceValue { get; set; }
                     public class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue : TeaModel {
-                        /// <summary>
-                        /// <para>The date and time when the value of the performance metric was recorded. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>2011-05-30T03:29:00Z</para>
-                        /// </summary>
                         [NameInMap("Date")]
                         [Validation(Required=false)]
                         public string Date { get; set; }
 
-                        /// <summary>
-                        /// <para>The value of the performance metric.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>0.0&amp;13.6</para>
-                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }

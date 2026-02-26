@@ -104,9 +104,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyFeatures { get; set; }
 
-        /// <summary>
-        /// <para>The proxy nodes that are associated with the proxy terminal.</para>
-        /// </summary>
         [NameInMap("DBProxyNodes")]
         [Validation(Required=false)]
         public DescribeDBProxyEndpointResponseBodyDBProxyNodes DBProxyNodes { get; set; }
@@ -115,32 +112,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBProxyEndpointResponseBodyDBProxyNodesDBProxyNodes> DBProxyNodes { get; set; }
             public class DescribeDBProxyEndpointResponseBodyDBProxyNodesDBProxyNodes : TeaModel {
-                /// <summary>
-                /// <para>The number of CPU cores of the node.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("cpuCores")]
                 [Validation(Required=false)]
                 public string CpuCores { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the node in the zone.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>pn-xxxxxxx01</para>
-                /// </summary>
                 [NameInMap("nodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
 
-                /// <summary>
-                /// <para>The zone ID of the node.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou-c</para>
-                /// </summary>
                 [NameInMap("zoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
@@ -203,9 +182,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DbProxyEndpointZoneId { get; set; }
 
-        /// <summary>
-        /// <para>An array that consists of the information about the proxy endpoint.</para>
-        /// </summary>
         [NameInMap("EndpointConnectItems")]
         [Validation(Required=false)]
         public DescribeDBProxyEndpointResponseBodyEndpointConnectItems EndpointConnectItems { get; set; }
@@ -214,37 +190,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBProxyEndpointResponseBodyEndpointConnectItemsEndpointConnectItems> EndpointConnectItems { get; set; }
             public class DescribeDBProxyEndpointResponseBodyEndpointConnectItemsEndpointConnectItems : TeaModel {
-                /// <summary>
-                /// <para>The proxy endpoint queried.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testproxy****.rwlb.rds.aliyuncs.com</para>
-                /// </summary>
                 [NameInMap("DbProxyEndpointConnectString")]
                 [Validation(Required=false)]
                 public string DbProxyEndpointConnectString { get; set; }
 
-                /// <summary>
-                /// <para>The network type of the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>0</b>: Internet</description></item>
-                /// <item><description><b>1</b>: classic network</description></item>
-                /// <item><description><b>2</b>: virtual private cloud (VPC)</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("DbProxyEndpointNetType")]
                 [Validation(Required=false)]
                 public string DbProxyEndpointNetType { get; set; }
 
-                /// <summary>
-                /// <para>The port number that is associated with the proxy endpoint. Default value: <b>3306</b>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3306</para>
-                /// </summary>
                 [NameInMap("DbProxyEndpointPort")]
                 [Validation(Required=false)]
                 public string DbProxyEndpointPort { get; set; }

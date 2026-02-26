@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteBackupFileResponseBody : TeaModel {
-        /// <summary>
-        /// <para>An array that consists of the IDs of deleted backup sets.</para>
-        /// </summary>
         [NameInMap("DeletedBaksetIds")]
         [Validation(Required=false)]
         public DeleteBackupFileResponseBodyDeletedBaksetIds DeletedBaksetIds { get; set; }

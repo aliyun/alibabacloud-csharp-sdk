@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string IpHostPairNum { get; set; }
 
-        /// <summary>
-        /// <para>Details of distributed transaction whitelists.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeDTCSecurityIpHostsForSQLServerResponseBodyItems Items { get; set; }
@@ -40,22 +37,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDTCSecurityIpHostsForSQLServerResponseBodyItemsWhiteListGroups> WhiteListGroups { get; set; }
             public class DescribeDTCSecurityIpHostsForSQLServerResponseBodyItemsWhiteListGroups : TeaModel {
-                /// <summary>
-                /// <para>The IP address of the ECS instance and the hostname of the Windows computer. Format: <c>IP address,Hostname</c>. Multiple values are separated with semicolons (;).</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>192.168.1.100,k3ecstest</para>
-                /// </summary>
                 [NameInMap("SecurityIpHosts")]
                 [Validation(Required=false)]
                 public string SecurityIpHosts { get; set; }
 
-                /// <summary>
-                /// <para>The name of the distributed transaction whitelist.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test1</para>
-                /// </summary>
                 [NameInMap("WhitelistGroupName")]
                 [Validation(Required=false)]
                 public string WhitelistGroupName { get; set; }

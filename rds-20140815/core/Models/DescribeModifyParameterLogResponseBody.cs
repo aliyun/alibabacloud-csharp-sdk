@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
-        /// <summary>
-        /// <para>The log entries.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeModifyParameterLogResponseBodyItems Items { get; set; }
@@ -50,56 +47,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeModifyParameterLogResponseBodyItemsParameterChangeLog> ParameterChangeLog { get; set; }
             public class DescribeModifyParameterLogResponseBodyItemsParameterChangeLog : TeaModel {
-                /// <summary>
-                /// <para>The time when the parameter was modified. This value is a UNIX timestamp. Unit: milliseconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1584076066000</para>
-                /// </summary>
                 [NameInMap("ModifyTime")]
                 [Validation(Required=false)]
                 public string ModifyTime { get; set; }
 
-                /// <summary>
-                /// <para>The new value of the parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3</para>
-                /// </summary>
                 [NameInMap("NewParameterValue")]
                 [Validation(Required=false)]
                 public string NewParameterValue { get; set; }
 
-                /// <summary>
-                /// <para>The original value of the parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>8</para>
-                /// </summary>
                 [NameInMap("OldParameterValue")]
                 [Validation(Required=false)]
                 public string OldParameterValue { get; set; }
 
-                /// <summary>
-                /// <para>The name of the parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>innodb_stats_sample_pages</para>
-                /// </summary>
                 [NameInMap("ParameterName")]
                 [Validation(Required=false)]
                 public string ParameterName { get; set; }
 
-                /// <summary>
-                /// <para>The status. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Applied:</b> The new value has taken effect.</description></item>
-                /// <item><description><b>Syncing:</b> The new value is being applied and has not taken effect.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Syncing</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }

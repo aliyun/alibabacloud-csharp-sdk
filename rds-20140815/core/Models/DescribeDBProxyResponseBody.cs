@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBProxyResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The list of zones that are available for the database proxy.</para>
-        /// </summary>
         [NameInMap("DBProxyAVZones")]
         [Validation(Required=false)]
         public DescribeDBProxyResponseBodyDBProxyAVZones DBProxyAVZones { get; set; }
@@ -22,9 +19,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
-        /// <summary>
-        /// <para>An array consisting of the information about the database proxy endpoint that is created for the instance.</para>
-        /// </summary>
         [NameInMap("DBProxyConnectStringItems")]
         [Validation(Required=false)]
         public DescribeDBProxyResponseBodyDBProxyConnectStringItems DBProxyConnectStringItems { get; set; }
@@ -33,101 +27,38 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems> DBProxyConnectStringItems { get; set; }
             public class DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems : TeaModel {
-                /// <summary>
-                /// <para>The database proxy endpoint.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>gos787jog2wk0ye1****-rw4rm.rwlb.rds.aliyuncs.com</para>
-                /// </summary>
                 [NameInMap("DBProxyConnectString")]
                 [Validation(Required=false)]
                 public string DBProxyConnectString { get; set; }
 
-                /// <summary>
-                /// <para>The network type of the database proxy endpoint. A database proxy endpoint is formerly referred to as a proxy terminal. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>OuterString: Internet</description></item>
-                /// <item><description>InnerString: internal network</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>InnerString</para>
-                /// </summary>
                 [NameInMap("DBProxyConnectStringNetType")]
                 [Validation(Required=false)]
                 public string DBProxyConnectStringNetType { get; set; }
 
-                /// <summary>
-                /// <para>The network type of the database proxy. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>0: Internet</description></item>
-                /// <item><description>1: classic network</description></item>
-                /// <item><description>2: virtual private cloud (VPC)</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("DBProxyConnectStringNetWorkType")]
                 [Validation(Required=false)]
                 public string DBProxyConnectStringNetWorkType { get; set; }
 
-                /// <summary>
-                /// <para>The port that is associated with the database proxy endpoint.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3306</para>
-                /// </summary>
                 [NameInMap("DBProxyConnectStringPort")]
                 [Validation(Required=false)]
                 public string DBProxyConnectStringPort { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the backend database proxy endpoint.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>20****</para>
-                /// </summary>
                 [NameInMap("DBProxyEndpointId")]
                 [Validation(Required=false)]
                 public string DBProxyEndpointId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the database proxy endpoint. The name can be replaced by the ID of the database proxy endpoint.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>gos787jog2wk0ye1****</para>
-                /// </summary>
                 [NameInMap("DBProxyEndpointName")]
                 [Validation(Required=false)]
                 public string DBProxyEndpointName { get; set; }
 
-                /// <summary>
-                /// <para>The VPC of the database proxy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vpc-uf6oobt****</para>
-                /// </summary>
                 [NameInMap("DBProxyVpcId")]
                 [Validation(Required=false)]
                 public string DBProxyVpcId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the database proxy instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rm-bp145737x5<b><b>131161274792</b></b></para>
-                /// </summary>
                 [NameInMap("DBProxyVpcInstanceId")]
                 [Validation(Required=false)]
                 public string DBProxyVpcInstanceId { get; set; }
 
-                /// <summary>
-                /// <para>The vSwitch of the database proxy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vsw-uf6l0pic17****</para>
-                /// </summary>
                 [NameInMap("DBProxyVswitchId")]
                 [Validation(Required=false)]
                 public string DBProxyVswitchId { get; set; }
@@ -252,9 +183,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyKindCode { get; set; }
 
-        /// <summary>
-        /// <para>The proxy nodes.</para>
-        /// </summary>
         [NameInMap("DBProxyNodes")]
         [Validation(Required=false)]
         public DescribeDBProxyResponseBodyDBProxyNodes DBProxyNodes { get; set; }
@@ -263,19 +191,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes> DBProxyNodes { get; set; }
             public class DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes : TeaModel {
-                /// <summary>
-                /// <para>The number of CPU cores of the node.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("cpuCores")]
                 [Validation(Required=false)]
                 public string CpuCores { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the proxy node.</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>pn-xxxxxxx01</para>
                 /// </summary>
@@ -283,12 +203,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the zone in which the node is deployed.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou-c</para>
-                /// </summary>
                 [NameInMap("zoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
@@ -326,9 +240,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyServiceStatus { get; set; }
 
-        /// <summary>
-        /// <para>The proxy terminals of the instance.</para>
-        /// </summary>
         [NameInMap("DbProxyEndpointItems")]
         [Validation(Required=false)]
         public DescribeDBProxyResponseBodyDbProxyEndpointItems DbProxyEndpointItems { get; set; }
@@ -337,50 +248,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBProxyResponseBodyDbProxyEndpointItemsDbProxyEndpointItems> DbProxyEndpointItems { get; set; }
             public class DescribeDBProxyResponseBodyDbProxyEndpointItemsDbProxyEndpointItems : TeaModel {
-                /// <summary>
-                /// <para>The description of the database proxy endpoint.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>proxy-test</para>
-                /// </summary>
                 [NameInMap("DbProxyEndpointAliases")]
                 [Validation(Required=false)]
                 public string DbProxyEndpointAliases { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the database proxy endpoint.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>gos787jog2wk0ye1****</para>
-                /// </summary>
                 [NameInMap("DbProxyEndpointName")]
                 [Validation(Required=false)]
                 public string DbProxyEndpointName { get; set; }
 
-                /// <summary>
-                /// <para>The type of the database proxy endpoint. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Custom: custom database proxy endpoint</description></item>
-                /// <item><description>RWSplit: default database proxy endpoint</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>RWSplit</para>
-                /// </summary>
                 [NameInMap("DbProxyEndpointType")]
                 [Validation(Required=false)]
                 public string DbProxyEndpointType { get; set; }
 
-                /// <summary>
-                /// <para>The read and write attributes of the database proxy endpoint.</para>
-                /// <list type="bullet">
-                /// <item><description>ReadOnly</description></item>
-                /// <item><description>ReadWrite</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ReadWrite</para>
-                /// </summary>
                 [NameInMap("DbProxyReadWriteMode")]
                 [Validation(Required=false)]
                 public string DbProxyReadWriteMode { get; set; }

@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class ModifyDBInstanceDescriptionResponseBody : TeaModel {
+    public class UpdateDBInstanceReplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>17F57FEE-EA4F-4337-8D2E-9C23CAA63D74</para>

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeInstanceAutoRenewalAttributeResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The renewal information about the instance.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeInstanceAutoRenewalAttributeResponseBodyItems Items { get; set; }
@@ -20,52 +17,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem> Item { get; set; }
             public class DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem : TeaModel {
-                /// <summary>
-                /// <para>Indicates whether to enable auto-renewal for the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>True</para>
-                /// </summary>
                 [NameInMap("AutoRenew")]
                 [Validation(Required=false)]
                 public string AutoRenew { get; set; }
 
-                /// <summary>
-                /// <para>The instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rm-bpxxxxxxx</para>
-                /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
-                /// <summary>
-                /// <para>The renewal period.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public int? Duration { get; set; }
 
-                /// <summary>
-                /// <para>The region ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
-                /// <summary>
-                /// <para>The instance status.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Normal</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }

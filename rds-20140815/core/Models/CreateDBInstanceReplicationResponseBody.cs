@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class ModifyDBInstanceDescriptionResponseBody : TeaModel {
+    public class CreateDBInstanceReplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>17F57FEE-EA4F-4337-8D2E-9C23CAA63D74</para>
+        /// <para>76364A52-E0AB-5CC8-9818-CF1DC482C092</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

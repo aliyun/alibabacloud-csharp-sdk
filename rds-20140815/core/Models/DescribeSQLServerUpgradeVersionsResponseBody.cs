@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeSQLServerUpgradeVersionsResponseBodyItemsItem> Item { get; set; }
             public class DescribeSQLServerUpgradeVersionsResponseBodyItemsItem : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2016_web</para>
-                /// </summary>
                 [NameInMap("CurrentVersion")]
                 [Validation(Required=false)]
                 public string CurrentVersion { get; set; }
@@ -41,18 +37,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                             [Validation(Required=false)]
                             public List<DescribeSQLServerUpgradeVersionsResponseBodyItemsItemSQLServerUpgradeVersionsSQLServerUpgradeVersionDBInstanceClassItemsDBInstanceClassItem> DBInstanceClassItem { get; set; }
                             public class DescribeSQLServerUpgradeVersionsResponseBodyItemsItemSQLServerUpgradeVersionsSQLServerUpgradeVersionDBInstanceClassItemsDBInstanceClassItem : TeaModel {
-                                /// <summary>
-                                /// <b>Example:</b>
-                                /// <para>2</para>
-                                /// </summary>
                                 [NameInMap("CPU")]
                                 [Validation(Required=false)]
                                 public string CPU { get; set; }
 
-                                /// <summary>
-                                /// <b>Example:</b>
-                                /// <para>mssql.x4.medium.s2</para>
-                                /// </summary>
                                 [NameInMap("DBInstanceClass")]
                                 [Validation(Required=false)]
                                 public string DBInstanceClass { get; set; }
@@ -61,18 +49,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                                 [Validation(Required=false)]
                                 public string DBInstanceClassType { get; set; }
 
-                                /// <summary>
-                                /// <b>Example:</b>
-                                /// <para>2</para>
-                                /// </summary>
                                 [NameInMap("Group")]
                                 [Validation(Required=false)]
                                 public string Group { get; set; }
 
-                                /// <summary>
-                                /// <b>Example:</b>
-                                /// <para>8GB</para>
-                                /// </summary>
                                 [NameInMap("Memory")]
                                 [Validation(Required=false)]
                                 public string Memory { get; set; }
@@ -81,18 +61,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
                         }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>NO/YES</para>
-                        /// </summary>
                         [NameInMap("EnableUpgrade")]
                         [Validation(Required=false)]
                         public string EnableUpgrade { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>2016_std</para>
-                        /// </summary>
                         [NameInMap("Version")]
                         [Validation(Required=false)]
                         public string Version { get; set; }

@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
-        /// <summary>
-        /// <para>An array that consists of the information about the databases and tables whose data is included in the cross-region backup file.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeCrossBackupMetaListResponseBodyItems Items { get; set; }
@@ -30,32 +27,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeCrossBackupMetaListResponseBodyItemsMeta> Meta { get; set; }
             public class DescribeCrossBackupMetaListResponseBodyItemsMeta : TeaModel {
-                /// <summary>
-                /// <para>The name of the database.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testdb1</para>
-                /// </summary>
                 [NameInMap("Database")]
                 [Validation(Required=false)]
                 public string Database { get; set; }
 
-                /// <summary>
-                /// <para>The size of the table. Unit: KB. If the database contains more than one table, the names of these tables are separated by commas (,).</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1000</para>
-                /// </summary>
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public string Size { get; set; }
 
-                /// <summary>
-                /// <para>An array that consists of the names of the tables that the database contains. If the database contains more than one table, the names of these tables are separated by commas (,).</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test1,test2</para>
-                /// </summary>
                 [NameInMap("Tables")]
                 [Validation(Required=false)]
                 public string Tables { get; set; }

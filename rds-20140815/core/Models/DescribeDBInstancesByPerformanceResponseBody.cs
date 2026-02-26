@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesByPerformanceResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The details about the instance.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeDBInstancesByPerformanceResponseBodyItems Items { get; set; }
@@ -20,62 +17,26 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance> DBInstancePerformance { get; set; }
             public class DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance : TeaModel {
-                /// <summary>
-                /// <para>The CPU utilization of the instance in percentage.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.70</para>
-                /// </summary>
                 [NameInMap("CPUUsage")]
                 [Validation(Required=false)]
                 public string CPUUsage { get; set; }
 
-                /// <summary>
-                /// <para>The name of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>DatabaseTest</para>
-                /// </summary>
                 [NameInMap("DBInstanceDescription")]
                 [Validation(Required=false)]
                 public string DBInstanceDescription { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rm-uf6wjk5xxxxxx</para>
-                /// </summary>
                 [NameInMap("DBInstanceId")]
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
-                /// <summary>
-                /// <para>The disk usage of the instance in percentage.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>14.56</para>
-                /// </summary>
                 [NameInMap("DiskUsage")]
                 [Validation(Required=false)]
                 public string DiskUsage { get; set; }
 
-                /// <summary>
-                /// <para>The IOPS usage of the instance in percentage.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.15</para>
-                /// </summary>
                 [NameInMap("IOPSUsage")]
                 [Validation(Required=false)]
                 public string IOPSUsage { get; set; }
 
-                /// <summary>
-                /// <para>The number of sessions.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.10</para>
-                /// </summary>
                 [NameInMap("SessionUsage")]
                 [Validation(Required=false)]
                 public string SessionUsage { get; set; }
