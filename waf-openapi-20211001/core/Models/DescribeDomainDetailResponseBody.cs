@@ -180,6 +180,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public bool? FocusHttps { get; set; }
 
+            [NameInMap("HstsIncludeSubDomain")]
+            [Validation(Required=false)]
+            public bool? HstsIncludeSubDomain { get; set; }
+
+            [NameInMap("HstsMaxAge")]
+            [Validation(Required=false)]
+            public long? HstsMaxAge { get; set; }
+
+            [NameInMap("HstsPreload")]
+            [Validation(Required=false)]
+            public bool? HstsPreload { get; set; }
+
             /// <summary>
             /// <para>Indicates whether HTTP/2 is enabled. Valid values:</para>
             /// <list type="bullet">
@@ -491,6 +503,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [NameInMap("MaxBodySize")]
             [Validation(Required=false)]
             public int? MaxBodySize { get; set; }
+
+            [NameInMap("ProxyProtocol")]
+            [Validation(Required=false)]
+            public bool? ProxyProtocol { get; set; }
 
             /// <summary>
             /// <para>The read timeout period. Unit: seconds. Valid values: 5 to 1800.</para>

@@ -5974,7 +5974,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除日志外发配置</para>
+        /// <para>Delets a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6028,7 +6028,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除日志外发配置</para>
+        /// <para>Delets a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6082,7 +6082,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除日志外发配置</para>
+        /// <para>Delets a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6100,7 +6100,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除日志外发配置</para>
+        /// <para>Delets a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11998,7 +11998,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a port of the cloud service that is added to Web Application Firewall (WAF). This operation is supported for only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// <para>Queries the port details of a cloud service instance that is added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS), Classic Load Balancer (CLB), and Network Load Balancer (NLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12072,7 +12072,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a port of the cloud service that is added to Web Application Firewall (WAF). This operation is supported for only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// <para>Queries the port details of a cloud service instance that is added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS), Classic Load Balancer (CLB), and Network Load Balancer (NLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12146,7 +12146,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a port of the cloud service that is added to Web Application Firewall (WAF). This operation is supported for only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// <para>Queries the port details of a cloud service instance that is added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS), Classic Load Balancer (CLB), and Network Load Balancer (NLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12164,7 +12164,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a port of the cloud service that is added to Web Application Firewall (WAF). This operation is supported for only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// <para>Queries the port details of a cloud service instance that is added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS), Classic Load Balancer (CLB), and Network Load Balancer (NLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">

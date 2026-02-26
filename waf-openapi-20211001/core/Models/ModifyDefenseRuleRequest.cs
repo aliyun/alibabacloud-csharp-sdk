@@ -66,7 +66,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The details of the protection rule. Specify a string that contains multiple parameters in the JSON format. You must specify the ID and the new configurations of the protection rule.</para>
+        /// <list type="bullet">
+        /// <item><description><b>id:</b> The ID of the protection rule. Data type: long. You must specify this parameter.</description></item>
+        /// <item><description>The protection rule configurations: The role of this parameter is the same as that of the <b>Rules</b> parameter in the <b>CreateDefenseRule</b> topic. For more information, see the &quot;<b>Protection rule parameters</b>&quot; section in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;id&quot;:2344,&quot;policyId&quot;:1012,&quot;action&quot;:&quot;block&quot;}]</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
