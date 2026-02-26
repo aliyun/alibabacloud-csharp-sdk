@@ -171,6 +171,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [Validation(Required=false)]
             public bool? UseComputeNode { get; set; }
 
+            [NameInMap("supportCompactionService")]
+            [Validation(Required=false)]
+            public bool? SupportCompactionService { get; set; }
+
         }
 
         /// <summary>
