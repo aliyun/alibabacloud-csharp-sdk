@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class CreateMultiAccountDeliveryChannelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the delivery channel.</para>
+        /// <para>The delivery channel ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dc-6q79dm4o9***</para>

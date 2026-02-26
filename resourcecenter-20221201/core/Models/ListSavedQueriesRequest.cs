@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class ListSavedQueriesRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>The maximum number of entries to return on each page.</para>
         /// <para>Valid values: 1 to 50.</para>
         /// <para>Default value: 50.</para>
         /// 
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <c>NextToken</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0FF0A66E-781F-51EE-9531-928F197558F2</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the resource groups.</para>
+        /// <para>The resource groups.</para>
         /// </summary>
         [NameInMap("ResourceGroups")]
         [Validation(Required=false)]
         public List<ListMultiAccountResourceGroupsResponseBodyResourceGroups> ResourceGroups { get; set; }
         public class ListMultiAccountResourceGroupsResponseBodyResourceGroups : TeaModel {
             /// <summary>
-            /// <para>The ID of the management account or member of the resource directory.</para>
+            /// <para>The ID of the management account or a member in the resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1394339739****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfmzawhxxc****</para>
@@ -87,11 +87,14 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The status of the resource group. Valid values:</para>
+            /// <para>The status of the resource group.</para>
             /// <list type="bullet">
-            /// <item><description>Creating: The resource group is being created.</description></item>
-            /// <item><description>OK: The resource group is created.</description></item>
-            /// <item><description>PendingDelete: The resource group is waiting to be deleted.</description></item>
+            /// <item><description><para>Creating: The resource group is being created.</para>
+            /// </description></item>
+            /// <item><description><para>OK: The resource group is created.</para>
+            /// </description></item>
+            /// <item><description><para>PendingDelete: The resource group is pending deletion.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

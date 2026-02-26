@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class ListMultiAccountResourceGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the management account or member of the resource directory.</para>
+        /// <para>The ID of the management account or a member in the resource directory.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// <para>Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The IDs of resource groups.</para>
+        /// <para>The resource group IDs.</para>
         /// </summary>
         [NameInMap("ResourceGroupIds")]
         [Validation(Required=false)]

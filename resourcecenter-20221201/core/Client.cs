@@ -159,16 +159,136 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a single-account delivery channel.</para>
+        /// <para>Queries the configurations of multiple resources in your account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetResourceConfigurationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetResourceConfigurationsResponse
+        /// </returns>
+        public BatchGetResourceConfigurationsResponse BatchGetResourceConfigurationsWithOptions(BatchGetResourceConfigurationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resources))
+            {
+                query["Resources"] = request.Resources;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchGetResourceConfigurations",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchGetResourceConfigurationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of multiple resources in your account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetResourceConfigurationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetResourceConfigurationsResponse
+        /// </returns>
+        public async Task<BatchGetResourceConfigurationsResponse> BatchGetResourceConfigurationsWithOptionsAsync(BatchGetResourceConfigurationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resources))
+            {
+                query["Resources"] = request.Resources;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchGetResourceConfigurations",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchGetResourceConfigurationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of multiple resources in your account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetResourceConfigurationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetResourceConfigurationsResponse
+        /// </returns>
+        public BatchGetResourceConfigurationsResponse BatchGetResourceConfigurations(BatchGetResourceConfigurationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchGetResourceConfigurationsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of multiple resources in your account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetResourceConfigurationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetResourceConfigurationsResponse
+        /// </returns>
+        public async Task<BatchGetResourceConfigurationsResponse> BatchGetResourceConfigurationsAsync(BatchGetResourceConfigurationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchGetResourceConfigurationsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a resource delivery channel for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
-        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <para>Resource delivery supports the scheduled delivery of resource snapshots and the delivery of resource configuration changes.
+        /// Scheduled delivery of resource snapshots supports two scenarios:</para>
         /// <list type="bullet">
-        /// <item><description>Standard delivery: Leave the ResourceSnapshotDelivery.CustomExpression parameter empty.</description></item>
-        /// <item><description>Custom delivery: Set the ResourceSnapshotDelivery.CustomExpression parameter to an appropriate value.</description></item>
+        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -227,16 +347,16 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a single-account delivery channel.</para>
+        /// <para>Creates a resource delivery channel for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
-        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <para>Resource delivery supports the scheduled delivery of resource snapshots and the delivery of resource configuration changes.
+        /// Scheduled delivery of resource snapshots supports two scenarios:</para>
         /// <list type="bullet">
-        /// <item><description>Standard delivery: Leave the ResourceSnapshotDelivery.CustomExpression parameter empty.</description></item>
-        /// <item><description>Custom delivery: Set the ResourceSnapshotDelivery.CustomExpression parameter to an appropriate value.</description></item>
+        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -295,16 +415,16 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a single-account delivery channel.</para>
+        /// <para>Creates a resource delivery channel for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
-        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <para>Resource delivery supports the scheduled delivery of resource snapshots and the delivery of resource configuration changes.
+        /// Scheduled delivery of resource snapshots supports two scenarios:</para>
         /// <list type="bullet">
-        /// <item><description>Standard delivery: Leave the ResourceSnapshotDelivery.CustomExpression parameter empty.</description></item>
-        /// <item><description>Custom delivery: Set the ResourceSnapshotDelivery.CustomExpression parameter to an appropriate value.</description></item>
+        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -323,16 +443,16 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a single-account delivery channel.</para>
+        /// <para>Creates a resource delivery channel for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
-        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <para>Resource delivery supports the scheduled delivery of resource snapshots and the delivery of resource configuration changes.
+        /// Scheduled delivery of resource snapshots supports two scenarios:</para>
         /// <list type="bullet">
-        /// <item><description>Standard delivery: Leave the ResourceSnapshotDelivery.CustomExpression parameter empty.</description></item>
-        /// <item><description>Custom delivery: Set the ResourceSnapshotDelivery.CustomExpression parameter to an appropriate value.</description></item>
+        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -484,7 +604,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service. Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
+        /// <para>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service (SLS). Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
         /// Scheduled resource snapshots support the following delivery scenarios:</para>
         /// <list type="bullet">
         /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
@@ -552,7 +672,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service. Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
+        /// <para>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service (SLS). Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
         /// Scheduled resource snapshots support the following delivery scenarios:</para>
         /// <list type="bullet">
         /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
@@ -620,7 +740,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service. Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
+        /// <para>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service (SLS). Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
         /// Scheduled resource snapshots support the following delivery scenarios:</para>
         /// <list type="bullet">
         /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
@@ -648,7 +768,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service. Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
+        /// <para>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service (SLS). Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
         /// Scheduled resource snapshots support the following delivery scenarios:</para>
         /// <list type="bullet">
         /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
@@ -1287,7 +1407,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>关闭跨账号搜索功能</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1320,7 +1440,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>关闭跨账号搜索功能</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1353,7 +1473,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>关闭跨账号搜索功能</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1367,7 +1487,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>关闭跨账号搜索功能</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1381,7 +1501,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deactivates the Resource Center service.</para>
+        /// <para>禁用资源中心</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1414,7 +1534,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deactivates the Resource Center service.</para>
+        /// <para>禁用资源中心</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1447,7 +1567,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deactivates the Resource Center service.</para>
+        /// <para>禁用资源中心</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1461,7 +1581,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deactivates the Resource Center service.</para>
+        /// <para>禁用资源中心</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1569,13 +1689,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>开通跨账号搜索功能</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If you have created a resource directory for your enterprise, you can enable the cross-account resource search feature by using the management account of the resource directory or a delegated administrator account of Resource Center to view the resources of members in the resource directory. For more information about a resource directory, see <a href="https://help.aliyun.com/document_detail/200506.html">Resource Directory overview</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// EnableMultiAccountResourceCenterRequest
@@ -1607,13 +1722,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>开通跨账号搜索功能</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If you have created a resource directory for your enterprise, you can enable the cross-account resource search feature by using the management account of the resource directory or a delegated administrator account of Resource Center to view the resources of members in the resource directory. For more information about a resource directory, see <a href="https://help.aliyun.com/document_detail/200506.html">Resource Directory overview</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// EnableMultiAccountResourceCenterRequest
@@ -1645,13 +1755,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>开通跨账号搜索功能</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If you have created a resource directory for your enterprise, you can enable the cross-account resource search feature by using the management account of the resource directory or a delegated administrator account of Resource Center to view the resources of members in the resource directory. For more information about a resource directory, see <a href="https://help.aliyun.com/document_detail/200506.html">Resource Directory overview</a>.</para>
-        /// </description>
         /// 
         /// <returns>
         /// EnableMultiAccountResourceCenterResponse
@@ -1664,13 +1769,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>开通跨账号搜索功能</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If you have created a resource directory for your enterprise, you can enable the cross-account resource search feature by using the management account of the resource directory or a delegated administrator account of Resource Center to view the resources of members in the resource directory. For more information about a resource directory, see <a href="https://help.aliyun.com/document_detail/200506.html">Resource Directory overview</a>.</para>
-        /// </description>
         /// 
         /// <returns>
         /// EnableMultiAccountResourceCenterResponse
@@ -1777,7 +1877,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes an SQL statement to query resources across accounts.</para>
+        /// <para>执行多账号查询</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1831,7 +1931,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes an SQL statement to query resources across accounts.</para>
+        /// <para>执行多账号查询</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1885,7 +1985,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes an SQL statement to query resources across accounts.</para>
+        /// <para>执行多账号查询</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1903,7 +2003,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes an SQL statement to query resources across accounts.</para>
+        /// <para>执行多账号查询</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2065,7 +2165,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a single-account delivery channel.</para>
+        /// <para>Queries the information about a delivery channel within the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2107,7 +2207,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a single-account delivery channel.</para>
+        /// <para>Queries the information about a delivery channel within the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2149,7 +2249,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a single-account delivery channel.</para>
+        /// <para>Queries the information about a delivery channel within the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2167,7 +2267,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a single-account delivery channel.</para>
+        /// <para>Queries the information about a delivery channel within the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2185,7 +2285,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics on a single-account delivery channel.</para>
+        /// <para>Queries the statistics of a resource delivery channel in the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2227,7 +2327,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics on a single-account delivery channel.</para>
+        /// <para>Queries the statistics of a resource delivery channel in the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2269,7 +2369,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics on a single-account delivery channel.</para>
+        /// <para>Queries the statistics of a resource delivery channel in the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2287,7 +2387,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics on a single-account delivery channel.</para>
+        /// <para>Queries the statistics of a resource delivery channel in the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2425,7 +2525,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a multi-account delivery channel.</para>
+        /// <para>Queries the information about a cross-account resource delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2467,7 +2567,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a multi-account delivery channel.</para>
+        /// <para>Queries the information about a cross-account resource delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2509,7 +2609,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a multi-account delivery channel.</para>
+        /// <para>Queries the information about a cross-account resource delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2527,7 +2627,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a multi-account delivery channel.</para>
+        /// <para>Queries the information about a cross-account resource delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2665,7 +2765,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>获取跨账号资源中心服务状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2698,7 +2798,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>获取跨账号资源中心服务状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2731,7 +2831,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>获取跨账号资源中心服务状态</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2745,7 +2845,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>获取跨账号资源中心服务状态</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2903,8 +3003,13 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取多账号资源数量</para>
+        /// <para>Queries the number of resources within the management account and multiple members of a resource directory.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query only resources supported by Resource Center. For more information, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMultiAccountResourceCountsRequest
@@ -2953,8 +3058,13 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取多账号资源数量</para>
+        /// <para>Queries the number of resources within the management account and multiple members of a resource directory.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query only resources supported by Resource Center. For more information, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMultiAccountResourceCountsRequest
@@ -3003,8 +3113,13 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取多账号资源数量</para>
+        /// <para>Queries the number of resources within the management account and multiple members of a resource directory.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query only resources supported by Resource Center. For more information, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMultiAccountResourceCountsRequest
@@ -3021,8 +3136,13 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取多账号资源数量</para>
+        /// <para>Queries the number of resources within the management account and multiple members of a resource directory.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query only resources supported by Resource Center. For more information, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMultiAccountResourceCountsRequest
@@ -3133,7 +3253,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a resource within the current account.</para>
+        /// <para>获取资源配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3183,7 +3303,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a resource within the current account.</para>
+        /// <para>获取资源配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3233,7 +3353,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a resource within the current account.</para>
+        /// <para>获取资源配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3251,7 +3371,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a resource within the current account.</para>
+        /// <para>获取资源配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3269,8 +3389,16 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the numbers of resources on which the current account has access permissions.</para>
+        /// <para>Queries the number of resources in your account that you have permission to access.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can query the number of resources in your account that you have permission to access.</description></item>
+        /// <item><description>You can query only the <a href="https://help.aliyun.com/document_detail/477798.html">Alibaba Cloud services and resource types that are supported by Resource Center</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetResourceCountsRequest
@@ -3323,8 +3451,16 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the numbers of resources on which the current account has access permissions.</para>
+        /// <para>Queries the number of resources in your account that you have permission to access.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can query the number of resources in your account that you have permission to access.</description></item>
+        /// <item><description>You can query only the <a href="https://help.aliyun.com/document_detail/477798.html">Alibaba Cloud services and resource types that are supported by Resource Center</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetResourceCountsRequest
@@ -3377,8 +3513,16 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the numbers of resources on which the current account has access permissions.</para>
+        /// <para>Queries the number of resources in your account that you have permission to access.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can query the number of resources in your account that you have permission to access.</description></item>
+        /// <item><description>You can query only the <a href="https://help.aliyun.com/document_detail/477798.html">Alibaba Cloud services and resource types that are supported by Resource Center</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetResourceCountsRequest
@@ -3395,8 +3539,16 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the numbers of resources on which the current account has access permissions.</para>
+        /// <para>Queries the number of resources in your account that you have permission to access.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can query the number of resources in your account that you have permission to access.</description></item>
+        /// <item><description>You can query only the <a href="https://help.aliyun.com/document_detail/477798.html">Alibaba Cloud services and resource types that are supported by Resource Center</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetResourceCountsRequest
@@ -3533,7 +3685,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of single-account delivery channels.</para>
+        /// <para>Queries a list of delivery channels within the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3579,7 +3731,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of single-account delivery channels.</para>
+        /// <para>Queries a list of delivery channels within the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3625,7 +3777,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of single-account delivery channels.</para>
+        /// <para>Queries a list of delivery channels within the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3643,7 +3795,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of single-account delivery channels.</para>
+        /// <para>Queries a list of delivery channels within the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3789,7 +3941,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of filters.</para>
+        /// <para>获取过滤器列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3822,7 +3974,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of filters.</para>
+        /// <para>获取过滤器列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3855,7 +4007,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of filters.</para>
+        /// <para>获取过滤器列表</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3869,7 +4021,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of filters.</para>
+        /// <para>获取过滤器列表</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3883,7 +4035,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of multi-account delivery channels.</para>
+        /// <para>Queries a list of delivery channels in resource directory mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3929,7 +4081,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of multi-account delivery channels.</para>
+        /// <para>Queries a list of delivery channels in resource directory mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3975,7 +4127,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of multi-account delivery channels.</para>
+        /// <para>Queries a list of delivery channels in resource directory mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3993,7 +4145,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of multi-account delivery channels.</para>
+        /// <para>Queries a list of delivery channels in resource directory mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4011,7 +4163,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource groups within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>Queries the resource groups within the management account or a member in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4065,7 +4217,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource groups within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>Queries the resource groups within the management account or a member in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4119,7 +4271,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource groups within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>Queries the resource groups within the management account or a member in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4137,7 +4289,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource groups within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>Queries the resource groups within the management account or a member in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4155,18 +4307,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the relationships between resources within the management account or members of your resource directory.</para>
+        /// <para>跨账号列出资源关系</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>By default, the operation returns up to 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
-        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
-        /// <item><description>You can specify one or more filter conditions to narrow the search. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Resources that meet any value of the filter condition are returned.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListMultiAccountResourceRelationshipsRequest
@@ -4231,18 +4373,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the relationships between resources within the management account or members of your resource directory.</para>
+        /// <para>跨账号列出资源关系</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>By default, the operation returns up to 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
-        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
-        /// <item><description>You can specify one or more filter conditions to narrow the search. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Resources that meet any value of the filter condition are returned.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListMultiAccountResourceRelationshipsRequest
@@ -4307,18 +4439,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the relationships between resources within the management account or members of your resource directory.</para>
+        /// <para>跨账号列出资源关系</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>By default, the operation returns up to 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
-        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
-        /// <item><description>You can specify one or more filter conditions to narrow the search. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Resources that meet any value of the filter condition are returned.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListMultiAccountResourceRelationshipsRequest
@@ -4335,18 +4457,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the relationships between resources within the management account or members of your resource directory.</para>
+        /// <para>跨账号列出资源关系</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>By default, the operation returns up to 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
-        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
-        /// <item><description>You can specify one or more filter conditions to narrow the search. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Resources that meet any value of the filter condition are returned.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListMultiAccountResourceRelationshipsRequest
@@ -4363,7 +4475,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag keys of resources within the management account or a member of your resource directory.</para>
+        /// <para>查询多账号标签键</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4421,7 +4533,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag keys of resources within the management account or a member of your resource directory.</para>
+        /// <para>查询多账号标签键</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4479,7 +4591,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag keys of resources within the management account or a member of your resource directory.</para>
+        /// <para>查询多账号标签键</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4497,7 +4609,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag keys of resources within the management account or a member of your resource directory.</para>
+        /// <para>查询多账号标签键</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4515,7 +4627,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag values of resources within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>查询多账号标签值</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4577,7 +4689,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag values of resources within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>查询多账号标签值</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4639,7 +4751,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag values of resources within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>查询多账号标签值</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4657,7 +4769,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag values of resources within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>查询多账号标签值</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4675,18 +4787,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resource relationships on which the current account has access permissions.</para>
+        /// <para>列出资源关系</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  You can call this operation to query only the resource relationships on which the current account has access permissions.</para>
-        /// <list type="bullet">
-        /// <item><description>By default, this operation returns up to 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
-        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
-        /// <item><description>You can specify one or more filter conditions to narrow the query scope. For information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only entries that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Entries that meet any value of the filter condition are returned.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListResourceRelationshipsRequest
@@ -4747,18 +4849,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resource relationships on which the current account has access permissions.</para>
+        /// <para>列出资源关系</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  You can call this operation to query only the resource relationships on which the current account has access permissions.</para>
-        /// <list type="bullet">
-        /// <item><description>By default, this operation returns up to 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
-        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
-        /// <item><description>You can specify one or more filter conditions to narrow the query scope. For information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only entries that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Entries that meet any value of the filter condition are returned.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListResourceRelationshipsRequest
@@ -4819,18 +4911,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resource relationships on which the current account has access permissions.</para>
+        /// <para>列出资源关系</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  You can call this operation to query only the resource relationships on which the current account has access permissions.</para>
-        /// <list type="bullet">
-        /// <item><description>By default, this operation returns up to 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
-        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
-        /// <item><description>You can specify one or more filter conditions to narrow the query scope. For information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only entries that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Entries that meet any value of the filter condition are returned.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListResourceRelationshipsRequest
@@ -4847,18 +4929,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resource relationships on which the current account has access permissions.</para>
+        /// <para>列出资源关系</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  You can call this operation to query only the resource relationships on which the current account has access permissions.</para>
-        /// <list type="bullet">
-        /// <item><description>By default, this operation returns up to 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
-        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
-        /// <item><description>You can specify one or more filter conditions to narrow the query scope. For information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only entries that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Entries that meet any value of the filter condition are returned.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListResourceRelationshipsRequest
@@ -5283,7 +5355,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag values of resources within the current account.</para>
+        /// <para>查询标签值</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5341,7 +5413,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag values of resources within the current account.</para>
+        /// <para>查询标签值</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5399,7 +5471,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag values of resources within the current account.</para>
+        /// <para>查询标签值</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5417,7 +5489,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag values of resources within the current account.</para>
+        /// <para>查询标签值</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5435,18 +5507,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches for resources within the management account or members of a resource directory.</para>
+        /// <para>Searches for resources in the management account and multiple member accounts of a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</description></item>
-        /// <item><description>By default, the operation returns a maximum of 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
-        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
-        /// <item><description>You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Resources that meet any value of the filter condition are returned.</description></item>
-        /// <item><description>You can visit <a href="https://api.alibabacloud.com/api-tools/demo/ResourceCenter">Sample Code Center</a> to view more sample queries.</description></item>
+        /// <item><description>You can search only for <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</description></item>
+        /// <item><description>To search for resources across accounts as a RAM user or RAM role, you must have been attached the <c>resourcecenter:SearchMultiAccountResources</c> policy. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</description></item>
+        /// <item><description>By default, this operation returns a maximum of 20 entries. To change the maximum number of entries that can be returned, specify the <c>MaxResults</c> parameter.</description></item>
+        /// <item><description>If the response does not include <c>NextToken</c>, no more data is available. To query the next page of results, set the <c>NextToken</c> parameter to the value that was returned from the previous call. If you do not specify the <c>NextToken</c> parameter, the first page of data is returned by default.</description></item>
+        /// <item><description>You can set one or more filter conditions to narrow the search scope. For information about supported filter parameters and matching methods, see the information below. Multiple filter conditions are joined by a logical <c>AND</c>. Only resources that meet all filter conditions are returned. The values within a single filter condition are joined by a logical <c>OR</c>. Resources that meet any value for a filter condition are returned.</description></item>
+        /// <item><description>For more query examples, visit &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">示例中心</a> &lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/demo/ResourceCenter">OpenAPI Portal</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5505,18 +5577,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches for resources within the management account or members of a resource directory.</para>
+        /// <para>Searches for resources in the management account and multiple member accounts of a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</description></item>
-        /// <item><description>By default, the operation returns a maximum of 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
-        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
-        /// <item><description>You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Resources that meet any value of the filter condition are returned.</description></item>
-        /// <item><description>You can visit <a href="https://api.alibabacloud.com/api-tools/demo/ResourceCenter">Sample Code Center</a> to view more sample queries.</description></item>
+        /// <item><description>You can search only for <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</description></item>
+        /// <item><description>To search for resources across accounts as a RAM user or RAM role, you must have been attached the <c>resourcecenter:SearchMultiAccountResources</c> policy. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</description></item>
+        /// <item><description>By default, this operation returns a maximum of 20 entries. To change the maximum number of entries that can be returned, specify the <c>MaxResults</c> parameter.</description></item>
+        /// <item><description>If the response does not include <c>NextToken</c>, no more data is available. To query the next page of results, set the <c>NextToken</c> parameter to the value that was returned from the previous call. If you do not specify the <c>NextToken</c> parameter, the first page of data is returned by default.</description></item>
+        /// <item><description>You can set one or more filter conditions to narrow the search scope. For information about supported filter parameters and matching methods, see the information below. Multiple filter conditions are joined by a logical <c>AND</c>. Only resources that meet all filter conditions are returned. The values within a single filter condition are joined by a logical <c>OR</c>. Resources that meet any value for a filter condition are returned.</description></item>
+        /// <item><description>For more query examples, visit &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">示例中心</a> &lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/demo/ResourceCenter">OpenAPI Portal</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5575,18 +5647,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches for resources within the management account or members of a resource directory.</para>
+        /// <para>Searches for resources in the management account and multiple member accounts of a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</description></item>
-        /// <item><description>By default, the operation returns a maximum of 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
-        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
-        /// <item><description>You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Resources that meet any value of the filter condition are returned.</description></item>
-        /// <item><description>You can visit <a href="https://api.alibabacloud.com/api-tools/demo/ResourceCenter">Sample Code Center</a> to view more sample queries.</description></item>
+        /// <item><description>You can search only for <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</description></item>
+        /// <item><description>To search for resources across accounts as a RAM user or RAM role, you must have been attached the <c>resourcecenter:SearchMultiAccountResources</c> policy. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</description></item>
+        /// <item><description>By default, this operation returns a maximum of 20 entries. To change the maximum number of entries that can be returned, specify the <c>MaxResults</c> parameter.</description></item>
+        /// <item><description>If the response does not include <c>NextToken</c>, no more data is available. To query the next page of results, set the <c>NextToken</c> parameter to the value that was returned from the previous call. If you do not specify the <c>NextToken</c> parameter, the first page of data is returned by default.</description></item>
+        /// <item><description>You can set one or more filter conditions to narrow the search scope. For information about supported filter parameters and matching methods, see the information below. Multiple filter conditions are joined by a logical <c>AND</c>. Only resources that meet all filter conditions are returned. The values within a single filter condition are joined by a logical <c>OR</c>. Resources that meet any value for a filter condition are returned.</description></item>
+        /// <item><description>For more query examples, visit &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">示例中心</a> &lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/demo/ResourceCenter">OpenAPI Portal</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5605,18 +5677,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches for resources within the management account or members of a resource directory.</para>
+        /// <para>Searches for resources in the management account and multiple member accounts of a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</description></item>
-        /// <item><description>By default, the operation returns a maximum of 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
-        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
-        /// <item><description>You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Resources that meet any value of the filter condition are returned.</description></item>
-        /// <item><description>You can visit <a href="https://api.alibabacloud.com/api-tools/demo/ResourceCenter">Sample Code Center</a> to view more sample queries.</description></item>
+        /// <item><description>You can search only for <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</description></item>
+        /// <item><description>To search for resources across accounts as a RAM user or RAM role, you must have been attached the <c>resourcecenter:SearchMultiAccountResources</c> policy. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</description></item>
+        /// <item><description>By default, this operation returns a maximum of 20 entries. To change the maximum number of entries that can be returned, specify the <c>MaxResults</c> parameter.</description></item>
+        /// <item><description>If the response does not include <c>NextToken</c>, no more data is available. To query the next page of results, set the <c>NextToken</c> parameter to the value that was returned from the previous call. If you do not specify the <c>NextToken</c> parameter, the first page of data is returned by default.</description></item>
+        /// <item><description>You can set one or more filter conditions to narrow the search scope. For information about supported filter parameters and matching methods, see the information below. Multiple filter conditions are joined by a logical <c>AND</c>. Only resources that meet all filter conditions are returned. The values within a single filter condition are joined by a logical <c>OR</c>. Resources that meet any value for a filter condition are returned.</description></item>
+        /// <item><description>For more query examples, visit &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">示例中心</a> &lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/demo/ResourceCenter">OpenAPI Portal</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5635,17 +5707,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search for resources that you can access within the current account.</para>
+        /// <para>Searches for resources in your current account that you are permitted to access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</para>
         /// <list type="bullet">
-        /// <item><description>By default, the operation returns a maximum of 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
-        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
-        /// <item><description>You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Resources that meet any value of the filter condition are returned.</description></item>
-        /// <item><description>You can visit <a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">Sample Code Center</a> to view more sample queries.</description></item>
+        /// <item><description>You can search only for resources in your current account that you are permitted to access.</description></item>
+        /// <item><description>You can search only for the <a href="https://help.aliyun.com/document_detail/477798.html">Alibaba Cloud services and resource types that are supported by Resource Center</a>.</description></item>
+        /// <item><description>By default, the SearchResources operation returns a maximum of 20 entries. You can specify the <c>MaxResults</c> parameter to change the maximum number of entries that are returned.</description></item>
+        /// <item><description>If the response does not include a <c>NextToken</c> value, no more results are available. To retrieve the next page of results, include the <c>NextToken</c> value from the previous response in your next request. If you do not specify the <c>NextToken</c> parameter, the first page of results is returned.</description></item>
+        /// <item><description>You can set one or more filter conditions to narrow the search scope. For information about the supported filter parameters and matching methods, see the following sections. Multiple filter conditions are combined by a logical <c>AND</c>. Only resources that meet all filter conditions are returned. The values within a filter condition are combined by a logical <c>OR</c>. Resources that meet any value of the filter condition are returned.</description></item>
+        /// <item><description>For more query examples, see <a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">API Explorer</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5712,17 +5785,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search for resources that you can access within the current account.</para>
+        /// <para>Searches for resources in your current account that you are permitted to access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</para>
         /// <list type="bullet">
-        /// <item><description>By default, the operation returns a maximum of 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
-        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
-        /// <item><description>You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Resources that meet any value of the filter condition are returned.</description></item>
-        /// <item><description>You can visit <a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">Sample Code Center</a> to view more sample queries.</description></item>
+        /// <item><description>You can search only for resources in your current account that you are permitted to access.</description></item>
+        /// <item><description>You can search only for the <a href="https://help.aliyun.com/document_detail/477798.html">Alibaba Cloud services and resource types that are supported by Resource Center</a>.</description></item>
+        /// <item><description>By default, the SearchResources operation returns a maximum of 20 entries. You can specify the <c>MaxResults</c> parameter to change the maximum number of entries that are returned.</description></item>
+        /// <item><description>If the response does not include a <c>NextToken</c> value, no more results are available. To retrieve the next page of results, include the <c>NextToken</c> value from the previous response in your next request. If you do not specify the <c>NextToken</c> parameter, the first page of results is returned.</description></item>
+        /// <item><description>You can set one or more filter conditions to narrow the search scope. For information about the supported filter parameters and matching methods, see the following sections. Multiple filter conditions are combined by a logical <c>AND</c>. Only resources that meet all filter conditions are returned. The values within a filter condition are combined by a logical <c>OR</c>. Resources that meet any value of the filter condition are returned.</description></item>
+        /// <item><description>For more query examples, see <a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">API Explorer</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5789,17 +5863,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search for resources that you can access within the current account.</para>
+        /// <para>Searches for resources in your current account that you are permitted to access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</para>
         /// <list type="bullet">
-        /// <item><description>By default, the operation returns a maximum of 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
-        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
-        /// <item><description>You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Resources that meet any value of the filter condition are returned.</description></item>
-        /// <item><description>You can visit <a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">Sample Code Center</a> to view more sample queries.</description></item>
+        /// <item><description>You can search only for resources in your current account that you are permitted to access.</description></item>
+        /// <item><description>You can search only for the <a href="https://help.aliyun.com/document_detail/477798.html">Alibaba Cloud services and resource types that are supported by Resource Center</a>.</description></item>
+        /// <item><description>By default, the SearchResources operation returns a maximum of 20 entries. You can specify the <c>MaxResults</c> parameter to change the maximum number of entries that are returned.</description></item>
+        /// <item><description>If the response does not include a <c>NextToken</c> value, no more results are available. To retrieve the next page of results, include the <c>NextToken</c> value from the previous response in your next request. If you do not specify the <c>NextToken</c> parameter, the first page of results is returned.</description></item>
+        /// <item><description>You can set one or more filter conditions to narrow the search scope. For information about the supported filter parameters and matching methods, see the following sections. Multiple filter conditions are combined by a logical <c>AND</c>. Only resources that meet all filter conditions are returned. The values within a filter condition are combined by a logical <c>OR</c>. Resources that meet any value of the filter condition are returned.</description></item>
+        /// <item><description>For more query examples, see <a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">API Explorer</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5818,17 +5893,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search for resources that you can access within the current account.</para>
+        /// <para>Searches for resources in your current account that you are permitted to access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</para>
         /// <list type="bullet">
-        /// <item><description>By default, the operation returns a maximum of 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
-        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
-        /// <item><description>You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Resources that meet any value of the filter condition are returned.</description></item>
-        /// <item><description>You can visit <a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">Sample Code Center</a> to view more sample queries.</description></item>
+        /// <item><description>You can search only for resources in your current account that you are permitted to access.</description></item>
+        /// <item><description>You can search only for the <a href="https://help.aliyun.com/document_detail/477798.html">Alibaba Cloud services and resource types that are supported by Resource Center</a>.</description></item>
+        /// <item><description>By default, the SearchResources operation returns a maximum of 20 entries. You can specify the <c>MaxResults</c> parameter to change the maximum number of entries that are returned.</description></item>
+        /// <item><description>If the response does not include a <c>NextToken</c> value, no more results are available. To retrieve the next page of results, include the <c>NextToken</c> value from the previous response in your next request. If you do not specify the <c>NextToken</c> parameter, the first page of results is returned.</description></item>
+        /// <item><description>You can set one or more filter conditions to narrow the search scope. For information about the supported filter parameters and matching methods, see the following sections. Multiple filter conditions are combined by a logical <c>AND</c>. Only resources that meet all filter conditions are returned. The values within a filter condition are combined by a logical <c>OR</c>. Resources that meet any value of the filter condition are returned.</description></item>
+        /// <item><description>For more query examples, see <a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">API Explorer</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5847,18 +5923,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a single-account delivery channel.</para>
+        /// <para>更新投递渠道</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
-        /// Scheduled resource snapshots support the following delivery scenarios:</para>
-        /// <list type="bullet">
-        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
-        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeliveryChannelRequest
@@ -5919,18 +5985,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a single-account delivery channel.</para>
+        /// <para>更新投递渠道</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
-        /// Scheduled resource snapshots support the following delivery scenarios:</para>
-        /// <list type="bullet">
-        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
-        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeliveryChannelRequest
@@ -5991,18 +6047,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a single-account delivery channel.</para>
+        /// <para>更新投递渠道</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
-        /// Scheduled resource snapshots support the following delivery scenarios:</para>
-        /// <list type="bullet">
-        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
-        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeliveryChannelRequest
@@ -6019,18 +6065,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a single-account delivery channel.</para>
+        /// <para>更新投递渠道</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
-        /// Scheduled resource snapshots support the following delivery scenarios:</para>
-        /// <list type="bullet">
-        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
-        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeliveryChannelRequest

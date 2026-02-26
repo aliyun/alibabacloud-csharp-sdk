@@ -8,80 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
-    public class SearchResourcesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The filter conditions.</para>
-        /// </summary>
-        [NameInMap("Filters")]
-        [Validation(Required=false)]
-        public List<SearchResourcesResponseBodyFilters> Filters { get; set; }
-        public class SearchResourcesResponseBodyFilters : TeaModel {
-            /// <summary>
-            /// <para>The key of the filter condition.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>RegionId</para>
-            /// </summary>
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            /// <summary>
-            /// <para>The matching method.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>Equals</para>
-            /// </summary>
-            [NameInMap("MatchType")]
-            [Validation(Required=false)]
-            public string MatchType { get; set; }
-
-            /// <summary>
-            /// <para>The values of the filter condition.</para>
-            /// </summary>
-            [NameInMap("Values")]
-            [Validation(Required=false)]
-            public List<string> Values { get; set; }
-
-        }
-
-        /// <summary>
-        /// <para>The maximum number of entries returned per page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
-        /// </summary>
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</para>
-        /// </summary>
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
+    public class BatchGetResourceConfigurationsResponseBody : TeaModel {
         /// <summary>
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>D696E6EF-3A6D-5770-801E-4982081FE4D0</para>
+        /// <para>F1CE0D52-32DA-531A-87A4-B9A5B68*****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the resources.</para>
+        /// <para>The list of resources.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
-        public List<SearchResourcesResponseBodyResources> Resources { get; set; }
-        public class SearchResourcesResponseBodyResources : TeaModel {
+        public List<BatchGetResourceConfigurationsResponseBodyResources> Resources { get; set; }
+        public class BatchGetResourceConfigurationsResponseBodyResources : TeaModel {
             /// <summary>
             /// <para>The ID of the Alibaba Cloud account.</para>
             /// 
@@ -93,10 +37,14 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string AccountId { get; set; }
 
             /// <summary>
+            /// <para>The details of the resource configuration.</para>
+            /// </summary>
+            [NameInMap("Configuration")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> Configuration { get; set; }
+
+            /// <summary>
             /// <para>The time when the resource was created.</para>
-            /// <remarks>
-            /// <para>Whether this parameter is returned depends on the Alibaba Cloud service to which the resource belongs.</para>
-            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-30T09:20:08Z</para>
@@ -106,23 +54,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the resource is deleted. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>true</para>
-            /// </description></item>
-            /// <item><description><para>false</para>
-            /// </description></item>
-            /// </list>
-            /// 
-            /// <b>Example:</b>
-            /// <para>true</para>
-            /// </summary>
-            [NameInMap("Deleted")]
-            [Validation(Required=false)]
-            public bool? Deleted { get; set; }
-
-            /// <summary>
-            /// <para>The time when the resource expires.</para>
+            /// <para>The expiration time of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-07-30T09:20:08Z</para>
@@ -132,12 +64,12 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The attributes of the IP addresses.</para>
+            /// <para>The properties of the IP addresses.</para>
             /// </summary>
             [NameInMap("IpAddressAttributes")]
             [Validation(Required=false)]
-            public List<SearchResourcesResponseBodyResourcesIpAddressAttributes> IpAddressAttributes { get; set; }
-            public class SearchResourcesResponseBodyResourcesIpAddressAttributes : TeaModel {
+            public List<BatchGetResourceConfigurationsResponseBodyResourcesIpAddressAttributes> IpAddressAttributes { get; set; }
+            public class BatchGetResourceConfigurationsResponseBodyResourcesIpAddressAttributes : TeaModel {
                 /// <summary>
                 /// <para>The IP address.</para>
                 /// 
@@ -151,9 +83,9 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
                 /// <summary>
                 /// <para>The network type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Public</b>: Internet</para>
+                /// <item><description><para><b>Public</b>: Internet.</para>
                 /// </description></item>
-                /// <item><description><para><b>Private</b>: Private network</para>
+                /// <item><description><para><b>Private</b>: Private network.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -165,7 +97,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// <para>The IP address version.</para>
+                /// <para>The version of the IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Ipv4</para>
@@ -187,7 +119,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public List<string> IpAddresses { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>The region ID of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -210,7 +142,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>vtb-bp11lbh452fr8940s****</para>
+            /// <para>eip-wz9gdtce0q6h48h*****</para>
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
@@ -230,7 +162,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// <para>The resource type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ACS::VPC::RouteTable</para>
+            /// <para>ACS::ECS::Instance</para>
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
@@ -241,8 +173,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
-            public List<SearchResourcesResponseBodyResourcesTags> Tags { get; set; }
-            public class SearchResourcesResponseBodyResourcesTags : TeaModel {
+            public List<BatchGetResourceConfigurationsResponseBodyResourcesTags> Tags { get; set; }
+            public class BatchGetResourceConfigurationsResponseBodyResourcesTags : TeaModel {
                 /// <summary>
                 /// <para>The tag key.</para>
                 /// 
@@ -267,9 +199,6 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 
             /// <summary>
             /// <para>The zone ID.</para>
-            /// <remarks>
-            /// <para>Whether this parameter is returned depends on the Alibaba Cloud service to which the resource belongs.</para>
-            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-k</para>

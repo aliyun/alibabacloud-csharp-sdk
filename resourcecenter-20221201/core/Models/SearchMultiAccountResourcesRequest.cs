@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public List<SearchMultiAccountResourcesRequestFilter> Filter { get; set; }
         public class SearchMultiAccountResourcesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The key of the filter condition. For more information, see <c>Supported filter parameters</c>.</para>
+            /// <para>The key of the filter condition. For more information, see the &quot;<c>Supported filter parameters</c>&quot; section below.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ResourceGroupId</para>
@@ -27,8 +27,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The matching mode.</para>
-            /// <para>The value Equals indicates an equal match.</para>
+            /// <para>The matching method.</para>
+            /// <para>Set this parameter to <c>Equals</c>, which means an exact match.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Equals</para>
@@ -59,8 +59,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
-        /// <para>If the total number of entries returned for the current request exceeds the value of the <c>MaxResults</c> parameter, the entries are truncated. In this case, you can use the token to initiate another request and obtain the remaining entries.``</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <c>NextToken</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</para>
@@ -70,12 +69,16 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The search scope. You can set the value to one of the following items:</para>
+        /// <para>The scope of the accounts in which you want to search for resources. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ID of a resource directory: Resources within the management account and all members of the resource directory are searched. You can call the <a href="https://help.aliyun.com/document_detail/159995.html">GetResourceDirectory</a> operation to obtain the ID.</description></item>
-        /// <item><description>ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched. You can call the <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a> operation to obtain the ID.</description></item>
-        /// <item><description>ID of a folder: Resources within all members in the folder are searched. You can call the <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a> operation to obtain the ID.</description></item>
-        /// <item><description>ID of a member: Resources within the member are searched. You can call the <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a> operation to obtain the ID.</description></item>
+        /// <item><description><para>The ID of a resource directory: Searches for resources in the management account and all its member accounts. For more information, see <a href="https://help.aliyun.com/document_detail/159995.html">GetResourceDirectory</a>.</para>
+        /// </description></item>
+        /// <item><description><para>The ID of the Root folder: Searches for resources in all member accounts under the Root folder and its subfolders. For more information, see <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a>.</para>
+        /// </description></item>
+        /// <item><description><para>The ID of a folder: Searches for resources in all member accounts under the folder. For more information, see <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a>.</para>
+        /// </description></item>
+        /// <item><description><para>The ID of a member account: Searches for resources in the member account. For more information, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -87,15 +90,15 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to sort the entries returned.</para>
+        /// <para>The sorting parameters.</para>
         /// </summary>
         [NameInMap("SortCriterion")]
         [Validation(Required=false)]
         public SearchMultiAccountResourcesRequestSortCriterion SortCriterion { get; set; }
         public class SearchMultiAccountResourcesRequestSortCriterion : TeaModel {
             /// <summary>
-            /// <para>The attribute based on which the entries are sorted.</para>
-            /// <para>The value CreateTime indicates the creation time of resources.</para>
+            /// <para>The sort key.</para>
+            /// <para>Set this parameter to <c>CreateTime</c>, which means the results are sorted by resource creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CreateTime</para>
@@ -105,11 +108,14 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The order in which the entries are sorted. Valid values:</para>
+            /// <para>The sort order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ASC: The entries are sorted in ascending order. This value is the default value.</description></item>
-            /// <item><description>DESC: The entries are sorted in descending order.</description></item>
+            /// <item><description><para>ASC: Ascending order.</para>
+            /// </description></item>
+            /// <item><description><para>DESC: Descending order.</para>
+            /// </description></item>
             /// </list>
+            /// <para>Default value: ASC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ASC</para>

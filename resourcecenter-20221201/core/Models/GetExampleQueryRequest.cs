@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         /// <summary>
         /// <para>The ID of the template.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListExampleQueries~~">ListExampleQueries</a> operation to obtain the template ID.</para>
+        /// <para>You can call the <a href="~~ListExampleQueries~~">ListExampleQueries</a> operation to obtain the template ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

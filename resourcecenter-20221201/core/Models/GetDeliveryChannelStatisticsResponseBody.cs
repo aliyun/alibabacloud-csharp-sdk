@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class GetDeliveryChannelStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The statistics on the delivery channel.</para>
+        /// <para>The statistics of the delivery channel.</para>
         /// </summary>
         [NameInMap("DeliveryChannelStatistics")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string DeliveryChannelName { get; set; }
 
             /// <summary>
-            /// <para>The last delivery time of resource configuration change events.</para>
+            /// <para>The last time a resource configuration change was delivered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-03T16:05:15Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string LatestChangeDeliveryTime { get; set; }
 
             /// <summary>
-            /// <para>The last delivery time of scheduled resource snapshots.</para>
+            /// <para>The last time a scheduled resource snapshot was delivered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-03T16:00:00Z</para>

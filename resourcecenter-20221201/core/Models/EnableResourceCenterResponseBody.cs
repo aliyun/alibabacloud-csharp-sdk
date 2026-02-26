@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class EnableResourceCenterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>45357BEF-AB50-5E4D-B05D-5A882A4BE924</para>
@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         /// <summary>
         /// <para>The activation status of the service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Pending: The service is being activated.</description></item>
-        /// <item><description>Enabled: The service is activated.</description></item>
+        /// <item><description><para>Pending: The service is being activated.</para>
+        /// </description></item>
+        /// <item><description><para>Enabled: The service is activated.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

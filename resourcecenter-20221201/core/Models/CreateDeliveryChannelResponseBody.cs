@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         /// <para>The ID of the delivery channel.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dc-0bzhsqpnk***</para>
+        /// <para>dc-0bzhsqpn****</para>
         /// </summary>
         [NameInMap("DeliveryChannelId")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>42A89312-0616-591E-B614-07BC87D3D***</para>
+        /// <para>42A89312-0616-591E-B614-07BC87D3D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

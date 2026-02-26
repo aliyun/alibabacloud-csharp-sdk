@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// <para>The description of the template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Queries all resources on which you have permissions and sorts the resources by resource type and resource ID.</para>
+            /// <para>查询我的所有资源，返回所有的列。</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The query statement in the template.</para>
+            /// <para>The expression of the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SELECT * FROM resources;</para>
@@ -60,24 +60,24 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// <para>The name of the template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Query of All Alibaba Cloud Resources</para>
+            /// <para>查询我的所有资源。</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The template ID.</para>
+            /// <para>The ID of the template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>sq-GeAck****</para>
+            /// <para>cq-GeAck****</para>
             /// </summary>
             [NameInMap("QueryId")]
             [Validation(Required=false)]
             public string QueryId { get; set; }
 
             /// <summary>
-            /// <para>The time when the template was updated. The time is displayed in UTC.</para>
+            /// <para>The time when the template was last updated. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-30T01:43:16Z</para>

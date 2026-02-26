@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
     public class GetMultiAccountDeliveryChannelResponseBody : TeaModel {
         /// <summary>
         /// <para>The description of the delivery channel.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>投递描述</para>
         /// </summary>
         [NameInMap("DeliveryChannelDescription")]
         [Validation(Required=false)]
@@ -24,14 +27,14 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public GetMultiAccountDeliveryChannelResponseBodyDeliveryChannelFilter DeliveryChannelFilter { get; set; }
         public class GetMultiAccountDeliveryChannelResponseBodyDeliveryChannelFilter : TeaModel {
             /// <summary>
-            /// <para>The effective account scopes of the delivery channel.</para>
+            /// <para>The accounts within the delivery scope.</para>
             /// </summary>
             [NameInMap("AccountScopes")]
             [Validation(Required=false)]
             public List<string> AccountScopes { get; set; }
 
             /// <summary>
-            /// <para>The effective resource types of the delivery channel.</para>
+            /// <para>The types of delivered resources.</para>
             /// </summary>
             [NameInMap("ResourceTypes")]
             [Validation(Required=false)]
@@ -70,25 +73,37 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The configurations for delivery of resource configuration change events.</para>
+        /// <para>The delivery of resource configuration changes.</para>
         /// </summary>
         [NameInMap("ResourceChangeDelivery")]
         [Validation(Required=false)]
         public GetMultiAccountDeliveryChannelResponseBodyResourceChangeDelivery ResourceChangeDelivery { get; set; }
         public class GetMultiAccountDeliveryChannelResponseBodyResourceChangeDelivery : TeaModel {
+            /// <summary>
+            /// <para>Indicates whether to deliver resource configuration changes. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>true</para>
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("Enabled")]
             [Validation(Required=false)]
             public string Enabled { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service configurations.</para>
+            /// <para>The Simple Log Service (SLS) configuration.</para>
             /// </summary>
             [NameInMap("SlsProperties")]
             [Validation(Required=false)]
             public GetMultiAccountDeliveryChannelResponseBodyResourceChangeDeliverySlsProperties SlsProperties { get; set; }
             public class GetMultiAccountDeliveryChannelResponseBodyResourceChangeDeliverySlsProperties : TeaModel {
                 /// <summary>
-                /// <para>The Alibaba Cloud Resource Name (ARN) of the destination to which large files are delivered.</para>
+                /// <para>The ARN of the Object Storage Service (OSS) bucket to which oversized data is delivered.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs:oss:cn-hangzhou:1911422487776***:resourcecenter-oss</para>
@@ -110,7 +125,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string TargetArn { get; set; }
 
             /// <summary>
-            /// <para>The type of the destination.</para>
+            /// <para>The type of the delivery destination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SLS</para>
@@ -122,7 +137,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         }
 
         /// <summary>
-        /// <para>The configurations for delivery of scheduled resource snapshots.</para>
+        /// <para>The configurations of scheduled delivery of resource snapshots.</para>
         /// </summary>
         [NameInMap("ResourceSnapshotDelivery")]
         [Validation(Required=false)]
@@ -148,19 +163,31 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             [Validation(Required=false)]
             public string DeliveryTime { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether to enable the scheduled delivery of resource snapshots. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>true</para>
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("Enabled")]
             [Validation(Required=false)]
             public string Enabled { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service configurations.</para>
+            /// <para>The SLS configuration.</para>
             /// </summary>
             [NameInMap("SlsProperties")]
             [Validation(Required=false)]
             public GetMultiAccountDeliveryChannelResponseBodyResourceSnapshotDeliverySlsProperties SlsProperties { get; set; }
             public class GetMultiAccountDeliveryChannelResponseBodyResourceSnapshotDeliverySlsProperties : TeaModel {
                 /// <summary>
-                /// <para>The ARN of the destination to which large files are delivered.</para>
+                /// <para>The ARN of the OSS bucket to which oversized data is delivered.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs:oss:cn-hangzhou:1911422487776***:resourcecenter-oss</para>
@@ -182,7 +209,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string TargetArn { get; set; }
 
             /// <summary>
-            /// <para>The type of the destination.</para>
+            /// <para>The type of the delivery destination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OSS</para>

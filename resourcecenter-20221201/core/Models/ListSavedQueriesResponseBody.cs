@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class ListSavedQueriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>The maximum number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARfZmVDe9NvRXloR5+8CK9nNJufMdRA7W1miLC1P****</para>
@@ -60,34 +60,34 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// <para>The description of the template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Queries all resources on which you have permissions and sorts the resources by resource type and resource ID.</para>
+            /// <para>查询我的所有资源，返回所有的列。</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The template name.</para>
+            /// <para>The name of the template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Query of All Alibaba Cloud Resources</para>
+            /// <para>查询我的所有资源。</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The template ID.</para>
+            /// <para>The ID of the template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>sq-GeAck****</para>
+            /// <para>cq-GeAck****</para>
             /// </summary>
             [NameInMap("QueryId")]
             [Validation(Required=false)]
             public string QueryId { get; set; }
 
             /// <summary>
-            /// <para>The time when the template was updated. The time is displayed in UTC.</para>
+            /// <para>The time when the template was last updated. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-14 10:27:07</para>

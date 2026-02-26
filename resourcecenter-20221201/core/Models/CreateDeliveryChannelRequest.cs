@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
     public class CreateDeliveryChannelRequest : TeaModel {
         /// <summary>
         /// <para>The description of the delivery channel.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试投递</para>
         /// </summary>
         [NameInMap("DeliveryChannelDescription")]
         [Validation(Required=false)]
@@ -25,11 +28,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public CreateDeliveryChannelRequestDeliveryChannelFilter DeliveryChannelFilter { get; set; }
         public class CreateDeliveryChannelRequestDeliveryChannelFilter : TeaModel {
             /// <summary>
-            /// <para>An array of effective resource types for the delivery channel.</para>
-            /// <list type="bullet">
-            /// <item><description>Example: [&quot;ACS::VPC::VPC&quot;, &quot;ACS::ECS::Instance&quot;].</description></item>
-            /// <item><description>If you want to deliver items of all resource types supported by Resource Center, set this parameter to [&quot;ALL&quot;].</description></item>
-            /// </list>
+            /// <para>The list of resource types to be delivered.</para>
             /// </summary>
             [NameInMap("ResourceTypes")]
             [Validation(Required=false)]
@@ -49,25 +48,22 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string DeliveryChannelName { get; set; }
 
         /// <summary>
-        /// <para>The configurations for delivery of resource configuration change events.</para>
+        /// <para>The delivery of resource configuration changes.</para>
         /// </summary>
         [NameInMap("ResourceChangeDelivery")]
         [Validation(Required=false)]
         public CreateDeliveryChannelRequestResourceChangeDelivery ResourceChangeDelivery { get; set; }
         public class CreateDeliveryChannelRequestResourceChangeDelivery : TeaModel {
             /// <summary>
-            /// <para>The Simple Log Service configurations.</para>
+            /// <para>The SLS configurations.</para>
             /// </summary>
             [NameInMap("SlsProperties")]
             [Validation(Required=false)]
             public CreateDeliveryChannelRequestResourceChangeDeliverySlsProperties SlsProperties { get; set; }
             public class CreateDeliveryChannelRequestResourceChangeDeliverySlsProperties : TeaModel {
                 /// <summary>
-                /// <para>The ARN of the destination to which large files are delivered.</para>
-                /// <list type="bullet">
-                /// <item><description>If the size of a resource configuration change event exceeds 1 MB, the event is delivered as an OSS object.</description></item>
-                /// <item><description>You need to set this parameter to the ARN of a bucket whose name is prefixed with resourcecenter-.</description></item>
-                /// </list>
+                /// <para>The ARN of the destination OSS bucket for oversized files.</para>
+                /// <para>If the size of a resource configuration change event exceeds 1 MB, the event is delivered as an OSS object. Set this parameter to the ARN of an OSS bucket that has the <c>resourcecenter-</c> prefix.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs:oss:cn-hangzhou:191142248777****:resourcecenter-oss</para>
@@ -79,10 +75,12 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             }
 
             /// <summary>
-            /// <para>The ARN of the delivery destination.</para>
+            /// <para>The ARN of the destination. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If you set <c>TargetType</c> to <c>OSS</c>, you must set <c>TargetArn</c> to the ARN of a bucket whose name is prefixed with resourcecenter-.</description></item>
-            /// <item><description>If you set <c>TargetType</c> to <c>SLS</c>, you must set <c>TargetArn</c> to the ARN of a Logstore whose name is prefixed with resourcecenter-.</description></item>
+            /// <item><description><para>If you set <c>TargetType</c> to <c>OSS</c>, set <c>TargetArn</c> to the ARN of an OSS bucket that has the <c>resourcecenter-</c> prefix.</para>
+            /// </description></item>
+            /// <item><description><para>If you set <c>TargetType</c> to <c>SLS</c>, set <c>TargetArn</c> to the ARN of an SLS Logstore that has the <c>resourcecenter-</c> prefix.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,11 +91,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string TargetArn { get; set; }
 
             /// <summary>
-            /// <para>The type of the delivery destination.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><c>SLS</c></description></item>
-            /// </list>
+            /// <para>The type of the destination.</para>
+            /// <para>Valid value: <c>SLS</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SLS</para>
@@ -109,7 +104,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         }
 
         /// <summary>
-        /// <para>The configurations for delivery of scheduled resource snapshots.</para>
+        /// <para>The scheduled delivery of resource snapshots.</para>
         /// </summary>
         [NameInMap("ResourceSnapshotDelivery")]
         [Validation(Required=false)]
@@ -136,19 +131,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string DeliveryTime { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service configurations.</para>
+            /// <para>The SLS configurations.</para>
             /// </summary>
             [NameInMap("SlsProperties")]
             [Validation(Required=false)]
             public CreateDeliveryChannelRequestResourceSnapshotDeliverySlsProperties SlsProperties { get; set; }
             public class CreateDeliveryChannelRequestResourceSnapshotDeliverySlsProperties : TeaModel {
                 /// <summary>
-                /// <para>The ARN of the destination to which large files are delivered.</para>
-                /// <list type="bullet">
-                /// <item><description>If the size of a resource configuration change event exceeds 1 MB, the event is delivered as an OSS object.</description></item>
-                /// <item><description>You need to set this parameter to the ARN of a bucket whose name is prefixed with resourcecenter-.</description></item>
-                /// <item><description>This parameter takes effect only if you use custom delivery for scheduled resource snapshots. You do not need to configure this parameter if you use standard delivery for scheduled resource snapshots.</description></item>
-                /// </list>
+                /// <para>The ARN of the destination OSS bucket for oversized files.</para>
+                /// <para>If the size of a resource configuration change event exceeds 1 MB, the event is delivered as an OSS object. Set this parameter to the ARN of an OSS bucket that has the <c>resourcecenter-</c> prefix.</para>
+                /// <remarks>
+                /// <para>This parameter is valid only for custom scheduled delivery. You do not need to specify this parameter for standard scheduled delivery.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs:oss:cn-hangzhou:191142248777****:resourcecenter-oss</para>
@@ -160,10 +154,12 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             }
 
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the delivery destination.</para>
+            /// <para>The Alibaba Cloud Resource Name (ARN) of the destination. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If you set <c>TargetType</c> to <c>OSS</c>, you must set <c>TargetArn</c> to the ARN of a bucket whose name is prefixed with resourcecenter-.</description></item>
-            /// <item><description>If you set <c>TargetType</c> to <c>SLS</c>, you must set <c>TargetArn</c> to the ARN of a Logstore whose name is prefixed with resourcecenter-.</description></item>
+            /// <item><description><para>If you set <c>TargetType</c> to <c>OSS</c>, set <c>TargetArn</c> to the ARN of an Object Storage Service (OSS) bucket that has the <c>resourcecenter-</c> prefix. Example: <c>acs:oss:cn-hangzhou:191142248777****:resourcecenter-oss</c>.</para>
+            /// </description></item>
+            /// <item><description><para>If you set <c>TargetType</c> to <c>SLS</c>, set <c>TargetArn</c> to the ARN of a Simple Log Service (SLS) Logstore that has the <c>resourcecenter-</c> prefix. Example: <c>acs:log:cn-hangzhou: 191142248777****:project/delivery/logstore/resourcecenter-sls</c>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -174,11 +170,12 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string TargetArn { get; set; }
 
             /// <summary>
-            /// <para>The type of the delivery destination.</para>
-            /// <para>Valid values:</para>
+            /// <para>The type of the destination. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>OSS</c> for standard delivery</description></item>
-            /// <item><description><c>OSS</c> or <c>SLS</c> for custom delivery</description></item>
+            /// <item><description><para>For standard scheduled delivery, set this parameter to <c>OSS</c>.</para>
+            /// </description></item>
+            /// <item><description><para>For custom scheduled delivery, set this parameter to <c>OSS</c> or <c>SLS</c>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

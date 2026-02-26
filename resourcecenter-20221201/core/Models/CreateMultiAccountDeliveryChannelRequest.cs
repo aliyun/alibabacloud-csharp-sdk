@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
     public class CreateMultiAccountDeliveryChannelRequest : TeaModel {
         /// <summary>
         /// <para>The description of the delivery channel.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This is a description.</para>
         /// </summary>
         [NameInMap("DeliveryChannelDescription")]
         [Validation(Required=false)]
@@ -25,7 +28,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public CreateMultiAccountDeliveryChannelRequestDeliveryChannelFilter DeliveryChannelFilter { get; set; }
         public class CreateMultiAccountDeliveryChannelRequestDeliveryChannelFilter : TeaModel {
             /// <summary>
-            /// <para>An array of effective account scopes for the delivery channel.</para>
+            /// <para>The account scopes of the delivery channel.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("AccountScopes")]
@@ -33,7 +36,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public List<string> AccountScopes { get; set; }
 
             /// <summary>
-            /// <para>The effective resource types of the delivery channel.</para>
+            /// <para>The effective resource type of the delivery channel.</para>
             /// </summary>
             [NameInMap("ResourceTypes")]
             [Validation(Required=false)]
@@ -60,15 +63,15 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public CreateMultiAccountDeliveryChannelRequestResourceChangeDelivery ResourceChangeDelivery { get; set; }
         public class CreateMultiAccountDeliveryChannelRequestResourceChangeDelivery : TeaModel {
             /// <summary>
-            /// <para>The Simple Log Service configurations.</para>
+            /// <para>The SLS configurations.</para>
             /// </summary>
             [NameInMap("SlsProperties")]
             [Validation(Required=false)]
             public CreateMultiAccountDeliveryChannelRequestResourceChangeDeliverySlsProperties SlsProperties { get; set; }
             public class CreateMultiAccountDeliveryChannelRequestResourceChangeDeliverySlsProperties : TeaModel {
                 /// <summary>
-                /// <para>The ARN of the destination to which large files are delivered.</para>
-                /// <para>If the size of a resource configuration change event exceeds 1 MB, the event is delivered as an OSS object. You need to set this parameter to the ARN of a bucket whose name is prefixed with <c>resourcecenter-</c>.</para>
+                /// <para>The ARN of the delivery destination for oversized data.</para>
+                /// <para>If the size of a resource configuration change event exceeds 1 MB, the event is delivered as an OSS object. You must enter the ARN of an OSS bucket that has a prefix of <c>resourcecenter-</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs:oss:cn-hangzhou:1911422487776***:resourcecenter-oss</para>
@@ -82,8 +85,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// <summary>
             /// <para>The ARN of the delivery destination. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If you set <c>TargetType</c> to <c>OSS</c>, you must set <c>TargetArn</c> to the ARN of a bucket whose name is prefixed with <c>resourcecenter-</c>.</description></item>
-            /// <item><description>If you set <c>TargetType</c> to <c>SLS</c>, you must set <c>TargetArn</c> to the ARN of a Logstore whose name is prefixed with <c>resourcecenter-</c>.</description></item>
+            /// <item><description>If you set <c>TargetType</c> to <c>OSS</c>, you must set <c>TargetArn</c> to the ARN of a OSS bucket that has a prefix of <c>resourcecenter-</c>.</description></item>
+            /// <item><description>If you set <c>TargetType</c> to <c>SLS</c>, you must set <c>TargetArn</c> to the ARN of a SLS Logstore that has a prefix of <c>resourcecenter-</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,7 +98,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 
             /// <summary>
             /// <para>The type of the delivery destination.</para>
-            /// <para>Set the value to <c>SLS</c>.</para>
+            /// <para>Valid value: <c>SLS</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SLS</para>
@@ -107,7 +110,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         }
 
         /// <summary>
-        /// <para>The configurations for delivery of scheduled resource snapshots.</para>
+        /// <para>The configurations for scheduled delivery of resource snapshots.</para>
         /// </summary>
         [NameInMap("ResourceSnapshotDelivery")]
         [Validation(Required=false)]
@@ -134,17 +137,17 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string DeliveryTime { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service configurations.</para>
+            /// <para>The SLS configurations.</para>
             /// </summary>
             [NameInMap("SlsProperties")]
             [Validation(Required=false)]
             public CreateMultiAccountDeliveryChannelRequestResourceSnapshotDeliverySlsProperties SlsProperties { get; set; }
             public class CreateMultiAccountDeliveryChannelRequestResourceSnapshotDeliverySlsProperties : TeaModel {
                 /// <summary>
-                /// <para>The ARN of the destination to which large files are delivered.</para>
-                /// <para>If the size of a resource configuration change event exceeds 1 MB, the event is delivered as an OSS object. You need to set this parameter to the ARN of a bucket whose name is prefixed with <c>resourcecenter-</c>.</para>
+                /// <para>The ARN of the delivery destination for oversized data.</para>
+                /// <para>If the size of a resource configuration change event exceeds 1 MB, the event is delivered as an OSS object. You must enter the ARN of an OSS bucket that has a prefix of <c>resourcecenter-</c>.</para>
                 /// <remarks>
-                /// <para> This parameter takes effect only if you use custom delivery for scheduled resource snapshots. You do not need to configure this parameter if you use standard delivery for scheduled resource snapshots.</para>
+                /// <para>This parameter takes effect only when you create a custom scheduled delivery task for resource snapshots. You do not need to specify this parameter when you create a standard scheduled delivery task for resource snapshots.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -159,8 +162,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// <summary>
             /// <para>The Alibaba Cloud Resource Name (ARN) of the delivery destination. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If you set <c>TargetType</c> to <c>OSS</c>, you must set <c>TargetArn</c> to the ARN of a bucket whose name is prefixed with <c>resourcecenter-</c>. Example: <c>acs:oss:cn-hangzhou:191142248777****:resourcecenter-oss</c>.</description></item>
-            /// <item><description>If you set <c>TargetType</c> to <c>SLS</c>, you must set <c>TargetArn</c> to the ARN of a Logstore whose name is prefixed with <c>resourcecenter-</c>. Example: <c>acs:log:cn-hangzhou: 191142248777****:project/delivery/logstore/resourcecenter-sls</c>.</description></item>
+            /// <item><description>If you set <c>TargetType</c> to <c>OSS</c>, you must set <c>TargetArn</c> to the ARN of a OSS bucket that has a prefix of <c>resourcecenter-</c>. Example: <c>acs:oss:cn-hangzhou:191142248777****:resourcecenter-oss</c>.</description></item>
+            /// <item><description>If you set <c>TargetType</c> to <c>SLS</c>, you must set <c>TargetArn</c> to the ARN of a SLS Logstore that has a prefix of <c>resourcecenter-</c>. Example: <c>acs:log:cn-hangzhou: 191142248777****:project/delivery/logstore/resourcecenter-sls</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -173,8 +176,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// <summary>
             /// <para>The type of the delivery destination. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>OSS</c> for standard delivery</description></item>
-            /// <item><description><c>OSS</c> or <c>SLS</c> for custom delivery</description></item>
+            /// <item><description><c>OSS</c> for standard delivery</description></item>
+            /// <item><description><c>OSS</c> or <c>SLS</c> for custom delivery</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

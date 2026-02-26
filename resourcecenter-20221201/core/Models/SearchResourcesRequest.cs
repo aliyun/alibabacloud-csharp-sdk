@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public List<SearchResourcesRequestFilter> Filter { get; set; }
         public class SearchResourcesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The key of the filter condition. For more information, see <c>Supported filter parameters</c>.</para>
+            /// <para>The key of the filter condition. For more information about the valid values, see the &quot;<c>Supported filter parameters</c>&quot; section below.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RegionId</para>
@@ -27,8 +27,21 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The matching mode.</para>
-            /// <para>The value Equals indicates an equal match.</para>
+            /// <para>The matching method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Equals: Exact match.</para>
+            /// </description></item>
+            /// <item><description><para>Prefix: Prefix match.</para>
+            /// </description></item>
+            /// <item><description><para>Contains: Contains a value.</para>
+            /// </description></item>
+            /// <item><description><para>NotContains: Does not contain a value.</para>
+            /// </description></item>
+            /// <item><description><para>Exists: The key exists.</para>
+            /// </description></item>
+            /// <item><description><para>NotExists: The key does not exist.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Equals</para>
@@ -38,7 +51,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string MatchType { get; set; }
 
             /// <summary>
-            /// <para>The values of the filter condition.</para>
+            /// <para>The value of the filter condition.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -46,13 +59,25 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 
         }
 
+        /// <summary>
+        /// <para>Specifies whether to include deleted resources. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("IncludeDeletedResources")]
         [Validation(Required=false)]
         public bool? IncludeDeletedResources { get; set; }
 
         /// <summary>
         /// <para>The maximum number of entries per page.</para>
-        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Valid values: 1 to 500.</para>
         /// <para>Default value: 20.</para>
         /// 
         /// <b>Example:</b>
@@ -63,8 +88,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
-        /// <para>If the total number of entries returned for the current request exceeds the value of the <c>MaxResults</c> parameter, the entries are truncated. In this case, you can use the <c>token</c> to initiate another request and obtain the remaining entries.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <c>NextToken</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</para>
@@ -83,20 +107,27 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The search keyword. Resource Center filters and sorts the search results based on relevance.
+        /// If you do not specify a sorting parameter, resources that better match the keyword are displayed with higher priority.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>keywords</para>
+        /// </summary>
         [NameInMap("SearchExpression")]
         [Validation(Required=false)]
         public string SearchExpression { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to sort the entries returned.</para>
+        /// <para>The sorting parameters.</para>
         /// </summary>
         [NameInMap("SortCriterion")]
         [Validation(Required=false)]
         public SearchResourcesRequestSortCriterion SortCriterion { get; set; }
         public class SearchResourcesRequestSortCriterion : TeaModel {
             /// <summary>
-            /// <para>The attribute based on which the entries are sorted.</para>
-            /// <para>The value CreateTime indicates the creation time of resources.</para>
+            /// <para>The sort key.</para>
+            /// <para>Set this parameter to <c>CreateTime</c>, which means the results are sorted by resource creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CreateTime</para>
@@ -106,11 +137,14 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The order in which the entries are sorted. Valid values:</para>
+            /// <para>The sort order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ASC: The entries are sorted in ascending order. This value is the default value.</description></item>
-            /// <item><description>DESC: The entries are sorted in descending order.</description></item>
+            /// <item><description><para>ASC: Ascending order.</para>
+            /// </description></item>
+            /// <item><description><para>DESC: Descending order.</para>
+            /// </description></item>
             /// </list>
+            /// <para>Default value: ASC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ASC</para>

@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
     public class UpdateDeliveryChannelRequest : TeaModel {
         /// <summary>
         /// <para>The description of the delivery channel.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>投递描述</para>
         /// </summary>
         [NameInMap("DeliveryChannelDescription")]
         [Validation(Required=false)]

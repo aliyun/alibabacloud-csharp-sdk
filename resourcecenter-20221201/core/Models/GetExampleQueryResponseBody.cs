@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// <para>The description of the template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Queries all resources on which you have permissions and sorts the resources by resource type and resource ID.</para>
+            /// <para>返回所有有权限的资源，并按照资源类型和资源ID排列。</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// <para>The name of the template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Query of All Alibaba Cloud Resources</para>
+            /// <para>列出所有阿里云资源</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

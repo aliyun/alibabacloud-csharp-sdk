@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class GetSavedQueryRequest : TeaModel {
         /// <summary>
-        /// <para>The template ID.</para>
+        /// <para>The ID of the template.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListSavedQueries~~">ListSavedQueries</a> operation to query the ID.</para>
+        /// <para>You can call the <a href="~~ListSavedQueries~~">ListSavedQueries</a> operation to obtain the ID of the template.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>sq-GeAck****</para>
+        /// <para>cq-GeAck****</para>
         /// </summary>
         [NameInMap("QueryId")]
         [Validation(Required=false)]

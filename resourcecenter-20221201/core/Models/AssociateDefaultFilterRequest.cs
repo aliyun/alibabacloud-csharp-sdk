@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>My Filters</para>
+        /// <para>所有ECS实例资源</para>
         /// </summary>
         [NameInMap("FilterName")]
         [Validation(Required=false)]

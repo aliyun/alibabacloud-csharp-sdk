@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class GetMultiAccountResourceConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the management account or member of the resource directory.</para>
+        /// <para>The ID of the management account or member.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource.</para>
+        /// <para>The resource ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the resource.</para>
+        /// <para>The ID of the region where the resource resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string ResourceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource.</para>
+        /// <para>The resource type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

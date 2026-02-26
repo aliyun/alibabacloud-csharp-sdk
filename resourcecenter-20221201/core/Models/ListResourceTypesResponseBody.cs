@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// <para>The name of the Alibaba Cloud service.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Container Service for Kubernetes</para>
+            /// <para>容器服务Kubernetes版</para>
             /// </summary>
             [NameInMap("ProductName")]
             [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// <para>The name of the resource type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Cluster</para>
+            /// <para>集群</para>
             /// </summary>
             [NameInMap("ResourceTypeName")]
             [Validation(Required=false)]

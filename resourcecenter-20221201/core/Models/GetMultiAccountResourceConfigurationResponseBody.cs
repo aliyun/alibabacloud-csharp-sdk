@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class GetMultiAccountResourceConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the management account or member of the resource directory.</para>
+        /// <para>The ID of the management account or member.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1619302****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>The attributes of the IP address.</para>
+        /// <para>The properties of the IP addresses.</para>
         /// </summary>
         [NameInMap("IpAddressAttributes")]
         [Validation(Required=false)]
@@ -66,8 +66,10 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// <summary>
             /// <para>The network type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Public</b>: the Internet</description></item>
-            /// <item><description><b>Private</b>: internal network</description></item>
+            /// <item><description><para><b>Public</b>: Internet</para>
+            /// </description></item>
+            /// <item><description><para><b>Private</b>: internal network</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string NetworkType { get; set; }
 
             /// <summary>
-            /// <para>The version.</para>
+            /// <para>The version of the IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Ipv4</para>
@@ -100,7 +102,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public List<string> IpAddresses { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the resource.</para>
+        /// <para>The ID of the region where the resource resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -110,7 +112,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B2DCC08B-C12A-5705-879C-5A1450016156</para>
@@ -120,7 +122,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the resource belongs.</para>
+        /// <para>The ID of your Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzy6d****</para>
@@ -130,7 +132,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource.</para>
+        /// <para>The resource ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-eb3hji****</para>
@@ -140,7 +142,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the resource.</para>
+        /// <para>The resource name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_resource</para>
@@ -150,7 +152,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource.</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACS::VPC::RouteTable</para>
@@ -160,14 +162,14 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags of the resource.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetMultiAccountResourceConfigurationResponseBodyTags> Tags { get; set; }
         public class GetMultiAccountResourceConfigurationResponseBodyTags : TeaModel {
             /// <summary>
-            /// <para>The key of tag N.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag-key</para>
@@ -177,7 +179,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag-value</para>
@@ -189,7 +191,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         }
 
         /// <summary>
-        /// <para>The zone ID of the resource.</para>
+        /// <para>The zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-a</para>
