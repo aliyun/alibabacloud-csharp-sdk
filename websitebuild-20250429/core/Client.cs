@@ -5383,6 +5383,142 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询Supabase实例信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySupabaseInstanceInfoForAdminRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySupabaseInstanceInfoForAdminResponse
+        /// </returns>
+        public QuerySupabaseInstanceInfoForAdminResponse QuerySupabaseInstanceInfoForAdminWithOptions(QuerySupabaseInstanceInfoForAdminRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                query["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySupabaseInstanceInfoForAdmin",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySupabaseInstanceInfoForAdminResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Supabase实例信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySupabaseInstanceInfoForAdminRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySupabaseInstanceInfoForAdminResponse
+        /// </returns>
+        public async Task<QuerySupabaseInstanceInfoForAdminResponse> QuerySupabaseInstanceInfoForAdminWithOptionsAsync(QuerySupabaseInstanceInfoForAdminRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                query["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySupabaseInstanceInfoForAdmin",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySupabaseInstanceInfoForAdminResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Supabase实例信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySupabaseInstanceInfoForAdminRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySupabaseInstanceInfoForAdminResponse
+        /// </returns>
+        public QuerySupabaseInstanceInfoForAdminResponse QuerySupabaseInstanceInfoForAdmin(QuerySupabaseInstanceInfoForAdminRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QuerySupabaseInstanceInfoForAdminWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Supabase实例信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySupabaseInstanceInfoForAdminRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySupabaseInstanceInfoForAdminResponse
+        /// </returns>
+        public async Task<QuerySupabaseInstanceInfoForAdminResponse> QuerySupabaseInstanceInfoForAdminAsync(QuerySupabaseInstanceInfoForAdminRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QuerySupabaseInstanceInfoForAdminWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Refresh ticket</para>
         /// </summary>
         /// 
