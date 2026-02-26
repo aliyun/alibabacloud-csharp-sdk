@@ -9,10 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class StartAggregateRemediationResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Indicates whether the operation succeeded. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: The operation succeeded.</para>
+        /// </description></item>
+        /// <item><description><para>false: The operation failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C7817373-78CB-4F9A-8AFA-E7A88E9D64A2</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -1742,14 +1742,14 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Limits</h3>
-        /// <para>Each management account and delegated administrator account can have a maximum of 200 rules.</para>
+        /// <para>Each management account and delegated administrator account can have up to 200 rules.</para>
         /// <h3>Background information</h3>
         /// <para>Cloud Config supports the following methods for creating rules:</para>
         /// <list type="bullet">
         /// <item><description>Create rules from templates
-        /// Rule templates are predefined rule functions that Cloud Config provides in Function Compute (FC). You can use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principle of rules</a>.</description></item>
+        /// Rule templates are predefined rule functions that Cloud Config provides in Function Compute (FC). Use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">the referenced document</a>.</description></item>
         /// <item><description>Create rules based on functions in Function Compute
-        /// Custom function rules are rules whose code is hosted in FC functions. If the predefined rule templates in Cloud Config do not meet your compliance requirements, you can write function code to check compliance in complex scenarios. For more information about custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principle of custom function rules</a>.</description></item>
+        /// Custom function rules are rules whose code is hosted in FC functions. If the predefined rule templates in Cloud Config do not meet your compliance requirements, write function code to check compliance in complex scenarios. For more information about custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">the referenced document</a>.</description></item>
         /// </list>
         /// <h3>Usage notes</h3>
         /// <para>This example shows how to create a rule for the account group <c>ca-a4e5626622af0079****</c> using the \<c>required-tags\\</c> template. The response shows that the rule is created with the ID <c>cr-4e3d626622af0080****</c>.</para>
@@ -1938,14 +1938,14 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Limits</h3>
-        /// <para>Each management account and delegated administrator account can have a maximum of 200 rules.</para>
+        /// <para>Each management account and delegated administrator account can have up to 200 rules.</para>
         /// <h3>Background information</h3>
         /// <para>Cloud Config supports the following methods for creating rules:</para>
         /// <list type="bullet">
         /// <item><description>Create rules from templates
-        /// Rule templates are predefined rule functions that Cloud Config provides in Function Compute (FC). You can use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principle of rules</a>.</description></item>
+        /// Rule templates are predefined rule functions that Cloud Config provides in Function Compute (FC). Use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">the referenced document</a>.</description></item>
         /// <item><description>Create rules based on functions in Function Compute
-        /// Custom function rules are rules whose code is hosted in FC functions. If the predefined rule templates in Cloud Config do not meet your compliance requirements, you can write function code to check compliance in complex scenarios. For more information about custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principle of custom function rules</a>.</description></item>
+        /// Custom function rules are rules whose code is hosted in FC functions. If the predefined rule templates in Cloud Config do not meet your compliance requirements, write function code to check compliance in complex scenarios. For more information about custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">the referenced document</a>.</description></item>
         /// </list>
         /// <h3>Usage notes</h3>
         /// <para>This example shows how to create a rule for the account group <c>ca-a4e5626622af0079****</c> using the \<c>required-tags\\</c> template. The response shows that the rule is created with the ID <c>cr-4e3d626622af0080****</c>.</para>
@@ -2134,14 +2134,14 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Limits</h3>
-        /// <para>Each management account and delegated administrator account can have a maximum of 200 rules.</para>
+        /// <para>Each management account and delegated administrator account can have up to 200 rules.</para>
         /// <h3>Background information</h3>
         /// <para>Cloud Config supports the following methods for creating rules:</para>
         /// <list type="bullet">
         /// <item><description>Create rules from templates
-        /// Rule templates are predefined rule functions that Cloud Config provides in Function Compute (FC). You can use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principle of rules</a>.</description></item>
+        /// Rule templates are predefined rule functions that Cloud Config provides in Function Compute (FC). Use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">the referenced document</a>.</description></item>
         /// <item><description>Create rules based on functions in Function Compute
-        /// Custom function rules are rules whose code is hosted in FC functions. If the predefined rule templates in Cloud Config do not meet your compliance requirements, you can write function code to check compliance in complex scenarios. For more information about custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principle of custom function rules</a>.</description></item>
+        /// Custom function rules are rules whose code is hosted in FC functions. If the predefined rule templates in Cloud Config do not meet your compliance requirements, write function code to check compliance in complex scenarios. For more information about custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">the referenced document</a>.</description></item>
         /// </list>
         /// <h3>Usage notes</h3>
         /// <para>This example shows how to create a rule for the account group <c>ca-a4e5626622af0079****</c> using the \<c>required-tags\\</c> template. The response shows that the rule is created with the ID <c>cr-4e3d626622af0080****</c>.</para>
@@ -2168,14 +2168,14 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Limits</h3>
-        /// <para>Each management account and delegated administrator account can have a maximum of 200 rules.</para>
+        /// <para>Each management account and delegated administrator account can have up to 200 rules.</para>
         /// <h3>Background information</h3>
         /// <para>Cloud Config supports the following methods for creating rules:</para>
         /// <list type="bullet">
         /// <item><description>Create rules from templates
-        /// Rule templates are predefined rule functions that Cloud Config provides in Function Compute (FC). You can use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principle of rules</a>.</description></item>
+        /// Rule templates are predefined rule functions that Cloud Config provides in Function Compute (FC). Use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">the referenced document</a>.</description></item>
         /// <item><description>Create rules based on functions in Function Compute
-        /// Custom function rules are rules whose code is hosted in FC functions. If the predefined rule templates in Cloud Config do not meet your compliance requirements, you can write function code to check compliance in complex scenarios. For more information about custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principle of custom function rules</a>.</description></item>
+        /// Custom function rules are rules whose code is hosted in FC functions. If the predefined rule templates in Cloud Config do not meet your compliance requirements, write function code to check compliance in complex scenarios. For more information about custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">the referenced document</a>.</description></item>
         /// </list>
         /// <h3>Usage notes</h3>
         /// <para>This example shows how to create a rule for the account group <c>ca-a4e5626622af0079****</c> using the \<c>required-tags\\</c> template. The response shows that the rule is created with the ID <c>cr-4e3d626622af0080****</c>.</para>
@@ -3298,17 +3298,17 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Limits</h3>
-        /// <para>You can create up to 200 rules for each account.</para>
+        /// <para>You can create up to 200 rules per account.</para>
         /// <h3>Background information</h3>
-        /// <para>You can create rules in Cloud Config in the following ways:</para>
+        /// <para>You can create rules in Cloud Config in two ways:</para>
         /// <list type="bullet">
         /// <item><description>Create rules from templates
-        /// Rule templates are predefined rule functions in Function Compute that are provided by Cloud Config. You can use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</description></item>
+        /// Rule templates are predefined rule functions provided by Cloud Config in Function Compute. You can use rule templates to quickly create rules. For more information, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</description></item>
         /// <item><description>Create custom rules using Function Compute
-        /// Custom rules are based on functions in Function Compute that host your rule code. If the predefined rule templates in Cloud Config do not meet your compliance requirements, you can write your own function code to check compliance in complex scenarios. For more information about custom rules, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principles of custom rules</a>.</description></item>
+        /// Custom rules use Function Compute functions to host your rule code. If Cloud Config\&quot;s predefined rule templates do not meet your compliance requirements, you can write your own function code to check compliance in complex scenarios. For more information, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principles of custom rules</a>.</description></item>
         /// </list>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to create a rule from the \<c>required-tags\\</c> template. In the response, a rule is created and its ID is <c>cr-5772ba41209e007b****</c>.</para>
+        /// <para>This topic demonstrates how to create a rule from the \<c>required-tags\\</c> template. The response confirms that the rule was created successfully. Its ID is <c>cr-5772ba41209e007b****</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3474,17 +3474,17 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Limits</h3>
-        /// <para>You can create up to 200 rules for each account.</para>
+        /// <para>You can create up to 200 rules per account.</para>
         /// <h3>Background information</h3>
-        /// <para>You can create rules in Cloud Config in the following ways:</para>
+        /// <para>You can create rules in Cloud Config in two ways:</para>
         /// <list type="bullet">
         /// <item><description>Create rules from templates
-        /// Rule templates are predefined rule functions in Function Compute that are provided by Cloud Config. You can use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</description></item>
+        /// Rule templates are predefined rule functions provided by Cloud Config in Function Compute. You can use rule templates to quickly create rules. For more information, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</description></item>
         /// <item><description>Create custom rules using Function Compute
-        /// Custom rules are based on functions in Function Compute that host your rule code. If the predefined rule templates in Cloud Config do not meet your compliance requirements, you can write your own function code to check compliance in complex scenarios. For more information about custom rules, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principles of custom rules</a>.</description></item>
+        /// Custom rules use Function Compute functions to host your rule code. If Cloud Config\&quot;s predefined rule templates do not meet your compliance requirements, you can write your own function code to check compliance in complex scenarios. For more information, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principles of custom rules</a>.</description></item>
         /// </list>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to create a rule from the \<c>required-tags\\</c> template. In the response, a rule is created and its ID is <c>cr-5772ba41209e007b****</c>.</para>
+        /// <para>This topic demonstrates how to create a rule from the \<c>required-tags\\</c> template. The response confirms that the rule was created successfully. Its ID is <c>cr-5772ba41209e007b****</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3650,17 +3650,17 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Limits</h3>
-        /// <para>You can create up to 200 rules for each account.</para>
+        /// <para>You can create up to 200 rules per account.</para>
         /// <h3>Background information</h3>
-        /// <para>You can create rules in Cloud Config in the following ways:</para>
+        /// <para>You can create rules in Cloud Config in two ways:</para>
         /// <list type="bullet">
         /// <item><description>Create rules from templates
-        /// Rule templates are predefined rule functions in Function Compute that are provided by Cloud Config. You can use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</description></item>
+        /// Rule templates are predefined rule functions provided by Cloud Config in Function Compute. You can use rule templates to quickly create rules. For more information, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</description></item>
         /// <item><description>Create custom rules using Function Compute
-        /// Custom rules are based on functions in Function Compute that host your rule code. If the predefined rule templates in Cloud Config do not meet your compliance requirements, you can write your own function code to check compliance in complex scenarios. For more information about custom rules, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principles of custom rules</a>.</description></item>
+        /// Custom rules use Function Compute functions to host your rule code. If Cloud Config\&quot;s predefined rule templates do not meet your compliance requirements, you can write your own function code to check compliance in complex scenarios. For more information, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principles of custom rules</a>.</description></item>
         /// </list>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to create a rule from the \<c>required-tags\\</c> template. In the response, a rule is created and its ID is <c>cr-5772ba41209e007b****</c>.</para>
+        /// <para>This topic demonstrates how to create a rule from the \<c>required-tags\\</c> template. The response confirms that the rule was created successfully. Its ID is <c>cr-5772ba41209e007b****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3684,17 +3684,17 @@ namespace AlibabaCloud.SDK.Config20200907
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Limits</h3>
-        /// <para>You can create up to 200 rules for each account.</para>
+        /// <para>You can create up to 200 rules per account.</para>
         /// <h3>Background information</h3>
-        /// <para>You can create rules in Cloud Config in the following ways:</para>
+        /// <para>You can create rules in Cloud Config in two ways:</para>
         /// <list type="bullet">
         /// <item><description>Create rules from templates
-        /// Rule templates are predefined rule functions in Function Compute that are provided by Cloud Config. You can use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</description></item>
+        /// Rule templates are predefined rule functions provided by Cloud Config in Function Compute. You can use rule templates to quickly create rules. For more information, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</description></item>
         /// <item><description>Create custom rules using Function Compute
-        /// Custom rules are based on functions in Function Compute that host your rule code. If the predefined rule templates in Cloud Config do not meet your compliance requirements, you can write your own function code to check compliance in complex scenarios. For more information about custom rules, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principles of custom rules</a>.</description></item>
+        /// Custom rules use Function Compute functions to host your rule code. If Cloud Config\&quot;s predefined rule templates do not meet your compliance requirements, you can write your own function code to check compliance in complex scenarios. For more information, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principles of custom rules</a>.</description></item>
         /// </list>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to create a rule from the \<c>required-tags\\</c> template. In the response, a rule is created and its ID is <c>cr-5772ba41209e007b****</c>.</para>
+        /// <para>This topic demonstrates how to create a rule from the \<c>required-tags\\</c> template. The response confirms that the rule was created successfully. Its ID is <c>cr-5772ba41209e007b****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20660,8 +20660,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行账号组规则修正</para>
+        /// <para>Manually run remediation for a specified account group rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic describes how to manually run remediation once for the rule <c>cr-6b7c626622af00b4****</c> in the account group <c>ca-6b4a626622af0012****</c>. The response indicates that remediation completed successfully.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAggregateRemediationRequest
@@ -20689,6 +20694,18 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 query["ResourceAccountId"] = request.ResourceAccountId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceRegionId))
+            {
+                query["ResourceRegionId"] = request.ResourceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -20710,8 +20727,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行账号组规则修正</para>
+        /// <para>Manually run remediation for a specified account group rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic describes how to manually run remediation once for the rule <c>cr-6b7c626622af00b4****</c> in the account group <c>ca-6b4a626622af0012****</c>. The response indicates that remediation completed successfully.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAggregateRemediationRequest
@@ -20739,6 +20761,18 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 query["ResourceAccountId"] = request.ResourceAccountId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceRegionId))
+            {
+                query["ResourceRegionId"] = request.ResourceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -20760,8 +20794,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行账号组规则修正</para>
+        /// <para>Manually run remediation for a specified account group rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic describes how to manually run remediation once for the rule <c>cr-6b7c626622af00b4****</c> in the account group <c>ca-6b4a626622af0012****</c>. The response indicates that remediation completed successfully.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAggregateRemediationRequest
@@ -20778,8 +20817,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行账号组规则修正</para>
+        /// <para>Manually run remediation for a specified account group rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic describes how to manually run remediation once for the rule <c>cr-6b7c626622af00b4****</c> in the account group <c>ca-6b4a626622af0012****</c>. The response indicates that remediation completed successfully.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAggregateRemediationRequest
@@ -21166,8 +21210,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行修正</para>
+        /// <para>Manually execute the specified rule remediation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of a manual remediation for rule <c>cr-8a973ac2e2be00a2****</c>. The returned result indicates a successful manual remediation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartRemediationRequest
@@ -21186,6 +21235,18 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleId))
             {
                 query["ConfigRuleId"] = request.ConfigRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceRegionId))
+            {
+                query["ResourceRegionId"] = request.ResourceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -21208,8 +21269,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行修正</para>
+        /// <para>Manually execute the specified rule remediation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of a manual remediation for rule <c>cr-8a973ac2e2be00a2****</c>. The returned result indicates a successful manual remediation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartRemediationRequest
@@ -21228,6 +21294,18 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleId))
             {
                 query["ConfigRuleId"] = request.ConfigRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceRegionId))
+            {
+                query["ResourceRegionId"] = request.ResourceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -21250,8 +21328,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行修正</para>
+        /// <para>Manually execute the specified rule remediation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of a manual remediation for rule <c>cr-8a973ac2e2be00a2****</c>. The returned result indicates a successful manual remediation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartRemediationRequest
@@ -21268,8 +21351,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行修正</para>
+        /// <para>Manually execute the specified rule remediation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of a manual remediation for rule <c>cr-8a973ac2e2be00a2****</c>. The returned result indicates a successful manual remediation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartRemediationRequest
@@ -23689,7 +23777,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the risk level of the rule <c>cr-a260626622af0005****</c> to <c>3</c> (low risk).</para>
+        /// <para>This topic shows how to change the risk level of rule <c>cr-a260626622af0005****</c> to <c>3</c>, which indicates low risk.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -23850,7 +23938,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the risk level of the rule <c>cr-a260626622af0005****</c> to <c>3</c> (low risk).</para>
+        /// <para>This topic shows how to change the risk level of rule <c>cr-a260626622af0005****</c> to <c>3</c>, which indicates low risk.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -24011,7 +24099,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the risk level of the rule <c>cr-a260626622af0005****</c> to <c>3</c> (low risk).</para>
+        /// <para>This topic shows how to change the risk level of rule <c>cr-a260626622af0005****</c> to <c>3</c>, which indicates low risk.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24034,7 +24122,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the risk level of the rule <c>cr-a260626622af0005****</c> to <c>3</c> (low risk).</para>
+        /// <para>This topic shows how to change the risk level of rule <c>cr-a260626622af0005****</c> to <c>3</c>, which indicates low risk.</para>
         /// </description>
         /// 
         /// <param name="request">

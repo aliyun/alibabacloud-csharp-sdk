@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CreateConfigRuleRequest : TeaModel {
         /// <summary>
-        /// <para>A client token. It is used to ensure the idempotence of the request. You can use the client to generate a token, but you must make sure that the token is unique among different requests. The <c>ClientToken</c> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token used to ensure request idempotence. Generate a unique token on your client. The <c>ClientToken</c> parameter can contain only ASCII characters and cannot exceed 64 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1594295238-f9361358-5843-4294-8d30-b5183fac****</para>
@@ -20,8 +20,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The conditions for a custom condition rule, in JSON format.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>{&quot;ComplianceConditions&quot;:&quot;{&quot;operator&quot;:&quot;and&quot;,&quot;children&quot;:[{&quot;operator&quot;:&quot;StringEquals&quot;,&quot;featurePath&quot;:&quot;$.Status&quot;,&quot;desired&quot;:&quot;1&quot;,&quot;featureSource&quot;:&quot;CONFIGURATION&quot;}]}&quot;}</para>
+        /// <para>{&quot;ComplianceConditions&quot;:&quot;{\&quot;operator\&quot;:\&quot;and\&quot;,\&quot;children\&quot;:[{\&quot;operator\&quot;:\&quot;StringEquals\&quot;,\&quot;featurePath\&quot;:\&quot;$.Status\&quot;,\&quot;desired\&quot;:\&quot;1\&quot;,\&quot;featureSource\&quot;:\&quot;CONFIGURATION\&quot;}]}&quot;}</para>
         /// </summary>
         [NameInMap("Conditions")]
         [Validation(Required=false)]
@@ -41,9 +43,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>The trigger that invokes the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</para>
+        /// <item><description><para>ConfigurationItemChangeNotification: The rule runs when a resource configuration changes.</para>
         /// </description></item>
-        /// <item><description><para>ScheduledNotification: The rule is triggered on a regular basis.</para>
+        /// <item><description><para>ScheduledNotification: The rule runs on a regular schedule.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
@@ -131,7 +133,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>Extended content. This parameter is used only to specify the trigger time for a 24-hour evaluation cycle.</para>
+        /// <para>Extended content. This parameter specifies the trigger time for a 24-hour evaluation cycle.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;fixedHour&quot;:&quot;13&quot;}</para>
@@ -141,8 +143,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ExtendContent { get; set; }
 
         /// <summary>
-        /// <para>The input parameters of the rule.</para>
-        /// <para>You can obtain the input parameters of a rule by calling the <a href="https://help.aliyun.com/document_detail/606993.html">GetManagedRule</a> operation. View the <c>CompulsoryInputParameterDetails</c> and <c>OptionalInputParameterDetails</c> parameters to learn about the required and optional parameters.</para>
+        /// <para>The input parameters for the rule.</para>
+        /// <para>You can get the input parameters of a rule by calling the <a href="https://help.aliyun.com/document_detail/606993.html">GetManagedRule</a> operation. View the <c>CompulsoryInputParameterDetails</c> and <c>OptionalInputParameterDetails</c> parameters to learn about the required and optional parameters.</para>
         /// <para>The format of the input parameters is <c>{&quot;Parameter 1 Name&quot;:&quot;Parameter 1 Value&quot;,&quot;Parameter 2 Name&quot;:&quot;Parameter 2 Value&quot;}</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -153,17 +155,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public Dictionary<string, object> InputParameters { get; set; }
 
         /// <summary>
-        /// <para>The frequency at which the rule is executed. Valid values:</para>
+        /// <para>The frequency at which the rule runs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>One_Hour: 1 hour.</para>
+        /// <item><description><para>One_Hour: every hour.</para>
         /// </description></item>
-        /// <item><description><para>Three_Hours: 3 hours.</para>
+        /// <item><description><para>Three_Hours: every three hours.</para>
         /// </description></item>
-        /// <item><description><para>Six_Hours: 6 hours.</para>
+        /// <item><description><para>Six_Hours: every six hours.</para>
         /// </description></item>
-        /// <item><description><para>Twelve_Hours: 12 hours.</para>
+        /// <item><description><para>Twelve_Hours: every twelve hours.</para>
         /// </description></item>
-        /// <item><description><para>TwentyFour_Hours (default): 24 hours.</para>
+        /// <item><description><para>TwentyFour_Hours (default): every twenty-four hours.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
@@ -227,7 +229,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceNameScope { get; set; }
 
         /// <summary>
-        /// <para>The resource types to be evaluated by the rule. Separate multiple resource types with commas (,).</para>
+        /// <para>The resource types to evaluate. Separate multiple resource types with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -264,8 +266,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <para>To query the identifier of a rule template, see <a href="https://help.aliyun.com/document_detail/127404.html">List of rule templates</a>.</para>
         /// </remarks>
         /// </description></item>
+        /// <item><description><para>If you set <c>SourceOwner</c> to <c>CUSTOM_CONFIGURATION</c>, set this parameter to <c>acs-config-configuration</c>.</para>
+        /// </description></item>
         /// <item><description><para>If you set <c>SourceOwner</c> to <c>CUSTOM_FC</c>, specify the Alibaba Cloud Resource Name (ARN) of the function.</para>
-        /// <para>The ARN must be in the format of <c>acs:fc:{Region}:{AccountID}:services/{ServiceName}.LATEST/functions/{FunctionName}</c>. Example: <c>acs:fc:cn-hangzhou:120886317861****:services/service-test.LATEST/functions/config-test</c>.</para>
+        /// <para>The ARN must be in the format <c>acs:fc:{Region}:{AccountID}:services/{ServiceName}.LATEST/functions/{FunctionName}</c>. Example: <c>acs:fc:cn-hangzhou:120886317861****:services/service-test.LATEST/functions/config-test</c>.</para>
         /// <remarks>
         /// <para>To obtain the ARN of a function, see <a href="https://help.aliyun.com/document_detail/415752.html">ListFunctions</a>.</para>
         /// </remarks>
@@ -281,11 +285,13 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string SourceIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The type of the rule to create. Valid values:</para>
+        /// <para>The type of rule to create. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>ALIYUN: rule template.</para>
         /// </description></item>
-        /// <item><description><para>CUSTOM_FC: custom rule.</para>
+        /// <item><description><para>CUSTOM_FC: custom Function Compute rule.</para>
+        /// </description></item>
+        /// <item><description><para>CUSTOM_CONFIGURATION: custom condition rule.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -298,7 +304,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string SourceOwner { get; set; }
 
         /// <summary>
-        /// <para>The tags of the rule to be created.</para>
+        /// <para>The tags of the rule to create.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -329,13 +335,13 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>The logical operator that applies if you specify multiple tags for the <c>TagsScope</c> parameter. For example, if you set <c>TagsScope</c> to <c>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;,&quot;TagsScope.1.TagValue&quot;:&quot;a&quot;,&quot;TagsScope.2.TagKey&quot;:&quot;b&quot;,&quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</c> and set this parameter to <c>AND</c>, the rule applies only to resources that have both the <c>a:a</c> and <c>b:b</c> tags. If you do not specify this parameter, the default value <c>OR</c> is used.</para>
+        /// <para>The logical operator used when you specify multiple tags for the <c>TagsScope</c> parameter. For example, if you set <c>TagsScope</c> to <c>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;,&quot;TagsScope.1.TagValue&quot;:&quot;a&quot;,&quot;TagsScope.2.TagKey&quot;:&quot;b&quot;,&quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</c> and set this parameter to <c>AND</c>, the rule applies only to resources that have both the <c>a:a</c> and <c>b:b</c> tags. If you do not specify this parameter, the default value <c>OR</c> is used.</para>
         /// <para>This parameter also works with the deprecated <c>TagKeyScope</c> parameter. For example, if you set <c>TagKeyScope</c> to <c>ECS,OSS</c> and set this parameter to <c>AND</c>, the rule applies only to resources that have both the <c>ECS</c> and <c>OSS</c> tags.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>AND: The AND logic applies.</para>
+        /// <item><description><para>AND: Use AND logic.</para>
         /// </description></item>
-        /// <item><description><para>OR: The OR logic applies.</para>
+        /// <item><description><para>OR: Use OR logic.</para>
         /// </description></item>
         /// </list>
         /// 
