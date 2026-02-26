@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class GetDiscoveryEndpointsOutput : TeaModel {
+        [NameInMap("credentialName")]
+        [Validation(Required=false)]
+        public string CredentialName { get; set; }
+
         [NameInMap("discoveryEndpoints")]
         [Validation(Required=false)]
         public List<DiscoveryEndpoint> DiscoveryEndpoints { get; set; }

@@ -55,6 +55,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string TemplateType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>aaa</para>
+        /// </summary>
+        [NameInMap("workspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
+
     }
 
 }
