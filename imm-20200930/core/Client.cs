@@ -1719,7 +1719,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Phase II of AI Assistant, Q\&amp;A API</para>
+        /// <para>Phase II of AI Assistant, Q\\\&amp;A API</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1796,7 +1796,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Phase II of AI Assistant, Q\&amp;A API</para>
+        /// <para>Phase II of AI Assistant, Q\\\&amp;A API</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1873,7 +1873,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Phase II of AI Assistant, Q\&amp;A API</para>
+        /// <para>Phase II of AI Assistant, Q\\\&amp;A API</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1906,7 +1906,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Phase II of AI Assistant, Q\&amp;A API</para>
+        /// <para>Phase II of AI Assistant, Q\\\&amp;A API</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3375,7 +3375,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Dataset</para>
+        /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3403,11 +3403,19 @@ namespace AlibabaCloud.SDK.Imm20200930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateDatasetShrinkRequest request = new CreateDatasetShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DatasetConfig))
+            {
+                request.DatasetConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetConfig, "DatasetConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkflowParameters))
             {
                 request.WorkflowParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowParameters, "WorkflowParameters", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetConfigShrink))
+            {
+                query["DatasetConfig"] = request.DatasetConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetMaxBindCount))
             {
                 query["DatasetMaxBindCount"] = request.DatasetMaxBindCount;
@@ -3469,7 +3477,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Dataset</para>
+        /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3497,11 +3505,19 @@ namespace AlibabaCloud.SDK.Imm20200930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateDatasetShrinkRequest request = new CreateDatasetShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DatasetConfig))
+            {
+                request.DatasetConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetConfig, "DatasetConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkflowParameters))
             {
                 request.WorkflowParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowParameters, "WorkflowParameters", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetConfigShrink))
+            {
+                query["DatasetConfig"] = request.DatasetConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetMaxBindCount))
             {
                 query["DatasetMaxBindCount"] = request.DatasetMaxBindCount;
@@ -3563,7 +3579,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Dataset</para>
+        /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3591,7 +3607,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Dataset</para>
+        /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6239,7 +6255,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Transcoding Service</para>
+        /// <para>Creates an asynchronous media transcoding task to provide audio and video file processing abilities, such as media transcoding, media splicing, video frame capturing, and video to GIF conversion.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6345,7 +6361,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Transcoding Service</para>
+        /// <para>Creates an asynchronous media transcoding task to provide audio and video file processing abilities, such as media transcoding, media splicing, video frame capturing, and video to GIF conversion.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6451,7 +6467,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Transcoding Service</para>
+        /// <para>Creates an asynchronous media transcoding task to provide audio and video file processing abilities, such as media transcoding, media splicing, video frame capturing, and video to GIF conversion.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6483,7 +6499,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Transcoding Service</para>
+        /// <para>Creates an asynchronous media transcoding task to provide audio and video file processing abilities, such as media transcoding, media splicing, video frame capturing, and video to GIF conversion.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12847,7 +12863,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates an access token for document preview or editing.</para>
+        /// <para>Obtain Document Preview and Edit Token</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12995,7 +13011,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates an access token for document preview or editing.</para>
+        /// <para>Obtain Document Preview and Edit Token</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13143,7 +13159,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates an access token for document preview or editing.</para>
+        /// <para>Obtain Document Preview and Edit Token</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13185,7 +13201,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates an access token for document preview or editing.</para>
+        /// <para>Obtain Document Preview and Edit Token</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13527,7 +13543,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>drmlicense获取</para>
+        /// <para>Obtains a Digital Rights Management (DRM) license for encrypted video playback.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13591,7 +13607,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>drmlicense获取</para>
+        /// <para>Obtains a Digital Rights Management (DRM) license for encrypted video playback.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13655,7 +13671,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>drmlicense获取</para>
+        /// <para>Obtains a Digital Rights Management (DRM) license for encrypted video playback.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13679,7 +13695,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>drmlicense获取</para>
+        /// <para>Obtains a Digital Rights Management (DRM) license for encrypted video playback.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20587,11 +20603,19 @@ namespace AlibabaCloud.SDK.Imm20200930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateDatasetShrinkRequest request = new UpdateDatasetShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DatasetConfig))
+            {
+                request.DatasetConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetConfig, "DatasetConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkflowParameters))
             {
                 request.WorkflowParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowParameters, "WorkflowParameters", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetConfigShrink))
+            {
+                query["DatasetConfig"] = request.DatasetConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetMaxBindCount))
             {
                 query["DatasetMaxBindCount"] = request.DatasetMaxBindCount;
@@ -20681,11 +20705,19 @@ namespace AlibabaCloud.SDK.Imm20200930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateDatasetShrinkRequest request = new UpdateDatasetShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DatasetConfig))
+            {
+                request.DatasetConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetConfig, "DatasetConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkflowParameters))
             {
                 request.WorkflowParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowParameters, "WorkflowParameters", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetConfigShrink))
+            {
+                query["DatasetConfig"] = request.DatasetConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetMaxBindCount))
             {
                 query["DatasetMaxBindCount"] = request.DatasetMaxBindCount;

@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
     public class DeleteBindingRequest : TeaModel {
         /// <summary>
         /// <para>The name of the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dataset001</para>

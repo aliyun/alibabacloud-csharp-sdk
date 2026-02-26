@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class VideoInsight : TeaModel {
         /// <summary>
+        /// <para>Video summary.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -18,6 +20,11 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Caption { get; set; }
 
         /// <summary>
+        /// <para>The description of the video file.</para>
+        /// <remarks>
+        /// <para> Not supported.</para>
+        /// </remarks>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>

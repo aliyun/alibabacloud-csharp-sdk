@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
     public class GetBindingRequest : TeaModel {
         /// <summary>
         /// <para>The name of the dataset. You can obtain the name of the dataset from the response of the <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a> operation.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dataset001</para>

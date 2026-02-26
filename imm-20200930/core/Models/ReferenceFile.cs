@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class ReferenceFile : TeaModel {
         /// <summary>
+        /// <para>The name of the dataset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-dataset</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>75d5de2c50754e3dadd5c35dbca5f9949369e37eb342a73821f690c94c36c7f7</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ObjectId { get; set; }
 
         /// <summary>
+        /// <para>The name of the project.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-project</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
+        /// <para>The URI of the file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss://test-bucket/test-object.jpg</para>
         /// </summary>

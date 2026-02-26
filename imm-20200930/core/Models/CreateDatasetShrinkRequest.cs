@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateDatasetShrinkRequest : TeaModel {
+        [NameInMap("DatasetConfig")]
+        [Validation(Required=false)]
+        public string DatasetConfigShrink { get; set; }
+
         /// <summary>
         /// <para>The maximum number of bindings per dataset. The range is 1~10, with a default value of 10.</para>
         /// 

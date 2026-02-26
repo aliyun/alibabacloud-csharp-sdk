@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DatasetTaskStatus : TeaModel {
         /// <summary>
+        /// <para>The time of the last completion.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-06-29T14:50:13.011643661+08:00</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string LastSucceededTime { get; set; }
 
         /// <summary>
+        /// <para>The start time of the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-06-29T14:50:13.011643661+08:00</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The status of the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Succeeded</para>
         /// </summary>

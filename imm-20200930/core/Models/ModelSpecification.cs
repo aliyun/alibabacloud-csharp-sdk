@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class ModelSpecification : TeaModel {
         /// <summary>
+        /// <para>The basic model information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MetaData")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public MetaData MetaData { get; set; }
 
         /// <summary>
+        /// <para>The model specification information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Spec")]

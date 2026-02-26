@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class ContextualMessage : TeaModel {
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>你好</para>
+        /// <para>The message content.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
+        /// <summary>
+        /// <para>The files involved in the dialogue.</para>
+        /// </summary>
         [NameInMap("Files")]
         [Validation(Required=false)]
         public List<ContextualFile> Files { get; set; }
 
         /// <summary>
+        /// <para>The role in the dialogue.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>user</para>
         /// </summary>

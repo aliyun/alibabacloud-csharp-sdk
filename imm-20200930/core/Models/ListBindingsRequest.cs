@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
     public class ListBindingsRequest : TeaModel {
         /// <summary>
         /// <para>The name of the dataset.<a href="~~478160~~"></a></para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-dataset</para>

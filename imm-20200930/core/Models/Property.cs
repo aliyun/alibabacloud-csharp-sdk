@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class Property : TeaModel {
         /// <summary>
+        /// <para>If you set the ValueType field to array, you must specify the type of the elements within the array. The enumerated values include float, integer, and string.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>float</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ItemsType { get; set; }
 
         /// <summary>
+        /// <para>The property name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>channels</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[40, 80, 160, 320]</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Value { get; set; }
 
         /// <summary>
+        /// <para>The type of the property. Supported enumerated values: float, integer, string, and array.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>array</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class Optimization : TeaModel {
         /// <summary>
+        /// <para>The initial learning rate.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.01</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public float? LearningRate { get; set; }
 
         /// <summary>
+        /// <para>The optimization method.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SGD</para>
         /// </summary>

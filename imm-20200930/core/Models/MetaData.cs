@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class MetaData : TeaModel {
         /// <summary>
+        /// <para>The model type identifier.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>detection</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Identifier { get; set; }
 
         /// <summary>
+        /// <para>The model provider.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>imm</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Provider { get; set; }
 
         /// <summary>
+        /// <para>The model version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>v1</para>
         /// </summary>
