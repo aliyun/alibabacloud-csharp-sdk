@@ -8781,6 +8781,168 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>资源列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourcesResponse
+        /// </returns>
+        public ListResourcesResponse ListResourcesWithOptions(ListResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["sourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceValue))
+            {
+                query["sourceValue"] = request.SourceValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecType))
+            {
+                query["specType"] = request.SpecType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResources",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/resources/stateparser",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>资源列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourcesResponse
+        /// </returns>
+        public async Task<ListResourcesResponse> ListResourcesWithOptionsAsync(ListResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["sourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceValue))
+            {
+                query["sourceValue"] = request.SourceValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecType))
+            {
+                query["specType"] = request.SpecType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResources",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/resources/stateparser",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>资源列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourcesResponse
+        /// </returns>
+        public ListResourcesResponse ListResources(ListResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListResourcesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>资源列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourcesResponse
+        /// </returns>
+        public async Task<ListResourcesResponse> ListResourcesAsync(ListResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListResourcesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>任务列表</para>
         /// </summary>
         /// 
