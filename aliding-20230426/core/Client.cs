@@ -33620,6 +33620,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 realHeaders["accountId"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountId);
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AlidingSsoTicket))
+            {
+                realHeaders["alidingSsoTicket"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AlidingSsoTicket);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = realHeaders,
@@ -33706,6 +33710,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountId))
             {
                 realHeaders["accountId"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountId);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AlidingSsoTicket))
+            {
+                realHeaders["alidingSsoTicket"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AlidingSsoTicket);
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
