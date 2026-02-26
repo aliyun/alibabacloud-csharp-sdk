@@ -4611,7 +4611,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询素材文件列表</para>
+        /// <para>Query Material File List</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4719,7 +4719,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询素材文件列表</para>
+        /// <para>Query Material File List</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4827,7 +4827,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询素材文件列表</para>
+        /// <para>Query Material File List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4845,7 +4845,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询素材文件列表</para>
+        /// <para>Query Material File List</para>
         /// </summary>
         /// 
         /// <param name="request">
