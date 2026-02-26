@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ProductSpecValue : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>白色</para>
-        /// </summary>
         [NameInMap("value")]
         [Validation(Required=false)]
         public string Value { get; set; }

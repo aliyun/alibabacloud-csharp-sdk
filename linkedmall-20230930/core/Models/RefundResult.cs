@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class RefundResult : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>多拍不想要</para>
-        /// </summary>
         [NameInMap("applyDisputeDesc")]
         [Validation(Required=false)]
         public string ApplyDisputeDesc { get; set; }
@@ -37,10 +33,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string DisputeCreateTime { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>多拍不想要</para>
-        /// </summary>
         [NameInMap("disputeDesc")]
         [Validation(Required=false)]
         public string DisputeDesc { get; set; }
@@ -105,18 +97,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public RefundFeeData RefundFeeData { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>阿里云云谷</para>
-        /// </summary>
         [NameInMap("refunderAddress")]
         [Validation(Required=false)]
         public string RefunderAddress { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>赵先生</para>
-        /// </summary>
         [NameInMap("refunderName")]
         [Validation(Required=false)]
         public string RefunderName { get; set; }
@@ -153,26 +137,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public int? ReturnGoodLogisticsStatus { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>同意退款</para>
-        /// </summary>
         [NameInMap("sellerAgreeMsg")]
         [Validation(Required=false)]
         public string SellerAgreeMsg { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>不同意退款</para>
-        /// </summary>
         [NameInMap("sellerRefuseAgreementMessage")]
         [Validation(Required=false)]
         public string SellerRefuseAgreementMessage { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>商品没问题，买家举证无效</para>
-        /// </summary>
         [NameInMap("sellerRefuseReason")]
         [Validation(Required=false)]
         public string SellerRefuseReason { get; set; }

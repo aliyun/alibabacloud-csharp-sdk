@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Features { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>库存为0</para>
-        /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -53,10 +49,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string ProductPicUrl { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>儿童学习桌</para>
-        /// </summary>
         [NameInMap("productTitle")]
         [Validation(Required=false)]
         public string ProductTitle { get; set; }
@@ -78,6 +70,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? Quantity { get; set; }
 
         /// <summary>
+        /// <para>SKUID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6600****6737</para>
         /// </summary>
@@ -85,10 +79,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string SkuId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>浅绿色</para>
-        /// </summary>
         [NameInMap("skuTitle")]
         [Validation(Required=false)]
         public string SkuTitle { get; set; }

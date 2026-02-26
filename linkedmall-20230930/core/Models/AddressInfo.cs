@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
     public class AddressInfo : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>陕西省西安市新城区xxx大厦xx室</para>
         /// </summary>
         [NameInMap("addressDetail")]
         [Validation(Required=false)]
@@ -37,9 +34,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>任先生</para>
         /// </summary>
         [NameInMap("receiver")]
         [Validation(Required=false)]

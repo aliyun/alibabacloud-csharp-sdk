@@ -28,6 +28,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ProductId { get; set; }
 
         /// <summary>
+        /// <para>skuid</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

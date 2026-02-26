@@ -40,6 +40,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? Quantity { get; set; }
 
         /// <summary>
+        /// <para>skuID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

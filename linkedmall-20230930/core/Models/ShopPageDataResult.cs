@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>PID56****2304</para>
+        /// <para>56****2304</para>
         /// </summary>
         [NameInMap("purchaserId")]
         [Validation(Required=false)]
@@ -41,17 +41,13 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string ShopId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>儿童座椅分销店铺</para>
-        /// </summary>
         [NameInMap("shopName")]
         [Validation(Required=false)]
         public string ShopName { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>DistributorQYG</para>
+        /// <para>Distribution</para>
         /// </summary>
         [NameInMap("shopType")]
         [Validation(Required=false)]

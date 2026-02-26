@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string Key { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>场景图</para>
-        /// </summary>
         [NameInMap("value")]
         [Validation(Required=false)]
         public string Value { get; set; }

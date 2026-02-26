@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string DivisionCode { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>有货</para>
-        /// </summary>
         [NameInMap("fuzzyQuantity")]
         [Validation(Required=false)]
         public string FuzzyQuantity { get; set; }
@@ -114,6 +110,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string SkuAlias { get; set; }
 
         /// <summary>
+        /// <para>skuId</para>
+        /// 
         /// <b>Example:</b>
         /// <para>660460842235822081</para>
         /// </summary>
@@ -121,14 +119,13 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string SkuId { get; set; }
 
+        /// <summary>
+        /// <para>sku</para>
+        /// </summary>
         [NameInMap("skuSpecs")]
         [Validation(Required=false)]
         public List<SkuSpec> SkuSpecs { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>颜色分类:天蓝色</para>
-        /// </summary>
         [NameInMap("skuSpecsCode")]
         [Validation(Required=false)]
         public string SkuSpecsCode { get; set; }
@@ -145,10 +142,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public long? SuggestedRetailPrice { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>天蓝色</para>
-        /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }

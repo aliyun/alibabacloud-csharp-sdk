@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
     public class PurchaseOrderCreateCmd : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>buyer2138237</para>
         /// </summary>
         [NameInMap("buyerId")]
         [Validation(Required=false)]

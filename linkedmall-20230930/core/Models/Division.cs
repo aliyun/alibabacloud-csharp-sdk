@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public long? DivisionLevel { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>上海</para>
-        /// </summary>
         [NameInMap("divisionName")]
         [Validation(Required=false)]
         public string DivisionName { get; set; }

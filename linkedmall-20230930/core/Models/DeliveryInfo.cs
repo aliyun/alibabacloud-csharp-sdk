@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class DeliveryInfo : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>快递 免邮</para>
-        /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
@@ -34,6 +30,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? PostFee { get; set; }
 
         /// <summary>
+        /// <para>serviceType</para>
+        /// 
         /// <b>Example:</b>
         /// <para>-4</para>
         /// </summary>

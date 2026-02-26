@@ -27,23 +27,19 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("level")]
         [Validation(Required=false)]
         public int? Level { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>方便面/拉面/挂面/轻食面速食</para>
-        /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>50016422</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("parentId")]
         [Validation(Required=false)]

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class DivisionQuery : TeaModel {
         /// <summary>
+        /// <para>divisionCode</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string DivisionCode { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>有货</para>
-        /// </summary>
         [NameInMap("fuzzyQuantity")]
         [Validation(Required=false)]
         public string FuzzyQuantity { get; set; }
@@ -89,10 +85,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public List<SkuSaleInfo> Skus { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>发财树</para>
-        /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }

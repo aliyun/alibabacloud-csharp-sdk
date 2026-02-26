@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public long? ReasonTextId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>不想要了</para>
-        /// </summary>
         [NameInMap("reasonTips")]
         [Validation(Required=false)]
         public string ReasonTips { get; set; }

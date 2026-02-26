@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
     public class OrderResult : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2023-09-11T12:22:24.000+08:00</para>
+        /// <para>2023-09-01T12:00:00.000Z</para>
         /// </summary>
         [NameInMap("createDate")]
         [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>841471F6-5D61-1331-8C38-2****B55</para>
+        /// <para>D12***111</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

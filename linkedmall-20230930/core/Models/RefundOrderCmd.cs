@@ -19,10 +19,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public long? ApplyReasonTextId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>不想要了</para>
-        /// </summary>
         [NameInMap("applyReasonTips")]
         [Validation(Required=false)]
         public string ApplyReasonTips { get; set; }
@@ -67,10 +63,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public int? GoodsStatus { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>不想要了</para>
-        /// </summary>
         [NameInMap("leaveMessage")]
         [Validation(Required=false)]
         public string LeaveMessage { get; set; }

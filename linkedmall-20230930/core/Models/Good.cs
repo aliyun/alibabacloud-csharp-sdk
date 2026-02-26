@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class Good : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>儿童学习桌</para>
-        /// </summary>
         [NameInMap("goodName")]
         [Validation(Required=false)]
         public string GoodName { get; set; }

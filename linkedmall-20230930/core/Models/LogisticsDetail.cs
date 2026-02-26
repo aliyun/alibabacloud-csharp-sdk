@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string OcurrTimeStr { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>已签收</para>
-        /// </summary>
         [NameInMap("standerdDesc")]
         [Validation(Required=false)]
         public string StanderdDesc { get; set; }

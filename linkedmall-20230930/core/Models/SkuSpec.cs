@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class SkuSpec : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>颜色分类</para>
-        /// </summary>
         [NameInMap("key")]
         [Validation(Required=false)]
         public string Key { get; set; }
@@ -25,10 +21,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public long? KeyId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>天蓝色</para>
-        /// </summary>
         [NameInMap("value")]
         [Validation(Required=false)]
         public string Value { get; set; }

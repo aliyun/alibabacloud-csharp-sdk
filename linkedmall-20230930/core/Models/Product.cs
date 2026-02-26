@@ -65,6 +65,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string FuzzyQuantity { get; set; }
 
+        /// <summary>
+        /// <para>images</para>
+        /// </summary>
         [NameInMap("images")]
         [Validation(Required=false)]
         public List<string> Images { get; set; }
@@ -101,6 +104,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string ProductId { get; set; }
 
+        /// <summary>
+        /// <para>productSpecs</para>
+        /// </summary>
         [NameInMap("productSpecs")]
         [Validation(Required=false)]
         public List<ProductSpec> ProductSpecs { get; set; }
@@ -153,6 +159,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string ShopId { get; set; }
 
+        /// <summary>
+        /// <para>skus</para>
+        /// </summary>
         [NameInMap("skus")]
         [Validation(Required=false)]
         public List<Sku> Skus { get; set; }
@@ -181,10 +190,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public int? TaxRate { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>发财树</para>
-        /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }

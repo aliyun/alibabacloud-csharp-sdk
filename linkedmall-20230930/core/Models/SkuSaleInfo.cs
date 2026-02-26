@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string DivisionCode { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>有货</para>
-        /// </summary>
         [NameInMap("fuzzyQuantity")]
         [Validation(Required=false)]
         public string FuzzyQuantity { get; set; }
@@ -82,6 +78,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ShopId { get; set; }
 
         /// <summary>
+        /// <para>skuId</para>
+        /// 
         /// <b>Example:</b>
         /// <para>660460842235822081</para>
         /// </summary>
@@ -97,10 +95,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string SkuStatus { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>天蓝色</para>
-        /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class OrderLineResult : TeaModel {
+        [NameInMap("eticketInfos")]
+        [Validation(Required=false)]
+        public List<EticketInfo> EticketInfos { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
@@ -73,15 +77,13 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string ProductPic { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>儿童学习桌</para>
-        /// </summary>
         [NameInMap("productTitle")]
         [Validation(Required=false)]
         public string ProductTitle { get; set; }
 
         /// <summary>
+        /// <para>skuId</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6600****6737</para>
         /// </summary>
@@ -89,10 +91,6 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string SkuId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>浅绿色</para>
-        /// </summary>
         [NameInMap("skuTitle")]
         [Validation(Required=false)]
         public string SkuTitle { get; set; }
