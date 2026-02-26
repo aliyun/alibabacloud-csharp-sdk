@@ -1991,7 +1991,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates a PolarDB-X instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2151,7 +2151,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates a PolarDB-X instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2311,7 +2311,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates a PolarDB-X instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2329,7 +2329,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates a PolarDB-X instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5205,6 +5205,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribeAvailableCrossRegionsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>描述备份策略</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupPolicyRequest
         /// </param>
@@ -5246,6 +5251,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeBackupPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>描述备份策略</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupPolicyRequest
         /// </param>
@@ -5287,6 +5297,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>描述备份策略</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupPolicyRequest
         /// </param>
@@ -5300,6 +5315,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DescribeBackupPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>描述备份策略</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupPolicyRequest
         /// </param>
@@ -17899,6 +17919,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新备份策略</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateBackupPolicyRequest
         /// </param>
@@ -17944,6 +17969,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossRegionDataBackupRetention))
             {
                 query["CrossRegionDataBackupRetention"] = request.CrossRegionDataBackupRetention;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossRegionFilterValue))
+            {
+                query["CrossRegionFilterValue"] = request.CrossRegionFilterValue;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossRegionLogBackupRetention))
             {
@@ -18012,6 +18041,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UpdateBackupPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新备份策略</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateBackupPolicyRequest
         /// </param>
@@ -18057,6 +18091,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossRegionDataBackupRetention))
             {
                 query["CrossRegionDataBackupRetention"] = request.CrossRegionDataBackupRetention;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossRegionFilterValue))
+            {
+                query["CrossRegionFilterValue"] = request.CrossRegionFilterValue;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossRegionLogBackupRetention))
             {
@@ -18125,6 +18163,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UpdateBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新备份策略</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateBackupPolicyRequest
         /// </param>
@@ -18138,6 +18181,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return UpdateBackupPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新备份策略</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateBackupPolicyRequest
         /// </param>

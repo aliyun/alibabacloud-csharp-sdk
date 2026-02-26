@@ -33,26 +33,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public List<DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItem> PerformanceItem { get; set; }
             public class DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItem : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>pxc-i-********</para>
-                /// </summary>
                 [NameInMap("DBNodeId")]
                 [Validation(Required=false)]
                 public string DBNodeId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>Logic_TPS</para>
-                /// </summary>
                 [NameInMap("Measurement")]
                 [Validation(Required=false)]
                 public string Measurement { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>logic_tps</para>
-                /// </summary>
                 [NameInMap("MetricName")]
                 [Validation(Required=false)]
                 public string MetricName { get; set; }
@@ -65,18 +53,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     [Validation(Required=false)]
                     public List<DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue> PerformanceItemValue { get; set; }
                     public class DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>1600822800000</para>
-                        /// </summary>
                         [NameInMap("Timestamp")]
                         [Validation(Required=false)]
                         public long? Timestamp { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>42.38</para>
-                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
