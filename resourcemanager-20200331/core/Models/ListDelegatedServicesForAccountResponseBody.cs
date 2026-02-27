@@ -9,12 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListDelegatedServicesForAccountResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The trusted services.</para>
-        /// <remarks>
-        /// <para> If the value of this parameter is empty, the member is not specified as a delegated administrator account.</para>
-        /// </remarks>
-        /// </summary>
         [NameInMap("DelegatedServices")]
         [Validation(Required=false)]
         public ListDelegatedServicesForAccountResponseBodyDelegatedServices DelegatedServices { get; set; }
@@ -23,36 +17,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListDelegatedServicesForAccountResponseBodyDelegatedServicesDelegatedService> DelegatedService { get; set; }
             public class ListDelegatedServicesForAccountResponseBodyDelegatedServicesDelegatedService : TeaModel {
-                /// <summary>
-                /// <para>The time when the member was specified as a delegated administrator account of the trusted service.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1616652684164</para>
-                /// </summary>
                 [NameInMap("DelegationEnabledTime")]
                 [Validation(Required=false)]
                 public string DelegationEnabledTime { get; set; }
 
-                /// <summary>
-                /// <para>The identification of the trusted service.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cloudfw.aliyuncs.com</para>
-                /// </summary>
                 [NameInMap("ServicePrincipal")]
                 [Validation(Required=false)]
                 public string ServicePrincipal { get; set; }
 
-                /// <summary>
-                /// <para>The status of the trusted service. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>ENABLED: enabled</description></item>
-                /// <item><description>DISABLED: disabled</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ENABLED</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }

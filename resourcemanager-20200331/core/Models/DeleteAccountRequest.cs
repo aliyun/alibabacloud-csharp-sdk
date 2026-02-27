@@ -9,16 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class DeleteAccountRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of a check item that you can choose to ignore for the member deletion.</para>
+        /// <para>You can obtain the ID from the response of the <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> operation.</para>
+        /// </summary>
         [NameInMap("AbandonableCheckId")]
         [Validation(Required=false)]
         public List<string> AbandonableCheckId { get; set; }
 
         /// <summary>
-        /// <para>The type of the deletion. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>0: direct deletion. If the member does not have pay-as-you-go resources that are purchased within the previous 30 days, the system directly deletes the member.</description></item>
-        /// <item><description>1: deletion with a silence period. If the member has pay-as-you-go resources that are purchased within the previous 30 days, the member enters a silence period of 45 days. The system starts to delete the member until the silence period ends. For more information about the silence period, see <a href="https://help.aliyun.com/document_detail/446079.html">What is the silence period for member deletion?</a></description></item>
-        /// </list>
+        /// <para>The Alibaba Cloud account ID of the member that you want to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListFoldersForParentResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information of the folders.</para>
-        /// </summary>
         [NameInMap("Folders")]
         [Validation(Required=false)]
         public ListFoldersForParentResponseBodyFolders Folders { get; set; }
@@ -20,32 +17,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListFoldersForParentResponseBodyFoldersFolder> Folder { get; set; }
             public class ListFoldersForParentResponseBodyFoldersFolder : TeaModel {
-                /// <summary>
-                /// <para>The time when the folder was created.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-01-23T12:33:18Z</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the folder.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rd-evic31****</para>
-                /// </summary>
                 [NameInMap("FolderId")]
                 [Validation(Required=false)]
                 public string FolderId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the folder.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>project-1</para>
-                /// </summary>
                 [NameInMap("FolderName")]
                 [Validation(Required=false)]
                 public string FolderName { get; set; }

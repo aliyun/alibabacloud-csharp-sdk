@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The list of objects to which the control policy is attached.</para>
-        /// </summary>
         [NameInMap("TargetAttachments")]
         [Validation(Required=false)]
         public ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachments TargetAttachments { get; set; }
@@ -50,47 +47,18 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachmentsTargetAttachment> TargetAttachment { get; set; }
             public class ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachmentsTargetAttachment : TeaModel {
-                /// <summary>
-                /// <para>The time when the control policy was attached to the object.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2021-03-19T02:56:24Z</para>
-                /// </summary>
                 [NameInMap("AttachDate")]
                 [Validation(Required=false)]
                 public string AttachDate { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the object.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>fd-ZDNPiT****</para>
-                /// </summary>
                 [NameInMap("TargetId")]
                 [Validation(Required=false)]
                 public string TargetId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the object.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Dev_Department</para>
-                /// </summary>
                 [NameInMap("TargetName")]
                 [Validation(Required=false)]
                 public string TargetName { get; set; }
 
-                /// <summary>
-                /// <para>The type of the object. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Root: Root folder</description></item>
-                /// <item><description>Folder: child folder of the Root folder</description></item>
-                /// <item><description>Account: member account</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Folder</para>
-                /// </summary>
                 [NameInMap("TargetType")]
                 [Validation(Required=false)]
                 public string TargetType { get; set; }

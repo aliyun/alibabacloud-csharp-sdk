@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The information about the roles.</para>
-        /// </summary>
         [NameInMap("Roles")]
         [Validation(Required=false)]
         public ListRolesResponseBodyRoles Roles { get; set; }
@@ -50,121 +47,52 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListRolesResponseBodyRolesRole> Role { get; set; }
             public class ListRolesResponseBodyRolesRole : TeaModel {
-                /// <summary>
-                /// <para>The Alibaba Cloud Resource Name (ARN) of the role.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>acs:ram::123456789012****:role/ECSAdmin</para>
-                /// </summary>
                 [NameInMap("Arn")]
                 [Validation(Required=false)]
                 public string Arn { get; set; }
 
-                /// <summary>
-                /// <para>The time when the role was created.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-01-23T12:33:18Z</para>
-                /// </summary>
                 [NameInMap("CreateDate")]
                 [Validation(Required=false)]
                 public string CreateDate { get; set; }
 
-                /// <summary>
-                /// <para>The description of the role.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ECS administrator</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the role is a service-linked role.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("IsServiceLinkedRole")]
                 [Validation(Required=false)]
                 public bool? IsServiceLinkedRole { get; set; }
 
-                /// <summary>
-                /// <para>The information of the most recent deletion task.</para>
-                /// </summary>
                 [NameInMap("LatestDeletionTask")]
                 [Validation(Required=false)]
                 public ListRolesResponseBodyRolesRoleLatestDeletionTask LatestDeletionTask { get; set; }
                 public class ListRolesResponseBodyRolesRoleLatestDeletionTask : TeaModel {
-                    /// <summary>
-                    /// <para>The time when the deletion task was created.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>2018-10-23T12:33:18Z</para>
-                    /// </summary>
                     [NameInMap("CreateDate")]
                     [Validation(Required=false)]
                     public string CreateDate { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the deletion task.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>ECSAdmin/cc61514b-26eb-4453-ab53-b142eb70****</para>
-                    /// </summary>
                     [NameInMap("DeletionTaskId")]
                     [Validation(Required=false)]
                     public string DeletionTaskId { get; set; }
 
                 }
 
-                /// <summary>
-                /// <para>The maximum session duration of the role.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3600</para>
-                /// </summary>
                 [NameInMap("MaxSessionDuration")]
                 [Validation(Required=false)]
                 public long? MaxSessionDuration { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the role.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>90123456789****</para>
-                /// </summary>
                 [NameInMap("RoleId")]
                 [Validation(Required=false)]
                 public string RoleId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the role.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ECSAdmin</para>
-                /// </summary>
                 [NameInMap("RoleName")]
                 [Validation(Required=false)]
                 public string RoleName { get; set; }
 
-                /// <summary>
-                /// <para>The name of the role after authorization.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="mailto:ECSAdmin@role.123456.onaliyunservice.com">ECSAdmin@role.123456.onaliyunservice.com</a></para>
-                /// </summary>
                 [NameInMap("RolePrincipalName")]
                 [Validation(Required=false)]
                 public string RolePrincipalName { get; set; }
 
-                /// <summary>
-                /// <para>The time when the role was updated.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2016-01-23T12:33:18Z</para>
-                /// </summary>
                 [NameInMap("UpdateDate")]
                 [Validation(Required=false)]
                 public string UpdateDate { get; set; }

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListTrustedServiceStatusResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The trusted services that are enabled.</para>
-        /// </summary>
         [NameInMap("EnabledServicePrincipals")]
         [Validation(Required=false)]
         public ListTrustedServiceStatusResponseBodyEnabledServicePrincipals EnabledServicePrincipals { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListTrustedServiceStatusResponseBodyEnabledServicePrincipalsEnabledServicePrincipal> EnabledServicePrincipal { get; set; }
             public class ListTrustedServiceStatusResponseBodyEnabledServicePrincipalsEnabledServicePrincipal : TeaModel {
-                /// <summary>
-                /// <para>The time when the trusted service was enabled.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-02-18T15:32:10.473Z</para>
-                /// </summary>
                 [NameInMap("EnableTime")]
                 [Validation(Required=false)]
                 public string EnableTime { get; set; }
 
-                /// <summary>
-                /// <para>The identification of the trusted service.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>config.aliyuncs.com</para>
-                /// </summary>
                 [NameInMap("ServicePrincipal")]
                 [Validation(Required=false)]
                 public string ServicePrincipal { get; set; }

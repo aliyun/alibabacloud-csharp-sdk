@@ -26,9 +26,6 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public string Message { get; set; }
 
-            /// <summary>
-            /// <para>The information about the resources that the service-linked role can use.</para>
-            /// </summary>
             [NameInMap("RoleUsages")]
             [Validation(Required=false)]
             public GetServiceLinkedRoleDeletionStatusResponseBodyReasonRoleUsages RoleUsages { get; set; }
@@ -37,19 +34,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 [Validation(Required=false)]
                 public List<GetServiceLinkedRoleDeletionStatusResponseBodyReasonRoleUsagesRoleUsage> RoleUsage { get; set; }
                 public class GetServiceLinkedRoleDeletionStatusResponseBodyReasonRoleUsagesRoleUsage : TeaModel {
-                    /// <summary>
-                    /// <para>The region.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>global</para>
-                    /// </summary>
                     [NameInMap("Region")]
                     [Validation(Required=false)]
                     public string Region { get; set; }
 
-                    /// <summary>
-                    /// <para>The information about resources.</para>
-                    /// </summary>
                     [NameInMap("Resources")]
                     [Validation(Required=false)]
                     public GetServiceLinkedRoleDeletionStatusResponseBodyReasonRoleUsagesRoleUsageResources Resources { get; set; }

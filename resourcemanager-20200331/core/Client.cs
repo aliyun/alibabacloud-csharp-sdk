@@ -181,6 +181,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await AcceptHandshakeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attaches an access control policy.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>After you attach an access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
@@ -231,6 +236,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<AttachControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attaches an access control policy.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>After you attach an access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
@@ -281,6 +291,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<AttachControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attaches an access control policy.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>After you attach an access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
@@ -303,6 +318,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return AttachControlPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attaches an access control policy.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>After you attach an access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
@@ -499,7 +519,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置安全手机号</para>
+        /// <para>Binds a mobile phone number to a member of the resource account type in a resource directory for security purposes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -556,7 +576,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置安全手机号</para>
+        /// <para>Binds a mobile phone number to a member of the resource account type in a resource directory for security purposes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -613,7 +633,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置安全手机号</para>
+        /// <para>Binds a mobile phone number to a member of the resource account type in a resource directory for security purposes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -638,7 +658,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置安全手机号</para>
+        /// <para>Binds a mobile phone number to a member of the resource account type in a resource directory for security purposes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -663,7 +683,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消修改邮箱</para>
+        /// <para>Cancels the email address change of a member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -705,7 +725,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消修改邮箱</para>
+        /// <para>Cancels the email address change of a member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -747,7 +767,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消修改邮箱</para>
+        /// <para>Cancels the email address change of a member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -765,7 +785,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消修改邮箱</para>
+        /// <para>Cancels the email address change of a member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -783,7 +803,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消创建云账号类型的成员</para>
+        /// <para>Cancels the creation of a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -825,7 +845,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消创建云账号类型的成员</para>
+        /// <para>Cancels the creation of a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -867,7 +887,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消创建云账号类型的成员</para>
+        /// <para>Cancels the creation of a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -885,7 +905,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消创建云账号类型的成员</para>
+        /// <para>Cancels the creation of a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1043,7 +1063,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消升级资源账号</para>
+        /// <para>Cancels the upgrade from a resource account to a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1085,7 +1105,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消升级资源账号</para>
+        /// <para>Cancels the upgrade from a resource account to a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1127,7 +1147,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消升级资源账号</para>
+        /// <para>Cancels the upgrade from a resource account to a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1145,7 +1165,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消升级资源账号</para>
+        /// <para>Cancels the upgrade from a resource account to a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1163,7 +1183,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>成员账号设置安全邮箱</para>
+        /// <para>Changes the email address that is bound to a member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1209,7 +1229,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>成员账号设置安全邮箱</para>
+        /// <para>Changes the email address that is bound to a member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1255,7 +1275,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>成员账号设置安全邮箱</para>
+        /// <para>Changes the email address that is bound to a member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1273,7 +1293,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>成员账号设置安全邮箱</para>
+        /// <para>Changes the email address that is bound to a member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1663,7 +1683,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云账号</para>
+        /// <para>Creates a cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1729,7 +1749,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云账号</para>
+        /// <para>Creates a cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1795,7 +1815,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云账号</para>
+        /// <para>Creates a cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1825,7 +1845,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云账号</para>
+        /// <para>Creates a cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1853,6 +1873,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await CreateCloudAccountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom access control policy.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to create a custom access control policy named <c>ExampleControlPolicy</c>. This access control policy is used to prohibit modifications to the ResourceDirectoryAccountAccessRole role and the permissions of the role.</para>
@@ -1907,6 +1932,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<CreateControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom access control policy.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to create a custom access control policy named <c>ExampleControlPolicy</c>. This access control policy is used to prohibit modifications to the ResourceDirectoryAccountAccessRole role and the permissions of the role.</para>
@@ -1961,6 +1991,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<CreateControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom access control policy.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to create a custom access control policy named <c>ExampleControlPolicy</c>. This access control policy is used to prohibit modifications to the ResourceDirectoryAccountAccessRole role and the permissions of the role.</para>
@@ -1979,6 +2014,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return CreateControlPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom access control policy.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to create a custom access control policy named <c>ExampleControlPolicy</c>. This access control policy is used to prohibit modifications to the ResourceDirectoryAccountAccessRole role and the permissions of the role.</para>
@@ -1997,6 +2037,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await CreateControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a folder.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -2046,6 +2091,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<CreateFolderResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a folder.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -2095,6 +2145,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<CreateFolderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a folder.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -2116,6 +2171,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return CreateFolderWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a folder.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -3155,12 +3215,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号一键删除</para>
+        /// <para>Deletes a member of the resource account type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the member that you want to delete.</para>
+        /// <para>Before you delete a member, we recommend that you call the <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
+        /// After you submit a deletion request for a member, you can call the <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> operation to query the deletion status of the member. After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3212,12 +3273,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号一键删除</para>
+        /// <para>Deletes a member of the resource account type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the member that you want to delete.</para>
+        /// <para>Before you delete a member, we recommend that you call the <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
+        /// After you submit a deletion request for a member, you can call the <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> operation to query the deletion status of the member. After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3269,12 +3331,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号一键删除</para>
+        /// <para>Deletes a member of the resource account type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the member that you want to delete.</para>
+        /// <para>Before you delete a member, we recommend that you call the <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
+        /// After you submit a deletion request for a member, you can call the <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> operation to query the deletion status of the member. After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3292,12 +3355,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号一键删除</para>
+        /// <para>Deletes a member of the resource account type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the member that you want to delete.</para>
+        /// <para>Before you delete a member, we recommend that you call the <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
+        /// After you submit a deletion request for a member, you can call the <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> operation to query the deletion status of the member. After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3435,7 +3499,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除管控策略</para>
+        /// <para>Deletes a custom control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3483,7 +3547,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除管控策略</para>
+        /// <para>Deletes a custom control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3531,7 +3595,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除管控策略</para>
+        /// <para>Deletes a custom control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3555,7 +3619,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除管控策略</para>
+        /// <para>Deletes a custom control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3577,6 +3641,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await DeleteControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -3621,6 +3690,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<DeleteFolderResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -3665,6 +3739,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<DeleteFolderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -3685,6 +3764,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return DeleteFolderWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -4415,7 +4499,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注销代理管理员</para>
+        /// <para>Removes a delegated administrator account for a trusted service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4469,7 +4553,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注销代理管理员</para>
+        /// <para>Removes a delegated administrator account for a trusted service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4523,7 +4607,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注销代理管理员</para>
+        /// <para>Removes a delegated administrator account for a trusted service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4549,7 +4633,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注销代理管理员</para>
+        /// <para>Removes a delegated administrator account for a trusted service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4573,6 +4657,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await DeregisterDelegatedAdministratorWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a resource directory. This operation cannot be undone. Therefore, exercise caution when you perform it.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you disable a resource directory, make sure that the following requirements are met:</para>
@@ -4610,6 +4699,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<DestroyResourceDirectoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a resource directory. This operation cannot be undone. Therefore, exercise caution when you perform it.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you disable a resource directory, make sure that the following requirements are met:</para>
@@ -4647,6 +4741,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<DestroyResourceDirectoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a resource directory. This operation cannot be undone. Therefore, exercise caution when you perform it.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you disable a resource directory, make sure that the following requirements are met:</para>
@@ -4665,6 +4764,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return DestroyResourceDirectoryWithOptions(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a resource directory. This operation cannot be undone. Therefore, exercise caution when you perform it.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you disable a resource directory, make sure that the following requirements are met:</para>
@@ -4685,7 +4789,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑管控策略</para>
+        /// <para>Detaches an access control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4738,7 +4842,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑管控策略</para>
+        /// <para>Detaches an access control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4791,7 +4895,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑管控策略</para>
+        /// <para>Detaches an access control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4816,7 +4920,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑管控策略</para>
+        /// <para>Detaches an access control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5181,7 +5285,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用管控策略</para>
+        /// <para>Disables the Control Policy feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5222,7 +5326,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用管控策略</para>
+        /// <para>Disables the Control Policy feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5263,7 +5367,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用管控策略</para>
+        /// <para>Disables the Control Policy feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5285,7 +5389,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用管控策略</para>
+        /// <para>Disables the Control Policy feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5703,7 +5807,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启RD</para>
+        /// <para>Enables a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5763,7 +5867,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启RD</para>
+        /// <para>Enables a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5823,7 +5927,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启RD</para>
+        /// <para>Enables a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5847,7 +5951,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启RD</para>
+        /// <para>Enables a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5963,6 +6067,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await EnableResourceGroupNotificationWithOptionsAsync(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a member.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to query the information of the member whose Alibaba Cloud account ID is <c>181761095690****</c>.</para>
@@ -6009,6 +6118,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<GetAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a member.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to query the information of the member whose Alibaba Cloud account ID is <c>181761095690****</c>.</para>
@@ -6055,6 +6169,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<GetAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a member.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to query the information of the member whose Alibaba Cloud account ID is <c>181761095690****</c>.</para>
@@ -6073,6 +6192,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return GetAccountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a member.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to query the information of the member whose Alibaba Cloud account ID is <c>181761095690****</c>.</para>
@@ -6589,6 +6713,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await GetAutoGroupingStatusWithOptionsAsync(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an access control policy.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to query the details of the access control policy whose ID is <c>cp-SImPt8GCEwiq****</c>.</para>
@@ -6635,6 +6764,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<GetControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an access control policy.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to query the details of the access control policy whose ID is <c>cp-SImPt8GCEwiq****</c>.</para>
@@ -6681,6 +6815,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<GetControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an access control policy.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to query the details of the access control policy whose ID is <c>cp-SImPt8GCEwiq****</c>.</para>
@@ -6699,6 +6838,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return GetControlPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an access control policy.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to query the details of the access control policy whose ID is <c>cp-SImPt8GCEwiq****</c>.</para>
@@ -6811,6 +6955,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await GetControlPolicyEnablementStatusWithOptionsAsync(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a folder.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>In this example, the information of the folder <c>fd-Jyl5U7****</c> is queried.</para>
@@ -6853,6 +7002,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<GetFolderResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a folder.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>In this example, the information of the folder <c>fd-Jyl5U7****</c> is queried.</para>
@@ -6895,6 +7049,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<GetFolderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a folder.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>In this example, the information of the folder <c>fd-Jyl5U7****</c> is queried.</para>
@@ -6913,6 +7072,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return GetFolderWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a folder.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>In this example, the information of the folder <c>fd-Jyl5U7****</c> is queried.</para>
@@ -7071,6 +7235,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await GetHandshakeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a settlement account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetPayerForAccountRequest
         /// </param>
@@ -7108,6 +7277,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<GetPayerForAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a settlement account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetPayerForAccountRequest
         /// </param>
@@ -7145,6 +7319,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<GetPayerForAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a settlement account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetPayerForAccountRequest
         /// </param>
@@ -7158,6 +7337,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return GetPayerForAccountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a settlement account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetPayerForAccountRequest
         /// </param>
@@ -8887,6 +9071,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await ListAccountsForParentWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of all the parent folders of a specified folder. The system returns the information of the folders based on their top-down hierarchy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAncestorsRequest
         /// </param>
@@ -8924,6 +9113,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<ListAncestorsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of all the parent folders of a specified folder. The system returns the information of the folders based on their top-down hierarchy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAncestorsRequest
         /// </param>
@@ -8961,6 +9155,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<ListAncestorsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of all the parent folders of a specified folder. The system returns the information of the folders based on their top-down hierarchy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAncestorsRequest
         /// </param>
@@ -8974,6 +9173,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return ListAncestorsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of all the parent folders of a specified folder. The system returns the information of the folders based on their top-down hierarchy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAncestorsRequest
         /// </param>
@@ -9581,6 +9785,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await ListControlPoliciesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access control policies that are attached to a folder or member.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to query the access control policies that are attached to the folder <c>fd-ZDNPiT****</c>.</para>
@@ -9627,6 +9836,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<ListControlPolicyAttachmentsForTargetResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access control policies that are attached to a folder or member.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to query the access control policies that are attached to the folder <c>fd-ZDNPiT****</c>.</para>
@@ -9673,6 +9887,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<ListControlPolicyAttachmentsForTargetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access control policies that are attached to a folder or member.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to query the access control policies that are attached to the folder <c>fd-ZDNPiT****</c>.</para>
@@ -9691,6 +9910,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return ListControlPolicyAttachmentsForTargetWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access control policies that are attached to a folder or member.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to query the access control policies that are attached to the folder <c>fd-ZDNPiT****</c>.</para>
@@ -9711,7 +9935,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出所有的代理管理员</para>
+        /// <para>Queries delegated administrator accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9766,7 +9990,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出所有的代理管理员</para>
+        /// <para>Queries delegated administrator accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9821,7 +10045,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出所有的代理管理员</para>
+        /// <para>Queries delegated administrator accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9844,7 +10068,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出所有的代理管理员</para>
+        /// <para>Queries delegated administrator accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9867,7 +10091,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看指定账号被设置为哪些可信服务的委派管理员</para>
+        /// <para>Queries the trusted services for which a member is specified as a delegated administrator account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9914,7 +10138,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看指定账号被设置为哪些可信服务的委派管理员</para>
+        /// <para>Queries the trusted services for which a member is specified as a delegated administrator account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9961,7 +10185,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看指定账号被设置为哪些可信服务的委派管理员</para>
+        /// <para>Queries the trusted services for which a member is specified as a delegated administrator account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9984,7 +10208,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看指定账号被设置为哪些可信服务的委派管理员</para>
+        /// <para>Queries the trusted services for which a member is specified as a delegated administrator account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10005,6 +10229,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await ListDelegatedServicesForAccountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of all subfolders of a folder.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -10061,6 +10290,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<ListFoldersForParentResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of all subfolders of a folder.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -10117,6 +10351,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<ListFoldersForParentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of all subfolders of a folder.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -10137,6 +10376,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return ListFoldersForParentWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of all subfolders of a folder.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -10923,7 +11167,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源组能力项</para>
+        /// <para>Queries whether a specific resource type or a given cloud service supports resource group events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10973,7 +11217,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源组能力项</para>
+        /// <para>Queries whether a specific resource type or a given cloud service supports resource group events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11023,7 +11267,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源组能力项</para>
+        /// <para>Queries whether a specific resource type or a given cloud service supports resource group events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11041,7 +11285,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源组能力项</para>
+        /// <para>Queries whether a specific resource type or a given cloud service supports resource group events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11057,6 +11301,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await ListResourceGroupCapabilityWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource groups.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this API operation to query all resource groups within the current account. You can also call this API operation to query a specific resource group based on the status, ID, identifier, or display name of the resource group.
@@ -11132,6 +11381,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<ListResourceGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource groups.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this API operation to query all resource groups within the current account. You can also call this API operation to query a specific resource group based on the status, ID, identifier, or display name of the resource group.
@@ -11207,6 +11461,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<ListResourceGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource groups.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this API operation to query all resource groups within the current account. You can also call this API operation to query a specific resource group based on the status, ID, identifier, or display name of the resource group.
@@ -11226,6 +11485,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return ListResourceGroupsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource groups.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this API operation to query all resource groups within the current account. You can also call this API operation to query a specific resource group based on the status, ID, identifier, or display name of the resource group.
@@ -11247,7 +11511,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源组与用户授权信息</para>
+        /// <para>Queries resource groups and their user authorization information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11325,7 +11589,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源组与用户授权信息</para>
+        /// <para>Queries resource groups and their user authorization information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11403,7 +11667,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源组与用户授权信息</para>
+        /// <para>Queries resource groups and their user authorization information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11421,7 +11685,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源组与用户授权信息</para>
+        /// <para>Queries resource groups and their user authorization information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11783,7 +12047,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出所有的Tag key</para>
+        /// <para>Queries tag keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11842,7 +12106,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出所有的Tag key</para>
+        /// <para>Queries tag keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11901,7 +12165,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出所有的Tag key</para>
+        /// <para>Queries tag keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11924,7 +12188,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出所有的Tag key</para>
+        /// <para>Queries tag keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12119,7 +12383,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出所有的Tag values</para>
+        /// <para>Queries the tag values of a tag key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12182,7 +12446,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出所有的Tag values</para>
+        /// <para>Queries the tag values of a tag key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12245,7 +12509,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出所有的Tag values</para>
+        /// <para>Queries the tag values of a tag key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12268,7 +12532,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出所有的Tag values</para>
+        /// <para>Queries the tag values of a tag key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12445,6 +12709,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await ListTargetAttachmentsForControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trusted services that are enabled within an enterprise management account or delegated administrator account.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -12498,6 +12767,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<ListTrustedServiceStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trusted services that are enabled within an enterprise management account or delegated administrator account.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -12551,6 +12825,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<ListTrustedServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trusted services that are enabled within an enterprise management account or delegated administrator account.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -12572,6 +12851,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return ListTrustedServiceStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trusted services that are enabled within an enterprise management account or delegated administrator account.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -12595,7 +12879,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源组事件</para>
+        /// <para>Queries the events of resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12665,7 +12949,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源组事件</para>
+        /// <para>Queries the events of resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12735,7 +13019,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源组事件</para>
+        /// <para>Queries the events of resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12753,7 +13037,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源组事件</para>
+        /// <para>Queries the events of resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12771,7 +13055,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动账号</para>
+        /// <para>Moves a member account from a folder to another.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12817,7 +13101,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动账号</para>
+        /// <para>Moves a member account from a folder to another.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12863,7 +13147,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动账号</para>
+        /// <para>Moves a member account from a folder to another.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12881,7 +13165,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动账号</para>
+        /// <para>Moves a member account from a folder to another.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13051,7 +13335,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级资源账号</para>
+        /// <para>Upgrades a resource account to a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13097,7 +13381,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级资源账号</para>
+        /// <para>Upgrades a resource account to a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13143,7 +13427,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级资源账号</para>
+        /// <para>Upgrades a resource account to a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13161,7 +13445,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级资源账号</para>
+        /// <para>Upgrades a resource account to a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13177,6 +13461,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await PromoteResourceAccountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies a member in a resource directory as a delegated administrator account of a trusted service.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory.
@@ -13230,6 +13519,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<RegisterDelegatedAdministratorResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies a member in a resource directory as a delegated administrator account of a trusted service.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory.
@@ -13283,6 +13577,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<RegisterDelegatedAdministratorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies a member in a resource directory as a delegated administrator account of a trusted service.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory.
@@ -13308,6 +13607,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return RegisterDelegatedAdministratorWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies a member in a resource directory as a delegated administrator account of a trusted service.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory.
@@ -13333,6 +13637,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await RegisterDelegatedAdministratorWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a member of the cloud account type. After you remove a member of the cloud account type, the member is no longer managed by the management account of the resource directory to which the member belonged.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to remove the member <c>177242285274****</c> from a resource directory.</para>
@@ -13375,6 +13684,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<RemoveCloudAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a member of the cloud account type. After you remove a member of the cloud account type, the member is no longer managed by the management account of the resource directory to which the member belonged.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to remove the member <c>177242285274****</c> from a resource directory.</para>
@@ -13417,6 +13731,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<RemoveCloudAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a member of the cloud account type. After you remove a member of the cloud account type, the member is no longer managed by the management account of the resource directory to which the member belonged.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to remove the member <c>177242285274****</c> from a resource directory.</para>
@@ -13435,6 +13754,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return RemoveCloudAccountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a member of the cloud account type. After you remove a member of the cloud account type, the member is no longer managed by the management account of the resource directory to which the member belonged.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to call the API operation to remove the member <c>177242285274****</c> from a resource directory.</para>
@@ -13455,7 +13779,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送创建云账号的邮箱验证</para>
+        /// <para>Resends an email that is used to confirm the creation of a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13497,7 +13821,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送创建云账号的邮箱验证</para>
+        /// <para>Resends an email that is used to confirm the creation of a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13539,7 +13863,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送创建云账号的邮箱验证</para>
+        /// <para>Resends an email that is used to confirm the creation of a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13557,7 +13881,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送创建云账号的邮箱验证</para>
+        /// <para>Resends an email that is used to confirm the creation of a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13575,7 +13899,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送升级资源账号的邮箱验证</para>
+        /// <para>Resends an email that is used to confirm the upgrade from a resource account to a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13617,7 +13941,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送升级资源账号的邮箱验证</para>
+        /// <para>Resends an email that is used to confirm the upgrade from a resource account to a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13659,7 +13983,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送升级资源账号的邮箱验证</para>
+        /// <para>Resends an email that is used to confirm the upgrade from a resource account to a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13677,7 +14001,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送升级资源账号的邮箱验证</para>
+        /// <para>Resends an email that is used to confirm the upgrade from a resource account to a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13695,7 +14019,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送确认邮件</para>
+        /// <para>Resends a verification email for the email address change of a member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13737,7 +14061,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送确认邮件</para>
+        /// <para>Resends a verification email for the email address change of a member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13779,7 +14103,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送确认邮件</para>
+        /// <para>Resends a verification email for the email address change of a member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13797,7 +14121,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新发送确认邮件</para>
+        /// <para>Resends a verification email for the email address change of a member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13815,7 +14139,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送绑定安全手机验证码</para>
+        /// <para>Sends a verification code to the mobile phone number that you want to bind to a resource account in a resource directory for security purposes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13867,7 +14191,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送绑定安全手机验证码</para>
+        /// <para>Sends a verification code to the mobile phone number that you want to bind to a resource account in a resource directory for security purposes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13919,7 +14243,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送绑定安全手机验证码</para>
+        /// <para>Sends a verification code to the mobile phone number that you want to bind to a resource account in a resource directory for security purposes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13943,7 +14267,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送绑定安全手机验证码</para>
+        /// <para>Sends a verification code to the mobile phone number that you want to bind to a resource account in a resource directory for security purposes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13967,7 +14291,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送开启资源目录短信</para>
+        /// <para>Sends a verification code to the mobile phone number bound to a newly created account when you use the account to enable a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14014,7 +14338,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送开启资源目录短信</para>
+        /// <para>Sends a verification code to the mobile phone number bound to a newly created account when you use the account to enable a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14061,7 +14385,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送开启资源目录短信</para>
+        /// <para>Sends a verification code to the mobile phone number bound to a newly created account when you use the account to enable a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14084,7 +14408,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送开启资源目录短信</para>
+        /// <para>Sends a verification code to the mobile phone number bound to a newly created account when you use the account to enable a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14235,7 +14559,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启或关闭成员删除许可</para>
+        /// <para>Enables or disables the member deletion feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14282,7 +14606,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启或关闭成员删除许可</para>
+        /// <para>Enables or disables the member deletion feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14329,7 +14653,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启或关闭成员删除许可</para>
+        /// <para>Enables or disables the member deletion feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14352,7 +14676,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启或关闭成员删除许可</para>
+        /// <para>Enables or disables the member deletion feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14693,6 +15017,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the display name of a member, or switches the type of a member.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.</para>
@@ -14748,6 +15077,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<UpdateAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the display name of a member, or switches the type of a member.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.</para>
@@ -14803,6 +15137,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<UpdateAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the display name of a member, or switches the type of a member.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.</para>
@@ -14826,6 +15165,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return UpdateAccountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the display name of a member, or switches the type of a member.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.</para>
@@ -15325,6 +15669,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await UpdateAutoGroupingRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom access control policy.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>In this example, the name of the access control policy whose ID is <c>cp-jExXAqIYkwHN****</c> is changed to <c>NewControlPolicy</c>.</para>
@@ -15379,6 +15728,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<UpdateControlPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom access control policy.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>In this example, the name of the access control policy whose ID is <c>cp-jExXAqIYkwHN****</c> is changed to <c>NewControlPolicy</c>.</para>
@@ -15433,6 +15787,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<UpdateControlPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom access control policy.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>In this example, the name of the access control policy whose ID is <c>cp-jExXAqIYkwHN****</c> is changed to <c>NewControlPolicy</c>.</para>
@@ -15451,6 +15810,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return UpdateControlPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a custom access control policy.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>In this example, the name of the access control policy whose ID is <c>cp-jExXAqIYkwHN****</c> is changed to <c>NewControlPolicy</c>.</para>
@@ -15469,6 +15833,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await UpdateControlPolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateFolderRequest
         /// </param>
@@ -15510,6 +15879,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<UpdateFolderResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateFolderRequest
         /// </param>
@@ -15551,6 +15925,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<UpdateFolderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateFolderRequest
         /// </param>
@@ -15564,6 +15943,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return UpdateFolderWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateFolderRequest
         /// </param>
@@ -15577,6 +15961,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await UpdateFolderWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the basic information of a resource group.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>In this example, the display name of the resource group <c>rg-9gLOoK****</c> is changed to <c>project</c>.</para>
@@ -15623,6 +16012,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<UpdateResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the basic information of a resource group.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>In this example, the display name of the resource group <c>rg-9gLOoK****</c> is changed to <c>project</c>.</para>
@@ -15669,6 +16063,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return TeaModel.ToObject<UpdateResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the basic information of a resource group.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>In this example, the display name of the resource group <c>rg-9gLOoK****</c> is changed to <c>project</c>.</para>
@@ -15687,6 +16086,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return UpdateResourceGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the basic information of a resource group.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>In this example, the display name of the resource group <c>rg-9gLOoK****</c> is changed to <c>project</c>.</para>

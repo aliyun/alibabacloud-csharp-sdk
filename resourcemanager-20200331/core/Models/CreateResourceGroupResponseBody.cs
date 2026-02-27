@@ -87,10 +87,26 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 [Validation(Required=false)]
                 public List<CreateResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus> RegionStatus { get; set; }
                 public class CreateResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus : TeaModel {
+                    /// <summary>
+                    /// <para>The region ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cn-qingdao</para>
+                    /// </summary>
                     [NameInMap("RegionId")]
                     [Validation(Required=false)]
                     public string RegionId { get; set; }
 
+                    /// <summary>
+                    /// <para>The status of the resource group. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Creating: The resource group is being created.</description></item>
+                    /// <item><description>OK: The resource group is created.</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Creating</para>
+                    /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }

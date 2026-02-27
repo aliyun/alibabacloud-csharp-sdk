@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListDelegatedAdministratorsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information of the delegated administrator accounts.</para>
-        /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
         public ListDelegatedAdministratorsResponseBodyAccounts Accounts { get; set; }
@@ -20,56 +17,22 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListDelegatedAdministratorsResponseBodyAccountsAccount> Account { get; set; }
             public class ListDelegatedAdministratorsResponseBodyAccountsAccount : TeaModel {
-                /// <summary>
-                /// <para>The ID of the member.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>138660628348****</para>
-                /// </summary>
                 [NameInMap("AccountId")]
                 [Validation(Required=false)]
                 public string AccountId { get; set; }
 
-                /// <summary>
-                /// <para>The time when the member was specified as a delegated administrator account.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1616652684164</para>
-                /// </summary>
                 [NameInMap("DelegationEnabledTime")]
                 [Validation(Required=false)]
                 public string DelegationEnabledTime { get; set; }
 
-                /// <summary>
-                /// <para>The display name of the member.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>abc</para>
-                /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
-                /// <summary>
-                /// <para>The way in which the member joins the resource directory. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>invited: The member is invited to join the resource directory.</description></item>
-                /// <item><description>created: The member is directly created in the resource directory.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>created</para>
-                /// </summary>
                 [NameInMap("JoinMethod")]
                 [Validation(Required=false)]
                 public string JoinMethod { get; set; }
 
-                /// <summary>
-                /// <para>The identifier of the trusted service.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cloudfw.aliyuncs.com</para>
-                /// </summary>
                 [NameInMap("ServicePrincipal")]
                 [Validation(Required=false)]
                 public string ServicePrincipal { get; set; }
