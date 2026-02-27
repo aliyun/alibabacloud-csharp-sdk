@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string CliqueID { get; set; }
 
+        [NameInMap("DiskPL")]
+        [Validation(Required=false)]
+        public string DiskPL { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>quotamtl37ge7gkvdz</para>
@@ -141,6 +145,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string PaymentType { get; set; }
 
+        [NameInMap("PodNum")]
+        [Validation(Required=false)]
+        public int? PodNum { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>quotamtl37ge7gkvdz</para>
@@ -161,6 +169,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string ResourceGroupIds { get; set; }
 
+        [NameInMap("ResourceGroupName")]
+        [Validation(Required=false)]
+        public string ResourceGroupName { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>GmtCreateTime</para>
@@ -176,6 +188,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("Verbose")]
         [Validation(Required=false)]
         public bool? Verbose { get; set; }
+
+        [NameInMap("WorkloadNum")]
+        [Validation(Required=false)]
+        public int? WorkloadNum { get; set; }
 
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

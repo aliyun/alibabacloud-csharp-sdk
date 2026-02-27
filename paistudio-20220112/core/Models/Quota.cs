@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("GPUType")]
+        [Validation(Required=false)]
+        public string GPUType { get; set; }
+
         [NameInMap("GmtCreatedTime")]
         [Validation(Required=false)]
         public string GmtCreatedTime { get; set; }

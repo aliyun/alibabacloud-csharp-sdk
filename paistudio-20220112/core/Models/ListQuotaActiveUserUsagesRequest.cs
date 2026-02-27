@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string Username { get; set; }
 
+        [NameInMap("WorkloadCount")]
+        [Validation(Required=false)]
+        public int? WorkloadCount { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>12345</para>

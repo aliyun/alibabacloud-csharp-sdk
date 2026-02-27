@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string CreatorID { get; set; }
 
+        [NameInMap("DiskPL")]
+        [Validation(Required=false)]
+        public string DiskPL { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>ecs.c6.large</para>

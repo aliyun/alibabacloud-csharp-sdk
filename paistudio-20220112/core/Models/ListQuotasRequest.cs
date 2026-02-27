@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string ClusterType { get; set; }
 
+        [NameInMap("GPUType")]
+        [Validation(Required=false)]
+        public string GPUType { get; set; }
+
         [NameInMap("HasResource")]
         [Validation(Required=false)]
         public string HasResource { get; set; }

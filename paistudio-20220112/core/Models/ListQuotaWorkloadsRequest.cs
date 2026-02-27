@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public TimeRangeFilter GmtPositionModifiedTimeRange { get; set; }
 
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>lrn48278127617</para>
@@ -60,6 +64,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("Position")]
+        [Validation(Required=false)]
+        public int? Position { get; set; }
+
+        [NameInMap("Priority")]
+        [Validation(Required=false)]
+        public int? Priority { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -93,6 +105,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string SubQuotaIds { get; set; }
 
+        [NameInMap("UseOversoldResource")]
+        [Validation(Required=false)]
+        public bool? UseOversoldResource { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>29043893812,23829093093</para>
@@ -116,6 +132,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("WorkloadIds")]
         [Validation(Required=false)]
         public string WorkloadIds { get; set; }
+
+        [NameInMap("WorkloadNames")]
+        [Validation(Required=false)]
+        public string WorkloadNames { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
