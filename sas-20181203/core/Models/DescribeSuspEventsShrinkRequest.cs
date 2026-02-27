@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Dealed { get; set; }
 
+        [NameInMap("DetectSource")]
+        [Validation(Required=false)]
+        public string DetectSource { get; set; }
+
         /// <summary>
         /// <para>The subtype of the alert event. Separate multiple subtypes with commas (,).</para>
         /// 

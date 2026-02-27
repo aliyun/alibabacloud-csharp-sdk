@@ -20,13 +20,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the information about the whitelist.</para>
+        /// <para>Vulnerability whitelist information. 
+        /// <notice> This data is not returned when adding or updating the vulnerability whitelist in batches, it is only returned when adding or updating a single vulnerability whitelist entry. </notice></para>
         /// </summary>
         [NameInMap("VulWhitelistList")]
         [Validation(Required=false)]
         public ModifyCreateVulWhitelistResponseBodyVulWhitelistList VulWhitelistList { get; set; }
         public class ModifyCreateVulWhitelistResponseBodyVulWhitelistList : TeaModel {
             /// <summary>
+            /// <para>Vulnerability whitelist ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1002</para>
             /// </summary>

@@ -277,6 +277,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            [NameInMap("DetectSource")]
+            [Validation(Required=false)]
+            public string DetectSource { get; set; }
+
             /// <summary>
             /// <para>Indicates whether the alert event can be detected by cloud sandbox. Valid values:</para>
             /// <list type="bullet">
