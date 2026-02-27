@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public bool? IgnoreImageDefinedVolume { get; set; }
 
+        /// <summary>
+        /// <para>Insecure image repositories that skipped the TLS certificate verification.</para>
+        /// </summary>
         [NameInMap("insecureRegistries")]
         [Validation(Required=false)]
         public List<string> InsecureRegistries { get; set; }
@@ -33,6 +36,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public long? MaxConcurrentDownloads { get; set; }
 
+        /// <summary>
+        /// <para>The image accelerator configuration.</para>
+        /// </summary>
         [NameInMap("registryMirrors")]
         [Validation(Required=false)]
         public List<string> RegistryMirrors { get; set; }

@@ -57,58 +57,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public List<ListAutoRepairPoliciesResponseBodyItemsRulesIncidents> Incidents { get; set; }
                 public class ListAutoRepairPoliciesResponseBodyItemsRulesIncidents : TeaModel {
-                    [NameInMap("conditions")]
-                    [Validation(Required=false)]
-                    public List<ListAutoRepairPoliciesResponseBodyItemsRulesIncidentsConditions> Conditions { get; set; }
-                    public class ListAutoRepairPoliciesResponseBodyItemsRulesIncidentsConditions : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>xxx</para>
-                        /// </summary>
-                        [NameInMap("reason")]
-                        [Validation(Required=false)]
-                        public string Reason { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>False</para>
-                        /// </summary>
-                        [NameInMap("status")]
-                        [Validation(Required=false)]
-                        public string Status { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>KubeletReady</para>
-                        /// </summary>
-                        [NameInMap("type")]
-                        [Validation(Required=false)]
-                        public string Type { get; set; }
-
-                    }
-
-                    [NameInMap("events")]
-                    [Validation(Required=false)]
-                    public List<ListAutoRepairPoliciesResponseBodyItemsRulesIncidentsEvents> Events { get; set; }
-                    public class ListAutoRepairPoliciesResponseBodyItemsRulesIncidentsEvents : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>xxx</para>
-                        /// </summary>
-                        [NameInMap("reason")]
-                        [Validation(Required=false)]
-                        public string Reason { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>xxx</para>
-                        /// </summary>
-                        [NameInMap("type")]
-                        [Validation(Required=false)]
-                        public string Type { get; set; }
-
-                    }
-
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>Node.FaultNeedReboot.HOST</para>
@@ -167,7 +115,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                         /// </summary>
                         [NameInMap("enable")]
                         [Validation(Required=false)]
-                        public string Enable { get; set; }
+                        public bool? Enable { get; set; }
 
                         [NameInMap("inquiring_label")]
                         [Validation(Required=false)]

@@ -45,58 +45,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public List<CreateAutoRepairPolicyRequestRulesIncidents> Incidents { get; set; }
             public class CreateAutoRepairPolicyRequestRulesIncidents : TeaModel {
-                [NameInMap("conditions")]
-                [Validation(Required=false)]
-                public List<CreateAutoRepairPolicyRequestRulesIncidentsConditions> Conditions { get; set; }
-                public class CreateAutoRepairPolicyRequestRulesIncidentsConditions : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>xxx</para>
-                    /// </summary>
-                    [NameInMap("reason")]
-                    [Validation(Required=false)]
-                    public string Reason { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>False</para>
-                    /// </summary>
-                    [NameInMap("status")]
-                    [Validation(Required=false)]
-                    public string Status { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>KubeletReady</para>
-                    /// </summary>
-                    [NameInMap("type")]
-                    [Validation(Required=false)]
-                    public string Type { get; set; }
-
-                }
-
-                [NameInMap("events")]
-                [Validation(Required=false)]
-                public List<CreateAutoRepairPolicyRequestRulesIncidentsEvents> Events { get; set; }
-                public class CreateAutoRepairPolicyRequestRulesIncidentsEvents : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>xxx</para>
-                    /// </summary>
-                    [NameInMap("reason")]
-                    [Validation(Required=false)]
-                    public string Reason { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>xxx</para>
-                    /// </summary>
-                    [NameInMap("type")]
-                    [Validation(Required=false)]
-                    public string Type { get; set; }
-
-                }
-
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>Node.FaultNeedReboot.HOST</para>

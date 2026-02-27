@@ -8,26 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class Tag : TeaModel {
+    public class UpdateKMSEncryptionRequest : TeaModel {
         /// <summary>
-        /// <para>The <c>key</c> of the label.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>env</para>
+        /// <para>false</para>
         /// </summary>
-        [NameInMap("key")]
+        [NameInMap("disable_encryption")]
         [Validation(Required=false)]
-        public string Key { get; set; }
+        public bool? DisableEncryption { get; set; }
 
         /// <summary>
-        /// <para>The <c>value</c> of the label.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>prod</para>
+        /// <para>key-abc***</para>
         /// </summary>
-        [NameInMap("value")]
+        [NameInMap("kms_key_id")]
         [Validation(Required=false)]
-        public string Value { get; set; }
+        public string KmsKeyId { get; set; }
 
     }
 
