@@ -17,10 +17,18 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public List<AddressGroupPorts> Ports { get; set; }
         public class AddressGroupPorts : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>123</para>
+            /// </summary>
             [NameInMap("Begin")]
             [Validation(Required=false)]
             public int? Begin { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1234</para>
+            /// </summary>
             [NameInMap("End")]
             [Validation(Required=false)]
             public int? End { get; set; }

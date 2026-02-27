@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string IdpConfigId { get; set; }
 
+        [NameInMap("IdpId")]
+        [Validation(Required=false)]
+        public long? IdpId { get; set; }
+
         [NameInMap("LastSyncTimeUnix")]
         [Validation(Required=false)]
         public long? LastSyncTimeUnix { get; set; }

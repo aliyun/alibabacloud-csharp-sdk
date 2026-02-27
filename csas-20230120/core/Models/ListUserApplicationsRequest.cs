@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListUserApplicationsRequest : TeaModel {
+        [NameInMap("Address")]
+        [Validation(Required=false)]
+        public string Address { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

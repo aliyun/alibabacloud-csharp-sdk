@@ -1,3 +1,7 @@
+2026-02-27 Version: 1.14.21
+- Update API ListUserApplications: add request parameters Address.
+
+
 2026-01-27 Version: 1.14.20
 - Update API CreatePrivateAccessApplication: add request parameters AddressGroups.
 - Update API CreatePrivateAccessApplication: add request parameters ConfigMode.

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
     public class PAL7ConfigReplaceRule : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>aaa</para>
+        /// <para>before</para>
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>bbb</para>
+        /// <para>after</para>
         /// </summary>
         [NameInMap("To")]
         [Validation(Required=false)]

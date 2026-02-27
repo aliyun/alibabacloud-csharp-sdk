@@ -4595,7 +4595,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除用户非在线设备</para>
+        /// <para>Deletes multiple user terminals at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4643,7 +4643,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除用户非在线设备</para>
+        /// <para>Deletes multiple user terminals at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4691,7 +4691,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除用户非在线设备</para>
+        /// <para>Deletes multiple user terminals at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4709,7 +4709,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除用户非在线设备</para>
+        /// <para>Deletes multiple user terminals at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5387,7 +5387,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询用户设备列表</para>
+        /// <para>Exports the information about user terminals in an Excel file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5491,7 +5491,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询用户设备列表</para>
+        /// <para>Exports the information about user terminals in an Excel file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5595,7 +5595,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询用户设备列表</para>
+        /// <para>Exports the information about user terminals in an Excel file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5613,7 +5613,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询用户设备列表</para>
+        /// <para>Exports the information about user terminals in an Excel file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6155,7 +6155,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义身份源指定用户</para>
+        /// <para>Query a specified user from a custom identity source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6193,7 +6193,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义身份源指定用户</para>
+        /// <para>Query a specified user from a custom identity source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6231,7 +6231,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义身份源指定用户</para>
+        /// <para>Query a specified user from a custom identity source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6249,7 +6249,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义身份源指定用户</para>
+        /// <para>Query a specified user from a custom identity source</para>
         /// </summary>
         /// 
         /// <param name="request">

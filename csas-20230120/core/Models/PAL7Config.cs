@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public List<string> AppBypassFroms { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>disabled</para>
+            /// </summary>
             [NameInMap("Mode")]
             [Validation(Required=false)]
             public string Mode { get; set; }
@@ -37,6 +41,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cert-xxxx</para>
+        /// </summary>
         [NameInMap("CertId")]
         [Validation(Required=false)]
         public string CertId { get; set; }
@@ -55,6 +63,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public PAL7ConfigJsHookConfig JsHookConfig { get; set; }
         public class PAL7ConfigJsHookConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>disabled</para>
+            /// </summary>
             [NameInMap("Mode")]
             [Validation(Required=false)]
             public string Mode { get; set; }
@@ -67,7 +79,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>逗号分隔的枚举值：automatic,custom</para>
+        /// <para>automatic</para>
         /// </summary>
         [NameInMap("ProxyDomainTypes")]
         [Validation(Required=false)]
@@ -107,6 +119,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public PAL7ConfigResponseRewriteConfig ResponseRewriteConfig { get; set; }
         public class PAL7ConfigResponseRewriteConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>auto</para>
+            /// </summary>
             [NameInMap("Mode")]
             [Validation(Required=false)]
             public string Mode { get; set; }
