@@ -1,3 +1,6 @@
+2026-02-27 Version: 1.21.1
+- Generated csharp 2021-12-01 for Eiam.
+
 2026-02-26 Version: 1.21.0
 - Support API CreateCredential.
 - Support API DeleteCredential.
