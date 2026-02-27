@@ -69,6 +69,20 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("tags")]
+        [Validation(Required=false)]
+        public List<DescribeNodeGroupsRequestTags> Tags { get; set; }
+        public class DescribeNodeGroupsRequestTags : TeaModel {
+            [NameInMap("key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }
