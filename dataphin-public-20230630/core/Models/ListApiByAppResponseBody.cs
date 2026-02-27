@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
+                [NameInMap("AuthTypes")]
+                [Validation(Required=false)]
+                public List<string> AuthTypes { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>exampleModule</para>

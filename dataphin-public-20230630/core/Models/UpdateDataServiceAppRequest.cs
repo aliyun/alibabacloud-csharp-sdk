@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
-    public class ListApiByAppRequest : TeaModel {
+    public class UpdateDataServiceAppRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -22,54 +22,47 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("PageQuery")]
+        [NameInMap("UpdateCommand")]
         [Validation(Required=false)]
-        public ListApiByAppRequestPageQuery PageQuery { get; set; }
-        public class ListApiByAppRequestPageQuery : TeaModel {
-            /// <term><b>Obsolete</b></term>
+        public UpdateDataServiceAppRequestUpdateCommand UpdateCommand { get; set; }
+        public class UpdateDataServiceAppRequestUpdateCommand : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>200000000</para>
+            /// </summary>
+            [NameInMap("AppGroupId")]
+            [Validation(Required=false)]
+            public int? AppGroupId { get; set; }
+
+            /// <summary>
+            /// <para>This parameter is required.</para>
             /// 
-            /// <summary>
-            /// <para>appKey</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>10121101</para>
+            /// <para>12345</para>
             /// </summary>
-            [NameInMap("AppKey")]
+            [NameInMap("AppId")]
             [Validation(Required=false)]
-            [Obsolete]
-            public long? AppKey { get; set; }
+            public int? AppId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>app12345</para>
+            /// <para>默认应用</para>
             /// </summary>
-            [NameInMap("AppKeyStr")]
+            [NameInMap("AppName")]
             [Validation(Required=false)]
-            public string AppKeyStr { get; set; }
+            public string AppName { get; set; }
+
+            [NameInMap("OwnerIds")]
+            [Validation(Required=false)]
+            public List<string> OwnerIds { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>apiName</para>
+            /// <para>数据分析</para>
             /// </summary>
-            [NameInMap("Keyword")]
+            [NameInMap("Scenarios")]
             [Validation(Required=false)]
-            public string Keyword { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
-            [NameInMap("PageNum")]
-            [Validation(Required=false)]
-            public int? PageNum { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>20</para>
-            /// </summary>
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
+            public string Scenarios { get; set; }
 
         }
 

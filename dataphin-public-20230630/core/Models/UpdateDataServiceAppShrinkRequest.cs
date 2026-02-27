@@ -8,15 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
-    public class GetDataServiceAuthorizedAppsByGroupIdRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>202102</para>
-        /// </summary>
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public int? GroupId { get; set; }
-
+    public class UpdateDataServiceAppShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,13 +21,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>102102</para>
         /// </summary>
-        [NameInMap("ProjectId")]
+        [NameInMap("UpdateCommand")]
         [Validation(Required=false)]
-        public int? ProjectId { get; set; }
+        public string UpdateCommandShrink { get; set; }
 
     }
 

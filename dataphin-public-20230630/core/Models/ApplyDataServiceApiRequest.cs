@@ -28,7 +28,6 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
             /// <summary>
             /// <para>AppId</para>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1203</para>
@@ -37,13 +36,31 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public int? AppId { get; set; }
 
+            [NameInMap("ApplyDev")]
+            [Validation(Required=false)]
+            public bool? ApplyDev { get; set; }
+
+            [NameInMap("ApplyProd")]
+            [Validation(Required=false)]
+            public bool? ApplyProd { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>APP</para>
+            /// </summary>
+            [NameInMap("ApplyType")]
+            [Validation(Required=false)]
+            public string ApplyType { get; set; }
+
+            [NameInMap("AuthTypes")]
+            [Validation(Required=false)]
+            public List<string> AuthTypes { get; set; }
+
             [NameInMap("DevFieldList")]
             [Validation(Required=false)]
             public List<ApplyDataServiceApiRequestApplyCommandDevFieldList> DevFieldList { get; set; }
             public class ApplyDataServiceApiRequestApplyCommandDevFieldList : TeaModel {
                 /// <summary>
-                /// <para>This parameter is required.</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>22</para>
                 /// </summary>
@@ -68,8 +85,6 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<ApplyDataServiceApiRequestApplyCommandProdFieldList> ProdFieldList { get; set; }
             public class ApplyDataServiceApiRequestApplyCommandProdFieldList : TeaModel {
                 /// <summary>
-                /// <para>This parameter is required.</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>22</para>
                 /// </summary>

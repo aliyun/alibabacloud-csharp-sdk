@@ -8,48 +8,39 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
-    public class ListAuthorizedDataServiceApiDetailsRequest : TeaModel {
+    public class ListDataServiceAppsRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]
-        public ListAuthorizedDataServiceApiDetailsRequestListQuery ListQuery { get; set; }
-        public class ListAuthorizedDataServiceApiDetailsRequestListQuery : TeaModel {
-            /// <term><b>Obsolete</b></term>
-            /// 
+        public ListDataServiceAppsRequestListQuery ListQuery { get; set; }
+        public class ListDataServiceAppsRequestListQuery : TeaModel {
             /// <summary>
-            /// <para>AppKey</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>200000000</para>
+            /// <para>12345</para>
             /// </summary>
-            [NameInMap("AppKey")]
+            [NameInMap("AppGroupId")]
             [Validation(Required=false)]
-            [Obsolete]
-            public long? AppKey { get; set; }
+            public int? AppGroupId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>app12345</para>
+            /// <para>营销看板</para>
             /// </summary>
-            [NameInMap("AppKeyStr")]
+            [NameInMap("Keyword")]
             [Validation(Required=false)]
-            public string AppKeyStr { get; set; }
+            public string Keyword { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
-            [NameInMap("Page")]
+            [NameInMap("PageNo")]
             [Validation(Required=false)]
-            public int? Page { get; set; }
+            public int? PageNo { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>

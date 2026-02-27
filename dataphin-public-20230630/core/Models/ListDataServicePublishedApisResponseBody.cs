@@ -77,6 +77,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     [Validation(Required=false)]
                     public int? AppId { get; set; }
 
+                    /// <term><b>Obsolete</b></term>
+                    /// 
                     /// <summary>
                     /// <para>appKey</para>
                     /// 
@@ -85,7 +87,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// </summary>
                     [NameInMap("AppKey")]
                     [Validation(Required=false)]
+                    [Obsolete]
                     public long? AppKey { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>app12345</para>
+                    /// </summary>
+                    [NameInMap("AppKeyStr")]
+                    [Validation(Required=false)]
+                    public string AppKeyStr { get; set; }
 
                     /// <summary>
                     /// <b>Example:</b>

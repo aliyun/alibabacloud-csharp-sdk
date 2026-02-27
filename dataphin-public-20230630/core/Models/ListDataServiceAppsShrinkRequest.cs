@@ -8,14 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
-    public class GetDataServiceAuthorizedAppsByGroupIdRequest : TeaModel {
+    public class ListDataServiceAppsShrinkRequest : TeaModel {
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>202102</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("GroupId")]
+        [NameInMap("ListQuery")]
         [Validation(Required=false)]
-        public int? GroupId { get; set; }
+        public string ListQueryShrink { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -26,16 +25,6 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>102102</para>
-        /// </summary>
-        [NameInMap("ProjectId")]
-        [Validation(Required=false)]
-        public int? ProjectId { get; set; }
 
     }
 

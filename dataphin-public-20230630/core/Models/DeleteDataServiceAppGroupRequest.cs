@@ -8,10 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
-    public class GetDataServiceAuthorizedAppsByGroupIdRequest : TeaModel {
+    public class DeleteDataServiceAppGroupRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>202102</para>
+        /// <para>550980364236</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -26,16 +28,6 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>102102</para>
-        /// </summary>
-        [NameInMap("ProjectId")]
-        [Validation(Required=false)]
-        public int? ProjectId { get; set; }
 
     }
 

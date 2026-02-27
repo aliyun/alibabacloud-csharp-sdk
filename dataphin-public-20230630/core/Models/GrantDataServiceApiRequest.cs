@@ -28,7 +28,6 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
             /// <summary>
             /// <para>AppID</para>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1201</para>
@@ -45,13 +44,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public bool? ApplyProd { get; set; }
 
+            [NameInMap("AuthTypes")]
+            [Validation(Required=false)]
+            public List<string> AuthTypes { get; set; }
+
             [NameInMap("DevFieldList")]
             [Validation(Required=false)]
             public List<GrantDataServiceApiRequestGrantCommandDevFieldList> DevFieldList { get; set; }
             public class GrantDataServiceApiRequestGrantCommandDevFieldList : TeaModel {
-                /// <summary>
-                /// <para>This parameter is required.</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public int? Id { get; set; }
@@ -68,13 +68,18 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public string ExpireDate { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>APP</para>
+            /// </summary>
+            [NameInMap("GranteeType")]
+            [Validation(Required=false)]
+            public string GranteeType { get; set; }
+
             [NameInMap("ProdFieldList")]
             [Validation(Required=false)]
             public List<GrantDataServiceApiRequestGrantCommandProdFieldList> ProdFieldList { get; set; }
             public class GrantDataServiceApiRequestGrantCommandProdFieldList : TeaModel {
-                /// <summary>
-                /// <para>This parameter is required.</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public int? Id { get; set; }
@@ -90,6 +95,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>12345</para>
+            /// </summary>
+            [NameInMap("UserId")]
+            [Validation(Required=false)]
+            public string UserId { get; set; }
 
         }
 

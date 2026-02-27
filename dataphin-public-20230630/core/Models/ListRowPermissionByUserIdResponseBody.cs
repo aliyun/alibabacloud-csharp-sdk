@@ -117,6 +117,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
                     /// <summary>
                     /// <b>Example:</b>
+                    /// <para>123</para>
+                    /// </summary>
+                    [NameInMap("Id")]
+                    [Validation(Required=false)]
+                    public long? Id { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
                     /// <para>0</para>
                     /// </summary>
                     [NameInMap("IsDelete")]

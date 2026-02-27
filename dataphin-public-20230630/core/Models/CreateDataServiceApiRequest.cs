@@ -61,8 +61,6 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<int?> BizProtocol { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>600</para>
             /// </summary>
@@ -89,6 +87,60 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
+            [NameInMap("DmlConfig")]
+            [Validation(Required=false)]
+            public CreateDataServiceApiRequestCreateCommandDmlConfig DmlConfig { get; set; }
+            public class CreateDataServiceApiRequestCreateCommandDmlConfig : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1000</para>
+                /// </summary>
+                [NameInMap("BatchInputDataSize")]
+                [Validation(Required=false)]
+                public int? BatchInputDataSize { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("DataVolumeType")]
+                [Validation(Required=false)]
+                public int? DataVolumeType { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("ErrorHandlingType")]
+                [Validation(Required=false)]
+                public int? ErrorHandlingType { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1000</para>
+                /// </summary>
+                [NameInMap("MaxInputDataSize")]
+                [Validation(Required=false)]
+                public int? MaxInputDataSize { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("ParallelNum")]
+                [Validation(Required=false)]
+                public int? ParallelNum { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("TransactionType")]
+                [Validation(Required=false)]
+                public int? TransactionType { get; set; }
+
+            }
 
             /// <summary>
             /// <b>Example:</b>
@@ -127,6 +179,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [NameInMap("RequestType")]
             [Validation(Required=false)]
             public int? RequestType { get; set; }
+
+            [NameInMap("ReturnSqlSwitch")]
+            [Validation(Required=false)]
+            public bool? ReturnSqlSwitch { get; set; }
+
+            [NameInMap("RowPermissionIds")]
+            [Validation(Required=false)]
+            public List<long?> RowPermissionIds { get; set; }
 
             /// <summary>
             /// <para>This parameter is required.</para>
@@ -171,13 +231,18 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 [Validation(Required=false)]
                 public string Script { get; set; }
 
-                /// <summary>
-                /// <para>This parameter is required.</para>
-                /// </summary>
                 [NameInMap("ScriptRequestParameters")]
                 [Validation(Required=false)]
                 public List<CreateDataServiceApiRequestCreateCommandScriptDetailsScriptRequestParameters> ScriptRequestParameters { get; set; }
                 public class CreateDataServiceApiRequestCreateCommandScriptDetailsScriptRequestParameters : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>123</para>
+                    /// </summary>
+                    [NameInMap("DefaultValue")]
+                    [Validation(Required=false)]
+                    public string DefaultValue { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -232,9 +297,6 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
                 }
 
-                /// <summary>
-                /// <para>This parameter is required.</para>
-                /// </summary>
                 [NameInMap("ScriptResponseParameters")]
                 [Validation(Required=false)]
                 public List<CreateDataServiceApiRequestCreateCommandScriptDetailsScriptResponseParameters> ScriptResponseParameters { get; set; }
@@ -260,6 +322,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     [NameInMap("ParameterDescription")]
                     [Validation(Required=false)]
                     public string ParameterDescription { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>success</para>
+                    /// </summary>
+                    [NameInMap("ParameterLocation")]
+                    [Validation(Required=false)]
+                    public string ParameterLocation { get; set; }
 
                     /// <summary>
                     /// <para>This parameter is required.</para>

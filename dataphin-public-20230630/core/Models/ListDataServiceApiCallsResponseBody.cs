@@ -57,13 +57,25 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 [Validation(Required=false)]
                 public string ApiName { get; set; }
 
+                /// <term><b>Obsolete</b></term>
+                /// 
                 /// <summary>
+                /// 
                 /// <b>Example:</b>
                 /// <para>201211</para>
                 /// </summary>
                 [NameInMap("AppKey")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public long? AppKey { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>abc12345</para>
+                /// </summary>
+                [NameInMap("AppKeyStr")]
+                [Validation(Required=false)]
+                public string AppKeyStr { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

@@ -19,14 +19,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>102102</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
+        [Obsolete]
         public int? ProjectId { get; set; }
 
     }

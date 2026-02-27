@@ -47,14 +47,36 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ApiId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>1203</para>
             /// </summary>
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public int? AppId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>USE</para>
+            /// </summary>
+            [NameInMap("AuthType")]
+            [Validation(Required=false)]
+            public string AuthType { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>DEV</para>
+            /// </summary>
+            [NameInMap("Env")]
+            [Validation(Required=false)]
+            public string Env { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>APP</para>
+            /// </summary>
+            [NameInMap("GranteeType")]
+            [Validation(Required=false)]
+            public string GranteeType { get; set; }
 
             /// <summary>
             /// <para>This parameter is required.</para>
@@ -65,6 +87,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>12345</para>
+            /// </summary>
+            [NameInMap("UserId")]
+            [Validation(Required=false)]
+            public string UserId { get; set; }
 
         }
 
