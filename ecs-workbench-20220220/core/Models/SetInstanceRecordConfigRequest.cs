@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Ecs_workbench20220220.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceRegionId")]
+        [Validation(Required=false)]
+        public string ResourceRegionId { get; set; }
+
     }
 
 }
