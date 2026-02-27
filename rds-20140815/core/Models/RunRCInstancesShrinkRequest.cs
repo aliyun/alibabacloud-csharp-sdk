@@ -253,6 +253,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><c>10.1.**.**</c></para>
+        /// </summary>
+        [NameInMap("PrivateIpAddress")]
+        [Validation(Required=false)]
+        public string PrivateIpAddress { get; set; }
+
         [NameInMap("PromotionCode")]
         [Validation(Required=false)]
         public string PromotionCode { get; set; }
@@ -302,6 +310,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
+
+        [NameInMap("SecurityGroupIds")]
+        [Validation(Required=false)]
+        public string SecurityGroupIdsShrink { get; set; }
 
         [NameInMap("SpotStrategy")]
         [Validation(Required=false)]

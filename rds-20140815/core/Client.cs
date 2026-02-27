@@ -81230,6 +81230,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 request.DataDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataDisk, "DataDisk", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SecurityGroupIds))
+            {
+                request.SecurityGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SecurityGroupIds, "SecurityGroupIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SystemDisk))
             {
                 request.SystemDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SystemDisk, "SystemDisk", "json");
@@ -81343,6 +81347,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["PeriodUnit"] = request.PeriodUnit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
+            {
+                query["PrivateIpAddress"] = request.PrivateIpAddress;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
             {
                 query["PromotionCode"] = request.PromotionCode;
@@ -81366,6 +81374,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupIdsShrink))
+            {
+                query["SecurityGroupIds"] = request.SecurityGroupIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpotStrategy))
             {
@@ -81455,6 +81467,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 request.DataDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataDisk, "DataDisk", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SecurityGroupIds))
+            {
+                request.SecurityGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SecurityGroupIds, "SecurityGroupIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SystemDisk))
             {
                 request.SystemDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SystemDisk, "SystemDisk", "json");
@@ -81568,6 +81584,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["PeriodUnit"] = request.PeriodUnit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
+            {
+                query["PrivateIpAddress"] = request.PrivateIpAddress;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
             {
                 query["PromotionCode"] = request.PromotionCode;
@@ -81591,6 +81611,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupIdsShrink))
+            {
+                query["SecurityGroupIds"] = request.SecurityGroupIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpotStrategy))
             {

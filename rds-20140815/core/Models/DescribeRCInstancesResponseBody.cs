@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public List<DescribeRCInstancesResponseBodyRCInstances> RCInstances { get; set; }
         public class DescribeRCInstancesResponseBodyRCInstances : TeaModel {
+            [NameInMap("AutoRenew")]
+            [Validation(Required=false)]
+            public bool? AutoRenew { get; set; }
+
             /// <summary>
             /// <para>The cluster name.</para>
             /// 
