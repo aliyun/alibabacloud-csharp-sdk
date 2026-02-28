@@ -280,6 +280,14 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 [Validation(Required=false)]
                 public double? Temperature { get; set; }
 
+                [NameInMap("ToolExecutionConfig")]
+                [Validation(Required=false)]
+                public object ToolExecutionConfig { get; set; }
+
+                [NameInMap("Tools")]
+                [Validation(Required=false)]
+                public List<object> Tools { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>0.8</para>

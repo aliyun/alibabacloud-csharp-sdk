@@ -17,42 +17,22 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public List<DescribeAppsResponseBodyAppListApp> App { get; set; }
             public class DescribeAppsResponseBodyAppListApp : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>rgf1****&quot;</para>
-                /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>Default AppName</para>
-                /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>universal</para>
-                /// </summary>
                 [NameInMap("AppType")]
                 [Validation(Required=false)]
                 public string AppType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>paybyduration</para>
-                /// </summary>
                 [NameInMap("BillType")]
                 [Validation(Required=false)]
                 public string BillType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2020-01-09T02:02:29Z</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
@@ -67,10 +47,6 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }

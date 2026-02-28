@@ -25,18 +25,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public List<DescribeRtcUserCntDataResponseBodyUserCntDataPerIntervalUserCntModule> UserCntModule { get; set; }
             public class DescribeRtcUserCntDataResponseBodyUserCntDataPerIntervalUserCntModule : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>10</para>
-                /// </summary>
                 [NameInMap("ActiveUserCnt")]
                 [Validation(Required=false)]
                 public long? ActiveUserCnt { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2018-01-29T00:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }

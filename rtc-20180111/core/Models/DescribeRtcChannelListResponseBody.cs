@@ -27,34 +27,18 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>testChannel</para>
-                /// </summary>
                 [NameInMap("ChannelId")]
                 [Validation(Required=false)]
                 public string ChannelId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2018-01-29T02:00:00Z</para>
-                /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2018-01-29T01:00:00Z</para>
-                /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("TotalUserCnt")]
                 [Validation(Required=false)]
                 public long? TotalUserCnt { get; set; }

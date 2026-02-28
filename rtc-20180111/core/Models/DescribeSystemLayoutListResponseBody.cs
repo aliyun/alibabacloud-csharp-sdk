@@ -17,20 +17,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public List<DescribeSystemLayoutListResponseBodyLayoutsLayout> Layout { get; set; }
             public class DescribeSystemLayoutListResponseBodyLayoutsLayout : TeaModel {
-                /// <summary>
-                /// <para>AudioMixCount。</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3</para>
-                /// </summary>
                 [NameInMap("AudioMixCount")]
                 [Validation(Required=false)]
                 public int? AudioMixCount { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>22</para>
-                /// </summary>
                 [NameInMap("LayoutId")]
                 [Validation(Required=false)]
                 public long? LayoutId { get; set; }
@@ -55,12 +45,6 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                         [Validation(Required=false)]
                         public float? Height { get; set; }
 
-                        /// <summary>
-                        /// <para>MajorPane。</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>0</para>
-                        /// </summary>
                         [NameInMap("MajorPane")]
                         [Validation(Required=false)]
                         public int? MajorPane { get; set; }
