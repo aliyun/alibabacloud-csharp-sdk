@@ -1,3 +1,6 @@
+2026-02-28 Version: 1.2.1
+- Generated csharp 2022-05-30 for eflo.
+
 2025-12-04 Version: 1.2.0
 - Support API SwitchVccConnection.
 - Update API DeleteErRouteMap: add request parameters ErRouteMapId.

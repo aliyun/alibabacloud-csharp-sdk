@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
         [Validation(Required=false)]
         public string ErId { get; set; }
 
+        /// <summary>
+        /// <para>routing policy ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>er-rmap-uwglhzom</para>
+        /// </summary>
         [NameInMap("ErRouteMapId")]
         [Validation(Required=false)]
         public string ErRouteMapId { get; set; }
