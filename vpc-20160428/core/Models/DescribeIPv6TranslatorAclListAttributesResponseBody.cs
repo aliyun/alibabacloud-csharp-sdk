@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeIPv6TranslatorAclListAttributesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The ACLs.</para>
-        /// </summary>
         [NameInMap("AclEntries")]
         [Validation(Required=false)]
         public DescribeIPv6TranslatorAclListAttributesResponseBodyAclEntries AclEntries { get; set; }
@@ -20,32 +17,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeIPv6TranslatorAclListAttributesResponseBodyAclEntriesAclEntry> AclEntry { get; set; }
             public class DescribeIPv6TranslatorAclListAttributesResponseBodyAclEntriesAclEntry : TeaModel {
-                /// <summary>
-                /// <para>The remarks of the ACL entry.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>client IP</para>
-                /// </summary>
                 [NameInMap("AclEntryComment")]
                 [Validation(Required=false)]
                 public string AclEntryComment { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the ACL entry.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ipv6transaclentry-bp105jrs****</para>
-                /// </summary>
                 [NameInMap("AclEntryId")]
                 [Validation(Required=false)]
                 public string AclEntryId { get; set; }
 
-                /// <summary>
-                /// <para>The IP address specified in the ACL entry.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>12ab:0:0:XXXX::0102/128</para>
-                /// </summary>
                 [NameInMap("AclEntryIp")]
                 [Validation(Required=false)]
                 public string AclEntryIp { get; set; }

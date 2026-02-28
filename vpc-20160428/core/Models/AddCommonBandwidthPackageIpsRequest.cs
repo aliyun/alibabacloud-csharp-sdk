@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<string> IpInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the IP address. Set the value to <b>EIP</b> to associate EIPs with the EIP bandwidth plan.</para>
+        /// <para>The IP type. Set the value to <b>EIP</b>, which indicates that an EIP is added to the Shared Bandwidth.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EIP</para>

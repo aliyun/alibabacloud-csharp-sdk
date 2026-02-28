@@ -33,9 +33,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The list of tag keys.</para>
-        /// </summary>
         [NameInMap("TagKeys")]
         [Validation(Required=false)]
         public DescribeTagKeysResponseBodyTagKeys TagKeys { get; set; }
@@ -44,26 +41,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeTagKeysResponseBodyTagKeysTagKey> TagKey { get; set; }
             public class DescribeTagKeysResponseBodyTagKeysTagKey : TeaModel {
-                /// <summary>
-                /// <para>The tag key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>FinanceDept</para>
-                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
-                /// <summary>
-                /// <para>The type of the tag key. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Custom</b>: custom</description></item>
-                /// <item><description><b>System</b>: system</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Custom</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }

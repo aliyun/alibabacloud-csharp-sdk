@@ -23,6 +23,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string BusinessStatus { get; set; }
 
+        /// <summary>
+        /// <para>VPN 网关类型，取值：
+        /// Traditional：传统型VPN网关，覆盖IPsec功能和SSL功能
+        /// Enhance.SiteToSite：增强型站点入云VPN，只覆盖IPsec功能</para>
+        /// </summary>
         [NameInMap("GatewayType")]
         [Validation(Required=false)]
         public string GatewayType { get; set; }
@@ -75,7 +80,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-zhangjiakou</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

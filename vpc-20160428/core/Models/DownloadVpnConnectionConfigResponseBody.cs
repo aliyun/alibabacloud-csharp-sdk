@@ -254,10 +254,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string RemoteSubnet { get; set; }
 
-            /// <summary>
-            /// <para>The tunnel configurations of the peer gateway device.</para>
-            /// <para>The parameters in <b>TunnelsConfig</b> are returned only when the IPsec-VPN connection supports the dual-tunnel mode.</para>
-            /// </summary>
             [NameInMap("TunnelsConfig")]
             [Validation(Required=false)]
             public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfig TunnelsConfig { get; set; }
@@ -267,14 +263,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public List<DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig> TunnelConfig { get; set; }
                 public class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig : TeaModel {
                     /// <summary>
-                    /// <para>The configurations of Phase 1 negotiations.</para>
+                    /// <para>第一阶段协商的配置信息。</para>
                     /// </summary>
                     [NameInMap("IkeConfig")]
                     [Validation(Required=false)]
                     public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig IkeConfig { get; set; }
                     public class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig : TeaModel {
                         /// <summary>
-                        /// <para>The authentication algorithm in the IKE phase.</para>
+                        /// <para>IKE阶段认证算法。</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>sha1</para>
@@ -284,7 +280,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         public string IkeAuthAlg { get; set; }
 
                         /// <summary>
-                        /// <para>The encryption algorithm in the IKE phase.</para>
+                        /// <para>IKE阶段加密算法。</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>aes</para>
@@ -294,7 +290,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         public string IkeEncAlg { get; set; }
 
                         /// <summary>
-                        /// <para>The lifetime in the IKE phase. Unit: seconds.</para>
+                        /// <para>IKE阶段生存时间。单位：秒。</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>86400</para>
@@ -304,10 +300,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         public long? IkeLifetime { get; set; }
 
                         /// <summary>
-                        /// <para>The IKE negotiation mode. Valid values:</para>
+                        /// <para>IKE协商模式。</para>
                         /// <list type="bullet">
-                        /// <item><description><b>main</b>: This mode offers higher security during negotiations.</description></item>
-                        /// <item><description><b>aggressive</b>: This mode is faster and has a higher success rate.</description></item>
+                        /// <item><description><b>main</b>：主模式，协商过程安全性高。</description></item>
+                        /// <item><description><b>aggressive</b>：野蛮模式，协商快速且协商成功率高。</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -318,7 +314,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         public string IkeMode { get; set; }
 
                         /// <summary>
-                        /// <para>The DH group in the IKE phase.</para>
+                        /// <para>IKE阶段DH分组。</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>group2</para>
@@ -328,17 +324,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         public string IkePfs { get; set; }
 
                         /// <summary>
-                        /// <para>The IKE version.</para>
+                        /// <para>IKE协议的版本。</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>ikev1</para>
+                        /// <para>ikev2</para>
                         /// </summary>
                         [NameInMap("IkeVersion")]
                         [Validation(Required=false)]
                         public string IkeVersion { get; set; }
 
                         /// <summary>
-                        /// <para>The identifier of the tunnel on the data center side.</para>
+                        /// <para>本地IDC侧隧道的标识。</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>47.21.XX.XX</para>
@@ -348,7 +344,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         public string LocalId { get; set; }
 
                         /// <summary>
-                        /// <para>The pre-shared key.</para>
+                        /// <para>预共享密钥。</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>pgw6dy7d1i8i****</para>
@@ -358,7 +354,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         public string Psk { get; set; }
 
                         /// <summary>
-                        /// <para>The identifier of the tunnel on the Alibaba Cloud side.</para>
+                        /// <para>阿里云侧隧道的标识。</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>47.24.XX.XX</para>
@@ -370,14 +366,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     }
 
                     /// <summary>
-                    /// <para>The configurations of Phase 2 negotiations.</para>
+                    /// <para>第二阶段协商的配置信息。</para>
                     /// </summary>
                     [NameInMap("IpsecConfig")]
                     [Validation(Required=false)]
                     public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig IpsecConfig { get; set; }
                     public class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig : TeaModel {
                         /// <summary>
-                        /// <para>The authentication algorithm in the IPsec phase.</para>
+                        /// <para>IPsec阶段认证算法。</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>sha1</para>
@@ -387,7 +383,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         public string IpsecAuthAlg { get; set; }
 
                         /// <summary>
-                        /// <para>The encryption algorithm in the IPsec phase.</para>
+                        /// <para>IPsec阶段加密算法。</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>aes</para>
@@ -397,7 +393,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         public string IpsecEncAlg { get; set; }
 
                         /// <summary>
-                        /// <para>The lifetime in the IPsec phase. Unit: seconds.</para>
+                        /// <para>IPsec阶段生存时间。单位：秒。</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>86400</para>
@@ -407,7 +403,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         public long? IpsecLifetime { get; set; }
 
                         /// <summary>
-                        /// <para>The DH group in the IPsec phase.</para>
+                        /// <para>IPsec阶段DH分组。</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>group2</para>
@@ -419,7 +415,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     }
 
                     /// <summary>
-                    /// <para>The identifier of the tunnel on the data center side.</para>
+                    /// <para>本地IDC侧隧道的标识。</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>47.21.XX.XX</para>
@@ -429,7 +425,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public string Local { get; set; }
 
                     /// <summary>
-                    /// <para>The identifier of the tunnel on the Alibaba Cloud side.</para>
+                    /// <para>阿里云侧隧道的标识。</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>47.24.XX.XX</para>
@@ -439,7 +435,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public string Remote { get; set; }
 
                     /// <summary>
-                    /// <para>The tunnel ID.</para>
+                    /// <para>隧道ID。</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>tun-opsqc4d97wni27****</para>

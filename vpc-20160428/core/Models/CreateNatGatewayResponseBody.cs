@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateNatGatewayResponseBody : TeaModel {
-        /// <summary>
-        /// <para>A list of DNAT entries.</para>
-        /// </summary>
         [NameInMap("ForwardTableIds")]
         [Validation(Required=false)]
         public CreateNatGatewayResponseBodyForwardTableIds ForwardTableIds { get; set; }
@@ -22,9 +19,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
-        /// <summary>
-        /// <para>A list of FULLNAT entries.</para>
-        /// </summary>
         [NameInMap("FullNatTableIds")]
         [Validation(Required=false)]
         public CreateNatGatewayResponseBodyFullNatTableIds FullNatTableIds { get; set; }
@@ -55,9 +49,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>A list of SNAT entries.</para>
-        /// </summary>
         [NameInMap("SnatTableIds")]
         [Validation(Required=false)]
         public CreateNatGatewayResponseBodySnatTableIds SnatTableIds { get; set; }

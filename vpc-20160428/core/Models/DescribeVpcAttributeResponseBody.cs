@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpcAttributeResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The list of Cloud Enterprise Network (CEN) instances to which the VPC is attached.</para>
-        /// <para>If the VPC is not attached to a CEN instance, the parameter is not returned.</para>
-        /// </summary>
         [NameInMap("AssociatedCens")]
         [Validation(Required=false)]
         public DescribeVpcAttributeResponseBodyAssociatedCens AssociatedCens { get; set; }
@@ -21,33 +17,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVpcAttributeResponseBodyAssociatedCensAssociatedCen> AssociatedCen { get; set; }
             public class DescribeVpcAttributeResponseBodyAssociatedCensAssociatedCen : TeaModel {
-                /// <summary>
-                /// <para>The ID of the CEN instance to which the VPC is attached.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cen-7qthudw0ll6jmc****</para>
-                /// </summary>
                 [NameInMap("CenId")]
                 [Validation(Required=false)]
                 public string CenId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the account to which the CEN instance belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>28311773240248****</para>
-                /// </summary>
                 [NameInMap("CenOwnerId")]
                 [Validation(Required=false)]
                 public long? CenOwnerId { get; set; }
 
-                /// <summary>
-                /// <para>The status of the CEN instance.</para>
-                /// <para><b>Attached</b> is returned only when the VPC is attached to a CEN instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Attached</para>
-                /// </summary>
                 [NameInMap("CenStatus")]
                 [Validation(Required=false)]
                 public string CenStatus { get; set; }
@@ -56,9 +33,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
-        /// <summary>
-        /// <para>The route source associated with the VPC.</para>
-        /// </summary>
         [NameInMap("AssociatedPropagationSources")]
         [Validation(Required=false)]
         public DescribeVpcAttributeResponseBodyAssociatedPropagationSources AssociatedPropagationSources { get; set; }
@@ -67,63 +41,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources> AssociatedPropagationSources { get; set; }
             public class DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources : TeaModel {
-                /// <summary>
-                /// <para>Indicates whether routes are advertised to the VPC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("RoutePropagated")]
                 [Validation(Required=false)]
                 public bool? RoutePropagated { get; set; }
 
-                /// <summary>
-                /// <para>The instance ID of the source.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cen-dc4vwznpwbobrl****</para>
-                /// </summary>
                 [NameInMap("SourceInstanceId")]
                 [Validation(Required=false)]
                 public string SourceInstanceId { get; set; }
 
-                /// <summary>
-                /// <para>The account ID of the source.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>153980532164****</para>
-                /// </summary>
                 [NameInMap("SourceOwnerId")]
                 [Validation(Required=false)]
                 public long? SourceOwnerId { get; set; }
 
-                /// <summary>
-                /// <para>The source type.</para>
-                /// <list type="bullet">
-                /// <item><description><b>CEN</b></description></item>
-                /// <item><description><b>VPN</b></description></item>
-                /// <item><description><b>TR</b></description></item>
-                /// <item><description><b>ECR</b></description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>CEN</para>
-                /// </summary>
                 [NameInMap("SourceType")]
                 [Validation(Required=false)]
                 public string SourceType { get; set; }
 
-                /// <summary>
-                /// <para>The binding status.</para>
-                /// <list type="bullet">
-                /// <item><description><b>Attaching</b></description></item>
-                /// <item><description><b>Attached</b></description></item>
-                /// <item><description><b>Detaching</b></description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Attaching</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
@@ -142,6 +75,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string CidrBlock { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Indicates whether the ClassicLink feature is enabled. Valid values:</para>
         /// <list type="bullet">
@@ -154,11 +89,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </summary>
         [NameInMap("ClassicLinkEnabled")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? ClassicLinkEnabled { get; set; }
 
-        /// <summary>
-        /// <para>The list of resources deployed in the VPC.</para>
-        /// </summary>
         [NameInMap("CloudResources")]
         [Validation(Required=false)]
         public DescribeVpcAttributeResponseBodyCloudResources CloudResources { get; set; }
@@ -167,27 +100,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVpcAttributeResponseBodyCloudResourcesCloudResourceSetType> CloudResourceSetType { get; set; }
             public class DescribeVpcAttributeResponseBodyCloudResourcesCloudResourceSetType : TeaModel {
-                /// <summary>
-                /// <para>The number of resources in the VPC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("ResourceCount")]
                 [Validation(Required=false)]
                 public int? ResourceCount { get; set; }
 
-                /// <summary>
-                /// <para>The type of resource deployed in the VPC. Valid values: Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>VSwitch</b></description></item>
-                /// <item><description><b>VRouter</b></description></item>
-                /// <item><description><b>RouteTable</b></description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>VSwitch</para>
-                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
@@ -286,9 +202,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Ipv6CidrBlock { get; set; }
 
-        /// <summary>
-        /// <para>The IPv6 CIDR block of the VPC.</para>
-        /// </summary>
         [NameInMap("Ipv6CidrBlocks")]
         [Validation(Required=false)]
         public DescribeVpcAttributeResponseBodyIpv6CidrBlocks Ipv6CidrBlocks { get; set; }
@@ -297,31 +210,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVpcAttributeResponseBodyIpv6CidrBlocksIpv6CidrBlock> Ipv6CidrBlock { get; set; }
             public class DescribeVpcAttributeResponseBodyIpv6CidrBlocksIpv6CidrBlock : TeaModel {
-                /// <summary>
-                /// <para>The IPv6 CIDR block of the VPC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2408:XXXX:0:6a::/56</para>
-                /// </summary>
                 [NameInMap("Ipv6CidrBlock")]
                 [Validation(Required=false)]
                 public string Ipv6CidrBlock { get; set; }
 
-                /// <summary>
-                /// <para>The IPv6 CIDR block type of the VPC. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>BGP</b> (default)</description></item>
-                /// <item><description><b>ChinaMobile</b></description></item>
-                /// <item><description><b>ChinaUnicom</b></description></item>
-                /// <item><description><b>ChinaTelecom</b></description></item>
-                /// </list>
-                /// <remarks>
-                /// <para> If you are allowed to use single-ISP bandwidth, valid values are <b>ChinaTelecom</b>, <b>ChinaUnicom</b>, and <b>ChinaMobile</b></para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>BGP</para>
-                /// </summary>
                 [NameInMap("Ipv6Isp")]
                 [Validation(Required=false)]
                 public string Ipv6Isp { get; set; }
@@ -384,9 +276,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        /// <summary>
-        /// <para>The secondary IPv4 CIDR block of the VPC.</para>
-        /// </summary>
         [NameInMap("SecondaryCidrBlocks")]
         [Validation(Required=false)]
         public DescribeVpcAttributeResponseBodySecondaryCidrBlocks SecondaryCidrBlocks { get; set; }
@@ -425,9 +314,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? SupportIpv4Gateway { get; set; }
 
-        /// <summary>
-        /// <para>The information about the tags.</para>
-        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public DescribeVpcAttributeResponseBodyTags Tags { get; set; }
@@ -436,22 +322,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVpcAttributeResponseBodyTagsTag> Tag { get; set; }
             public class DescribeVpcAttributeResponseBodyTagsTag : TeaModel {
-                /// <summary>
-                /// <para>The key of tag N.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>FinanceDept</para>
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
-                /// <summary>
-                /// <para>The value of tag N.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>FinanceJoshua</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -460,9 +334,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
-        /// <summary>
-        /// <para>The user CIDR block. Multiple CIDR blocks are separated by commas (,). At most three CIDR blocks are returned.</para>
-        /// </summary>
         [NameInMap("UserCidrs")]
         [Validation(Required=false)]
         public DescribeVpcAttributeResponseBodyUserCidrs UserCidrs { get; set; }
@@ -483,9 +354,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string VRouterId { get; set; }
 
-        /// <summary>
-        /// <para>The list of vSwitches deployed in the VPC.</para>
-        /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]
         public DescribeVpcAttributeResponseBodyVSwitchIds VSwitchIds { get; set; }

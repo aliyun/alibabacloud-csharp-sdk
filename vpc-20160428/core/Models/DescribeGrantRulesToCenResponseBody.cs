@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeGrantRulesToCenResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information about the authorization.</para>
-        /// </summary>
         [NameInMap("CenGrantRules")]
         [Validation(Required=false)]
         public DescribeGrantRulesToCenResponseBodyCenGrantRules CenGrantRules { get; set; }
@@ -20,32 +17,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeGrantRulesToCenResponseBodyCenGrantRulesCbnGrantRule> CbnGrantRule { get; set; }
             public class DescribeGrantRulesToCenResponseBodyCenGrantRulesCbnGrantRule : TeaModel {
-                /// <summary>
-                /// <para>The ID of the authorized CEN instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cen-9gsm1q2yh1prpt****</para>
-                /// </summary>
                 [NameInMap("CenInstanceId")]
                 [Validation(Required=false)]
                 public string CenInstanceId { get; set; }
 
-                /// <summary>
-                /// <para>The UID of the Alibaba Cloud account to which the authorized CEN instance belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>132193271328****</para>
-                /// </summary>
                 [NameInMap("CenOwnerId")]
                 [Validation(Required=false)]
                 public long? CenOwnerId { get; set; }
 
-                /// <summary>
-                /// <para>The time when the instance was created.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-11-15T09:26:36Z</para>
-                /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }

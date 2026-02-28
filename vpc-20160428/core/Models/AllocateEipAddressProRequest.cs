@@ -116,8 +116,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description><b>PayByBandwidth</b> (default): pay-by-bandwidth.</description></item>
         /// <item><description><b>PayByTraffic</b>: pay-by-data-transfer.</description></item>
         /// </list>
-        /// <para>When <b>InstanceChargeType</b> is set to <b>PrePaid</b>, you must set <b>InternetChargeType</b> to <b>PayByBandwidth</b>.</para>
-        /// <para>When <b>InstanceChargeType</b> is set to <b>PostPaid</b>, set <b>InternetChargeType</b> to <b>PayByBandwidth</b> or <b>PayByTraffic</b>.</para>
+        /// <para>If <b>InstanceChargeType</b> is set to <b>PrePaid</b>, you must set <b>InternetChargeType</b> to <b>PayByBandwidth</b>.</para>
+        /// <para>If <b>InstanceChargeType</b> is set to <b>PostPaid</b>, <b>InternetChargeType</b> can be set to <b>PayByBandwidth</b> or <b>PayByTraffic</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PayByBandwidth</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The ID of the IP address pool.</para>
         /// <para>The EIP is allocated from the IP address pool.</para>
-        /// <para>By default, you cannot use the IP address pool. To use this feature, apply for the privilege in the Quota Center console. For more information, see the &quot;Request a quota increase in the Quota Center console&quot; section of <a href="https://help.aliyun.com/document_detail/108213.html">Manage EIP quotas</a>.</para>
+        /// <para>By default, the IP address pool feature is unavailable. If you need to use this feature, contact your account manager.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pippool-2vc0kxcedhquybdsz****</para>
@@ -244,10 +244,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public List<AllocateEipAddressProRequestTag> Tag { get; set; }
         public class AllocateEipAddressProRequestTag : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>FinanceDept</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>FinanceJoshua</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

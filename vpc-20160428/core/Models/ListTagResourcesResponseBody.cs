@@ -33,9 +33,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The tag key.</para>
-        /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public ListTagResourcesResponseBodyTagResources TagResources { get; set; }
@@ -44,51 +41,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
-                /// <summary>
-                /// <para>The ID of the resource.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vpc-bp16qjewdsunr41m1****</para>
-                /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
-                /// <summary>
-                /// <para>The type of the resource. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
-                /// <item><description><b>VSWITCH</b>: vSwitch</description></item>
-                /// <item><description><b>ROUTETABLE</b>: route table</description></item>
-                /// <item><description><b>EIP</b>: EIP</description></item>
-                /// <item><description><b>VpnGateWay</b>: VPN gateway</description></item>
-                /// <item><description><b>NATGATEWAY</b>: NAT gateway</description></item>
-                /// <item><description><b>COMMONBANDWIDTHPACKAGE</b>: EIP bandwidth plan</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>VPC</para>
-                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
-                /// <summary>
-                /// <para>The tag key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>FinanceDept</para>
-                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
-                /// <summary>
-                /// <para>The tag value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>FinanceJoshua</para>
-                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

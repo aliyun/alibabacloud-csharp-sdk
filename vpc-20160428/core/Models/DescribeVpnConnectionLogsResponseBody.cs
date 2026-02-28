@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public int? Count { get; set; }
 
-        /// <summary>
-        /// <para>The log list.</para>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeVpnConnectionLogsResponseBodyData Data { get; set; }

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeBgpNetworksResponseBody : TeaModel {
-        /// <summary>
-        /// <para>BGP networks.</para>
-        /// </summary>
         [NameInMap("BgpNetworks")]
         [Validation(Required=false)]
         public DescribeBgpNetworksResponseBodyBgpNetworks BgpNetworks { get; set; }
@@ -20,42 +17,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeBgpNetworksResponseBodyBgpNetworksBgpNetwork> BgpNetwork { get; set; }
             public class DescribeBgpNetworksResponseBodyBgpNetworksBgpNetwork : TeaModel {
-                /// <summary>
-                /// <para>The CIDR block of the advertised BGP network.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>10.1.XX.XX/24</para>
-                /// </summary>
                 [NameInMap("DstCidrBlock")]
                 [Validation(Required=false)]
                 public string DstCidrBlock { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the VBR.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vrt-bp1lhl0taikrteen8****</para>
-                /// </summary>
                 [NameInMap("RouterId")]
                 [Validation(Required=false)]
                 public string RouterId { get; set; }
 
-                /// <summary>
-                /// <para>The status of the advertised BGP network.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Enabled</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the virtual private cloud (VPC) in which the master instance resides.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vpc-bp1qpo0kug3a2*****</para>
-                /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }

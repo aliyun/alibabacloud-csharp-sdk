@@ -10,11 +10,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpnPbrRouteEntryRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
-        /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID is different for each request.</para>
-        /// </remarks>
+        /// <para>The description of the policy-based route.</para>
+        /// <para>The description must be 1 to 100 characters in length, and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d7d24a21-f4ba-4454-9173-b3****</para>
@@ -24,8 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the policy-based route.</para>
-        /// <para>The description must be 1 to 100 characters in length, and cannot start with http:// or https://.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -34,6 +30,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: prechecks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. After the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
@@ -50,7 +56,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHop { get; set; }
 
         /// <summary>
-        /// <para>The tunneling protocol. Set the value to <b>Ipsec</b>.</para>
+        /// <para>The description of the policy-based route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ipsec</para>
@@ -68,8 +74,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The priority of the policy-based route. Valid values: <b>1</b> to <b>100</b>. Default value: <b>10</b>.</para>
-        /// <para>A smaller value indicates a higher priority.</para>
+        /// <para>The status of the policy-based route. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>published</b>: advertised to the VPC route table.</description></item>
+        /// <item><description><b>normal</b>: not advertised to the VPC route table.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -79,11 +88,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to advertise the policy-based route to a virtual private cloud (VPC) route table. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
-        /// </list>
+        /// <para>The destination CIDR block of the policy-based route.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,7 +99,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? PublishVpc { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VPN gateway. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>Specifies whether to advertise the policy-based route to a virtual private cloud (VPC) route table. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The route is advertised to the VPC system route table, but not to a VPC custom route table.</para>
+        /// <para>You can manually add the route the a VPC custom route table. For more information, see <a href="https://help.aliyun.com/document_detail/448722.html">CreateRouteEntry</a>.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Do not advertise the route to the route table.</para>
+        /// <para>You must manually add a policy-based route that points to the VPN gateway in the VPC custom and system route table. Otherwise, the VPC cannot access resources in the CIDR block through an IPsec-VPN connection.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -113,7 +126,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the policy-based route.</para>
+        /// <para>The response parameters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -124,7 +137,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteDest { get; set; }
 
         /// <summary>
-        /// <para>The source CIDR block of the policy-based route.</para>
+        /// <para>The priority of the policy-based route. Valid values: <b>1</b> to <b>100</b>. Default value: <b>10</b>.</para>
+        /// <para>A smaller value indicates a higher priority.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -135,7 +149,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteSource { get; set; }
 
         /// <summary>
-        /// <para>The VPN gateway ID.</para>
+        /// <para>The tunneling protocol. Set the value to <b>Ipsec</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -146,16 +160,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpnGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The weight of the policy-based route.</para>
-        /// <para>If you use the same VPN gateway to establish active/standby IPsec-VPN connections, you can configure route weights to specify which connection is active. A value of 100 specifies the active connection, whereas a value of 0 specifies the standby connection.</para>
-        /// <para>You can configure health checks to automatically check the connectivity of IPsec-VPN connections. If the active connection is down, the standby connection automatically takes over. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</para>
+        /// <para>The weight of the policy-based route. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>100</b>: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</description></item>
         /// <item><description><b>0</b>: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para> If you specify active/standby IPsec-VPN connections, the active policy-based route and the standby policy-based route must have the same source and destination CIDR blocks.</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

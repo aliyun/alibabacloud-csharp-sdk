@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para><b>POSTPAY</b>: pay-as-you-go</para>
         /// 
         /// <b>Example:</b>
-        /// <para>China site (aliyun.com): Prepay. International site (alibabacloud.com): POSTPAY.</para>
+        /// <para>中国站示例值：Prepay，国际站示例值：POSTPAY</para>
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -116,9 +116,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
-        /// <summary>
-        /// <para>The ENIs created by the system for the VPN gateway.</para>
-        /// </summary>
         [NameInMap("EniInstanceIds")]
         [Validation(Required=false)]
         public DescribeVpnGatewayResponseBodyEniInstanceIds EniInstanceIds { get; set; }
@@ -129,6 +126,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        /// <summary>
+        /// <para>Type of VPN gateway:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Traditional</b>: Traditional-type VPN gateway, supports both IPSec and SSL.</description></item>
+        /// <item><description><b>Enhanced.SiteToSite</b>: Enhanced Site-to-Site VPN gateway, only supports IPSec.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Enhanced.SiteToSite</para>
+        /// </summary>
         [NameInMap("GatewayType")]
         [Validation(Required=false)]
         public string GatewayType { get; set; }
@@ -410,15 +417,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;VpnEnableBgp\&quot;:\&quot;true\&quot;,\&quot;VisuallySsl\&quot;:\&quot;true\&quot;,\&quot;PbrPriority\&quot;:\&quot;true\&quot;,\&quot;VpnNewImage\&quot;:\&quot;true\&quot;,\&quot;description\&quot;:\&quot;forwarding1.3.7\&quot;,\&quot;VpnVersion\&quot;:\&quot;v1.2.4\&quot;}</para>
+        /// <para>{\&quot;VpnEnableBgp\&quot;:\&quot;true\&quot;,\&quot;VisuallySsl\&quot;:\&quot;true\&quot;,\&quot;PbrPriority\&quot;:\&quot;true\&quot;,\&quot;VpnNewImage\&quot;:\&quot;true\&quot;,\&quot;description\&quot;:\&quot;转发1.3.24\&quot;,\&quot;VpnVersion\&quot;:\&quot;v1.2.4\&quot;,\&quot;IDaaSNewVersion\&quot;:\&quot;true\&quot;}</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public string Tag { get; set; }
 
-        /// <summary>
-        /// <para>The tags that are added to the VPN gateway.</para>
-        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public DescribeVpnGatewayResponseBodyTags Tags { get; set; }
@@ -428,7 +432,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeVpnGatewayResponseBodyTagsTag> Tag { get; set; }
             public class DescribeVpnGatewayResponseBodyTagsTag : TeaModel {
                 /// <summary>
-                /// <para>The tag key.</para>
+                /// <para>标签键。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aaa</para>
@@ -438,7 +442,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>标签值。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bbb</para>

@@ -189,9 +189,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
-        /// <summary>
-        /// <para>The information about the tags.</para>
-        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public DescribeVSwitchAttributesResponseBodyTags Tags { get; set; }
@@ -200,22 +197,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVSwitchAttributesResponseBodyTagsTag> Tag { get; set; }
             public class DescribeVSwitchAttributesResponseBodyTagsTag : TeaModel {
-                /// <summary>
-                /// <para>The key of tag N added to the resource.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>FinanceDept</para>
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
-                /// <summary>
-                /// <para>The value of tag N added to the resource.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>FinanceJoshua</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

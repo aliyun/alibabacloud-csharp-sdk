@@ -82,9 +82,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string MinimumConsumeBandwidth { get; set; }
 
-            /// <summary>
-            /// <para>The average bandwidth every 5 minutes in the inbound and outbound directions.</para>
-            /// </summary>
             [NameInMap("Traffic95DetailList")]
             [Validation(Required=false)]
             public Describe95TrafficResponseBodyTraffic95SummaryTraffic95DetailList Traffic95DetailList { get; set; }
@@ -93,42 +90,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public List<Describe95TrafficResponseBodyTraffic95SummaryTraffic95DetailListTraffic95Detail> Traffic95Detail { get; set; }
                 public class Describe95TrafficResponseBodyTraffic95SummaryTraffic95DetailListTraffic95Detail : TeaModel {
-                    /// <summary>
-                    /// <para>The sampled bandwidth value, which is the larger bandwidth value in the inbound and outbound directions within a sampling interval. Unit: Mbit/s.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>118.5090322113037</para>
-                    /// </summary>
                     [NameInMap("BillBandwidth")]
                     [Validation(Required=false)]
                     public string BillBandwidth { get; set; }
 
-                    /// <summary>
-                    /// <para>The inbound bandwidth. Unit: Mbit/s.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>118.5090322113037</para>
-                    /// </summary>
                     [NameInMap("InBandwidth")]
                     [Validation(Required=false)]
                     public string InBandwidth { get; set; }
 
-                    /// <summary>
-                    /// <para>The outbound bandwidth. Unit: Mbit/s.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>96.41217480977376</para>
-                    /// </summary>
                     [NameInMap("OutBandwidth")]
                     [Validation(Required=false)]
                     public string OutBandwidth { get; set; }
 
-                    /// <summary>
-                    /// <para>The statistical time. The value is a string.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>2024-01-01T00:00:00Z</para>
-                    /// </summary>
                     [NameInMap("Time")]
                     [Validation(Required=false)]
                     public string Time { get; set; }

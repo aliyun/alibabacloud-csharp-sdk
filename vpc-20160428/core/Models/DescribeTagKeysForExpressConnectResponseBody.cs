@@ -33,9 +33,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The tag keys.</para>
-        /// </summary>
         [NameInMap("TagKeys")]
         [Validation(Required=false)]
         public DescribeTagKeysForExpressConnectResponseBodyTagKeys TagKeys { get; set; }
@@ -44,22 +41,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeTagKeysForExpressConnectResponseBodyTagKeysTagKey> TagKey { get; set; }
             public class DescribeTagKeysForExpressConnectResponseBodyTagKeysTagKey : TeaModel {
-                /// <summary>
-                /// <para>The key of the tag.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>FinanceDept</para>
-                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
-                /// <summary>
-                /// <para>The type of the resource. The value is set to <b>PHYSICALCONNECTION</b>, which indicates an Express Connect circuit.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>PHYSICALCONNECTION</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }

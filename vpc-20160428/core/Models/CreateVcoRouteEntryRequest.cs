@@ -10,11 +10,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVcoRouteEntryRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
-        /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
-        /// </remarks>
+        /// <para>The status of the destination-based route.</para>
+        /// <para>Only <b>published</b> is returned, which indicates that the current route is published to the transit router.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-4266****</para>
@@ -24,7 +21,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the destination-based route.</para>
+        /// <para>The weight of the destination-based route. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: a low priority.</description></item>
+        /// <item><description><b>100</b>: a high priority.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -33,6 +34,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: prechecks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. After the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
@@ -49,7 +60,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHop { get; set; }
 
         /// <summary>
-        /// <para>The tunneling protocol. Set the value to <b>Ipsec</b>, which specifies the IPsec tunneling protocol.</para>
+        /// <para>The tunneling protocol.</para>
+        /// <para>The value is set to <b>Ipsec</b>, which indicates the IPsec tunneling protocol.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ipsec</para>
@@ -63,8 +75,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string OwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the IPsec-VPN connection.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +98,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the destination-based route.</para>
+        /// <para>The ID of the IPsec-VPN connection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,7 +109,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteDest { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IPsec-VPN connection.</para>
+        /// <para>The response parameters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -105,11 +120,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpnConnectionId { get; set; }
 
         /// <summary>
-        /// <para>The weight of the destination-based route. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>0</b>: a low priority</description></item>
-        /// <item><description><b>100</b>: a high priority</description></item>
-        /// </list>
+        /// <para>The destination CIDR block of the destination-based route.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

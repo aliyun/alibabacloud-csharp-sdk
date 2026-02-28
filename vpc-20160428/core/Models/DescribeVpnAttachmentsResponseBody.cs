@@ -175,6 +175,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string TransitRouterName { get; set; }
 
+            /// <summary>
+            /// <para>Specifies the bandwidth specifications for a single tunnel in VPN attachment. Available options:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Standard</b>: Standard, 1Gbps</description></item>
+            /// <item><description><b>Large</b>:  Large-sized, 3Gbps</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Standard</para>
+            /// </summary>
             [NameInMap("TunnelBandwidth")]
             [Validation(Required=false)]
             public string TunnelBandwidth { get; set; }

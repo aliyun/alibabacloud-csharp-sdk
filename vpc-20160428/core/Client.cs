@@ -651,20 +651,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, take note of the following items:</para>
-        /// <list type="bullet">
-        /// <item><description>When you call this operation to associate an EIP with an Internet Shared Bandwidth instance, make sure that the EIP meets the following requirements:<list type="bullet">
-        /// <item><description>The EIP uses the pay-as-you-go billing method.</description></item>
-        /// <item><description>The EIP and the Internet Shared Bandwidth instance belong to the same region.</description></item>
-        /// <item><description>The line type of the EIPs is the same as that of the Internet Shared Bandwidth instance.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><b>AddCommonBandwidthPackageIp</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/120309.html">DescribeCommonBandwidthPackages</a> operation to query the status of the operation.<list type="bullet">
-        /// <item><description>If the Internet Shared Bandwidth instance is in the <b>BINDING</b> state, the EIP is being associated with the Internet Shared Bandwidth instance. In this state, you can only query the Internet Shared Bandwidth instance and cannot perform other operations.</description></item>
-        /// <item><description>If the Internet Shared Bandwidth instance is in the <b>BINDED</b> state, the EIP is associated with the Internet Shared Bandwidth instance.</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
+        /// <para>Associates an elastic IP address (EIP) with an Internet Shared Bandwidth instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -743,20 +730,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, take note of the following items:</para>
-        /// <list type="bullet">
-        /// <item><description>When you call this operation to associate an EIP with an Internet Shared Bandwidth instance, make sure that the EIP meets the following requirements:<list type="bullet">
-        /// <item><description>The EIP uses the pay-as-you-go billing method.</description></item>
-        /// <item><description>The EIP and the Internet Shared Bandwidth instance belong to the same region.</description></item>
-        /// <item><description>The line type of the EIPs is the same as that of the Internet Shared Bandwidth instance.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><b>AddCommonBandwidthPackageIp</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/120309.html">DescribeCommonBandwidthPackages</a> operation to query the status of the operation.<list type="bullet">
-        /// <item><description>If the Internet Shared Bandwidth instance is in the <b>BINDING</b> state, the EIP is being associated with the Internet Shared Bandwidth instance. In this state, you can only query the Internet Shared Bandwidth instance and cannot perform other operations.</description></item>
-        /// <item><description>If the Internet Shared Bandwidth instance is in the <b>BINDED</b> state, the EIP is associated with the Internet Shared Bandwidth instance.</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
+        /// <para>Associates an elastic IP address (EIP) with an Internet Shared Bandwidth instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -835,20 +809,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, take note of the following items:</para>
-        /// <list type="bullet">
-        /// <item><description>When you call this operation to associate an EIP with an Internet Shared Bandwidth instance, make sure that the EIP meets the following requirements:<list type="bullet">
-        /// <item><description>The EIP uses the pay-as-you-go billing method.</description></item>
-        /// <item><description>The EIP and the Internet Shared Bandwidth instance belong to the same region.</description></item>
-        /// <item><description>The line type of the EIPs is the same as that of the Internet Shared Bandwidth instance.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><b>AddCommonBandwidthPackageIp</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/120309.html">DescribeCommonBandwidthPackages</a> operation to query the status of the operation.<list type="bullet">
-        /// <item><description>If the Internet Shared Bandwidth instance is in the <b>BINDING</b> state, the EIP is being associated with the Internet Shared Bandwidth instance. In this state, you can only query the Internet Shared Bandwidth instance and cannot perform other operations.</description></item>
-        /// <item><description>If the Internet Shared Bandwidth instance is in the <b>BINDED</b> state, the EIP is associated with the Internet Shared Bandwidth instance.</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
+        /// <para>Associates an elastic IP address (EIP) with an Internet Shared Bandwidth instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -871,20 +832,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, take note of the following items:</para>
-        /// <list type="bullet">
-        /// <item><description>When you call this operation to associate an EIP with an Internet Shared Bandwidth instance, make sure that the EIP meets the following requirements:<list type="bullet">
-        /// <item><description>The EIP uses the pay-as-you-go billing method.</description></item>
-        /// <item><description>The EIP and the Internet Shared Bandwidth instance belong to the same region.</description></item>
-        /// <item><description>The line type of the EIPs is the same as that of the Internet Shared Bandwidth instance.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><b>AddCommonBandwidthPackageIp</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/120309.html">DescribeCommonBandwidthPackages</a> operation to query the status of the operation.<list type="bullet">
-        /// <item><description>If the Internet Shared Bandwidth instance is in the <b>BINDING</b> state, the EIP is being associated with the Internet Shared Bandwidth instance. In this state, you can only query the Internet Shared Bandwidth instance and cannot perform other operations.</description></item>
-        /// <item><description>If the Internet Shared Bandwidth instance is in the <b>BINDED</b> state, the EIP is associated with the Internet Shared Bandwidth instance.</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
+        /// <para>Associates an elastic IP address (EIP) with an Internet Shared Bandwidth instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6258,7 +6206,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将DHCP选项集与VPC关联</para>
+        /// <para>Associates a DHCP options set with a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6342,7 +6290,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将DHCP选项集与VPC关联</para>
+        /// <para>Associates a DHCP options set with a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6426,7 +6374,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将DHCP选项集与VPC关联</para>
+        /// <para>Associates a DHCP options set with a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6454,7 +6402,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将DHCP选项集与VPC关联</para>
+        /// <para>Associates a DHCP options set with a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13802,7 +13750,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建IPv4网关。</para>
+        /// <para>Creates an IPv4 gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13902,7 +13850,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建IPv4网关。</para>
+        /// <para>Creates an IPv4 gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14002,7 +13950,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建IPv4网关。</para>
+        /// <para>Creates an IPv4 gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14030,7 +13978,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建IPv4网关。</para>
+        /// <para>Creates an IPv4 gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17558,7 +17506,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Route Target Group</para>
+        /// <para>Creates a route target group instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17646,7 +17594,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Route Target Group</para>
+        /// <para>Creates a route target group instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17734,7 +17682,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Route Target Group</para>
+        /// <para>Creates a route target group instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17766,7 +17714,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Route Target Group</para>
+        /// <para>Creates a route target group instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19798,7 +19746,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建交换机。</para>
+        /// <para>Creates a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19911,7 +19859,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建交换机。</para>
+        /// <para>Creates a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20024,7 +19972,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建交换机。</para>
+        /// <para>Creates a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20061,7 +20009,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建交换机。</para>
+        /// <para>Creates a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20603,17 +20551,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The IPsec-VPN connection must be associated with a transit router. For more information, see <a href="https://help.aliyun.com/document_detail/468249.html">CreateTransitRouterVpnAttachment</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>You cannot create a destination-based route whose destination CIDR block is 0.0.0.0/0.</description></item>
-        /// <item><description>Do not add a destination-based route whose destination CIDR block is 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10 or belongs to 100.64.0.0/10. Such a route will make the console fail to display the status of the IPsec-VPN connection or cause IPsec negotiation failures.</description></item>
-        /// <item><description><b>CreateVcoRouteEntry</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the status of the task.<list type="bullet">
-        /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the destination-based route is being created.</description></item>
-        /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the destination-based route is created.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>You cannot repeatedly call <b>CreateVcoRouteEntry</b> within the specified period of time.</description></item>
-        /// </list>
+        /// <para>Adds a destination-based route for an IPsec-VPN connection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20704,17 +20642,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The IPsec-VPN connection must be associated with a transit router. For more information, see <a href="https://help.aliyun.com/document_detail/468249.html">CreateTransitRouterVpnAttachment</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>You cannot create a destination-based route whose destination CIDR block is 0.0.0.0/0.</description></item>
-        /// <item><description>Do not add a destination-based route whose destination CIDR block is 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10 or belongs to 100.64.0.0/10. Such a route will make the console fail to display the status of the IPsec-VPN connection or cause IPsec negotiation failures.</description></item>
-        /// <item><description><b>CreateVcoRouteEntry</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the status of the task.<list type="bullet">
-        /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the destination-based route is being created.</description></item>
-        /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the destination-based route is created.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>You cannot repeatedly call <b>CreateVcoRouteEntry</b> within the specified period of time.</description></item>
-        /// </list>
+        /// <para>Adds a destination-based route for an IPsec-VPN connection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20805,17 +20733,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The IPsec-VPN connection must be associated with a transit router. For more information, see <a href="https://help.aliyun.com/document_detail/468249.html">CreateTransitRouterVpnAttachment</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>You cannot create a destination-based route whose destination CIDR block is 0.0.0.0/0.</description></item>
-        /// <item><description>Do not add a destination-based route whose destination CIDR block is 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10 or belongs to 100.64.0.0/10. Such a route will make the console fail to display the status of the IPsec-VPN connection or cause IPsec negotiation failures.</description></item>
-        /// <item><description><b>CreateVcoRouteEntry</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the status of the task.<list type="bullet">
-        /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the destination-based route is being created.</description></item>
-        /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the destination-based route is created.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>You cannot repeatedly call <b>CreateVcoRouteEntry</b> within the specified period of time.</description></item>
-        /// </list>
+        /// <para>Adds a destination-based route for an IPsec-VPN connection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20838,17 +20756,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The IPsec-VPN connection must be associated with a transit router. For more information, see <a href="https://help.aliyun.com/document_detail/468249.html">CreateTransitRouterVpnAttachment</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>You cannot create a destination-based route whose destination CIDR block is 0.0.0.0/0.</description></item>
-        /// <item><description>Do not add a destination-based route whose destination CIDR block is 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10 or belongs to 100.64.0.0/10. Such a route will make the console fail to display the status of the IPsec-VPN connection or cause IPsec negotiation failures.</description></item>
-        /// <item><description><b>CreateVcoRouteEntry</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> to query the status of the task.<list type="bullet">
-        /// <item><description>If the IPsec-VPN connection is in the <b>updating</b> state, the destination-based route is being created.</description></item>
-        /// <item><description>If the IPsec-VPN connection is in the <b>attached</b> state, the destination-based route is created.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>You cannot repeatedly call <b>CreateVcoRouteEntry</b> within the specified period of time.</description></item>
-        /// </list>
+        /// <para>Adds a destination-based route for an IPsec-VPN connection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23571,16 +23479,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the match rules of and limits on policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Manage policy-based routes</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>Before you create a policy-based route, make sure that an IPsec-VPN connection is created. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</description></item>
-        /// <item><description><b>CreateVpnPbrRouteEntry</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway.<list type="bullet">
-        /// <item><description>If the VPN gateway is in the <b>updating</b> state, the policy-based route is being created.</description></item>
-        /// <item><description>If the VPN gateway is in the <b>active</b> state, the policy-based route is created.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>You cannot call the <b>CreateVpnPbrRouteEntry</b> operation to create multiple policy-based routes for a VPN gateway at a time.</description></item>
-        /// </list>
+        /// <para>Creates a policy-based route for a VPN gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23687,16 +23586,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the match rules of and limits on policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Manage policy-based routes</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>Before you create a policy-based route, make sure that an IPsec-VPN connection is created. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</description></item>
-        /// <item><description><b>CreateVpnPbrRouteEntry</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway.<list type="bullet">
-        /// <item><description>If the VPN gateway is in the <b>updating</b> state, the policy-based route is being created.</description></item>
-        /// <item><description>If the VPN gateway is in the <b>active</b> state, the policy-based route is created.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>You cannot call the <b>CreateVpnPbrRouteEntry</b> operation to create multiple policy-based routes for a VPN gateway at a time.</description></item>
-        /// </list>
+        /// <para>Creates a policy-based route for a VPN gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23803,16 +23693,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the match rules of and limits on policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Manage policy-based routes</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>Before you create a policy-based route, make sure that an IPsec-VPN connection is created. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</description></item>
-        /// <item><description><b>CreateVpnPbrRouteEntry</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway.<list type="bullet">
-        /// <item><description>If the VPN gateway is in the <b>updating</b> state, the policy-based route is being created.</description></item>
-        /// <item><description>If the VPN gateway is in the <b>active</b> state, the policy-based route is created.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>You cannot call the <b>CreateVpnPbrRouteEntry</b> operation to create multiple policy-based routes for a VPN gateway at a time.</description></item>
-        /// </list>
+        /// <para>Creates a policy-based route for a VPN gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23835,16 +23716,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the match rules of and limits on policy-based routes. For more information, see <a href="https://help.aliyun.com/document_detail/110777.html">Manage policy-based routes</a>.</para>
-        /// <list type="bullet">
-        /// <item><description>Before you create a policy-based route, make sure that an IPsec-VPN connection is created. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</description></item>
-        /// <item><description><b>CreateVpnPbrRouteEntry</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the status of the VPN gateway.<list type="bullet">
-        /// <item><description>If the VPN gateway is in the <b>updating</b> state, the policy-based route is being created.</description></item>
-        /// <item><description>If the VPN gateway is in the <b>active</b> state, the policy-based route is created.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>You cannot call the <b>CreateVpnPbrRouteEntry</b> operation to create multiple policy-based routes for a VPN gateway at a time.</description></item>
-        /// </list>
+        /// <para>Creates a policy-based route for a VPN gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24126,7 +23998,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>冻结路由器接口</para>
+        /// <para>Deactivates a router interface.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24184,7 +24056,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>冻结路由器接口</para>
+        /// <para>Deactivates a router interface.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24242,7 +24114,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>冻结路由器接口</para>
+        /// <para>Deactivates a router interface.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24260,7 +24132,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>冻结路由器接口</para>
+        /// <para>Deactivates a router interface.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27154,7 +27026,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Global Accelerator (GA) instance.</para>
+        /// <para>Deletes a GA instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27226,7 +27098,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Global Accelerator (GA) instance.</para>
+        /// <para>Deletes a GA instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27298,7 +27170,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Global Accelerator (GA) instance.</para>
+        /// <para>Deletes a GA instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27326,7 +27198,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Global Accelerator (GA) instance.</para>
+        /// <para>Deletes a GA instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31522,7 +31394,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Route Target Group</para>
+        /// <para>Deletes a route target group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31587,7 +31459,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Route Target Group</para>
+        /// <para>Deletes a route target group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31652,7 +31524,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Route Target Group</para>
+        /// <para>Deletes a route target group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31681,7 +31553,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Route Target Group</para>
+        /// <para>Deletes a route target group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32362,7 +32234,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an SSL server.</para>
+        /// <para>Deletes an SSL server. The system automatically deletes all SSL client certificates that are associated with the SSL server. In this case, the SSL-VPN connections of the clients on which the SSL client certificates are installed are automatically disconnected.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32438,7 +32310,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an SSL server.</para>
+        /// <para>Deletes an SSL server. The system automatically deletes all SSL client certificates that are associated with the SSL server. In this case, the SSL-VPN connections of the clients on which the SSL client certificates are installed are automatically disconnected.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32514,7 +32386,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an SSL server.</para>
+        /// <para>Deletes an SSL server. The system automatically deletes all SSL client certificates that are associated with the SSL server. In this case, the SSL-VPN connections of the clients on which the SSL client certificates are installed are automatically disconnected.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32542,7 +32414,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an SSL server.</para>
+        /// <para>Deletes an SSL server. The system automatically deletes all SSL client certificates that are associated with the SSL server. In this case, the SSL-VPN connections of the clients on which the SSL client certificates are installed are automatically disconnected.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -36014,7 +35886,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置实例删除保护功能。</para>
+        /// <para>Set the deletion protection feature for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -36093,7 +35965,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置实例删除保护功能。</para>
+        /// <para>Set the deletion protection feature for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -36172,7 +36044,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置实例删除保护功能。</para>
+        /// <para>Set the deletion protection feature for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -36195,7 +36067,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置实例删除保护功能。</para>
+        /// <para>Set the deletion protection feature for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -36562,7 +36434,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Border Gateway Protocol (BGP) groups in a region.</para>
+        /// <para>Queries BGP groups in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36640,7 +36512,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Border Gateway Protocol (BGP) groups in a region.</para>
+        /// <para>Queries BGP groups in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36718,7 +36590,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Border Gateway Protocol (BGP) groups in a region.</para>
+        /// <para>Queries BGP groups in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36736,7 +36608,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Border Gateway Protocol (BGP) groups in a region.</para>
+        /// <para>Queries BGP groups in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38378,7 +38250,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and obtain up to 400 data points in each request.</para>
+        /// <para>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and get up to 400 data points in each request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -38457,7 +38329,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and obtain up to 400 data points in each request.</para>
+        /// <para>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and get up to 400 data points in each request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -38536,7 +38408,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and obtain up to 400 data points in each request.</para>
+        /// <para>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and get up to 400 data points in each request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -38559,7 +38431,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and obtain up to 400 data points in each request.</para>
+        /// <para>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and get up to 400 data points in each request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -40206,7 +40078,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Global Accelerator (GA) instances.</para>
+        /// <para>Queries created GA instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40304,7 +40176,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Global Accelerator (GA) instances.</para>
+        /// <para>Queries created GA instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40402,7 +40274,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Global Accelerator (GA) instances.</para>
+        /// <para>Queries created GA instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40420,7 +40292,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Global Accelerator (GA) instances.</para>
+        /// <para>Queries created GA instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40438,7 +40310,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定网络实例（VPC、VBR）的云企业网跨账号授权信息</para>
+        /// <para>Queries cross-account authorization on virtual private clouds (VPCs), virtual border routers (VBRs), and Cloud Connect Network (CCN) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40520,7 +40392,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定网络实例（VPC、VBR）的云企业网跨账号授权信息</para>
+        /// <para>Queries cross-account authorization on virtual private clouds (VPCs), virtual border routers (VBRs), and Cloud Connect Network (CCN) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40602,7 +40474,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定网络实例（VPC、VBR）的云企业网跨账号授权信息</para>
+        /// <para>Queries cross-account authorization on virtual private clouds (VPCs), virtual border routers (VBRs), and Cloud Connect Network (CCN) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40620,7 +40492,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定网络实例（VPC、VBR）的云企业网跨账号授权信息</para>
+        /// <para>Queries cross-account authorization on virtual private clouds (VPCs), virtual border routers (VBRs), and Cloud Connect Network (CCN) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43882,7 +43754,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询物理专线LOA信息</para>
+        /// <para>Queries the LOA information about an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43948,7 +43820,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询物理专线LOA信息</para>
+        /// <para>Queries the LOA information about an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44014,7 +43886,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询物理专线LOA信息</para>
+        /// <para>Queries the LOA information about an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44032,7 +43904,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询物理专线LOA信息</para>
+        /// <para>Queries the LOA information about an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45742,7 +45614,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Global Accelerator (GA) instances that are associated with a backend server.</para>
+        /// <para>Queries the GA instances that are associated with a specified backend server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -45815,7 +45687,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Global Accelerator (GA) instances that are associated with a backend server.</para>
+        /// <para>Queries the GA instances that are associated with a specified backend server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -45888,7 +45760,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Global Accelerator (GA) instances that are associated with a backend server.</para>
+        /// <para>Queries the GA instances that are associated with a specified backend server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -45913,7 +45785,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Global Accelerator (GA) instances that are associated with a backend server.</para>
+        /// <para>Queries the GA instances that are associated with a specified backend server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -51322,7 +51194,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log entries of an SSL server.</para>
+        /// <para>Queries the log of an SSL server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51408,7 +51280,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log entries of an SSL server.</para>
+        /// <para>Queries the log of an SSL server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51494,7 +51366,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log entries of an SSL server.</para>
+        /// <para>Queries the log of an SSL server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51512,7 +51384,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log entries of an SSL server.</para>
+        /// <para>Queries the log of an SSL server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51698,7 +51570,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a DHCP options set from a virtual private cloud (VPC).</para>
+        /// <para>Disassociates a DHCP options set from a VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -51785,7 +51657,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a DHCP options set from a virtual private cloud (VPC).</para>
+        /// <para>Disassociates a DHCP options set from a VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -51872,7 +51744,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a DHCP options set from a virtual private cloud (VPC).</para>
+        /// <para>Disassociates a DHCP options set from a VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -51903,7 +51775,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a DHCP options set from a virtual private cloud (VPC).</para>
+        /// <para>Disassociates a DHCP options set from a VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -52296,9 +52168,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await DiagnoseVpnGatewayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DisableVpcClassicLink is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables ClassicLink for a virtual private cloud (VPC).</para>
+        /// <para>Disables ClassicLink for a VPC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52311,6 +52187,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DisableVpcClassicLinkResponse
         /// </returns>
+        [Obsolete("OpenAPI DisableVpcClassicLink is deprecated")]
+        // Deprecated
         public DisableVpcClassicLinkResponse DisableVpcClassicLinkWithOptions(DisableVpcClassicLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -52362,9 +52240,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<DisableVpcClassicLinkResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DisableVpcClassicLink is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables ClassicLink for a virtual private cloud (VPC).</para>
+        /// <para>Disables ClassicLink for a VPC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52377,6 +52259,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DisableVpcClassicLinkResponse
         /// </returns>
+        [Obsolete("OpenAPI DisableVpcClassicLink is deprecated")]
+        // Deprecated
         public async Task<DisableVpcClassicLinkResponse> DisableVpcClassicLinkWithOptionsAsync(DisableVpcClassicLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -52428,9 +52312,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<DisableVpcClassicLinkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DisableVpcClassicLink is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables ClassicLink for a virtual private cloud (VPC).</para>
+        /// <para>Disables ClassicLink for a VPC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52440,15 +52328,21 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DisableVpcClassicLinkResponse
         /// </returns>
+        [Obsolete("OpenAPI DisableVpcClassicLink is deprecated")]
+        // Deprecated
         public DisableVpcClassicLinkResponse DisableVpcClassicLink(DisableVpcClassicLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableVpcClassicLinkWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DisableVpcClassicLink is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables ClassicLink for a virtual private cloud (VPC).</para>
+        /// <para>Disables ClassicLink for a VPC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52458,6 +52352,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// DisableVpcClassicLinkResponse
         /// </returns>
+        [Obsolete("OpenAPI DisableVpcClassicLink is deprecated")]
+        // Deprecated
         public async Task<DisableVpcClassicLinkResponse> DisableVpcClassicLinkAsync(DisableVpcClassicLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -53428,6 +53324,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await EnablePhysicalConnectionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI EnableVpcClassicLink is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Enables ClassicLink for a VPC.</para>
@@ -53443,6 +53343,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// EnableVpcClassicLinkResponse
         /// </returns>
+        [Obsolete("OpenAPI EnableVpcClassicLink is deprecated")]
+        // Deprecated
         public EnableVpcClassicLinkResponse EnableVpcClassicLinkWithOptions(EnableVpcClassicLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -53494,6 +53396,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<EnableVpcClassicLinkResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI EnableVpcClassicLink is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Enables ClassicLink for a VPC.</para>
@@ -53509,6 +53415,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// EnableVpcClassicLinkResponse
         /// </returns>
+        [Obsolete("OpenAPI EnableVpcClassicLink is deprecated")]
+        // Deprecated
         public async Task<EnableVpcClassicLinkResponse> EnableVpcClassicLinkWithOptionsAsync(EnableVpcClassicLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -53560,6 +53468,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<EnableVpcClassicLinkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI EnableVpcClassicLink is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Enables ClassicLink for a VPC.</para>
@@ -53572,12 +53484,18 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// EnableVpcClassicLinkResponse
         /// </returns>
+        [Obsolete("OpenAPI EnableVpcClassicLink is deprecated")]
+        // Deprecated
         public EnableVpcClassicLinkResponse EnableVpcClassicLink(EnableVpcClassicLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableVpcClassicLinkWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI EnableVpcClassicLink is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Enables ClassicLink for a VPC.</para>
@@ -53590,6 +53508,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// EnableVpcClassicLinkResponse
         /// </returns>
+        [Obsolete("OpenAPI EnableVpcClassicLink is deprecated")]
+        // Deprecated
         public async Task<EnableVpcClassicLinkResponse> EnableVpcClassicLinkAsync(EnableVpcClassicLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -54526,7 +54446,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询是否开通了出云流量服务</para>
+        /// <para>Checks whether outbound data transfer billing is enabled for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -54589,7 +54509,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询是否开通了出云流量服务</para>
+        /// <para>Checks whether outbound data transfer billing is enabled for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -54652,7 +54572,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询是否开通了出云流量服务</para>
+        /// <para>Checks whether outbound data transfer billing is enabled for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -54675,7 +54595,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询是否开通了出云流量服务</para>
+        /// <para>Checks whether outbound data transfer billing is enabled for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -54866,7 +54786,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the route target group</para>
+        /// <para>Gets the information of a route target group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -54925,7 +54845,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the route target group</para>
+        /// <para>Gets the information of a route target group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -54984,7 +54904,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the route target group</para>
+        /// <para>Gets the information of a route target group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -55007,7 +54927,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the route target group</para>
+        /// <para>Gets the information of a route target group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -55886,7 +55806,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询路由类型的明细。</para>
+        /// <para>Queries route types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55956,7 +55876,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询路由类型的明细。</para>
+        /// <para>Queries route types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56026,7 +55946,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询路由类型的明细。</para>
+        /// <para>Queries route types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56044,7 +55964,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询路由类型的明细。</para>
+        /// <para>Queries route types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56226,7 +56146,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Grants permissions to a CEN instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -56315,7 +56235,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Grants permissions to a CEN instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -56404,7 +56324,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Grants permissions to a CEN instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -56433,7 +56353,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Grants permissions to a CEN instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -56786,7 +56706,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of regions available for an Express Connect circuit.</para>
+        /// <para>Queries the list of regions available for an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56828,7 +56748,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of regions available for an Express Connect circuit.</para>
+        /// <para>Queries the list of regions available for an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56870,7 +56790,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of regions available for an Express Connect circuit.</para>
+        /// <para>Queries the list of regions available for an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56888,7 +56808,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of regions available for an Express Connect circuit.</para>
+        /// <para>Queries the list of regions available for an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58868,7 +58788,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying the connection features supported by a Express Connect circuit.</para>
+        /// <para>Queries he connection features supported by a Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58934,7 +58854,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying the connection features supported by a Express Connect circuit.</para>
+        /// <para>Queries he connection features supported by a Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59000,7 +58920,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying the connection features supported by a Express Connect circuit.</para>
+        /// <para>Queries he connection features supported by a Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59018,7 +58938,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying the connection features supported by a Express Connect circuit.</para>
+        /// <para>Queries he connection features supported by a Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59236,7 +59156,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询IP地址池中的IP地址网段信息</para>
+        /// <para>Queries CIDR blocks in an IP address pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59314,7 +59234,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询IP地址池中的IP地址网段信息</para>
+        /// <para>Queries CIDR blocks in an IP address pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59392,7 +59312,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询IP地址池中的IP地址网段信息</para>
+        /// <para>Queries CIDR blocks in an IP address pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59410,7 +59330,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询IP地址池中的IP地址网段信息</para>
+        /// <para>Queries CIDR blocks in an IP address pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59660,7 +59580,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch query for route target groups</para>
+        /// <para>Queries the list of route target groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -59739,7 +59659,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch query for route target groups</para>
+        /// <para>Queries the list of route target groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -59818,7 +59738,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch query for route target groups</para>
+        /// <para>Queries the list of route target groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -59841,7 +59761,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch query for route target groups</para>
+        /// <para>Queries the list of route target groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -61592,7 +61512,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries advertised routes.</para>
+        /// <para>Query the route publishing status</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61678,7 +61598,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries advertised routes.</para>
+        /// <para>Query the route publishing status</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61764,7 +61684,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries advertised routes.</para>
+        /// <para>Query the route publishing status</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61782,7 +61702,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries advertised routes.</para>
+        /// <para>Query the route publishing status</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -71256,7 +71176,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改VSwitch属性</para>
+        /// <para>Modifies the name and description of a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -71348,7 +71268,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改VSwitch属性</para>
+        /// <para>Modifies the name and description of a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -71440,7 +71360,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改VSwitch属性</para>
+        /// <para>Modifies the name and description of a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -71468,7 +71388,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改VSwitch属性</para>
+        /// <para>Modifies the name and description of a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -71496,7 +71416,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改交换机预留网段的名称和描述信息。</para>
+        /// <para>Modifies the name and description of a CIDR block reserved for a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -71580,7 +71500,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改交换机预留网段的名称和描述信息。</para>
+        /// <para>Modifies the name and description of a CIDR block reserved for a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -71664,7 +71584,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改交换机预留网段的名称和描述信息。</para>
+        /// <para>Modifies the name and description of a CIDR block reserved for a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -71688,7 +71608,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改交换机预留网段的名称和描述信息。</para>
+        /// <para>Modifies the name and description of a CIDR block reserved for a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -72316,7 +72236,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a virtual private cloud (VPC).</para>
+        /// <para>Modifies the configurations of a specified VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -72412,7 +72332,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a virtual private cloud (VPC).</para>
+        /// <para>Modifies the configurations of a specified VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -72508,7 +72428,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a virtual private cloud (VPC).</para>
+        /// <para>Modifies the configurations of a specified VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -72532,7 +72452,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a virtual private cloud (VPC).</para>
+        /// <para>Modifies the configurations of a specified VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -73540,7 +73460,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a VPN gateway.</para>
+        /// <para>Modifies the name and description of a VPN Gateway or the automatic route advertisement feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -73628,7 +73548,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a VPN gateway.</para>
+        /// <para>Modifies the name and description of a VPN Gateway or the automatic route advertisement feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -73716,7 +73636,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a VPN gateway.</para>
+        /// <para>Modifies the name and description of a VPN Gateway or the automatic route advertisement feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -73744,7 +73664,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a VPN gateway.</para>
+        /// <para>Modifies the name and description of a VPN Gateway or the automatic route advertisement feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -75904,7 +75824,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Advertises VPC routes to an external component.</para>
+        /// <para>Publish VPC Routes</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -75982,7 +75902,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Advertises VPC routes to an external component.</para>
+        /// <para>Publish VPC Routes</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -76060,7 +75980,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Advertises VPC routes to an external component.</para>
+        /// <para>Publish VPC Routes</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -76078,7 +75998,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Advertises VPC routes to an external component.</para>
+        /// <para>Publish VPC Routes</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77482,6 +77402,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await RemoveCommonBandwidthPackageIpWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates an EIP from a shared-bandwidth GA instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveGlobalAccelerationInstanceIpRequest
         /// </param>
@@ -77543,6 +77468,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<RemoveGlobalAccelerationInstanceIpResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates an EIP from a shared-bandwidth GA instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveGlobalAccelerationInstanceIpRequest
         /// </param>
@@ -77604,6 +77534,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<RemoveGlobalAccelerationInstanceIpResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates an EIP from a shared-bandwidth GA instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveGlobalAccelerationInstanceIpRequest
         /// </param>
@@ -77617,6 +77552,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return RemoveGlobalAccelerationInstanceIpWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates an EIP from a shared-bandwidth GA instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveGlobalAccelerationInstanceIpRequest
         /// </param>
@@ -78032,7 +77972,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改DHCP选项集与VPC的关联。</para>
+        /// <para>Replaces the DHCP options set that is associated with a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -78116,7 +78056,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改DHCP选项集与VPC的关联。</para>
+        /// <para>Replaces the DHCP options set that is associated with a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -78200,7 +78140,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改DHCP选项集与VPC的关联。</para>
+        /// <para>Replaces the DHCP options set that is associated with a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -78228,7 +78168,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改DHCP选项集与VPC的关联。</para>
+        /// <para>Replaces the DHCP options set that is associated with a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -79696,7 +79636,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Switch Active and Standby For RouteTargetGroup.</para>
+        /// <para>Performs primary and secondary switchover for the route target group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -79755,7 +79695,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Switch Active and Standby For RouteTargetGroup.</para>
+        /// <para>Performs primary and secondary switchover for the route target group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -79814,7 +79754,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Switch Active and Standby For RouteTargetGroup.</para>
+        /// <para>Performs primary and secondary switchover for the route target group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -79837,7 +79777,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Switch Active and Standby For RouteTargetGroup.</para>
+        /// <para>Performs primary and secondary switchover for the route target group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -82788,7 +82728,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Dhcp选项集信息</para>
+        /// <para>Modifies the configuration of a DHCP options set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -82882,7 +82822,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Dhcp选项集信息</para>
+        /// <para>Modifies the configuration of a DHCP options set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -82976,7 +82916,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Dhcp选项集信息</para>
+        /// <para>Modifies the configuration of a DHCP options set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -82994,7 +82934,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Dhcp选项集信息</para>
+        /// <para>Modifies the configuration of a DHCP options set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -84692,7 +84632,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Route Target Group</para>
+        /// <para>Updates the information about a routing target group instance, including the name, description, and members that are not enabled.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -84765,7 +84705,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Route Target Group</para>
+        /// <para>Updates the information about a routing target group instance, including the name, description, and members that are not enabled.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -84838,7 +84778,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Route Target Group</para>
+        /// <para>Updates the information about a routing target group instance, including the name, description, and members that are not enabled.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -84867,7 +84807,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Route Target Group</para>
+        /// <para>Updates the information about a routing target group instance, including the name, description, and members that are not enabled.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -85108,7 +85048,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of an inbound or outbound rule for traffic mirroring.</para>
+        /// <para>Modifies the configuration of an inbound or outbound rule for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -85216,7 +85156,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of an inbound or outbound rule for traffic mirroring.</para>
+        /// <para>Modifies the configuration of an inbound or outbound rule for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -85324,7 +85264,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of an inbound or outbound rule for traffic mirroring.</para>
+        /// <para>Modifies the configuration of an inbound or outbound rule for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -85352,7 +85292,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of an inbound or outbound rule for traffic mirroring.</para>
+        /// <para>Modifies the configuration of an inbound or outbound rule for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -86256,7 +86196,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看eni quota</para>
+        /// <para>Queries the quota of endpoints that can be created in the reversely accessed VPC NAT gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -86331,7 +86271,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看eni quota</para>
+        /// <para>Queries the quota of endpoints that can be created in the reversely accessed VPC NAT gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -86406,7 +86346,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看eni quota</para>
+        /// <para>Queries the quota of endpoints that can be created in the reversely accessed VPC NAT gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -86429,7 +86369,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看eni quota</para>
+        /// <para>Queries the quota of endpoints that can be created in the reversely accessed VPC NAT gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

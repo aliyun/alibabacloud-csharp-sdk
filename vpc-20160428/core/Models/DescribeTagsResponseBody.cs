@@ -33,9 +33,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The list of tags that meet the filter conditions.</para>
-        /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public DescribeTagsResponseBodyTagResources TagResources { get; set; }
@@ -44,22 +41,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeTagsResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class DescribeTagsResponseBodyTagResourcesTagResource : TeaModel {
-                /// <summary>
-                /// <para>The tag key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>FinanceDept</para>
-                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
-                /// <summary>
-                /// <para>The tag value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>FinanceJoshua</para>
-                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

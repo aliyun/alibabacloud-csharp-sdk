@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>Details of SNAT entries.</para>
-        /// </summary>
         [NameInMap("SnatTableEntries")]
         [Validation(Required=false)]
         public DescribeSnatTableEntriesResponseBodySnatTableEntries SnatTableEntries { get; set; }
@@ -50,119 +47,42 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry> SnatTableEntry { get; set; }
             public class DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry : TeaModel {
-                /// <summary>
-                /// <para>Whether to enable IP affinity. Values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>0</b>: Disable IP affinity. - <b>1</b>: Enable IP affinity.<remarks>
-                /// <para>After enabling the IP affinity switch, if an SNAT entry is bound to multiple EIPs or NAT IPs, the same client will use the same EIP or NAT IP for access. Otherwise, the client will randomly select from the bound EIPs or NAT IPs for access.</para>
-                /// </remarks>
-                /// </description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("EipAffinity")]
                 [Validation(Required=false)]
                 public string EipAffinity { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the NAT gateway to which the SNAT entry belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ngw-bp1uewa15k4iy5770****</para>
-                /// </summary>
                 [NameInMap("NatGatewayId")]
                 [Validation(Required=false)]
                 public string NatGatewayId { get; set; }
 
-                /// <summary>
-                /// <para>Elastic Network Interface ID</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>eni-gw8g131ef2dnbu3k****</para>
-                /// </summary>
                 [NameInMap("NetworkInterfaceId")]
                 [Validation(Required=false)]
                 public string NetworkInterfaceId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the SNAT entry.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>snat-kmd6nv8fy****</para>
-                /// </summary>
                 [NameInMap("SnatEntryId")]
                 [Validation(Required=false)]
                 public string SnatEntryId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the SNAT entry.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>SnatEntry-1</para>
-                /// </summary>
                 [NameInMap("SnatEntryName")]
                 [Validation(Required=false)]
                 public string SnatEntryName { get; set; }
 
-                /// <summary>
-                /// <list type="bullet">
-                /// <item><description>When you query SNAT entries of Internet NAT gateways, this parameter indicates the EIP in an SNAT entry.</description></item>
-                /// <item><description>When you query SNAT entries of VPC NAT gateways, this parameter indicates the NAT IP address in an SNAT entry.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>116.22.XX.XX</para>
-                /// </summary>
                 [NameInMap("SnatIp")]
                 [Validation(Required=false)]
                 public string SnatIp { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the SNAT table to which the SNAT entry belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>stb-gz3r3odawdgffde****</para>
-                /// </summary>
                 [NameInMap("SnatTableId")]
                 [Validation(Required=false)]
                 public string SnatTableId { get; set; }
 
-                /// <summary>
-                /// <para>The source CIDR block specified in the SNAT entry.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>116.22.XX.XX/24</para>
-                /// </summary>
                 [NameInMap("SourceCIDR")]
                 [Validation(Required=false)]
                 public string SourceCIDR { get; set; }
 
-                /// <summary>
-                /// <list type="bullet">
-                /// <item><description>When you query SNAT entries of Internet NAT gateways, this parameter indicates the ID of the vSwitch that uses SNAT to access the Internet.</description></item>
-                /// <item><description>When you query SNAT entries of VPC NAT gateways, this parameter indicates the ID of the vSwitch that uses SNAT to access external networks.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vsw-3xbdsffvfgdfds****</para>
-                /// </summary>
                 [NameInMap("SourceVSwitchId")]
                 [Validation(Required=false)]
                 public string SourceVSwitchId { get; set; }
 
-                /// <summary>
-                /// <para>The status of the SNAT entry. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Pending</b></description></item>
-                /// <item><description><b>Available</b></description></item>
-                /// <item><description><b>Deleting</b></description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Pending</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }

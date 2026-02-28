@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeIPv6TranslatorAclListsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The list of network ACLs.</para>
-        /// </summary>
         [NameInMap("Ipv6TranslatorAcls")]
         [Validation(Required=false)]
         public DescribeIPv6TranslatorAclListsResponseBodyIpv6TranslatorAcls Ipv6TranslatorAcls { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeIPv6TranslatorAclListsResponseBodyIpv6TranslatorAclsIPv6TranslatorAcl> IPv6TranslatorAcl { get; set; }
             public class DescribeIPv6TranslatorAclListsResponseBodyIpv6TranslatorAclsIPv6TranslatorAcl : TeaModel {
-                /// <summary>
-                /// <para>The ACL ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ipv6transacl-bp1de2****</para>
-                /// </summary>
                 [NameInMap("AclId")]
                 [Validation(Required=false)]
                 public string AclId { get; set; }
 
-                /// <summary>
-                /// <para>The ACL name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>acl1</para>
-                /// </summary>
                 [NameInMap("AclName")]
                 [Validation(Required=false)]
                 public string AclName { get; set; }

@@ -49,9 +49,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
-        /// <summary>
-        /// <para>The details about the vRouters.</para>
-        /// </summary>
         [NameInMap("VRouters")]
         [Validation(Required=false)]
         public DescribeVRoutersResponseBodyVRouters VRouters { get; set; }
@@ -60,39 +57,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVRoutersResponseBodyVRoutersVRouter> VRouter { get; set; }
             public class DescribeVRoutersResponseBodyVRoutersVRouter : TeaModel {
-                /// <summary>
-                /// <para>The time when the vRouter was created.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2018-03-22T07:46:20Z</para>
-                /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
-                /// <summary>
-                /// <para>The description of the vRouter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>abc</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The region to which the vRouter belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
-                /// <summary>
-                /// <para>The IDs of the route tables.</para>
-                /// </summary>
                 [NameInMap("RouteTableIds")]
                 [Validation(Required=false)]
                 public DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds RouteTableIds { get; set; }
@@ -103,32 +79,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 }
 
-                /// <summary>
-                /// <para>The ID of the vRouter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vrt-rj98khsezfqpjrxmv****</para>
-                /// </summary>
                 [NameInMap("VRouterId")]
                 [Validation(Required=false)]
                 public string VRouterId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the vRouter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>doctest</para>
-                /// </summary>
                 [NameInMap("VRouterName")]
                 [Validation(Required=false)]
                 public string VRouterName { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the virtual private cloud (VPC) to which the vRouter belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vpc-rj905wotv6y030t1****</para>
-                /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }

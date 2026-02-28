@@ -101,9 +101,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        /// <summary>
-        /// <para>The list of tags added to the customer gateway.</para>
-        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public DescribeCustomerGatewayResponseBodyTags Tags { get; set; }
@@ -112,22 +109,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeCustomerGatewayResponseBodyTagsTag> Tag { get; set; }
             public class DescribeCustomerGatewayResponseBodyTagsTag : TeaModel {
-                /// <summary>
-                /// <para>The tag key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>TagKey</para>
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
-                /// <summary>
-                /// <para>The tag value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>TagValue</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

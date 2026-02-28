@@ -132,9 +132,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string LoaUrl { get; set; }
 
-            /// <summary>
-            /// <para>The information about the construction workers.</para>
-            /// </summary>
             [NameInMap("PMInfo")]
             [Validation(Required=false)]
             public DescribePhysicalConnectionLOAResponseBodyPhysicalConnectionLOATypePMInfo PMInfo { get; set; }
@@ -143,61 +140,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public List<DescribePhysicalConnectionLOAResponseBodyPhysicalConnectionLOATypePMInfoPMInfo> PMInfo { get; set; }
                 public class DescribePhysicalConnectionLOAResponseBodyPhysicalConnectionLOATypePMInfoPMInfo : TeaModel {
-                    /// <summary>
-                    /// <para>The identity document number of the construction worker.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>12345671****</para>
-                    /// </summary>
                     [NameInMap("PMCertificateNo")]
                     [Validation(Required=false)]
                     public string PMCertificateNo { get; set; }
 
-                    /// <summary>
-                    /// <para>The identity document type of the construction worker. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>IDCard</b></description></item>
-                    /// <item><description><b>Passport</b></description></item>
-                    /// <item><description><b>Other</b></description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>Other</para>
-                    /// </summary>
                     [NameInMap("PMCertificateType")]
                     [Validation(Required=false)]
                     public string PMCertificateType { get; set; }
 
-                    /// <summary>
-                    /// <para>The phone number of the construction worker.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>18910010****</para>
-                    /// </summary>
                     [NameInMap("PMContactInfo")]
                     [Validation(Required=false)]
                     public string PMContactInfo { get; set; }
 
-                    /// <summary>
-                    /// <para>The gender of the construction worker. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>Male</b></description></item>
-                    /// <item><description><b>Female</b></description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>Male</para>
-                    /// </summary>
                     [NameInMap("PMGender")]
                     [Validation(Required=false)]
                     public string PMGender { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the construction worker.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>name</para>
-                    /// </summary>
                     [NameInMap("PMName")]
                     [Validation(Required=false)]
                     public string PMName { get; set; }

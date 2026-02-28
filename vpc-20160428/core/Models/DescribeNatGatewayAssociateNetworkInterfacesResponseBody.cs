@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The ENIs associated with the VPC NAT gateway.</para>
-        /// </summary>
         [NameInMap("AssociateNetworkInterfaces")]
         [Validation(Required=false)]
         public DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfaces AssociateNetworkInterfaces { get; set; }
@@ -20,9 +17,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfacesAssociateNetworkInterface> AssociateNetworkInterface { get; set; }
             public class DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfacesAssociateNetworkInterface : TeaModel {
-                /// <summary>
-                /// <para>The IPv4 addresses of the ENIs.</para>
-                /// </summary>
                 [NameInMap("IPv4Sets")]
                 [Validation(Required=false)]
                 public DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfacesAssociateNetworkInterfaceIPv4Sets IPv4Sets { get; set; }
@@ -31,26 +25,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [Validation(Required=false)]
                     public List<DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfacesAssociateNetworkInterfaceIPv4SetsIPv4Set> IPv4Set { get; set; }
                     public class DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfacesAssociateNetworkInterfaceIPv4SetsIPv4Set : TeaModel {
-                        /// <summary>
-                        /// <para>The primary private IP address of the ENI.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para><c>172.17.**.**</c></para>
-                        /// </summary>
                         [NameInMap("IPv4Address")]
                         [Validation(Required=false)]
                         public string IPv4Address { get; set; }
 
-                        /// <summary>
-                        /// <para>Indicates whether the IP address is the primary private IP address. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>true: Primary private IP address</description></item>
-                        /// <item><description>false: Secondary private IP addresses</description></item>
-                        /// </list>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>true</para>
-                        /// </summary>
                         [NameInMap("Primary")]
                         [Validation(Required=false)]
                         public bool? Primary { get; set; }
@@ -59,62 +37,26 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 }
 
-                /// <summary>
-                /// <para>The ID of the ENI.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>eni-gw8g131ef2dnbu3k****</para>
-                /// </summary>
                 [NameInMap("NetworkInterfaceId")]
                 [Validation(Required=false)]
                 public string NetworkInterfaceId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the service resource.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ep-8psre8c8936596cd****</para>
-                /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
-                /// <summary>
-                /// <para>The UID of the account to which the service resource belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>138859086900****</para>
-                /// </summary>
                 [NameInMap("ResourceOwnerId")]
                 [Validation(Required=false)]
                 public string ResourceOwnerId { get; set; }
 
-                /// <summary>
-                /// <para>The type of the service resource.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>PrivateLink</para>
-                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
-                /// <summary>
-                /// <para>VPC ID of the service resource</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vpc-bp1di7uewzmtvfuq8****</para>
-                /// </summary>
                 [NameInMap("ResourceVpcId")]
                 [Validation(Required=false)]
                 public string ResourceVpcId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the tunnel index.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>41a5489ea2a0****</para>
-                /// </summary>
                 [NameInMap("TunnelIndex")]
                 [Validation(Required=false)]
                 public string TunnelIndex { get; set; }
