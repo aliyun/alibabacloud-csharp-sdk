@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class SetPasswordComplexityConfigurationRequest : TeaModel {
+        [NameInMap("DisabledWeakPasswordLogin")]
+        [Validation(Required=false)]
+        public bool? DisabledWeakPasswordLogin { get; set; }
+
         /// <summary>
         /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>

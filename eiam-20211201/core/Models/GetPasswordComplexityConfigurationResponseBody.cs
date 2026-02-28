@@ -16,6 +16,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public GetPasswordComplexityConfigurationResponseBodyPasswordComplexityConfiguration PasswordComplexityConfiguration { get; set; }
         public class GetPasswordComplexityConfigurationResponseBodyPasswordComplexityConfiguration : TeaModel {
+            [NameInMap("DisabledWeakPasswordLogin")]
+            [Validation(Required=false)]
+            public bool? DisabledWeakPasswordLogin { get; set; }
+
+            [NameInMap("DisabledWeakPasswordLoginStartedAt")]
+            [Validation(Required=false)]
+            public long? DisabledWeakPasswordLoginStartedAt { get; set; }
+
             /// <summary>
             /// <para>The password complexity rules.</para>
             /// </summary>
