@@ -4,6 +4,12 @@
 - Update API SetPasswordComplexityConfiguration: add request parameters DisabledWeakPasswordLogin.
 
 
+2026-02-28 Version: 1.21.2
+- Update API GetPasswordComplexityConfiguration: add response parameters Body.PasswordComplexityConfiguration.DisabledWeakPasswordLogin.
+- Update API GetPasswordComplexityConfiguration: add response parameters Body.PasswordComplexityConfiguration.DisabledWeakPasswordLoginStartedAt.
+- Update API SetPasswordComplexityConfiguration: add request parameters DisabledWeakPasswordLogin.
+
+
 2026-02-27 Version: 1.21.1
 - Generated csharp 2021-12-01 for Eiam.
 
