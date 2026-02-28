@@ -66,6 +66,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Mobile { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("NeedEmailNotification")]
+        [Validation(Required=false)]
+        public string NeedEmailNotification { get; set; }
+
         [NameInMap("Nickname")]
         [Validation(Required=false)]
         public string Nickname { get; set; }

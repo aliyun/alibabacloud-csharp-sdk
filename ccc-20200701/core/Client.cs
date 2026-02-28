@@ -5334,6 +5334,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await CreateTicketWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateUserRequest
         /// </param>
@@ -5376,6 +5381,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["Mobile"] = request.Mobile;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedEmailNotification))
+            {
+                query["NeedEmailNotification"] = request.NeedEmailNotification;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nickname))
             {
                 query["Nickname"] = request.Nickname;
@@ -5415,6 +5424,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CreateUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateUserRequest
         /// </param>
@@ -5457,6 +5471,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["Mobile"] = request.Mobile;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedEmailNotification))
+            {
+                query["NeedEmailNotification"] = request.NeedEmailNotification;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nickname))
             {
                 query["Nickname"] = request.Nickname;
@@ -5496,6 +5514,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CreateUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateUserRequest
         /// </param>
@@ -5509,6 +5532,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return CreateUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateUserRequest
         /// </param>
@@ -9349,6 +9377,10 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
             {
                 query["ContactId"] = request.ContactId;
@@ -9395,6 +9427,10 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
             {
                 query["ContactId"] = request.ContactId;
@@ -13238,6 +13274,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ImportContactFlowWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入自有线路号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ImportCorpNumbersRequest
         /// </param>
@@ -13295,6 +13336,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ImportCorpNumbersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入自有线路号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ImportCorpNumbersRequest
         /// </param>
@@ -13352,6 +13398,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ImportCorpNumbersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入自有线路号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ImportCorpNumbersRequest
         /// </param>
@@ -13365,6 +13416,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ImportCorpNumbersWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入自有线路号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ImportCorpNumbersRequest
         /// </param>
@@ -20722,6 +20778,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListLegacyQueueEventLogsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取单轨录音</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMonoRecordingsRequest
         /// </param>
@@ -20736,6 +20797,14 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentChannelId))
+            {
+                query["AgentChannelId"] = request.AgentChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
             {
                 query["ContactId"] = request.ContactId;
@@ -20763,6 +20832,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListMonoRecordingsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取单轨录音</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMonoRecordingsRequest
         /// </param>
@@ -20777,6 +20851,14 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentChannelId))
+            {
+                query["AgentChannelId"] = request.AgentChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
             {
                 query["ContactId"] = request.ContactId;
@@ -20804,6 +20886,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListMonoRecordingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取单轨录音</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMonoRecordingsRequest
         /// </param>
@@ -20817,6 +20904,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListMonoRecordingsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取单轨录音</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMonoRecordingsRequest
         /// </param>
@@ -20830,6 +20922,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListMonoRecordingsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取分轨录音</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMultiChannelRecordingsRequest
         /// </param>
@@ -20844,6 +20941,14 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentChannelId))
+            {
+                query["AgentChannelId"] = request.AgentChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
             {
                 query["ContactId"] = request.ContactId;
@@ -20871,6 +20976,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListMultiChannelRecordingsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取分轨录音</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMultiChannelRecordingsRequest
         /// </param>
@@ -20885,6 +20995,14 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentChannelId))
+            {
+                query["AgentChannelId"] = request.AgentChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
             {
                 query["ContactId"] = request.ContactId;
@@ -20912,6 +21030,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListMultiChannelRecordingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取分轨录音</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMultiChannelRecordingsRequest
         /// </param>
@@ -20925,6 +21048,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListMultiChannelRecordingsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取分轨录音</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMultiChannelRecordingsRequest
         /// </param>
@@ -22878,6 +23006,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListSkillLevelsOfUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>使用ListSmsMetadata获取短信配置信息。</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListSmsMetadataRequest
         /// </param>
@@ -22927,6 +23060,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListSmsMetadataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>使用ListSmsMetadata获取短信配置信息。</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListSmsMetadataRequest
         /// </param>
@@ -22976,6 +23114,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListSmsMetadataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>使用ListSmsMetadata获取短信配置信息。</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListSmsMetadataRequest
         /// </param>
@@ -22989,6 +23132,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListSmsMetadataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>使用ListSmsMetadata获取短信配置信息。</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListSmsMetadataRequest
         /// </param>
@@ -24054,6 +24202,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListVisitorChatMessagesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询语音信箱列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListVoicemailsRequest
         /// </param>
@@ -24119,6 +24272,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListVoicemailsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询语音信箱列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListVoicemailsRequest
         /// </param>
@@ -24184,6 +24342,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListVoicemailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询语音信箱列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListVoicemailsRequest
         /// </param>
@@ -24197,6 +24360,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListVoicemailsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询语音信箱列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListVoicemailsRequest
         /// </param>

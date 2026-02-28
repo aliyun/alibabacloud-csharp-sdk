@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetConversationDetailRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>agent@ccc-test</para>
+        /// </summary>
+        [NameInMap("AgentId")]
+        [Validation(Required=false)]
+        public string AgentId { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

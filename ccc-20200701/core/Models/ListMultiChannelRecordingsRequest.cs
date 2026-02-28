@@ -10,6 +10,22 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListMultiChannelRecordingsRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ch-user-<b><b>-</b></b>-1772180844645-job-******</para>
+        /// </summary>
+        [NameInMap("AgentChannelId")]
+        [Validation(Required=false)]
+        public string AgentChannelId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>agent@ccc-test</para>
+        /// </summary>
+        [NameInMap("AgentId")]
+        [Validation(Required=false)]
+        public string AgentId { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
