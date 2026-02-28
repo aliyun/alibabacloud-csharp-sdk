@@ -61,8 +61,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <term><b>Obsolete</b></term>
         [NameInMap("dryRun")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? DryRun { get; set; }
 
         /// <summary>

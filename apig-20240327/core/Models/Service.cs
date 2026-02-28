@@ -232,6 +232,30 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public long? UpdateTimestamp { get; set; }
 
+        [NameInMap("versions")]
+        [Validation(Required=false)]
+        public List<ServiceVersions> Versions { get; set; }
+        public class ServiceVersions : TeaModel {
+            [NameInMap("labels")]
+            [Validation(Required=false)]
+            public List<ServiceVersionsLabels> Labels { get; set; }
+            public class ServiceVersionsLabels : TeaModel {
+                [NameInMap("key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+        }
+
     }
 
 }

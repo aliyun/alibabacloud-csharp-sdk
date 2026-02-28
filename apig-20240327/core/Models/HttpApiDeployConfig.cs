@@ -508,6 +508,20 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
             }
 
+            [NameInMap("aiStatisticsConfig")]
+            [Validation(Required=false)]
+            public HttpApiDeployConfigPolicyConfigsAiStatisticsConfig AiStatisticsConfig { get; set; }
+            public class HttpApiDeployConfigPolicyConfigsAiStatisticsConfig : TeaModel {
+                [NameInMap("logRequestContent")]
+                [Validation(Required=false)]
+                public bool? LogRequestContent { get; set; }
+
+                [NameInMap("logResponseContent")]
+                [Validation(Required=false)]
+                public bool? LogResponseContent { get; set; }
+
+            }
+
             /// <summary>
             /// <para>AI Token Rate Limit configuration</para>
             /// </summary>
