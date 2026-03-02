@@ -1957,7 +1957,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a certificate signing request (CSR) file.</para>
+        /// <para>Deletes a Certificate Signing Request (CSR) that is no longer required.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1999,7 +1999,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a certificate signing request (CSR) file.</para>
+        /// <para>Deletes a Certificate Signing Request (CSR) that is no longer required.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2041,7 +2041,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a certificate signing request (CSR) file.</para>
+        /// <para>Deletes a Certificate Signing Request (CSR) that is no longer required.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2059,7 +2059,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a certificate signing request (CSR) file.</para>
+        /// <para>Deletes a Certificate Signing Request (CSR) that is no longer required.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3537,7 +3537,101 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quota for certificate repositories.</para>
+        /// <para>统计资产数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAssetCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAssetCountResponse
+        /// </returns>
+        public GetAssetCountResponse GetAssetCountWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAssetCount",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAssetCountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计资产数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAssetCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAssetCountResponse
+        /// </returns>
+        public async Task<GetAssetCountResponse> GetAssetCountWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAssetCount",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAssetCountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计资产数量</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetAssetCountResponse
+        /// </returns>
+        public GetAssetCountResponse GetAssetCount()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAssetCountWithOptions(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计资产数量</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetAssetCountResponse
+        /// </returns>
+        public async Task<GetAssetCountResponse> GetAssetCountAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAssetCountWithOptionsAsync(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the API call quota for certificate application repositories. When you call API operations for signature generation, signature verification, data encryption, and data decryption, your API call quota for certificate application repositories is consumed. If your API call quota is exhausted, you can no longer call specific certificate application repository-related operations. You can call this operation to query the API call quota for certificate application repositories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3575,7 +3669,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quota for certificate repositories.</para>
+        /// <para>Queries the API call quota for certificate application repositories. When you call API operations for signature generation, signature verification, data encryption, and data decryption, your API call quota for certificate application repositories is consumed. If your API call quota is exhausted, you can no longer call specific certificate application repository-related operations. You can call this operation to query the API call quota for certificate application repositories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3613,7 +3707,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quota for certificate repositories.</para>
+        /// <para>Queries the API call quota for certificate application repositories. When you call API operations for signature generation, signature verification, data encryption, and data decryption, your API call quota for certificate application repositories is consumed. If your API call quota is exhausted, you can no longer call specific certificate application repository-related operations. You can call this operation to query the API call quota for certificate application repositories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3632,7 +3726,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quota for certificate repositories.</para>
+        /// <para>Queries the API call quota for certificate application repositories. When you call API operations for signature generation, signature verification, data encryption, and data decryption, your API call quota for certificate application repositories is consumed. If your API call quota is exhausted, you can no longer call specific certificate application repository-related operations. You can call this operation to query the API call quota for certificate application repositories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4131,6 +4225,100 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>统计风险资产数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRiskCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRiskCountResponse
+        /// </returns>
+        public GetRiskCountResponse GetRiskCountWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRiskCount",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRiskCountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计风险资产数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRiskCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRiskCountResponse
+        /// </returns>
+        public async Task<GetRiskCountResponse> GetRiskCountWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRiskCount",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRiskCountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计风险资产数量</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetRiskCountResponse
+        /// </returns>
+        public GetRiskCountResponse GetRiskCount()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetRiskCountWithOptions(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计风险资产数量</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetRiskCountResponse
+        /// </returns>
+        public async Task<GetRiskCountResponse> GetRiskCountAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetRiskCountWithOptionsAsync(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询异步任务状态</para>
         /// </summary>
         /// 
@@ -4259,7 +4447,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a certificate.</para>
+        /// <para>Queries certificate details, including the basic information and public and private key content. You can call this operation to download the certificate and private key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4310,7 +4498,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a certificate.</para>
+        /// <para>Queries certificate details, including the basic information and public and private key content. You can call this operation to download the certificate and private key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4361,7 +4549,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a certificate.</para>
+        /// <para>Queries certificate details, including the basic information and public and private key content. You can call this operation to download the certificate and private key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4384,7 +4572,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a certificate.</para>
+        /// <para>Queries certificate details, including the basic information and public and private key content. You can call this operation to download the certificate and private key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4403,6 +4591,150 @@ namespace AlibabaCloud.SDK.Cas20200407
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetUserCertificateDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询云产品资源统计列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAssetCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAssetCountResponse
+        /// </returns>
+        public ListAssetCountResponse ListAssetCountWithOptions(ListAssetCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowSize))
+            {
+                query["ShowSize"] = request.ShowSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAssetCount",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAssetCountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询云产品资源统计列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAssetCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAssetCountResponse
+        /// </returns>
+        public async Task<ListAssetCountResponse> ListAssetCountWithOptionsAsync(ListAssetCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowSize))
+            {
+                query["ShowSize"] = request.ShowSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAssetCount",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAssetCountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询云产品资源统计列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAssetCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAssetCountResponse
+        /// </returns>
+        public ListAssetCountResponse ListAssetCount(ListAssetCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAssetCountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询云产品资源统计列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAssetCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAssetCountResponse
+        /// </returns>
+        public async Task<ListAssetCountResponse> ListAssetCountAsync(ListAssetCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAssetCountWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5403,7 +5735,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries certificate signing requests (CSRs).</para>
+        /// <para>Queries the details of Certificate Signing Requests (CSRs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5457,7 +5789,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries certificate signing requests (CSRs).</para>
+        /// <para>Queries the details of Certificate Signing Requests (CSRs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5511,7 +5843,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries certificate signing requests (CSRs).</para>
+        /// <para>Queries the details of Certificate Signing Requests (CSRs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5529,7 +5861,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries certificate signing requests (CSRs).</para>
+        /// <para>Queries the details of Certificate Signing Requests (CSRs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7195,7 +7527,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the private key of a certificate signing request (CSR).</para>
+        /// <para>Uploads or updates the private key for a Certificate Signing Request (CSR). If you did not upload the required priviate when you uploaded a CSR, you can call this operation to upload or update the private key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7241,7 +7573,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the private key of a certificate signing request (CSR).</para>
+        /// <para>Uploads or updates the private key for a Certificate Signing Request (CSR). If you did not upload the required priviate when you uploaded a CSR, you can call this operation to upload or update the private key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7287,7 +7619,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the private key of a certificate signing request (CSR).</para>
+        /// <para>Uploads or updates the private key for a Certificate Signing Request (CSR). If you did not upload the required priviate when you uploaded a CSR, you can call this operation to upload or update the private key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7305,7 +7637,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the private key of a certificate signing request (CSR).</para>
+        /// <para>Uploads or updates the private key for a Certificate Signing Request (CSR). If you did not upload the required priviate when you uploaded a CSR, you can call this operation to upload or update the private key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7979,7 +8311,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a certificate signing request (CSR) file</para>
+        /// <para>Uploads an existing Certificate Signing Request (CSR). You can use the CSR when you upload a certificate. You can also manage the uploaded CSRs in a centralized manner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8029,7 +8361,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a certificate signing request (CSR) file</para>
+        /// <para>Uploads an existing Certificate Signing Request (CSR). You can use the CSR when you upload a certificate. You can also manage the uploaded CSRs in a centralized manner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8079,7 +8411,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a certificate signing request (CSR) file</para>
+        /// <para>Uploads an existing Certificate Signing Request (CSR). You can use the CSR when you upload a certificate. You can also manage the uploaded CSRs in a centralized manner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8097,7 +8429,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a certificate signing request (CSR) file</para>
+        /// <para>Uploads an existing Certificate Signing Request (CSR). You can use the CSR when you upload a certificate. You can also manage the uploaded CSRs in a centralized manner.</para>
         /// </summary>
         /// 
         /// <param name="request">
