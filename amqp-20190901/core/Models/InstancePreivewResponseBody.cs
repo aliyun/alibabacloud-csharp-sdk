@@ -77,6 +77,14 @@ namespace AlibabaCloud.SDK.Amqp20190901.Models
                     [Validation(Required=false)]
                     public string KmsKeyId { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>tcp_and_ssl</para>
+                    /// </summary>
+                    [NameInMap("ListenerMode")]
+                    [Validation(Required=false)]
+                    public string ListenerMode { get; set; }
+
                     [NameInMap("MaxBindingCount")]
                     [Validation(Required=false)]
                     public int? MaxBindingCount { get; set; }
@@ -149,9 +157,45 @@ namespace AlibabaCloud.SDK.Amqp20190901.Models
                     [Validation(Required=false)]
                     public string PrivateEndpoint { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>pvl</para>
+                    /// </summary>
+                    [NameInMap("PrivateEndpointType")]
+                    [Validation(Required=false)]
+                    public string PrivateEndpointType { get; set; }
+
                     [NameInMap("PublicEndpoint")]
                     [Validation(Required=false)]
                     public string PublicEndpoint { get; set; }
+
+                    [NameInMap("PvlParams")]
+                    [Validation(Required=false)]
+                    public InstancePreivewResponseBodyDataInstancesInstancesVOPvlParams PvlParams { get; set; }
+                    public class InstancePreivewResponseBodyDataInstancesInstancesVOPvlParams : TeaModel {
+                        [NameInMap("PvlVO")]
+                        [Validation(Required=false)]
+                        public List<InstancePreivewResponseBodyDataInstancesInstancesVOPvlParamsPvlVO> PvlVO { get; set; }
+                        public class InstancePreivewResponseBodyDataInstancesInstancesVOPvlParamsPvlVO : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>epId</para>
+                            /// </summary>
+                            [NameInMap("Key")]
+                            [Validation(Required=false)]
+                            public string Key { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>ep-xxx</para>
+                            /// </summary>
+                            [NameInMap("Value")]
+                            [Validation(Required=false)]
+                            public string Value { get; set; }
+
+                        }
+
+                    }
 
                     [NameInMap("ResourceGroupId")]
                     [Validation(Required=false)]
