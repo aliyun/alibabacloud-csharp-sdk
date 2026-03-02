@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class SetPasswordPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to disable logon after the password expires. Valid values:</para>
+        /// <para>Specifies whether to prevent a RAM user from logging on after the password expires. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: After the password expires, you cannot use the password to log on to the console. You can log on to the console only after you reset the password by using your Alibaba Cloud account or as a RAM user that has administrative rights.</description></item>
-        /// <item><description>false: After the password expires, you can change the password to log on to the console. This is the default value.</description></item>
+        /// <item><description><para>true: After the password expires, the RAM user cannot log on to the console. The password must be reset by the Alibaba Cloud account or a RAM user with administrative permissions before the RAM user can log on.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): After the password expires, the RAM user can change the password and then log on.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,14 +25,27 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public bool? HardExpire { get; set; }
 
+        /// <summary>
+        /// <para>The validity period of an initial password. An initial password is the password that is set when you create a RAM user or re-enable console logon.</para>
+        /// <para>Valid values: 0 to 90. Unit: days.</para>
+        /// <para>Default value: 14.</para>
+        /// <para>A value of 0 disables this feature.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>14</para>
+        /// </summary>
         [NameInMap("InitialPasswordAge")]
         [Validation(Required=false)]
         public int? InitialPasswordAge { get; set; }
 
+        [NameInMap("InterceptRiskPasswordOnApi")]
+        [Validation(Required=false)]
+        public bool? InterceptRiskPasswordOnApi { get; set; }
+
         /// <summary>
-        /// <para>The maximum number of password retries. If you enter the wrong passwords for the specified consecutive times, the account is locked for one hour.</para>
+        /// <para>The maximum number of consecutive logon failures that are allowed. If the number of failures is reached, the account is locked for one hour.</para>
         /// <para>Valid values: 0 to 32.</para>
-        /// <para>The default value is 0, which indicates that the password retries are not limited.</para>
+        /// <para>Default value: 0. A value of 0 disables this feature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -40,9 +55,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public int? MaxLoginAttemps { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the password.</para>
+        /// <para>The validity period of a password.</para>
         /// <para>Valid values: 0 to 1095. Unit: days.</para>
-        /// <para>The default value is 0, which indicates that the password never expires.</para>
+        /// <para>Default value: 0. A value of 0 indicates that the password never expires.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -52,9 +67,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public int? MaxPasswordAge { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of unique characters in the password.</para>
+        /// <para>The minimum number of unique characters in a password.</para>
         /// <para>Valid values: 0 to 8.</para>
-        /// <para>The default value is 0, which indicates that no limits are imposed on the number of unique characters in a password.</para>
+        /// <para>Default value: 0. A value of 0 indicates that no limit is imposed on the number of unique characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -64,7 +79,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public int? MinimumPasswordDifferentCharacter { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of characters in the password.</para>
+        /// <para>The minimum length of the password.</para>
         /// <para>Valid values: 8 to 32. Default value: 8.</para>
         /// 
         /// <b>Example:</b>
@@ -75,10 +90,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public int? MinimumPasswordLength { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to exclude the username from the password. Valid values:</para>
+        /// <para>Specifies whether the password can contain the username. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: A password cannot contain the username.</description></item>
-        /// <item><description>false: A password can contain the username. This is the default value.</description></item>
+        /// <item><description><para>true: The password cannot contain the username.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): The password can contain the username.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,9 +106,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public bool? PasswordNotContainUserName { get; set; }
 
         /// <summary>
-        /// <para>The policy for password history check.</para>
-        /// <para>The previous N passwords cannot be reused. Valid values of N: 0 to 24.</para>
-        /// <para>The default value is 0, which indicates that RAM users can reuse previous passwords.</para>
+        /// <para>The number of previous passwords that cannot be reused.</para>
+        /// <para>Valid values: 0 to 24.</para>
+        /// <para>Default value: 0. A value of 0 disables this feature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -103,8 +120,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>Specifies whether the password must contain lowercase letters. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false (default)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,8 +136,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>Specifies whether the password must contain digits. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false (default)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -129,10 +150,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public bool? RequireNumbers { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the password must contain special characters. Valid values:</para>
+        /// <para>Specifies whether the password must contain symbols. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false (default)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -145,8 +168,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>Specifies whether the password must contain uppercase letters. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false (default)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

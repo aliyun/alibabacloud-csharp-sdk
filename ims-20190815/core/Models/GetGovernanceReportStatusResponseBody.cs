@@ -17,18 +17,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public List<GetGovernanceReportStatusResponseBodyGovernanceItemsStatusGovernanceItemStatus> GovernanceItemStatus { get; set; }
             public class GetGovernanceReportStatusResponseBodyGovernanceItemsStatusGovernanceItemStatus : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>AccountRecentUsingAccessKey</para>
-                /// </summary>
                 [NameInMap("GovernanceItem")]
                 [Validation(Required=false)]
                 public string GovernanceItem { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>Progressing</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
@@ -38,6 +30,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F2CE9688-AA85-5F23-8C22-0EC23473405A</para>
         /// </summary>
@@ -46,6 +40,16 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The generation status of the report. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Started: The report generation has started.</para>
+        /// </description></item>
+        /// <item><description><para>Progressing: The report is being generated.</para>
+        /// </description></item>
+        /// <item><description><para>Completed: The report has been generated.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Progressing</para>
         /// </summary>

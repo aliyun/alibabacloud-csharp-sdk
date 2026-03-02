@@ -11,40 +11,40 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
     public class GetSAMLProviderResponseBody : TeaModel {
         /// <summary>
         /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>BAADB995-0C7A-476D-B293-7E94568EEDFB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the IdP.</para>
+        /// <para>The information about the SAML provider.</para>
         /// </summary>
         [NameInMap("SAMLProvider")]
         [Validation(Required=false)]
         public GetSAMLProviderResponseBodySAMLProvider SAMLProvider { get; set; }
         public class GetSAMLProviderResponseBodySAMLProvider : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the IdP.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>acs:ram::177242285274****:saml-provider/test-provider</para>
+            /// <para>The Alibaba Cloud Resource Name (ARN) of the SAML provider.</para>
             /// </summary>
             [NameInMap("Arn")]
             [Validation(Required=false)]
             public string Arn { get; set; }
 
+            /// <summary>
+            /// <para>The signature algorithm supported by the Alibaba Cloud service provider (SP). Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>rsa-sha256</para>
+            /// </description></item>
+            /// <item><description><para>rsa-sha1</para>
+            /// </description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("AuthnSignAlgo")]
             [Validation(Required=false)]
             public string AuthnSignAlgo { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2020-10-22T02:37:05Z</para>
+            /// <para>The time when the SAML provider was created.</para>
             /// </summary>
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
@@ -52,39 +52,27 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
             /// <summary>
             /// <para>The description.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>This is a provider.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The metadata file, which is Base64 encoded.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>PD94bWwgdmVy****</para>
+            /// <para>The Base64-encoded metadata file.</para>
             /// </summary>
             [NameInMap("EncodedSAMLMetadataDocument")]
             [Validation(Required=false)]
             public string EncodedSAMLMetadataDocument { get; set; }
 
             /// <summary>
-            /// <para>The name of the IdP.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>test-provider</para>
+            /// <para>The name of the SAML provider.</para>
             /// </summary>
             [NameInMap("SAMLProviderName")]
             [Validation(Required=false)]
             public string SAMLProviderName { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2020-10-22T02:51:20Z</para>
+            /// <para>The time when the SAML provider was last updated.</para>
             /// </summary>
             [NameInMap("UpdateDate")]
             [Validation(Required=false)]

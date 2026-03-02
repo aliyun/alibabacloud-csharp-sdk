@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class CreateLoginProfileRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to forcefully enable multi-factor authentication (MFA) for the RAM user. Valid values:</para>
+        /// <para>Specifies whether the RAM user must enable multi-factor authentication (MFA). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: forcefully enables MFA for the RAM user. The RAM user must bind an MFA device upon the next logon.</description></item>
-        /// <item><description>false (default): does not forcefully enable MFA for the RAM user.</description></item>
+        /// <item><description><para>true: MFA is required. The RAM user must bind an MFA device at the next logon.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): MFA is not required.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,8 +26,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public bool? MFABindRequired { get; set; }
 
         /// <summary>
-        /// <para>The password that the RAM user uses to log on to the console.</para>
-        /// <para>The password must meet the complexity requirements.</para>
+        /// <para>The logon password for the RAM user.</para>
+        /// <para>The password must meet the password strength requirements.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mypassword</para>
@@ -35,10 +37,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the RAM user is required to reset the password upon the next logon. Valid values:</para>
+        /// <para>Specifies whether the RAM user must reset the password at the next logon. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false (default)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,10 +53,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public bool? PasswordResetRequired { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable password-based logons to the console. Valid values:</para>
+        /// <para>Specifies whether to enable password-based logon for the console. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Active: Password-based logon is enabled. This is the default value.</description></item>
-        /// <item><description>Inactive: Password-based logon is disabled.</description></item>
+        /// <item><description><para>Active (default): Enables logon.</para>
+        /// </description></item>
+        /// <item><description><para>Inactive: Disables logon.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

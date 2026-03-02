@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ListPredefinedScopesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information about application permissions.</para>
-        /// </summary>
         [NameInMap("PredefinedScopes")]
         [Validation(Required=false)]
         public ListPredefinedScopesResponseBodyPredefinedScopes PredefinedScopes { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public List<ListPredefinedScopesResponseBodyPredefinedScopesPredefinedScope> PredefinedScope { get; set; }
             public class ListPredefinedScopesResponseBodyPredefinedScopesPredefinedScope : TeaModel {
-                /// <summary>
-                /// <para>The description of the permission scope.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Obtain the OpenID of the user. This is the default permission that you cannot remove.</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The name of the permission scope.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>openid</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }

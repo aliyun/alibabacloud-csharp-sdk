@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class CreateLoginProfileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The logon information.</para>
+        /// <para>The logon information for the console.</para>
         /// </summary>
         [NameInMap("LoginProfile")]
         [Validation(Required=false)]
         public CreateLoginProfileResponseBodyLoginProfile LoginProfile { get; set; }
         public class CreateLoginProfileResponseBodyLoginProfile : TeaModel {
             /// <summary>
-            /// <para>Indicates whether to forcefully enable MFA for the RAM user.</para>
+            /// <para>Indicates whether the RAM user is required to enable MFA.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public bool? MFABindRequired { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the RAM user is required to reset the password upon the next logon.</para>
+            /// <para>Indicates whether the RAM user must reset the password at the next logon.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -36,12 +36,27 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public bool? PasswordResetRequired { get; set; }
 
+            /// <summary>
+            /// <para>The status of the initial password. This password is set when a logon configuration is created or when console logon is re-enabled.</para>
+            /// <para>Valid values</para>
+            /// <list type="bullet">
+            /// <item><description><para>&quot;NotInitial&quot;: The password is not an initial password.</para>
+            /// </description></item>
+            /// <item><description><para>&quot;InitialValid&quot;: The initial password is valid.</para>
+            /// </description></item>
+            /// <item><description><para>&quot;InitialExpired&quot;: The initial password has expired.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>NotInitial</para>
+            /// </summary>
             [NameInMap("PasswordStatus")]
             [Validation(Required=false)]
             public string PasswordStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to enable password-based logons to the console.</para>
+            /// <para>Indicates whether password-based logon for the console is enabled or disabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -51,7 +66,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The time when the logon configuration was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-14T03:47:51Z</para>

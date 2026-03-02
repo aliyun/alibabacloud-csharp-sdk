@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class CreateApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the application.</para>
+        /// <para>The application information.</para>
         /// </summary>
         [NameInMap("Application")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>472457090344041****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AppType { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the application was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-23T08:06:57Z</para>
@@ -77,15 +77,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The information about the permissions that are granted on the application.</para>
+            /// <para>The information about the application scopes.</para>
             /// </summary>
             [NameInMap("DelegatedScope")]
             [Validation(Required=false)]
             public CreateApplicationResponseBodyApplicationDelegatedScope DelegatedScope { get; set; }
             public class CreateApplicationResponseBodyApplicationDelegatedScope : TeaModel {
-                /// <summary>
-                /// <para>The information about the permissions that are granted on the application.</para>
-                /// </summary>
                 [NameInMap("PredefinedScopes")]
                 [Validation(Required=false)]
                 public CreateApplicationResponseBodyApplicationDelegatedScopePredefinedScopes PredefinedScopes { get; set; }
@@ -94,37 +91,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                     [Validation(Required=false)]
                     public List<CreateApplicationResponseBodyApplicationDelegatedScopePredefinedScopesPredefinedScope> PredefinedScope { get; set; }
                     public class CreateApplicationResponseBodyApplicationDelegatedScopePredefinedScopesPredefinedScope : TeaModel {
-                        /// <summary>
-                        /// <para>The description of the permission.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>Obtain the OpenID of the user. This is the default permission that you cannot remove.</para>
-                        /// </summary>
                         [NameInMap("Description")]
                         [Validation(Required=false)]
                         public string Description { get; set; }
 
-                        /// <summary>
-                        /// <para>The name of the permission.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>openid</para>
-                        /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
-                        /// <summary>
-                        /// <para>Indicates whether the permission is automatically selected by default when you install the application. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>true</description></item>
-                        /// <item><description>false</description></item>
-                        /// </list>
-                        /// <para><c>openid</c> is required by default.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>true</para>
-                        /// </summary>
                         [NameInMap("Required")]
                         [Validation(Required=false)]
                         public bool? Required { get; set; }
@@ -146,7 +120,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the application can be installed by using other Alibaba Cloud accounts.</para>
+            /// <para>Indicates whether the application can be installed by other Alibaba Cloud accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -155,13 +129,22 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public bool? IsMultiTenant { get; set; }
 
+            /// <summary>
+            /// <para>The OAuth protocol version of the application. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>2.0</c>: OAuth 2.0.</para>
+            /// </description></item>
+            /// <item><description><para><c>2.1</c>: OAuth 2.1.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2.0</para>
+            /// </summary>
             [NameInMap("ProtocolVersion")]
             [Validation(Required=false)]
             public string ProtocolVersion { get; set; }
 
-            /// <summary>
-            /// <para>The callback URLs.</para>
-            /// </summary>
             [NameInMap("RedirectUris")]
             [Validation(Required=false)]
             public CreateApplicationResponseBodyApplicationRedirectUris RedirectUris { get; set; }
@@ -183,7 +166,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? RefreshTokenValidity { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a secret is required.</para>
+            /// <para>Indicates whether an application key is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -193,7 +176,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public bool? SecretRequired { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The time when the application was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-23T08:06:57Z</para>
