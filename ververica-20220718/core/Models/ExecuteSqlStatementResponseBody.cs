@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class ExecuteSqlStatementResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The result of executing the SQL statement to query the metadata.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public SqlStatementExecuteResult Data { get; set; }

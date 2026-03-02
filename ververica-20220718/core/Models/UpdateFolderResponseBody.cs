@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class UpdateFolderResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The information returned after the folder is updated.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public Folder Data { get; set; }
 
         /// <summary>
+        /// <list type="bullet">
+        /// <item><description>If the value of success was false, an error code was returned.</description></item>
+        /// <item><description>If the value of success was true, a null value was returned.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -22,6 +30,11 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <list type="bullet">
+        /// <item><description>If the value of success was false, an error message was returned.</description></item>
+        /// <item><description>If the value of success was true, a null value was returned.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -30,6 +43,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code. If this parameter was not empty and the value of this parameter was not 200, the request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -38,6 +53,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public int? HttpCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</para>
         /// </summary>
@@ -46,6 +63,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

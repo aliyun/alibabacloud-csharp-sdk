@@ -15,6 +15,9 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>paimon-test</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

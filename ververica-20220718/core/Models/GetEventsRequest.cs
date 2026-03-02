@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public string DeploymentId { get; set; }
 
+        [NameInMap("deploymentName")]
+        [Validation(Required=false)]
+        public string DeploymentName { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>

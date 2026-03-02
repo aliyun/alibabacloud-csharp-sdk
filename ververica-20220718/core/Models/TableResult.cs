@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class TableResult : TeaModel {
+        [NameInMap("collectSinkOperatorId")]
+        [Validation(Required=false)]
+        public string CollectSinkOperatorId { get; set; }
+
         [NameInMap("rowUpdates")]
         [Validation(Required=false)]
         public List<RowUpdate> RowUpdates { get; set; }

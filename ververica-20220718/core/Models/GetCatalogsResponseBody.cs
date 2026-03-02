@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GetCatalogsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>If the value of success was true, the list of catalogs that meet the specified condition was returned. If the value of success was false, a null value was returned.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<Catalog> Data { get; set; }

@@ -10,22 +10,33 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class AsyncResourcePlanOperationResult : TeaModel {
         /// <summary>
+        /// <para>The information about the ticket. The value of this parameter is returned when the value of the ticketStatus parameter is FAILED or EXECUTING.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>&quot;&quot;</para>
+        /// <para>&quot;create resource plan failed&quot;</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The resource configuration plan of the deployment in expert mode. The value of this parameter is returned when the value of the ticketStatus parameter is FINISHED.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>{&quot;ssgProfiles&quot;:[{&quot;name&quot;:&quot;default&quot;,&quot;cpu&quot;:1.13,&quot;heap&quot;:&quot;1 gb&quot;,&quot;offHeap&quot;:&quot;32 mb&quot;,&quot;managed&quot;:{},&quot;extended&quot;:{}}],&quot;nodes&quot;:[{&quot;id&quot;:1,&quot;type&quot;:&quot;StreamExecTableSourceScan&quot;,&quot;desc&quot;:&quot;Source: datagen_source[78]&quot;,&quot;profile&quot;:{&quot;group&quot;:&quot;default&quot;,&quot;parallelism&quot;:1,&quot;maxParallelism&quot;:32768,&quot;minParallelism&quot;:1}},{&quot;id&quot;:2,&quot;type&quot;:&quot;StreamExecSink&quot;,&quot;desc&quot;:&quot;Sink: blackhole_sink[79]&quot;,&quot;profile&quot;:{&quot;group&quot;:&quot;default&quot;,&quot;parallelism&quot;:1,&quot;maxParallelism&quot;:32768,&quot;minParallelism&quot;:1}}],&quot;edges&quot;:[{&quot;source&quot;:1,&quot;target&quot;:2,&quot;mode&quot;:&quot;PIPELINED&quot;,&quot;strategy&quot;:&quot;FORWARD&quot;}],&quot;vertices&quot;:{&quot;717c7b8afebbfb7137f6f0f99beb2a94&quot;:[1,2]}}</para>
+        /// <para>{\&quot;ssgProfiles\&quot;:[{\&quot;name\&quot;:\&quot;default\&quot;,\&quot;cpu\&quot;:1.13,\&quot;heap\&quot;:\&quot;1 gb\&quot;,\&quot;offHeap\&quot;:\&quot;32 mb\&quot;,\&quot;managed\&quot;:{},\&quot;extended\&quot;:{}}],\&quot;nodes\&quot;:[{\&quot;id\&quot;:1,\&quot;type\&quot;:\&quot;StreamExecTableSourceScan\&quot;,\&quot;desc\&quot;:\&quot;Source: datagen_source[78]\&quot;,\&quot;profile\&quot;:{\&quot;group\&quot;:\&quot;default\&quot;,\&quot;parallelism\&quot;:1,\&quot;maxParallelism\&quot;:32768,\&quot;minParallelism\&quot;:1}},{\&quot;id\&quot;:2,\&quot;type\&quot;:\&quot;StreamExecSink\&quot;,\&quot;desc\&quot;:\&quot;Sink: blackhole_sink[79]\&quot;,\&quot;profile\&quot;:{\&quot;group\&quot;:\&quot;default\&quot;,\&quot;parallelism\&quot;:1,\&quot;maxParallelism\&quot;:32768,\&quot;minParallelism\&quot;:1}}],\&quot;edges\&quot;:[{\&quot;source\&quot;:1,\&quot;target\&quot;:2,\&quot;mode\&quot;:\&quot;PIPELINED\&quot;,\&quot;strategy\&quot;:\&quot;FORWARD\&quot;}],\&quot;vertices\&quot;:{\&quot;717c7b8afebbfb7137f6f0f99beb2a94\&quot;:[1,2]}}</para>
         /// </summary>
         [NameInMap("plan")]
         [Validation(Required=false)]
         public string Plan { get; set; }
 
         /// <summary>
+        /// <para>The status of the ticket that applies for an asynchronous operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>EXECUTING</description></item>
+        /// <item><description>FINISHED</description></item>
+        /// <item><description>FAILED</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>FINISHED</para>
         /// </summary>

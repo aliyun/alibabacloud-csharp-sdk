@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class EngineVersionSupportedFeatures : TeaModel {
         /// <summary>
+        /// <para>Specifies whether the engine version can be used to create a native savepoint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public bool? SupportNativeSavepoint { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the engine version can be used to submit an SQL deployment.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class LocalVariable : TeaModel {
         /// <summary>
+        /// <para>The name of the variable.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The value of the variable.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>datagen</para>
         /// </summary>

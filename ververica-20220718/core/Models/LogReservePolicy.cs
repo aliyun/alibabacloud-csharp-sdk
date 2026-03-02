@@ -10,6 +10,9 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class LogReservePolicy : TeaModel {
         /// <summary>
+        /// <para>The number of days for which logs are retained after you enable the
+        /// log archiving feature.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7</para>
         /// </summary>
@@ -18,6 +21,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public long? ExpirationDays { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable the log archiving feature.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

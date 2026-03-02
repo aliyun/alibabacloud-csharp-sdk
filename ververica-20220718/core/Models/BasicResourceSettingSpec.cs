@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class BasicResourceSettingSpec : TeaModel {
         /// <summary>
+        /// <para>The number of CPU cores.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2.0</para>
         /// </summary>
@@ -18,8 +20,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public double? Cpu { get; set; }
 
         /// <summary>
+        /// <para>The capacity of the memory. Unit: GiB.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>4Gi</para>
+        /// <para>4 GiB</para>
         /// </summary>
         [NameInMap("memory")]
         [Validation(Required=false)]

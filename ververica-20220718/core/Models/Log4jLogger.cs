@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class Log4jLogger : TeaModel {
         /// <summary>
+        /// <para>The level of the output log.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ERROR</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string LoggerLevel { get; set; }
 
         /// <summary>
+        /// <para>The name of the class of the output log.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>StdOutErrConsoleAppender</para>
         /// </summary>

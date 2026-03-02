@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pk</para>
         /// </summary>
         [NameInMap("constraintName")]
         [Validation(Required=false)]

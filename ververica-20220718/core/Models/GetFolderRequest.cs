@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public string FolderId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>DEVELOPMENT</para>
+        /// </summary>
+        [NameInMap("rootType")]
+        [Validation(Required=false)]
+        public string RootType { get; set; }
+
     }
 
 }

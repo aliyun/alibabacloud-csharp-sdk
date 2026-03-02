@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class Variable : TeaModel {
         /// <summary>
+        /// <para>The description of the variable.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>This is a variable description</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The type of the variable. Valid value: Plain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Kind { get; set; }
 
         /// <summary>
+        /// <para>The name of the variable.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The value of the variable.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

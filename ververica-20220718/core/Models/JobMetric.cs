@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class JobMetric : TeaModel {
         /// <summary>
+        /// <para>The number of CPU cores.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public double? TotalCpu { get; set; }
 
         /// <summary>
+        /// <para>The memory size. Unit: bytes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4096</para>
         /// </summary>

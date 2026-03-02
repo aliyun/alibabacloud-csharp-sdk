@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class UpdateJobConfigParam : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;table.exec.parallelism：4&quot;}</para>
+        /// </summary>
         [NameInMap("newFlinkConf")]
         [Validation(Required=false)]
         public Dictionary<string, object> NewFlinkConf { get; set; }

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class UpdateVariableRequest : TeaModel {
         /// <summary>
+        /// <para>The information about the variable after the update.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

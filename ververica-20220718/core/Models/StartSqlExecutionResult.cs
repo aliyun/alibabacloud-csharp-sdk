@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
-    public class TableSchema : TeaModel {
-        [NameInMap("collectSinkOperatorId")]
+    public class StartSqlExecutionResult : TeaModel {
+        [NameInMap("newlyCreated")]
         [Validation(Required=false)]
-        public string CollectSinkOperatorId { get; set; }
+        public bool? NewlyCreated { get; set; }
 
-        [NameInMap("schema")]
+        [NameInMap("sqlExecutionId")]
         [Validation(Required=false)]
-        public Schema Schema { get; set; }
+        public string SqlExecutionId { get; set; }
 
-        [NameInMap("tableName")]
+        [NameInMap("success")]
         [Validation(Required=false)]
-        public string TableName { get; set; }
+        public bool? Success { get; set; }
 
     }
 

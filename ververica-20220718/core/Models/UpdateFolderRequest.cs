@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class UpdateFolderRequest : TeaModel {
         /// <summary>
+        /// <para>The data structure of the folder.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class JobStatusRunning : TeaModel {
         /// <summary>
+        /// <para>The number of times the job is restarted.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public long? ObservedFlinkJobRestarts { get; set; }
 
         /// <summary>
+        /// <para>The status of the Flink job.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
         /// </summary>
