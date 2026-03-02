@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("VpcAccessZone")]
+        [Validation(Required=false)]
+        public bool? VpcAccessZone { get; set; }
+
         /// <summary>
         /// <para>The type of the zone. Default value: <c>AvailabilityZone</c>. This value indicates Alibaba Cloud zones.</para>
         /// 

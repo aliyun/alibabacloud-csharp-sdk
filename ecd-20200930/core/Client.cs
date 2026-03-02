@@ -10943,6 +10943,178 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Enables global acceleration for office networks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateOfficeSiteAcceleratorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOfficeSiteAcceleratorResponse
+        /// </returns>
+        public CreateOfficeSiteAcceleratorResponse CreateOfficeSiteAcceleratorWithOptions(CreateOfficeSiteAcceleratorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccelerateRegion))
+            {
+                query["AccelerateRegion"] = request.AccelerateRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOfficeSiteAccelerator",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOfficeSiteAcceleratorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables global acceleration for office networks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateOfficeSiteAcceleratorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOfficeSiteAcceleratorResponse
+        /// </returns>
+        public async Task<CreateOfficeSiteAcceleratorResponse> CreateOfficeSiteAcceleratorWithOptionsAsync(CreateOfficeSiteAcceleratorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccelerateRegion))
+            {
+                query["AccelerateRegion"] = request.AccelerateRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOfficeSiteAccelerator",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOfficeSiteAcceleratorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables global acceleration for office networks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateOfficeSiteAcceleratorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOfficeSiteAcceleratorResponse
+        /// </returns>
+        public CreateOfficeSiteAcceleratorResponse CreateOfficeSiteAccelerator(CreateOfficeSiteAcceleratorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateOfficeSiteAcceleratorWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables global acceleration for office networks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateOfficeSiteAcceleratorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOfficeSiteAcceleratorResponse
+        /// </returns>
+        public async Task<CreateOfficeSiteAcceleratorResponse> CreateOfficeSiteAcceleratorAsync(CreateOfficeSiteAcceleratorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateOfficeSiteAcceleratorWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a cloud computer policy.</para>
         /// </summary>
         /// 
@@ -15839,6 +16011,134 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteNetworkPackagesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes Global Accelerator (GA) configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOfficeSiteAcceleratorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOfficeSiteAcceleratorResponse
+        /// </returns>
+        public DeleteOfficeSiteAcceleratorResponse DeleteOfficeSiteAcceleratorWithOptions(DeleteOfficeSiteAcceleratorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOfficeSiteAccelerator",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOfficeSiteAcceleratorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes Global Accelerator (GA) configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOfficeSiteAcceleratorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOfficeSiteAcceleratorResponse
+        /// </returns>
+        public async Task<DeleteOfficeSiteAcceleratorResponse> DeleteOfficeSiteAcceleratorWithOptionsAsync(DeleteOfficeSiteAcceleratorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOfficeSiteAccelerator",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOfficeSiteAcceleratorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes Global Accelerator (GA) configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOfficeSiteAcceleratorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOfficeSiteAcceleratorResponse
+        /// </returns>
+        public DeleteOfficeSiteAcceleratorResponse DeleteOfficeSiteAccelerator(DeleteOfficeSiteAcceleratorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteOfficeSiteAcceleratorWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes Global Accelerator (GA) configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOfficeSiteAcceleratorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOfficeSiteAcceleratorResponse
+        /// </returns>
+        public async Task<DeleteOfficeSiteAcceleratorResponse> DeleteOfficeSiteAcceleratorAsync(DeleteOfficeSiteAcceleratorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteOfficeSiteAcceleratorWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -30968,6 +31268,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcAccessZone))
+            {
+                query["VpcAccessZone"] = request.VpcAccessZone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneType))
             {
                 query["ZoneType"] = request.ZoneType;
@@ -31013,6 +31317,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcAccessZone))
+            {
+                query["VpcAccessZone"] = request.VpcAccessZone;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneType))
             {
@@ -42363,6 +42671,142 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>修改全球加速配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyOfficeSiteAcceleratorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyOfficeSiteAcceleratorResponse
+        /// </returns>
+        public ModifyOfficeSiteAcceleratorResponse ModifyOfficeSiteAcceleratorWithOptions(ModifyOfficeSiteAcceleratorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccelerateRegion))
+            {
+                query["AccelerateRegion"] = request.AccelerateRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyOfficeSiteAccelerator",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyOfficeSiteAcceleratorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改全球加速配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyOfficeSiteAcceleratorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyOfficeSiteAcceleratorResponse
+        /// </returns>
+        public async Task<ModifyOfficeSiteAcceleratorResponse> ModifyOfficeSiteAcceleratorWithOptionsAsync(ModifyOfficeSiteAcceleratorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccelerateRegion))
+            {
+                query["AccelerateRegion"] = request.AccelerateRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyOfficeSiteAccelerator",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyOfficeSiteAcceleratorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改全球加速配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyOfficeSiteAcceleratorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyOfficeSiteAcceleratorResponse
+        /// </returns>
+        public ModifyOfficeSiteAcceleratorResponse ModifyOfficeSiteAccelerator(ModifyOfficeSiteAcceleratorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyOfficeSiteAcceleratorWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改全球加速配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyOfficeSiteAcceleratorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyOfficeSiteAcceleratorResponse
+        /// </returns>
+        public async Task<ModifyOfficeSiteAcceleratorResponse> ModifyOfficeSiteAcceleratorAsync(ModifyOfficeSiteAcceleratorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyOfficeSiteAcceleratorWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the basic properties of an office network, including the name and local administrator permission settings.</para>
         /// </summary>
         /// 
@@ -42427,6 +42871,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -42513,6 +42961,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

@@ -116,6 +116,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string TenantId { get; set; }
 
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public List<string> VSwitchId { get; set; }
+
     }
 
 }
