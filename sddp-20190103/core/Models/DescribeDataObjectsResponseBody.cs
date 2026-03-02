@@ -34,6 +34,38 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public List<string> Categories { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>备注</para>
+            /// </summary>
+            [NameInMap("Comment")]
+            [Validation(Required=false)]
+            public string Comment { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>varchar</para>
+            /// </summary>
+            [NameInMap("DataType")]
+            [Validation(Required=false)]
+            public string DataType { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>DataBaseName</para>
+            /// </summary>
+            [NameInMap("DbName")]
+            [Validation(Required=false)]
+            public string DbName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("FileCategoryCode")]
+            [Validation(Required=false)]
+            public int? FileCategoryCode { get; set; }
+
+            /// <summary>
             /// <para>The unique identifier ID of the data object.</para>
             /// 
             /// <b>Example:</b>
@@ -64,6 +96,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>-1</para>
+            /// </summary>
+            [NameInMap("IsRevision")]
+            [Validation(Required=false)]
+            public int? IsRevision { get; set; }
+
+            /// <summary>
             /// <para>Latest file modification time, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
@@ -82,6 +122,22 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("LastScanTime")]
             [Validation(Required=false)]
             public long? LastScanTime { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>logStore</para>
+            /// </summary>
+            [NameInMap("LogStore")]
+            [Validation(Required=false)]
+            public string LogStore { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>-1</para>
+            /// </summary>
+            [NameInMap("MaskStatus")]
+            [Validation(Required=false)]
+            public int? MaskStatus { get; set; }
 
             /// <summary>
             /// <para>Member account ID.</para>
@@ -221,6 +277,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? ProductId { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>project</para>
+            /// </summary>
+            [NameInMap("Project")]
+            [Validation(Required=false)]
+            public string Project { get; set; }
+
+            /// <summary>
             /// <para>The region ID to which the OSS storage object belongs.</para>
             /// 
             /// <b>Example:</b>
@@ -239,6 +303,22 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("RegionName")]
             [Validation(Required=false)]
             public string RegionName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("RiskLevelId")]
+            [Validation(Required=false)]
+            public int? RiskLevelId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("RuleCount")]
+            [Validation(Required=false)]
+            public int? RuleCount { get; set; }
 
             /// <summary>
             /// <para>List of matched identification models.</para>
@@ -282,6 +362,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public string RiskLevelName { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>“个人信息”-“身份证”</para>
+                /// </summary>
+                [NameInMap("RuleCategoryNameList")]
+                [Validation(Required=false)]
+                public string RuleCategoryNameList { get; set; }
+
+                /// <summary>
                 /// <para>Number of matched identification models.</para>
                 /// 
                 /// <b>Example:</b>
@@ -311,6 +399,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 [Validation(Required=false)]
                 public string RuleName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>[&quot;张三&quot;，&quot;李四&quot;]</para>
+                /// </summary>
+                [NameInMap("SampleList")]
+                [Validation(Required=false)]
+                public string SampleList { get; set; }
+
             }
 
             /// <summary>
@@ -324,6 +420,54 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? SensitiveCount { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>1000</para>
+            /// </summary>
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public long? Size { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1,2,3</para>
+            /// </summary>
+            [NameInMap("Sx")]
+            [Validation(Required=false)]
+            public string Sx { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>tableName</para>
+            /// </summary>
+            [NameInMap("TableName")]
+            [Validation(Required=false)]
+            public string TableName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("TaskId")]
+            [Validation(Required=false)]
+            public long? TaskId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>任务名</para>
+            /// </summary>
+            [NameInMap("TaskName")]
+            [Validation(Required=false)]
+            public string TaskName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1000</para>
+            /// </summary>
+            [NameInMap("TaskNumber")]
+            [Validation(Required=false)]
+            public long? TaskNumber { get; set; }
+
+            /// <summary>
             /// <para>Industry template ID</para>
             /// 
             /// <b>Example:</b>
@@ -332,6 +476,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public long? TemplateId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>模板名</para>
+            /// </summary>
+            [NameInMap("TemplateName")]
+            [Validation(Required=false)]
+            public string TemplateName { get; set; }
 
         }
 

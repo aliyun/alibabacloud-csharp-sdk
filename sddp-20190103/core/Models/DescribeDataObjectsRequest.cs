@@ -10,6 +10,22 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeDataObjectsRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("APIVersion")]
+        [Validation(Required=false)]
+        public int? APIVersion { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>bucketName</para>
+        /// </summary>
+        [NameInMap("Bucket")]
+        [Validation(Required=false)]
+        public string Bucket { get; set; }
+
+        /// <summary>
         /// <para>Page number for the paginated query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -18,6 +34,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dataBaseName</para>
+        /// </summary>
+        [NameInMap("DbName")]
+        [Validation(Required=false)]
+        public string DbName { get; set; }
 
         /// <summary>
         /// <para>ID of the data domain to which the data asset belongs.</para>
@@ -87,6 +111,22 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>logstore</para>
+        /// </summary>
+        [NameInMap("LogStore")]
+        [Validation(Required=false)]
+        public string LogStore { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("LogStoreFlag")]
+        [Validation(Required=false)]
+        public int? LogStoreFlag { get; set; }
+
+        /// <summary>
         /// <para>Member account ID.</para>
         /// 
         /// <b>Example:</b>
@@ -145,6 +185,22 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ParentCategoryIds { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>road</para>
+        /// </summary>
+        [NameInMap("Path")]
+        [Validation(Required=false)]
+        public string Path { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
+        [NameInMap("ProductId")]
+        [Validation(Required=false)]
+        public int? ProductId { get; set; }
+
+        /// <summary>
         /// <para>It is recommended to fill in the list of product IDs to be queried, separated by commas. Values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: MaxCompute</description></item>
@@ -172,6 +228,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ProductIds { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>project</para>
+        /// </summary>
+        [NameInMap("Project")]
+        [Validation(Required=false)]
+        public string Project { get; set; }
+
+        /// <summary>
         /// <para>Keyword for the data object to be queried.</para>
         /// 
         /// <b>Example:</b>
@@ -180,6 +244,22 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("QueryName")]
         [Validation(Required=false)]
         public string QueryName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-zhangjiakou</para>
+        /// </summary>
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1,2,3</para>
+        /// </summary>
+        [NameInMap("RiskLevelIdList")]
+        [Validation(Required=false)]
+        public string RiskLevelIdList { get; set; }
 
         /// <summary>
         /// <para>Specify the risk levels of the data assets to be queried, separated by commas if multiple.</para>
@@ -196,6 +276,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("RiskLevels")]
         [Validation(Required=false)]
         public string RiskLevels { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1,2,3</para>
+        /// </summary>
+        [NameInMap("RuleIds")]
+        [Validation(Required=false)]
+        public string RuleIds { get; set; }
 
         /// <summary>
         /// <para>Region where the asset is located. Values:</para>
@@ -215,6 +303,22 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("ServiceRegionId")]
         [Validation(Required=false)]
         public string ServiceRegionId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>TableName</para>
+        /// </summary>
+        [NameInMap("TableName")]
+        [Validation(Required=false)]
+        public string TableName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public long? TaskId { get; set; }
 
         /// <summary>
         /// <para>Industry template ID.</para>

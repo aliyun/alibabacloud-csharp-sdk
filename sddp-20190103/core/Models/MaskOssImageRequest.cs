@@ -31,10 +31,6 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public bool? IsSupportRestore { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>zh</para>
-        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }

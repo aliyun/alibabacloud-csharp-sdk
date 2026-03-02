@@ -2277,6 +2277,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             {
                 query["SensLevelName"] = request.SensLevelName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                query["ServiceRegionId"] = request.ServiceRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableId))
             {
                 query["TableId"] = request.TableId;
@@ -2395,6 +2399,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SensLevelName))
             {
                 query["SensLevelName"] = request.SensLevelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                query["ServiceRegionId"] = request.ServiceRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableId))
             {
@@ -3143,7 +3151,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data assets, such as instances, databases, and Object Storage Service (OSS) buckets, that you authorize Data Security Center (DSC) to scan in a service.</para>
+        /// <para>Queries assets that Data Security Center (DSC) is authorized to scan, or the regions that DSC supports.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3208,7 +3216,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data assets, such as instances, databases, and Object Storage Service (OSS) buckets, that you authorize Data Security Center (DSC) to scan in a service.</para>
+        /// <para>Queries assets that Data Security Center (DSC) is authorized to scan, or the regions that DSC supports.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3273,7 +3281,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data assets, such as instances, databases, and Object Storage Service (OSS) buckets, that you authorize Data Security Center (DSC) to scan in a service.</para>
+        /// <para>Queries assets that Data Security Center (DSC) is authorized to scan, or the regions that DSC supports.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3298,7 +3306,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data assets, such as instances, databases, and Object Storage Service (OSS) buckets, that you authorize Data Security Center (DSC) to scan in a service.</para>
+        /// <para>Queries assets that Data Security Center (DSC) is authorized to scan, or the regions that DSC supports.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4356,9 +4364,21 @@ namespace AlibabaCloud.SDK.Sddp20190103
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.APIVersion))
+            {
+                query["APIVersion"] = request.APIVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bucket))
+            {
+                query["Bucket"] = request.Bucket;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                query["DbName"] = request.DbName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainId))
             {
@@ -4384,6 +4404,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogStore))
+            {
+                query["LogStore"] = request.LogStore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogStoreFlag))
+            {
+                query["LogStoreFlag"] = request.LogStoreFlag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberAccount))
             {
                 query["MemberAccount"] = request.MemberAccount;
@@ -4404,21 +4432,53 @@ namespace AlibabaCloud.SDK.Sddp20190103
             {
                 query["ParentCategoryIds"] = request.ParentCategoryIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
+            {
+                query["ProductId"] = request.ProductId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductIds))
             {
                 query["ProductIds"] = request.ProductIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Project))
+            {
+                query["Project"] = request.Project;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryName))
             {
                 query["QueryName"] = request.QueryName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevelIdList))
+            {
+                query["RiskLevelIdList"] = request.RiskLevelIdList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevels))
             {
                 query["RiskLevels"] = request.RiskLevels;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleIds))
+            {
+                query["RuleIds"] = request.RuleIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
             {
                 query["ServiceRegionId"] = request.ServiceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -4462,9 +4522,21 @@ namespace AlibabaCloud.SDK.Sddp20190103
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.APIVersion))
+            {
+                query["APIVersion"] = request.APIVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bucket))
+            {
+                query["Bucket"] = request.Bucket;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                query["DbName"] = request.DbName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainId))
             {
@@ -4490,6 +4562,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogStore))
+            {
+                query["LogStore"] = request.LogStore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogStoreFlag))
+            {
+                query["LogStoreFlag"] = request.LogStoreFlag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberAccount))
             {
                 query["MemberAccount"] = request.MemberAccount;
@@ -4510,21 +4590,53 @@ namespace AlibabaCloud.SDK.Sddp20190103
             {
                 query["ParentCategoryIds"] = request.ParentCategoryIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
+            {
+                query["ProductId"] = request.ProductId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductIds))
             {
                 query["ProductIds"] = request.ProductIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Project))
+            {
+                query["Project"] = request.Project;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryName))
             {
                 query["QueryName"] = request.QueryName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevelIdList))
+            {
+                query["RiskLevelIdList"] = request.RiskLevelIdList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevels))
             {
                 query["RiskLevels"] = request.RiskLevels;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleIds))
+            {
+                query["RuleIds"] = request.RuleIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
             {
                 query["ServiceRegionId"] = request.ServiceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -7259,7 +7371,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tables in data assets, such as MaxCompute projects and ApsaraDB RDS instances, that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>Queries tables in data assets such as MaxCompute projects and ApsaraDB RDS instances that Data Security Center (DSC) is authorized to access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7352,7 +7464,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tables in data assets, such as MaxCompute projects and ApsaraDB RDS instances, that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>Queries tables in data assets such as MaxCompute projects and ApsaraDB RDS instances that Data Security Center (DSC) is authorized to access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7445,7 +7557,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tables in data assets, such as MaxCompute projects and ApsaraDB RDS instances, that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>Queries tables in data assets such as MaxCompute projects and ApsaraDB RDS instances that Data Security Center (DSC) is authorized to access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7470,7 +7582,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tables in data assets, such as MaxCompute projects and ApsaraDB RDS instances, that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>Queries tables in data assets such as MaxCompute projects and ApsaraDB RDS instances that Data Security Center (DSC) is authorized to access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

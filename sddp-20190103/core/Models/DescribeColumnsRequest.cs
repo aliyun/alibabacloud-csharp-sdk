@@ -200,6 +200,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string SensLevelName { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-zhangjiakou</para>
+        /// </summary>
+        [NameInMap("ServiceRegionId")]
+        [Validation(Required=false)]
+        public string ServiceRegionId { get; set; }
+
+        /// <summary>
         /// <para>The ID of the table to which the column belongs.</para>
         /// <remarks>
         /// <para>You can call the <a href="~~DescribeTables~~">DescribeTables</a> operation to query the IDs of tables.</para>
