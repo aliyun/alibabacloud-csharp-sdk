@@ -199,6 +199,10 @@ namespace AlibabaCloud.SDK.SasRasp20240727.Models
             [Validation(Required=false)]
             public string LanguageVersion { get; set; }
 
+            [NameInMap("LlmAsset")]
+            [Validation(Required=false)]
+            public bool? LlmAsset { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1727281449756</para>
