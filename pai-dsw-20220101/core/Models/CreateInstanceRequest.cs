@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class CreateInstanceRequest : TeaModel {
+        [NameInMap("AccessRestrictionRules")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> AccessRestrictionRules { get; set; }
+
         /// <summary>
         /// <para>The instance accessibility.</para>
         /// <para>Valid values:</para>
@@ -299,6 +303,28 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             [NameInMap("Uri")]
             [Validation(Required=false)]
             public string Uri { get; set; }
+
+        }
+
+        [NameInMap("DockerConfig")]
+        [Validation(Required=false)]
+        public CreateInstanceRequestDockerConfig DockerConfig { get; set; }
+        public class CreateInstanceRequestDockerConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("ContainersLimit")]
+            [Validation(Required=false)]
+            public long? ContainersLimit { get; set; }
+
+            [NameInMap("Enable")]
+            [Validation(Required=false)]
+            public bool? Enable { get; set; }
+
+            [NameInMap("MountAccessConfigPath")]
+            [Validation(Required=false)]
+            public string MountAccessConfigPath { get; set; }
 
         }
 

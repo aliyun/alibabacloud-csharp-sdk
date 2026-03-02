@@ -24,6 +24,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string AcceleratorType { get; set; }
 
+        [NameInMap("AccessRestrictionRules")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> AccessRestrictionRules { get; set; }
+
         /// <summary>
         /// <para>The accessibility. Valid values:</para>
         /// <list type="bullet">
@@ -262,6 +266,32 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             [NameInMap("Uri")]
             [Validation(Required=false)]
             public string Uri { get; set; }
+
+        }
+
+        [NameInMap("DockerConfig")]
+        [Validation(Required=false)]
+        public GetInstanceResponseBodyDockerConfig DockerConfig { get; set; }
+        public class GetInstanceResponseBodyDockerConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("ContainersLimit")]
+            [Validation(Required=false)]
+            public long? ContainersLimit { get; set; }
+
+            [NameInMap("Enable")]
+            [Validation(Required=false)]
+            public bool? Enable { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>/etc/docker/dockerboard/mount_access.json</para>
+            /// </summary>
+            [NameInMap("MountAccessConfigPath")]
+            [Validation(Required=false)]
+            public string MountAccessConfigPath { get; set; }
 
         }
 
