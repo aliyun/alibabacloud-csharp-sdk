@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Brain_industrial20200920.Models
             [Validation(Required=false)]
             public int? ConnectNum { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>industry-brain.aliyun.com</para>
+            /// </summary>
+            [NameInMap("ConsoleUrl")]
+            [Validation(Required=false)]
+            public string ConsoleUrl { get; set; }
+
             [NameInMap("Detail")]
             [Validation(Required=false)]
             public string Detail { get; set; }
