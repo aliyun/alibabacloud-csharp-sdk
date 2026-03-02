@@ -14,7 +14,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <remarks>
         /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>waf_v3prepaid_public_cn-4xl****i60i</para>

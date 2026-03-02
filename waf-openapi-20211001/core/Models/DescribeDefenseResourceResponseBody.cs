@@ -121,6 +121,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public long? GmtModified { get; set; }
 
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
             /// <summary>
             /// <para>The user ID (UID) of the Alibaba Cloud account to which the protected object belongs.</para>
             /// 
