@@ -28,8 +28,6 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
         public string DomainCode { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>shopping_t</para>
         /// </summary>

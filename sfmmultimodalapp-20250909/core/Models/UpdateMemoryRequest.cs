@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
 {
-    public class CreateCommandShrinkRequest : TeaModel {
+    public class UpdateMemoryRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>mm_axaxaaa</para>
+        /// <para>mm_bfaf7e110b6d4359977d1686a3f8</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -21,51 +21,47 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>659864545</para>
+        /// <para>True</para>
         /// </summary>
-        [NameInMap("DomainCode")]
+        [NameInMap("Content")]
         [Validation(Required=false)]
-        public string DomainCode { get; set; }
+        public string Content { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>shopping_t</para>
+        /// <para>384dc4786b9d4f5a8cab0d83112cd5a8</para>
         /// </summary>
-        [NameInMap("DomainName")]
+        [NameInMap("MemoryNodeId")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string MemoryNodeId { get; set; }
+
+        [NameInMap("MetaData")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> MetaData { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>[]</para>
         /// </summary>
-        [NameInMap("ToolDescription")]
+        [NameInMap("Source")]
         [Validation(Required=false)]
-        public string ToolDescription { get; set; }
-
-        [NameInMap("ToolExamples")]
-        [Validation(Required=false)]
-        public string ToolExamplesShrink { get; set; }
+        public string Source { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>open_bx</para>
+        /// <para>bfaf7e110b6d435997</para>
         /// </summary>
-        [NameInMap("ToolName")]
+        [NameInMap("UserDefinedId")]
         [Validation(Required=false)]
-        public string ToolName { get; set; }
-
-        [NameInMap("ToolParams")]
-        [Validation(Required=false)]
-        public string ToolParamsShrink { get; set; }
+        public string UserDefinedId { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>llm-xxx</para>
+        /// <para>llm-jb5sabg80b4ts71g</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
