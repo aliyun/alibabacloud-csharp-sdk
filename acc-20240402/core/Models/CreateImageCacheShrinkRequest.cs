@@ -109,6 +109,10 @@ namespace AlibabaCloud.SDK.Acc20240402.Models
         [Validation(Required=false)]
         public string NetworkConfigShrink { get; set; }
 
+        [NameInMap("Platform")]
+        [Validation(Required=false)]
+        public string Platform { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

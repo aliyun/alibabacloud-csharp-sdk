@@ -155,6 +155,10 @@ namespace AlibabaCloud.SDK.Acc20240402.Models
         [Validation(Required=false)]
         public string PaymentType { get; set; }
 
+        [NameInMap("Platform")]
+        [Validation(Required=false)]
+        public string Platform { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2025-**-**T07:58:25Z</para>

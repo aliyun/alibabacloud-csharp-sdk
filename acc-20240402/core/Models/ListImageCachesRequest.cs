@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Acc20240402.Models
 {
     public class ListImageCachesRequest : TeaModel {
+        [NameInMap("Image")]
+        [Validation(Required=false)]
+        public string Image { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>my-imc</para>
