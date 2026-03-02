@@ -484,6 +484,14 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>done</para>
+        /// </summary>
+        [NameInMap("sessionStatus")]
+        [Validation(Required=false)]
+        public string SessionStatus { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
         [NameInMap("streamEnd")]
