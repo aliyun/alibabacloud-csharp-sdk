@@ -1513,6 +1513,88 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             }
 
+            [NameInMap("SinkEventHouseParameters")]
+            [Validation(Required=false)]
+            public UpdateEventStreamingRequestSinkSinkEventHouseParameters SinkEventHouseParameters { get; set; }
+            public class UpdateEventStreamingRequestSinkSinkEventHouseParameters : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>demo</para>
+                /// </summary>
+                [NameInMap("CatalogName")]
+                [Validation(Required=false)]
+                public string CatalogName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>demo-table</para>
+                /// </summary>
+                [NameInMap("EventTableName")]
+                [Validation(Required=false)]
+                public string EventTableName { get; set; }
+
+                [NameInMap("MappingRules")]
+                [Validation(Required=false)]
+                public List<UpdateEventStreamingRequestSinkSinkEventHouseParametersMappingRules> MappingRules { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkEventHouseParametersMappingRules : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>age</para>
+                    /// </summary>
+                    [NameInMap("ColumnName")]
+                    [Validation(Required=false)]
+                    public string ColumnName { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>text</para>
+                    /// </summary>
+                    [NameInMap("ColumnType")]
+                    [Validation(Required=false)]
+                    public string ColumnType { get; set; }
+
+                    [NameInMap("ColumnValue")]
+                    [Validation(Required=false)]
+                    public UpdateEventStreamingRequestSinkSinkEventHouseParametersMappingRulesColumnValue ColumnValue { get; set; }
+                    public class UpdateEventStreamingRequestSinkSinkEventHouseParametersMappingRulesColumnValue : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>JSONPATH</para>
+                        /// </summary>
+                        [NameInMap("Form")]
+                        [Validation(Required=false)]
+                        public string Form { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
+                        /// </summary>
+                        [NameInMap("Template")]
+                        [Validation(Required=false)]
+                        public string Template { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>$.data.value</para>
+                        /// </summary>
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>name1</para>
+                /// </summary>
+                [NameInMap("NamespaceName")]
+                [Validation(Required=false)]
+                public string NamespaceName { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The parameters that are configured if you specify Function Compute as the event target.</para>
             /// </summary>

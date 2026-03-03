@@ -1006,6 +1006,88 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                     }
 
+                    [NameInMap("SinkEventHouseParameters")]
+                    [Validation(Required=false)]
+                    public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParameters SinkEventHouseParameters { get; set; }
+                    public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParameters : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>cat1</para>
+                        /// </summary>
+                        [NameInMap("CatalogName")]
+                        [Validation(Required=false)]
+                        public string CatalogName { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>table1</para>
+                        /// </summary>
+                        [NameInMap("EventTableName")]
+                        [Validation(Required=false)]
+                        public string EventTableName { get; set; }
+
+                        [NameInMap("MappingRules")]
+                        [Validation(Required=false)]
+                        public List<ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRules> MappingRules { get; set; }
+                        public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRules : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>age</para>
+                            /// </summary>
+                            [NameInMap("ColumnName")]
+                            [Validation(Required=false)]
+                            public string ColumnName { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>text</para>
+                            /// </summary>
+                            [NameInMap("ColumnType")]
+                            [Validation(Required=false)]
+                            public string ColumnType { get; set; }
+
+                            [NameInMap("ColumnValue")]
+                            [Validation(Required=false)]
+                            public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRulesColumnValue ColumnValue { get; set; }
+                            public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkEventHouseParametersMappingRulesColumnValue : TeaModel {
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>JSONPATH</para>
+                                /// </summary>
+                                [NameInMap("Form")]
+                                [Validation(Required=false)]
+                                public string Form { get; set; }
+
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>The value of ${key} is ${value}!</para>
+                                /// </summary>
+                                [NameInMap("Template")]
+                                [Validation(Required=false)]
+                                public string Template { get; set; }
+
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>$.data.value</para>
+                                /// </summary>
+                                [NameInMap("Value")]
+                                [Validation(Required=false)]
+                                public string Value { get; set; }
+
+                            }
+
+                        }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>name1</para>
+                        /// </summary>
+                        [NameInMap("NamespaceName")]
+                        [Validation(Required=false)]
+                        public string NamespaceName { get; set; }
+
+                    }
+
                     /// <summary>
                     /// <para>The parameters that are returned if Function Compute is specified as the event target.</para>
                     /// </summary>

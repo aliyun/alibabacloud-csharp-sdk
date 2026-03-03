@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查账号是否存在ServiceLinkedRole授权</para>
+        /// <para>Checks whether a service-linked role is created for an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查账号是否存在ServiceLinkedRole授权</para>
+        /// <para>Checks whether a service-linked role is created for an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查账号是否存在ServiceLinkedRole授权</para>
+        /// <para>Checks whether a service-linked role is created for an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查账号是否存在ServiceLinkedRole授权</para>
+        /// <para>Checks whether a service-linked role is created for an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2723,7 +2723,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发现EventSource(例如：Mysql)的Schema和SimpleData</para>
+        /// <para>Discovers the schema and simple data of an event source (such as MySQL).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2771,7 +2771,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发现EventSource(例如：Mysql)的Schema和SimpleData</para>
+        /// <para>Discovers the schema and simple data of an event source (such as MySQL).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2819,7 +2819,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发现EventSource(例如：Mysql)的Schema和SimpleData</para>
+        /// <para>Discovers the schema and simple data of an event source (such as MySQL).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2837,7 +2837,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发现EventSource(例如：Mysql)的Schema和SimpleData</para>
+        /// <para>Discovers the schema and simple data of an event source (such as MySQL).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7585,7 +7585,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件流</para>
+        /// <para>This API operation allows you to query event streams.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7639,7 +7639,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件流</para>
+        /// <para>This API operation allows you to query event streams.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7693,7 +7693,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件流</para>
+        /// <para>This API operation allows you to query event streams.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7711,7 +7711,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件流</para>
+        /// <para>This API operation allows you to query event streams.</para>
         /// </summary>
         /// 
         /// <param name="request">
