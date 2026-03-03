@@ -79,6 +79,9 @@ namespace AlibabaCloud.SDK.Neuron20211115.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("serviceGroupId")]
         [Validation(Required=false)]

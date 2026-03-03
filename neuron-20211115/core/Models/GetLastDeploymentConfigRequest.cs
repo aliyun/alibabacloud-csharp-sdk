@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Neuron20211115.Models
     public class GetLastDeploymentConfigRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>101</para>
         /// </summary>
         [NameInMap("serviceGroupId")]
         [Validation(Required=false)]

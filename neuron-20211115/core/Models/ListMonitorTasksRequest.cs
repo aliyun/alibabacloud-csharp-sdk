@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Neuron20211115.Models
         [Validation(Required=false)]
         public string PbcId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("serviceGroupId")]
         [Validation(Required=false)]
         public string ServiceGroupId { get; set; }

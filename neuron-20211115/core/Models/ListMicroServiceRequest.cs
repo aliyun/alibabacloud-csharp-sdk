@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Neuron20211115.Models
 {
     public class ListMicroServiceRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>gmtCreated</para>
+        /// </summary>
         [NameInMap("orderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>desc</para>
+        /// </summary>
         [NameInMap("orderDirection")]
         [Validation(Required=false)]
         public string OrderDirection { get; set; }
@@ -25,10 +33,18 @@ namespace AlibabaCloud.SDK.Neuron20211115.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("pbcId")]
         [Validation(Required=false)]
         public long? PbcId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("serviceIds")]
         [Validation(Required=false)]
         public string ServiceIds { get; set; }
