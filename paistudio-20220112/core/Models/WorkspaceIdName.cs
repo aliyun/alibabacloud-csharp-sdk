@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }
 
+        [NameInMap("WorkspaceName")]
+        [Validation(Required=false)]
+        public string WorkspaceName { get; set; }
+
     }
 
 }

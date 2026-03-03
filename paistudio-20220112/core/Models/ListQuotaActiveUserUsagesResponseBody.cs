@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public List<QuotaUser> QuotaUserUsage { get; set; }
 
+        [NameInMap("QuotaUserUsages")]
+        [Validation(Required=false)]
+        public List<QuotaUser> QuotaUserUsages { get; set; }
+
         /// <summary>
         /// <para>Id of the request</para>
         /// 
