@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>The details of the hot keys.</para>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeHotKeysResponseBodyData Data { get; set; }
@@ -34,22 +31,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
-                /// <summary>
-                /// <para>The database in which the key is stored.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("Db")]
                 [Validation(Required=false)]
                 public int? Db { get; set; }
 
-                /// <summary>
-                /// <para>The frequency at which the key is accessed, which indicates the queries per second (QPS) of the key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>5500~6000</para>
-                /// </summary>
                 [NameInMap("Hot")]
                 [Validation(Required=false)]
                 public string Hot { get; set; }
@@ -58,22 +43,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public long? InBytes { get; set; }
 
-                /// <summary>
-                /// <para>The name of the key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>abc:def:eng</para>
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
-                /// <summary>
-                /// <para>The type of the key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>zset</para>
-                /// </summary>
                 [NameInMap("KeyType")]
                 [Validation(Required=false)]
                 public string KeyType { get; set; }
@@ -86,12 +59,6 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public long? OutBytes { get; set; }
 
-                /// <summary>
-                /// <para>The number of elements in the key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public long? Size { get; set; }

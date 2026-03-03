@@ -36,9 +36,6 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             [Validation(Required=false)]
             public string BigKeyMsg { get; set; }
 
-            /// <summary>
-            /// <para>The list of large keys.</para>
-            /// </summary>
             [NameInMap("BigKeys")]
             [Validation(Required=false)]
             public DescribeHotBigKeysResponseBodyDataBigKeys BigKeys { get; set; }
@@ -47,52 +44,22 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public List<DescribeHotBigKeysResponseBodyDataBigKeysBigKey> BigKey { get; set; }
                 public class DescribeHotBigKeysResponseBodyDataBigKeysBigKey : TeaModel {
-                    /// <summary>
-                    /// <para>The database in which the key is stored.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("Db")]
                     [Validation(Required=false)]
                     public int? Db { get; set; }
 
-                    /// <summary>
-                    /// <para>The key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>abc:def:eng</para>
-                    /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
-                    /// <summary>
-                    /// <para>The type of the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>zset</para>
-                    /// </summary>
                     [NameInMap("KeyType")]
                     [Validation(Required=false)]
                     public string KeyType { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the data shard on the ApsaraDB for Redis instance.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>r-x****-db-0</para>
-                    /// </summary>
                     [NameInMap("NodeId")]
                     [Validation(Required=false)]
                     public string NodeId { get; set; }
 
-                    /// <summary>
-                    /// <para>The number of elements in the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>2</para>
-                    /// </summary>
                     [NameInMap("Size")]
                     [Validation(Required=false)]
                     public long? Size { get; set; }
@@ -159,9 +126,6 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             [Validation(Required=false)]
             public string HotKeyMsg { get; set; }
 
-            /// <summary>
-            /// <para>The list of hot keys.</para>
-            /// </summary>
             [NameInMap("HotKeys")]
             [Validation(Required=false)]
             public DescribeHotBigKeysResponseBodyDataHotKeys HotKeys { get; set; }
@@ -170,62 +134,26 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public List<DescribeHotBigKeysResponseBodyDataHotKeysHotKey> HotKey { get; set; }
                 public class DescribeHotBigKeysResponseBodyDataHotKeysHotKey : TeaModel {
-                    /// <summary>
-                    /// <para>The database in which the key is stored.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("Db")]
                     [Validation(Required=false)]
                     public int? Db { get; set; }
 
-                    /// <summary>
-                    /// <para>The frequency at which the key is accessed, which indicates the queries per second (QPS) of the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>5500~6000</para>
-                    /// </summary>
                     [NameInMap("Hot")]
                     [Validation(Required=false)]
                     public string Hot { get; set; }
 
-                    /// <summary>
-                    /// <para>The key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>abc:def:eng</para>
-                    /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
-                    /// <summary>
-                    /// <para>The type of the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>zset</para>
-                    /// </summary>
                     [NameInMap("KeyType")]
                     [Validation(Required=false)]
                     public string KeyType { get; set; }
 
-                    /// <summary>
-                    /// <para>The statistical value that is calculated based on the least frequently used (LFU) caching algorithm.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>253</para>
-                    /// </summary>
                     [NameInMap("Lfu")]
                     [Validation(Required=false)]
                     public int? Lfu { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the data shard on the ApsaraDB for Redis instance.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>r-x****-db-0</para>
-                    /// </summary>
                     [NameInMap("NodeId")]
                     [Validation(Required=false)]
                     public string NodeId { get; set; }

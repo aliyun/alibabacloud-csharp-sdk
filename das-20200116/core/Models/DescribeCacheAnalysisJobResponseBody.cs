@@ -26,9 +26,6 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public DescribeCacheAnalysisJobResponseBodyData Data { get; set; }
         public class DescribeCacheAnalysisJobResponseBodyData : TeaModel {
-            /// <summary>
-            /// <para>The details of the large keys. The returned large keys are sorted in descending order based on the number of bytes occupied by the keys.</para>
-            /// </summary>
             [NameInMap("BigKeys")]
             [Validation(Required=false)]
             public DescribeCacheAnalysisJobResponseBodyDataBigKeys BigKeys { get; set; }
@@ -37,82 +34,34 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public List<DescribeCacheAnalysisJobResponseBodyDataBigKeysKeyInfo> KeyInfo { get; set; }
                 public class DescribeCacheAnalysisJobResponseBodyDataBigKeysKeyInfo : TeaModel {
-                    /// <summary>
-                    /// <para>The number of bytes that are occupied by the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>12345</para>
-                    /// </summary>
                     [NameInMap("Bytes")]
                     [Validation(Required=false)]
                     public long? Bytes { get; set; }
 
-                    /// <summary>
-                    /// <para>The number of elements in the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>127</para>
-                    /// </summary>
                     [NameInMap("Count")]
                     [Validation(Required=false)]
                     public long? Count { get; set; }
 
-                    /// <summary>
-                    /// <para>The database name.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("Db")]
                     [Validation(Required=false)]
                     public int? Db { get; set; }
 
-                    /// <summary>
-                    /// <para>The data type of the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>hashtable</para>
-                    /// </summary>
                     [NameInMap("Encoding")]
                     [Validation(Required=false)]
                     public string Encoding { get; set; }
 
-                    /// <summary>
-                    /// <para>The time when the key expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A value of 0 indicates that the key never expires.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1596256542547</para>
-                    /// </summary>
                     [NameInMap("ExpirationTimeMillis")]
                     [Validation(Required=false)]
                     public long? ExpirationTimeMillis { get; set; }
 
-                    /// <summary>
-                    /// <para>The key name.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>task_x****</para>
-                    /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the data node on the instance.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>r-x****-db-0</para>
-                    /// </summary>
                     [NameInMap("NodeId")]
                     [Validation(Required=false)]
                     public string NodeId { get; set; }
 
-                    /// <summary>
-                    /// <para>The data type of the instance.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>hash</para>
-                    /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
@@ -121,9 +70,6 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
             }
 
-            /// <summary>
-            /// <para>The details of the large keys. The returned large keys are sorted in descending order based on the number of keys.</para>
-            /// </summary>
             [NameInMap("BigKeysOfNum")]
             [Validation(Required=false)]
             public DescribeCacheAnalysisJobResponseBodyDataBigKeysOfNum BigKeysOfNum { get; set; }
@@ -132,82 +78,34 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public List<DescribeCacheAnalysisJobResponseBodyDataBigKeysOfNumKeyInfo> KeyInfo { get; set; }
                 public class DescribeCacheAnalysisJobResponseBodyDataBigKeysOfNumKeyInfo : TeaModel {
-                    /// <summary>
-                    /// <para>The number of bytes that are occupied by the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>12345</para>
-                    /// </summary>
                     [NameInMap("Bytes")]
                     [Validation(Required=false)]
                     public long? Bytes { get; set; }
 
-                    /// <summary>
-                    /// <para>The number of elements in the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>127</para>
-                    /// </summary>
                     [NameInMap("Count")]
                     [Validation(Required=false)]
                     public long? Count { get; set; }
 
-                    /// <summary>
-                    /// <para>The database name.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("Db")]
                     [Validation(Required=false)]
                     public int? Db { get; set; }
 
-                    /// <summary>
-                    /// <para>The data type of the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>hashtable</para>
-                    /// </summary>
                     [NameInMap("Encoding")]
                     [Validation(Required=false)]
                     public string Encoding { get; set; }
 
-                    /// <summary>
-                    /// <para>The time when the key expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A value of 0 indicates that the key never expires.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1596256542547</para>
-                    /// </summary>
                     [NameInMap("ExpirationTimeMillis")]
                     [Validation(Required=false)]
                     public long? ExpirationTimeMillis { get; set; }
 
-                    /// <summary>
-                    /// <para>The key name.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>task_x****</para>
-                    /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the data node on the instance.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>r-x****-db-0</para>
-                    /// </summary>
                     [NameInMap("NodeId")]
                     [Validation(Required=false)]
                     public string NodeId { get; set; }
 
-                    /// <summary>
-                    /// <para>The data type of the instance.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>hash</para>
-                    /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
@@ -216,9 +114,6 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
             }
 
-            /// <summary>
-            /// <para>The statistics of the keys that have expired.</para>
-            /// </summary>
             [NameInMap("ExpiryKeysLevelCount")]
             [Validation(Required=false)]
             public DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCount ExpiryKeysLevelCount { get; set; }
@@ -227,53 +122,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public List<DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCountExpiryLevel> ExpiryLevel { get; set; }
                 public class DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCountExpiryLevel : TeaModel {
-                    /// <summary>
-                    /// <para>The time when the cache analysis task was complete. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1717469347000</para>
-                    /// </summary>
                     [NameInMap("AnalysisTs")]
                     [Validation(Required=false)]
                     public long? AnalysisTs { get; set; }
 
-                    /// <summary>
-                    /// <para>The expiration level. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>0</b>: The key never expires.</description></item>
-                    /// <item><description><b>1</b>: The key has expired.</description></item>
-                    /// <item><description><b>2</b>: The key has expired for 0 to 1 hour.</description></item>
-                    /// <item><description><b>3</b>: The key has expired for 1 to 3 hours.</description></item>
-                    /// <item><description><b>4</b>: The key has expired for 3 to 12 hours.</description></item>
-                    /// <item><description><b>5</b>: The key has expired for 12 to 24 hours.</description></item>
-                    /// <item><description><b>6</b>: The key has expired for one to two days.</description></item>
-                    /// <item><description><b>7</b>: The key has expired for three to seven days.</description></item>
-                    /// <item><description><b>8</b>: The key has expired for more than seven days.</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("Level")]
                     [Validation(Required=false)]
                     public int? Level { get; set; }
 
-                    /// <summary>
-                    /// <para>The number of bytes occupied by the keys that have expired.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>8064</para>
-                    /// </summary>
                     [NameInMap("TotalBytes")]
                     [Validation(Required=false)]
                     public long? TotalBytes { get; set; }
 
-                    /// <summary>
-                    /// <para>The total number of the keys that have expired.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>62</para>
-                    /// </summary>
                     [NameInMap("TotalKeys")]
                     [Validation(Required=false)]
                     public long? TotalKeys { get; set; }
@@ -302,9 +162,6 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             [Validation(Required=false)]
             public string JobId { get; set; }
 
-            /// <summary>
-            /// <para>The prefixes of the keys.</para>
-            /// </summary>
             [NameInMap("KeyPrefixes")]
             [Validation(Required=false)]
             public DescribeCacheAnalysisJobResponseBodyDataKeyPrefixes KeyPrefixes { get; set; }
@@ -313,52 +170,22 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public List<DescribeCacheAnalysisJobResponseBodyDataKeyPrefixesPrefix> Prefix { get; set; }
                 public class DescribeCacheAnalysisJobResponseBodyDataKeyPrefixesPrefix : TeaModel {
-                    /// <summary>
-                    /// <para>The number of bytes that are occupied by the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>12345</para>
-                    /// </summary>
                     [NameInMap("Bytes")]
                     [Validation(Required=false)]
                     public long? Bytes { get; set; }
 
-                    /// <summary>
-                    /// <para>The number of elements in the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>127</para>
-                    /// </summary>
                     [NameInMap("Count")]
                     [Validation(Required=false)]
                     public long? Count { get; set; }
 
-                    /// <summary>
-                    /// <para>The number of keys that contain the prefix.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>123</para>
-                    /// </summary>
                     [NameInMap("KeyNum")]
                     [Validation(Required=false)]
                     public long? KeyNum { get; set; }
 
-                    /// <summary>
-                    /// <para>The prefix of the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>task_</para>
-                    /// </summary>
                     [NameInMap("Prefix")]
                     [Validation(Required=false)]
                     public string Prefix { get; set; }
 
-                    /// <summary>
-                    /// <para>The data type of the instance.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>hash</para>
-                    /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
@@ -406,9 +233,6 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             [Validation(Required=false)]
             public string TaskState { get; set; }
 
-            /// <summary>
-            /// <para>The details of permanent keys. The returned keys are sorted in descending order based on the number of bytes occupied by the keys.</para>
-            /// </summary>
             [NameInMap("UnexBigKeysOfBytes")]
             [Validation(Required=false)]
             public DescribeCacheAnalysisJobResponseBodyDataUnexBigKeysOfBytes UnexBigKeysOfBytes { get; set; }
@@ -417,82 +241,34 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public List<DescribeCacheAnalysisJobResponseBodyDataUnexBigKeysOfBytesKeyInfo> KeyInfo { get; set; }
                 public class DescribeCacheAnalysisJobResponseBodyDataUnexBigKeysOfBytesKeyInfo : TeaModel {
-                    /// <summary>
-                    /// <para>The number of bytes that are occupied by the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>12345</para>
-                    /// </summary>
                     [NameInMap("Bytes")]
                     [Validation(Required=false)]
                     public long? Bytes { get; set; }
 
-                    /// <summary>
-                    /// <para>The number of elements in the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>127</para>
-                    /// </summary>
                     [NameInMap("Count")]
                     [Validation(Required=false)]
                     public long? Count { get; set; }
 
-                    /// <summary>
-                    /// <para>The database name.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("Db")]
                     [Validation(Required=false)]
                     public int? Db { get; set; }
 
-                    /// <summary>
-                    /// <para>The data type of the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>hashtable</para>
-                    /// </summary>
                     [NameInMap("Encoding")]
                     [Validation(Required=false)]
                     public string Encoding { get; set; }
 
-                    /// <summary>
-                    /// <para>The time when the key expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A value of 0 indicates that the key never expires.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1596256542547</para>
-                    /// </summary>
                     [NameInMap("ExpirationTimeMillis")]
                     [Validation(Required=false)]
                     public long? ExpirationTimeMillis { get; set; }
 
-                    /// <summary>
-                    /// <para>The key name.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>task_x****</para>
-                    /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the data node on the instance.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>r-x****-db-0</para>
-                    /// </summary>
                     [NameInMap("NodeId")]
                     [Validation(Required=false)]
                     public string NodeId { get; set; }
 
-                    /// <summary>
-                    /// <para>The data type of the instance.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>hash</para>
-                    /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
@@ -501,9 +277,6 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
             }
 
-            /// <summary>
-            /// <para>The details of permanent keys. The returned keys are sorted in descending order based on the number of keys.</para>
-            /// </summary>
             [NameInMap("UnexBigKeysOfNum")]
             [Validation(Required=false)]
             public DescribeCacheAnalysisJobResponseBodyDataUnexBigKeysOfNum UnexBigKeysOfNum { get; set; }
@@ -512,82 +285,34 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public List<DescribeCacheAnalysisJobResponseBodyDataUnexBigKeysOfNumKeyInfo> KeyInfo { get; set; }
                 public class DescribeCacheAnalysisJobResponseBodyDataUnexBigKeysOfNumKeyInfo : TeaModel {
-                    /// <summary>
-                    /// <para>The number of bytes that are occupied by the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>12345</para>
-                    /// </summary>
                     [NameInMap("Bytes")]
                     [Validation(Required=false)]
                     public long? Bytes { get; set; }
 
-                    /// <summary>
-                    /// <para>The number of elements in the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>127</para>
-                    /// </summary>
                     [NameInMap("Count")]
                     [Validation(Required=false)]
                     public long? Count { get; set; }
 
-                    /// <summary>
-                    /// <para>The database name.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("Db")]
                     [Validation(Required=false)]
                     public int? Db { get; set; }
 
-                    /// <summary>
-                    /// <para>The data type of the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>hashtable</para>
-                    /// </summary>
                     [NameInMap("Encoding")]
                     [Validation(Required=false)]
                     public string Encoding { get; set; }
 
-                    /// <summary>
-                    /// <para>The time when the key expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A value of 0 indicates that the key never expires.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1596256542547</para>
-                    /// </summary>
                     [NameInMap("ExpirationTimeMillis")]
                     [Validation(Required=false)]
                     public long? ExpirationTimeMillis { get; set; }
 
-                    /// <summary>
-                    /// <para>The key name.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>task_x****</para>
-                    /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the data node on the instance.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>r-x****-db-0</para>
-                    /// </summary>
                     [NameInMap("NodeId")]
                     [Validation(Required=false)]
                     public string NodeId { get; set; }
 
-                    /// <summary>
-                    /// <para>The data type of the instance.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>hash</para>
-                    /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }

@@ -1415,7 +1415,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建最近死锁分析任务</para>
+        /// <para>Creates a recent deadlock analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1461,7 +1461,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建最近死锁分析任务</para>
+        /// <para>Creates a recent deadlock analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1507,7 +1507,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建最近死锁分析任务</para>
+        /// <para>Creates a recent deadlock analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1525,7 +1525,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建最近死锁分析任务</para>
+        /// <para>Creates a recent deadlock analysis task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5031,7 +5031,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取执行计划</para>
+        /// <para>Queries the execution plan of an SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5089,7 +5089,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取执行计划</para>
+        /// <para>Queries the execution plan of an SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5147,7 +5147,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取执行计划</para>
+        /// <para>Queries the execution plan of an SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5165,7 +5165,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取执行计划</para>
+        /// <para>Queries the execution plan of an SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5431,7 +5431,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeSlowLogHistogramAsync</para>
+        /// <para>Asynchronously queries the trend data of slow query logs of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5489,7 +5489,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeSlowLogHistogramAsync</para>
+        /// <para>Asynchronously queries the trend data of slow query logs of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5547,7 +5547,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeSlowLogHistogramAsync</para>
+        /// <para>Asynchronously queries the trend data of slow query logs of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5565,7 +5565,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeSlowLogHistogramAsync</para>
+        /// <para>Asynchronously queries the trend data of slow query logs of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5583,7 +5583,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看慢日志明细接口</para>
+        /// <para>Queries the slow logs of a database instance. You can filter and sort data by multiple conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5659,7 +5659,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看慢日志明细接口</para>
+        /// <para>Queries the slow logs of a database instance. You can filter and sort data by multiple conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5735,7 +5735,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看慢日志明细接口</para>
+        /// <para>Queries the slow logs of a database instance. You can filter and sort data by multiple conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5753,7 +5753,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看慢日志明细接口</para>
+        /// <para>Queries the slow logs of a database instance. You can filter and sort data by multiple conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5771,7 +5771,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>慢日志统计信息</para>
+        /// <para>Queries statistical information about slow query logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5853,7 +5853,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>慢日志统计信息</para>
+        /// <para>Queries statistical information about slow query logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5935,7 +5935,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>慢日志统计信息</para>
+        /// <para>Queries statistical information about slow query logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5953,7 +5953,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>慢日志统计信息</para>
+        /// <para>Queries statistical information about slow query logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11311,7 +11311,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个死锁详情</para>
+        /// <para>Queries the details of a deadlock.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11365,7 +11365,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个死锁详情</para>
+        /// <para>Queries the details of a deadlock.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11419,7 +11419,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个死锁详情</para>
+        /// <para>Queries the details of a deadlock.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11437,7 +11437,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个死锁详情</para>
+        /// <para>Queries the details of a deadlock.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11651,7 +11651,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取历史死锁记录</para>
+        /// <para>Queries the historical tasks of recent deadlock analysis and full deadlock analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11717,7 +11717,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取历史死锁记录</para>
+        /// <para>Queries the historical tasks of recent deadlock analysis and full deadlock analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11783,7 +11783,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取历史死锁记录</para>
+        /// <para>Queries the historical tasks of recent deadlock analysis and full deadlock analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11801,7 +11801,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取历史死锁记录</para>
+        /// <para>Queries the historical tasks of recent deadlock analysis and full deadlock analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11819,7 +11819,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询时间范围内基于错误日志分析的死锁数量</para>
+        /// <para>Queries the trend of the number of deadlocks in full deadlock analysis within a specified period of time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11877,7 +11877,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询时间范围内基于错误日志分析的死锁数量</para>
+        /// <para>Queries the trend of the number of deadlocks in full deadlock analysis within a specified period of time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11935,7 +11935,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询时间范围内基于错误日志分析的死锁数量</para>
+        /// <para>Queries the trend of the number of deadlocks in full deadlock analysis within a specified period of time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11953,7 +11953,7 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询时间范围内基于错误日志分析的死锁数量</para>
+        /// <para>Queries the trend of the number of deadlocks in full deadlock analysis within a specified period of time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19151,6 +19151,150 @@ namespace AlibabaCloud.SDK.DAS20200116
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetStorageAnalysisResultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>瑶池AI助理大模型能力接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYaoChiAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYaoChiAgentResponse
+        /// </returns>
+        public GetYaoChiAgentResponse GetYaoChiAgentWithOptions(GetYaoChiAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraInfo))
+            {
+                query["ExtraInfo"] = request.ExtraInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetYaoChiAgent",
+                Version = "2020-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetYaoChiAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>瑶池AI助理大模型能力接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYaoChiAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYaoChiAgentResponse
+        /// </returns>
+        public async Task<GetYaoChiAgentResponse> GetYaoChiAgentWithOptionsAsync(GetYaoChiAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraInfo))
+            {
+                query["ExtraInfo"] = request.ExtraInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetYaoChiAgent",
+                Version = "2020-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetYaoChiAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>瑶池AI助理大模型能力接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYaoChiAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYaoChiAgentResponse
+        /// </returns>
+        public GetYaoChiAgentResponse GetYaoChiAgent(GetYaoChiAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetYaoChiAgentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>瑶池AI助理大模型能力接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYaoChiAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYaoChiAgentResponse
+        /// </returns>
+        public async Task<GetYaoChiAgentResponse> GetYaoChiAgentAsync(GetYaoChiAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetYaoChiAgentWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

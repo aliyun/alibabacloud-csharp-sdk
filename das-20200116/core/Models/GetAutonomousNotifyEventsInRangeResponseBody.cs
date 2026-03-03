@@ -36,9 +36,6 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             [Validation(Required=false)]
             public string Extra { get; set; }
 
-            /// <summary>
-            /// <para>The detailed information, including the error codes and the number of entries that are returned.</para>
-            /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public GetAutonomousNotifyEventsInRangeResponseBodyDataList List { get; set; }

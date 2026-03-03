@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>The detailed information.</para>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateCloudBenchTasksResponseBodyData Data { get; set; }

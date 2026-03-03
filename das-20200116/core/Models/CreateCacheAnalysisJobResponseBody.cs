@@ -26,9 +26,6 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public CreateCacheAnalysisJobResponseBodyData Data { get; set; }
         public class CreateCacheAnalysisJobResponseBodyData : TeaModel {
-            /// <summary>
-            /// <para>The number of elements in the key.</para>
-            /// </summary>
             [NameInMap("BigKeys")]
             [Validation(Required=false)]
             public CreateCacheAnalysisJobResponseBodyDataBigKeys BigKeys { get; set; }
@@ -37,82 +34,34 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public List<CreateCacheAnalysisJobResponseBodyDataBigKeysKeyInfo> KeyInfo { get; set; }
                 public class CreateCacheAnalysisJobResponseBodyDataBigKeysKeyInfo : TeaModel {
-                    /// <summary>
-                    /// <para>The number of bytes that are occupied by the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>12345</para>
-                    /// </summary>
                     [NameInMap("Bytes")]
                     [Validation(Required=false)]
                     public long? Bytes { get; set; }
 
-                    /// <summary>
-                    /// <para>The number of elements in the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>127</para>
-                    /// </summary>
                     [NameInMap("Count")]
                     [Validation(Required=false)]
                     public long? Count { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the database.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("Db")]
                     [Validation(Required=false)]
                     public int? Db { get; set; }
 
-                    /// <summary>
-                    /// <para>The data type of the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>hashtable</para>
-                    /// </summary>
                     [NameInMap("Encoding")]
                     [Validation(Required=false)]
                     public string Encoding { get; set; }
 
-                    /// <summary>
-                    /// <para>The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1596256542547</para>
-                    /// </summary>
                     [NameInMap("ExpirationTimeMillis")]
                     [Validation(Required=false)]
                     public long? ExpirationTimeMillis { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>task_x****</para>
-                    /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the data node on the instance.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>r-x****-db-0</para>
-                    /// </summary>
                     [NameInMap("NodeId")]
                     [Validation(Required=false)]
                     public string NodeId { get; set; }
 
-                    /// <summary>
-                    /// <para>The data type of the ApsaraDB for Redis instance.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>hash</para>
-                    /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
