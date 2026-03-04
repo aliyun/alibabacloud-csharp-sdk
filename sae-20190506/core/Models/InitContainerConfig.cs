@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("SecretMountDesc")]
+        [Validation(Required=false)]
+        public string SecretMountDesc { get; set; }
+
     }
 
 }
