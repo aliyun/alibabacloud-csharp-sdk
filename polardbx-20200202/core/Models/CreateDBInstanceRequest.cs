@@ -99,6 +99,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string NetworkType { get; set; }
 
+        [NameInMap("OriginMinorVersion")]
+        [Validation(Required=false)]
+        public string OriginMinorVersion { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -162,6 +166,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [NameInMap("Series")]
         [Validation(Required=false)]
         public string Series { get; set; }
+
+        [NameInMap("StorageType")]
+        [Validation(Required=false)]
+        public string StorageType { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

@@ -2074,6 +2074,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             {
                 query["NetworkType"] = request.NetworkType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginMinorVersion))
+            {
+                query["OriginMinorVersion"] = request.OriginMinorVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {
                 query["PayType"] = request.PayType;
@@ -2105,6 +2109,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Series))
             {
                 query["Series"] = request.Series;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TertiaryZone))
             {
@@ -2234,6 +2242,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             {
                 query["NetworkType"] = request.NetworkType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginMinorVersion))
+            {
+                query["OriginMinorVersion"] = request.OriginMinorVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {
                 query["PayType"] = request.PayType;
@@ -2265,6 +2277,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Series))
             {
                 query["Series"] = request.Series;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TertiaryZone))
             {
