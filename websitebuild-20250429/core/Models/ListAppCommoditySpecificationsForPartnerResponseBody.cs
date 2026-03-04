@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
-    public class OperateSupabaseForAdminResponseBody : TeaModel {
+    public class ListAppCommoditySpecificationsForPartnerResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -53,13 +53,15 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
-        public string Module { get; set; }
+        public ListAppCommoditySpecificationsForPartnerResponseBodyModule Module { get; set; }
+        public class ListAppCommoditySpecificationsForPartnerResponseBodyModule : TeaModel {
+            [NameInMap("Versions")]
+            [Validation(Required=false)]
+            public Dictionary<string, ModuleVersionsValue> Versions { get; set; }
+
+        }
 
         /// <summary>
         /// <para>Id of the request</para>

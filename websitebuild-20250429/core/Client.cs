@@ -2959,6 +2959,100 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取商品配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAppCommoditySpecificationsForPartnerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAppCommoditySpecificationsForPartnerResponse
+        /// </returns>
+        public ListAppCommoditySpecificationsForPartnerResponse ListAppCommoditySpecificationsForPartnerWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAppCommoditySpecificationsForPartner",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAppCommoditySpecificationsForPartnerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取商品配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAppCommoditySpecificationsForPartnerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAppCommoditySpecificationsForPartnerResponse
+        /// </returns>
+        public async Task<ListAppCommoditySpecificationsForPartnerResponse> ListAppCommoditySpecificationsForPartnerWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAppCommoditySpecificationsForPartner",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAppCommoditySpecificationsForPartnerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取商品配置信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListAppCommoditySpecificationsForPartnerResponse
+        /// </returns>
+        public ListAppCommoditySpecificationsForPartnerResponse ListAppCommoditySpecificationsForPartner()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAppCommoditySpecificationsForPartnerWithOptions(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取商品配置信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListAppCommoditySpecificationsForPartnerResponse
+        /// </returns>
+        public async Task<ListAppCommoditySpecificationsForPartnerResponse> ListAppCommoditySpecificationsForPartnerAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAppCommoditySpecificationsForPartnerWithOptionsAsync(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Query the list of domain redirection rules</para>
         /// </summary>
         /// 
