@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListRecognitionEntitiesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The entities.</para>
-        /// </summary>
         [NameInMap("Entities")]
         [Validation(Required=false)]
         public ListRecognitionEntitiesResponseBodyEntities Entities { get; set; }
@@ -20,29 +17,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public List<ListRecognitionEntitiesResponseBodyEntitiesEntity> Entity { get; set; }
             public class ListRecognitionEntitiesResponseBodyEntitiesEntity : TeaModel {
-                /// <summary>
-                /// <para>The ID of the entity.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>**<b><b><b><b><b><b>544cb84754</b></b></b></b></b></b></para>
-                /// </summary>
                 [NameInMap("EntityId")]
                 [Validation(Required=false)]
                 public string EntityId { get; set; }
 
-                /// <summary>
-                /// <para>The additional information of the entity, in JSON format.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>{}</para>
-                /// </summary>
                 [NameInMap("EntityInfo")]
                 [Validation(Required=false)]
                 public string EntityInfo { get; set; }
 
-                /// <summary>
-                /// <para>The name of the entity.</para>
-                /// </summary>
                 [NameInMap("EntityName")]
                 [Validation(Required=false)]
                 public string EntityName { get; set; }

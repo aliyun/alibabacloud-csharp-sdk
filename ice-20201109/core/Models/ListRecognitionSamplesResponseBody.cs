@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The samples.</para>
-        /// </summary>
         [NameInMap("Samples")]
         [Validation(Required=false)]
         public ListRecognitionSamplesResponseBodySamples Samples { get; set; }
@@ -54,12 +51,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string EntityId { get; set; }
 
-                /// <summary>
-                /// <para>The URL of the image sample.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="https://example.com/sample.png">https://example.com/sample.png</a></para>
-                /// </summary>
                 [NameInMap("ImageUrl")]
                 [Validation(Required=false)]
                 public string ImageUrl { get; set; }
@@ -68,12 +59,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string LibId { get; set; }
 
-                /// <summary>
-                /// <para>The sample ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>xxxxxxxxxxxxx</para>
-                /// </summary>
                 [NameInMap("SampleId")]
                 [Validation(Required=false)]
                 public string SampleId { get; set; }

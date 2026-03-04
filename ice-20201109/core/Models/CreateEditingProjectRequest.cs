@@ -94,6 +94,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string TemplateType { get; set; }
 
         /// <summary>
+        /// <para>The timeline of the online editing project, in the JSON format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;<b><b>4d7cf14dc7b83b0e801c</b></b>&quot;},{&quot;MediaId&quot;:&quot;<b><b>4d7cf14dc7b83b0e801c</b></b>&quot;}]}]}</para>
         /// </summary>

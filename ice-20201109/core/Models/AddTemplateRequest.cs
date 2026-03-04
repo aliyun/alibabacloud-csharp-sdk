@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class AddTemplateRequest : TeaModel {
         /// <summary>
+        /// <list type="bullet">
+        /// <item><description>The template configurations. The Config object of a regular template is encapsulated based on the Timeline object of an online editing project. The Config object of a custom template provides more flexible features. If you have special requirements, we recommend that you understand the structure of a Config object and configure a custom template. For more information, see <a href="https://help.aliyun.com/document_detail/456193.html">Config object of a regular template</a>.</description></item>
+        /// <item><description>For more information about Config object examples, see <a href="https://help.aliyun.com/document_detail/451634.html">Basic template configurations</a>.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>参见Timeline模板Config文档</para>
         /// </summary>

@@ -35,9 +35,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The analysis results of the smart tagging job. The value is an array.</para>
-        /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public QuerySmarttagJobResponseBodyResults Results { get; set; }
@@ -46,46 +43,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public List<QuerySmarttagJobResponseBodyResultsResult> Result { get; set; }
             public class QuerySmarttagJobResponseBodyResultsResult : TeaModel {
-                /// <summary>
-                /// <para>The details of the analysis result. The value is a JSON string. For more information about the parameters of different result types, see the &quot;Parameters of different result types&quot; section of this topic.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>{&quot;title&quot;:&quot;example-title-****&quot;}</para>
-                /// </summary>
                 [NameInMap("Data")]
                 [Validation(Required=false)]
                 public string Data { get; set; }
 
-                /// <summary>
-                /// <para>The type of the analysis result.</para>
-                /// <list type="bullet">
-                /// <item><description>The type of the analysis result based on Smart tagging V1.0. Valid values:</description></item>
-                /// </list>
-                /// <ol>
-                /// <item><description>TextLabel: the text tag.</description></item>
-                /// <item><description>VideoLabel: the video tag.</description></item>
-                /// <item><description>ASR: the original result of automatic speech recognition (ASR). By default, this type of result is not returned.</description></item>
-                /// <item><description>OCR: the original result of optical character recognition (OCR). By default, this type of result is not returned.</description></item>
-                /// <item><description>NLP: the natural language processing (NLP)-based result. By default, this type of result is not returned.</description></item>
-                /// </ol>
-                /// <list type="bullet">
-                /// <item><description>The type of the analysis result based on Smart tagging V2.0. Valid values:</description></item>
-                /// </list>
-                /// <ol>
-                /// <item><description>CPVLabel</description></item>
-                /// <item><description>Meta: the information about the video file, such as the title of the video. By default, this type of information is not returned.</description></item>
-                /// </ol>
-                /// <list type="bullet">
-                /// <item><description>The type of the analysis result based on Smart tagging V2.0-custom. Valid values:</description></item>
-                /// </list>
-                /// <ol>
-                /// <item><description>CPVLabel</description></item>
-                /// <item><description>Meta: the information about the video file, such as the title of the video. By default, this type of information is not returned.</description></item>
-                /// </ol>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Meta</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }

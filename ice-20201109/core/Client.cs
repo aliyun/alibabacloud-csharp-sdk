@@ -2026,7 +2026,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改库</para>
+        /// <para>Modifies a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2072,7 +2072,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改库</para>
+        /// <para>Modifies a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2118,7 +2118,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改库</para>
+        /// <para>Modifies a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2136,7 +2136,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改库</para>
+        /// <para>Modifies a search library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3414,7 +3414,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a digital human training job. You can configure the basic information of the digital human and the materials required for the training. Note: This operation is used to initialize the training job. It does not submit the training job. To submit the training job, call the SubmitAvatarTrainingJob operation.</para>
+        /// <para>Creates an avatar training job. You can configure the basic information of the avatar and the materials required for the training.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3480,7 +3480,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a digital human training job. You can configure the basic information of the digital human and the materials required for the training. Note: This operation is used to initialize the training job. It does not submit the training job. To submit the training job, call the SubmitAvatarTrainingJob operation.</para>
+        /// <para>Creates an avatar training job. You can configure the basic information of the avatar and the materials required for the training.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3546,7 +3546,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a digital human training job. You can configure the basic information of the digital human and the materials required for the training. Note: This operation is used to initialize the training job. It does not submit the training job. To submit the training job, call the SubmitAvatarTrainingJob operation.</para>
+        /// <para>Creates an avatar training job. You can configure the basic information of the avatar and the materials required for the training.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3564,7 +3564,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a digital human training job. You can configure the basic information of the digital human and the materials required for the training. Note: This operation is used to initialize the training job. It does not submit the training job. To submit the training job, call the SubmitAvatarTrainingJob operation.</para>
+        /// <para>Creates an avatar training job. You can configure the basic information of the avatar and the materials required for the training.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3758,7 +3758,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom template.</para>
+        /// <para>Creates a custom media processing template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3812,7 +3812,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom template.</para>
+        /// <para>Creates a custom media processing template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3866,7 +3866,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom template.</para>
+        /// <para>Creates a custom media processing template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3884,7 +3884,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom template.</para>
+        /// <para>Creates a custom media processing template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4594,7 +4594,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>IPC下单</para>
+        /// <para>Creates an IPC order. The purchased capacity is shared at the account level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4644,7 +4644,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>IPC下单</para>
+        /// <para>Creates an IPC order. The purchased capacity is shared at the account level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4694,7 +4694,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>IPC下单</para>
+        /// <para>Creates an IPC order. The purchased capacity is shared at the account level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4712,7 +4712,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>IPC下单</para>
+        /// <para>Creates an IPC order. The purchased capacity is shared at the account level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5670,7 +5670,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a live stream transcoding template to submit live stream transcoding jobs.</para>
+        /// <para>Creates a live stream transcoding template, which can be referenced when submitting a transcoding job.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5726,7 +5726,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a live stream transcoding template to submit live stream transcoding jobs.</para>
+        /// <para>Creates a live stream transcoding template, which can be referenced when submitting a transcoding job.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5782,7 +5782,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a live stream transcoding template to submit live stream transcoding jobs.</para>
+        /// <para>Creates a live stream transcoding template, which can be referenced when submitting a transcoding job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5800,7 +5800,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a live stream transcoding template to submit live stream transcoding jobs.</para>
+        /// <para>Creates a live stream transcoding template, which can be referenced when submitting a transcoding job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7482,7 +7482,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建搜索索引</para>
+        /// <para>Creates a search index in a search library. Each search library can contain multiple indexes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7541,7 +7541,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建搜索索引</para>
+        /// <para>Creates a search index in a search library. Each search library can contain multiple indexes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7600,7 +7600,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建搜索索引</para>
+        /// <para>Creates a search index in a search library. Each search library can contain multiple indexes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7623,7 +7623,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建搜索索引</para>
+        /// <para>Creates a search index in a search library. Each search library can contain multiple indexes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8770,7 +8770,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a packaging configuration.</para>
+        /// <para>Creates a VOD packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8834,7 +8834,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a packaging configuration.</para>
+        /// <para>Creates a VOD packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8898,7 +8898,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a packaging configuration.</para>
+        /// <para>Creates a VOD packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8916,7 +8916,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a packaging configuration.</para>
+        /// <para>Creates a VOD packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8934,7 +8934,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a packaging group.</para>
+        /// <para>Creates a VOD packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8980,7 +8980,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a packaging group.</para>
+        /// <para>Creates a VOD packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9026,7 +9026,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a packaging group.</para>
+        /// <para>Creates a VOD packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9044,7 +9044,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a packaging group.</para>
+        /// <para>Creates a VOD packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9058,6 +9058,126 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateVodPackagingGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻媒资上传凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateYikeAssetUploadRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateYikeAssetUploadResponse
+        /// </returns>
+        public CreateYikeAssetUploadResponse CreateYikeAssetUploadWithOptions(CreateYikeAssetUploadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileExt))
+            {
+                query["FileExt"] = request.FileExt;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateYikeAssetUpload",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateYikeAssetUploadResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻媒资上传凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateYikeAssetUploadRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateYikeAssetUploadResponse
+        /// </returns>
+        public async Task<CreateYikeAssetUploadResponse> CreateYikeAssetUploadWithOptionsAsync(CreateYikeAssetUploadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileExt))
+            {
+                query["FileExt"] = request.FileExt;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateYikeAssetUpload",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateYikeAssetUploadResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻媒资上传凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateYikeAssetUploadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateYikeAssetUploadResponse
+        /// </returns>
+        public CreateYikeAssetUploadResponse CreateYikeAssetUpload(CreateYikeAssetUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateYikeAssetUploadWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻媒资上传凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateYikeAssetUploadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateYikeAssetUploadResponse
+        /// </returns>
+        public async Task<CreateYikeAssetUploadResponse> CreateYikeAssetUploadAsync(CreateYikeAssetUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateYikeAssetUploadWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14994,7 +15114,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a packaging configuration.</para>
+        /// <para>Deletes a VOD packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15036,7 +15156,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a packaging configuration.</para>
+        /// <para>Deletes a VOD packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15078,7 +15198,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a packaging configuration.</para>
+        /// <para>Deletes a VOD packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15096,7 +15216,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a packaging configuration.</para>
+        /// <para>Deletes a VOD packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15114,7 +15234,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a packaging group.</para>
+        /// <para>Deletes a VOD packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15156,7 +15276,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a packaging group.</para>
+        /// <para>Deletes a VOD packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15198,7 +15318,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a packaging group.</para>
+        /// <para>Deletes a VOD packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15216,7 +15336,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a packaging group.</para>
+        /// <para>Deletes a VOD packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16426,7 +16546,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例</para>
+        /// <para>Queries the information about an AI agent for real-time communication (RTC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16468,7 +16588,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例</para>
+        /// <para>Queries the information about an AI agent for real-time communication (RTC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16510,7 +16630,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例</para>
+        /// <para>Queries the information about an AI agent for real-time communication (RTC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16528,7 +16648,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例</para>
+        /// <para>Queries the information about an AI agent for real-time communication (RTC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20402,7 +20522,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询IPC设备信息</para>
+        /// <para>Retrieves information about IPC devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20464,7 +20584,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询IPC设备信息</para>
+        /// <para>Retrieves information about IPC devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20526,7 +20646,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询IPC设备信息</para>
+        /// <para>Retrieves information about IPC devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20544,7 +20664,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询IPC设备信息</para>
+        /// <para>Retrieves information about IPC devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23944,7 +24064,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the playback URL of a video or audio file based on its ID.</para>
+        /// <para>Queries the playback URL of a video or audio file by its ID. You can use the playback URL to play the audio or video in ApsaraVideo Player SDK (for URL-based playback) or a third-party player.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23999,7 +24119,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the playback URL of a video or audio file based on its ID.</para>
+        /// <para>Queries the playback URL of a video or audio file by its ID. You can use the playback URL to play the audio or video in ApsaraVideo Player SDK (for URL-based playback) or a third-party player.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24054,7 +24174,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the playback URL of a video or audio file based on its ID.</para>
+        /// <para>Queries the playback URL of a video or audio file by its ID. You can use the playback URL to play the audio or video in ApsaraVideo Player SDK (for URL-based playback) or a third-party player.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24077,7 +24197,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the playback URL of a video or audio file based on its ID.</para>
+        /// <para>Queries the playback URL of a video or audio file by its ID. You can use the playback URL to play the audio or video in ApsaraVideo Player SDK (for URL-based playback) or a third-party player.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26660,7 +26780,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a packaging group.</para>
+        /// <para>Queries a VOD packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26702,7 +26822,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a packaging group.</para>
+        /// <para>Queries a VOD packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26744,7 +26864,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a packaging group.</para>
+        /// <para>Queries a VOD packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26762,7 +26882,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a packaging group.</para>
+        /// <para>Queries a VOD packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26896,6 +27016,246 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetWorkflowTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻AI应用任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeAIAppJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeAIAppJobResponse
+        /// </returns>
+        public GetYikeAIAppJobResponse GetYikeAIAppJobWithOptions(GetYikeAIAppJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetYikeAIAppJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetYikeAIAppJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻AI应用任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeAIAppJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeAIAppJobResponse
+        /// </returns>
+        public async Task<GetYikeAIAppJobResponse> GetYikeAIAppJobWithOptionsAsync(GetYikeAIAppJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetYikeAIAppJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetYikeAIAppJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻AI应用任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeAIAppJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeAIAppJobResponse
+        /// </returns>
+        public GetYikeAIAppJobResponse GetYikeAIAppJob(GetYikeAIAppJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetYikeAIAppJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻AI应用任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeAIAppJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeAIAppJobResponse
+        /// </returns>
+        public async Task<GetYikeAIAppJobResponse> GetYikeAIAppJobAsync(GetYikeAIAppJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetYikeAIAppJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻媒资内容信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeAssetMediaInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeAssetMediaInfoResponse
+        /// </returns>
+        public GetYikeAssetMediaInfoResponse GetYikeAssetMediaInfoWithOptions(GetYikeAssetMediaInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
+            {
+                query["MediaId"] = request.MediaId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetYikeAssetMediaInfo",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetYikeAssetMediaInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻媒资内容信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeAssetMediaInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeAssetMediaInfoResponse
+        /// </returns>
+        public async Task<GetYikeAssetMediaInfoResponse> GetYikeAssetMediaInfoWithOptionsAsync(GetYikeAssetMediaInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
+            {
+                query["MediaId"] = request.MediaId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetYikeAssetMediaInfo",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetYikeAssetMediaInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻媒资内容信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeAssetMediaInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeAssetMediaInfoResponse
+        /// </returns>
+        public GetYikeAssetMediaInfoResponse GetYikeAssetMediaInfo(GetYikeAssetMediaInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetYikeAssetMediaInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻媒资内容信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeAssetMediaInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeAssetMediaInfoResponse
+        /// </returns>
+        public async Task<GetYikeAssetMediaInfoResponse> GetYikeAssetMediaInfoAsync(GetYikeAssetMediaInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetYikeAssetMediaInfoWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -27428,7 +27788,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>罗列用户电话资源接口</para>
+        /// <para>Lists available phone numbers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27482,7 +27842,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>罗列用户电话资源接口</para>
+        /// <para>Lists available phone numbers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27536,7 +27896,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>罗列用户电话资源接口</para>
+        /// <para>Lists available phone numbers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27554,7 +27914,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>罗列用户电话资源接口</para>
+        /// <para>Lists available phone numbers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33332,7 +33692,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of packaging jobs.</para>
+        /// <para>Queries packaging jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33398,7 +33758,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of packaging jobs.</para>
+        /// <para>Queries packaging jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33464,7 +33824,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of packaging jobs.</para>
+        /// <para>Queries packaging jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33482,7 +33842,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of packaging jobs.</para>
+        /// <para>Queries packaging jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36508,7 +36868,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists packaging configurations.</para>
+        /// <para>Lists VOD packaging configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36566,7 +36926,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists packaging configurations.</para>
+        /// <para>Lists VOD packaging configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36624,7 +36984,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists packaging configurations.</para>
+        /// <para>Lists VOD packaging configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36642,7 +37002,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists packaging configurations.</para>
+        /// <para>Lists VOD packaging configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36660,7 +37020,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists packaging groups.</para>
+        /// <para>Lists VOD packaging groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36714,7 +37074,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists packaging groups.</para>
+        /// <para>Lists VOD packaging groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36768,7 +37128,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists packaging groups.</para>
+        /// <para>Lists VOD packaging groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36786,7 +37146,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists packaging groups.</para>
+        /// <para>Lists VOD packaging groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36988,6 +37348,286 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListWorkflowTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻文件夹列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListYikeAssetFoldersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListYikeAssetFoldersResponse
+        /// </returns>
+        public ListYikeAssetFoldersResponse ListYikeAssetFoldersWithOptions(ListYikeAssetFoldersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListYikeAssetFolders",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListYikeAssetFoldersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻文件夹列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListYikeAssetFoldersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListYikeAssetFoldersResponse
+        /// </returns>
+        public async Task<ListYikeAssetFoldersResponse> ListYikeAssetFoldersWithOptionsAsync(ListYikeAssetFoldersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListYikeAssetFolders",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListYikeAssetFoldersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻文件夹列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListYikeAssetFoldersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListYikeAssetFoldersResponse
+        /// </returns>
+        public ListYikeAssetFoldersResponse ListYikeAssetFolders(ListYikeAssetFoldersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListYikeAssetFoldersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻文件夹列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListYikeAssetFoldersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListYikeAssetFoldersResponse
+        /// </returns>
+        public async Task<ListYikeAssetFoldersResponse> ListYikeAssetFoldersAsync(ListYikeAssetFoldersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListYikeAssetFoldersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻项目列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListYikeProductionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListYikeProductionsResponse
+        /// </returns>
+        public ListYikeProductionsResponse ListYikeProductionsWithOptions(ListYikeProductionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListYikeProductions",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListYikeProductionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻项目列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListYikeProductionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListYikeProductionsResponse
+        /// </returns>
+        public async Task<ListYikeProductionsResponse> ListYikeProductionsWithOptionsAsync(ListYikeProductionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListYikeProductions",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListYikeProductionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻项目列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListYikeProductionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListYikeProductionsResponse
+        /// </returns>
+        public ListYikeProductionsResponse ListYikeProductions(ListYikeProductionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListYikeProductionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻项目列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListYikeProductionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListYikeProductionsResponse
+        /// </returns>
+        public async Task<ListYikeProductionsResponse> ListYikeProductionsAsync(ListYikeProductionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListYikeProductionsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -37724,7 +38364,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询IPC用量</para>
+        /// <para>Queries the usage for the IPC service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37782,7 +38422,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询IPC用量</para>
+        /// <para>Queries the usage for the IPC service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37840,7 +38480,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询IPC用量</para>
+        /// <para>Queries the usage for the IPC service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37858,7 +38498,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询IPC用量</para>
+        /// <para>Queries the usage for the IPC service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39992,6 +40632,150 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RegisterMediaStreamWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>注册一刻媒资</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RegisterYikeAssetMediaInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RegisterYikeAssetMediaInfoResponse
+        /// </returns>
+        public RegisterYikeAssetMediaInfoResponse RegisterYikeAssetMediaInfoWithOptions(RegisterYikeAssetMediaInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderId))
+            {
+                query["FolderId"] = request.FolderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputURL))
+            {
+                query["InputURL"] = request.InputURL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaType))
+            {
+                query["MediaType"] = request.MediaType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RegisterYikeAssetMediaInfo",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RegisterYikeAssetMediaInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>注册一刻媒资</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RegisterYikeAssetMediaInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RegisterYikeAssetMediaInfoResponse
+        /// </returns>
+        public async Task<RegisterYikeAssetMediaInfoResponse> RegisterYikeAssetMediaInfoWithOptionsAsync(RegisterYikeAssetMediaInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderId))
+            {
+                query["FolderId"] = request.FolderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputURL))
+            {
+                query["InputURL"] = request.InputURL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaType))
+            {
+                query["MediaType"] = request.MediaType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RegisterYikeAssetMediaInfo",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RegisterYikeAssetMediaInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>注册一刻媒资</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RegisterYikeAssetMediaInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RegisterYikeAssetMediaInfoResponse
+        /// </returns>
+        public RegisterYikeAssetMediaInfoResponse RegisterYikeAssetMediaInfo(RegisterYikeAssetMediaInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RegisterYikeAssetMediaInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>注册一刻媒资</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RegisterYikeAssetMediaInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RegisterYikeAssetMediaInfoResponse
+        /// </returns>
+        public async Task<RegisterYikeAssetMediaInfoResponse> RegisterYikeAssetMediaInfoAsync(RegisterYikeAssetMediaInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RegisterYikeAssetMediaInfoWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -43808,7 +44592,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</para>
+        /// <para>Initiates an outbound phone call for an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43880,7 +44664,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</para>
+        /// <para>Initiates an outbound phone call for an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43952,7 +44736,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</para>
+        /// <para>Initiates an outbound phone call for an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43970,7 +44754,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</para>
+        /// <para>Initiates an outbound phone call for an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44420,7 +45204,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启一个机器人实例</para>
+        /// <para>Starts an AI agent and joins a real-time communication (RTC) call.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -44488,7 +45272,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启一个机器人实例</para>
+        /// <para>Starts an AI agent and joins a real-time communication (RTC) call.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -44556,7 +45340,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启一个机器人实例</para>
+        /// <para>Starts an AI agent and joins a real-time communication (RTC) call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44574,7 +45358,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启一个机器人实例</para>
+        /// <para>Starts an AI agent and joins a real-time communication (RTC) call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45328,7 +46112,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止一个机器人实例</para>
+        /// <para>Stops an AI agent for real-time communication (RTC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45370,7 +46154,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止一个机器人实例</para>
+        /// <para>Stops an AI agent for real-time communication (RTC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45412,7 +46196,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止一个机器人实例</para>
+        /// <para>Stops an AI agent for real-time communication (RTC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45430,7 +46214,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止一个机器人实例</para>
+        /// <para>Stops an AI agent for real-time communication (RTC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45824,7 +46608,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an audio production job that converts text into an audio file.</para>
+        /// <para>Converts the provided text content into a high-quality audio file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45890,7 +46674,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an audio production job that converts text into an audio file.</para>
+        /// <para>Converts the provided text content into a high-quality audio file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45956,7 +46740,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an audio production job that converts text into an audio file.</para>
+        /// <para>Converts the provided text content into a high-quality audio file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45974,7 +46758,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an audio production job that converts text into an audio file.</para>
+        /// <para>Converts the provided text content into a high-quality audio file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46880,7 +47664,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a human voice cloning job. The value of VoiceId must be the one used during audio check. The system uses this ID to find the cached audio file for training. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
+        /// <para>Submits a basic voice cloning job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46926,7 +47710,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a human voice cloning job. The value of VoiceId must be the one used during audio check. The system uses this ID to find the cached audio file for training. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
+        /// <para>Submits a basic voice cloning job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46972,7 +47756,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a human voice cloning job. The value of VoiceId must be the one used during audio check. The system uses this ID to find the cached audio file for training. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
+        /// <para>Submits a basic voice cloning job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46990,7 +47774,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a human voice cloning job. The value of VoiceId must be the one used during audio check. The system uses this ID to find the cached audio file for training. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
+        /// <para>Submits a basic voice cloning job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53092,7 +53876,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video translation job. You can call this operation to translate subtitles in a video and audio to a specific language. Lip-sync adaptation will be supported in the future.</para>
+        /// <para>Submits a video translation job. You can call this operation to translate video subtitles and speech to a specific language, and synchronize the speakers\&quot; lip movements with the translated audio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -53183,7 +53967,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video translation job. You can call this operation to translate subtitles in a video and audio to a specific language. Lip-sync adaptation will be supported in the future.</para>
+        /// <para>Submits a video translation job. You can call this operation to translate video subtitles and speech to a specific language, and synchronize the speakers\&quot; lip movements with the translated audio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -53274,7 +54058,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video translation job. You can call this operation to translate subtitles in a video and audio to a specific language. Lip-sync adaptation will be supported in the future.</para>
+        /// <para>Submits a video translation job. You can call this operation to translate video subtitles and speech to a specific language, and synchronize the speakers\&quot; lip movements with the translated audio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -53297,7 +54081,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video translation job. You can call this operation to translate subtitles in a video and audio to a specific language. Lip-sync adaptation will be supported in the future.</para>
+        /// <para>Submits a video translation job. You can call this operation to translate video subtitles and speech to a specific language, and synchronize the speakers\&quot; lip movements with the translated audio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -53316,6 +54100,150 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitVideoTranslationJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一刻AI应用任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeAIAppJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeAIAppJobResponse
+        /// </returns>
+        public SubmitYikeAIAppJobResponse SubmitYikeAIAppJobWithOptions(SubmitYikeAIAppJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppParams))
+            {
+                body["AppParams"] = request.AppParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderId))
+            {
+                body["FolderId"] = request.FolderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                body["ProductionId"] = request.ProductionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitYikeAIAppJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitYikeAIAppJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一刻AI应用任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeAIAppJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeAIAppJobResponse
+        /// </returns>
+        public async Task<SubmitYikeAIAppJobResponse> SubmitYikeAIAppJobWithOptionsAsync(SubmitYikeAIAppJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppParams))
+            {
+                body["AppParams"] = request.AppParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderId))
+            {
+                body["FolderId"] = request.FolderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                body["ProductionId"] = request.ProductionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitYikeAIAppJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitYikeAIAppJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一刻AI应用任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeAIAppJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeAIAppJobResponse
+        /// </returns>
+        public SubmitYikeAIAppJobResponse SubmitYikeAIAppJob(SubmitYikeAIAppJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitYikeAIAppJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一刻AI应用任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeAIAppJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeAIAppJobResponse
+        /// </returns>
+        public async Task<SubmitYikeAIAppJobResponse> SubmitYikeAIAppJobAsync(SubmitYikeAIAppJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitYikeAIAppJobWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -58324,7 +59252,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例的配置</para>
+        /// <para>Modifies an AI agent for real-time communication (RTC), such as the tone and greeting.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -58376,7 +59304,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例的配置</para>
+        /// <para>Modifies an AI agent for real-time communication (RTC), such as the tone and greeting.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -58428,7 +59356,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例的配置</para>
+        /// <para>Modifies an AI agent for real-time communication (RTC), such as the tone and greeting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58446,7 +59374,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例的配置</para>
+        /// <para>Modifies an AI agent for real-time communication (RTC), such as the tone and greeting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58464,7 +59392,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a source in MediaWeaver.</para>
+        /// <para>Modifies a source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58518,7 +59446,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a source in MediaWeaver.</para>
+        /// <para>Modifies a source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58572,7 +59500,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a source in MediaWeaver.</para>
+        /// <para>Modifies a source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58590,7 +59518,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a source in MediaWeaver.</para>
+        /// <para>Modifies a source.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -137,6 +137,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        /// <summary>
+        /// <para>The timeline of the online editing job. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/198823.html">Timeline configurations</a>.</para>
+        /// <remarks>
+        /// <para>: You must specify one of ProgectId, Timeline, and TempalteId and leave the other two parameters empty.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;<b><b>4d7cf14dc7b83b0e801c</b></b>&quot;},{&quot;MediaId&quot;:&quot;<b><b>4d7cf14dc7b83b0e801c</b></b>&quot;}]}]}</para>
+        /// </summary>
         [NameInMap("Timeline")]
         [Validation(Required=false)]
         public string Timeline { get; set; }

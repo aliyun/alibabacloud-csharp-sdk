@@ -35,9 +35,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>An array of analysis result objects.</para>
-        /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public QueryVideoCognitionJobResponseBodyResults Results { get; set; }
@@ -46,30 +43,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public List<QueryVideoCognitionJobResponseBodyResultsResult> Result { get; set; }
             public class QueryVideoCognitionJobResponseBodyResultsResult : TeaModel {
-                /// <summary>
-                /// <para>A JSON string containing the detailed analysis data. The structure of this data depends on the Type field. For details, see the Result parameters section below.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>{&quot;title&quot;:&quot;example-title-****&quot;}</para>
-                /// </summary>
                 [NameInMap("Data")]
                 [Validation(Required=false)]
                 public string Data { get; set; }
 
-                /// <summary>
-                /// <para>The type of analysis result. Valid values:</para>
-                /// <ol>
-                /// <item><description>TextLabel: Tags from text content.</description></item>
-                /// <item><description>VideoLabel: Tags from video content.</description></item>
-                /// <item><description>ASR: Raw speech recognition results. Not returned by default.</description></item>
-                /// <item><description>OCR: Raw text recognition results. Not returned by default.</description></item>
-                /// <item><description>NLP: Natural Language Processing results. Not returned by default.</description></item>
-                /// <item><description>Process: URL to the raw algorithm output. Not returned by default.</description></item>
-                /// </ol>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ASR</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }

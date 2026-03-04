@@ -34,14 +34,29 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public SubmitCopyrightJobRequestInput Input { get; set; }
         public class SubmitCopyrightJobRequestInput : TeaModel {
             /// <summary>
+            /// <para>The URL of the source file. You can specify the path of an OSS object in one of the following formats:</para>
+            /// <para>1\. oss://bucket/object</para>
+            /// <para>2\. http(s)://bucket.oss-[regionId].aliyuncs.com/object</para>
+            /// <para>where bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object path in OSS.</para>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>oss://bucket/object</para>
             /// </summary>
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
 
             /// <summary>
+            /// <para>The type of the source file. Valid values:</para>
+            /// <ol>
+            /// <item><description>OSS: an OSS object.</description></item>
+            /// <item><description>Media: a media asset.</description></item>
+            /// </ol>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>OSS</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -85,14 +100,27 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public SubmitCopyrightJobRequestOutput Output { get; set; }
         public class SubmitCopyrightJobRequestOutput : TeaModel {
             /// <summary>
+            /// <para>The OSS path where the output file is saved. You can specify the path in one of the following formats:</para>
+            /// <para>1\. oss://bucket/object</para>
+            /// <para>2\. http(s)://bucket.oss-[regionId].aliyuncs.com/object where bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object path in OSS.</para>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>oss://test-bucket/output.mp4</para>
             /// </summary>
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
 
             /// <summary>
+            /// <para>The type of the output file. Valid value:</para>
+            /// <ol>
+            /// <item><description>OSS: an OSS object.</description></item>
+            /// </ol>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>OSS</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
