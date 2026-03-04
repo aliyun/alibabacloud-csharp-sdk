@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string Path { get; set; }
 
+        [NameInMap("removeBasePathOnForward")]
+        [Validation(Required=false)]
+        public bool? RemoveBasePathOnForward { get; set; }
+
         /// <summary>
         /// <para>资源名称</para>
         /// </summary>

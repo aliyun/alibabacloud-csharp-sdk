@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        [NameInMap("domainType")]
+        [Validation(Required=false)]
+        public string DomainType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
