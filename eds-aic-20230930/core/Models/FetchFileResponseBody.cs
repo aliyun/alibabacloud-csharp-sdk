@@ -19,10 +19,22 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<FetchFileResponseBodyData> Data { get; set; }
         public class FetchFileResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The ID of the cloud phone instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>acp-34pqe4r0kd9kn****</para>
+            /// </summary>
             [NameInMap("AndroidInstanceId")]
             [Validation(Required=false)]
             public string AndroidInstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>t-bp67acfmxazb4p****</para>
+            /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
