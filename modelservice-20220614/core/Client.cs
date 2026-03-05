@@ -37,14 +37,24 @@ namespace AlibabaCloud.SDK.ModelService20220614
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 获取当月的使用量
-         *
-         * @param request GetMonthAmountRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetMonthAmountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当月的使用量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMonthAmountRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMonthAmountResponse
+        /// </returns>
         public GetMonthAmountResponse GetMonthAmountWithOptions(GetMonthAmountRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -73,14 +83,24 @@ namespace AlibabaCloud.SDK.ModelService20220614
             return TeaModel.ToObject<GetMonthAmountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取当月的使用量
-         *
-         * @param request GetMonthAmountRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetMonthAmountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当月的使用量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMonthAmountRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMonthAmountResponse
+        /// </returns>
         public async Task<GetMonthAmountResponse> GetMonthAmountWithOptionsAsync(GetMonthAmountRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -109,12 +129,18 @@ namespace AlibabaCloud.SDK.ModelService20220614
             return TeaModel.ToObject<GetMonthAmountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取当月的使用量
-         *
-         * @param request GetMonthAmountRequest
-         * @return GetMonthAmountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当月的使用量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMonthAmountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMonthAmountResponse
+        /// </returns>
         public GetMonthAmountResponse GetMonthAmount(GetMonthAmountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -122,12 +148,18 @@ namespace AlibabaCloud.SDK.ModelService20220614
             return GetMonthAmountWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 获取当月的使用量
-         *
-         * @param request GetMonthAmountRequest
-         * @return GetMonthAmountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当月的使用量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMonthAmountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMonthAmountResponse
+        /// </returns>
         public async Task<GetMonthAmountResponse> GetMonthAmountAsync(GetMonthAmountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -135,14 +167,24 @@ namespace AlibabaCloud.SDK.ModelService20220614
             return await GetMonthAmountWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 获取user相关的appid, token等信息
-         *
-         * @param request GetUserRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取user相关的appid, token等信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserResponse
+        /// </returns>
         public GetUserResponse GetUserWithOptions(GetUserRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -171,14 +213,24 @@ namespace AlibabaCloud.SDK.ModelService20220614
             return TeaModel.ToObject<GetUserResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取user相关的appid, token等信息
-         *
-         * @param request GetUserRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取user相关的appid, token等信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserResponse
+        /// </returns>
         public async Task<GetUserResponse> GetUserWithOptionsAsync(GetUserRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -207,12 +259,18 @@ namespace AlibabaCloud.SDK.ModelService20220614
             return TeaModel.ToObject<GetUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取user相关的appid, token等信息
-         *
-         * @param request GetUserRequest
-         * @return GetUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取user相关的appid, token等信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserResponse
+        /// </returns>
         public GetUserResponse GetUser(GetUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -220,12 +278,18 @@ namespace AlibabaCloud.SDK.ModelService20220614
             return GetUserWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 获取user相关的appid, token等信息
-         *
-         * @param request GetUserRequest
-         * @return GetUserResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取user相关的appid, token等信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserResponse
+        /// </returns>
         public async Task<GetUserResponse> GetUserAsync(GetUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -233,14 +297,24 @@ namespace AlibabaCloud.SDK.ModelService20220614
             return await GetUserWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 每天的调用量列表
-         *
-         * @param request ListDayAmountRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDayAmountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>每天的调用量列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDayAmountRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDayAmountResponse
+        /// </returns>
         public ListDayAmountResponse ListDayAmountWithOptions(ListDayAmountRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -277,14 +351,24 @@ namespace AlibabaCloud.SDK.ModelService20220614
             return TeaModel.ToObject<ListDayAmountResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 每天的调用量列表
-         *
-         * @param request ListDayAmountRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDayAmountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>每天的调用量列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDayAmountRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDayAmountResponse
+        /// </returns>
         public async Task<ListDayAmountResponse> ListDayAmountWithOptionsAsync(ListDayAmountRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -321,12 +405,18 @@ namespace AlibabaCloud.SDK.ModelService20220614
             return TeaModel.ToObject<ListDayAmountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 每天的调用量列表
-         *
-         * @param request ListDayAmountRequest
-         * @return ListDayAmountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>每天的调用量列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDayAmountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDayAmountResponse
+        /// </returns>
         public ListDayAmountResponse ListDayAmount(ListDayAmountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -334,12 +424,18 @@ namespace AlibabaCloud.SDK.ModelService20220614
             return ListDayAmountWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 每天的调用量列表
-         *
-         * @param request ListDayAmountRequest
-         * @return ListDayAmountResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>每天的调用量列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDayAmountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDayAmountResponse
+        /// </returns>
         public async Task<ListDayAmountResponse> ListDayAmountAsync(ListDayAmountRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -347,14 +443,24 @@ namespace AlibabaCloud.SDK.ModelService20220614
             return await ListDayAmountWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-         * @summary 用户充值列表
-         *
-         * @param request ListRechargeBillsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListRechargeBillsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户充值列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRechargeBillsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRechargeBillsResponse
+        /// </returns>
         public ListRechargeBillsResponse ListRechargeBillsWithOptions(ListRechargeBillsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -391,14 +497,24 @@ namespace AlibabaCloud.SDK.ModelService20220614
             return TeaModel.ToObject<ListRechargeBillsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 用户充值列表
-         *
-         * @param request ListRechargeBillsRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListRechargeBillsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户充值列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRechargeBillsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRechargeBillsResponse
+        /// </returns>
         public async Task<ListRechargeBillsResponse> ListRechargeBillsWithOptionsAsync(ListRechargeBillsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -435,12 +551,18 @@ namespace AlibabaCloud.SDK.ModelService20220614
             return TeaModel.ToObject<ListRechargeBillsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 用户充值列表
-         *
-         * @param request ListRechargeBillsRequest
-         * @return ListRechargeBillsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户充值列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRechargeBillsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRechargeBillsResponse
+        /// </returns>
         public ListRechargeBillsResponse ListRechargeBills(ListRechargeBillsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -448,12 +570,18 @@ namespace AlibabaCloud.SDK.ModelService20220614
             return ListRechargeBillsWithOptions(request, headers, runtime);
         }
 
-        /**
-         * @summary 用户充值列表
-         *
-         * @param request ListRechargeBillsRequest
-         * @return ListRechargeBillsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户充值列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRechargeBillsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRechargeBillsResponse
+        /// </returns>
         public async Task<ListRechargeBillsResponse> ListRechargeBillsAsync(ListRechargeBillsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

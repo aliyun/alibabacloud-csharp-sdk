@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,7 +10,7 @@ namespace AlibabaCloud.SDK.ModelService20220614.Models
 {
     public class GetMonthAmountRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SceneType")]
         [Validation(Required=false)]

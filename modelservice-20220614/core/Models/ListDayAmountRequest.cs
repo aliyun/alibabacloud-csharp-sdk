@@ -13,12 +13,16 @@ namespace AlibabaCloud.SDK.ModelService20220614.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>sales_pick</para>
+        /// </summary>
         [NameInMap("SceneType")]
         [Validation(Required=false)]
         public string SceneType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
