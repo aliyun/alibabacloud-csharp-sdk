@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string ImageUrl { get; set; }
 
+        [NameInMap("Liveness")]
+        [Validation(Required=false)]
+        public string Liveness { get; set; }
+
         /// <summary>
         /// <para>Memory</para>
         /// 
@@ -108,6 +112,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("Readiness")]
+        [Validation(Required=false)]
+        public string Readiness { get; set; }
+
+        [NameInMap("SecretMountDesc")]
+        [Validation(Required=false)]
+        public string SecretMountDesc { get; set; }
 
     }
 

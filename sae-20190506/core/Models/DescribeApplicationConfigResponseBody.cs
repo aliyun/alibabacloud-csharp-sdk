@@ -1499,6 +1499,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public string ImageUrl { get; set; }
 
+                [NameInMap("Liveness")]
+                [Validation(Required=false)]
+                public string Liveness { get; set; }
+
                 /// <summary>
                 /// <para>Set the memory limit of the primary container that can be used by Sidecar container.</para>
                 /// 
@@ -1518,6 +1522,32 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Readiness")]
+                [Validation(Required=false)]
+                public string Readiness { get; set; }
+
+                [NameInMap("SecretMountDesc")]
+                [Validation(Required=false)]
+                public List<DescribeApplicationConfigResponseBodyDataSidecarContainersConfigSecretMountDesc> SecretMountDesc { get; set; }
+                public class DescribeApplicationConfigResponseBodyDataSidecarContainersConfigSecretMountDesc : TeaModel {
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                    [NameInMap("MountPath")]
+                    [Validation(Required=false)]
+                    public string MountPath { get; set; }
+
+                    [NameInMap("SecretId")]
+                    [Validation(Required=false)]
+                    public long? SecretId { get; set; }
+
+                    [NameInMap("SecretName")]
+                    [Validation(Required=false)]
+                    public string SecretName { get; set; }
+
+                }
 
             }
 
