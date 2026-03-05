@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        /// <summary>
-        /// <para>The slow query log entries.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeSlowLogRecordsResponseBodyItems Items { get; set; }
@@ -40,92 +37,38 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeSlowLogRecordsResponseBodyItemsLogRecords> LogRecords { get; set; }
             public class DescribeSlowLogRecordsResponseBodyItemsLogRecords : TeaModel {
-                /// <summary>
-                /// <para>The ID of the account.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("Account")]
                 [Validation(Required=false)]
                 public string Account { get; set; }
 
-                /// <summary>
-                /// <para>The username of the account.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>demo</para>
-                /// </summary>
                 [NameInMap("AccountName")]
                 [Validation(Required=false)]
                 public string AccountName { get; set; }
 
-                /// <summary>
-                /// <para>The slow query statement.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>KEYS *</para>
-                /// </summary>
                 [NameInMap("Command")]
                 [Validation(Required=false)]
                 public string Command { get; set; }
 
-                /// <summary>
-                /// <para>The database name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>-1</para>
-                /// </summary>
                 [NameInMap("DBName")]
                 [Validation(Required=false)]
                 public string DBName { get; set; }
 
-                /// <summary>
-                /// <para>The database name. This parameter serves the same purpose as the <b>DBName</b> parameter. We recommend that you use the <b>DBName</b> parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>-1</para>
-                /// </summary>
                 [NameInMap("DataBaseName")]
                 [Validation(Required=false)]
                 public string DataBaseName { get; set; }
 
-                /// <summary>
-                /// <para>The amount of time consumed to execute the slow query statement. Unit: microseconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>248</para>
-                /// </summary>
                 [NameInMap("ElapsedTime")]
                 [Validation(Required=false)]
                 public long? ElapsedTime { get; set; }
 
-                /// <summary>
-                /// <para>The start time when the slow query statement was executed. The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-03-20T09:18:41Z</para>
-                /// </summary>
                 [NameInMap("ExecuteTime")]
                 [Validation(Required=false)]
                 public string ExecuteTime { get; set; }
 
-                /// <summary>
-                /// <para>The IP address of the client.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>172.16.88.***</para>
-                /// </summary>
                 [NameInMap("IPAddress")]
                 [Validation(Required=false)]
                 public string IPAddress { get; set; }
 
-                /// <summary>
-                /// <para>The node ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>r-bp1zxszhcgatnx****-db-0</para>
-                /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }

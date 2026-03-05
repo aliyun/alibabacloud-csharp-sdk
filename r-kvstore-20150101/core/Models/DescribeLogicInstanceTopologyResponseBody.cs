@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        /// <summary>
-        /// <para>The detailed proxy information, including information about proxy nodes.</para>
-        /// </summary>
         [NameInMap("RedisProxyList")]
         [Validation(Required=false)]
         public DescribeLogicInstanceTopologyResponseBodyRedisProxyList RedisProxyList { get; set; }
@@ -30,56 +27,22 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo> NodeInfo { get; set; }
             public class DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo : TeaModel {
-                /// <summary>
-                /// <para>The bandwidth throttling of the node. Unit: MB/s.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>96</para>
-                /// </summary>
                 [NameInMap("Bandwidth")]
                 [Validation(Required=false)]
                 public string Bandwidth { get; set; }
 
-                /// <summary>
-                /// <para>The storage capacity of the node. Unit: MB.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>5120</para>
-                /// </summary>
                 [NameInMap("Capacity")]
                 [Validation(Required=false)]
                 public string Capacity { get; set; }
 
-                /// <summary>
-                /// <para>The maximum number of connections.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>320000</para>
-                /// </summary>
                 [NameInMap("Connection")]
                 [Validation(Required=false)]
                 public string Connection { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the node.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>r-bp10noxlhcoim2****-proxy-3#542****</para>
-                /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
 
-                /// <summary>
-                /// <para>The node type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>proxy</b>: proxy node</description></item>
-                /// <item><description><b>db</b>: data node</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>proxy</para>
-                /// </summary>
                 [NameInMap("NodeType")]
                 [Validation(Required=false)]
                 public string NodeType { get; set; }
@@ -88,9 +51,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         }
 
-        /// <summary>
-        /// <para>Details of data shards, which includes node information such as NodeInfo.</para>
-        /// </summary>
         [NameInMap("RedisShardList")]
         [Validation(Required=false)]
         public DescribeLogicInstanceTopologyResponseBodyRedisShardList RedisShardList { get; set; }
@@ -99,70 +59,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo> NodeInfo { get; set; }
             public class DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo : TeaModel {
-                /// <summary>
-                /// <para>The bandwidth throttling of the node. Unit: MB/s.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>96</para>
-                /// </summary>
                 [NameInMap("Bandwidth")]
                 [Validation(Required=false)]
                 public string Bandwidth { get; set; }
 
-                /// <summary>
-                /// <para>The storage capacity of the node. Unit: MB.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2048</para>
-                /// </summary>
                 [NameInMap("Capacity")]
                 [Validation(Required=false)]
                 public string Capacity { get; set; }
 
-                /// <summary>
-                /// <para>The maximum number of connections.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>10000</para>
-                /// </summary>
                 [NameInMap("Connection")]
                 [Validation(Required=false)]
                 public string Connection { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the node.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>r-bp10noxlhcoim2****-db-0#688****</para>
-                /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
 
-                /// <summary>
-                /// <para>The node type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>proxy</b>: proxy node</description></item>
-                /// <item><description><b>db</b>: data node</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>db</para>
-                /// </summary>
                 [NameInMap("NodeType")]
                 [Validation(Required=false)]
                 public string NodeType { get; set; }
 
-                /// <summary>
-                /// <para>子实例类型，返回值：</para>
-                /// <list type="bullet">
-                /// <item><description><b>master</b>：主节点类型。</description></item>
-                /// <item><description><b>readonly</b>：只读实例类型。</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>master</para>
-                /// </summary>
                 [NameInMap("SubInstanceType")]
                 [Validation(Required=false)]
                 public string SubInstanceType { get; set; }

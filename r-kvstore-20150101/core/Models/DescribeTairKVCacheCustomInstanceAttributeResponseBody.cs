@@ -49,26 +49,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeTairKVCacheCustomInstanceAttributeResponseBodyDisksDisk> Disk { get; set; }
             public class DescribeTairKVCacheCustomInstanceAttributeResponseBodyDisksDisk : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>d-5v1aggi3ffoxufb57**</para>
-                /// </summary>
                 [NameInMap("DiskId")]
                 [Validation(Required=false)]
                 public string DiskId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>100</para>
-                /// </summary>
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public string Size { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>data</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -221,18 +209,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeTairKVCacheCustomInstanceAttributeResponseBodyTagsTag> Tag { get; set; }
             public class DescribeTairKVCacheCustomInstanceAttributeResponseBodyTagsTag : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>tag1</para>
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>value1</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

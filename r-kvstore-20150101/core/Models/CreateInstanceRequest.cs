@@ -250,6 +250,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string InstanceClass { get; set; }
 
+        [NameInMap("InstanceEndpointType")]
+        [Validation(Required=false)]
+        public string InstanceEndpointType { get; set; }
+
         /// <summary>
         /// <para>The name of the instance. The name must be 2 to 80 characters in length and must start with a letter. It cannot contain spaces or specific special characters. These special characters include <c>@ / : = &quot; &lt; &gt; { [ ] }</c></para>
         /// 
@@ -468,9 +472,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string SecondaryZoneId { get; set; }
 
-        /// <summary>
-        /// <para>系统自动生成的安全 Token，无需传入</para>
-        /// </summary>
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }

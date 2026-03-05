@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        /// <summary>
-        /// <para>Details about the extension period for which the classic network endpoint of the instance is retained.</para>
-        /// </summary>
         [NameInMap("NetInfoItems")]
         [Validation(Required=false)]
         public ModifyInstanceNetExpireTimeResponseBodyNetInfoItems NetInfoItems { get; set; }
@@ -30,52 +27,22 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<ModifyInstanceNetExpireTimeResponseBodyNetInfoItemsNetInfoItem> NetInfoItem { get; set; }
             public class ModifyInstanceNetExpireTimeResponseBodyNetInfoItemsNetInfoItem : TeaModel {
-                /// <summary>
-                /// <para>The endpoint of the classic network.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</para>
-                /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
                 public string ConnectionString { get; set; }
 
-                /// <summary>
-                /// <para>The network type of the instance. The returned value is <b>Classic</b>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Classic</para>
-                /// </summary>
                 [NameInMap("DBInstanceNetType")]
                 [Validation(Required=false)]
                 public string DBInstanceNetType { get; set; }
 
-                /// <summary>
-                /// <para>The expiration time of the classic network endpoint.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-08-01T09:29:18Z</para>
-                /// </summary>
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
 
-                /// <summary>
-                /// <para>The IP address of the instance in the classic network.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>100.118.142.***</para>
-                /// </summary>
                 [NameInMap("IPAddress")]
                 [Validation(Required=false)]
                 public string IPAddress { get; set; }
 
-                /// <summary>
-                /// <para>The port number that is used to connect to the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>6379</para>
-                /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public string Port { get; set; }

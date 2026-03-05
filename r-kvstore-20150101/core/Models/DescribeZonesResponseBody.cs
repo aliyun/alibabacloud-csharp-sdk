@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The queried zones.</para>
-        /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]
         public DescribeZonesResponseBodyZones Zones { get; set; }
@@ -30,70 +27,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeZonesResponseBodyZonesKVStoreZone> KVStoreZone { get; set; }
             public class DescribeZonesResponseBodyZonesKVStoreZone : TeaModel {
-                /// <summary>
-                /// <para>Indicates whether Tair (Redis OSS-compatible) instances can be created in the current zone. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>true</b>: Tair (Redis OSS-compatible) instances cannot be created in the current zone.</description></item>
-                /// <item><description><b>false</b>: Tair (Redis OSS-compatible) instances can be created in the current zone.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("Disabled")]
                 [Validation(Required=false)]
                 public bool? Disabled { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the zone is managed by ApsaraDB RDS. The return value of this parameter is <b>true</b> in Tair (Redis OSS-compatible).</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("IsRds")]
                 [Validation(Required=false)]
                 public bool? IsRds { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-huhehaote</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the network type of the instance can be changed from the classic network to Virtual Private Cloud (VPC). Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>true</b>: The network type of the instance can be changed from the classic network to VPC.</description></item>
-                /// <item><description><b>false</b>: The network type of the instance cannot be changed from the classic network to VPC.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("SwitchNetwork")]
                 [Validation(Required=false)]
                 public bool? SwitchNetwork { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the zone within the specified region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-huhehaote-b</para>
-                /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the zone within the specified region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Hohhot Zone B</para>
-                /// </summary>
                 [NameInMap("ZoneName")]
                 [Validation(Required=false)]
                 public string ZoneName { get; set; }

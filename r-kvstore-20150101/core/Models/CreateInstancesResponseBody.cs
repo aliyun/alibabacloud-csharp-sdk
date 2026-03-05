@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateInstancesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The IDs of instances that were created.</para>
-        /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public CreateInstancesResponseBodyInstanceIds InstanceIds { get; set; }

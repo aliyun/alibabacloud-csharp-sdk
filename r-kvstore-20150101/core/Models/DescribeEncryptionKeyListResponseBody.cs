@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeEncryptionKeyListResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The custom keys that are available in the region.</para>
-        /// </summary>
         [NameInMap("KeyIds")]
         [Validation(Required=false)]
         public DescribeEncryptionKeyListResponseBodyKeyIds KeyIds { get; set; }

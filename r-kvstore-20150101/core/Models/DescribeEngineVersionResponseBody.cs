@@ -48,9 +48,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public DescribeEngineVersionResponseBodyDBLatestMinorVersionVersionRelease VersionRelease { get; set; }
             public class DescribeEngineVersionResponseBodyDBLatestMinorVersionVersionRelease : TeaModel {
-                /// <summary>
-                /// <para>The information about the minor versions.</para>
-                /// </summary>
                 [NameInMap("ReleaseInfo")]
                 [Validation(Required=false)]
                 public DescribeEngineVersionResponseBodyDBLatestMinorVersionVersionReleaseReleaseInfo ReleaseInfo { get; set; }
@@ -59,52 +56,22 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     [Validation(Required=false)]
                     public List<DescribeEngineVersionResponseBodyDBLatestMinorVersionVersionReleaseReleaseInfoReleaseInfoList> ReleaseInfoList { get; set; }
                     public class DescribeEngineVersionResponseBodyDBLatestMinorVersionVersionReleaseReleaseInfoReleaseInfoList : TeaModel {
-                        /// <summary>
-                        /// <para>The creation time of the instance.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>2022-11-21T13:28Z</para>
-                        /// </summary>
                         [NameInMap("CreateTime")]
                         [Validation(Required=false)]
                         public string CreateTime { get; set; }
 
-                        /// <summary>
-                        /// <para>The importance level.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>0</para>
-                        /// </summary>
                         [NameInMap("Level")]
                         [Validation(Required=false)]
                         public string Level { get; set; }
 
-                        /// <summary>
-                        /// <para>The release notes.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>netbank1022</para>
-                        /// </summary>
                         [NameInMap("ReleaseNote")]
                         [Validation(Required=false)]
                         public string ReleaseNote { get; set; }
 
-                        /// <summary>
-                        /// <para>The description of the minor versions to which the instance can be updated.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>ReleaseNoteEn</para>
-                        /// </summary>
                         [NameInMap("ReleaseNoteEn")]
                         [Validation(Required=false)]
                         public string ReleaseNoteEn { get; set; }
 
-                        /// <summary>
-                        /// <para>The release version of EMR.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>EMR-5.7.0</para>
-                        /// </summary>
                         [NameInMap("ReleaseVersion")]
                         [Validation(Required=false)]
                         public string ReleaseVersion { get; set; }
@@ -325,9 +292,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public DescribeEngineVersionResponseBodyProxyLatestMinorVersionVersionRelease VersionRelease { get; set; }
             public class DescribeEngineVersionResponseBodyProxyLatestMinorVersionVersionRelease : TeaModel {
-                /// <summary>
-                /// <para>The information about the minor versions.</para>
-                /// </summary>
                 [NameInMap("ReleaseInfo")]
                 [Validation(Required=false)]
                 public DescribeEngineVersionResponseBodyProxyLatestMinorVersionVersionReleaseReleaseInfo ReleaseInfo { get; set; }
@@ -336,57 +300,22 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     [Validation(Required=false)]
                     public List<DescribeEngineVersionResponseBodyProxyLatestMinorVersionVersionReleaseReleaseInfoReleaseInfoList> ReleaseInfoList { get; set; }
                     public class DescribeEngineVersionResponseBodyProxyLatestMinorVersionVersionReleaseReleaseInfoReleaseInfoList : TeaModel {
-                        /// <summary>
-                        /// <para>The time when the version was released.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>2022-08-23T14:26:20Z</para>
-                        /// </summary>
                         [NameInMap("CreateTime")]
                         [Validation(Required=false)]
                         public string CreateTime { get; set; }
 
-                        /// <summary>
-                        /// <para>The version update level. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description><b>0</b>: regular</description></item>
-                        /// <item><description><b>1</b>: recommended</description></item>
-                        /// <item><description><b>2</b>: critical</description></item>
-                        /// </list>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>0</para>
-                        /// </summary>
                         [NameInMap("Level")]
                         [Validation(Required=false)]
                         public string Level { get; set; }
 
-                        /// <summary>
-                        /// <para>The release notes.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>x x x x</para>
-                        /// </summary>
                         [NameInMap("ReleaseNote")]
                         [Validation(Required=false)]
                         public string ReleaseNote { get; set; }
 
-                        /// <summary>
-                        /// <para>The description of the minor versions to which the instance can be updated.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>ReleaseNoteEn</para>
-                        /// </summary>
                         [NameInMap("ReleaseNoteEn")]
                         [Validation(Required=false)]
                         public string ReleaseNoteEn { get; set; }
 
-                        /// <summary>
-                        /// <para>The release version of EMR.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>EMR-5.9.1</para>
-                        /// </summary>
                         [NameInMap("ReleaseVersion")]
                         [Validation(Required=false)]
                         public string ReleaseVersion { get; set; }

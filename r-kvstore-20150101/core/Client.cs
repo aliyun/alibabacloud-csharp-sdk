@@ -539,7 +539,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a public endpoint for an ApsaraDB for Redis instance.</para>
+        /// <para>Applies for a public endpoint for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -614,7 +614,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a public endpoint for an ApsaraDB for Redis instance.</para>
+        /// <para>Applies for a public endpoint for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -689,7 +689,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a public endpoint for an ApsaraDB for Redis instance.</para>
+        /// <para>Applies for a public endpoint for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -712,7 +712,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a public endpoint for an ApsaraDB for Redis instance.</para>
+        /// <para>Applies for a public endpoint for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2265,6 +2265,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["InstanceClass"] = request.InstanceClass;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceEndpointType))
+            {
+                query["InstanceEndpointType"] = request.InstanceEndpointType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -2503,6 +2507,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
             {
                 query["InstanceClass"] = request.InstanceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceEndpointType))
+            {
+                query["InstanceEndpointType"] = request.InstanceEndpointType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
@@ -3179,7 +3187,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建TairCustom实例</para>
+        /// <para>Creates a TairCustom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3325,7 +3333,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建TairCustom实例</para>
+        /// <para>Creates a TairCustom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3471,7 +3479,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建TairCustom实例</para>
+        /// <para>Creates a TairCustom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3489,7 +3497,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建TairCustom实例</para>
+        /// <para>Creates a TairCustom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3599,6 +3607,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
             {
                 query["InstanceClass"] = request.InstanceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceEndpointType))
+            {
+                query["InstanceEndpointType"] = request.InstanceEndpointType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
@@ -3833,6 +3845,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
             {
                 query["InstanceClass"] = request.InstanceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceEndpointType))
+            {
+                query["InstanceEndpointType"] = request.InstanceEndpointType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
@@ -4927,7 +4943,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Release the Redis instance.</para>
+        /// <para>Releases a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5006,7 +5022,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Release the Redis instance.</para>
+        /// <para>Releases a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5085,7 +5101,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Release the Redis instance.</para>
+        /// <para>Releases a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5116,7 +5132,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Release the Redis instance.</para>
+        /// <para>Releases a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5887,7 +5903,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the O\&amp;M tasks of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the details of the O\\\&amp;M tasks of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5970,7 +5986,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the O\&amp;M tasks of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the details of the O\\\&amp;M tasks of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6053,7 +6069,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the O\&amp;M tasks of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the details of the O\\\&amp;M tasks of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6076,7 +6092,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the O\&amp;M tasks of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the details of the O\\\&amp;M tasks of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6259,7 +6275,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the O\\\\\\&amp;M event details of an instance.</para>
+        /// <para>Queries the O\\\\\\\\\\&amp;M event details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6361,7 +6377,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the O\\\\\\&amp;M event details of an instance.</para>
+        /// <para>Queries the O\\\\\\\\\\&amp;M event details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6463,7 +6479,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the O\\\\\\&amp;M event details of an instance.</para>
+        /// <para>Queries the O\\\\\\\\\\&amp;M event details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6481,7 +6497,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the O\\\\\\&amp;M event details of an instance.</para>
+        /// <para>Queries the O\\\\\\\\\\&amp;M event details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8715,7 +8731,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the network information of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8781,7 +8797,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the network information of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8847,7 +8863,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the network information of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8865,7 +8881,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the network information of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12303,7 +12319,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether TLS (SSL) encryption is enabled for an instance.</para>
+        /// <para>Queries whether TLS (SSL) encryption is enabled for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12378,7 +12394,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether TLS (SSL) encryption is enabled for an instance.</para>
+        /// <para>Queries whether TLS (SSL) encryption is enabled for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12453,7 +12469,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether TLS (SSL) encryption is enabled for an instance.</para>
+        /// <para>Queries whether TLS (SSL) encryption is enabled for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12484,7 +12500,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether TLS (SSL) encryption is enabled for an instance.</para>
+        /// <para>Queries whether TLS (SSL) encryption is enabled for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13347,7 +13363,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the internal bandwidth of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the current bandwidth of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13418,7 +13434,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the internal bandwidth of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the current bandwidth of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13489,7 +13505,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the internal bandwidth of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the current bandwidth of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13512,7 +13528,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the internal bandwidth of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Queries the current bandwidth of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15503,7 +15519,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions in which ApsaraDB for Redis instances can be created.</para>
+        /// <para>Queries all regions and zones supported for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15565,7 +15581,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions in which ApsaraDB for Redis instances can be created.</para>
+        /// <para>Queries all regions and zones supported for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15627,7 +15643,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions in which ApsaraDB for Redis instances can be created.</para>
+        /// <para>Queries all regions and zones supported for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15645,7 +15661,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions in which ApsaraDB for Redis instances can be created.</para>
+        /// <para>Queries all regions and zones supported for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17055,7 +17071,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看TairCustom实例</para>
+        /// <para>Queries the details of a TairKVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17093,7 +17109,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看TairCustom实例</para>
+        /// <para>Queries the details of a TairKVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17131,7 +17147,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看TairCustom实例</para>
+        /// <para>Queries the details of a TairKVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17149,7 +17165,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看TairCustom实例</para>
+        /// <para>Queries the details of a TairKVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17167,7 +17183,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询TairCustom主机监控</para>
+        /// <para>Queries the monitoring data of a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17205,7 +17221,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询TairCustom主机监控</para>
+        /// <para>Queries the monitoring data of a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17243,7 +17259,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询TairCustom主机监控</para>
+        /// <para>Queries the monitoring data of a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17261,7 +17277,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询TairCustom主机监控</para>
+        /// <para>Queries the monitoring data of a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17279,7 +17295,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看TairCustom实例</para>
+        /// <para>Queries Tair-KVCache instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17317,7 +17333,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看TairCustom实例</para>
+        /// <para>Queries Tair-KVCache instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17355,7 +17371,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看TairCustom实例</para>
+        /// <para>Queries Tair-KVCache instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17373,7 +17389,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看TairCustom实例</para>
+        /// <para>Queries Tair-KVCache instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17635,7 +17651,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones available for Tair (Redis OSS-compatible).</para>
+        /// <para>Queries the zones that support Tair (Redis OSS-compatible) in a specific region. To query the zones where Tair (Redis OSS-compatible) instances can be purchased, call the DescribeAvailableResource operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17701,7 +17717,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones available for Tair (Redis OSS-compatible).</para>
+        /// <para>Queries the zones that support Tair (Redis OSS-compatible) in a specific region. To query the zones where Tair (Redis OSS-compatible) instances can be purchased, call the DescribeAvailableResource operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17767,7 +17783,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones available for Tair (Redis OSS-compatible).</para>
+        /// <para>Queries the zones that support Tair (Redis OSS-compatible) in a specific region. To query the zones where Tair (Redis OSS-compatible) instances can be purchased, call the DescribeAvailableResource operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17785,7 +17801,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones available for Tair (Redis OSS-compatible).</para>
+        /// <para>Queries the zones that support Tair (Redis OSS-compatible) in a specific region. To query the zones where Tair (Redis OSS-compatible) instances can be purchased, call the DescribeAvailableResource operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19435,7 +19451,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places a write lock on an instance. After the instance is locked, it supports only read operations.</para>
+        /// <para>Locks an instance. After the instance is locked, you can only read data from the instance, but cannot write data to the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19501,7 +19517,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places a write lock on an instance. After the instance is locked, it supports only read operations.</para>
+        /// <para>Locks an instance. After the instance is locked, you can only read data from the instance, but cannot write data to the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19567,7 +19583,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places a write lock on an instance. After the instance is locked, it supports only read operations.</para>
+        /// <para>Locks an instance. After the instance is locked, you can only read data from the instance, but cannot write data to the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19585,7 +19601,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places a write lock on an instance. After the instance is locked, it supports only read operations.</para>
+        /// <para>Locks an instance. After the instance is locked, you can only read data from the instance, but cannot write data to the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20243,7 +20259,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the password of a specific account for a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Modifies the password of an account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20321,7 +20337,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the password of a specific account for a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Modifies the password of an account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20399,7 +20415,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the password of a specific account for a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Modifies the password of an account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20417,7 +20433,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the password of a specific account for a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Modifies the password of an account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20627,7 +20643,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the scheduled switchover time of an O&amp;M task.</para>
+        /// <para>Changes the scheduled switchover time of an O\&amp;M task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20698,7 +20714,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the scheduled switchover time of an O&amp;M task.</para>
+        /// <para>Changes the scheduled switchover time of an O\&amp;M task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20769,7 +20785,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the scheduled switchover time of an O&amp;M task.</para>
+        /// <para>Changes the scheduled switchover time of an O\&amp;M task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20792,7 +20808,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the scheduled switchover time of an O&amp;M task.</para>
+        /// <para>Changes the scheduled switchover time of an O\&amp;M task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21567,7 +21583,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the setting related to the automatic update of minor versions for an instance.</para>
+        /// <para>Modifies the settings related to the automatic minor version update for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21633,7 +21649,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the setting related to the automatic update of minor versions for an instance.</para>
+        /// <para>Modifies the settings related to the automatic minor version update for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21699,7 +21715,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the setting related to the automatic update of minor versions for an instance.</para>
+        /// <para>Modifies the settings related to the automatic minor version update for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21717,7 +21733,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the setting related to the automatic update of minor versions for an instance.</para>
+        /// <para>Modifies the settings related to the automatic minor version update for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23659,7 +23675,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the maintenance window of an Tair (Redis OSS-compatible) instance. Alibaba Cloud maintains Tair (Redis OSS-compatible) instances during the specified maintenance window.</para>
+        /// <para>Modifies the maintenance window of a Tair (Redis OSS-compatible) instance. Alibaba Cloud maintains Tair (Redis OSS-compatible) instances during the specified maintenance window.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23734,7 +23750,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the maintenance window of an Tair (Redis OSS-compatible) instance. Alibaba Cloud maintains Tair (Redis OSS-compatible) instances during the specified maintenance window.</para>
+        /// <para>Modifies the maintenance window of a Tair (Redis OSS-compatible) instance. Alibaba Cloud maintains Tair (Redis OSS-compatible) instances during the specified maintenance window.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23809,7 +23825,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the maintenance window of an Tair (Redis OSS-compatible) instance. Alibaba Cloud maintains Tair (Redis OSS-compatible) instances during the specified maintenance window.</para>
+        /// <para>Modifies the maintenance window of a Tair (Redis OSS-compatible) instance. Alibaba Cloud maintains Tair (Redis OSS-compatible) instances during the specified maintenance window.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23832,7 +23848,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the maintenance window of an Tair (Redis OSS-compatible) instance. Alibaba Cloud maintains Tair (Redis OSS-compatible) instances during the specified maintenance window.</para>
+        /// <para>Modifies the maintenance window of a Tair (Redis OSS-compatible) instance. Alibaba Cloud maintains Tair (Redis OSS-compatible) instances during the specified maintenance window.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26043,7 +26059,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a Tair (Redis OSS-compatible) instance belongs.</para>
+        /// <para>Modifies the resource group to which a Tair (Redis OSS-compatible) instance belongs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26121,7 +26137,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a Tair (Redis OSS-compatible) instance belongs.</para>
+        /// <para>Modifies the resource group to which a Tair (Redis OSS-compatible) instance belongs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26199,7 +26215,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a Tair (Redis OSS-compatible) instance belongs.</para>
+        /// <para>Modifies the resource group to which a Tair (Redis OSS-compatible) instance belongs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26225,7 +26241,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a Tair (Redis OSS-compatible) instance belongs.</para>
+        /// <para>Modifies the resource group to which a Tair (Redis OSS-compatible) instance belongs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26447,7 +26463,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelists of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Configures an IP address whitelist for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26530,7 +26546,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelists of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Configures an IP address whitelist for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26613,7 +26629,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelists of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Configures an IP address whitelist for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26636,7 +26652,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelists of a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>Configures an IP address whitelist for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26659,7 +26675,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改TairCustom实例基本参数</para>
+        /// <para>Modifies the basic parameters of a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26729,7 +26745,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改TairCustom实例基本参数</para>
+        /// <para>Modifies the basic parameters of a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26799,7 +26815,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改TairCustom实例基本参数</para>
+        /// <para>Modifies the basic parameters of a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26817,7 +26833,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改TairCustom实例基本参数</para>
+        /// <para>Modifies the basic parameters of a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27215,7 +27231,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the private endpoint of an ApsaraDB for Redis cluster instance.</para>
+        /// <para>Releases the private endpoint of a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27282,7 +27298,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the private endpoint of an ApsaraDB for Redis cluster instance.</para>
+        /// <para>Releases the private endpoint of a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27349,7 +27365,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the private endpoint of an ApsaraDB for Redis cluster instance.</para>
+        /// <para>Releases the private endpoint of a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27372,7 +27388,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the private endpoint of an ApsaraDB for Redis cluster instance.</para>
+        /// <para>Releases the private endpoint of a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27975,7 +27991,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews an ApsaraDB for Redis instance.</para>
+        /// <para>Renews a Tair (Redis OSS-compatible) subscription instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28078,7 +28094,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews an ApsaraDB for Redis instance.</para>
+        /// <para>Renews a Tair (Redis OSS-compatible) subscription instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28181,7 +28197,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews an ApsaraDB for Redis instance.</para>
+        /// <para>Renews a Tair (Redis OSS-compatible) subscription instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28204,7 +28220,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews an ApsaraDB for Redis instance.</para>
+        /// <para>Renews a Tair (Redis OSS-compatible) subscription instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28439,7 +28455,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置TairCustom上主机密码</para>
+        /// <para>Modifies the basic parameters of a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28509,7 +28525,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置TairCustom上主机密码</para>
+        /// <para>Modifies the basic parameters of a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28579,7 +28595,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置TairCustom上主机密码</para>
+        /// <para>Modifies the basic parameters of a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28597,7 +28613,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置TairCustom上主机密码</para>
+        /// <para>Modifies the basic parameters of a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28615,7 +28631,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变配TairCustom的主机的磁盘</para>
+        /// <para>Modifies the disk size of a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28689,7 +28705,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变配TairCustom的主机的磁盘</para>
+        /// <para>Modifies the disk size of a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28763,7 +28779,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变配TairCustom的主机的磁盘</para>
+        /// <para>Modifies the disk size of a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28781,7 +28797,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变配TairCustom的主机的磁盘</para>
+        /// <para>Modifies the disk size of a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28799,7 +28815,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a running ApsaraDB for Redis instance.</para>
+        /// <para>Restarts a running Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28869,7 +28885,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a running ApsaraDB for Redis instance.</para>
+        /// <para>Restarts a running Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28939,7 +28955,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a running ApsaraDB for Redis instance.</para>
+        /// <para>Restarts a running Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28957,7 +28973,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a running ApsaraDB for Redis instance.</para>
+        /// <para>Restarts a running Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28975,7 +28991,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启TairCustom的主机</para>
+        /// <para>Restarts a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29037,7 +29053,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启TairCustom的主机</para>
+        /// <para>Restarts a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29099,7 +29115,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启TairCustom的主机</para>
+        /// <para>Restarts a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29117,7 +29133,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启TairCustom的主机</para>
+        /// <para>Restarts a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29367,7 +29383,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动TairCustom的主机</para>
+        /// <para>Starts a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29429,7 +29445,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动TairCustom的主机</para>
+        /// <para>Starts a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29491,7 +29507,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动TairCustom的主机</para>
+        /// <para>Starts a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29509,7 +29525,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动TairCustom的主机</para>
+        /// <para>Starts a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29527,7 +29543,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止TairCustom的主机</para>
+        /// <para>Stops a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29589,7 +29605,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止TairCustom的主机</para>
+        /// <para>Stops a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29651,7 +29667,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止TairCustom的主机</para>
+        /// <para>Stops a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29669,7 +29685,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止TairCustom的主机</para>
+        /// <para>Stops a Tair-KVCache instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31579,7 +31595,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the write lock from an instance. After the instance is unlocked, it supports both read and write operations.</para>
+        /// <para>Unlocks a write-locked instance. After the instance is unlocked, you can read and write data to and from the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31641,7 +31657,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the write lock from an instance. After the instance is unlocked, it supports both read and write operations.</para>
+        /// <para>Unlocks a write-locked instance. After the instance is unlocked, you can read and write data to and from the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31703,7 +31719,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the write lock from an instance. After the instance is unlocked, it supports both read and write operations.</para>
+        /// <para>Unlocks a write-locked instance. After the instance is unlocked, you can read and write data to and from the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31721,7 +31737,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the write lock from an instance. After the instance is unlocked, it supports both read and write operations.</para>
+        /// <para>Unlocks a write-locked instance. After the instance is unlocked, you can read and write data to and from the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -217,6 +217,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string InstanceClass { get; set; }
 
+        [NameInMap("InstanceEndpointType")]
+        [Validation(Required=false)]
+        public string InstanceEndpointType { get; set; }
+
         /// <summary>
         /// <para>The name of the instance. The name must meet the following requirements:</para>
         /// <list type="bullet">

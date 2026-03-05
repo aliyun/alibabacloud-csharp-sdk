@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The <b>region IDs</b>.</para>
-        /// </summary>
         [NameInMap("RegionIds")]
         [Validation(Required=false)]
         public DescribeRegionsResponseBodyRegionIds RegionIds { get; set; }
@@ -20,39 +17,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionIdsKVStoreRegion> KVStoreRegion { get; set; }
             public class DescribeRegionsResponseBodyRegionIdsKVStoreRegion : TeaModel {
-                /// <summary>
-                /// <para>The name of the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>China (Hangzhou)</para>
-                /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
-                /// <summary>
-                /// <para>The endpoint of the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>r-kvstore.aliyuncs.com</para>
-                /// </summary>
                 [NameInMap("RegionEndpoint")]
                 [Validation(Required=false)]
                 public string RegionEndpoint { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
-                /// <summary>
-                /// <para>The zone IDs.</para>
-                /// </summary>
                 [NameInMap("ZoneIdList")]
                 [Validation(Required=false)]
                 public DescribeRegionsResponseBodyRegionIdsKVStoreRegionZoneIdList ZoneIdList { get; set; }
@@ -63,12 +39,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
                 }
 
-                /// <summary>
-                /// <para>The IDs of the zones in the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou-h</para>
-                /// </summary>
                 [NameInMap("ZoneIds")]
                 [Validation(Required=false)]
                 public string ZoneIds { get; set; }

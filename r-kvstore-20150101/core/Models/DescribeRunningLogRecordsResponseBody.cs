@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        /// <summary>
-        /// <para>Details about the log entries.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeRunningLogRecordsResponseBodyItems Items { get; set; }
@@ -40,45 +37,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeRunningLogRecordsResponseBodyItemsLogRecords> LogRecords { get; set; }
             public class DescribeRunningLogRecordsResponseBodyItemsLogRecords : TeaModel {
-                /// <summary>
-                /// <para>The content of the log.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>CONFIG REWRITE executed with success.</para>
-                /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
-                /// <summary>
-                /// <para>The time when the log was generated. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2018-12-03T07:07:30Z</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>r-bp1zxszhcgatnx****</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the node.</para>
-                /// <remarks>
-                /// <para> If a standard instance is queried, <c>(null)</c> is returned.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>r-bp1zxszhcgatnx****-db-0</para>
-                /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }

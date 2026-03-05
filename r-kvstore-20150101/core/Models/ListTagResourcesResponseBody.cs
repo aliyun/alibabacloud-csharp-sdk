@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>Details about the instances and tags.</para>
-        /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public ListTagResourcesResponseBodyTagResources TagResources { get; set; }
@@ -40,42 +37,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
-                /// <summary>
-                /// <para>The resource ID, which is also the ID of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>r-bp1zxszhcgatnx****</para>
-                /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
-                /// <summary>
-                /// <para>The resource type. The return value is <b>ALIYUN::KVSTORE::INSTANCE</b>. This value indicates a Tair (Redis OSS-compatible) instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ALIYUN::KVSTORE::INSTANCE</para>
-                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
-                /// <summary>
-                /// <para>The keys of the tags.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>demokey</para>
-                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
-                /// <summary>
-                /// <para>The values of the tags.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>demovalue</para>
-                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }
