@@ -354,6 +354,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 query["ChatMode"] = request.ChatMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableVideoUnderstanding))
+            {
+                query["EnableVideoUnderstanding"] = request.EnableVideoUnderstanding;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Greeting))
             {
                 query["Greeting"] = request.Greeting;
@@ -373,6 +377,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreferVideo))
+            {
+                query["PreferVideo"] = request.PreferVideo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsConfigShrink))
             {
@@ -474,6 +482,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 query["ChatMode"] = request.ChatMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableVideoUnderstanding))
+            {
+                query["EnableVideoUnderstanding"] = request.EnableVideoUnderstanding;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Greeting))
             {
                 query["Greeting"] = request.Greeting;
@@ -493,6 +505,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreferVideo))
+            {
+                query["PreferVideo"] = request.PreferVideo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsConfigShrink))
             {
@@ -12300,6 +12316,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 query["ChatMode"] = request.ChatMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableVideoUnderstanding))
+            {
+                query["EnableVideoUnderstanding"] = request.EnableVideoUnderstanding;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Greeting))
             {
                 query["Greeting"] = request.Greeting;
@@ -12323,6 +12343,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreferVideo))
+            {
+                query["PreferVideo"] = request.PreferVideo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsConfigShrink))
             {
@@ -12424,6 +12448,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 query["ChatMode"] = request.ChatMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableVideoUnderstanding))
+            {
+                query["EnableVideoUnderstanding"] = request.EnableVideoUnderstanding;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Greeting))
             {
                 query["Greeting"] = request.Greeting;
@@ -12447,6 +12475,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreferVideo))
+            {
+                query["PreferVideo"] = request.PreferVideo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsConfigShrink))
             {

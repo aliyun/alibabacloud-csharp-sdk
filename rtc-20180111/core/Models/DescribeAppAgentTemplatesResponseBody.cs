@@ -155,6 +155,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("EnableVideoUnderstanding")]
+            [Validation(Required=false)]
+            public bool? EnableVideoUnderstanding { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>你好，机器人。</para>
@@ -282,6 +286,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            [NameInMap("PreferVideo")]
+            [Validation(Required=false)]
+            public int? PreferVideo { get; set; }
 
             [NameInMap("TtsConfig")]
             [Validation(Required=false)]

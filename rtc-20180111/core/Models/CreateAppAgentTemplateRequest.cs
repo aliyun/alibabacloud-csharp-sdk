@@ -165,6 +165,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public int? ChatMode { get; set; }
 
+        [NameInMap("EnableVideoUnderstanding")]
+        [Validation(Required=false)]
+        public bool? EnableVideoUnderstanding { get; set; }
+
         [NameInMap("Greeting")]
         [Validation(Required=false)]
         public string Greeting { get; set; }
@@ -280,6 +284,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("PreferVideo")]
+        [Validation(Required=false)]
+        public int? PreferVideo { get; set; }
 
         [NameInMap("TtsConfig")]
         [Validation(Required=false)]

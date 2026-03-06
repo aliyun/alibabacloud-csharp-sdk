@@ -198,6 +198,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public int? ChatMode { get; set; }
 
+            [NameInMap("EnableVideoUnderstanding")]
+            [Validation(Required=false)]
+            public bool? EnableVideoUnderstanding { get; set; }
+
             [NameInMap("Greeting")]
             [Validation(Required=false)]
             public string Greeting { get; set; }
@@ -235,6 +239,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
+
+                [NameInMap("BizParams")]
+                [Validation(Required=false)]
+                public object BizParams { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -379,6 +387,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 public int? Volume { get; set; }
 
             }
+
+            [NameInMap("preferVideo")]
+            [Validation(Required=false)]
+            public int? PreferVideo { get; set; }
 
         }
 
