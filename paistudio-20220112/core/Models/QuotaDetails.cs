@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public ResourceAmount DesiredMinQuota { get; set; }
 
+        [NameInMap("NodeStatistics")]
+        [Validation(Required=false)]
+        public QuotaNodeStatistics NodeStatistics { get; set; }
+
         [NameInMap("RequestedQuota")]
         [Validation(Required=false)]
         public ResourceAmount RequestedQuota { get; set; }
