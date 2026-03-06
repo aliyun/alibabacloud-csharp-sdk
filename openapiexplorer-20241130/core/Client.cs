@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证 Terraform HCL 语法</para>
+        /// <para>Validates the syntax of HashiCorp Configuration Language (HCL) for Terraform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证 Terraform HCL 语法</para>
+        /// <para>Validates the syntax of HashiCorp Configuration Language (HCL) for Terraform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证 Terraform HCL 语法</para>
+        /// <para>Validates the syntax of HashiCorp Configuration Language (HCL) for Terraform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证 Terraform HCL 语法</para>
+        /// <para>Validates the syntax of HashiCorp Configuration Language (HCL) for Terraform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建ApiMcpServer</para>
+        /// <para>Creates an API MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建ApiMcpServer</para>
+        /// <para>Creates an API MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -394,7 +394,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建ApiMcpServer</para>
+        /// <para>Creates an API MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -413,7 +413,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建ApiMcpServer</para>
+        /// <para>Creates an API MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ApiMcpServer</para>
+        /// <para>Deletes an API MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -482,7 +482,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ApiMcpServer</para>
+        /// <para>Deletes an API MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -532,7 +532,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ApiMcpServer</para>
+        /// <para>Deletes an API MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -551,7 +551,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ApiMcpServer</para>
+        /// <para>Deletes an API MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -570,7 +570,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>动态生成Aliyun CLI命令</para>
+        /// <para>Generates commands for the Alibaba Cloud command-line interface (CLI).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -596,6 +596,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
                 request.ApiParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApiParams, "apiParams", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatePagination))
+            {
+                body["aggregatePagination"] = request.AggregatePagination;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Api))
             {
                 body["api"] = request.Api;
@@ -642,7 +646,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>动态生成Aliyun CLI命令</para>
+        /// <para>Generates commands for the Alibaba Cloud command-line interface (CLI).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -668,6 +672,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
                 request.ApiParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApiParams, "apiParams", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatePagination))
+            {
+                body["aggregatePagination"] = request.AggregatePagination;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Api))
             {
                 body["api"] = request.Api;
@@ -714,7 +722,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>动态生成Aliyun CLI命令</para>
+        /// <para>Generates commands for the Alibaba Cloud command-line interface (CLI).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -733,7 +741,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>动态生成Aliyun CLI命令</para>
+        /// <para>Generates commands for the Alibaba Cloud command-line interface (CLI).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -752,7 +760,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取产品相关接口的开放元数据</para>
+        /// <para>Retrieves the OpenAPI metadata for an API in a product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -806,7 +814,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取产品相关接口的开放元数据</para>
+        /// <para>Retrieves the OpenAPI metadata for an API in a product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -860,7 +868,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取产品相关接口的开放元数据</para>
+        /// <para>Retrieves the OpenAPI metadata for an API in a product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -879,7 +887,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取产品相关接口的开放元数据</para>
+        /// <para>Retrieves the OpenAPI metadata for an API in a product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -898,7 +906,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 ApiMcpServer</para>
+        /// <para>Retrieves the details of a specific API MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -944,7 +952,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 ApiMcpServer</para>
+        /// <para>Retrieves the details of a specific API MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -990,7 +998,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 ApiMcpServer</para>
+        /// <para>Retrieves the details of a specific API MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1009,7 +1017,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 ApiMcpServer</para>
+        /// <para>Retrieves the details of a specific API MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1028,7 +1036,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户全局API MCP Server配置</para>
+        /// <para>Queries the global API MCP Server configuration for a user. The configuration includes settings for public network access and the whitelist of source VPC IDs for requests from a VPC.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1064,7 +1072,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户全局API MCP Server配置</para>
+        /// <para>Queries the global API MCP Server configuration for a user. The configuration includes settings for public network access and the whitelist of source VPC IDs for requests from a VPC.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1100,7 +1108,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户全局API MCP Server配置</para>
+        /// <para>Queries the global API MCP Server configuration for a user. The configuration includes settings for public network access and the whitelist of source VPC IDs for requests from a VPC.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1115,7 +1123,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户全局API MCP Server配置</para>
+        /// <para>Queries the global API MCP Server configuration for a user. The configuration includes settings for public network access and the whitelist of source VPC IDs for requests from a VPC.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1304,12 +1312,12 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log of an API call performed by using the current account based on the returned request ID of the API to troubleshoot issues.</para>
+        /// <para>Queries the details of an OpenAPI call log for your account using the request ID returned from an API call. This operation is used for troubleshooting.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Permissions on this API cannot be granted to other members.</para>
+        /// <para>This API does not support authorization.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1355,12 +1363,12 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log of an API call performed by using the current account based on the returned request ID of the API to troubleshoot issues.</para>
+        /// <para>Queries the details of an OpenAPI call log for your account using the request ID returned from an API call. This operation is used for troubleshooting.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Permissions on this API cannot be granted to other members.</para>
+        /// <para>This API does not support authorization.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1406,12 +1414,12 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log of an API call performed by using the current account based on the returned request ID of the API to troubleshoot issues.</para>
+        /// <para>Queries the details of an OpenAPI call log for your account using the request ID returned from an API call. This operation is used for troubleshooting.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Permissions on this API cannot be granted to other members.</para>
+        /// <para>This API does not support authorization.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1430,12 +1438,12 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log of an API call performed by using the current account based on the returned request ID of the API to troubleshoot issues.</para>
+        /// <para>Queries the details of an OpenAPI call log for your account using the request ID returned from an API call. This operation is used for troubleshooting.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Permissions on this API cannot be granted to other members.</para>
+        /// <para>This API does not support authorization.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1454,7 +1462,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取产品的接入点信息</para>
+        /// <para>Retrieves the endpoint information for a product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1500,7 +1508,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取产品的接入点信息</para>
+        /// <para>Retrieves the endpoint information for a product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1546,7 +1554,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取产品的接入点信息</para>
+        /// <para>Retrieves the endpoint information for a product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1565,7 +1573,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取产品的接入点信息</para>
+        /// <para>Retrieves the endpoint information for a product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1584,12 +1592,12 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log of an API call based on the returned request ID of the API to troubleshoot issues.</para>
+        /// <para>Queries the details of a request log using the request ID that is returned from an API call. This operation is useful for troubleshooting.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can grant permissions to a Resource Access Management (RAM) user or assume a role to query the log of an API call across RAM users or Alibaba Cloud accounts. For more information, see <a href="https://help.aliyun.com/document_detail/2868101.html">Grant permissions to troubleshoot API errors across accounts</a>.</para>
+        /// <para>You can query call logs across different RAM users or Alibaba Cloud accounts using RAM authorization or role assumption. For more information, see <a href="https://help.aliyun.com/document_detail/2868101.html">Cross-account API error diagnosis authorization</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1635,12 +1643,12 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log of an API call based on the returned request ID of the API to troubleshoot issues.</para>
+        /// <para>Queries the details of a request log using the request ID that is returned from an API call. This operation is useful for troubleshooting.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can grant permissions to a Resource Access Management (RAM) user or assume a role to query the log of an API call across RAM users or Alibaba Cloud accounts. For more information, see <a href="https://help.aliyun.com/document_detail/2868101.html">Grant permissions to troubleshoot API errors across accounts</a>.</para>
+        /// <para>You can query call logs across different RAM users or Alibaba Cloud accounts using RAM authorization or role assumption. For more information, see <a href="https://help.aliyun.com/document_detail/2868101.html">Cross-account API error diagnosis authorization</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1686,12 +1694,12 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log of an API call based on the returned request ID of the API to troubleshoot issues.</para>
+        /// <para>Queries the details of a request log using the request ID that is returned from an API call. This operation is useful for troubleshooting.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can grant permissions to a Resource Access Management (RAM) user or assume a role to query the log of an API call across RAM users or Alibaba Cloud accounts. For more information, see <a href="https://help.aliyun.com/document_detail/2868101.html">Grant permissions to troubleshoot API errors across accounts</a>.</para>
+        /// <para>You can query call logs across different RAM users or Alibaba Cloud accounts using RAM authorization or role assumption. For more information, see <a href="https://help.aliyun.com/document_detail/2868101.html">Cross-account API error diagnosis authorization</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1710,12 +1718,12 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log of an API call based on the returned request ID of the API to troubleshoot issues.</para>
+        /// <para>Queries the details of a request log using the request ID that is returned from an API call. This operation is useful for troubleshooting.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can grant permissions to a Resource Access Management (RAM) user or assume a role to query the log of an API call across RAM users or Alibaba Cloud accounts. For more information, see <a href="https://help.aliyun.com/document_detail/2868101.html">Grant permissions to troubleshoot API errors across accounts</a>.</para>
+        /// <para>You can query call logs across different RAM users or Alibaba Cloud accounts using RAM authorization or role assumption. For more information, see <a href="https://help.aliyun.com/document_detail/2868101.html">Cross-account API error diagnosis authorization</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1734,7 +1742,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取产品的开放元数据</para>
+        /// <para>Retrieves the OpenAPI metadata for a product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1784,7 +1792,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取产品的开放元数据</para>
+        /// <para>Retrieves the OpenAPI metadata for a product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1834,7 +1842,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取产品的开放元数据</para>
+        /// <para>Retrieves the OpenAPI metadata for a product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1853,7 +1861,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取产品的开放元数据</para>
+        /// <para>Retrieves the OpenAPI metadata for a product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1872,7 +1880,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询系统工具列表</para>
+        /// <para>Lists the system tools supported by the MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1926,7 +1934,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询系统工具列表</para>
+        /// <para>Lists the system tools supported by the MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1980,7 +1988,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询系统工具列表</para>
+        /// <para>Lists the system tools supported by the MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1999,7 +2007,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询系统工具列表</para>
+        /// <para>Lists the system tools supported by the MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2018,7 +2026,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源ApiMcpServer</para>
+        /// <para>This operation queries a list of all API MCP servers in an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2100,7 +2108,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源ApiMcpServer</para>
+        /// <para>This operation queries a list of all API MCP servers in an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2182,7 +2190,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源ApiMcpServer</para>
+        /// <para>This operation queries a list of all API MCP servers in an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2201,7 +2209,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源ApiMcpServer</para>
+        /// <para>This operation queries a list of all API MCP servers in an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2220,7 +2228,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新UpdateApiMcpServer</para>
+        /// <para>Updates an API MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2332,7 +2340,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新UpdateApiMcpServer</para>
+        /// <para>Updates an API MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2444,7 +2452,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新UpdateApiMcpServer</para>
+        /// <para>Updates an API MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2463,7 +2471,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新UpdateApiMcpServer</para>
+        /// <para>Updates an API MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2482,7 +2490,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改用户全局API MCP Server配置</para>
+        /// <para>Updates the global API MCP Server configuration for a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2532,7 +2540,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改用户全局API MCP Server配置</para>
+        /// <para>Updates the global API MCP Server configuration for a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2582,7 +2590,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改用户全局API MCP Server配置</para>
+        /// <para>Updates the global API MCP Server configuration for a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2601,7 +2609,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改用户全局API MCP Server配置</para>
+        /// <para>Updates the global API MCP Server configuration for a user.</para>
         /// </summary>
         /// 
         /// <param name="request">

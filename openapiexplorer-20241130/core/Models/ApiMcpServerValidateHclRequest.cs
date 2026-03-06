@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
 {
     public class ApiMcpServerValidateHclRequest : TeaModel {
         /// <summary>
+        /// <para>The content of the Terraform HCL code. For more information, see <a href="https://www.alibabacloud.com/help/en/terraform/terraform-configuration-and-hcl-language-overview">HCL language overview</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>variable &quot;name&quot; {
         ///   default = &quot;terraform-example&quot;

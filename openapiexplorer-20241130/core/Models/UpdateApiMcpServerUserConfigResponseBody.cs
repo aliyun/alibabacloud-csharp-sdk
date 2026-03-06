@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
 {
     public class UpdateApiMcpServerUserConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9BFC4AC1-6BE4-5405-BDEC-CA288D404812</para>
         /// </summary>

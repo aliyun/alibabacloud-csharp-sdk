@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
 {
     public class GetOwnRequestLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed information about the log of the API call.</para>
+        /// <para>The details of the API request log.</para>
         /// </summary>
         [NameInMap("logInfo")]
         [Validation(Required=false)]
@@ -26,12 +26,18 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 /// <summary>
                 /// <para>The authentication type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>AK: includes a permanent AccessKey pair, a temporary AccessKey pair, and a STS token.</description></item>
-                /// <item><description>PRIVATEKEY: an AccessKey pair for an asymmetric cryptography algorithm.</description></item>
-                /// <item><description>BEARETOKEN: an authentication mechanism that is widely used in the OAuth 2.0 framework and cloud services.</description></item>
-                /// <item><description>CUSTOM_SPI: an efficient and secure authentication method that is suitable for the delivery and management of Software as a Service (SaaS) services in Alibaba Cloud Marketplace.</description></item>
-                /// <item><description>Anonymous: anonymous access.</description></item>
-                /// <item><description>DPS: an authentication method that is similar to AK. Its signature algorithm is different from that of Alibaba Cloud services and is exclusive to specific products.</description></item>
+                /// <item><description><para>\<c>AK\\</c>: an AccessKey, which can be a permanent AccessKey, a temporary AccessKey, or an STS token.</para>
+                /// </description></item>
+                /// <item><description><para>\<c>PRIVATEKEY\\</c>: an AccessKey for asymmetric key encryption.</para>
+                /// </description></item>
+                /// <item><description><para>\<c>BEARERTOKEN\\</c>: an authentication mechanism that is widely used in the OAuth 2.0 framework and cloud services.</para>
+                /// </description></item>
+                /// <item><description><para>\<c>CUSTOM_SPI\\</c>: an efficient and secure authentication method that is suitable for the delivery and management of Software as a Service (SaaS) products in Alibaba Cloud Marketplace.</para>
+                /// </description></item>
+                /// <item><description><para>\<c>Anonymous\\</c>: anonymous access.</para>
+                /// </description></item>
+                /// <item><description><para>\<c>DPS\\</c>: similar to an AccessKey, but uses a product-specific signature algorithm that is different from the official Alibaba Cloud algorithm.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -44,8 +50,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 /// <summary>
                 /// <para>The signature algorithm. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>HMAC-SHA1</description></item>
-                /// <item><description>HMAC-SHA256</description></item>
+                /// <item><description><para>\<c>HMAC-SHA1\\</c>: The request is signed using the HMAC-SHA1 algorithm.</para>
+                /// </description></item>
+                /// <item><description><para>\<c>HMAC-SHA256\\</c>: The request is signed using the HMAC-SHA256 algorithm.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -68,21 +76,21 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
             }
 
             /// <summary>
-            /// <para>The basic information about the log of the API call.</para>
+            /// <para>The basic information about the API request.</para>
             /// </summary>
             [NameInMap("basicInfo")]
             [Validation(Required=false)]
             public GetOwnRequestLogResponseBodyLogInfoBasicInfo BasicInfo { get; set; }
             public class GetOwnRequestLogResponseBodyLogInfoBasicInfo : TeaModel {
                 /// <summary>
-                /// <para>The error message returned if the operator does not have the required permissions.</para>
+                /// <para>The details of the permission error.</para>
                 /// </summary>
                 [NameInMap("accessDeniedDetail")]
                 [Validation(Required=false)]
                 public GetOwnRequestLogResponseBodyLogInfoBasicInfoAccessDeniedDetail AccessDeniedDetail { get; set; }
                 public class GetOwnRequestLogResponseBodyLogInfoBasicInfoAccessDeniedDetail : TeaModel {
                     /// <summary>
-                    /// <para>The operation that the operator does not have permissions to perform.</para>
+                    /// <para>The specific operation that caused the permission error.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>openapiexplorer:GetRequestLog</para>
@@ -102,7 +110,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                     public string AuthPrincipalDisplayName { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the Alibaba Cloud account to which the current identity belongs.</para>
+                    /// <para>The UID of the Alibaba Cloud account to which the current identity belongs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1001234561234567</para>
@@ -122,7 +130,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                     public string AuthPrincipalType { get; set; }
 
                     /// <summary>
-                    /// <para>The information after encoding, which can be used for troubleshooting. You can call the DecodeDiagnosticMessage operation of Resource Access Management (RAM) for further diagnostics.</para>
+                    /// <para>The encoded diagnostic information. Call the \<c>DecodeDiagnosticMessage\\</c> operation of RAM to obtain more diagnostic information.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <list type="bullet">
@@ -134,7 +142,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                     public string EncodedDiagnosticMessage { get; set; }
 
                     /// <summary>
-                    /// <para>The cause of the permission-related error.</para>
+                    /// <para>The reason why the permission was denied.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ImplicitDeny</para>
@@ -144,7 +152,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                     public string NoPermissionType { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the policy that causes the permission-related error.</para>
+                    /// <para>The type of the policy that caused the permission error.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>AccountLevelIdentityBasedPolicy</para>
@@ -156,7 +164,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 }
 
                 /// <summary>
-                /// <para>The name of the API.</para>
+                /// <para>The name of the API in the queried log.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RunInstances</para>
@@ -166,14 +174,14 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 public string Api { get; set; }
 
                 /// <summary>
-                /// <para>The information about the API documentation.</para>
+                /// <para>Information about the API reference.</para>
                 /// </summary>
                 [NameInMap("apiDoc")]
                 [Validation(Required=false)]
                 public GetOwnRequestLogResponseBodyLogInfoBasicInfoApiDoc ApiDoc { get; set; }
                 public class GetOwnRequestLogResponseBodyLogInfoBasicInfoApiDoc : TeaModel {
                     /// <summary>
-                    /// <para>The documentation URL on the international site (alibabacloud.com).</para>
+                    /// <para>The URL of the API reference for the international site (alibabacloud.com).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://api.alibabacloud.com/document/Ecs/2014-05-26/RunInstances">https://api.alibabacloud.com/document/Ecs/2014-05-26/RunInstances</a></para>
@@ -183,7 +191,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                     public string AlibabacloudSite { get; set; }
 
                     /// <summary>
-                    /// <para>The documentation URL on the China site (aliyun.com).</para>
+                    /// <para>The URL of the API reference for the China site (aliyun.com).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://api.aliyun.com/document/Ecs/2014-05-26/RunInstances">https://api.aliyun.com/document/Ecs/2014-05-26/RunInstances</a></para>
@@ -195,7 +203,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 }
 
                 /// <summary>
-                /// <para>The API style. Valid values: roa and rpc.</para>
+                /// <para>The API style. Valid values: \<c>ROA\\</c> and \<c>RPC\\</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rpc</para>
@@ -205,7 +213,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 public string ApiStyle { get; set; }
 
                 /// <summary>
-                /// <para>The version of the API.</para>
+                /// <para>The API version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2014-05-26</para>
@@ -215,7 +223,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 public string ApiVersion { get; set; }
 
                 /// <summary>
-                /// <para>The endpoint of the service region.</para>
+                /// <para>The endpoint of the service in the region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs.cn-hangzhou.aliyuncs.com</para>
@@ -225,7 +233,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 public string Endpoint { get; set; }
 
                 /// <summary>
-                /// <para>The error code in the log. This parameter is left empty if no error is reported in the API call.</para>
+                /// <para>The error code in the queried log. This parameter is empty if no error is reported for the request.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IncorrectStatus.TransitRouter</para>
@@ -235,7 +243,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>The error message in the log. This parameter is left empty if no error is reported in the API call.</para>
+                /// <para>The error message in the queried log. This parameter is empty if no error is reported for the request.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The resource is not in a valid state for the operation.</para>
@@ -245,7 +253,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>The time when the gateway receives the request. Indicate the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+                /// <para>The time when the gateway received the request. The time is in the \<c>yyyy-MM-ddTHH:mm:ssZ\\</c> format and is in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-01-21T07:43:06Z</para>
@@ -265,7 +273,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 public string HttpMethod { get; set; }
 
                 /// <summary>
-                /// <para>The HTTP status code in the log.</para>
+                /// <para>The HTTP status code in the queried log.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>400</para>
@@ -275,7 +283,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 public string HttpStatusCode { get; set; }
 
                 /// <summary>
-                /// <para>The request ID.</para>
+                /// <para>The request ID that is passed in the request.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123E4567-E89B-12D3-A456-426614174000</para>
@@ -295,21 +303,24 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 public string Product { get; set; }
 
                 /// <summary>
-                /// <para>The product name, which includes the Chinese name and English name.</para>
+                /// <para>The name of the product in Chinese and English.</para>
                 /// </summary>
                 [NameInMap("productName")]
                 [Validation(Required=false)]
                 public GetOwnRequestLogResponseBodyLogInfoBasicInfoProductName ProductName { get; set; }
                 public class GetOwnRequestLogResponseBodyLogInfoBasicInfoProductName : TeaModel {
                     /// <summary>
-                    /// <para>The product name in Chinese.</para>
+                    /// <para>The Chinese name of the product.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>云服务器 ECS</para>
                     /// </summary>
                     [NameInMap("cnName")]
                     [Validation(Required=false)]
                     public string CnName { get; set; }
 
                     /// <summary>
-                    /// <para>The product name in English.</para>
+                    /// <para>The English name of the product.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Elastic Compute Service</para>
@@ -321,7 +332,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 }
 
                 /// <summary>
-                /// <para>The service region ID.</para>
+                /// <para>The ID of the region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -331,7 +342,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The duration from when the gateway receives the request to when the client receives a response. Unit: milliseconds.</para>
+                /// <para>The time that elapses from when the gateway receives the request to when the gateway returns the response. Unit: ms.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>188</para>
@@ -341,7 +352,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 public string RequestDuration { get; set; }
 
                 /// <summary>
-                /// <para>The time when the request is initiated. Indicate the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+                /// <para>The time when the request was initiated. The time is in the \<c>yyyy-MM-ddTHH:mm:ssZ\\</c> format and is in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-01-21T07:43:06Z</para>
@@ -351,7 +362,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 public string SdkRequestTime { get; set; }
 
                 /// <summary>
-                /// <para>The throttling result. Valid values: FC.PASS: The task is not blocked by throttling. FC.DENY: The task is blocked by throttling.</para>
+                /// <para>The result of the throttling check.\<c>FC.PASS\\</c>: The request was not blocked by throttling.\<c>FC.DENY\\</c>: The request was blocked by throttling.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FC.PASS</para>
@@ -370,7 +381,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
             public GetOwnRequestLogResponseBodyLogInfoCallerInfo CallerInfo { get; set; }
             public class GetOwnRequestLogResponseBodyLogInfoCallerInfo : TeaModel {
                 /// <summary>
-                /// <para>The account ID of the caller.</para>
+                /// <para>The ID of the caller\&quot;s account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>241009849925897811</para>
@@ -392,9 +403,12 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 /// <summary>
                 /// <para>The type of the caller. Valid values:</para>
                 /// <ol>
-                /// <item><description>customer: an Alibaba Cloud account</description></item>
-                /// <item><description>sub: a RAM user</description></item>
-                /// <item><description>AssumedRoleUser: a user that uses a temporary Security Token Service (STS) token</description></item>
+                /// <item><description><para>customer: An Alibaba Cloud account.</para>
+                /// </description></item>
+                /// <item><description><para>sub: A RAM user.</para>
+                /// </description></item>
+                /// <item><description><para>AssumedRoleUser: A temporary identity that uses a Security Token Service (STS) token.</para>
+                /// </description></item>
                 /// </ol>
                 /// 
                 /// <b>Example:</b>
@@ -415,7 +429,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 public string MasterAccountId { get; set; }
 
                 /// <summary>
-                /// <para>The information about the user agent.</para>
+                /// <para>The user agent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AlibabaCloud API Workbench</para>
@@ -427,7 +441,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
             }
 
             /// <summary>
-            /// <para>The information about the request parameters.</para>
+            /// <para>The request parameters.</para>
             /// </summary>
             [NameInMap("parameters")]
             [Validation(Required=false)]
@@ -444,7 +458,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the request parameter is required.</para>
+                /// <para>Specifies whether the request parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -476,14 +490,14 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
             }
 
             /// <summary>
-            /// <para>The information that is returned for the request.</para>
+            /// <para>The information returned for the request.</para>
             /// </summary>
             [NameInMap("responses")]
             [Validation(Required=false)]
             public GetOwnRequestLogResponseBodyLogInfoResponses Responses { get; set; }
             public class GetOwnRequestLogResponseBodyLogInfoResponses : TeaModel {
                 /// <summary>
-                /// <para>The response body.</para>
+                /// <para>The returned information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -495,7 +509,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 public string ResponseBody { get; set; }
 
                 /// <summary>
-                /// <para>The type of the response body. Valid values: JSON, XML, and HTML.</para>
+                /// <para>The format of the response body. Valid values: \<c>JSON\\</c>, \<c>XML\\</c>, and \<c>HTML\\</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>JSON</para>
@@ -509,7 +523,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9BFC4AC1-6BE4-5405-BDEC-CA288D404812</para>

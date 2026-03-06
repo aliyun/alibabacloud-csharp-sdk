@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
 {
     public class GetOwnRequestLogRequest : TeaModel {
         /// <summary>
-        /// <para>The request ID returned by the API for which you want to query the log. The value is the universally unique identifiers (UUID) of the API request and must be uppercase.</para>
+        /// <para>The request ID of the log to query. The ID is the unique identifier (UUID) of an API request and must be in uppercase.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
