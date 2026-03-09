@@ -7927,7 +7927,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>原生复制实例创建复制通道</para>
+        /// <para>Create a replication channel for a native replication instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7997,7 +7997,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>原生复制实例创建复制通道</para>
+        /// <para>Create a replication channel for a native replication instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8067,7 +8067,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>原生复制实例创建复制通道</para>
+        /// <para>Create a replication channel for a native replication instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8085,7 +8085,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>原生复制实例创建复制通道</para>
+        /// <para>Create a replication channel for a native replication instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16167,7 +16167,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>原生复制实例删除复制通道</para>
+        /// <para>Delete a replication link from a native replication instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16221,7 +16221,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>原生复制实例删除复制通道</para>
+        /// <para>Delete a replication link from a native replication instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16275,7 +16275,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>原生复制实例删除复制通道</para>
+        /// <para>Delete a replication link from a native replication instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16293,7 +16293,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>原生复制实例删除复制通道</para>
+        /// <para>Delete a replication link from a native replication instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45519,6 +45519,126 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRCMetricListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeRCNetworkInterfaces</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRCNetworkInterfacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRCNetworkInterfacesResponse
+        /// </returns>
+        public DescribeRCNetworkInterfacesResponse DescribeRCNetworkInterfacesWithOptions(DescribeRCNetworkInterfacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRCNetworkInterfaces",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRCNetworkInterfacesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeRCNetworkInterfaces</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRCNetworkInterfacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRCNetworkInterfacesResponse
+        /// </returns>
+        public async Task<DescribeRCNetworkInterfacesResponse> DescribeRCNetworkInterfacesWithOptionsAsync(DescribeRCNetworkInterfacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRCNetworkInterfaces",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRCNetworkInterfacesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeRCNetworkInterfaces</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRCNetworkInterfacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRCNetworkInterfacesResponse
+        /// </returns>
+        public DescribeRCNetworkInterfacesResponse DescribeRCNetworkInterfaces(DescribeRCNetworkInterfacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeRCNetworkInterfacesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeRCNetworkInterfaces</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRCNetworkInterfacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRCNetworkInterfacesResponse
+        /// </returns>
+        public async Task<DescribeRCNetworkInterfacesResponse> DescribeRCNetworkInterfacesAsync(DescribeRCNetworkInterfacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeRCNetworkInterfacesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -85687,7 +85807,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>原生复制实例更新复制通道</para>
+        /// <para>Update replication channel for a native replication instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -85761,7 +85881,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>原生复制实例更新复制通道</para>
+        /// <para>Update replication channel for a native replication instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -85835,7 +85955,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>原生复制实例更新复制通道</para>
+        /// <para>Update replication channel for a native replication instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -85853,7 +85973,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>原生复制实例更新复制通道</para>
+        /// <para>Update replication channel for a native replication instance</para>
         /// </summary>
         /// 
         /// <param name="request">
