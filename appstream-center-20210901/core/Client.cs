@@ -4284,6 +4284,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 query["GpuMemory"] = request.GpuMemory;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypeForModify))
+            {
+                query["InstanceTypeForModify"] = request.InstanceTypeForModify;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 query["Language"] = request.Language;
@@ -4303,6 +4307,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
             {
                 query["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
             {
@@ -4378,6 +4386,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 query["GpuMemory"] = request.GpuMemory;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypeForModify))
+            {
+                query["InstanceTypeForModify"] = request.InstanceTypeForModify;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 query["Language"] = request.Language;
@@ -4397,6 +4409,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
             {
                 query["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
             {

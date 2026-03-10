@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public int? GpuMemory { get; set; }
 
+        [NameInMap("InstanceTypeForModify")]
+        [Validation(Required=false)]
+        public string InstanceTypeForModify { get; set; }
+
         /// <summary>
         /// <para>The language that you want to use.</para>
         /// <para>Valid values:</para>
@@ -72,6 +76,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
+
+        [NameInMap("OrderType")]
+        [Validation(Required=false)]
+        public string OrderType { get; set; }
 
         /// <summary>
         /// <para>The operating system that is supported.</para>
