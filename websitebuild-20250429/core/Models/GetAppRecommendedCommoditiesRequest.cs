@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
+        [NameInMap("ResourceConditions")]
+        [Validation(Required=false)]
+        public string ResourceConditions { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>DataworksManualTask</para>

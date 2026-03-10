@@ -222,6 +222,24 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 }
 
+                [NameInMap("Qualification")]
+                [Validation(Required=false)]
+                public ListAppInstanceDomainsResponseBodyModuleDataQualification Qualification { get; set; }
+                public class ListAppInstanceDomainsResponseBodyModuleDataQualification : TeaModel {
+                    [NameInMap("IcpRecordNumber")]
+                    [Validation(Required=false)]
+                    public string IcpRecordNumber { get; set; }
+
+                    [NameInMap("IcpSiteRecordNumber")]
+                    [Validation(Required=false)]
+                    public string IcpSiteRecordNumber { get; set; }
+
+                    [NameInMap("PoliceRecordNumber")]
+                    [Validation(Required=false)]
+                    public string PoliceRecordNumber { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>Domain resolution information</para>
                 /// </summary>
@@ -482,6 +500,24 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     [NameInMap("Provider")]
                     [Validation(Required=false)]
                     public string Provider { get; set; }
+
+                }
+
+                [NameInMap("Qualification")]
+                [Validation(Required=false)]
+                public ListAppInstanceDomainsResponseBodyModuleNextQualification Qualification { get; set; }
+                public class ListAppInstanceDomainsResponseBodyModuleNextQualification : TeaModel {
+                    [NameInMap("IcpRecordNumber")]
+                    [Validation(Required=false)]
+                    public string IcpRecordNumber { get; set; }
+
+                    [NameInMap("IcpSiteRecordNumber")]
+                    [Validation(Required=false)]
+                    public string IcpSiteRecordNumber { get; set; }
+
+                    [NameInMap("PoliceRecordNumber")]
+                    [Validation(Required=false)]
+                    public string PoliceRecordNumber { get; set; }
 
                 }
 
