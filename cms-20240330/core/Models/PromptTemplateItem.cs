@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
-    public class IndexJsonKey : TeaModel {
-        [NameInMap("chn")]
+    public class PromptTemplateItem : TeaModel {
+        [NameInMap("content")]
         [Validation(Required=false)]
-        public bool? Chn { get; set; }
+        public string Content { get; set; }
 
-        [NameInMap("type")]
+        [NameInMap("role")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string Role { get; set; }
 
     }
 

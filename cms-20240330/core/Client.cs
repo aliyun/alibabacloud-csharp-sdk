@@ -39,6 +39,200 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>添加记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddMemoriesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMemoriesResponse
+        /// </returns>
+        public AddMemoriesResponse AddMemoriesWithOptions(string workspace, string memoryStoreName, AddMemoriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                body["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["appId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncMode))
+            {
+                body["asyncMode"] = request.AsyncMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomInstructions))
+            {
+                body["customInstructions"] = request.CustomInstructions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Infer))
+            {
+                body["infer"] = request.Infer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Messages))
+            {
+                body["messages"] = request.Messages;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metadata))
+            {
+                body["metadata"] = request.Metadata;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                body["runId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddMemories",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddMemoriesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddMemoriesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMemoriesResponse
+        /// </returns>
+        public async Task<AddMemoriesResponse> AddMemoriesWithOptionsAsync(string workspace, string memoryStoreName, AddMemoriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                body["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["appId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncMode))
+            {
+                body["asyncMode"] = request.AsyncMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomInstructions))
+            {
+                body["customInstructions"] = request.CustomInstructions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Infer))
+            {
+                body["infer"] = request.Infer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Messages))
+            {
+                body["messages"] = request.Messages;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metadata))
+            {
+                body["metadata"] = request.Metadata;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                body["runId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddMemories",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddMemoriesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddMemoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMemoriesResponse
+        /// </returns>
+        public AddMemoriesResponse AddMemories(string workspace, string memoryStoreName, AddMemoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AddMemoriesWithOptions(workspace, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddMemoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMemoriesResponse
+        /// </returns>
+        public async Task<AddMemoriesResponse> AddMemoriesAsync(string workspace, string memoryStoreName, AddMemoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AddMemoriesWithOptionsAsync(workspace, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>修改资源所属资源组</para>
         /// </summary>
         /// 
@@ -1917,6 +2111,168 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateIntegrationPolicyWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建记忆库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMemoryStoreRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMemoryStoreResponse
+        /// </returns>
+        public CreateMemoryStoreResponse CreateMemoryStoreWithOptions(string workspace, CreateMemoryStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomExtractionStrategies))
+            {
+                body["customExtractionStrategies"] = request.CustomExtractionStrategies;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtractionStrategies))
+            {
+                body["extractionStrategies"] = request.ExtractionStrategies;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryStoreName))
+            {
+                body["memoryStoreName"] = request.MemoryStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShortTermTtl))
+            {
+                body["shortTermTtl"] = request.ShortTermTtl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMemoryStore",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMemoryStoreResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建记忆库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMemoryStoreRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMemoryStoreResponse
+        /// </returns>
+        public async Task<CreateMemoryStoreResponse> CreateMemoryStoreWithOptionsAsync(string workspace, CreateMemoryStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomExtractionStrategies))
+            {
+                body["customExtractionStrategies"] = request.CustomExtractionStrategies;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtractionStrategies))
+            {
+                body["extractionStrategies"] = request.ExtractionStrategies;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryStoreName))
+            {
+                body["memoryStoreName"] = request.MemoryStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShortTermTtl))
+            {
+                body["shortTermTtl"] = request.ShortTermTtl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMemoryStore",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMemoryStoreResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建记忆库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMemoryStoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMemoryStoreResponse
+        /// </returns>
+        public CreateMemoryStoreResponse CreateMemoryStore(string workspace, CreateMemoryStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateMemoryStoreWithOptions(workspace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建记忆库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMemoryStoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMemoryStoreResponse
+        /// </returns>
+        public async Task<CreateMemoryStoreResponse> CreateMemoryStoreAsync(string workspace, CreateMemoryStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateMemoryStoreWithOptionsAsync(workspace, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4259,6 +4615,364 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteIntegrationPolicyWithOptionsAsync(policyId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMemoriesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemoriesResponse
+        /// </returns>
+        public DeleteMemoriesResponse DeleteMemoriesWithOptions(string workspace, string memoryStoreName, DeleteMemoriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["appId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                query["runId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMemories",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMemoriesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMemoriesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemoriesResponse
+        /// </returns>
+        public async Task<DeleteMemoriesResponse> DeleteMemoriesWithOptionsAsync(string workspace, string memoryStoreName, DeleteMemoriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["appId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                query["runId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMemories",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMemoriesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMemoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemoriesResponse
+        /// </returns>
+        public DeleteMemoriesResponse DeleteMemories(string workspace, string memoryStoreName, DeleteMemoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteMemoriesWithOptions(workspace, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMemoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemoriesResponse
+        /// </returns>
+        public async Task<DeleteMemoriesResponse> DeleteMemoriesAsync(string workspace, string memoryStoreName, DeleteMemoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteMemoriesWithOptionsAsync(workspace, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemoryResponse
+        /// </returns>
+        public DeleteMemoryResponse DeleteMemoryWithOptions(string workspace, string memoryStoreName, string memoryId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMemory",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMemoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemoryResponse
+        /// </returns>
+        public async Task<DeleteMemoryResponse> DeleteMemoryWithOptionsAsync(string workspace, string memoryStoreName, string memoryId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMemory",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMemoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除记忆</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteMemoryResponse
+        /// </returns>
+        public DeleteMemoryResponse DeleteMemory(string workspace, string memoryStoreName, string memoryId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteMemoryWithOptions(workspace, memoryStoreName, memoryId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除记忆</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteMemoryResponse
+        /// </returns>
+        public async Task<DeleteMemoryResponse> DeleteMemoryAsync(string workspace, string memoryStoreName, string memoryId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteMemoryWithOptionsAsync(workspace, memoryStoreName, memoryId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除记忆库</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemoryStoreResponse
+        /// </returns>
+        public DeleteMemoryStoreResponse DeleteMemoryStoreWithOptions(string workspace, string memoryStoreName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMemoryStore",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMemoryStoreResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除记忆库</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMemoryStoreResponse
+        /// </returns>
+        public async Task<DeleteMemoryStoreResponse> DeleteMemoryStoreWithOptionsAsync(string workspace, string memoryStoreName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMemoryStore",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMemoryStoreResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除记忆库</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteMemoryStoreResponse
+        /// </returns>
+        public DeleteMemoryStoreResponse DeleteMemoryStore(string workspace, string memoryStoreName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteMemoryStoreWithOptions(workspace, memoryStoreName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除记忆库</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteMemoryStoreResponse
+        /// </returns>
+        public async Task<DeleteMemoryStoreResponse> DeleteMemoryStoreAsync(string workspace, string memoryStoreName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteMemoryStoreWithOptionsAsync(workspace, memoryStoreName, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7217,6 +7931,482 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetIntegrationVersionForCSWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询全部记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMemoriesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMemoriesResponse
+        /// </returns>
+        public GetMemoriesResponse GetMemoriesWithOptions(string workspace, string memoryStoreName, GetMemoriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                body["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["appId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                body["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                body["runId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMemories",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory/query",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMemoriesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询全部记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMemoriesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMemoriesResponse
+        /// </returns>
+        public async Task<GetMemoriesResponse> GetMemoriesWithOptionsAsync(string workspace, string memoryStoreName, GetMemoriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                body["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["appId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                body["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                body["runId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMemories",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory/query",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMemoriesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询全部记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMemoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMemoriesResponse
+        /// </returns>
+        public GetMemoriesResponse GetMemories(string workspace, string memoryStoreName, GetMemoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMemoriesWithOptions(workspace, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询全部记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMemoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMemoriesResponse
+        /// </returns>
+        public async Task<GetMemoriesResponse> GetMemoriesAsync(string workspace, string memoryStoreName, GetMemoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMemoriesWithOptionsAsync(workspace, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMemoryResponse
+        /// </returns>
+        public GetMemoryResponse GetMemoryWithOptions(string workspace, string memoryStoreName, string memoryId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMemory",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMemoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMemoryResponse
+        /// </returns>
+        public async Task<GetMemoryResponse> GetMemoryWithOptionsAsync(string workspace, string memoryStoreName, string memoryId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMemory",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMemoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询记忆</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetMemoryResponse
+        /// </returns>
+        public GetMemoryResponse GetMemory(string workspace, string memoryStoreName, string memoryId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMemoryWithOptions(workspace, memoryStoreName, memoryId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询记忆</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetMemoryResponse
+        /// </returns>
+        public async Task<GetMemoryResponse> GetMemoryAsync(string workspace, string memoryStoreName, string memoryId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMemoryWithOptionsAsync(workspace, memoryStoreName, memoryId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询记忆历史记录</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMemoryHistoryResponse
+        /// </returns>
+        public GetMemoryHistoryResponse GetMemoryHistoryWithOptions(string workspace, string memoryStoreName, string memoryId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMemoryHistory",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryId) + "/history",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMemoryHistoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询记忆历史记录</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMemoryHistoryResponse
+        /// </returns>
+        public async Task<GetMemoryHistoryResponse> GetMemoryHistoryWithOptionsAsync(string workspace, string memoryStoreName, string memoryId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMemoryHistory",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryId) + "/history",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMemoryHistoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询记忆历史记录</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetMemoryHistoryResponse
+        /// </returns>
+        public GetMemoryHistoryResponse GetMemoryHistory(string workspace, string memoryStoreName, string memoryId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMemoryHistoryWithOptions(workspace, memoryStoreName, memoryId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询记忆历史记录</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetMemoryHistoryResponse
+        /// </returns>
+        public async Task<GetMemoryHistoryResponse> GetMemoryHistoryAsync(string workspace, string memoryStoreName, string memoryId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMemoryHistoryWithOptionsAsync(workspace, memoryStoreName, memoryId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询记忆库</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMemoryStoreResponse
+        /// </returns>
+        public GetMemoryStoreResponse GetMemoryStoreWithOptions(string workspace, string memoryStoreName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMemoryStore",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMemoryStoreResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询记忆库</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMemoryStoreResponse
+        /// </returns>
+        public async Task<GetMemoryStoreResponse> GetMemoryStoreWithOptionsAsync(string workspace, string memoryStoreName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMemoryStore",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMemoryStoreResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询记忆库</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetMemoryStoreResponse
+        /// </returns>
+        public GetMemoryStoreResponse GetMemoryStore(string workspace, string memoryStoreName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMemoryStoreWithOptions(workspace, memoryStoreName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询记忆库</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetMemoryStoreResponse
+        /// </returns>
+        public async Task<GetMemoryStoreResponse> GetMemoryStoreAsync(string workspace, string memoryStoreName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMemoryStoreWithOptionsAsync(workspace, memoryStoreName, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11341,6 +12531,152 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询记忆库列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMemoryStoresRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMemoryStoresResponse
+        /// </returns>
+        public ListMemoryStoresResponse ListMemoryStoresWithOptions(string workspace, ListMemoryStoresRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryStoreName))
+            {
+                query["memoryStoreName"] = request.MemoryStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMemoryStores",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMemoryStoresResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询记忆库列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMemoryStoresRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMemoryStoresResponse
+        /// </returns>
+        public async Task<ListMemoryStoresResponse> ListMemoryStoresWithOptionsAsync(string workspace, ListMemoryStoresRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryStoreName))
+            {
+                query["memoryStoreName"] = request.MemoryStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMemoryStores",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMemoryStoresResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询记忆库列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMemoryStoresRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMemoryStoresResponse
+        /// </returns>
+        public ListMemoryStoresResponse ListMemoryStores(string workspace, ListMemoryStoresRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMemoryStoresWithOptions(workspace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询记忆库列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMemoryStoresRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMemoryStoresResponse
+        /// </returns>
+        public async Task<ListMemoryStoresResponse> ListMemoryStoresAsync(string workspace, ListMemoryStoresRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMemoryStoresWithOptionsAsync(workspace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Get Prometheus Instance Dashboard List</para>
         /// </summary>
         /// 
@@ -12971,6 +14307,192 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await PutWorkspaceWithOptionsAsync(workspaceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>搜索记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchMemoriesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchMemoriesResponse
+        /// </returns>
+        public SearchMemoriesResponse SearchMemoriesWithOptions(string workspace, string memoryStoreName, SearchMemoriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                body["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["appId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metadata))
+            {
+                body["metadata"] = request.Metadata;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rerank))
+            {
+                body["rerank"] = request.Rerank;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                body["runId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
+            {
+                body["topK"] = request.TopK;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchMemories",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory/search",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchMemoriesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>搜索记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchMemoriesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchMemoriesResponse
+        /// </returns>
+        public async Task<SearchMemoriesResponse> SearchMemoriesWithOptionsAsync(string workspace, string memoryStoreName, SearchMemoriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                body["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["appId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metadata))
+            {
+                body["metadata"] = request.Metadata;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rerank))
+            {
+                body["rerank"] = request.Rerank;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                body["runId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
+            {
+                body["topK"] = request.TopK;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchMemories",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory/search",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchMemoriesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>搜索记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchMemoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchMemoriesResponse
+        /// </returns>
+        public SearchMemoriesResponse SearchMemories(string workspace, string memoryStoreName, SearchMemoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SearchMemoriesWithOptions(workspace, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>搜索记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchMemoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchMemoriesResponse
+        /// </returns>
+        public async Task<SearchMemoriesResponse> SearchMemoriesAsync(string workspace, string memoryStoreName, SearchMemoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SearchMemoriesWithOptionsAsync(workspace, memoryStoreName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14627,6 +16149,298 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateIntegrationPolicyWithOptionsAsync(integrationPolicyId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMemoryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMemoryResponse
+        /// </returns>
+        public UpdateMemoryResponse UpdateMemoryWithOptions(string workspace, string memoryStoreName, string memoryId, UpdateMemoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metadata))
+            {
+                body["metadata"] = request.Metadata;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                body["text"] = request.Text;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMemory",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMemoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMemoryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMemoryResponse
+        /// </returns>
+        public async Task<UpdateMemoryResponse> UpdateMemoryWithOptionsAsync(string workspace, string memoryStoreName, string memoryId, UpdateMemoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metadata))
+            {
+                body["metadata"] = request.Metadata;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                body["text"] = request.Text;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMemory",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName) + "/memory/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMemoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMemoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMemoryResponse
+        /// </returns>
+        public UpdateMemoryResponse UpdateMemory(string workspace, string memoryStoreName, string memoryId, UpdateMemoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateMemoryWithOptions(workspace, memoryStoreName, memoryId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMemoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMemoryResponse
+        /// </returns>
+        public async Task<UpdateMemoryResponse> UpdateMemoryAsync(string workspace, string memoryStoreName, string memoryId, UpdateMemoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateMemoryWithOptionsAsync(workspace, memoryStoreName, memoryId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改记忆库配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMemoryStoreRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMemoryStoreResponse
+        /// </returns>
+        public UpdateMemoryStoreResponse UpdateMemoryStoreWithOptions(string workspace, string memoryStoreName, UpdateMemoryStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomExtractionStrategies))
+            {
+                body["customExtractionStrategies"] = request.CustomExtractionStrategies;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtractionStrategies))
+            {
+                body["extractionStrategies"] = request.ExtractionStrategies;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShortTermTtl))
+            {
+                body["shortTermTtl"] = request.ShortTermTtl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMemoryStore",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMemoryStoreResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改记忆库配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMemoryStoreRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMemoryStoreResponse
+        /// </returns>
+        public async Task<UpdateMemoryStoreResponse> UpdateMemoryStoreWithOptionsAsync(string workspace, string memoryStoreName, UpdateMemoryStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomExtractionStrategies))
+            {
+                body["customExtractionStrategies"] = request.CustomExtractionStrategies;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtractionStrategies))
+            {
+                body["extractionStrategies"] = request.ExtractionStrategies;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShortTermTtl))
+            {
+                body["shortTermTtl"] = request.ShortTermTtl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMemoryStore",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/memorystore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(memoryStoreName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMemoryStoreResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改记忆库配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMemoryStoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMemoryStoreResponse
+        /// </returns>
+        public UpdateMemoryStoreResponse UpdateMemoryStore(string workspace, string memoryStoreName, UpdateMemoryStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateMemoryStoreWithOptions(workspace, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改记忆库配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMemoryStoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMemoryStoreResponse
+        /// </returns>
+        public async Task<UpdateMemoryStoreResponse> UpdateMemoryStoreAsync(string workspace, string memoryStoreName, UpdateMemoryStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateMemoryStoreWithOptionsAsync(workspace, memoryStoreName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
