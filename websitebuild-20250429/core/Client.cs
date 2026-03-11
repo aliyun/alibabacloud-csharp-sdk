@@ -1023,7 +1023,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>万小智开通灵感值服务</para>
+        /// <para>Activate the Wanxiaozhi Inspiration Value service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1065,7 +1065,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>万小智开通灵感值服务</para>
+        /// <para>Activate the Wanxiaozhi Inspiration Value service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1107,7 +1107,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>万小智开通灵感值服务</para>
+        /// <para>Activate the Wanxiaozhi Inspiration Value service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1125,7 +1125,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>万小智开通灵感值服务</para>
+        /// <para>Activate the Wanxiaozhi Inspiration Value service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2487,7 +2487,135 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例详情查询</para>
+        /// <para>Query application instance information</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAppInstanceForAdminRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAppInstanceForAdminResponse
+        /// </returns>
+        public GetAppInstanceForAdminResponse GetAppInstanceForAdminWithOptions(GetAppInstanceForAdminRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAppInstanceForAdmin",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAppInstanceForAdminResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query application instance information</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAppInstanceForAdminRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAppInstanceForAdminResponse
+        /// </returns>
+        public async Task<GetAppInstanceForAdminResponse> GetAppInstanceForAdminWithOptionsAsync(GetAppInstanceForAdminRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAppInstanceForAdmin",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAppInstanceForAdminResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query application instance information</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAppInstanceForAdminRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAppInstanceForAdminResponse
+        /// </returns>
+        public GetAppInstanceForAdminResponse GetAppInstanceForAdmin(GetAppInstanceForAdminRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAppInstanceForAdminWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query application instance information</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAppInstanceForAdminRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAppInstanceForAdminResponse
+        /// </returns>
+        public async Task<GetAppInstanceForAdminResponse> GetAppInstanceForAdminAsync(GetAppInstanceForAdminRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAppInstanceForAdminWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query instance details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2529,7 +2657,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例详情查询</para>
+        /// <para>Query instance details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2571,7 +2699,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例详情查询</para>
+        /// <para>Query instance details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2589,7 +2717,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例详情查询</para>
+        /// <para>Query instance details</para>
         /// </summary>
         /// 
         /// <param name="request">
