@@ -167,6 +167,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public int? LimitedBandwidth { get; set; }
 
+            [NameInMap("PaidCallbackUrl")]
+            [Validation(Required=false)]
+            public string PaidCallbackUrl { get; set; }
+
             [NameInMap("PayType")]
             [Validation(Required=false)]
             public string PayType { get; set; }
