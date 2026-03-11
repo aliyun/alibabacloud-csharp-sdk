@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ViewSchema : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>comment</para>
+        /// </summary>
         [NameInMap("comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
@@ -25,6 +29,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public Dictionary<string, string> Options { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>select id from t1;</para>
+        /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]
         public string Query { get; set; }

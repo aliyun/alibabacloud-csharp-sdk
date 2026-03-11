@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class PartitionSummaries : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>hh=10</para>
+        /// </summary>
         [NameInMap("nextPageToken")]
         [Validation(Required=false)]
         public string NextPageToken { get; set; }

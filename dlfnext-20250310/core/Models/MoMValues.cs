@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
     public class MoMValues : TeaModel {
         /// <summary>
         /// <para>total</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("currentValue")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>daily addition</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>800</para>
         /// </summary>
         [NameInMap("lastDayValue")]
         [Validation(Required=false)]
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>monthly addition</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("lastMonthValue")]
         [Validation(Required=false)]

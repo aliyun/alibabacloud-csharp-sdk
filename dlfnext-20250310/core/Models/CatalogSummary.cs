@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class CatalogSummary : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
         [NameInMap("apiVisitCountMonthly")]
         [Validation(Required=false)]
         public long? ApiVisitCountMonthly { get; set; }
@@ -23,6 +27,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>Update date of the statistics</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2025-01-01</para>
         /// </summary>
         [NameInMap("generatedDate")]
         [Validation(Required=false)]
@@ -52,6 +59,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public MoMValues TableCount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1024</para>
+        /// </summary>
         [NameInMap("throughputMonthly")]
         [Validation(Required=false)]
         public long? ThroughputMonthly { get; set; }

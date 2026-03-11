@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
     public class PartitionSummary : TeaModel {
         /// <summary>
         /// <para>Partition creation timestamp in milliseconds</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1744970111419</para>
         /// </summary>
         [NameInMap("createdAt")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>Database name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("databaseName")]
         [Validation(Required=false)]
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>Total files in partition</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1744970111419</para>
         /// </summary>
         [NameInMap("lastAccessTime")]
         [Validation(Required=false)]
@@ -32,6 +41,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>Partition identifier</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>hh=18</para>
         /// </summary>
         [NameInMap("partitionName")]
         [Validation(Required=false)]
@@ -51,6 +63,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>Table name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>table1</para>
         /// </summary>
         [NameInMap("tableName")]
         [Validation(Required=false)]
@@ -58,6 +73,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>24h access count</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("totalFileCount")]
         [Validation(Required=false)]
@@ -65,11 +83,18 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>Last data access timestamp in milliseconds</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2048</para>
         /// </summary>
         [NameInMap("totalFileSizeInBytes")]
         [Validation(Required=false)]
         public long? TotalFileSizeInBytes { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1744970111419</para>
+        /// </summary>
         [NameInMap("updatedAt")]
         [Validation(Required=false)]
         public long? UpdatedAt { get; set; }

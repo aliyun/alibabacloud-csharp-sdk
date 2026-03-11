@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
     public class DatabaseSummary : TeaModel {
         /// <summary>
         /// <para>Creation timestamp in milliseconds</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1744970111419</para>
         /// </summary>
         [NameInMap("createdAt")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>库名 - Database name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("databaseName")]
         [Validation(Required=false)]
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>Last profile update date in format yyyyMMdd</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2025-06-01</para>
         /// </summary>
         [NameInMap("generatedDate")]
         [Validation(Required=false)]
@@ -32,6 +41,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>Storage location URI</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oss://clg-paimon-xxx/db-xxx</para>
         /// </summary>
         [NameInMap("location")]
         [Validation(Required=false)]
@@ -53,23 +65,37 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public long? ObjTypeStandardSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
         [NameInMap("partitionCount")]
         [Validation(Required=false)]
         public long? PartitionCount { get; set; }
 
         /// <summary>
         /// <para>Total storage in bytes</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("tableCount")]
         [Validation(Required=false)]
         public long? TableCount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2000</para>
+        /// </summary>
         [NameInMap("totalFileCount")]
         [Validation(Required=false)]
         public long? TotalFileCount { get; set; }
 
         /// <summary>
         /// <para>Total file count</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1048576</para>
         /// </summary>
         [NameInMap("totalFileSizeInBytes")]
         [Validation(Required=false)]

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public FullDataType Key { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>STRING</para>
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }

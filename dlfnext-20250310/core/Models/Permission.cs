@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class Permission : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>DROP</para>
+        /// </summary>
         [NameInMap("access")]
         [Validation(Required=false)]
         public string Access { get; set; }
@@ -27,6 +31,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>database_name</para>
+        /// </summary>
         [NameInMap("database")]
         [Validation(Required=false)]
         public string Database { get; set; }
@@ -39,10 +47,18 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Function { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>acs:ram::[accountId]:user/user_name</para>
+        /// </summary>
         [NameInMap("principal")]
         [Validation(Required=false)]
         public string Principal { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>CATALOG</para>
+        /// </summary>
         [NameInMap("resourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
@@ -51,6 +67,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public RowFilter RowFilter { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>table_name</para>
+        /// </summary>
         [NameInMap("table")]
         [Validation(Required=false)]
         public string Table { get; set; }

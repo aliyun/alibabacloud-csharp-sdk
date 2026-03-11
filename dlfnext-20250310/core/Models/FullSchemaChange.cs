@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class FullSchemaChange : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>setOption</para>
+        /// </summary>
         [NameInMap("action")]
         [Validation(Required=false)]
         public string Action { get; set; }
 
         /// <summary>
         /// <para>required in UpdateComment/AddColumn</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>col_comment</para>
         /// </summary>
         [NameInMap("comment")]
         [Validation(Required=false)]
@@ -33,6 +40,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>required in UpdateColumnType</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("keepNullability")]
         [Validation(Required=false)]
@@ -40,6 +50,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>required in SetOption/RemoveOption</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>\&quot;true\&quot;</para>
         /// </summary>
         [NameInMap("key")]
         [Validation(Required=false)]
@@ -51,6 +64,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>required in UpdateColumnComment</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>col_comment_test</para>
         /// </summary>
         [NameInMap("newComment")]
         [Validation(Required=false)]
@@ -62,6 +78,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>required in RenameColumn</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>new_col_test</para>
         /// </summary>
         [NameInMap("newName")]
         [Validation(Required=false)]
@@ -69,6 +88,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>required in UpdateColumnNullability</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("newNullability")]
         [Validation(Required=false)]
@@ -76,6 +98,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>required in SetOption</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>\&quot;manifest.delete-file-drop-stats\&quot;</para>
         /// </summary>
         [NameInMap("value")]
         [Validation(Required=false)]

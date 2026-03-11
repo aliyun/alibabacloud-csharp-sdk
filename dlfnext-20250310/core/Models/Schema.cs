@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class Schema : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>description</para>
+        /// </summary>
         [NameInMap("comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }

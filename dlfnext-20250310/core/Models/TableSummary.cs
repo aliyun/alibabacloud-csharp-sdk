@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
     public class TableSummary : TeaModel {
         /// <summary>
         /// <para>Latest snapshot storage size</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1744970111419</para>
         /// </summary>
         [NameInMap("createdAt")]
         [Validation(Required=false)]
@@ -18,15 +21,26 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>Database name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("databaseName")]
         [Validation(Required=false)]
         public string DatabaseName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2025-06-01</para>
+        /// </summary>
         [NameInMap("generatedDate")]
         [Validation(Required=false)]
         public string GeneratedDate { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1744970111419</para>
+        /// </summary>
         [NameInMap("lastAccessTime")]
         [Validation(Required=false)]
         public long? LastAccessTime { get; set; }
@@ -49,11 +63,18 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>Creation timestamp in milliseconds</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("partitionCount")]
         [Validation(Required=false)]
         public long? PartitionCount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>oss://clg-xxxx/db-xxxx/tbl-xxxx</para>
+        /// </summary>
         [NameInMap("path")]
         [Validation(Required=false)]
         public string Path { get; set; }
@@ -72,6 +93,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>Table name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>table1</para>
         /// </summary>
         [NameInMap("tableName")]
         [Validation(Required=false)]
@@ -79,11 +103,18 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>30-day access count</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("totalFileCount")]
         [Validation(Required=false)]
         public long? TotalFileCount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1024</para>
+        /// </summary>
         [NameInMap("totalFileSizeInBytes")]
         [Validation(Required=false)]
         public long? TotalFileSizeInBytes { get; set; }
