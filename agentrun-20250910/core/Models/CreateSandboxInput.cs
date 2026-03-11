@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public OSSMountConfig OssMountConfig { get; set; }
 
+        [NameInMap("polarFsConfig")]
+        [Validation(Required=false)]
+        public PolarFsConfig PolarFsConfig { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>01KE8DAJ35JC8SKP9CNFRZ8CW7</para>
