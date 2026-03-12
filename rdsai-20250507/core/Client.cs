@@ -783,7 +783,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个批量实例巡检任务</para>
+        /// <para>Creates an inspection task for multiple instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -812,6 +812,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["InstanceIds"] = request.InstanceIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportLanguage))
+            {
+                query["ReportLanguage"] = request.ReportLanguage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
@@ -837,7 +841,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个批量实例巡检任务</para>
+        /// <para>Creates an inspection task for multiple instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -866,6 +870,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["InstanceIds"] = request.InstanceIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportLanguage))
+            {
+                query["ReportLanguage"] = request.ReportLanguage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
@@ -891,7 +899,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个批量实例巡检任务</para>
+        /// <para>Creates an inspection task for multiple instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -909,7 +917,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个批量实例巡检任务</para>
+        /// <para>Creates an inspection task for multiple instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -927,7 +935,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的批量实例巡检任务</para>
+        /// <para>Creates a new scheduled inspection configuration for multiple instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -960,6 +968,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportLanguage))
+            {
+                query["ReportLanguage"] = request.ReportLanguage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
@@ -989,7 +1001,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的批量实例巡检任务</para>
+        /// <para>Creates a new scheduled inspection configuration for multiple instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1022,6 +1034,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportLanguage))
+            {
+                query["ReportLanguage"] = request.ReportLanguage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
@@ -1051,7 +1067,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的批量实例巡检任务</para>
+        /// <para>Creates a new scheduled inspection configuration for multiple instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1069,7 +1085,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的批量实例巡检任务</para>
+        /// <para>Creates a new scheduled inspection configuration for multiple instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1087,7 +1103,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Skill</para>
+        /// <para>Create a user-defined skill.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1151,7 +1167,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Skill</para>
+        /// <para>Create a user-defined skill.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1215,7 +1231,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Skill</para>
+        /// <para>Create a user-defined skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1233,7 +1249,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Skill</para>
+        /// <para>Create a user-defined skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1555,7 +1571,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定的巡检任务</para>
+        /// <para>Deletes a specified inspection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1597,7 +1613,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定的巡检任务</para>
+        /// <para>Deletes a specified inspection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1639,7 +1655,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定的巡检任务</para>
+        /// <para>Deletes a specified inspection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1657,7 +1673,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定的巡检任务</para>
+        /// <para>Deletes a specified inspection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1675,7 +1691,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Skill</para>
+        /// <para>Deletes the specified skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1717,7 +1733,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Skill</para>
+        /// <para>Deletes the specified skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1759,7 +1775,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Skill</para>
+        /// <para>Deletes the specified skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1777,7 +1793,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Skill</para>
+        /// <para>Deletes the specified skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3511,7 +3527,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取巡检任务报告结果</para>
+        /// <para>Queries the content of a specified inspection report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3557,7 +3573,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取巡检任务报告结果</para>
+        /// <para>Queries the content of a specified inspection report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3603,7 +3619,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取巡检任务报告结果</para>
+        /// <para>Queries the content of a specified inspection report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3621,7 +3637,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取巡检任务报告结果</para>
+        /// <para>Queries the content of a specified inspection report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3783,7 +3799,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定定时任务配置中包含的所有实例ID列表，支持分页</para>
+        /// <para>Queries the IDs of all instances that are included by a specified scheduled inspection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3833,7 +3849,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定定时任务配置中包含的所有实例ID列表，支持分页</para>
+        /// <para>Queries the IDs of all instances that are included by a specified scheduled inspection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3883,7 +3899,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定定时任务配置中包含的所有实例ID列表，支持分页</para>
+        /// <para>Queries the IDs of all instances that are included by a specified scheduled inspection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3901,7 +3917,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定定时任务配置中包含的所有实例ID列表，支持分页</para>
+        /// <para>Queries the IDs of all instances that are included by a specified scheduled inspection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3919,7 +3935,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务的所有巡检报告，支持分页</para>
+        /// <para>Queries the list of all inspection reports for a specified scheduled task. You can filter and paginate inspection reports by time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3977,7 +3993,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务的所有巡检报告，支持分页</para>
+        /// <para>Queries the list of all inspection reports for a specified scheduled task. You can filter and paginate inspection reports by time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4035,7 +4051,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务的所有巡检报告，支持分页</para>
+        /// <para>Queries the list of all inspection reports for a specified scheduled task. You can filter and paginate inspection reports by time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4053,7 +4069,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务的所有巡检报告，支持分页</para>
+        /// <para>Queries the list of all inspection reports for a specified scheduled task. You can filter and paginate inspection reports by time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4071,7 +4087,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Skill详情</para>
+        /// <para>Obtains the details of a specified skill. You can obtain the details of user-defined skills or the system preset skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4117,7 +4133,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Skill详情</para>
+        /// <para>Obtains the details of a specified skill. You can obtain the details of user-defined skills or the system preset skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4163,7 +4179,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Skill详情</para>
+        /// <para>Obtains the details of a specified skill. You can obtain the details of user-defined skills or the system preset skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4181,7 +4197,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Skill详情</para>
+        /// <para>Obtains the details of a specified skill. You can obtain the details of user-defined skills or the system preset skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4199,7 +4215,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定用户下所有非定时任务的单独巡检报告列表，支持分页</para>
+        /// <para>Queries the individual inspection reports of all non-scheduled tasks under a specified user. Pagination is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4253,7 +4269,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定用户下所有非定时任务的单独巡检报告列表，支持分页</para>
+        /// <para>Queries the individual inspection reports of all non-scheduled tasks under a specified user. Pagination is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4307,7 +4323,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定用户下所有非定时任务的单独巡检报告列表，支持分页</para>
+        /// <para>Queries the individual inspection reports of all non-scheduled tasks under a specified user. Pagination is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4325,7 +4341,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定用户下所有非定时任务的单独巡检报告列表，支持分页</para>
+        /// <para>Queries the individual inspection reports of all non-scheduled tasks under a specified user. Pagination is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4565,7 +4581,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定用户UID下所有巡检任务的基本信息列表</para>
+        /// <para>Queries the basic information of all inspection configurations under a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4615,7 +4631,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定用户UID下所有巡检任务的基本信息列表</para>
+        /// <para>Queries the basic information of all inspection configurations under a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4665,7 +4681,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定用户UID下所有巡检任务的基本信息列表</para>
+        /// <para>Queries the basic information of all inspection configurations under a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4683,7 +4699,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定用户UID下所有巡检任务的基本信息列表</para>
+        /// <para>Queries the basic information of all inspection configurations under a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4701,7 +4717,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Skill列表</para>
+        /// <para>Obtains the user-defined skills and all system preset skills of the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4751,7 +4767,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Skill列表</para>
+        /// <para>Obtains the user-defined skills and all system preset skills of the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4801,7 +4817,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Skill列表</para>
+        /// <para>Obtains the user-defined skills and all system preset skills of the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4819,7 +4835,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Skill列表</para>
+        /// <para>Obtains the user-defined skills and all system preset skills of the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6257,7 +6273,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的巡检任务信息</para>
+        /// <para>Modifies an existing inspection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6289,6 +6305,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportLanguage))
+            {
+                query["ReportLanguage"] = request.ReportLanguage;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduledId))
             {
@@ -6323,7 +6343,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的巡检任务信息</para>
+        /// <para>Modifies an existing inspection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6355,6 +6375,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportLanguage))
+            {
+                query["ReportLanguage"] = request.ReportLanguage;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduledId))
             {
@@ -6389,7 +6413,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的巡检任务信息</para>
+        /// <para>Modifies an existing inspection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6407,7 +6431,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的巡检任务信息</para>
+        /// <para>Modifies an existing inspection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7273,7 +7297,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Skill</para>
+        /// <para>Updates the information about a specified skill.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7341,7 +7365,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Skill</para>
+        /// <para>Updates the information about a specified skill.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7409,7 +7433,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Skill</para>
+        /// <para>Updates the information about a specified skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7427,7 +7451,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Skill</para>
+        /// <para>Updates the information about a specified skill.</para>
         /// </summary>
         /// 
         /// <param name="request">

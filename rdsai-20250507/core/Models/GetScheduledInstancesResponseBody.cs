@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetScheduledInstancesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of instances included in the inspection configuration.</para>
+        /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<GetScheduledInstancesResponseBodyInstances> Instances { get; set; }
         public class GetScheduledInstancesResponseBodyInstances : TeaModel {
             /// <summary>
+            /// <para>The engine type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>MySQL</para>
             /// </summary>
@@ -21,11 +26,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string EngineType { get; set; }
 
+            /// <summary>
+            /// <para>The instance description.</para>
+            /// </summary>
             [NameInMap("InstanceDesc")]
             [Validation(Required=false)]
             public string InstanceDesc { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rm-2zep6e5u6l2yu****</para>
             /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The region in which the instance resides.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Region { get; set; }
 
             /// <summary>
+            /// <para>The status of the instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Running</para>
             /// </summary>
@@ -51,11 +65,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
         }
 
+        /// <summary>
+        /// <para>The response message.</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -64,6 +83,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of records on each page. Default value: 20. Maximum value: 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -72,6 +93,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>
         /// </summary>
@@ -80,6 +103,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -88,6 +113,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of records that are returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

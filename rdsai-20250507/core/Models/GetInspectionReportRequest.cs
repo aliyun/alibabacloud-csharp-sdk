@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetInspectionReportRequest : TeaModel {
         /// <summary>
+        /// <para>The inspected instance. If you do not specify this parameter, the complete report is returned. If you specify this parameter, only the content related to the instance is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rm-2zep6e5u6l2yu****</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the inspection report.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

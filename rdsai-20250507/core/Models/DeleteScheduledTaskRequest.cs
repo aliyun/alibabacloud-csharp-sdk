@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DeleteScheduledTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the scheduled inspection configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

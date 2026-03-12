@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DeleteSkillRequest : TeaModel {
         /// <summary>
+        /// <para>The unique identifier of the skill.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetSkillRequest : TeaModel {
         /// <summary>
+        /// <para>The languages supported by the skill. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh-CN: Simplified Chinese</description></item>
+        /// <item><description>zh-TW: Traditional Chinese</description></item>
+        /// <item><description>en-US: English</description></item>
+        /// <item><description>ja-JP: Japanese</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
         /// </summary>
@@ -18,6 +26,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Language { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the skill.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

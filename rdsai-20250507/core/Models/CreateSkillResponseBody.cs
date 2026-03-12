@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateSkillResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The database engine-specific content.</para>
+        /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public Dictionary<string, object> Content { get; set; }
 
         /// <summary>
+        /// <para>The creation time of the skill.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-02-04T21:14:45Z</para>
         /// </summary>
@@ -21,15 +26,23 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string CreatedAt { get; set; }
 
+        /// <summary>
+        /// <para>The list of database engines.</para>
+        /// </summary>
         [NameInMap("Dbtypes")]
         [Validation(Required=false)]
         public List<string> Dbtypes { get; set; }
 
+        /// <summary>
+        /// <para>The description of the skill.</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the skill.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>82cf3d62-0add-47bd-869f-877131f7****</para>
         /// </summary>
@@ -38,6 +51,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The name of the skill.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>query-optimization</para>
         /// </summary>
@@ -46,6 +61,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>
         /// </summary>
@@ -54,6 +71,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The type of the skill.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>user</para>
         /// </summary>

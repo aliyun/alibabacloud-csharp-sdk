@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetStandAloneReportsRequest : TeaModel {
         /// <summary>
+        /// <para>The task end time based on which the reports are filtered. If you do not specify this parameter, all reports are returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-01-19T02:20:20Z</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of records on each page. Default value: 20. Maximum value: 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The task start time based on which the reports are filtered. If you do not specify this parameter, all reports are returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T02:09:00Z</para>
         /// </summary>
