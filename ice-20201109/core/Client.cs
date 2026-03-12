@@ -2430,6 +2430,246 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>批量获取一刻AI应用生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetYikeAIAppJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetYikeAIAppJobResponse
+        /// </returns>
+        public BatchGetYikeAIAppJobResponse BatchGetYikeAIAppJobWithOptions(BatchGetYikeAIAppJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobIds))
+            {
+                query["JobIds"] = request.JobIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchGetYikeAIAppJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchGetYikeAIAppJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量获取一刻AI应用生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetYikeAIAppJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetYikeAIAppJobResponse
+        /// </returns>
+        public async Task<BatchGetYikeAIAppJobResponse> BatchGetYikeAIAppJobWithOptionsAsync(BatchGetYikeAIAppJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobIds))
+            {
+                query["JobIds"] = request.JobIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchGetYikeAIAppJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchGetYikeAIAppJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量获取一刻AI应用生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetYikeAIAppJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetYikeAIAppJobResponse
+        /// </returns>
+        public BatchGetYikeAIAppJobResponse BatchGetYikeAIAppJob(BatchGetYikeAIAppJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchGetYikeAIAppJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量获取一刻AI应用生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetYikeAIAppJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetYikeAIAppJobResponse
+        /// </returns>
+        public async Task<BatchGetYikeAIAppJobResponse> BatchGetYikeAIAppJobAsync(BatchGetYikeAIAppJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchGetYikeAIAppJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量获取媒资信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetYikeAssetMediaInfosRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetYikeAssetMediaInfosResponse
+        /// </returns>
+        public BatchGetYikeAssetMediaInfosResponse BatchGetYikeAssetMediaInfosWithOptions(BatchGetYikeAssetMediaInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaIds))
+            {
+                query["MediaIds"] = request.MediaIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchGetYikeAssetMediaInfos",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchGetYikeAssetMediaInfosResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量获取媒资信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetYikeAssetMediaInfosRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetYikeAssetMediaInfosResponse
+        /// </returns>
+        public async Task<BatchGetYikeAssetMediaInfosResponse> BatchGetYikeAssetMediaInfosWithOptionsAsync(BatchGetYikeAssetMediaInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaIds))
+            {
+                query["MediaIds"] = request.MediaIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchGetYikeAssetMediaInfos",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchGetYikeAssetMediaInfosResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量获取媒资信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetYikeAssetMediaInfosRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetYikeAssetMediaInfosResponse
+        /// </returns>
+        public BatchGetYikeAssetMediaInfosResponse BatchGetYikeAssetMediaInfos(BatchGetYikeAssetMediaInfosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchGetYikeAssetMediaInfosWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量获取媒资信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetYikeAssetMediaInfosRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetYikeAssetMediaInfosResponse
+        /// </returns>
+        public async Task<BatchGetYikeAssetMediaInfosResponse> BatchGetYikeAssetMediaInfosAsync(BatchGetYikeAssetMediaInfosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchGetYikeAssetMediaInfosWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Cancels a media fingerprint analysis job.</para>
         /// </summary>
         /// 
@@ -15350,6 +15590,134 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteVodPackagingGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除媒资信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteYikeAssetMediaInfosRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteYikeAssetMediaInfosResponse
+        /// </returns>
+        public DeleteYikeAssetMediaInfosResponse DeleteYikeAssetMediaInfosWithOptions(DeleteYikeAssetMediaInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogicDelete))
+            {
+                query["LogicDelete"] = request.LogicDelete;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaIds))
+            {
+                query["MediaIds"] = request.MediaIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteYikeAssetMediaInfos",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteYikeAssetMediaInfosResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除媒资信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteYikeAssetMediaInfosRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteYikeAssetMediaInfosResponse
+        /// </returns>
+        public async Task<DeleteYikeAssetMediaInfosResponse> DeleteYikeAssetMediaInfosWithOptionsAsync(DeleteYikeAssetMediaInfosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogicDelete))
+            {
+                query["LogicDelete"] = request.LogicDelete;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaIds))
+            {
+                query["MediaIds"] = request.MediaIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteYikeAssetMediaInfos",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteYikeAssetMediaInfosResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除媒资信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteYikeAssetMediaInfosRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteYikeAssetMediaInfosResponse
+        /// </returns>
+        public DeleteYikeAssetMediaInfosResponse DeleteYikeAssetMediaInfos(DeleteYikeAssetMediaInfosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteYikeAssetMediaInfosWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除媒资信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteYikeAssetMediaInfosRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteYikeAssetMediaInfosResponse
+        /// </returns>
+        public async Task<DeleteYikeAssetMediaInfosResponse> DeleteYikeAssetMediaInfosAsync(DeleteYikeAssetMediaInfosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteYikeAssetMediaInfosWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
