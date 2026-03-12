@@ -47,6 +47,14 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>request_id</para>
+        /// </summary>
+        [NameInMap("SecondJoinKey")]
+        [Validation(Required=false)]
+        public string SecondJoinKey { get; set; }
+
     }
 
 }

@@ -1,3 +1,7 @@
+2026-03-12 Version: 4.0.7
+- Update API ExportModelFeatureTrainingSetTable: add request parameters body.FeatureViewConfig.SecondJoinKey.
+
+
 2026-01-29 Version: 4.0.6
 - Update API CreateLLMConfig: add request parameters body.EmbeddingDimension.
 - Update API GetLLMConfig: add response parameters Body.EmbeddingDimension.
