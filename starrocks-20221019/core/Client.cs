@@ -949,6 +949,378 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询实例配置历史</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeConfigHistoryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConfigHistoryResponse
+        /// </returns>
+        public DescribeConfigHistoryResponse DescribeConfigHistoryWithOptions(DescribeConfigHistoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectStatuses))
+            {
+                query["EffectStatuses"] = request.EffectStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTotal))
+            {
+                query["NeedTotal"] = request.NeedTotal;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeConfigHistory",
+                Version = "2022-10-19",
+                Protocol = "HTTPS",
+                Pathname = "/webapi/config/describeConfigHistory",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeConfigHistoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例配置历史</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeConfigHistoryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConfigHistoryResponse
+        /// </returns>
+        public async Task<DescribeConfigHistoryResponse> DescribeConfigHistoryWithOptionsAsync(DescribeConfigHistoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectStatuses))
+            {
+                query["EffectStatuses"] = request.EffectStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTotal))
+            {
+                query["NeedTotal"] = request.NeedTotal;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeConfigHistory",
+                Version = "2022-10-19",
+                Protocol = "HTTPS",
+                Pathname = "/webapi/config/describeConfigHistory",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeConfigHistoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例配置历史</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeConfigHistoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConfigHistoryResponse
+        /// </returns>
+        public DescribeConfigHistoryResponse DescribeConfigHistory(DescribeConfigHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeConfigHistoryWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例配置历史</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeConfigHistoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConfigHistoryResponse
+        /// </returns>
+        public async Task<DescribeConfigHistoryResponse> DescribeConfigHistoryAsync(DescribeConfigHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeConfigHistoryWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceConfigsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceConfigsResponse
+        /// </returns>
+        public DescribeInstanceConfigsResponse DescribeInstanceConfigsWithOptions(DescribeInstanceConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowModify))
+            {
+                query["AllowModify"] = request.AllowModify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigKey))
+            {
+                query["ConfigKey"] = request.ConfigKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
+            {
+                query["ConfigType"] = request.ConfigType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTotal))
+            {
+                query["NeedTotal"] = request.NeedTotal;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
+            {
+                query["NodeGroupId"] = request.NodeGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceConfigs",
+                Version = "2022-10-19",
+                Protocol = "HTTPS",
+                Pathname = "/webapi/config/describeInstanceConfigs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstanceConfigsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceConfigsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceConfigsResponse
+        /// </returns>
+        public async Task<DescribeInstanceConfigsResponse> DescribeInstanceConfigsWithOptionsAsync(DescribeInstanceConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowModify))
+            {
+                query["AllowModify"] = request.AllowModify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigKey))
+            {
+                query["ConfigKey"] = request.ConfigKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
+            {
+                query["ConfigType"] = request.ConfigType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTotal))
+            {
+                query["NeedTotal"] = request.NeedTotal;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
+            {
+                query["NodeGroupId"] = request.NodeGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceConfigs",
+                Version = "2022-10-19",
+                Protocol = "HTTPS",
+                Pathname = "/webapi/config/describeInstanceConfigs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstanceConfigsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceConfigsResponse
+        /// </returns>
+        public DescribeInstanceConfigsResponse DescribeInstanceConfigs(DescribeInstanceConfigsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeInstanceConfigsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceConfigsResponse
+        /// </returns>
+        public async Task<DescribeInstanceConfigsResponse> DescribeInstanceConfigsAsync(DescribeInstanceConfigsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeInstanceConfigsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>This operation is used to query Serverless StarRocks instances, supporting filtering based on instance name or tags and other information.</para>
         /// </summary>
         /// 
@@ -3385,6 +3757,370 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>修改实例配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceConfigResponse
+        /// </returns>
+        public ModifyInstanceConfigResponse ModifyInstanceConfigWithOptions(ModifyInstanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddConfigList))
+            {
+                query["AddConfigList"] = request.AddConfigList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigList))
+            {
+                query["ConfigList"] = request.ConfigList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteConfigList))
+            {
+                query["DeleteConfigList"] = request.DeleteConfigList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                query["Reason"] = request.Reason;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigsToAdd))
+            {
+                body["configsToAdd"] = request.ConfigsToAdd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigsToDelete))
+            {
+                body["configsToDelete"] = request.ConfigsToDelete;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigsToUpdate))
+            {
+                body["configsToUpdate"] = request.ConfigsToUpdate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FastMode))
+            {
+                body["fastMode"] = request.FastMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Restart))
+            {
+                body["restart"] = request.Restart;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceConfig",
+                Version = "2022-10-19",
+                Protocol = "HTTPS",
+                Pathname = "/webapi/config/modifyInstanceConfig",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceConfigResponse
+        /// </returns>
+        public async Task<ModifyInstanceConfigResponse> ModifyInstanceConfigWithOptionsAsync(ModifyInstanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddConfigList))
+            {
+                query["AddConfigList"] = request.AddConfigList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigList))
+            {
+                query["ConfigList"] = request.ConfigList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteConfigList))
+            {
+                query["DeleteConfigList"] = request.DeleteConfigList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                query["Reason"] = request.Reason;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigsToAdd))
+            {
+                body["configsToAdd"] = request.ConfigsToAdd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigsToDelete))
+            {
+                body["configsToDelete"] = request.ConfigsToDelete;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigsToUpdate))
+            {
+                body["configsToUpdate"] = request.ConfigsToUpdate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FastMode))
+            {
+                body["fastMode"] = request.FastMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Restart))
+            {
+                body["restart"] = request.Restart;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceConfig",
+                Version = "2022-10-19",
+                Protocol = "HTTPS",
+                Pathname = "/webapi/config/modifyInstanceConfig",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceConfigResponse
+        /// </returns>
+        public ModifyInstanceConfigResponse ModifyInstanceConfig(ModifyInstanceConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModifyInstanceConfigWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceConfigResponse
+        /// </returns>
+        public async Task<ModifyInstanceConfigResponse> ModifyInstanceConfigAsync(ModifyInstanceConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModifyInstanceConfigWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置变更预检查，返回此次变更需要重启的计算组ID</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceConfigPreCheckRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceConfigPreCheckResponse
+        /// </returns>
+        public ModifyInstanceConfigPreCheckResponse ModifyInstanceConfigPreCheckWithOptions(ModifyInstanceConfigPreCheckRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigsToAdd))
+            {
+                body["configsToAdd"] = request.ConfigsToAdd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigsToDelete))
+            {
+                body["configsToDelete"] = request.ConfigsToDelete;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigsToUpdate))
+            {
+                body["configsToUpdate"] = request.ConfigsToUpdate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceConfigPreCheck",
+                Version = "2022-10-19",
+                Protocol = "HTTPS",
+                Pathname = "/webapi/config/modifyInstanceConfigPreCheck",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceConfigPreCheckResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置变更预检查，返回此次变更需要重启的计算组ID</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceConfigPreCheckRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceConfigPreCheckResponse
+        /// </returns>
+        public async Task<ModifyInstanceConfigPreCheckResponse> ModifyInstanceConfigPreCheckWithOptionsAsync(ModifyInstanceConfigPreCheckRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigsToAdd))
+            {
+                body["configsToAdd"] = request.ConfigsToAdd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigsToDelete))
+            {
+                body["configsToDelete"] = request.ConfigsToDelete;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigsToUpdate))
+            {
+                body["configsToUpdate"] = request.ConfigsToUpdate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceConfigPreCheck",
+                Version = "2022-10-19",
+                Protocol = "HTTPS",
+                Pathname = "/webapi/config/modifyInstanceConfigPreCheck",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceConfigPreCheckResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置变更预检查，返回此次变更需要重启的计算组ID</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceConfigPreCheckRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceConfigPreCheckResponse
+        /// </returns>
+        public ModifyInstanceConfigPreCheckResponse ModifyInstanceConfigPreCheck(ModifyInstanceConfigPreCheckRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModifyInstanceConfigPreCheckWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置变更预检查，返回此次变更需要重启的计算组ID</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceConfigPreCheckRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceConfigPreCheckResponse
+        /// </returns>
+        public async Task<ModifyInstanceConfigPreCheckResponse> ModifyInstanceConfigPreCheckAsync(ModifyInstanceConfigPreCheckRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModifyInstanceConfigPreCheckWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the number of nodes in a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</para>
         /// </summary>
         /// 
@@ -4839,6 +5575,152 @@ namespace AlibabaCloud.SDK.Starrocks20221019
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ResumeInstanceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>回滚正在进行中的配置修改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RollbackConfigModificationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RollbackConfigModificationResponse
+        /// </returns>
+        public RollbackConfigModificationResponse RollbackConfigModificationWithOptions(RollbackConfigModificationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigHistoryId))
+            {
+                query["ConfigHistoryId"] = request.ConfigHistoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Restart))
+            {
+                query["Restart"] = request.Restart;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RollbackConfigModification",
+                Version = "2022-10-19",
+                Protocol = "HTTPS",
+                Pathname = "/webapi/config/rollbackConfigModification",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RollbackConfigModificationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>回滚正在进行中的配置修改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RollbackConfigModificationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RollbackConfigModificationResponse
+        /// </returns>
+        public async Task<RollbackConfigModificationResponse> RollbackConfigModificationWithOptionsAsync(RollbackConfigModificationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigHistoryId))
+            {
+                query["ConfigHistoryId"] = request.ConfigHistoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Restart))
+            {
+                query["Restart"] = request.Restart;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RollbackConfigModification",
+                Version = "2022-10-19",
+                Protocol = "HTTPS",
+                Pathname = "/webapi/config/rollbackConfigModification",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RollbackConfigModificationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>回滚正在进行中的配置修改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RollbackConfigModificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RollbackConfigModificationResponse
+        /// </returns>
+        public RollbackConfigModificationResponse RollbackConfigModification(RollbackConfigModificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RollbackConfigModificationWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>回滚正在进行中的配置修改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RollbackConfigModificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RollbackConfigModificationResponse
+        /// </returns>
+        public async Task<RollbackConfigModificationResponse> RollbackConfigModificationAsync(RollbackConfigModificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RollbackConfigModificationWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
