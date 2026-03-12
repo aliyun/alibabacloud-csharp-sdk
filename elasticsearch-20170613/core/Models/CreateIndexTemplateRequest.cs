@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("dataStream")]
         [Validation(Required=false)]
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>100</para>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("priority")]
         [Validation(Required=false)]
@@ -63,7 +66,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public class CreateIndexTemplateRequestTemplate : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>{&quot;mydata&quot;: {}}</para>
+            /// <para>{\&quot;mydata\&quot;:{}}</para>
             /// </summary>
             [NameInMap("aliases")]
             [Validation(Required=false)]
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>{&quot;properties&quot;: {&quot;created_at&quot;: {&quot;type&quot;: &quot;date&quot;,&quot;format&quot;: &quot;EEE MMM dd HH:mm:ss Z yyyy&quot;},&quot;host_name&quot;: {&quot;type&quot;: &quot;keyword&quot;}}}</para>
+            /// <para>{\&quot;properties\&quot;:{\&quot;created_at\&quot;:{\&quot;format\&quot;:\&quot;EEE MMM dd HH:mm:ss Z yyyy\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},\&quot;host_name\&quot;:{\&quot;type\&quot;:\&quot;keyword\&quot;}}}</para>
             /// </summary>
             [NameInMap("mappings")]
             [Validation(Required=false)]
@@ -79,7 +82,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>{&quot;index.refresh_interval&quot;:&quot;1s&quot;}</para>
+            /// <para>{\&quot;index.number_of_shards\&quot;:\&quot;1\&quot;}</para>
             /// </summary>
             [NameInMap("settings")]
             [Validation(Required=false)]

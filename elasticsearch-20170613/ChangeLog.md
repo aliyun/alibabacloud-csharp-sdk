@@ -1,3 +1,7 @@
+2026-03-12 Version: 3.1.0
+- Support API GrayPublish.
+
+
 2026-01-29 Version: 3.0.2
 - Update API DescribeInstance: add response parameters Body.Result.inited.
 

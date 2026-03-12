@@ -8,26 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
-    public class WhiteIpGroup : TeaModel {
+    public class GrayPublishResponseBody : TeaModel {
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>PRIVATE_ES</para>
+        /// <para>F99407AB-2FA9-489E-A259-40CF6DCC4****</para>
         /// </summary>
-        [NameInMap("WhiteIpType")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string WhiteIpType { get; set; }
+        public string RequestId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>test_group</para>
+        /// <para>true</para>
         /// </summary>
-        [NameInMap("groupName")]
+        [NameInMap("Result")]
         [Validation(Required=false)]
-        public string GroupName { get; set; }
-
-        [NameInMap("ips")]
-        [Validation(Required=false)]
-        public List<string> Ips { get; set; }
+        public string Result { get; set; }
 
     }
 

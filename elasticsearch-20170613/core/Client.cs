@@ -681,6 +681,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await CancelLogstashDeletionWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CancelTask to cancel a data migration task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelTaskRequest
         /// </param>
@@ -726,6 +731,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CancelTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CancelTask to cancel a data migration task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelTaskRequest
         /// </param>
@@ -771,6 +781,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CancelTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CancelTask to cancel a data migration task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelTaskRequest
         /// </param>
@@ -785,6 +800,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CancelTaskWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CancelTask to cancel a data migration task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelTaskRequest
         /// </param>
@@ -955,7 +975,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭实例的智能运维功能</para>
+        /// <para>Disables the intelligent O\&amp;M feature for an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1005,7 +1025,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭实例的智能运维功能</para>
+        /// <para>Disables the intelligent O\&amp;M feature for an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1055,7 +1075,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭实例的智能运维功能</para>
+        /// <para>Disables the intelligent O\&amp;M feature for an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1074,7 +1094,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭实例的智能运维功能</para>
+        /// <para>Disables the intelligent O\&amp;M feature for an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1091,6 +1111,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await CloseDiagnosisWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CloseHttps to close the HTTPS protocol.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CloseHttpsRequest
         /// </param>
@@ -1132,6 +1157,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CloseHttpsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CloseHttps to close the HTTPS protocol.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CloseHttpsRequest
         /// </param>
@@ -1173,6 +1203,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CloseHttpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CloseHttps to close the HTTPS protocol.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CloseHttpsRequest
         /// </param>
@@ -1187,6 +1222,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CloseHttpsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CloseHttps to close the HTTPS protocol.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CloseHttpsRequest
         /// </param>
@@ -2115,7 +2155,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建logstash实例</para>
+        /// <para>Creates a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2195,7 +2235,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建logstash实例</para>
+        /// <para>Creates a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2275,7 +2315,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建logstash实例</para>
+        /// <para>Creates a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2294,7 +2334,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建logstash实例</para>
+        /// <para>Creates a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2313,7 +2353,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Logstash管道任务</para>
+        /// <para>Creates a pipeline in a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2364,7 +2404,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Logstash管道任务</para>
+        /// <para>Creates a pipeline in a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2415,7 +2455,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Logstash管道任务</para>
+        /// <para>Creates a pipeline in a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2434,7 +2474,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Logstash管道任务</para>
+        /// <para>Creates a pipeline in a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2451,6 +2491,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await CreatePipelinesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CreateSnapshot to manually back up a cluster snapshot.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSnapshotRequest
         /// </param>
@@ -2493,6 +2538,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateSnapshotResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CreateSnapshot to manually back up a cluster snapshot.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSnapshotRequest
         /// </param>
@@ -2535,6 +2585,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateSnapshotResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CreateSnapshot to manually back up a cluster snapshot.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSnapshotRequest
         /// </param>
@@ -2549,6 +2604,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CreateSnapshotWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CreateSnapshot to manually back up a cluster snapshot.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSnapshotRequest
         /// </param>
@@ -2743,7 +2803,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke DeactivateZones to offline certain zones when there are multiple availability zones, and migrate nodes in the offline zones to other availability zones.</para>
+        /// <para>Disables one or more zones where a multi-zone Elasticsearch cluster resides and migrates the nodes in the disabled zones to other zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2790,7 +2850,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke DeactivateZones to offline certain zones when there are multiple availability zones, and migrate nodes in the offline zones to other availability zones.</para>
+        /// <para>Disables one or more zones where a multi-zone Elasticsearch cluster resides and migrates the nodes in the disabled zones to other zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2837,7 +2897,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke DeactivateZones to offline certain zones when there are multiple availability zones, and migrate nodes in the offline zones to other availability zones.</para>
+        /// <para>Disables one or more zones where a multi-zone Elasticsearch cluster resides and migrates the nodes in the disabled zones to other zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2856,7 +2916,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke DeactivateZones to offline certain zones when there are multiple availability zones, and migrate nodes in the offline zones to other availability zones.</para>
+        /// <para>Disables one or more zones where a multi-zone Elasticsearch cluster resides and migrates the nodes in the disabled zones to other zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3105,6 +3165,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DeleteComponentIndexWithOptionsAsync(InstanceId, name, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DeleteConnectedCluster to remove the interconnected instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteConnectedClusterRequest
         /// </param>
@@ -3150,6 +3215,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteConnectedClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DeleteConnectedCluster to remove the interconnected instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteConnectedClusterRequest
         /// </param>
@@ -3195,6 +3265,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteConnectedClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DeleteConnectedCluster to remove the interconnected instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteConnectedClusterRequest
         /// </param>
@@ -3209,6 +3284,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DeleteConnectedClusterWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DeleteConnectedCluster to remove the interconnected instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteConnectedClusterRequest
         /// </param>
@@ -3353,6 +3433,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DeleteDataStreamWithOptionsAsync(InstanceId, DataStream, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete an index migration task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDataTaskRequest
         /// </param>
@@ -3398,6 +3483,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteDataTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete an index migration task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDataTaskRequest
         /// </param>
@@ -3443,6 +3533,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteDataTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete an index migration task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDataTaskRequest
         /// </param>
@@ -3457,6 +3552,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DeleteDataTaskWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete an index migration task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDataTaskRequest
         /// </param>
@@ -3657,7 +3757,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ES集群索引模版</para>
+        /// <para>Deletes a top index template.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3693,7 +3793,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ES集群索引模版</para>
+        /// <para>Deletes a top index template.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3729,7 +3829,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ES集群索引模版</para>
+        /// <para>Deletes a top index template.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3744,7 +3844,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ES集群索引模版</para>
+        /// <para>Deletes a top index template.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3757,6 +3857,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DeleteIndexTemplateWithOptionsAsync(InstanceId, IndexTemplate, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to release a pay-as-you-go Elasticsearch instance. After the instance is released, the physical resources of the instance is reclaimed. The data of the instance is deleted and cannot be recovered. The disks mounted to the instance nodes and the snapshots are released.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -3802,6 +3907,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to release a pay-as-you-go Elasticsearch instance. After the instance is released, the physical resources of the instance is reclaimed. The data of the instance is deleted and cannot be recovered. The disks mounted to the instance nodes and the snapshots are released.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -3847,6 +3957,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to release a pay-as-you-go Elasticsearch instance. After the instance is released, the physical resources of the instance is reclaimed. The data of the instance is deleted and cannot be recovered. The disks mounted to the instance nodes and the snapshots are released.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -3861,6 +3976,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DeleteInstanceWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to release a pay-as-you-go Elasticsearch instance. After the instance is released, the physical resources of the instance is reclaimed. The data of the instance is deleted and cannot be recovered. The disks mounted to the instance nodes and the snapshots are released.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -4171,6 +4291,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DeletePipelinesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DeleteSnapshotRepo to delete a cross-cluster OSS repository.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSnapshotRepoRequest
         /// </param>
@@ -4216,6 +4341,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteSnapshotRepoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DeleteSnapshotRepo to delete a cross-cluster OSS repository.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSnapshotRepoRequest
         /// </param>
@@ -4261,6 +4391,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteSnapshotRepoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DeleteSnapshotRepo to delete a cross-cluster OSS repository.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSnapshotRepoRequest
         /// </param>
@@ -4275,6 +4410,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DeleteSnapshotRepoWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DeleteSnapshotRepo to delete a cross-cluster OSS repository.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSnapshotRepoRequest
         /// </param>
@@ -4291,7 +4431,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务账号vpc下的终端节点</para>
+        /// <para>Deletes an endpoint in the VPC within the Elasticsearch service account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4337,7 +4477,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务账号vpc下的终端节点</para>
+        /// <para>Deletes an endpoint in the VPC within the Elasticsearch service account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4383,7 +4523,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务账号vpc下的终端节点</para>
+        /// <para>Deletes an endpoint in the VPC within the Elasticsearch service account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4402,7 +4542,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务账号vpc下的终端节点</para>
+        /// <para>Deletes an endpoint in the VPC within the Elasticsearch service account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4551,7 +4691,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a shipper.</para>
+        /// <para>Queries the detailed information of a shipper.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4587,7 +4727,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a shipper.</para>
+        /// <para>Queries the detailed information of a shipper.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4623,7 +4763,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a shipper.</para>
+        /// <para>Queries the detailed information of a shipper.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4638,7 +4778,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a shipper.</para>
+        /// <para>Queries the detailed information of a shipper.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4753,6 +4893,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeComponentIndexWithOptionsAsync(InstanceId, name, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Elasticsearch clusters that can be connected to a specified Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConnectableClustersRequest
         /// </param>
@@ -4794,6 +4939,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeConnectableClustersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Elasticsearch clusters that can be connected to a specified Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConnectableClustersRequest
         /// </param>
@@ -4835,6 +4985,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeConnectableClustersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Elasticsearch clusters that can be connected to a specified Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConnectableClustersRequest
         /// </param>
@@ -4849,6 +5004,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeConnectableClustersWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Elasticsearch clusters that can be connected to a specified Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConnectableClustersRequest
         /// </param>
@@ -4965,6 +5125,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeDeprecatedTemplateWithOptionsAsync(InstanceId, name, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a historical intelligent O\&amp;M report.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDiagnoseReportRequest
         /// </param>
@@ -5006,6 +5171,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeDiagnoseReportResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a historical intelligent O\&amp;M report.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDiagnoseReportRequest
         /// </param>
@@ -5047,6 +5217,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeDiagnoseReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a historical intelligent O\&amp;M report.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDiagnoseReportRequest
         /// </param>
@@ -5061,6 +5236,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeDiagnoseReportWithOptions(InstanceId, ReportId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a historical intelligent O\&amp;M report.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDiagnoseReportRequest
         /// </param>
@@ -5075,6 +5255,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeDiagnoseReportWithOptionsAsync(InstanceId, ReportId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeDiagnosisSettings to obtain the scenario settings of intelligent maintenance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDiagnosisSettingsRequest
         /// </param>
@@ -5116,6 +5301,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeDiagnosisSettingsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeDiagnosisSettings to obtain the scenario settings of intelligent maintenance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDiagnosisSettingsRequest
         /// </param>
@@ -5157,6 +5347,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeDiagnosisSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeDiagnosisSettings to obtain the scenario settings of intelligent maintenance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDiagnosisSettingsRequest
         /// </param>
@@ -5171,6 +5366,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeDiagnosisSettingsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeDiagnosisSettings to obtain the scenario settings of intelligent maintenance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDiagnosisSettingsRequest
         /// </param>
@@ -5289,7 +5489,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the health status of an Elasticsearch cluster.</para>
+        /// <para>Check the health status of the cluster and whether it is running normally.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5335,7 +5535,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the health status of an Elasticsearch cluster.</para>
+        /// <para>Check the health status of the cluster and whether it is running normally.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5381,7 +5581,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the health status of an Elasticsearch cluster.</para>
+        /// <para>Check the health status of the cluster and whether it is running normally.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5406,7 +5606,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the health status of an Elasticsearch cluster.</para>
+        /// <para>Check the health status of the cluster and whether it is running normally.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5697,7 +5897,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Elasticsearch集群Kibana节点settings配置</para>
+        /// <para>Get the configuration of the Kibana node for the Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5733,7 +5933,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Elasticsearch集群Kibana节点settings配置</para>
+        /// <para>Get the configuration of the Kibana node for the Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5769,7 +5969,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Elasticsearch集群Kibana节点settings配置</para>
+        /// <para>Get the configuration of the Kibana node for the Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5784,7 +5984,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Elasticsearch集群Kibana节点settings配置</para>
+        /// <para>Get the configuration of the Kibana node for the Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5799,7 +5999,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看Logstash实例详情</para>
+        /// <para>Queries the information about a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5835,7 +6035,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看Logstash实例详情</para>
+        /// <para>Queries the information about a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5871,7 +6071,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看Logstash实例详情</para>
+        /// <para>Queries the information about a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5886,7 +6086,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看Logstash实例详情</para>
+        /// <para>Queries the information about a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5899,6 +6099,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeLogstashWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a pipeline in a Logstash cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -5930,6 +6135,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribePipelineResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a pipeline in a Logstash cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -5961,6 +6171,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribePipelineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a pipeline in a Logstash cluster.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// DescribePipelineResponse
         /// </returns>
@@ -5971,6 +6186,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribePipelineWithOptions(InstanceId, PipelineId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a pipeline in a Logstash cluster.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// DescribePipelineResponse
         /// </returns>
@@ -6111,6 +6331,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribePipelineManagementConfigWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get the region information of Alibaba Cloud Elasticsearch.</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -6142,6 +6367,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get the region information of Alibaba Cloud Elasticsearch.</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -6173,6 +6403,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get the region information of Alibaba Cloud Elasticsearch.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// DescribeRegionsResponse
         /// </returns>
@@ -6183,6 +6418,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeRegionsWithOptions(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get the region information of Alibaba Cloud Elasticsearch.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// DescribeRegionsResponse
         /// </returns>
@@ -6195,7 +6435,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看备份设置</para>
+        /// <para>Get the snapshot backup settings of the cluster, backup cycle.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6231,7 +6471,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看备份设置</para>
+        /// <para>Get the snapshot backup settings of the cluster, backup cycle.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6267,7 +6507,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看备份设置</para>
+        /// <para>Get the snapshot backup settings of the cluster, backup cycle.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6282,7 +6522,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看备份设置</para>
+        /// <para>Get the snapshot backup settings of the cluster, backup cycle.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6379,7 +6619,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of the X-Pack Monitoring feature of a Logstash cluster.</para>
+        /// <para>Queries the X-Pack Monitoring configurations of a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6415,7 +6655,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of the X-Pack Monitoring feature of a Logstash cluster.</para>
+        /// <para>Queries the X-Pack Monitoring configurations of a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6451,7 +6691,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of the X-Pack Monitoring feature of a Logstash cluster.</para>
+        /// <para>Queries the X-Pack Monitoring configurations of a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6466,7 +6706,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of the X-Pack Monitoring feature of a Logstash cluster.</para>
+        /// <para>Queries the X-Pack Monitoring configurations of a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6481,7 +6721,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>触发ES实例智能诊断</para>
+        /// <para>Diagnoses an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6545,7 +6785,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>触发ES实例智能诊断</para>
+        /// <para>Diagnoses an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6609,7 +6849,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>触发ES实例智能诊断</para>
+        /// <para>Diagnoses an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6628,7 +6868,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>触发ES实例智能诊断</para>
+        /// <para>Diagnoses an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6647,7 +6887,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭kibana私网</para>
+        /// <para>Disable Private Network Access of Kibana</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6683,7 +6923,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭kibana私网</para>
+        /// <para>Disable Private Network Access of Kibana</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6719,7 +6959,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭kibana私网</para>
+        /// <para>Disable Private Network Access of Kibana</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6734,7 +6974,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭kibana私网</para>
+        /// <para>Disable Private Network Access of Kibana</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7925,7 +8165,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计OpenStore实例的存储容量和使用情况</para>
+        /// <para>View the storage capacity and usage of the OpensStore instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7961,7 +8201,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计OpenStore实例的存储容量和使用情况</para>
+        /// <para>View the storage capacity and usage of the OpensStore instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7997,7 +8237,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计OpenStore实例的存储容量和使用情况</para>
+        /// <para>View the storage capacity and usage of the OpensStore instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8012,7 +8252,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计OpenStore实例的存储容量和使用情况</para>
+        /// <para>View the storage capacity and usage of the OpensStore instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8027,7 +8267,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The maximum number of nodes.</para>
+        /// <para>Queries the configuration information about the current region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8073,7 +8313,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The maximum number of nodes.</para>
+        /// <para>Queries the configuration information about the current region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8119,7 +8359,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The maximum number of nodes.</para>
+        /// <para>Queries the configuration information about the current region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8138,7 +8378,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The maximum number of nodes.</para>
+        /// <para>Queries the configuration information about the current region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8259,7 +8499,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ES集群可缩容节点</para>
+        /// <para>Call GetSuggestShrinkableNodes to specify the type and number of nodes to obtain the nodes that can be removed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8313,7 +8553,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ES集群可缩容节点</para>
+        /// <para>Call GetSuggestShrinkableNodes to specify the type and number of nodes to obtain the nodes that can be removed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8367,7 +8607,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ES集群可缩容节点</para>
+        /// <para>Call GetSuggestShrinkableNodes to specify the type and number of nodes to obtain the nodes that can be removed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8386,7 +8626,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ES集群可缩容节点</para>
+        /// <para>Call GetSuggestShrinkableNodes to specify the type and number of nodes to obtain the nodes that can be removed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8405,7 +8645,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可数据迁移节点</para>
+        /// <para>Call GetTransferableNodes to specify the type and number of nodes to obtain the nodes that can be migrated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8455,7 +8695,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可数据迁移节点</para>
+        /// <para>Call GetTransferableNodes to specify the type and number of nodes to obtain the nodes that can be migrated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8505,7 +8745,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可数据迁移节点</para>
+        /// <para>Call GetTransferableNodes to specify the type and number of nodes to obtain the nodes that can be migrated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8524,7 +8764,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可数据迁移节点</para>
+        /// <para>Call GetTransferableNodes to specify the type and number of nodes to obtain the nodes that can be migrated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8539,6 +8779,136 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetTransferableNodesWithOptionsAsync(InstanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>灰度完成继续变更</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrayPublishRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrayPublishResponse
+        /// </returns>
+        public GrayPublishResponse GrayPublishWithOptions(string InstanceId, GrayPublishRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XRequestChangeId))
+            {
+                query["X-Request-ChangeId"] = request.XRequestChangeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GrayPublish",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/grayPublish",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GrayPublishResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>灰度完成继续变更</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrayPublishRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrayPublishResponse
+        /// </returns>
+        public async Task<GrayPublishResponse> GrayPublishWithOptionsAsync(string InstanceId, GrayPublishRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XRequestChangeId))
+            {
+                query["X-Request-ChangeId"] = request.XRequestChangeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GrayPublish",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/actions/grayPublish",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GrayPublishResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>灰度完成继续变更</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrayPublishRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrayPublishResponse
+        /// </returns>
+        public GrayPublishResponse GrayPublish(string InstanceId, GrayPublishRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GrayPublishWithOptions(InstanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>灰度完成继续变更</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrayPublishRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrayPublishResponse
+        /// </returns>
+        public async Task<GrayPublishResponse> GrayPublishAsync(string InstanceId, GrayPublishRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GrayPublishWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8995,7 +9365,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The returned data also contains <b>Headers</b> parameters, indicating that header information is returned.</para>
+        /// <para>Installs a plug-in.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9047,7 +9417,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The returned data also contains <b>Headers</b> parameters, indicating that header information is returned.</para>
+        /// <para>Installs a plug-in.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9099,7 +9469,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The returned data also contains <b>Headers</b> parameters, indicating that header information is returned.</para>
+        /// <para>Installs a plug-in.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9123,7 +9493,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The returned data also contains <b>Headers</b> parameters, indicating that header information is returned.</para>
+        /// <para>Installs a plug-in.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9409,6 +9779,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await InstallUserPluginsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call InterruptElasticsearchTask to interrupt the Alibaba cloud elasticsearch instance in the change. This parameter is valid only for instances in the initializing state. When the instance is interrupted, it enters the suspended state.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// InterruptElasticsearchTaskRequest
         /// </param>
@@ -9450,6 +9825,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InterruptElasticsearchTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call InterruptElasticsearchTask to interrupt the Alibaba cloud elasticsearch instance in the change. This parameter is valid only for instances in the initializing state. When the instance is interrupted, it enters the suspended state.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// InterruptElasticsearchTaskRequest
         /// </param>
@@ -9491,6 +9871,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InterruptElasticsearchTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call InterruptElasticsearchTask to interrupt the Alibaba cloud elasticsearch instance in the change. This parameter is valid only for instances in the initializing state. When the instance is interrupted, it enters the suspended state.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// InterruptElasticsearchTaskRequest
         /// </param>
@@ -9505,6 +9890,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return InterruptElasticsearchTaskWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call InterruptElasticsearchTask to interrupt the Alibaba cloud elasticsearch instance in the change. This parameter is valid only for instances in the initializing state. When the instance is interrupted, it enters the suspended state.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// InterruptElasticsearchTaskRequest
         /// </param>
@@ -9797,7 +10187,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all namespaces in a specified Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>View all namespaces of the specified Container Service for Kubernetes (ACK) cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9854,7 +10244,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all namespaces in a specified Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>View all namespaces of the specified Container Service for Kubernetes (ACK) cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9911,7 +10301,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all namespaces in a specified Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>View all namespaces of the specified Container Service for Kubernetes (ACK) cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9937,7 +10327,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all namespaces in a specified Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>View all namespaces of the specified Container Service for Kubernetes (ACK) cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10149,7 +10539,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>es-cn-tl32cpgwa002l\<em>\</em>\<em>\</em></para>
+        /// <para>Queries the information of all the nodes in an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10195,7 +10585,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>es-cn-tl32cpgwa002l\<em>\</em>\<em>\</em></para>
+        /// <para>Queries the information of all the nodes in an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10241,7 +10631,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>es-cn-tl32cpgwa002l\<em>\</em>\<em>\</em></para>
+        /// <para>Queries the information of all the nodes in an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10260,7 +10650,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>es-cn-tl32cpgwa002l\<em>\</em>\<em>\</em></para>
+        /// <para>Queries the information of all the nodes in an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10279,7 +10669,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例可添加的OSS引用仓库</para>
+        /// <para>Call ListAlternativeSnapshotRepos to get the OSS reference warehouses that can be added to the current instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10325,7 +10715,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例可添加的OSS引用仓库</para>
+        /// <para>Call ListAlternativeSnapshotRepos to get the OSS reference warehouses that can be added to the current instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10371,7 +10761,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例可添加的OSS引用仓库</para>
+        /// <para>Call ListAlternativeSnapshotRepos to get the OSS reference warehouses that can be added to the current instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10390,7 +10780,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例可添加的OSS引用仓库</para>
+        /// <para>Call ListAlternativeSnapshotRepos to get the OSS reference warehouses that can be added to the current instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10511,7 +10901,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries shippers.</para>
+        /// <para>Queries a list of shippers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10577,7 +10967,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries shippers.</para>
+        /// <para>Queries a list of shippers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10643,7 +11033,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries shippers.</para>
+        /// <para>Queries a list of shippers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10662,7 +11052,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries shippers.</para>
+        /// <para>Queries a list of shippers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10827,7 +11217,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取与当前实例进行网络互通的实例列表</para>
+        /// <para>Call ListConnectedClusters to query the instances that are interconnected with the current instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -10863,7 +11253,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取与当前实例进行网络互通的实例列表</para>
+        /// <para>Call ListConnectedClusters to query the instances that are interconnected with the current instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -10899,7 +11289,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取与当前实例进行网络互通的实例列表</para>
+        /// <para>Call ListConnectedClusters to query the instances that are interconnected with the current instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -10914,7 +11304,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取与当前实例进行网络互通的实例列表</para>
+        /// <para>Call ListConnectedClusters to query the instances that are interconnected with the current instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11065,6 +11455,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListDataStreamsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call ListDataTasks to obtain the information of a data migration task.</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -11096,6 +11491,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDataTasksResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call ListDataTasks to obtain the information of a data migration task.</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -11127,6 +11527,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDataTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call ListDataTasks to obtain the information of a data migration task.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// ListDataTasksResponse
         /// </returns>
@@ -11137,6 +11542,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListDataTasksWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call ListDataTasks to obtain the information of a data migration task.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// ListDataTasksResponse
         /// </returns>
@@ -11571,7 +11981,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群诊断报告列表</para>
+        /// <para>Queries the historical intelligent O\&amp;M reports of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11641,7 +12051,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群诊断报告列表</para>
+        /// <para>Queries the historical intelligent O\&amp;M reports of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11711,7 +12121,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群诊断报告列表</para>
+        /// <para>Queries the historical intelligent O\&amp;M reports of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11730,7 +12140,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群诊断报告列表</para>
+        /// <para>Queries the historical intelligent O\&amp;M reports of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11749,7 +12159,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IDs of the historical intelligent O&amp;M reports of an Elasticsearch cluster.</para>
+        /// <para>Queries the IDs of the historical intelligent O\\\&amp;M reports of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11815,7 +12225,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IDs of the historical intelligent O&amp;M reports of an Elasticsearch cluster.</para>
+        /// <para>Queries the IDs of the historical intelligent O\\\&amp;M reports of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11881,7 +12291,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IDs of the historical intelligent O&amp;M reports of an Elasticsearch cluster.</para>
+        /// <para>Queries the IDs of the historical intelligent O\\\&amp;M reports of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11900,7 +12310,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IDs of the historical intelligent O&amp;M reports of an Elasticsearch cluster.</para>
+        /// <para>Queries the IDs of the historical intelligent O\\\&amp;M reports of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11919,7 +12329,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The diagnostic item is used to check whether data write requests of a cluster are accumulated. If data write requests are accumulated, a bulk rejection occurs. This may cause data loss and severely consume system resources.</para>
+        /// <para>Queries the intelligent diagnostic items of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11965,7 +12375,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The diagnostic item is used to check whether data write requests of a cluster are accumulated. If data write requests are accumulated, a bulk rejection occurs. This may cause data loss and severely consume system resources.</para>
+        /// <para>Queries the intelligent diagnostic items of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12011,7 +12421,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The diagnostic item is used to check whether data write requests of a cluster are accumulated. If data write requests are accumulated, a bulk rejection occurs. This may cause data loss and severely consume system resources.</para>
+        /// <para>Queries the intelligent diagnostic items of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12030,7 +12440,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The diagnostic item is used to check whether data write requests of a cluster are accumulated. If data write requests are accumulated, a bulk rejection occurs. This may cause data loss and severely consume system resources.</para>
+        /// <para>Queries the intelligent diagnostic items of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12047,6 +12457,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListDiagnosisItemsWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about a dictionary.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDictInformationRequest
         /// </param>
@@ -12096,6 +12511,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDictInformationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about a dictionary.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDictInformationRequest
         /// </param>
@@ -12145,6 +12565,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDictInformationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about a dictionary.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDictInformationRequest
         /// </param>
@@ -12159,6 +12584,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListDictInformationWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about a dictionary.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDictInformationRequest
         /// </param>
@@ -12313,7 +12743,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ecs实例</para>
+        /// <para>When you create a Beats collector, call the ListEcsInstances to obtain the list of ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12384,7 +12814,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ecs实例</para>
+        /// <para>When you create a Beats collector, call the ListEcsInstances to obtain the list of ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12455,7 +12885,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ecs实例</para>
+        /// <para>When you create a Beats collector, call the ListEcsInstances to obtain the list of ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12479,7 +12909,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ecs实例</para>
+        /// <para>When you create a Beats collector, call the ListEcsInstances to obtain the list of ECS instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12503,7 +12933,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the driver files of a Logstash cluster.</para>
+        /// <para>Queries the extended file configuration of a Logstash instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -12539,7 +12969,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the driver files of a Logstash cluster.</para>
+        /// <para>Queries the extended file configuration of a Logstash instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -12575,7 +13005,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the driver files of a Logstash cluster.</para>
+        /// <para>Queries the extended file configuration of a Logstash instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -12590,7 +13020,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the driver files of a Logstash cluster.</para>
+        /// <para>Queries the extended file configuration of a Logstash instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -12841,7 +13271,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Elasticsearch实例列表</para>
+        /// <para>Queries a list of Elasticsearch clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12931,7 +13361,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Elasticsearch实例列表</para>
+        /// <para>Queries a list of Elasticsearch clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13021,7 +13451,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Elasticsearch实例列表</para>
+        /// <para>Queries a list of Elasticsearch clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13040,7 +13470,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Elasticsearch实例列表</para>
+        /// <para>Queries a list of Elasticsearch clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13315,7 +13745,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前实例先特定的索引列表</para>
+        /// <para>Queries the indexes stored on an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13381,7 +13811,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前实例先特定的索引列表</para>
+        /// <para>Queries the indexes stored on an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13447,7 +13877,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前实例先特定的索引列表</para>
+        /// <para>Queries the indexes stored on an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13466,7 +13896,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前实例先特定的索引列表</para>
+        /// <para>Queries the indexes stored on an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13725,7 +14155,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logstash集群列表</para>
+        /// <para>Queries the information about a Logstash cluster or all Logstash clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13795,7 +14225,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logstash集群列表</para>
+        /// <para>Queries the information about a Logstash cluster or all Logstash clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13865,7 +14295,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logstash集群列表</para>
+        /// <para>Queries the information about a Logstash cluster or all Logstash clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13884,7 +14314,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logstash集群列表</para>
+        /// <para>Queries the information about a Logstash cluster or all Logstash clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13903,7 +14333,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Logstash日志</para>
+        /// <para>Queries the logs of a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13969,7 +14399,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Logstash日志</para>
+        /// <para>Queries the logs of a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14035,7 +14465,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Logstash日志</para>
+        /// <para>Queries the logs of a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14054,7 +14484,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Logstash日志</para>
+        /// <para>Queries the logs of a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14073,7 +14503,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logstash插件列表</para>
+        /// <para>Queries the information about a plug-in or all plug-ins.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14131,7 +14561,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logstash插件列表</para>
+        /// <para>Queries the information about a plug-in or all plug-ins.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14189,7 +14619,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logstash插件列表</para>
+        /// <para>Queries the information about a plug-in or all plug-ins.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14208,7 +14638,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logstash插件列表</para>
+        /// <para>Queries the information about a plug-in or all plug-ins.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14227,7 +14657,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statuses of Elastic Compute Service (ECS) instances on which a shipper is installed.</para>
+        /// <para>The list of historical reports of Intelligent Maintenance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14289,7 +14719,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statuses of Elastic Compute Service (ECS) instances on which a shipper is installed.</para>
+        /// <para>The list of historical reports of Intelligent Maintenance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14351,7 +14781,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statuses of Elastic Compute Service (ECS) instances on which a shipper is installed.</para>
+        /// <para>The list of historical reports of Intelligent Maintenance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14370,7 +14800,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statuses of Elastic Compute Service (ECS) instances on which a shipper is installed.</para>
+        /// <para>The list of historical reports of Intelligent Maintenance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14389,7 +14819,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListPipeline</para>
+        /// <para>Queries a list of pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14443,7 +14873,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListPipeline</para>
+        /// <para>Queries a list of pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14497,7 +14927,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListPipeline</para>
+        /// <para>Queries a list of pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14516,7 +14946,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListPipeline</para>
+        /// <para>Queries a list of pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14535,7 +14965,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>Queries the IDs of pipelines for a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14576,7 +15006,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>Queries the IDs of pipelines for a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14617,7 +15047,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>Queries the IDs of pipelines for a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14636,7 +15066,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>Queries the IDs of pipelines for a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14655,7 +15085,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ES系统插件列表</para>
+        /// <para>Queries the plug-ins that are installed on a specified Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14713,7 +15143,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ES系统插件列表</para>
+        /// <para>Queries the plug-ins that are installed on a specified Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14771,7 +15201,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ES系统插件列表</para>
+        /// <para>Queries the plug-ins that are installed on a specified Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14790,7 +15220,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ES系统插件列表</para>
+        /// <para>Queries the plug-ins that are installed on a specified Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14809,7 +15239,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看Elasticsearch集群各种类型的日志</para>
+        /// <para>Queries the logs of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14875,7 +15305,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看Elasticsearch集群各种类型的日志</para>
+        /// <para>Queries the logs of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14941,7 +15371,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看Elasticsearch集群各种类型的日志</para>
+        /// <para>Queries the logs of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14960,7 +15390,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看Elasticsearch集群各种类型的日志</para>
+        /// <para>Queries the logs of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15137,7 +15567,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取跨集群索引仓库列表</para>
+        /// <para>Call the ListSnapshotReposByInstanceId to get the cross-cluster OSS repositories of the current instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -15173,7 +15603,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取跨集群索引仓库列表</para>
+        /// <para>Call the ListSnapshotReposByInstanceId to get the cross-cluster OSS repositories of the current instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -15209,7 +15639,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取跨集群索引仓库列表</para>
+        /// <para>Call the ListSnapshotReposByInstanceId to get the cross-cluster OSS repositories of the current instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -15224,7 +15654,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取跨集群索引仓库列表</para>
+        /// <para>Call the ListSnapshotReposByInstanceId to get the cross-cluster OSS repositories of the current instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -15239,7 +15669,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看资源和标签关系</para>
+        /// <para>Queries the tags that are added to one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15305,7 +15735,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看资源和标签关系</para>
+        /// <para>Queries the tags that are added to one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15371,7 +15801,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看资源和标签关系</para>
+        /// <para>Queries the tags that are added to one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15390,7 +15820,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看资源和标签关系</para>
+        /// <para>Queries the tags that are added to one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15409,7 +15839,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看所有已常见的标签</para>
+        /// <para>All tags created by the user in the current region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15459,7 +15889,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看所有已常见的标签</para>
+        /// <para>All tags created by the user in the current region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15509,7 +15939,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看所有已常见的标签</para>
+        /// <para>All tags created by the user in the current region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15528,7 +15958,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看所有已常见的标签</para>
+        /// <para>All tags created by the user in the current region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16093,53 +16523,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <h2>RequestBody</h2>
-        /// <para>You must also specify the following parameters in the RequestBody parameter to specify the maintenance window information.  </para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Parameter</th>
-        /// <th>Type</th>
-        /// <th>Required</th>
-        /// <th>Example</th>
-        /// <th>Description</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>maintainStartTime</td>
-        /// <td>String</td>
-        /// <td>No</td>
-        /// <td>02:00Z</td>
-        /// <td>The start time of the maintenance window. Specify the time in the HH:mmZ format. The time must be in UTC.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>maintainEndTime</td>
-        /// <td>String</td>
-        /// <td>No</td>
-        /// <td>06:00Z</td>
-        /// <td>The end time of the maintenance window. Specify the time in the HH:mmZ format. The time must be displayed in UTC.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>openMaintainTime</td>
-        /// <td>boolean</td>
-        /// <td>Yes</td>
-        /// <td>true</td>
-        /// <td>Specifies whether to enable the maintenance window feature. Only <b>true</b> is supported, indicating that the feature is enabled.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Examples:</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// <pre><c>{
-        ///     &quot;openMaintainTime&quot;: true,
-        ///     &quot;maintainStartTime&quot;: &quot;03:00Z&quot;,
-        ///     &quot;maintainEndTime&quot;: &quot;04:00Z&quot;
-        /// }
-        /// </c></pre>
+        /// <para>Enables and modifies the maintenance window of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16191,53 +16575,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <h2>RequestBody</h2>
-        /// <para>You must also specify the following parameters in the RequestBody parameter to specify the maintenance window information.  </para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Parameter</th>
-        /// <th>Type</th>
-        /// <th>Required</th>
-        /// <th>Example</th>
-        /// <th>Description</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>maintainStartTime</td>
-        /// <td>String</td>
-        /// <td>No</td>
-        /// <td>02:00Z</td>
-        /// <td>The start time of the maintenance window. Specify the time in the HH:mmZ format. The time must be in UTC.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>maintainEndTime</td>
-        /// <td>String</td>
-        /// <td>No</td>
-        /// <td>06:00Z</td>
-        /// <td>The end time of the maintenance window. Specify the time in the HH:mmZ format. The time must be displayed in UTC.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>openMaintainTime</td>
-        /// <td>boolean</td>
-        /// <td>Yes</td>
-        /// <td>true</td>
-        /// <td>Specifies whether to enable the maintenance window feature. Only <b>true</b> is supported, indicating that the feature is enabled.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Examples:</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// <pre><c>{
-        ///     &quot;openMaintainTime&quot;: true,
-        ///     &quot;maintainStartTime&quot;: &quot;03:00Z&quot;,
-        ///     &quot;maintainEndTime&quot;: &quot;04:00Z&quot;
-        /// }
-        /// </c></pre>
+        /// <para>Enables and modifies the maintenance window of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16289,53 +16627,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <h2>RequestBody</h2>
-        /// <para>You must also specify the following parameters in the RequestBody parameter to specify the maintenance window information.  </para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Parameter</th>
-        /// <th>Type</th>
-        /// <th>Required</th>
-        /// <th>Example</th>
-        /// <th>Description</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>maintainStartTime</td>
-        /// <td>String</td>
-        /// <td>No</td>
-        /// <td>02:00Z</td>
-        /// <td>The start time of the maintenance window. Specify the time in the HH:mmZ format. The time must be in UTC.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>maintainEndTime</td>
-        /// <td>String</td>
-        /// <td>No</td>
-        /// <td>06:00Z</td>
-        /// <td>The end time of the maintenance window. Specify the time in the HH:mmZ format. The time must be displayed in UTC.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>openMaintainTime</td>
-        /// <td>boolean</td>
-        /// <td>Yes</td>
-        /// <td>true</td>
-        /// <td>Specifies whether to enable the maintenance window feature. Only <b>true</b> is supported, indicating that the feature is enabled.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Examples:</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// <pre><c>{
-        ///     &quot;openMaintainTime&quot;: true,
-        ///     &quot;maintainStartTime&quot;: &quot;03:00Z&quot;,
-        ///     &quot;maintainEndTime&quot;: &quot;04:00Z&quot;
-        /// }
-        /// </c></pre>
+        /// <para>Enables and modifies the maintenance window of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16359,53 +16651,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <h2>RequestBody</h2>
-        /// <para>You must also specify the following parameters in the RequestBody parameter to specify the maintenance window information.  </para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Parameter</th>
-        /// <th>Type</th>
-        /// <th>Required</th>
-        /// <th>Example</th>
-        /// <th>Description</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>maintainStartTime</td>
-        /// <td>String</td>
-        /// <td>No</td>
-        /// <td>02:00Z</td>
-        /// <td>The start time of the maintenance window. Specify the time in the HH:mmZ format. The time must be in UTC.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>maintainEndTime</td>
-        /// <td>String</td>
-        /// <td>No</td>
-        /// <td>06:00Z</td>
-        /// <td>The end time of the maintenance window. Specify the time in the HH:mmZ format. The time must be displayed in UTC.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>openMaintainTime</td>
-        /// <td>boolean</td>
-        /// <td>Yes</td>
-        /// <td>true</td>
-        /// <td>Specifies whether to enable the maintenance window feature. Only <b>true</b> is supported, indicating that the feature is enabled.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>Examples:</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// </tbody></table>
-        /// <pre><c>{
-        ///     &quot;openMaintainTime&quot;: true,
-        ///     &quot;maintainStartTime&quot;: &quot;03:00Z&quot;,
-        ///     &quot;maintainEndTime&quot;: &quot;04:00Z&quot;
-        /// }
-        /// </c></pre>
+        /// <para>Enables and modifies the maintenance window of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16429,14 +16675,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <remarks>
-        /// <para> If you want to add an IP address whitelist, you can set the modifyMode parameter only to Cover. If you set this parameter to Delete or Append, you can only update an IP address whitelist.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If you set the modifyMode parameter to Cover and leave the ips parameter empty, the system deletes the specified whitelist. If the whitelist specified by using the groupName parameter does not exist, the system creates such a whitelist.</description></item>
-        /// <item><description>If you set the modifyMode parameter to Delete, at least one IP address must be retained for the specified whitelist.</description></item>
-        /// <item><description>If you set the modifyMode parameter to Append, you must make sure that the specified whitelist exists. Otherwise, the system reports the NotFound error.</description></item>
-        /// </list>
+        /// <para>Updates an IP address whitelist of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16509,14 +16748,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <remarks>
-        /// <para> If you want to add an IP address whitelist, you can set the modifyMode parameter only to Cover. If you set this parameter to Delete or Append, you can only update an IP address whitelist.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If you set the modifyMode parameter to Cover and leave the ips parameter empty, the system deletes the specified whitelist. If the whitelist specified by using the groupName parameter does not exist, the system creates such a whitelist.</description></item>
-        /// <item><description>If you set the modifyMode parameter to Delete, at least one IP address must be retained for the specified whitelist.</description></item>
-        /// <item><description>If you set the modifyMode parameter to Append, you must make sure that the specified whitelist exists. Otherwise, the system reports the NotFound error.</description></item>
-        /// </list>
+        /// <para>Updates an IP address whitelist of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16589,14 +16821,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <remarks>
-        /// <para> If you want to add an IP address whitelist, you can set the modifyMode parameter only to Cover. If you set this parameter to Delete or Append, you can only update an IP address whitelist.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If you set the modifyMode parameter to Cover and leave the ips parameter empty, the system deletes the specified whitelist. If the whitelist specified by using the groupName parameter does not exist, the system creates such a whitelist.</description></item>
-        /// <item><description>If you set the modifyMode parameter to Delete, at least one IP address must be retained for the specified whitelist.</description></item>
-        /// <item><description>If you set the modifyMode parameter to Append, you must make sure that the specified whitelist exists. Otherwise, the system reports the NotFound error.</description></item>
-        /// </list>
+        /// <para>Updates an IP address whitelist of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16620,14 +16845,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <remarks>
-        /// <para> If you want to add an IP address whitelist, you can set the modifyMode parameter only to Cover. If you set this parameter to Delete or Append, you can only update an IP address whitelist.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If you set the modifyMode parameter to Cover and leave the ips parameter empty, the system deletes the specified whitelist. If the whitelist specified by using the groupName parameter does not exist, the system creates such a whitelist.</description></item>
-        /// <item><description>If you set the modifyMode parameter to Delete, at least one IP address must be retained for the specified whitelist.</description></item>
-        /// <item><description>If you set the modifyMode parameter to Append, you must make sure that the specified whitelist exists. Otherwise, the system reports the NotFound error.</description></item>
-        /// </list>
+        /// <para>Updates an IP address whitelist of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16781,6 +16999,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await MoveResourceGroupWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the intelligent O\\\&amp;M feature for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// OpenDiagnosisRequest
         /// </param>
@@ -16826,6 +17049,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<OpenDiagnosisResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the intelligent O\\\&amp;M feature for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// OpenDiagnosisRequest
         /// </param>
@@ -16871,6 +17099,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<OpenDiagnosisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the intelligent O\\\&amp;M feature for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// OpenDiagnosisRequest
         /// </param>
@@ -16885,6 +17118,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return OpenDiagnosisWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the intelligent O\\\&amp;M feature for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// OpenDiagnosisRequest
         /// </param>
@@ -16899,6 +17137,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await OpenDiagnosisWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call OpenHttps to enable the HTTPS protocol. Make sure that you have purchased a client node before enabling this feature.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -16947,6 +17190,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<OpenHttpsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call OpenHttps to enable the HTTPS protocol. Make sure that you have purchased a client node before enabling this feature.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -16995,6 +17243,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<OpenHttpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call OpenHttps to enable the HTTPS protocol. Make sure that you have purchased a client node before enabling this feature.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -17016,6 +17269,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return OpenHttpsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call OpenHttps to enable the HTTPS protocol. Make sure that you have purchased a client node before enabling this feature.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -17973,7 +18231,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启Logstash集群</para>
+        /// <para>Restarts a specified Logstash cluster. After the cluster is restarted, it is in the activating state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18045,7 +18303,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启Logstash集群</para>
+        /// <para>Restarts a specified Logstash cluster. After the cluster is restarted, it is in the activating state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18117,7 +18375,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启Logstash集群</para>
+        /// <para>Restarts a specified Logstash cluster. After the cluster is restarted, it is in the activating state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18136,7 +18394,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启Logstash集群</para>
+        /// <para>Restarts a specified Logstash cluster. After the cluster is restarted, it is in the activating state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18153,6 +18411,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await RestartLogstashWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call ResumeElasticsearchTask to resume interrupted change of Elasticsearch instance. After you resume or interrupt a change, the instance enters the activating state.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResumeElasticsearchTaskRequest
         /// </param>
@@ -18194,6 +18457,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ResumeElasticsearchTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call ResumeElasticsearchTask to resume interrupted change of Elasticsearch instance. After you resume or interrupt a change, the instance enters the activating state.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResumeElasticsearchTaskRequest
         /// </param>
@@ -18235,6 +18503,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ResumeElasticsearchTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call ResumeElasticsearchTask to resume interrupted change of Elasticsearch instance. After you resume or interrupt a change, the instance enters the activating state.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResumeElasticsearchTaskRequest
         /// </param>
@@ -18249,6 +18522,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ResumeElasticsearchTaskWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call ResumeElasticsearchTask to resume interrupted change of Elasticsearch instance. After you resume or interrupt a change, the instance enters the activating state.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResumeElasticsearchTaskRequest
         /// </param>
@@ -18657,7 +18935,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ES集群缩节点</para>
+        /// <para>Removes nodes from an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18716,7 +18994,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ES集群缩节点</para>
+        /// <para>Removes nodes from an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18775,7 +19053,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ES集群缩节点</para>
+        /// <para>Removes nodes from an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18794,7 +19072,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ES集群缩节点</para>
+        /// <para>Removes nodes from an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19205,7 +19483,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The information about the clusters and tags.</para>
+        /// <para>Adds tags to clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19259,7 +19537,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The information about the clusters and tags.</para>
+        /// <para>Adds tags to clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19313,7 +19591,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The information about the clusters and tags.</para>
+        /// <para>Adds tags to clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19332,7 +19610,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The information about the clusters and tags.</para>
+        /// <para>Adds tags to clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19351,7 +19629,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缩节点，数据迁移</para>
+        /// <para>Runs a data migration task for node scaling operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19402,7 +19680,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缩节点，数据迁移</para>
+        /// <para>Runs a data migration task for node scaling operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19453,7 +19731,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缩节点，数据迁移</para>
+        /// <para>Runs a data migration task for node scaling operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19472,7 +19750,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缩节点，数据迁移</para>
+        /// <para>Runs a data migration task for node scaling operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19491,7 +19769,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开关ES集群及Kibana节点公私网访问</para>
+        /// <para>You can call this operation to enable or disable public or private network access for a Elasticsearch or Kibana cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19551,7 +19829,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开关ES集群及Kibana节点公私网访问</para>
+        /// <para>You can call this operation to enable or disable public or private network access for a Elasticsearch or Kibana cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19611,7 +19889,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开关ES集群及Kibana节点公私网访问</para>
+        /// <para>You can call this operation to enable or disable public or private network access for a Elasticsearch or Kibana cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19630,7 +19908,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开关ES集群及Kibana节点公私网访问</para>
+        /// <para>You can call this operation to enable or disable public or private network access for a Elasticsearch or Kibana cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19649,7 +19927,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可用区关机</para>
+        /// <para>Multi-zone Instance: Shutting down an existing availability zone is only for disaster recovery drills. Proceed with caution!</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19695,7 +19973,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可用区关机</para>
+        /// <para>Multi-zone Instance: Shutting down an existing availability zone is only for disaster recovery drills. Proceed with caution!</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19741,7 +20019,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可用区关机</para>
+        /// <para>Multi-zone Instance: Shutting down an existing availability zone is only for disaster recovery drills. Proceed with caution!</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19760,7 +20038,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可用区关机</para>
+        /// <para>Multi-zone Instance: Shutting down an existing availability zone is only for disaster recovery drills. Proceed with caution!</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19779,7 +20057,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可用区开机</para>
+        /// <para>Multi-zone Instance, reopening a zone that has been taken offline is only for disaster recovery drills. Please proceed with caution!</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19825,7 +20103,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可用区开机</para>
+        /// <para>Multi-zone Instance, reopening a zone that has been taken offline is only for disaster recovery drills. Please proceed with caution!</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19871,7 +20149,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可用区开机</para>
+        /// <para>Multi-zone Instance, reopening a zone that has been taken offline is only for disaster recovery drills. Please proceed with caution!</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19890,7 +20168,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可用区开机</para>
+        /// <para>Multi-zone Instance, reopening a zone that has been taken offline is only for disaster recovery drills. Please proceed with caution!</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20041,7 +20319,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载Logstash实例已安装的插件</para>
+        /// <para>Removes one or more Logstash plug-ins.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20088,7 +20366,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载Logstash实例已安装的插件</para>
+        /// <para>Removes one or more Logstash plug-ins.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20135,7 +20413,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载Logstash实例已安装的插件</para>
+        /// <para>Removes one or more Logstash plug-ins.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20154,7 +20432,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载Logstash实例已安装的插件</para>
+        /// <para>Removes one or more Logstash plug-ins.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20313,7 +20591,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ES集群实例的用户可见标签</para>
+        /// <para>Deletes a user resource tag relationship.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20387,7 +20665,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ES集群实例的用户可见标签</para>
+        /// <para>Deletes a user resource tag relationship.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20461,7 +20739,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ES集群实例的用户可见标签</para>
+        /// <para>Deletes a user resource tag relationship.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20492,7 +20770,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ES集群实例的用户可见标签</para>
+        /// <para>Deletes a user resource tag relationship.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20523,7 +20801,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改ES集群密码</para>
+        /// <para>You can call this operation to UpdateAdminPassword the password of the elastic account of the specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20580,7 +20858,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改ES集群密码</para>
+        /// <para>You can call this operation to UpdateAdminPassword the password of the elastic account of the specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20637,7 +20915,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改ES集群密码</para>
+        /// <para>You can call this operation to UpdateAdminPassword the password of the elastic account of the specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20661,7 +20939,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改ES集群密码</para>
+        /// <para>You can call this operation to UpdateAdminPassword the password of the elastic account of the specified Elasticsearch instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21545,7 +21823,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改elasticsearch实例名称名称</para>
+        /// <para>Changes the name of a specified Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21597,7 +21875,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改elasticsearch实例名称名称</para>
+        /// <para>Changes the name of a specified Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21649,7 +21927,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改elasticsearch实例名称名称</para>
+        /// <para>Changes the name of a specified Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21668,7 +21946,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改elasticsearch实例名称名称</para>
+        /// <para>Changes the name of a specified Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21687,7 +21965,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call UpdateDiagnosisSettings to update the instance of intelligent operation&amp;maintenance (O&amp;M) scene settings.</para>
+        /// <para>Call UpdateDiagnosisSettings to update the instance of intelligent operation\&amp;maintenance (O\&amp;M) scene settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21738,7 +22016,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call UpdateDiagnosisSettings to update the instance of intelligent operation&amp;maintenance (O&amp;M) scene settings.</para>
+        /// <para>Call UpdateDiagnosisSettings to update the instance of intelligent operation\&amp;maintenance (O\&amp;M) scene settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21789,7 +22067,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call UpdateDiagnosisSettings to update the instance of intelligent operation&amp;maintenance (O&amp;M) scene settings.</para>
+        /// <para>Call UpdateDiagnosisSettings to update the instance of intelligent operation\&amp;maintenance (O\&amp;M) scene settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21808,7 +22086,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call UpdateDiagnosisSettings to update the instance of intelligent operation&amp;maintenance (O&amp;M) scene settings.</para>
+        /// <para>Call UpdateDiagnosisSettings to update the instance of intelligent operation\&amp;maintenance (O\&amp;M) scene settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22407,7 +22685,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a rolling update for the IK dictionaries of an Elasticsearch cluster.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22463,7 +22741,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a rolling update for the IK dictionaries of an Elasticsearch cluster.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22519,7 +22797,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a rolling update for the IK dictionaries of an Elasticsearch cluster.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22547,7 +22825,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a rolling update for the IK dictionaries of an Elasticsearch cluster.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22839,7 +23117,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改ES集群节点配置</para>
+        /// <para>Updates the configurations of a cluster, such as the number of nodes, the number of roles, specifications, and disk configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22936,7 +23214,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改ES集群节点配置</para>
+        /// <para>Updates the configurations of a cluster, such as the number of nodes, the number of roles, specifications, and disk configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23033,7 +23311,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改ES集群节点配置</para>
+        /// <para>Updates the configurations of a cluster, such as the number of nodes, the number of roles, specifications, and disk configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23057,7 +23335,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改ES集群节点配置</para>
+        /// <para>Updates the configurations of a cluster, such as the number of nodes, the number of roles, specifications, and disk configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23081,7 +23359,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call UpdateInstanceChargeType to change the billing method of a pay-as-you-go instance to subscription.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23137,7 +23415,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call UpdateInstanceChargeType to change the billing method of a pay-as-you-go instance to subscription.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23193,7 +23471,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call UpdateInstanceChargeType to change the billing method of a pay-as-you-go instance to subscription.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23212,7 +23490,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call UpdateInstanceChargeType to change the billing method of a pay-as-you-go instance to subscription.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23913,7 +24191,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Logstash节点规格磁盘配置</para>
+        /// <para>Modifies the configuration of a specified Logstash cluster, such as the name, quota, disk size, and number of nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23969,7 +24247,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Logstash节点规格磁盘配置</para>
+        /// <para>Modifies the configuration of a specified Logstash cluster, such as the name, quota, disk size, and number of nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24025,7 +24303,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Logstash节点规格磁盘配置</para>
+        /// <para>Modifies the configuration of a specified Logstash cluster, such as the name, quota, disk size, and number of nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24044,7 +24322,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Logstash节点规格磁盘配置</para>
+        /// <para>Modifies the configuration of a specified Logstash cluster, such as the name, quota, disk size, and number of nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24357,7 +24635,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified Logstash cluster.</para>
+        /// <para>Updates the configuration of the specified Logstash instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24410,7 +24688,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified Logstash cluster.</para>
+        /// <para>Updates the configuration of the specified Logstash instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24463,7 +24741,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified Logstash cluster.</para>
+        /// <para>Updates the configuration of the specified Logstash instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24488,7 +24766,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified Logstash cluster.</para>
+        /// <para>Updates the configuration of the specified Logstash instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24513,7 +24791,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Logstash管道配置</para>
+        /// <para>Modifies the pipeline management method of the specified Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24585,7 +24863,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Logstash管道配置</para>
+        /// <para>Modifies the pipeline management method of the specified Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24657,7 +24935,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Logstash管道配置</para>
+        /// <para>Modifies the pipeline management method of the specified Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24676,7 +24954,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Logstash管道配置</para>
+        /// <para>Modifies the pipeline management method of the specified Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24835,67 +25113,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <h2>RequestBody</h2>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Property</th>
-        /// <th>Type</th>
-        /// <th>Required</th>
-        /// <th>Example</th>
-        /// <th>Description</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>privateNetworkIpWhiteList</td>
-        /// <td>List<String></td>
-        /// <td>No</td>
-        /// <td>[&quot;0.0.XX.XX&quot;,&quot;10.2.XX.XX&quot;,&quot;192.168.XX.XX/25&quot;]</td>
-        /// <td>The list of IP address whitelists. This parameter is available if whiteIpGroup is left empty. The value of this parameter updates the IP address whitelist configurations in the Default whitelist group.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>You cannot configure both privateNetworkIpWhiteList and whiteIpGroup.</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>whiteIpGroup</td>
-        /// <td>Object</td>
-        /// <td>No</td>
-        /// <td></td>
-        /// <td>You can update the whitelist configurations of an instance by using a whitelist group. You can update only one whitelist group.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>You cannot configure both privateNetworkIpWhiteList and whiteIpGroup.</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>└ groupName</td>
-        /// <td>String</td>
-        /// <td>No</td>
-        /// <td>test_group_name</td>
-        /// <td>The group name of the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>└ ips</td>
-        /// <td>List<String></td>
-        /// <td>No</td>
-        /// <td>[&quot;0.0.0.0&quot;, &quot;10.2.XX.XX&quot;]</td>
-        /// <td>The list of IP addresses in the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
-        /// </tr>
-        /// </tbody></table>
-        /// <remarks>
-        /// <para><b>Notice</b>  The addition and deletion of whitelist groups are implemented by calling modifyMode to Cover. Delete and Append cannot add or delete whitelist groups at the same time. You can only modify the IP address list in the whitelist group. Take note of the following items: - If the modifyMode parameter is set to Cover, the whitelist group is deleted if ips is empty. If groupName is not in the list of existing whitelist group names, a whitelist group is created.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If the modifyMode parameter is set to Delete, you must retain at least one IP address for the deleted ips.</description></item>
-        /// <item><description>If the modifyMode parameter is set to Append, make sure that the whitelist group name has been created. Otherwise, the NotFound error message appears.</description></item>
-        /// </list>
+        /// <para>You can call this operation to update the VPC private network access whitelist of a specified Elasticsearch instance UpdatePrivateNetworkWhiteIps.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24953,67 +25171,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <h2>RequestBody</h2>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Property</th>
-        /// <th>Type</th>
-        /// <th>Required</th>
-        /// <th>Example</th>
-        /// <th>Description</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>privateNetworkIpWhiteList</td>
-        /// <td>List<String></td>
-        /// <td>No</td>
-        /// <td>[&quot;0.0.XX.XX&quot;,&quot;10.2.XX.XX&quot;,&quot;192.168.XX.XX/25&quot;]</td>
-        /// <td>The list of IP address whitelists. This parameter is available if whiteIpGroup is left empty. The value of this parameter updates the IP address whitelist configurations in the Default whitelist group.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>You cannot configure both privateNetworkIpWhiteList and whiteIpGroup.</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>whiteIpGroup</td>
-        /// <td>Object</td>
-        /// <td>No</td>
-        /// <td></td>
-        /// <td>You can update the whitelist configurations of an instance by using a whitelist group. You can update only one whitelist group.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>You cannot configure both privateNetworkIpWhiteList and whiteIpGroup.</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>└ groupName</td>
-        /// <td>String</td>
-        /// <td>No</td>
-        /// <td>test_group_name</td>
-        /// <td>The group name of the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>└ ips</td>
-        /// <td>List<String></td>
-        /// <td>No</td>
-        /// <td>[&quot;0.0.0.0&quot;, &quot;10.2.XX.XX&quot;]</td>
-        /// <td>The list of IP addresses in the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
-        /// </tr>
-        /// </tbody></table>
-        /// <remarks>
-        /// <para><b>Notice</b>  The addition and deletion of whitelist groups are implemented by calling modifyMode to Cover. Delete and Append cannot add or delete whitelist groups at the same time. You can only modify the IP address list in the whitelist group. Take note of the following items: - If the modifyMode parameter is set to Cover, the whitelist group is deleted if ips is empty. If groupName is not in the list of existing whitelist group names, a whitelist group is created.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If the modifyMode parameter is set to Delete, you must retain at least one IP address for the deleted ips.</description></item>
-        /// <item><description>If the modifyMode parameter is set to Append, make sure that the whitelist group name has been created. Otherwise, the NotFound error message appears.</description></item>
-        /// </list>
+        /// <para>You can call this operation to update the VPC private network access whitelist of a specified Elasticsearch instance UpdatePrivateNetworkWhiteIps.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25071,67 +25229,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <h2>RequestBody</h2>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Property</th>
-        /// <th>Type</th>
-        /// <th>Required</th>
-        /// <th>Example</th>
-        /// <th>Description</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>privateNetworkIpWhiteList</td>
-        /// <td>List<String></td>
-        /// <td>No</td>
-        /// <td>[&quot;0.0.XX.XX&quot;,&quot;10.2.XX.XX&quot;,&quot;192.168.XX.XX/25&quot;]</td>
-        /// <td>The list of IP address whitelists. This parameter is available if whiteIpGroup is left empty. The value of this parameter updates the IP address whitelist configurations in the Default whitelist group.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>You cannot configure both privateNetworkIpWhiteList and whiteIpGroup.</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>whiteIpGroup</td>
-        /// <td>Object</td>
-        /// <td>No</td>
-        /// <td></td>
-        /// <td>You can update the whitelist configurations of an instance by using a whitelist group. You can update only one whitelist group.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>You cannot configure both privateNetworkIpWhiteList and whiteIpGroup.</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>└ groupName</td>
-        /// <td>String</td>
-        /// <td>No</td>
-        /// <td>test_group_name</td>
-        /// <td>The group name of the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>└ ips</td>
-        /// <td>List<String></td>
-        /// <td>No</td>
-        /// <td>[&quot;0.0.0.0&quot;, &quot;10.2.XX.XX&quot;]</td>
-        /// <td>The list of IP addresses in the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
-        /// </tr>
-        /// </tbody></table>
-        /// <remarks>
-        /// <para><b>Notice</b>  The addition and deletion of whitelist groups are implemented by calling modifyMode to Cover. Delete and Append cannot add or delete whitelist groups at the same time. You can only modify the IP address list in the whitelist group. Take note of the following items: - If the modifyMode parameter is set to Cover, the whitelist group is deleted if ips is empty. If groupName is not in the list of existing whitelist group names, a whitelist group is created.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If the modifyMode parameter is set to Delete, you must retain at least one IP address for the deleted ips.</description></item>
-        /// <item><description>If the modifyMode parameter is set to Append, make sure that the whitelist group name has been created. Otherwise, the NotFound error message appears.</description></item>
-        /// </list>
+        /// <para>You can call this operation to update the VPC private network access whitelist of a specified Elasticsearch instance UpdatePrivateNetworkWhiteIps.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25157,67 +25255,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <h2>RequestBody</h2>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Property</th>
-        /// <th>Type</th>
-        /// <th>Required</th>
-        /// <th>Example</th>
-        /// <th>Description</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>privateNetworkIpWhiteList</td>
-        /// <td>List<String></td>
-        /// <td>No</td>
-        /// <td>[&quot;0.0.XX.XX&quot;,&quot;10.2.XX.XX&quot;,&quot;192.168.XX.XX/25&quot;]</td>
-        /// <td>The list of IP address whitelists. This parameter is available if whiteIpGroup is left empty. The value of this parameter updates the IP address whitelist configurations in the Default whitelist group.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>You cannot configure both privateNetworkIpWhiteList and whiteIpGroup.</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>whiteIpGroup</td>
-        /// <td>Object</td>
-        /// <td>No</td>
-        /// <td></td>
-        /// <td>You can update the whitelist configurations of an instance by using a whitelist group. You can update only one whitelist group.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>You cannot configure both privateNetworkIpWhiteList and whiteIpGroup.</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>└ groupName</td>
-        /// <td>String</td>
-        /// <td>No</td>
-        /// <td>test_group_name</td>
-        /// <td>The group name of the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>└ ips</td>
-        /// <td>List<String></td>
-        /// <td>No</td>
-        /// <td>[&quot;0.0.0.0&quot;, &quot;10.2.XX.XX&quot;]</td>
-        /// <td>The list of IP addresses in the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
-        /// </tr>
-        /// </tbody></table>
-        /// <remarks>
-        /// <para><b>Notice</b>  The addition and deletion of whitelist groups are implemented by calling modifyMode to Cover. Delete and Append cannot add or delete whitelist groups at the same time. You can only modify the IP address list in the whitelist group. Take note of the following items: - If the modifyMode parameter is set to Cover, the whitelist group is deleted if ips is empty. If groupName is not in the list of existing whitelist group names, a whitelist group is created.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If the modifyMode parameter is set to Delete, you must retain at least one IP address for the deleted ips.</description></item>
-        /// <item><description>If the modifyMode parameter is set to Append, make sure that the whitelist group name has been created. Otherwise, the NotFound error message appears.</description></item>
-        /// </list>
+        /// <para>You can call this operation to update the VPC private network access whitelist of a specified Elasticsearch instance UpdatePrivateNetworkWhiteIps.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25243,7 +25281,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call UpdatePublicNetwork to open or close the public network address of the specified elasticsearch instance.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25296,7 +25334,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call UpdatePublicNetwork to open or close the public network address of the specified elasticsearch instance.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25349,7 +25387,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call UpdatePublicNetwork to open or close the public network address of the specified elasticsearch instance.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25374,7 +25412,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call UpdatePublicNetwork to open or close the public network address of the specified elasticsearch instance.</para>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25399,67 +25437,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <h2>RequestBody</h2>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Property</th>
-        /// <th>Type</th>
-        /// <th>Required</th>
-        /// <th>Example</th>
-        /// <th>Description</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>publicIpWhitelist</td>
-        /// <td>List<String></td>
-        /// <td>Yes</td>
-        /// <td>[&quot;0.0.0.0/0&quot;,&quot;0.0.0.0/1&quot;]</td>
-        /// <td>The list of IP address whitelists. This parameter is available if whiteIpGroup is left empty. The value of this parameter updates the IP address whitelist configurations in the Default whitelist group.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>You cannot configure both publicIpWhitelist and whiteIpGroup.</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>whiteIpGroup</td>
-        /// <td>Object</td>
-        /// <td>No</td>
-        /// <td></td>
-        /// <td>You can update the whitelist configurations of an instance by using a whitelist group. You can update only one whitelist group.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>You cannot configure both publicIpWhitelist and whiteIpGroup.</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>└ groupName</td>
-        /// <td>String</td>
-        /// <td>No</td>
-        /// <td>test_group_name</td>
-        /// <td>The group name of the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>└ ips</td>
-        /// <td>List<String></td>
-        /// <td>No</td>
-        /// <td>[&quot;0.0.0.0&quot;, &quot;10.2.XX.XX&quot;]</td>
-        /// <td>The list of IP addresses in the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
-        /// </tr>
-        /// </tbody></table>
-        /// <remarks>
-        /// <para><b>Notice</b>  The addition and deletion of whitelist groups are implemented by calling modifyMode to Cover. Delete and Append cannot add or delete whitelist groups at the same time. You can only modify the IP address list in the whitelist group. Take note of the following items: - If the modifyMode parameter is set to Cover, the whitelist group is deleted if ips is empty. If groupName is not in the list of existing whitelist group names, a whitelist group is created.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If the modifyMode parameter is set to Delete, you must retain at least one IP address for the deleted ips.</description></item>
-        /// <item><description>If the modifyMode parameter is set to Append, make sure that the whitelist group name has been created. Otherwise, the NotFound error message appears.</description></item>
-        /// </list>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25517,67 +25495,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <h2>RequestBody</h2>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Property</th>
-        /// <th>Type</th>
-        /// <th>Required</th>
-        /// <th>Example</th>
-        /// <th>Description</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>publicIpWhitelist</td>
-        /// <td>List<String></td>
-        /// <td>Yes</td>
-        /// <td>[&quot;0.0.0.0/0&quot;,&quot;0.0.0.0/1&quot;]</td>
-        /// <td>The list of IP address whitelists. This parameter is available if whiteIpGroup is left empty. The value of this parameter updates the IP address whitelist configurations in the Default whitelist group.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>You cannot configure both publicIpWhitelist and whiteIpGroup.</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>whiteIpGroup</td>
-        /// <td>Object</td>
-        /// <td>No</td>
-        /// <td></td>
-        /// <td>You can update the whitelist configurations of an instance by using a whitelist group. You can update only one whitelist group.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>You cannot configure both publicIpWhitelist and whiteIpGroup.</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>└ groupName</td>
-        /// <td>String</td>
-        /// <td>No</td>
-        /// <td>test_group_name</td>
-        /// <td>The group name of the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>└ ips</td>
-        /// <td>List<String></td>
-        /// <td>No</td>
-        /// <td>[&quot;0.0.0.0&quot;, &quot;10.2.XX.XX&quot;]</td>
-        /// <td>The list of IP addresses in the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
-        /// </tr>
-        /// </tbody></table>
-        /// <remarks>
-        /// <para><b>Notice</b>  The addition and deletion of whitelist groups are implemented by calling modifyMode to Cover. Delete and Append cannot add or delete whitelist groups at the same time. You can only modify the IP address list in the whitelist group. Take note of the following items: - If the modifyMode parameter is set to Cover, the whitelist group is deleted if ips is empty. If groupName is not in the list of existing whitelist group names, a whitelist group is created.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If the modifyMode parameter is set to Delete, you must retain at least one IP address for the deleted ips.</description></item>
-        /// <item><description>If the modifyMode parameter is set to Append, make sure that the whitelist group name has been created. Otherwise, the NotFound error message appears.</description></item>
-        /// </list>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25635,67 +25553,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <h2>RequestBody</h2>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Property</th>
-        /// <th>Type</th>
-        /// <th>Required</th>
-        /// <th>Example</th>
-        /// <th>Description</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>publicIpWhitelist</td>
-        /// <td>List<String></td>
-        /// <td>Yes</td>
-        /// <td>[&quot;0.0.0.0/0&quot;,&quot;0.0.0.0/1&quot;]</td>
-        /// <td>The list of IP address whitelists. This parameter is available if whiteIpGroup is left empty. The value of this parameter updates the IP address whitelist configurations in the Default whitelist group.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>You cannot configure both publicIpWhitelist and whiteIpGroup.</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>whiteIpGroup</td>
-        /// <td>Object</td>
-        /// <td>No</td>
-        /// <td></td>
-        /// <td>You can update the whitelist configurations of an instance by using a whitelist group. You can update only one whitelist group.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>You cannot configure both publicIpWhitelist and whiteIpGroup.</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>└ groupName</td>
-        /// <td>String</td>
-        /// <td>No</td>
-        /// <td>test_group_name</td>
-        /// <td>The group name of the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>└ ips</td>
-        /// <td>List<String></td>
-        /// <td>No</td>
-        /// <td>[&quot;0.0.0.0&quot;, &quot;10.2.XX.XX&quot;]</td>
-        /// <td>The list of IP addresses in the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
-        /// </tr>
-        /// </tbody></table>
-        /// <remarks>
-        /// <para><b>Notice</b>  The addition and deletion of whitelist groups are implemented by calling modifyMode to Cover. Delete and Append cannot add or delete whitelist groups at the same time. You can only modify the IP address list in the whitelist group. Take note of the following items: - If the modifyMode parameter is set to Cover, the whitelist group is deleted if ips is empty. If groupName is not in the list of existing whitelist group names, a whitelist group is created.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If the modifyMode parameter is set to Delete, you must retain at least one IP address for the deleted ips.</description></item>
-        /// <item><description>If the modifyMode parameter is set to Append, make sure that the whitelist group name has been created. Otherwise, the NotFound error message appears.</description></item>
-        /// </list>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25721,67 +25579,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <h2>RequestBody</h2>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th>Property</th>
-        /// <th>Type</th>
-        /// <th>Required</th>
-        /// <th>Example</th>
-        /// <th>Description</th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td>publicIpWhitelist</td>
-        /// <td>List<String></td>
-        /// <td>Yes</td>
-        /// <td>[&quot;0.0.0.0/0&quot;,&quot;0.0.0.0/1&quot;]</td>
-        /// <td>The list of IP address whitelists. This parameter is available if whiteIpGroup is left empty. The value of this parameter updates the IP address whitelist configurations in the Default whitelist group.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>You cannot configure both publicIpWhitelist and whiteIpGroup.</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>whiteIpGroup</td>
-        /// <td>Object</td>
-        /// <td>No</td>
-        /// <td></td>
-        /// <td>You can update the whitelist configurations of an instance by using a whitelist group. You can update only one whitelist group.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>You cannot configure both publicIpWhitelist and whiteIpGroup.</td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>└ groupName</td>
-        /// <td>String</td>
-        /// <td>No</td>
-        /// <td>test_group_name</td>
-        /// <td>The group name of the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
-        /// </tr>
-        /// <tr>
-        /// <td>└ ips</td>
-        /// <td>List<String></td>
-        /// <td>No</td>
-        /// <td>[&quot;0.0.0.0&quot;, &quot;10.2.XX.XX&quot;]</td>
-        /// <td>The list of IP addresses in the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
-        /// </tr>
-        /// </tbody></table>
-        /// <remarks>
-        /// <para><b>Notice</b>  The addition and deletion of whitelist groups are implemented by calling modifyMode to Cover. Delete and Append cannot add or delete whitelist groups at the same time. You can only modify the IP address list in the whitelist group. Take note of the following items: - If the modifyMode parameter is set to Cover, the whitelist group is deleted if ips is empty. If groupName is not in the list of existing whitelist group names, a whitelist group is created.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If the modifyMode parameter is set to Delete, you must retain at least one IP address for the deleted ips.</description></item>
-        /// <item><description>If the modifyMode parameter is set to Append, make sure that the whitelist group name has been created. Otherwise, the NotFound error message appears.</description></item>
-        /// </list>
+        /// <para>null</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26339,14 +26137,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <remarks>
-        /// <para> If you want to add an IP address whitelist, you can set the modifyMode parameter only to Cover. If you set this parameter to Delete or Append, you can only update an IP address whitelist.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If you set the modifyMode parameter to Cover and leave the ips parameter empty, the system deletes the specified whitelist. If the whitelist specified by using the groupName parameter does not exist, the system creates such a whitelist.</description></item>
-        /// <item><description>If you set the modifyMode parameter to Delete, at least one IP address must be retained for the specified whitelist.</description></item>
-        /// <item><description>If you set the modifyMode parameter to Append, you must make sure that the specified whitelist exists. Otherwise, the system reports the NotFound error.</description></item>
-        /// </list>
+        /// <para>Updates a private IP address whitelist of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26413,14 +26204,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <remarks>
-        /// <para> If you want to add an IP address whitelist, you can set the modifyMode parameter only to Cover. If you set this parameter to Delete or Append, you can only update an IP address whitelist.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If you set the modifyMode parameter to Cover and leave the ips parameter empty, the system deletes the specified whitelist. If the whitelist specified by using the groupName parameter does not exist, the system creates such a whitelist.</description></item>
-        /// <item><description>If you set the modifyMode parameter to Delete, at least one IP address must be retained for the specified whitelist.</description></item>
-        /// <item><description>If you set the modifyMode parameter to Append, you must make sure that the specified whitelist exists. Otherwise, the system reports the NotFound error.</description></item>
-        /// </list>
+        /// <para>Updates a private IP address whitelist of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26487,14 +26271,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <remarks>
-        /// <para> If you want to add an IP address whitelist, you can set the modifyMode parameter only to Cover. If you set this parameter to Delete or Append, you can only update an IP address whitelist.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If you set the modifyMode parameter to Cover and leave the ips parameter empty, the system deletes the specified whitelist. If the whitelist specified by using the groupName parameter does not exist, the system creates such a whitelist.</description></item>
-        /// <item><description>If you set the modifyMode parameter to Delete, at least one IP address must be retained for the specified whitelist.</description></item>
-        /// <item><description>If you set the modifyMode parameter to Append, you must make sure that the specified whitelist exists. Otherwise, the system reports the NotFound error.</description></item>
-        /// </list>
+        /// <para>Updates a private IP address whitelist of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26520,14 +26297,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <remarks>
-        /// <para> If you want to add an IP address whitelist, you can set the modifyMode parameter only to Cover. If you set this parameter to Delete or Append, you can only update an IP address whitelist.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If you set the modifyMode parameter to Cover and leave the ips parameter empty, the system deletes the specified whitelist. If the whitelist specified by using the groupName parameter does not exist, the system creates such a whitelist.</description></item>
-        /// <item><description>If you set the modifyMode parameter to Delete, at least one IP address must be retained for the specified whitelist.</description></item>
-        /// <item><description>If you set the modifyMode parameter to Append, you must make sure that the specified whitelist exists. Otherwise, the system reports the NotFound error.</description></item>
-        /// </list>
+        /// <para>Updates a private IP address whitelist of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26553,7 +26323,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Logstash实例的X-Pack监控报警配置。</para>
+        /// <para>Updates the X-Pack monitoring and alert configuration of a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26617,7 +26387,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Logstash实例的X-Pack监控报警配置。</para>
+        /// <para>Updates the X-Pack monitoring and alert configuration of a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26681,7 +26451,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Logstash实例的X-Pack监控报警配置。</para>
+        /// <para>Updates the X-Pack monitoring and alert configuration of a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26700,7 +26470,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Logstash实例的X-Pack监控报警配置。</para>
+        /// <para>Updates the X-Pack monitoring and alert configuration of a Logstash cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26719,7 +26489,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ES集群版本升级</para>
+        /// <para>Upgrades the version or kernel of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26792,7 +26562,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ES集群版本升级</para>
+        /// <para>Upgrades the version or kernel of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26865,7 +26635,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ES集群版本升级</para>
+        /// <para>Upgrades the version or kernel of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26889,7 +26659,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ES集群版本升级</para>
+        /// <para>Upgrades the version or kernel of an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27073,7 +26843,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验缩节点合法性</para>
+        /// <para>Checks whether specific nodes can be removed from a specified Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27128,7 +26898,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验缩节点合法性</para>
+        /// <para>Checks whether specific nodes can be removed from a specified Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27183,7 +26953,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验缩节点合法性</para>
+        /// <para>Checks whether specific nodes can be removed from a specified Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27202,7 +26972,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验缩节点合法性</para>
+        /// <para>Checks whether specific nodes can be removed from a specified Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27219,6 +26989,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ValidateShrinkNodesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verify the SLR permissions of the current account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ValidateSlrPermissionRequest
         /// </param>
@@ -27264,6 +27039,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ValidateSlrPermissionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verify the SLR permissions of the current account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ValidateSlrPermissionRequest
         /// </param>
@@ -27309,6 +27089,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ValidateSlrPermissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verify the SLR permissions of the current account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ValidateSlrPermissionRequest
         /// </param>
@@ -27323,6 +27108,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ValidateSlrPermissionWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verify the SLR permissions of the current account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ValidateSlrPermissionRequest
         /// </param>
@@ -27339,7 +27129,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缩节点校验数据迁移合法性</para>
+        /// <para>Checks whether the data on specific nodes in a specified Elasticsearch cluster can be migrated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27386,7 +27176,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缩节点校验数据迁移合法性</para>
+        /// <para>Checks whether the data on specific nodes in a specified Elasticsearch cluster can be migrated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27433,7 +27223,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缩节点校验数据迁移合法性</para>
+        /// <para>Checks whether the data on specific nodes in a specified Elasticsearch cluster can be migrated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27452,7 +27242,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缩节点校验数据迁移合法性</para>
+        /// <para>Checks whether the data on specific nodes in a specified Elasticsearch cluster can be migrated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27471,7 +27261,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The configurations of dedicated master nodes.</para>
+        /// <para>Creates an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27592,7 +27382,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The configurations of dedicated master nodes.</para>
+        /// <para>Creates an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27713,7 +27503,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The configurations of dedicated master nodes.</para>
+        /// <para>Creates an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27737,7 +27527,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The configurations of dedicated master nodes.</para>
+        /// <para>Creates an Elasticsearch cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

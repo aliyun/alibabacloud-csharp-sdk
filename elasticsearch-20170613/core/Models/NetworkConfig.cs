@@ -39,18 +39,34 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string LoadBalanceType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>vpc</para>
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>vpc-bp1xk0naij7jx4ph1****</para>
+        /// </summary>
         [NameInMap("vpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-e</para>
+        /// </summary>
         [NameInMap("vsArea")]
         [Validation(Required=false)]
         public string VsArea { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>vsw-bp1ogpdintii5qvyx****</para>
+        /// </summary>
         [NameInMap("vswitchId")]
         [Validation(Required=false)]
         public string VswitchId { get; set; }
