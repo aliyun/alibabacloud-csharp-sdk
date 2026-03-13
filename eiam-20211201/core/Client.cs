@@ -18795,6 +18795,142 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>生成WebAuthn认证器注册URL</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateWebAuthnAuthenticatorRegistrationUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateWebAuthnAuthenticatorRegistrationUrlResponse
+        /// </returns>
+        public GenerateWebAuthnAuthenticatorRegistrationUrlResponse GenerateWebAuthnAuthenticatorRegistrationUrlWithOptions(GenerateWebAuthnAuthenticatorRegistrationUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainId))
+            {
+                query["DomainId"] = request.DomainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateWebAuthnAuthenticatorRegistrationUrl",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateWebAuthnAuthenticatorRegistrationUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成WebAuthn认证器注册URL</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateWebAuthnAuthenticatorRegistrationUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateWebAuthnAuthenticatorRegistrationUrlResponse
+        /// </returns>
+        public async Task<GenerateWebAuthnAuthenticatorRegistrationUrlResponse> GenerateWebAuthnAuthenticatorRegistrationUrlWithOptionsAsync(GenerateWebAuthnAuthenticatorRegistrationUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainId))
+            {
+                query["DomainId"] = request.DomainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateWebAuthnAuthenticatorRegistrationUrl",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateWebAuthnAuthenticatorRegistrationUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成WebAuthn认证器注册URL</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateWebAuthnAuthenticatorRegistrationUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateWebAuthnAuthenticatorRegistrationUrlResponse
+        /// </returns>
+        public GenerateWebAuthnAuthenticatorRegistrationUrlResponse GenerateWebAuthnAuthenticatorRegistrationUrl(GenerateWebAuthnAuthenticatorRegistrationUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GenerateWebAuthnAuthenticatorRegistrationUrlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成WebAuthn认证器注册URL</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateWebAuthnAuthenticatorRegistrationUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateWebAuthnAuthenticatorRegistrationUrlResponse
+        /// </returns>
+        public async Task<GenerateWebAuthnAuthenticatorRegistrationUrlResponse> GenerateWebAuthnAuthenticatorRegistrationUrlAsync(GenerateWebAuthnAuthenticatorRegistrationUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GenerateWebAuthnAuthenticatorRegistrationUrlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of an Employee Identity and Access Management (EIAM) application.</para>
         /// </summary>
         /// 
@@ -29508,6 +29644,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["CredentialIds"] = request.CredentialIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialTypes))
+            {
+                query["CredentialTypes"] = request.CredentialTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
                 query["Filter"] = request.Filter;
@@ -29569,6 +29709,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialIds))
             {
                 query["CredentialIds"] = request.CredentialIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialTypes))
+            {
+                query["CredentialTypes"] = request.CredentialTypes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {

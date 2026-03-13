@@ -1,3 +1,8 @@
+2026-03-13 Version: 1.22.0
+- Support API GenerateWebAuthnAuthenticatorRegistrationUrl.
+- Update API ListCredentials: add request parameters CredentialTypes.
+
+
 2026-02-28 Version: 1.21.2
 - Update API GetPasswordComplexityConfiguration: add response parameters Body.PasswordComplexityConfiguration.DisabledWeakPasswordLogin.
 - Update API GetPasswordComplexityConfiguration: add response parameters Body.PasswordComplexityConfiguration.DisabledWeakPasswordLoginStartedAt.

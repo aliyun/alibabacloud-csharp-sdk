@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public List<string> CredentialIds { get; set; }
 
+        [NameInMap("CredentialTypes")]
+        [Validation(Required=false)]
+        public List<string> CredentialTypes { get; set; }
+
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<ListCredentialsRequestFilter> Filter { get; set; }
