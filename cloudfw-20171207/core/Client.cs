@@ -19766,7 +19766,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>概览页-NAT流量趋势</para>
+        /// <para>Queries the traffic trend of NAT gateways.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19804,7 +19804,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>概览页-NAT流量趋势</para>
+        /// <para>Queries the traffic trend of NAT gateways.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19842,7 +19842,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>概览页-NAT流量趋势</para>
+        /// <para>Queries the traffic trend of NAT gateways.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19860,7 +19860,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>概览页-NAT流量趋势</para>
+        /// <para>Queries the traffic trend of NAT gateways.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27462,7 +27462,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取正向代理</para>
+        /// <para>Queries information about NAT firewalls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27550,7 +27550,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取正向代理</para>
+        /// <para>Queries information about NAT firewalls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27638,7 +27638,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取正向代理</para>
+        /// <para>Queries information about NAT firewalls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27662,7 +27662,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取正向代理</para>
+        /// <para>Queries information about NAT firewalls.</para>
         /// </summary>
         /// 
         /// <param name="request">

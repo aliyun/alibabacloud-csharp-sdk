@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAssetStatisticResponseBody : TeaModel {
+        [NameInMap("AutoResourceEnable")]
+        [Validation(Required=false)]
+        public bool? AutoResourceEnable { get; set; }
+
         [NameInMap("GeneralInstanceSpecStatistic")]
         [Validation(Required=false)]
         public DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatistic GeneralInstanceSpecStatistic { get; set; }
