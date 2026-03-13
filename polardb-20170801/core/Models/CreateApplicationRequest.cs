@@ -189,6 +189,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string EmbedderModel { get; set; }
 
+            [NameInMap("EmbedderModelDimension")]
+            [Validation(Required=false)]
+            public int? EmbedderModelDimension { get; set; }
+
+            [NameInMap("GraphLlmModel")]
+            [Validation(Required=false)]
+            public string GraphLlmModel { get; set; }
+
             [NameInMap("LlmModel")]
             [Validation(Required=false)]
             public string LlmModel { get; set; }
@@ -200,6 +208,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [NameInMap("RerankerModel")]
             [Validation(Required=false)]
             public string RerankerModel { get; set; }
+
+            [NameInMap("Shard")]
+            [Validation(Required=false)]
+            public int? Shard { get; set; }
 
         }
 
