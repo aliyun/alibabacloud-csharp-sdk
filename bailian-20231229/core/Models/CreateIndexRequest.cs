@@ -30,26 +30,71 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public int? ChunkSize { get; set; }
 
+        /// <summary>
+        /// <remarks>
+        /// <para>This parameter is not available. Do not specify this parameter.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("Columns")]
         [Validation(Required=false)]
         public List<CreateIndexRequestColumns> Columns { get; set; }
         public class CreateIndexRequestColumns : TeaModel {
+            /// <summary>
+            /// <remarks>
+            /// <para>This parameter is not available. Do not specify this parameter.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>source_column_name1</para>
+            /// </summary>
             [NameInMap("Column")]
             [Validation(Required=false)]
             public string Column { get; set; }
 
+            /// <summary>
+            /// <remarks>
+            /// <para>This parameter is not available. Do not specify this parameter.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("IsRecall")]
             [Validation(Required=false)]
             public bool? IsRecall { get; set; }
 
+            /// <summary>
+            /// <remarks>
+            /// <para>This parameter is not available. Do not specify this parameter.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("IsSearch")]
             [Validation(Required=false)]
             public bool? IsSearch { get; set; }
 
+            /// <summary>
+            /// <remarks>
+            /// <para>This parameter is not available. Do not specify this parameter.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>index_column_name1</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <remarks>
+            /// <para>This parameter is not available. Do not specify this parameter.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>string</para>
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -363,6 +408,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public List<string> TableIds { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>connector</para>
+        /// </summary>
+        [NameInMap("channelType")]
+        [Validation(Required=false)]
+        public string ChannelType { get; set; }
+
+        /// <summary>
         /// <remarks>
         /// <para>This parameter is not available. Do not specify this parameter.</para>
         /// </remarks>
@@ -374,6 +427,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string ChunkMode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>conn_mysql_xxx_xxx</para>
+        /// </summary>
         [NameInMap("connectId")]
         [Validation(Required=false)]
         public string ConnectId { get; set; }

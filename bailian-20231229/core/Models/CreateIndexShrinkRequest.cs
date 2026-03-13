@@ -30,6 +30,11 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public int? ChunkSize { get; set; }
 
+        /// <summary>
+        /// <remarks>
+        /// <para>This parameter is not available. Do not specify this parameter.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("Columns")]
         [Validation(Required=false)]
         public string ColumnsShrink { get; set; }
@@ -249,6 +254,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string TableIdsShrink { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>connector</para>
+        /// </summary>
+        [NameInMap("channelType")]
+        [Validation(Required=false)]
+        public string ChannelType { get; set; }
+
+        /// <summary>
         /// <remarks>
         /// <para>This parameter is not available. Do not specify this parameter.</para>
         /// </remarks>
@@ -260,6 +273,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string ChunkMode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>conn_mysql_xxx_xxx</para>
+        /// </summary>
         [NameInMap("connectId")]
         [Validation(Required=false)]
         public string ConnectId { get; set; }

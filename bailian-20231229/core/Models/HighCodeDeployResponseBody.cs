@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
     public class HighCodeDeployResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>{&quot;key&quot;: &quot;value&quot;}</para>
+        /// <para>{\&quot;key\&quot;: \&quot;value\&quot;}</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]

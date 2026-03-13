@@ -661,7 +661,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a document upload lease to upload a document.</para>
+        /// <para>Applies for a document upload lease to upload a document. You cannot use the API to upload structured documents. Use the console instead.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -733,7 +733,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a document upload lease to upload a document.</para>
+        /// <para>Applies for a document upload lease to upload a document. You cannot use the API to upload structured documents. Use the console instead.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -805,7 +805,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a document upload lease to upload a document.</para>
+        /// <para>Applies for a document upload lease to upload a document. You cannot use the API to upload structured documents. Use the console instead.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -834,7 +834,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a document upload lease to upload a document.</para>
+        /// <para>Applies for a document upload lease to upload a document. You cannot use the API to upload structured documents. Use the console instead.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1511,6 +1511,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 query["TableIds"] = request.TableIdsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
+            {
+                query["channelType"] = request.ChannelType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChunkMode))
             {
                 query["chunkMode"] = request.ChunkMode;
@@ -1718,6 +1722,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdsShrink))
             {
                 query["TableIds"] = request.TableIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
+            {
+                query["channelType"] = request.ChannelType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChunkMode))
             {
@@ -2355,7 +2363,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除类目</para>
+        /// <para>Deletes a specified category permanently.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2391,7 +2399,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除类目</para>
+        /// <para>Deletes a specified category permanently.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2427,7 +2435,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除类目</para>
+        /// <para>Deletes a specified category permanently.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2442,7 +2450,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除类目</para>
+        /// <para>Deletes a specified category permanently.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2671,7 +2679,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除文档</para>
+        /// <para>Deletes a specified unstructured document permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2707,7 +2715,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除文档</para>
+        /// <para>Deletes a specified unstructured document permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2743,7 +2751,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除文档</para>
+        /// <para>Deletes a specified unstructured document permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2758,7 +2766,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除文档</para>
+        /// <para>Deletes a specified unstructured document permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2947,7 +2955,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more documents from a specified unstructured knowledge base permanently.</para>
+        /// <para>Deletes one or more documents from a specified unstructured knowledge base permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3014,7 +3022,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more documents from a specified unstructured knowledge base permanently.</para>
+        /// <para>Deletes one or more documents from a specified unstructured knowledge base permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3081,7 +3089,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more documents from a specified unstructured knowledge base permanently.</para>
+        /// <para>Deletes one or more documents from a specified unstructured knowledge base permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3111,7 +3119,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more documents from a specified unstructured knowledge base permanently.</para>
+        /// <para>Deletes one or more documents from a specified unstructured knowledge base permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3447,7 +3455,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an unstructured document.</para>
+        /// <para>Obtains the basic information of a document, including the document name, type, and status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3493,7 +3501,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an unstructured document.</para>
+        /// <para>Obtains the basic information of a document, including the document name, type, and status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3539,7 +3547,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an unstructured document.</para>
+        /// <para>Obtains the basic information of a document, including the document name, type, and status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3564,7 +3572,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an unstructured document.</para>
+        /// <para>Obtains the basic information of a document, including the document name, type, and status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4185,7 +4193,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取索引监控情况</para>
+        /// <para>\&lt;props=&quot;intl&quot;&gt;Currently, this API is not supported.\</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4239,7 +4247,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取索引监控情况</para>
+        /// <para>\&lt;props=&quot;intl&quot;&gt;Currently, this API is not supported.\</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4293,7 +4301,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取索引监控情况</para>
+        /// <para>\&lt;props=&quot;intl&quot;&gt;Currently, this API is not supported.\</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4312,7 +4320,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取索引监控情况</para>
+        /// <para>\&lt;props=&quot;intl&quot;&gt;Currently, this API is not supported.\</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5039,7 +5047,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListCategory</para>
+        /// <para>Lists the details about the next or multiple categories in a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5101,7 +5109,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListCategory</para>
+        /// <para>Lists the details about the next or multiple categories in a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5163,7 +5171,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListCategory</para>
+        /// <para>Lists the details about the next or multiple categories in a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5182,7 +5190,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListCategory</para>
+        /// <para>Lists the details about the next or multiple categories in a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5969,7 +5977,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists knowledge bases in a specified workspace.</para>
+        /// <para>Lists the details about the next or multiple knowledge bases in a specified workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6028,7 +6036,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists knowledge bases in a specified workspace.</para>
+        /// <para>Lists the details about the next or multiple knowledge bases in a specified workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6087,7 +6095,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists knowledge bases in a specified workspace.</para>
+        /// <para>Lists the details about the next or multiple knowledge bases in a specified workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6111,7 +6119,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists knowledge bases in a specified workspace.</para>
+        /// <para>Lists the details about the next or multiple knowledge bases in a specified workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7017,7 +7025,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds parsed documents to an unstructured knowledge base.</para>
+        /// <para>Adds parsed documents to an unstructured knowledge base. You cannot use the API to add knowledge to structured knowledge bases, see the Usage notes section of this topic.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7115,7 +7123,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds parsed documents to an unstructured knowledge base.</para>
+        /// <para>Adds parsed documents to an unstructured knowledge base. You cannot use the API to add knowledge to structured knowledge bases, see the Usage notes section of this topic.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7213,7 +7221,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds parsed documents to an unstructured knowledge base.</para>
+        /// <para>Adds parsed documents to an unstructured knowledge base. You cannot use the API to add knowledge to structured knowledge bases, see the Usage notes section of this topic.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7242,7 +7250,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds parsed documents to an unstructured knowledge base.</para>
+        /// <para>Adds parsed documents to an unstructured knowledge base. You cannot use the API to add knowledge to structured knowledge bases, see the Usage notes section of this topic.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8039,7 +8047,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新文档Tag</para>
+        /// <para>Updates the tags of a specified document.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8091,7 +8099,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新文档Tag</para>
+        /// <para>Updates the tags of a specified document.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8143,7 +8151,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新文档Tag</para>
+        /// <para>Updates the tags of a specified document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8162,7 +8170,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新文档Tag</para>
+        /// <para>Updates the tags of a specified document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8181,7 +8189,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新索引任务</para>
+        /// <para>\&lt;props=&quot;intl&quot;&gt;Currently, this API is not supported.\</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8255,7 +8263,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新索引任务</para>
+        /// <para>\&lt;props=&quot;intl&quot;&gt;Currently, this API is not supported.\</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8329,7 +8337,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新索引任务</para>
+        /// <para>\&lt;props=&quot;intl&quot;&gt;Currently, this API is not supported.\</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8348,7 +8356,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新索引任务</para>
+        /// <para>\&lt;props=&quot;intl&quot;&gt;Currently, this API is not supported.\</para>
         /// </summary>
         /// 
         /// <param name="request">
