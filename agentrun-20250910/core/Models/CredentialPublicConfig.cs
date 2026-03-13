@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string HeaderKey { get; set; }
 
+        [NameInMap("jwks")]
+        [Validation(Required=false)]
+        public string Jwks { get; set; }
+
+        [NameInMap("prefix")]
+        [Validation(Required=false)]
+        public string Prefix { get; set; }
+
         [NameInMap("provider")]
         [Validation(Required=false)]
         public string Provider { get; set; }

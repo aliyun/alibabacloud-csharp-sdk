@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
         [NameInMap("credentialPublicConfig")]
         [Validation(Required=false)]
-        public Dictionary<string, string> CredentialPublicConfig { get; set; }
+        public CredentialPublicConfig CredentialPublicConfig { get; set; }
 
         [NameInMap("credentialSecret")]
         [Validation(Required=false)]

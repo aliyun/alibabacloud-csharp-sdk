@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string CredentialSourceType { get; set; }
 
+        [NameInMap("description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("enabled")]
         [Validation(Required=false)]
         public bool? Enabled { get; set; }
