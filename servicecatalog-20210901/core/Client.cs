@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将产品组合授权给某个RAM实体</para>
+        /// <para>Grants a Resource Access Management (RAM) user or RAM role that belongs to the current Alibaba Cloud account the permissions to access a product portfolio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将产品组合授权给某个RAM实体</para>
+        /// <para>Grants a Resource Access Management (RAM) user or RAM role that belongs to the current Alibaba Cloud account the permissions to access a product portfolio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将产品组合授权给某个RAM实体</para>
+        /// <para>Grants a Resource Access Management (RAM) user or RAM role that belongs to the current Alibaba Cloud account the permissions to access a product portfolio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -301,7 +301,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将产品组合授权给某个RAM实体</para>
+        /// <para>Grants a Resource Access Management (RAM) user or RAM role that belongs to the current Alibaba Cloud account the permissions to access a product portfolio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4703,7 +4703,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>Queries product portfolios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4769,7 +4769,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>Queries product portfolios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4835,7 +4835,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>Queries product portfolios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4853,7 +4853,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>Queries product portfolios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6229,7 +6229,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>Queries tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6287,7 +6287,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>Queries tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6345,7 +6345,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>Queries tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6363,7 +6363,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>Queries tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6657,7 +6657,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the product portfolio.</para>
+        /// <para>Updates the information about a product portfolio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6711,7 +6711,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the product portfolio.</para>
+        /// <para>Updates the information about a product portfolio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6765,7 +6765,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the product portfolio.</para>
+        /// <para>Updates the information about a product portfolio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6783,7 +6783,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the product portfolio.</para>
+        /// <para>Updates the information about a product portfolio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6801,7 +6801,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the product.</para>
+        /// <para>Updates the information about a product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6855,7 +6855,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the product.</para>
+        /// <para>Updates the information about a product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6909,7 +6909,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the product.</para>
+        /// <para>Updates the information about a product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6927,7 +6927,7 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the product.</para>
+        /// <para>Updates the information about a product.</para>
         /// </summary>
         /// 
         /// <param name="request">

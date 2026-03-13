@@ -1,3 +1,6 @@
+2026-03-13 Version: 1.0.4
+- Generated csharp 2021-09-01 for servicecatalog.
+
 2026-02-03 Version: 1.0.3
 - Update API AssociatePrincipalWithPortfolio: add request parameters PrincipalPattern.
 - Update API DisassociatePrincipalFromPortfolio: add request parameters PrincipalPattern.
