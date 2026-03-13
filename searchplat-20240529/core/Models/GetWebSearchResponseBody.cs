@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Searchplat20240529.Models
                 [Validation(Required=false)]
                 public string Link { get; set; }
 
+                [NameInMap("meta_info")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> MetaInfo { get; set; }
+
                 [NameInMap("position")]
                 [Validation(Required=false)]
                 public long? Position { get; set; }

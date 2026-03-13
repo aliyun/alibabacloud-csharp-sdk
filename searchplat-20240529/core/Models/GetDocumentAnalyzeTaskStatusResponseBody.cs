@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Searchplat20240529.Models
                 [Validation(Required=false)]
                 public int? PageNum { get; set; }
 
+                [NameInMap("pages")]
+                [Validation(Required=false)]
+                public List<string> Pages { get; set; }
+
             }
 
             [NameInMap("error")]

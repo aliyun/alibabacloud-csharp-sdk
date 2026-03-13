@@ -8,15 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Searchplat20240529.Models
 {
-    public class CreateVideoSnapshotTaskRequest : TeaModel {
+    public class CreateVideoSegmentationTaskRequest : TeaModel {
         [NameInMap("input")]
         [Validation(Required=false)]
-        public CreateVideoSnapshotTaskRequestInput Input { get; set; }
-        public class CreateVideoSnapshotTaskRequestInput : TeaModel {
-            [NameInMap("content")]
-            [Validation(Required=false)]
-            public string Content { get; set; }
-
+        public CreateVideoSegmentationTaskRequestInput Input { get; set; }
+        public class CreateVideoSegmentationTaskRequestInput : TeaModel {
             [NameInMap("file_name")]
             [Validation(Required=false)]
             public string FileName { get; set; }
@@ -33,8 +29,8 @@ namespace AlibabaCloud.SDK.Searchplat20240529.Models
 
         [NameInMap("output")]
         [Validation(Required=false)]
-        public CreateVideoSnapshotTaskRequestOutput Output { get; set; }
-        public class CreateVideoSnapshotTaskRequestOutput : TeaModel {
+        public CreateVideoSegmentationTaskRequestOutput Output { get; set; }
+        public class CreateVideoSegmentationTaskRequestOutput : TeaModel {
             [NameInMap("oss")]
             [Validation(Required=false)]
             public string Oss { get; set; }

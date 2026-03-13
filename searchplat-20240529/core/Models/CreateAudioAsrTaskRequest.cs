@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Searchplat20240529.Models
             [Validation(Required=false)]
             public string Oss { get; set; }
 
+            [NameInMap("url")]
+            [Validation(Required=false)]
+            public string Url { get; set; }
+
         }
 
         [NameInMap("output")]
