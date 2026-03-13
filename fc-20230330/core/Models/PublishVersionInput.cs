@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PublishVersionInput : TeaModel {
         /// <summary>
+        /// <para>The description of the layer version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my version</para>
         /// </summary>

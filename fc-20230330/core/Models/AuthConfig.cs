@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class AuthConfig : TeaModel {
         /// <summary>
+        /// <para>The authentication information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -18,8 +20,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string AuthInfo { get; set; }
 
         /// <summary>
+        /// <para>The authentication type. Valid values: anonymous, function, and jwt.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>anonymous, function, jwt</para>
+        /// <para>anonymous</para>
         /// </summary>
         [NameInMap("authType")]
         [Validation(Required=false)]

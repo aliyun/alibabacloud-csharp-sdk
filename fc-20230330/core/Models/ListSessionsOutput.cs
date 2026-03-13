@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListSessionsOutput : TeaModel {
         /// <summary>
+        /// <para>The starting position for the next session list query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MTIzNCNhYmM=</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The list of sessions.</para>
+        /// </summary>
         [NameInMap("sessions")]
         [Validation(Required=false)]
         public List<Session> Sessions { get; set; }

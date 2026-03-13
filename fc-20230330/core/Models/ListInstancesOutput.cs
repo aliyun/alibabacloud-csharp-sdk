@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListInstancesOutput : TeaModel {
+        /// <summary>
+        /// <para>public</para>
+        /// </summary>
         [NameInMap("instances")]
         [Validation(Required=false)]
         public List<InstanceInfo> Instances { get; set; }

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PutConcurrencyInput : TeaModel {
         /// <summary>
+        /// <para>The reserved concurrency of the function. Other functions cannot use the concurrency. The reserved concurrency includes the total concurrency of provisioned instances and on-demand instances.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

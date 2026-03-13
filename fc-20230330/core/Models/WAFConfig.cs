@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class WAFConfig : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable WAF protection.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

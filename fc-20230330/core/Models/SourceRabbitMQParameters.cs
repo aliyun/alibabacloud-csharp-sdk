@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class SourceRabbitMQParameters : TeaModel {
         /// <summary>
+        /// <para>The ID of the ApsaraMQ for RabbitMQ instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>amqp-cn-nif22u74****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The queue name of the ApsaraMQ for RabbitMQ instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>demo</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string QueueName { get; set; }
 
         /// <summary>
+        /// <para>The region in which the ApsaraMQ for RabbitMQ instance resides.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The vhost name of the ApsaraMQ for RabbitMQ instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eb-connect</para>
         /// </summary>

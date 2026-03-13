@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class EventSinkConfig : TeaModel {
+        /// <summary>
+        /// <para>The event push configurations.</para>
+        /// </summary>
         [NameInMap("deliveryOption")]
         [Validation(Required=false)]
         public DeliveryOption DeliveryOption { get; set; }

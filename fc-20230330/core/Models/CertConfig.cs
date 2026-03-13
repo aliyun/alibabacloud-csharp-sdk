@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class CertConfig : TeaModel {
         /// <summary>
+        /// <para>The name of the certificate.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string CertName { get; set; }
 
         /// <summary>
+        /// <para>The certificate in the .pem format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Certificate { get; set; }
 
         /// <summary>
+        /// <para>The private key in the .pem format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

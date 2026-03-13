@@ -26,6 +26,11 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? AlwaysAllocateGPU { get; set; }
 
         /// <summary>
+        /// <para>The number of target provisioned instances. Valid values: [0,10000].</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -33,6 +38,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public long? DefaultTarget { get; set; }
 
+        /// <summary>
+        /// <para>public</para>
+        /// </summary>
         [NameInMap("scheduledActions")]
         [Validation(Required=false)]
         public List<ScheduledAction> ScheduledActions { get; set; }

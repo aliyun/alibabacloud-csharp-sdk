@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class OutputCodeLocation : TeaModel {
         /// <summary>
+        /// <para>The address of the code package.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://xyz.oss-cn-shanghai.aliyuncs.com/xxx/xxx/xxx">https://xyz.oss-cn-shanghai.aliyuncs.com/xxx/xxx/xxx</a></para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Location { get; set; }
 
         /// <summary>
+        /// <para>The type of the code package.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OSS</para>
         /// </summary>

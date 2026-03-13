@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class WildcardRule : TeaModel {
         /// <summary>
+        /// <para>The matching rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Match { get; set; }
 
         /// <summary>
+        /// <para>The replacement rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

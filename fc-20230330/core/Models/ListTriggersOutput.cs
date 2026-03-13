@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListTriggersOutput : TeaModel {
         /// <summary>
+        /// <para>The name of the next trigger. The pagination token that is used in the next request to retrieve a new page of results. If this parameter is not returned, all the layers are returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>next_token</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The triggers.</para>
+        /// </summary>
         [NameInMap("triggers")]
         [Validation(Required=false)]
         public List<Trigger> Triggers { get; set; }

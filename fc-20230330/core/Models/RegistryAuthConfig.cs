@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class RegistryAuthConfig : TeaModel {
         /// <summary>
+        /// <para>The image repository password.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>abc***</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Password { get; set; }
 
         /// <summary>
+        /// <para>The image repository username.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>admin</para>
         /// </summary>

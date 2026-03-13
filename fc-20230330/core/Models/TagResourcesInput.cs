@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class TagResourcesInput : TeaModel {
         /// <summary>
+        /// <para>The resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The type of the resource.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FUNCTION</para>
         /// </summary>
@@ -25,6 +28,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>The tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]

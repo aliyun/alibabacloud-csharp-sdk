@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class SourceMNSParameters : TeaModel {
         /// <summary>
+        /// <para>Specify whether to enable Base64 encoding. Default value: true. Valid values: true false</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? IsBase64Decode { get; set; }
 
         /// <summary>
+        /// <para>The name of the queue of Simple Message Queue (formerly MNS).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>demo</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string QueueName { get; set; }
 
         /// <summary>
+        /// <para>The region to which the queue of Simple Message Queue (formerly MNS) belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>

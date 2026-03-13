@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class AsyncConfig : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable the asynchronous task feature.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? AsyncTask { get; set; }
 
         /// <summary>
+        /// <para>The time when the asynchronous invocation configuration was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2006-01-02T15:04:05Z07:00</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string CreatedTime { get; set; }
 
+        /// <summary>
+        /// <para>The destination configuration.</para>
+        /// </summary>
         [NameInMap("destinationConfig")]
         [Validation(Required=false)]
         public DestinationConfig DestinationConfig { get; set; }
 
         /// <summary>
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the function.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:fc:cn-shanghai:1234/functions/my-func</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string FunctionArn { get; set; }
 
         /// <summary>
+        /// <para>The time when the asynchronous invocation was last modified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2006-01-02T15:04:05Z07:00</para>
         /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string LastModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>The maximum time to live (TTL) value of an event.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3600</para>
         /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? MaxAsyncEventAgeInSeconds { get; set; }
 
         /// <summary>
+        /// <para>The number of times when an asynchronous invocation is retried.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>

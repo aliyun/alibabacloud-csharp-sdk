@@ -8,13 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class RouteConfig : TeaModel {
+    public class ResumeSessionRequest : TeaModel {
         /// <summary>
-        /// <para>The route configurations.</para>
+        /// <b>Example:</b>
+        /// <para>aliasName1</para>
         /// </summary>
-        [NameInMap("routes")]
+        [NameInMap("qualifier")]
         [Validation(Required=false)]
-        public List<PathConfig> Routes { get; set; }
+        public string Qualifier { get; set; }
 
     }
 

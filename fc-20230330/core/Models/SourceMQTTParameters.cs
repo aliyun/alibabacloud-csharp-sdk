@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class SourceMQTTParameters : TeaModel {
         /// <summary>
+        /// <para>The ID of the ApsaraMQ for MQTT instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mqtt-****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region in which the ApsaraMQ for MQTT instance resides.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The name of the topic in the ApsaraMQ for MQTT instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testTopic</para>
         /// </summary>

@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class MCPStreamableSessionAffinityConfig : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("sessionConcurrencyPerInstance")]
         [Validation(Required=false)]
         public long? SessionConcurrencyPerInstance { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1800</para>
+        /// </summary>
         [NameInMap("sessionIdleTimeoutInSeconds")]
         [Validation(Required=false)]
         public long? SessionIdleTimeoutInSeconds { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>21600</para>
+        /// </summary>
         [NameInMap("sessionTTLInSeconds")]
         [Validation(Required=false)]
         public long? SessionTTLInSeconds { get; set; }

@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建函数别名。</para>
+        /// <para>Creates an alias.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建函数别名。</para>
+        /// <para>Creates an alias.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建函数别名。</para>
+        /// <para>Creates an alias.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建函数别名。</para>
+        /// <para>Creates an alias.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -579,7 +579,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建层版本。</para>
+        /// <para>Releases a layer version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -620,7 +620,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建层版本。</para>
+        /// <para>Releases a layer version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -661,7 +661,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建层版本。</para>
+        /// <para>Releases a layer version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -680,7 +680,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建层版本。</para>
+        /// <para>Releases a layer version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -831,7 +831,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建函数触发器。</para>
+        /// <para>Creates a trigger.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -872,7 +872,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建函数触发器。</para>
+        /// <para>Creates a trigger.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -913,7 +913,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建函数触发器。</para>
+        /// <para>Creates a trigger.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -932,7 +932,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建函数触发器。</para>
+        /// <para>Creates a trigger.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1609,7 +1609,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para><a href="http://pre.hhht/#vpc">http://pre.hhht/#vpc</a></para>
+        /// <para>Deletes a function version.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1645,7 +1645,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para><a href="http://pre.hhht/#vpc">http://pre.hhht/#vpc</a></para>
+        /// <para>Deletes a function version.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1681,7 +1681,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para><a href="http://pre.hhht/#vpc">http://pre.hhht/#vpc</a></para>
+        /// <para>Deletes a function version.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1696,7 +1696,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para><a href="http://pre.hhht/#vpc">http://pre.hhht/#vpc</a></para>
+        /// <para>Deletes a function version.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5007,7 +5007,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出函数并发度配置。</para>
+        /// <para>Queries a list of concurrency configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5061,7 +5061,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出函数并发度配置。</para>
+        /// <para>Queries a list of concurrency configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5115,7 +5115,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出函数并发度配置。</para>
+        /// <para>Queries a list of concurrency configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5134,7 +5134,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出函数并发度配置。</para>
+        /// <para>Queries a list of concurrency configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5445,7 +5445,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出函数。</para>
+        /// <para>Queries a list of functions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5538,7 +5538,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出函数。</para>
+        /// <para>Queries a list of functions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5631,7 +5631,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出函数。</para>
+        /// <para>Queries a list of functions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5655,7 +5655,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出函数。</para>
+        /// <para>Queries a list of functions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7069,6 +7069,136 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>暂停/保存会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PauseSessionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseSessionResponse
+        /// </returns>
+        public PauseSessionResponse PauseSessionWithOptions(string functionName, string sessionId, PauseSessionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
+            {
+                query["qualifier"] = request.Qualifier;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PauseSession",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/sessions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sessionId) + "/pause",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PauseSessionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停/保存会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PauseSessionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseSessionResponse
+        /// </returns>
+        public async Task<PauseSessionResponse> PauseSessionWithOptionsAsync(string functionName, string sessionId, PauseSessionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
+            {
+                query["qualifier"] = request.Qualifier;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PauseSession",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/sessions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sessionId) + "/pause",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PauseSessionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停/保存会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PauseSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseSessionResponse
+        /// </returns>
+        public PauseSessionResponse PauseSession(string functionName, string sessionId, PauseSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PauseSessionWithOptions(functionName, sessionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停/保存会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PauseSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseSessionResponse
+        /// </returns>
+        public async Task<PauseSessionResponse> PauseSessionAsync(string functionName, string sessionId, PauseSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PauseSessionWithOptionsAsync(functionName, sessionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Publishes a function version.</para>
         /// </summary>
         /// 
@@ -7839,6 +7969,136 @@ namespace AlibabaCloud.SDK.FC20230330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await PutScalingConfigWithOptionsAsync(functionName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeSessionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeSessionResponse
+        /// </returns>
+        public ResumeSessionResponse ResumeSessionWithOptions(string functionName, string sessionId, ResumeSessionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
+            {
+                query["qualifier"] = request.Qualifier;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResumeSession",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/sessions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sessionId) + "/resume",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResumeSessionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeSessionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeSessionResponse
+        /// </returns>
+        public async Task<ResumeSessionResponse> ResumeSessionWithOptionsAsync(string functionName, string sessionId, ResumeSessionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
+            {
+                query["qualifier"] = request.Qualifier;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResumeSession",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/functions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(functionName) + "/sessions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sessionId) + "/resume",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResumeSessionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeSessionResponse
+        /// </returns>
+        public ResumeSessionResponse ResumeSession(string functionName, string sessionId, ResumeSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ResumeSessionWithOptions(functionName, sessionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeSessionResponse
+        /// </returns>
+        public async Task<ResumeSessionResponse> ResumeSessionAsync(string functionName, string sessionId, ResumeSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ResumeSessionWithOptionsAsync(functionName, sessionId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

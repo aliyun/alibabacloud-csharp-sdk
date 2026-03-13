@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public List<string> Command { get; set; }
 
         /// <summary>
+        /// <para>The handler of the hook. The definition is similar to that of a request handler.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>index.initializer</para>
         /// </summary>
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Handler { get; set; }
 
         /// <summary>
+        /// <para>The timeout period of the hook. Unit: seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

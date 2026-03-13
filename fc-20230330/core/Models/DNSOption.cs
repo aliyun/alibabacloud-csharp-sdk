@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class DNSOption : TeaModel {
         /// <summary>
+        /// <para>The name of the configuration item.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ndots</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The value of the configuration item.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

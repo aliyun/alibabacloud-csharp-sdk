@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class AccelerationInfo : TeaModel {
         /// <summary>
+        /// <para>The status of image acceleration.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>deprecated</para>
+        /// <para>Ready</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]

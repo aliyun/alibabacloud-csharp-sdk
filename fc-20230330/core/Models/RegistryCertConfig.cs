@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class RegistryCertConfig : TeaModel {
+        /// <summary>
+        /// <para>Whether to skip certificate verification.</para>
+        /// </summary>
         [NameInMap("insecure")]
         [Validation(Required=false)]
         public bool? Insecure { get; set; }
 
         /// <summary>
+        /// <para>The certificate authority (CA) certificate of the image repository.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cm9vdF9jYV9jZXJ0</para>
         /// </summary>

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListCustomDomainOutput : TeaModel {
+        /// <summary>
+        /// <para>The custom domain names.</para>
+        /// </summary>
         [NameInMap("customDomains")]
         [Validation(Required=false)]
         public List<CustomDomain> CustomDomains { get; set; }
 
         /// <summary>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>next_domain_name</para>
         /// </summary>

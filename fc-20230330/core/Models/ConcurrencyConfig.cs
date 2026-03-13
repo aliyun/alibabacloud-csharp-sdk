@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ConcurrencyConfig : TeaModel {
         /// <summary>
+        /// <para>The Alibaba Cloud Resource Name (ARN).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:fc:cn-shanghai:123:functions/demo</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string FunctionArn { get; set; }
 
         /// <summary>
+        /// <para>The reserved concurrency of the function. Other functions cannot use the concurrency. The reserved concurrency includes the total concurrency of provisioned instances and on-demand instances.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

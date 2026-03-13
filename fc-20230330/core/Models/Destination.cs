@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class Destination : TeaModel {
         /// <summary>
+        /// <para>The descriptor of the destination for the asynchronous invocation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:fc:cn-shanghai:xxx:functions/f1</para>
         /// </summary>

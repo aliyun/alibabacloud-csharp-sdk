@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PolarFsConfig : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("groupId")]
         [Validation(Required=false)]
         public int? GroupId { get; set; }
@@ -17,6 +21,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public List<PolarFsMountConfig> MountPoints { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("userId")]
         [Validation(Required=false)]
         public int? UserId { get; set; }
