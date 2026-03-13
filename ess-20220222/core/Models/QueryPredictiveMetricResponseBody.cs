@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class QueryPredictiveMetricResponseBody : TeaModel {
-        /// <summary>
-        /// <para>Predicted monitoring metrics.</para>
-        /// </summary>
         [NameInMap("PredictiveMetrics")]
         [Validation(Required=false)]
         public QueryPredictiveMetricResponseBodyPredictiveMetrics PredictiveMetrics { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public List<QueryPredictiveMetricResponseBodyPredictiveMetricsPredictiveMetric> PredictiveMetric { get; set; }
             public class QueryPredictiveMetricResponseBodyPredictiveMetricsPredictiveMetric : TeaModel {
-                /// <summary>
-                /// <para>Predicted monitoring value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>10.0</para>
-                /// </summary>
                 [NameInMap("MetricValue")]
                 [Validation(Required=false)]
                 public string MetricValue { get; set; }
 
-                /// <summary>
-                /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time must be in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2025-12-17T16:00Z</para>
-                /// </summary>
                 [NameInMap("Time")]
                 [Validation(Required=false)]
                 public string Time { get; set; }

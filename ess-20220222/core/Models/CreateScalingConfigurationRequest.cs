@@ -979,6 +979,32 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
+        [NameInMap("InstanceTypeCandidateOptions")]
+        [Validation(Required=false)]
+        public CreateScalingConfigurationRequestInstanceTypeCandidateOptions InstanceTypeCandidateOptions { get; set; }
+        public class CreateScalingConfigurationRequestInstanceTypeCandidateOptions : TeaModel {
+            [NameInMap("AllowCidrBlocks")]
+            [Validation(Required=false)]
+            public List<string> AllowCidrBlocks { get; set; }
+
+            [NameInMap("AllowCrossAz")]
+            [Validation(Required=false)]
+            public bool? AllowCrossAz { get; set; }
+
+            [NameInMap("AllowDifferentGeneration")]
+            [Validation(Required=false)]
+            public bool? AllowDifferentGeneration { get; set; }
+
+            [NameInMap("Enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+
+            [NameInMap("MaxPrice")]
+            [Validation(Required=false)]
+            public float? MaxPrice { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The information about instance types.</para>
         /// </summary>

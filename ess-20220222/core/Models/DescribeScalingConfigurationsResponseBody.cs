@@ -787,6 +787,32 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
+            [NameInMap("InstanceTypeCandidateOptions")]
+            [Validation(Required=false)]
+            public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstanceTypeCandidateOptions InstanceTypeCandidateOptions { get; set; }
+            public class DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstanceTypeCandidateOptions : TeaModel {
+                [NameInMap("AllowCidrBlocks")]
+                [Validation(Required=false)]
+                public List<string> AllowCidrBlocks { get; set; }
+
+                [NameInMap("AllowCrossAz")]
+                [Validation(Required=false)]
+                public bool? AllowCrossAz { get; set; }
+
+                [NameInMap("AllowDifferentGeneration")]
+                [Validation(Required=false)]
+                public bool? AllowDifferentGeneration { get; set; }
+
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+                [NameInMap("MaxPrice")]
+                [Validation(Required=false)]
+                public float? MaxPrice { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The ECS instance types.</para>
             /// </summary>
@@ -978,10 +1004,27 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public bool? PasswordSetted { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the private pool, which is the same as the ID of the elasticity assurance or capacity reservation for which the private pool is generated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>eap-bp67acfmxazb4****</para>
+            /// </summary>
             [NameInMap("PrivatePoolOptions.Id")]
             [Validation(Required=false)]
             public string PrivatePoolOptions_id { get; set; }
 
+            /// <summary>
+            /// <para>The type of the private pool. A private pool is generated when an elasticity assurance or a capacity reservation takes effect. You can specify a private pool for Auto Scaling to start instances. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Open: open private pool. Auto Scaling selects a matching open private pool to start instances. If no matching open private pools exist, Auto Scaling uses the resources in the public pool to start instances.</description></item>
+            /// <item><description>Target: specified private pool. Auto Scaling uses the resources in the specified private pool to start instances. If the resources in the specified private pool are insufficient, instances cannot be started.</description></item>
+            /// <item><description>None: no private pool. Auto Scaling does not use the resources in private pools to start instances.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Open</para>
+            /// </summary>
             [NameInMap("PrivatePoolOptions.MatchCriteria")]
             [Validation(Required=false)]
             public string PrivatePoolOptions_matchCriteria { get; set; }

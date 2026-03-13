@@ -4408,6 +4408,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["InstanceType"] = request.InstanceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypeCandidateOptions))
+            {
+                query["InstanceTypeCandidateOptions"] = request.InstanceTypeCandidateOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypeOverrides))
             {
                 query["InstanceTypeOverrides"] = request.InstanceTypeOverrides;
@@ -4710,6 +4714,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {
                 query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypeCandidateOptions))
+            {
+                query["InstanceTypeCandidateOptions"] = request.InstanceTypeCandidateOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypeOverrides))
             {
@@ -17153,6 +17161,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["InstancePatternInfos"] = request.InstancePatternInfos;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypeCandidateOptions))
+            {
+                query["InstanceTypeCandidateOptions"] = request.InstanceTypeCandidateOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypeOverrides))
             {
                 query["InstanceTypeOverrides"] = request.InstanceTypeOverrides;
@@ -17444,6 +17456,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstancePatternInfos))
             {
                 query["InstancePatternInfos"] = request.InstancePatternInfos;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypeCandidateOptions))
+            {
+                query["InstanceTypeCandidateOptions"] = request.InstanceTypeCandidateOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypeOverrides))
             {
@@ -21106,7 +21122,7 @@ namespace AlibabaCloud.SDK.Ess20220222
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets instance health. At times, the automatic health check system might not sufficiently determine the precise health status of your Elastic Compute Service (ECS) instances or elastic container instances. To overcome this, you can call the SetInstanceHealth operation to swiftly pinpoint problematic instances and resolve issues. This operation is designed to more precisely align with real-world business requirements and tackle O\&amp;M hurdles efficiently.</para>
+        /// <para>Sets instance health. At times, the automatic health check system might not sufficiently determine the precise health status of your Elastic Compute Service (ECS) instances or elastic container instances. To overcome this, you can call the SetInstanceHealth operation to swiftly pinpoint problematic instances and resolve issues. This operation is designed to more precisely align with real-world business requirements and tackle O\\\&amp;M hurdles efficiently.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21165,7 +21181,7 @@ namespace AlibabaCloud.SDK.Ess20220222
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets instance health. At times, the automatic health check system might not sufficiently determine the precise health status of your Elastic Compute Service (ECS) instances or elastic container instances. To overcome this, you can call the SetInstanceHealth operation to swiftly pinpoint problematic instances and resolve issues. This operation is designed to more precisely align with real-world business requirements and tackle O\&amp;M hurdles efficiently.</para>
+        /// <para>Sets instance health. At times, the automatic health check system might not sufficiently determine the precise health status of your Elastic Compute Service (ECS) instances or elastic container instances. To overcome this, you can call the SetInstanceHealth operation to swiftly pinpoint problematic instances and resolve issues. This operation is designed to more precisely align with real-world business requirements and tackle O\\\&amp;M hurdles efficiently.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21224,7 +21240,7 @@ namespace AlibabaCloud.SDK.Ess20220222
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets instance health. At times, the automatic health check system might not sufficiently determine the precise health status of your Elastic Compute Service (ECS) instances or elastic container instances. To overcome this, you can call the SetInstanceHealth operation to swiftly pinpoint problematic instances and resolve issues. This operation is designed to more precisely align with real-world business requirements and tackle O\&amp;M hurdles efficiently.</para>
+        /// <para>Sets instance health. At times, the automatic health check system might not sufficiently determine the precise health status of your Elastic Compute Service (ECS) instances or elastic container instances. To overcome this, you can call the SetInstanceHealth operation to swiftly pinpoint problematic instances and resolve issues. This operation is designed to more precisely align with real-world business requirements and tackle O\\\&amp;M hurdles efficiently.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21247,7 +21263,7 @@ namespace AlibabaCloud.SDK.Ess20220222
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets instance health. At times, the automatic health check system might not sufficiently determine the precise health status of your Elastic Compute Service (ECS) instances or elastic container instances. To overcome this, you can call the SetInstanceHealth operation to swiftly pinpoint problematic instances and resolve issues. This operation is designed to more precisely align with real-world business requirements and tackle O\&amp;M hurdles efficiently.</para>
+        /// <para>Sets instance health. At times, the automatic health check system might not sufficiently determine the precise health status of your Elastic Compute Service (ECS) instances or elastic container instances. To overcome this, you can call the SetInstanceHealth operation to swiftly pinpoint problematic instances and resolve issues. This operation is designed to more precisely align with real-world business requirements and tackle O\\\&amp;M hurdles efficiently.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

@@ -43,12 +43,6 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string Content { get; set; }
 
-        /// <summary>
-        /// <para>Optional. The format of the configuration file. Default value: YAML. Set the value to YAML.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>YAML</para>
-        /// </summary>
         [NameInMap("Format")]
         [Validation(Required=false)]
         public string Format { get; set; }

@@ -115,12 +115,22 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public ModifyEciScalingConfigurationRequestContainersLivenessProbeExec Exec { get; set; }
                 public class ModifyEciScalingConfigurationRequestContainersLivenessProbeExec : TeaModel {
+                    /// <summary>
+                    /// <para>The command executed in the container when using the command line to perform the health check.</para>
+                    /// </summary>
                     [NameInMap("Commands")]
                     [Validation(Required=false)]
                     public List<string> Commands { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The minimum number of consecutive failures that must occur for a liveness probe to be considered failed.</para>
+                /// <para>Default value: 3.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
                 [NameInMap("FailureThreshold")]
                 [Validation(Required=false)]
                 public int? FailureThreshold { get; set; }
@@ -129,28 +139,68 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public ModifyEciScalingConfigurationRequestContainersLivenessProbeHttpGet HttpGet { get; set; }
                 public class ModifyEciScalingConfigurationRequestContainersLivenessProbeHttpGet : TeaModel {
+                    /// <summary>
+                    /// <para>The path to which you want to send the HTTP GET request to perform a liveness probe.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>/healthyz</para>
+                    /// </summary>
                     [NameInMap("Path")]
                     [Validation(Required=false)]
                     public string Path { get; set; }
 
+                    /// <summary>
+                    /// <para>The port over which you want to send the HTTP GET request to perform a liveness probe.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>8888</para>
+                    /// </summary>
                     [NameInMap("Port")]
                     [Validation(Required=false)]
                     public int? Port { get; set; }
 
+                    /// <summary>
+                    /// <para>The protocol type of the HTTP GET request that you use to perform a liveness probe. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>HTTP</description></item>
+                    /// <item><description>HTTPS</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>HTTP</para>
+                    /// </summary>
                     [NameInMap("Scheme")]
                     [Validation(Required=false)]
                     public string Scheme { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The interval between the launch of the container and the onset of a liveness probe. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5</para>
+                /// </summary>
                 [NameInMap("InitialDelaySeconds")]
                 [Validation(Required=false)]
                 public int? InitialDelaySeconds { get; set; }
 
+                /// <summary>
+                /// <para>The interval between consecutive liveness probes. Unit: seconds. Default value: 10. Minimum value: 1.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5</para>
+                /// </summary>
                 [NameInMap("PeriodSeconds")]
                 [Validation(Required=false)]
                 public int? PeriodSeconds { get; set; }
 
+                /// <summary>
+                /// <para>The minimum number of consecutive successes that must occur to consider a failed liveness probe successful. Default value: 1. Set the value to 1.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("SuccessThreshold")]
                 [Validation(Required=false)]
                 public int? SuccessThreshold { get; set; }
@@ -159,12 +209,24 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public ModifyEciScalingConfigurationRequestContainersLivenessProbeTcpSocket TcpSocket { get; set; }
                 public class ModifyEciScalingConfigurationRequestContainersLivenessProbeTcpSocket : TeaModel {
+                    /// <summary>
+                    /// <para>The port detected by the TCP socket when you perform a liveness probe.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
                     [NameInMap("Port")]
                     [Validation(Required=false)]
                     public int? Port { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The timeout limit for a liveness probe to be complete. Unit: seconds. Default value: 1. Minimum value: 1.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("TimeoutSeconds")]
                 [Validation(Required=false)]
                 public int? TimeoutSeconds { get; set; }
@@ -179,12 +241,22 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public ModifyEciScalingConfigurationRequestContainersReadinessProbeExec Exec { get; set; }
                 public class ModifyEciScalingConfigurationRequestContainersReadinessProbeExec : TeaModel {
+                    /// <summary>
+                    /// <para>The commands executed in the container when using the command line to perform the health check.</para>
+                    /// </summary>
                     [NameInMap("Commands")]
                     [Validation(Required=false)]
                     public List<string> Commands { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The minimum number of consecutive failures that must occur for a readiness probe to be considered failed.</para>
+                /// <para>Default value: 3.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
                 [NameInMap("FailureThreshold")]
                 [Validation(Required=false)]
                 public int? FailureThreshold { get; set; }
@@ -193,28 +265,68 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public ModifyEciScalingConfigurationRequestContainersReadinessProbeHttpGet HttpGet { get; set; }
                 public class ModifyEciScalingConfigurationRequestContainersReadinessProbeHttpGet : TeaModel {
+                    /// <summary>
+                    /// <para>The path to which you want to send the HTTP GET request to perform a readiness probe.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>/healthz</para>
+                    /// </summary>
                     [NameInMap("Path")]
                     [Validation(Required=false)]
                     public string Path { get; set; }
 
+                    /// <summary>
+                    /// <para>The port over which you want to send the HTTP GET request to perform a readiness probe.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>8080</para>
+                    /// </summary>
                     [NameInMap("Port")]
                     [Validation(Required=false)]
                     public int? Port { get; set; }
 
+                    /// <summary>
+                    /// <para>The protocol type of the HTTP GET request that you use to perform a readiness probe. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>HTTP</description></item>
+                    /// <item><description>HTTPS</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>HTTP</para>
+                    /// </summary>
                     [NameInMap("Scheme")]
                     [Validation(Required=false)]
                     public string Scheme { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The interval between the launch of the container and the onset of a readiness probe. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
                 [NameInMap("InitialDelaySeconds")]
                 [Validation(Required=false)]
                 public int? InitialDelaySeconds { get; set; }
 
+                /// <summary>
+                /// <para>The interval between consecutive readiness probes. Unit: seconds. Default value: 10. Minimum value: 1.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
                 [NameInMap("PeriodSeconds")]
                 [Validation(Required=false)]
                 public int? PeriodSeconds { get; set; }
 
+                /// <summary>
+                /// <para>The minimum number of consecutive successes that must occur for a failed readiness probe to be considered successful. Default value: 1. Set the value to 1.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("SuccessThreshold")]
                 [Validation(Required=false)]
                 public int? SuccessThreshold { get; set; }
@@ -223,12 +335,24 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public ModifyEciScalingConfigurationRequestContainersReadinessProbeTcpSocket TcpSocket { get; set; }
                 public class ModifyEciScalingConfigurationRequestContainersReadinessProbeTcpSocket : TeaModel {
+                    /// <summary>
+                    /// <para>The port detected by the TCP socket when you perform a readiness probe.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>8000</para>
+                    /// </summary>
                     [NameInMap("Port")]
                     [Validation(Required=false)]
                     public int? Port { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The timeout limit for a readiness probe to be complete. Unit: seconds. Default value: 1. Minimum value: 1.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("TimeoutSeconds")]
                 [Validation(Required=false)]
                 public int? TimeoutSeconds { get; set; }
@@ -243,16 +367,34 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public ModifyEciScalingConfigurationRequestContainersSecurityContextCapability Capability { get; set; }
                 public class ModifyEciScalingConfigurationRequestContainersSecurityContextCapability : TeaModel {
+                    /// <summary>
+                    /// <para>The permissions that you want to grant to the processes in the container. Valid values: NET_ADMIN and NET_RAW.</para>
+                    /// <remarks>
+                    /// <para> To use NET_RAW, submit a ticket.</para>
+                    /// </remarks>
+                    /// </summary>
                     [NameInMap("Adds")]
                     [Validation(Required=false)]
                     public List<string> Adds { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>Specifies whether the root file system is read-only. Set the value to true.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("ReadOnlyRootFilesystem")]
                 [Validation(Required=false)]
                 public bool? ReadOnlyRootFilesystem { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the user that runs the container.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1000</para>
+                /// </summary>
                 [NameInMap("RunAsUser")]
                 [Validation(Required=false)]
                 public long? RunAsUser { get; set; }
@@ -294,6 +436,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public ModifyEciScalingConfigurationRequestContainersEnvironmentVarsFieldRef FieldRef { get; set; }
                 public class ModifyEciScalingConfigurationRequestContainersEnvironmentVarsFieldRef : TeaModel {
+                    /// <summary>
+                    /// <remarks>
+                    /// <para> This parameter is unavailable.</para>
+                    /// </remarks>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>path</para>
+                    /// </summary>
                     [NameInMap("FieldPath")]
                     [Validation(Required=false)]
                     public string FieldPath { get; set; }
@@ -1025,16 +1175,36 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public ModifyEciScalingConfigurationRequestInitContainersSecurityContextCapability Capability { get; set; }
                 public class ModifyEciScalingConfigurationRequestInitContainersSecurityContextCapability : TeaModel {
+                    /// <summary>
+                    /// <para>The permissions that you want to grant to the processes in the init container. Valid values: NET_ADMIN and NET_RAW.</para>
+                    /// <remarks>
+                    /// <para> To use NET_RAW, submit a ticket.</para>
+                    /// </remarks>
+                    /// </summary>
                     [NameInMap("Adds")]
                     [Validation(Required=false)]
                     public List<string> Adds { get; set; }
 
                 }
 
+                /// <summary>
+                /// <remarks>
+                /// <para> This parameter is unavailable.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("ReadOnlyRootFilesystem")]
                 [Validation(Required=false)]
                 public bool? ReadOnlyRootFilesystem { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the user who runs the init container.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>587</para>
+                /// </summary>
                 [NameInMap("RunAsUser")]
                 [Validation(Required=false)]
                 public long? RunAsUser { get; set; }
@@ -1111,6 +1281,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public ModifyEciScalingConfigurationRequestInitContainersInitContainerEnvironmentVarsFieldRef FieldRef { get; set; }
                 public class ModifyEciScalingConfigurationRequestInitContainersInitContainerEnvironmentVarsFieldRef : TeaModel {
+                    /// <summary>
+                    /// <remarks>
+                    /// <para> This parameter is unavailable.</para>
+                    /// </remarks>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>path</para>
+                    /// </summary>
                     [NameInMap("FieldPath")]
                     [Validation(Required=false)]
                     public string FieldPath { get; set; }
@@ -1526,14 +1704,32 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public ModifyEciScalingConfigurationRequestVolumesDiskVolume DiskVolume { get; set; }
             public class ModifyEciScalingConfigurationRequestVolumesDiskVolume : TeaModel {
+                /// <summary>
+                /// <para>The ID of the disk volume.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>d-xx</para>
+                /// </summary>
                 [NameInMap("DiskId")]
                 [Validation(Required=false)]
                 public string DiskId { get; set; }
 
+                /// <summary>
+                /// <para>The volume size. Unit: GiB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>15</para>
+                /// </summary>
                 [NameInMap("DiskSize")]
                 [Validation(Required=false)]
                 public int? DiskSize { get; set; }
 
+                /// <summary>
+                /// <para>We recommend that you specify <c>FlexVolume.FsType</c> instead of DiskVolume.FsType.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>xfs</para>
+                /// </summary>
                 [NameInMap("FsType")]
                 [Validation(Required=false)]
                 public string FsType { get; set; }
@@ -1544,10 +1740,22 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public ModifyEciScalingConfigurationRequestVolumesEmptyDirVolume EmptyDirVolume { get; set; }
             public class ModifyEciScalingConfigurationRequestVolumesEmptyDirVolume : TeaModel {
+                /// <summary>
+                /// <para>The storage medium of the emptyDir volume. If you do not specify a storage medium for the emptyDir volume, the emptyDir volume stores data in the file system of a node. A value of memory specifies that the emptyDir volume stores data in the memory.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>memory</para>
+                /// </summary>
                 [NameInMap("Medium")]
                 [Validation(Required=false)]
                 public string Medium { get; set; }
 
+                /// <summary>
+                /// <para>The size of the emptyDir volume. The value contains a unit. We recommend that you use Gi or Mi as the unit.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>256Mi</para>
+                /// </summary>
                 [NameInMap("SizeLimit")]
                 [Validation(Required=false)]
                 public string SizeLimit { get; set; }
@@ -1558,14 +1766,33 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public ModifyEciScalingConfigurationRequestVolumesFlexVolume FlexVolume { get; set; }
             public class ModifyEciScalingConfigurationRequestVolumesFlexVolume : TeaModel {
+                /// <summary>
+                /// <para>The name of the FlexVolume driver.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>flexvolume</para>
+                /// </summary>
                 [NameInMap("Driver")]
                 [Validation(Required=false)]
                 public string Driver { get; set; }
 
+                /// <summary>
+                /// <para>The type of the mounted file system. The default value is determined by the script of FlexVolume.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ext4</para>
+                /// </summary>
                 [NameInMap("FsType")]
                 [Validation(Required=false)]
                 public string FsType { get; set; }
 
+                /// <summary>
+                /// <para>The FlexVolume options. Each option is a key-value pair in a JSON string.</para>
+                /// <para>For example, if you use FlexVolume to mount a disk, the format of Options is <c>{&quot;volumeId&quot;:&quot;d-2zehdahrwoa7srg****&quot;,&quot;performanceLevel&quot;: &quot;PL2&quot;}</c>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;volumeId&quot;:&quot;d-2zehdahrwoa7srg****&quot;,&quot;performanceLevel&quot;: &quot;PL2&quot;}</para>
+                /// </summary>
                 [NameInMap("Options")]
                 [Validation(Required=false)]
                 public string Options { get; set; }
@@ -1576,10 +1803,22 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public ModifyEciScalingConfigurationRequestVolumesHostPathVolume HostPathVolume { get; set; }
             public class ModifyEciScalingConfigurationRequestVolumesHostPathVolume : TeaModel {
+                /// <summary>
+                /// <para>The absolute path on the host.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/xx/xx/name</para>
+                /// </summary>
                 [NameInMap("Path")]
                 [Validation(Required=false)]
                 public string Path { get; set; }
 
+                /// <summary>
+                /// <para>The type of host directory. For example: File, Directory, Socket, etc.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Directory</para>
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -1590,14 +1829,33 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public ModifyEciScalingConfigurationRequestVolumesNFSVolume NFSVolume { get; set; }
             public class ModifyEciScalingConfigurationRequestVolumesNFSVolume : TeaModel {
+                /// <summary>
+                /// <para>The path to the Network File System (NFS) volume.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/share</para>
+                /// </summary>
                 [NameInMap("Path")]
                 [Validation(Required=false)]
                 public string Path { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether the permissions on the NFS volume are read-only.</para>
+                /// <para>Default value: false.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("ReadOnly")]
                 [Validation(Required=false)]
                 public bool? ReadOnly { get; set; }
 
+                /// <summary>
+                /// <para>The endpoint of the NFS server.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3f9cd4a596-naw76.cn-shanghai.nas.aliyuncs.com</para>
+                /// </summary>
                 [NameInMap("Server")]
                 [Validation(Required=false)]
                 public string Server { get; set; }
