@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [Validation(Required=false)]
             public string Version { get; set; }
 
+            [NameInMap("Versions")]
+            [Validation(Required=false)]
+            public object Versions { get; set; }
+
         }
 
         /// <summary>

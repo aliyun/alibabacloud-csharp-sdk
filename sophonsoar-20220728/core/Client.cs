@@ -3683,7 +3683,19 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
         public DescribePopApiResponse DescribePopApiWithOptions(DescribePopApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiName))
+            {
+                query["ApiName"] = request.ApiName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiVersion))
+            {
+                query["ApiVersion"] = request.ApiVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PopCode))
+            {
+                query["PopCode"] = request.PopCode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3694,7 +3706,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
                 Version = "2022-07-28",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -3721,7 +3733,19 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
         public async Task<DescribePopApiResponse> DescribePopApiWithOptionsAsync(DescribePopApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiName))
+            {
+                query["ApiName"] = request.ApiName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiVersion))
+            {
+                query["ApiVersion"] = request.ApiVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PopCode))
+            {
+                query["PopCode"] = request.PopCode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3732,7 +3756,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
                 Version = "2022-07-28",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -4899,7 +4923,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query OpenApi List of Cloud Vendors.</para>
+        /// <para>Queries the API operations of a cloud service provider.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4966,7 +4990,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query OpenApi List of Cloud Vendors.</para>
+        /// <para>Queries the API operations of a cloud service provider.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5033,7 +5057,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query OpenApi List of Cloud Vendors.</para>
+        /// <para>Queries the API operations of a cloud service provider.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5056,7 +5080,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query OpenApi List of Cloud Vendors.</para>
+        /// <para>Queries the API operations of a cloud service provider.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

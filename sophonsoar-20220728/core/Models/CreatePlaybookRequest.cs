@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>{&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</para>
+        /// <para>{\&quot;key1\&quot;: \&quot;value1\&quot;, \&quot;key2\&quot;: \&quot;value2\&quot;}</para>
         /// </summary>
         [NameInMap("InputParams")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>{&quot;result&quot;: &quot;success&quot;}</para>
+        /// <para>{\&quot;result\&quot;: \&quot;success\&quot;}</para>
         /// </summary>
         [NameInMap("OutputParams")]
         [Validation(Required=false)]
