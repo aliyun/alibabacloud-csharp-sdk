@@ -1,0 +1,34 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Pai20240521.Models
+{
+    public class GPUMetric : TeaModel {
+        [NameInMap("Index")]
+        [Validation(Required=false)]
+        public long? Index { get; set; }
+
+        [NameInMap("Model")]
+        [Validation(Required=false)]
+        public string Model { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0：异常；1：正常</para>
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public long? Status { get; set; }
+
+        [NameInMap("UsageRate")]
+        [Validation(Required=false)]
+        public float? UsageRate { get; set; }
+
+    }
+
+}

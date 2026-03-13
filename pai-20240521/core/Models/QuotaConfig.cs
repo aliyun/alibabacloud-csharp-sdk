@@ -1,0 +1,58 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Pai20240521.Models
+{
+    public class QuotaConfig : TeaModel {
+        [NameInMap("ACS")]
+        [Validation(Required=false)]
+        public ACS ACS { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ceeb37xxxx</para>
+        /// </summary>
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>470.199.02</para>
+        /// </summary>
+        [NameInMap("DefaultGPUDriver")]
+        [Validation(Required=false)]
+        public string DefaultGPUDriver { get; set; }
+
+        [NameInMap("EnablePreemptSubquotaWorkloads")]
+        [Validation(Required=false)]
+        public bool? EnablePreemptSubquotaWorkloads { get; set; }
+
+        [NameInMap("ResourceSpecs")]
+        [Validation(Required=false)]
+        public List<WorkspaceSpecs> ResourceSpecs { get; set; }
+
+        [NameInMap("SupportGPUDrivers")]
+        [Validation(Required=false)]
+        public List<string> SupportGPUDrivers { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("SupportRDMA")]
+        [Validation(Required=false)]
+        public bool? SupportRDMA { get; set; }
+
+        [NameInMap("UserVpc")]
+        [Validation(Required=false)]
+        public UserVpc UserVpc { get; set; }
+
+    }
+
+}
