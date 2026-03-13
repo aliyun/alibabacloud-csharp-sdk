@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class DescribeMultimodalModerationResultResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
@@ -33,6 +37,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         [Validation(Required=false)]
                         public string Description { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>violent_explosion</para>
+                        /// </summary>
                         [NameInMap("Label")]
                         [Validation(Required=false)]
                         public string Label { get; set; }
@@ -49,6 +57,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>violent_explosion</para>
+                    /// </summary>
                     [NameInMap("Label")]
                     [Validation(Required=false)]
                     public string Label { get; set; }
@@ -57,6 +69,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>data1234</para>
+            /// </summary>
             [NameInMap("DataId")]
             [Validation(Required=false)]
             public string DataId { get; set; }
@@ -73,6 +89,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>violent_explosion</para>
+                    /// </summary>
                     [NameInMap("Label")]
                     [Validation(Required=false)]
                     public string Label { get; set; }
@@ -81,20 +101,36 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
+            /// </summary>
             [NameInMap("ReqId")]
             [Validation(Required=false)]
             public string ReqId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>high</para>
+            /// </summary>
             [NameInMap("RiskLevel")]
             [Validation(Required=false)]
             public string RiskLevel { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>OK</para>
+        /// </summary>
         [NameInMap("Msg")]
         [Validation(Required=false)]
         public string Msg { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

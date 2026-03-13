@@ -233,6 +233,56 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public string DataId { get; set; }
 
+            [NameInMap("Ext")]
+            [Validation(Required=false)]
+            public VideoModerationResultResponseBodyDataExt Ext { get; set; }
+            public class VideoModerationResultResponseBodyDataExt : TeaModel {
+                [NameInMap("AigcData")]
+                [Validation(Required=false)]
+                public VideoModerationResultResponseBodyDataExtAigcData AigcData { get; set; }
+                public class VideoModerationResultResponseBodyDataExtAigcData : TeaModel {
+                    [NameInMap("AIGC")]
+                    [Validation(Required=false)]
+                    public VideoModerationResultResponseBodyDataExtAigcDataAIGC AIGC { get; set; }
+                    public class VideoModerationResultResponseBodyDataExtAigcDataAIGC : TeaModel {
+                        [NameInMap("ContentProducer")]
+                        [Validation(Required=false)]
+                        public string ContentProducer { get; set; }
+
+                        [NameInMap("ContentPropagator")]
+                        [Validation(Required=false)]
+                        public string ContentPropagator { get; set; }
+
+                        [NameInMap("Label")]
+                        [Validation(Required=false)]
+                        public string Label { get; set; }
+
+                        [NameInMap("ProduceID")]
+                        [Validation(Required=false)]
+                        public string ProduceID { get; set; }
+
+                        [NameInMap("PropagateID")]
+                        [Validation(Required=false)]
+                        public string PropagateID { get; set; }
+
+                        [NameInMap("ReservedCode1")]
+                        [Validation(Required=false)]
+                        public string ReservedCode1 { get; set; }
+
+                        [NameInMap("ReservedCode2")]
+                        [Validation(Required=false)]
+                        public string ReservedCode2 { get; set; }
+
+                    }
+
+                    [NameInMap("Result")]
+                    [Validation(Required=false)]
+                    public string Result { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// <para>The image moderation results. If the call is successful, the HTTP status code 200 and moderation results are returned. The moderation results contain a structure.</para>
             /// </summary>

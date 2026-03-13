@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询检测结果辅助信息</para>
+        /// <para>Obtains more auxiliary information that is identified by calling the Image Moderation 2.0 API. The auxiliary information includes the moderation results of images and text and the hit information of custom image libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -386,7 +386,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询检测结果辅助信息</para>
+        /// <para>Obtains more auxiliary information that is identified by calling the Image Moderation 2.0 API. The auxiliary information includes the moderation results of images and text and the hit information of custom image libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询检测结果辅助信息</para>
+        /// <para>Obtains more auxiliary information that is identified by calling the Image Moderation 2.0 API. The auxiliary information includes the moderation results of images and text and the hit information of custom image libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -450,7 +450,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询检测结果辅助信息</para>
+        /// <para>Obtains more auxiliary information that is identified by calling the Image Moderation 2.0 API. The auxiliary information includes the moderation results of images and text and the hit information of custom image libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -588,7 +588,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询上传token</para>
+        /// <para>Queries the token for uploading files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -621,7 +621,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询上传token</para>
+        /// <para>Queries the token for uploading files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -654,7 +654,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询上传token</para>
+        /// <para>Queries the token for uploading files.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -668,7 +668,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询上传token</para>
+        /// <para>Queries the token for uploading files.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -838,7 +838,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档审核</para>
+        /// <para>Moderates files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -884,7 +884,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档审核</para>
+        /// <para>Moderates files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -930,7 +930,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档审核</para>
+        /// <para>Moderates files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -948,7 +948,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文档审核</para>
+        /// <para>Moderates files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -966,7 +966,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片异步检测</para>
+        /// <para>Moderates images in asynchronous mode. An asynchronous image moderation task does not return the moderation results in real time. To obtain moderation results, you can poll the moderation results periodically or enable callback notification. The moderation results are retained for a maximum of 3 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1012,7 +1012,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片异步检测</para>
+        /// <para>Moderates images in asynchronous mode. An asynchronous image moderation task does not return the moderation results in real time. To obtain moderation results, you can poll the moderation results periodically or enable callback notification. The moderation results are retained for a maximum of 3 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1058,7 +1058,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片异步检测</para>
+        /// <para>Moderates images in asynchronous mode. An asynchronous image moderation task does not return the moderation results in real time. To obtain moderation results, you can poll the moderation results periodically or enable callback notification. The moderation results are retained for a maximum of 3 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1076,7 +1076,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片异步检测</para>
+        /// <para>Moderates images in asynchronous mode. An asynchronous image moderation task does not return the moderation results in real time. To obtain moderation results, you can poll the moderation results periodically or enable callback notification. The moderation results are retained for a maximum of 3 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2726,7 +2726,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>url异步检测</para>
+        /// <para>Identifies whether URL links contain risks such as fraud, pornographic, and gambling content, to protect the platform content ecosystem.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2772,7 +2772,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>url异步检测</para>
+        /// <para>Identifies whether URL links contain risks such as fraud, pornographic, and gambling content, to protect the platform content ecosystem.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2818,7 +2818,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>url异步检测</para>
+        /// <para>Identifies whether URL links contain risks such as fraud, pornographic, and gambling content, to protect the platform content ecosystem.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2836,7 +2836,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>url异步检测</para>
+        /// <para>Identifies whether URL links contain risks such as fraud, pornographic, and gambling content, to protect the platform content ecosystem.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2854,7 +2854,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>视频检测任务提交</para>
+        /// <para>Identifies risky or illegal content in video files. You can call this operation to submit a moderation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2900,7 +2900,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>视频检测任务提交</para>
+        /// <para>Identifies risky or illegal content in video files. You can call this operation to submit a moderation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2946,7 +2946,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>视频检测任务提交</para>
+        /// <para>Identifies risky or illegal content in video files. You can call this operation to submit a moderation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2964,7 +2964,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>视频检测任务提交</para>
+        /// <para>Identifies risky or illegal content in video files. You can call this operation to submit a moderation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2982,7 +2982,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消视频直播流检测</para>
+        /// <para>Cancels a live stream moderation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3028,7 +3028,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消视频直播流检测</para>
+        /// <para>Cancels a live stream moderation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3074,7 +3074,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消视频直播流检测</para>
+        /// <para>Cancels a live stream moderation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3092,7 +3092,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消视频直播流检测</para>
+        /// <para>Cancels a live stream moderation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3258,7 +3258,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>语音审核</para>
+        /// <para>Submits a Voice Moderation 2.0 task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3304,7 +3304,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>语音审核</para>
+        /// <para>Submits a Voice Moderation 2.0 task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3350,7 +3350,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>语音审核</para>
+        /// <para>Submits a Voice Moderation 2.0 task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3368,7 +3368,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>语音审核</para>
+        /// <para>Submits a Voice Moderation 2.0 task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3386,7 +3386,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消检测</para>
+        /// <para>Cancels a Voice Moderation 2.0 task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3432,7 +3432,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消检测</para>
+        /// <para>Cancels a Voice Moderation 2.0 task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3478,7 +3478,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消检测</para>
+        /// <para>Cancels a Voice Moderation 2.0 task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3496,7 +3496,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消检测</para>
+        /// <para>Cancels a Voice Moderation 2.0 task.</para>
         /// </summary>
         /// 
         /// <param name="request">
