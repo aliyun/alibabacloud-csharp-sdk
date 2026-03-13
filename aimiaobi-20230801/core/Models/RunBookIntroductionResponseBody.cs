@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string Event { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>模型生成事件</para>
+            /// </summary>
             [NameInMap("EventInfo")]
             [Validation(Required=false)]
             public string EventInfo { get; set; }
@@ -75,10 +79,40 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public RunBookIntroductionResponseBodyPayloadOutput Output { get; set; }
             public class RunBookIntroductionResponseBodyPayloadOutput : TeaModel {
+                [NameInMap("Introductions")]
+                [Validation(Required=false)]
+                public List<RunBookIntroductionResponseBodyPayloadOutputIntroductions> Introductions { get; set; }
+                public class RunBookIntroductionResponseBodyPayloadOutputIntroductions : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>本段摘要内容</para>
+                    /// </summary>
+                    [NameInMap("Summary")]
+                    [Validation(Required=false)]
+                    public string Summary { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>本段标题内容</para>
+                    /// </summary>
+                    [NameInMap("Title")]
+                    [Validation(Required=false)]
+                    public string Title { get; set; }
+
+                }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>卖点内容</para>
+                /// </summary>
                 [NameInMap("KeyPoint")]
                 [Validation(Required=false)]
                 public string KeyPoint { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>简介内容</para>
+                /// </summary>
                 [NameInMap("Summary")]
                 [Validation(Required=false)]
                 public string Summary { get; set; }

@@ -694,7 +694,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         /// <para>智能剪辑timeline</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// AsyncCreateClipsTimeLineRequest
         /// </param>
         /// <param name="runtime">
@@ -704,9 +704,15 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         /// <returns>
         /// AsyncCreateClipsTimeLineResponse
         /// </returns>
-        public AsyncCreateClipsTimeLineResponse AsyncCreateClipsTimeLineWithOptions(AsyncCreateClipsTimeLineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public AsyncCreateClipsTimeLineResponse AsyncCreateClipsTimeLineWithOptions(AsyncCreateClipsTimeLineRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AsyncCreateClipsTimeLineShrinkRequest request = new AsyncCreateClipsTimeLineShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HighLightConfig))
+            {
+                request.HighLightConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HighLightConfig, "HighLightConfig", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalContent))
             {
@@ -716,6 +722,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["CustomContent"] = request.CustomContent;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HighLightConfigShrink))
+            {
+                body["HighLightConfig"] = request.HighLightConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoRefVideo))
             {
                 body["NoRefVideo"] = request.NoRefVideo;
@@ -724,9 +734,17 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["ProcessPrompt"] = request.ProcessPrompt;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecommendAudio))
+            {
+                body["RecommendAudio"] = request.RecommendAudio;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimelineScene))
+            {
+                body["TimelineScene"] = request.TimelineScene;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -756,7 +774,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         /// <para>智能剪辑timeline</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// AsyncCreateClipsTimeLineRequest
         /// </param>
         /// <param name="runtime">
@@ -766,9 +784,15 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         /// <returns>
         /// AsyncCreateClipsTimeLineResponse
         /// </returns>
-        public async Task<AsyncCreateClipsTimeLineResponse> AsyncCreateClipsTimeLineWithOptionsAsync(AsyncCreateClipsTimeLineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<AsyncCreateClipsTimeLineResponse> AsyncCreateClipsTimeLineWithOptionsAsync(AsyncCreateClipsTimeLineRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AsyncCreateClipsTimeLineShrinkRequest request = new AsyncCreateClipsTimeLineShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HighLightConfig))
+            {
+                request.HighLightConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HighLightConfig, "HighLightConfig", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalContent))
             {
@@ -778,6 +802,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["CustomContent"] = request.CustomContent;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HighLightConfigShrink))
+            {
+                body["HighLightConfig"] = request.HighLightConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoRefVideo))
             {
                 body["NoRefVideo"] = request.NoRefVideo;
@@ -786,9 +814,17 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["ProcessPrompt"] = request.ProcessPrompt;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecommendAudio))
+            {
+                body["RecommendAudio"] = request.RecommendAudio;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimelineScene))
+            {
+                body["TimelineScene"] = request.TimelineScene;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
