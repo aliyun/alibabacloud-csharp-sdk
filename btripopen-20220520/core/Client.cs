@@ -4857,6 +4857,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["bill_batch"] = request.BillBatch;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
                 query["order_id"] = request.OrderId;
@@ -4939,6 +4947,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
             {
                 query["bill_batch"] = request.BillBatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
@@ -6277,6 +6293,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["bill_batch"] = request.BillBatch;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CooperatorId))
             {
                 query["cooperator_id"] = request.CooperatorId;
@@ -6363,6 +6387,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
             {
                 query["bill_batch"] = request.BillBatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CooperatorId))
             {
@@ -6489,6 +6521,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["bill_batch"] = request.BillBatch;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CooperatorId))
             {
                 query["cooperator_id"] = request.CooperatorId;
@@ -6575,6 +6615,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
             {
                 query["bill_batch"] = request.BillBatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CooperatorId))
             {
@@ -11047,6 +11095,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["bill_batch"] = request.BillBatch;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
                 query["order_id"] = request.OrderId;
@@ -11129,6 +11185,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
             {
                 query["bill_batch"] = request.BillBatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
@@ -12291,6 +12355,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["itinerary_num"] = request.ItineraryNum;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["page_no"] = request.PageNo;
@@ -12369,6 +12437,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItineraryNum))
             {
                 query["itinerary_num"] = request.ItineraryNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
@@ -15207,9 +15279,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["isv_name"] = request.IsvName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtaItemId))
             {
                 query["ota_item_id"] = request.OtaItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["out_order_id"] = request.OutOrderId;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -15266,9 +15346,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["isv_name"] = request.IsvName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtaItemId))
             {
                 query["ota_item_id"] = request.OtaItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["out_order_id"] = request.OutOrderId;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -17663,6 +17751,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["bill_batch"] = request.BillBatch;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CooperatorId))
             {
                 query["cooperator_id"] = request.CooperatorId;
@@ -17749,6 +17845,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
             {
                 query["bill_batch"] = request.BillBatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CooperatorId))
             {
@@ -18735,6 +18839,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["bill_batch"] = request.BillBatch;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
                 query["order_id"] = request.OrderId;
@@ -18817,6 +18929,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
             {
                 query["bill_batch"] = request.BillBatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
@@ -20172,6 +20292,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 request.InvoiceInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InvoiceInfo, "invoice_info", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MemberInfo))
+            {
+                request.MemberInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MemberInfo, "member_info", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OccupantInfoList))
             {
                 request.OccupantInfoListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OccupantInfoList, "occupant_info_list", "json");
@@ -20228,6 +20352,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItineraryNo))
             {
                 body["itinerary_no"] = request.ItineraryNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberInfoShrink))
+            {
+                body["member_info"] = request.MemberInfoShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OccupantInfoListShrink))
             {
@@ -20325,6 +20453,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 request.InvoiceInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InvoiceInfo, "invoice_info", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MemberInfo))
+            {
+                request.MemberInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MemberInfo, "member_info", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OccupantInfoList))
             {
                 request.OccupantInfoListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OccupantInfoList, "occupant_info_list", "json");
@@ -20381,6 +20513,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItineraryNo))
             {
                 body["itinerary_no"] = request.ItineraryNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberInfoShrink))
+            {
+                body["member_info"] = request.MemberInfoShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OccupantInfoListShrink))
             {
@@ -21257,6 +21393,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["occupant_info_list"] = request.OccupantInfoListShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RateKey))
+            {
+                query["rate_key"] = request.RateKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RatePlanId))
             {
                 query["rate_plan_id"] = request.RatePlanId;
@@ -21369,6 +21509,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OccupantInfoListShrink))
             {
                 query["occupant_info_list"] = request.OccupantInfoListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RateKey))
+            {
+                query["rate_key"] = request.RateKey;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RatePlanId))
             {
@@ -22655,7 +22799,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>国际机票订单详情</para>
+        /// <para>International Flight Order Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22710,7 +22854,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>国际机票订单详情</para>
+        /// <para>International Flight Order Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22765,7 +22909,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>国际机票订单详情</para>
+        /// <para>International Flight Order Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22784,7 +22928,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>国际机票订单详情</para>
+        /// <para>International Flight Order Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23043,6 +23187,226 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询国际/中国港澳台用车记账数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IeCarBillSettlementQueryRequest
+        /// </param>
+        /// <param name="headers">
+        /// IeCarBillSettlementQueryHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IeCarBillSettlementQueryResponse
+        /// </returns>
+        public IeCarBillSettlementQueryResponse IeCarBillSettlementQueryWithOptions(IeCarBillSettlementQueryRequest request, IeCarBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["page_no"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodEnd))
+            {
+                query["period_end"] = request.PeriodEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
+            {
+                query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IeCarBillSettlementQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/open/v1/ieCar-bill-settlement-query",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IeCarBillSettlementQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询国际/中国港澳台用车记账数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IeCarBillSettlementQueryRequest
+        /// </param>
+        /// <param name="headers">
+        /// IeCarBillSettlementQueryHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IeCarBillSettlementQueryResponse
+        /// </returns>
+        public async Task<IeCarBillSettlementQueryResponse> IeCarBillSettlementQueryWithOptionsAsync(IeCarBillSettlementQueryRequest request, IeCarBillSettlementQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
+            {
+                query["bill_batch"] = request.BillBatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["page_no"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["page_size"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodEnd))
+            {
+                query["period_end"] = request.PeriodEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodStart))
+            {
+                query["period_start"] = request.PeriodStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollId))
+            {
+                query["scroll_id"] = request.ScrollId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollMod))
+            {
+                query["scroll_mod"] = request.ScrollMod;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IeCarBillSettlementQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/open/v1/ieCar-bill-settlement-query",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IeCarBillSettlementQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询国际/中国港澳台用车记账数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IeCarBillSettlementQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IeCarBillSettlementQueryResponse
+        /// </returns>
+        public IeCarBillSettlementQueryResponse IeCarBillSettlementQuery(IeCarBillSettlementQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IeCarBillSettlementQueryHeaders headers = new IeCarBillSettlementQueryHeaders();
+            return IeCarBillSettlementQueryWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询国际/中国港澳台用车记账数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IeCarBillSettlementQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IeCarBillSettlementQueryResponse
+        /// </returns>
+        public async Task<IeCarBillSettlementQueryResponse> IeCarBillSettlementQueryAsync(IeCarBillSettlementQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IeCarBillSettlementQueryHeaders headers = new IeCarBillSettlementQueryHeaders();
+            return await IeCarBillSettlementQueryWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询国际机票记账数据</para>
         /// </summary>
         /// 
@@ -23066,6 +23430,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
             {
                 query["bill_batch"] = request.BillBatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
@@ -23149,6 +23521,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
             {
                 query["bill_batch"] = request.BillBatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
@@ -23271,6 +23651,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["bill_batch"] = request.BillBatch;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
                 query["category"] = request.Category;
@@ -23357,6 +23745,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
             {
                 query["bill_batch"] = request.BillBatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
@@ -28643,6 +29039,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["bank_no"] = request.BankNo;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MailThirdPartId))
+            {
+                body["mail_third_part_id"] = request.MailThirdPartId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaxNo))
             {
                 body["tax_no"] = request.TaxNo;
@@ -28729,6 +29129,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BankNo))
             {
                 body["bank_no"] = request.BankNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MailThirdPartId))
+            {
+                body["mail_third_part_id"] = request.MailThirdPartId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaxNo))
             {
@@ -29003,6 +29407,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["bank_no"] = request.BankNo;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MailThirdPartId))
+            {
+                body["mail_third_part_id"] = request.MailThirdPartId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaxNo))
             {
                 body["tax_no"] = request.TaxNo;
@@ -29089,6 +29497,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BankNo))
             {
                 body["bank_no"] = request.BankNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MailThirdPartId))
+            {
+                body["mail_third_part_id"] = request.MailThirdPartId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaxNo))
             {
@@ -30273,6 +30685,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 body["cost_center_id"] = request.CostCenterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendField))
+            {
+                body["extend_field"] = request.ExtendField;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceId))
             {
                 body["invoice_id"] = request.InvoiceId;
@@ -30381,6 +30797,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CostCenterId))
             {
                 body["cost_center_id"] = request.CostCenterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtendField))
+            {
+                body["extend_field"] = request.ExtendField;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceId))
             {
@@ -30843,6 +31263,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["bill_batch"] = request.BillBatch;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
                 query["order_id"] = request.OrderId;
@@ -30925,6 +31353,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
             {
                 query["bill_batch"] = request.BillBatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
@@ -32475,6 +32911,170 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             ProjectModifyHeaders headers = new ProjectModifyHeaders();
             return await ProjectModifyWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询赔付信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCompenInfosForOpRequest
+        /// </param>
+        /// <param name="headers">
+        /// QueryCompenInfosForOpHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCompenInfosForOpResponse
+        /// </returns>
+        public QueryCompenInfosForOpResponse QueryCompenInfosForOpWithOptions(QueryCompenInfosForOpRequest request, QueryCompenInfosForOpHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompenId))
+            {
+                query["compen_id"] = request.CompenId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCompenInfosForOp",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/compen/v1/queryCompenInfosForOp",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCompenInfosForOpResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询赔付信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCompenInfosForOpRequest
+        /// </param>
+        /// <param name="headers">
+        /// QueryCompenInfosForOpHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCompenInfosForOpResponse
+        /// </returns>
+        public async Task<QueryCompenInfosForOpResponse> QueryCompenInfosForOpWithOptionsAsync(QueryCompenInfosForOpRequest request, QueryCompenInfosForOpHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompenId))
+            {
+                query["compen_id"] = request.CompenId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCompenInfosForOp",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/compen/v1/queryCompenInfosForOp",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCompenInfosForOpResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询赔付信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCompenInfosForOpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCompenInfosForOpResponse
+        /// </returns>
+        public QueryCompenInfosForOpResponse QueryCompenInfosForOp(QueryCompenInfosForOpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            QueryCompenInfosForOpHeaders headers = new QueryCompenInfosForOpHeaders();
+            return QueryCompenInfosForOpWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询赔付信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCompenInfosForOpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCompenInfosForOpResponse
+        /// </returns>
+        public async Task<QueryCompenInfosForOpResponse> QueryCompenInfosForOpAsync(QueryCompenInfosForOpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            QueryCompenInfosForOpHeaders headers = new QueryCompenInfosForOpHeaders();
+            return await QueryCompenInfosForOpWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -35291,6 +35891,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["bill_batch"] = request.BillBatch;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
                 query["order_id"] = request.OrderId;
@@ -35373,6 +35981,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
             {
                 query["bill_batch"] = request.BillBatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
@@ -38191,9 +38807,21 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["bill_id"] = request.BillId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceDateEnd))
+            {
+                query["invoice_date_end"] = request.InvoiceDateEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceDateStart))
+            {
+                query["invoice_date_start"] = request.InvoiceDateStart;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceSubTaskId))
             {
                 query["invoice_sub_task_id"] = request.InvoiceSubTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
@@ -38270,9 +38898,21 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["bill_id"] = request.BillId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceDateEnd))
+            {
+                query["invoice_date_end"] = request.InvoiceDateEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceDateStart))
+            {
+                query["invoice_date_start"] = request.InvoiceDateStart;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvoiceSubTaskId))
             {
                 query["invoice_sub_task_id"] = request.InvoiceSubTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
@@ -40947,6 +41587,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["bill_batch"] = request.BillBatch;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CooperatorId))
             {
                 query["cooperator_id"] = request.CooperatorId;
@@ -41033,6 +41681,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillBatch))
             {
                 query["bill_batch"] = request.BillBatch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeEnd))
+            {
+                query["bill_record_time_end"] = request.BillRecordTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillRecordTimeStart))
+            {
+                query["bill_record_time_start"] = request.BillRecordTimeStart;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CooperatorId))
             {

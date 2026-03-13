@@ -177,6 +177,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string BaseLocation { get; set; }
 
+                [NameInMap("before_ticket_no")]
+                [Validation(Required=false)]
+                public string BeforeTicketNo { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>2023-01-01 00:00:00</para>
@@ -684,6 +688,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("seal_price")]
                 [Validation(Required=false)]
                 public double? SealPrice { get; set; }
+
+                [NameInMap("segment_list")]
+                [Validation(Required=false)]
+                public string SegmentList { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

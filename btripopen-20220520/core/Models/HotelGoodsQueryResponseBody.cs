@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string EarlyArrivalTime { get; set; }
 
+            [NameInMap("hotel_group_desc")]
+            [Validation(Required=false)]
+            public string HotelGroupDesc { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>29382</para>
@@ -269,6 +273,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public string CompanyAassist { get; set; }
 
+                    [NameInMap("company_assist_type")]
+                    [Validation(Required=false)]
+                    public string CompanyAssistType { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -411,6 +419,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                     }
 
+                    [NameInMap("hotel_member_benefit")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, string> HotelMemberBenefit { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -491,6 +503,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public int? MinDays { get; set; }
 
+                    [NameInMap("need_certificate")]
+                    [Validation(Required=false)]
+                    public bool? NeedCertificate { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -546,6 +562,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [NameInMap("rate_id")]
                     [Validation(Required=false)]
                     public long? RateId { get; set; }
+
+                    [NameInMap("rate_key")]
+                    [Validation(Required=false)]
+                    public string RateKey { get; set; }
 
                     [NameInMap("rate_plan_name")]
                     [Validation(Required=false)]

@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public TripBusinessInstanceQueryResponseBodyModule Module { get; set; }
         public class TripBusinessInstanceQueryResponseBodyModule : TeaModel {
+            [NameInMap("business_data")]
+            [Validation(Required=false)]
+            public string BusinessData { get; set; }
+
             [NameInMap("creator")]
             [Validation(Required=false)]
             public string Creator { get; set; }

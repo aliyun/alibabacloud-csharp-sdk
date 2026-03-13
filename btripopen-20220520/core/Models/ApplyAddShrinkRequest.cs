@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string HotelShareShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Y</para>
+        /// </summary>
         [NameInMap("international_flight_cabins")]
         [Validation(Required=false)]
         public string InternationalFlightCabins { get; set; }

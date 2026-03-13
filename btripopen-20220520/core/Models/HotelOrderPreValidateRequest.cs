@@ -148,6 +148,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
+        [NameInMap("rate_key")]
+        [Validation(Required=false)]
+        public string RateKey { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

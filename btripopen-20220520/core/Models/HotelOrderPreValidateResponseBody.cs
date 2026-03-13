@@ -241,6 +241,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                 }
 
+                [NameInMap("cert_type_list")]
+                [Validation(Required=false)]
+                public List<string> CertTypeList { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>12:00</para>

@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string ArrAirport { get; set; }
 
+            [NameInMap("arr_apt_prefecture_ad_code")]
+            [Validation(Required=false)]
+            public string ArrAptPrefectureAdCode { get; set; }
+
+            [NameInMap("arr_apt_prefecture_name")]
+            [Validation(Required=false)]
+            public string ArrAptPrefectureName { get; set; }
+
             [NameInMap("arr_city")]
             [Validation(Required=false)]
             public string ArrCity { get; set; }
@@ -102,6 +110,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("dep_airport")]
             [Validation(Required=false)]
             public string DepAirport { get; set; }
+
+            [NameInMap("dep_apt_prefecture_ad_code")]
+            [Validation(Required=false)]
+            public string DepAptPrefectureAdCode { get; set; }
+
+            [NameInMap("dep_apt_prefecture_name")]
+            [Validation(Required=false)]
+            public string DepAptPrefectureName { get; set; }
 
             [NameInMap("dep_city")]
             [Validation(Required=false)]

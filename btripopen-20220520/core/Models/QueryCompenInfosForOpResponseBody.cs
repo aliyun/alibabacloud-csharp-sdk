@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
-    public class CommonApplyQueryResponseBody : TeaModel {
+    public class QueryCompenInfosForOpResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>SUCCESS</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
@@ -23,91 +23,71 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         [NameInMap("module")]
         [Validation(Required=false)]
-        public CommonApplyQueryResponseBodyModule Module { get; set; }
-        public class CommonApplyQueryResponseBodyModule : TeaModel {
+        public List<QueryCompenInfosForOpResponseBodyModule> Module { get; set; }
+        public class QueryCompenInfosForOpResponseBodyModule : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>123</para>
+            /// <para>500</para>
             /// </summary>
-            [NameInMap("apply_id")]
+            [NameInMap("amount")]
             [Validation(Required=false)]
-            public long? ApplyId { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>5</para>
-            /// </summary>
-            [NameInMap("biz_category")]
-            [Validation(Required=false)]
-            public int? BizCategory { get; set; }
-
-            [NameInMap("cause")]
-            [Validation(Required=false)]
-            public string Cause { get; set; }
+            public long? Amount { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>0001A1100000007EX08O</para>
+            /// <para>1</para>
             /// </summary>
-            [NameInMap("corp_id")]
+            [NameInMap("category")]
             [Validation(Required=false)]
-            public string CorpId { get; set; }
-
-            [NameInMap("extend_value")]
-            [Validation(Required=false)]
-            public string ExtendValue { get; set; }
+            public int? Category { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>2021-03-18T20:26Z</para>
+            /// <para>82508250249123456</para>
             /// </summary>
-            [NameInMap("gmt_create")]
+            [NameInMap("compen_id")]
             [Validation(Required=false)]
-            public string GmtCreate { get; set; }
+            public string CompenId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("compensation_type")]
+            [Validation(Required=false)]
+            public string CompensationType { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1002086203277812345</para>
+            /// </summary>
             [NameInMap("order_id")]
             [Validation(Required=false)]
-            public long? OrderId { get; set; }
+            public string OrderId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>0</para>
+            /// <para>2025-09-22 20:13:58</para>
             /// </summary>
-            [NameInMap("status")]
+            [NameInMap("settle_time")]
             [Validation(Required=false)]
-            public int? Status { get; set; }
+            public string SettleTime { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>1233</para>
+            /// <para>8</para>
             /// </summary>
-            [NameInMap("thirdpart_corp_id")]
+            [NameInMap("settle_type")]
             [Validation(Required=false)]
-            public string ThirdpartCorpId { get; set; }
+            public int? SettleType { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>12344</para>
+            /// <para>999-12345678</para>
             /// </summary>
-            [NameInMap("thirdpart_id")]
+            [NameInMap("ticket_no")]
             [Validation(Required=false)]
-            public string ThirdpartId { get; set; }
-
-            [NameInMap("trip_cause")]
-            [Validation(Required=false)]
-            public string TripCause { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>user1</para>
-            /// </summary>
-            [NameInMap("user_id")]
-            [Validation(Required=false)]
-            public string UserId { get; set; }
-
-            [NameInMap("user_name")]
-            [Validation(Required=false)]
-            public string UserName { get; set; }
+            public string TicketNo { get; set; }
 
         }
 
@@ -129,7 +109,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>21041ce316577904808056433edbb2</para>
+        /// <para>210f079e16603757182131635d866a</para>
         /// </summary>
         [NameInMap("traceId")]
         [Validation(Required=false)]

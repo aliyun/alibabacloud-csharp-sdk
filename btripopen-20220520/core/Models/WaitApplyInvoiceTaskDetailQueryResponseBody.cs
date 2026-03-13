@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string HotelSpecialInvoiceFee { get; set; }
 
+            [NameInMap("ie_vehicle_normal_invoice_fee")]
+            [Validation(Required=false)]
+            public string IeVehicleNormalInvoiceFee { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>0</para>
@@ -108,6 +112,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("meal_normal_invoice_fee")]
             [Validation(Required=false)]
             public string MealNormalInvoiceFee { get; set; }
+
+            [NameInMap("meal_tc7_normal_invoice_fee")]
+            [Validation(Required=false)]
+            public string MealTc7NormalInvoiceFee { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

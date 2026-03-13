@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string BillBatch { get; set; }
 
+        [NameInMap("bill_record_time_end")]
+        [Validation(Required=false)]
+        public string BillRecordTimeEnd { get; set; }
+
+        [NameInMap("bill_record_time_start")]
+        [Validation(Required=false)]
+        public string BillRecordTimeStart { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>12</para>

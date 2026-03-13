@@ -109,6 +109,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string ItineraryNo { get; set; }
 
+        [NameInMap("member_info")]
+        [Validation(Required=false)]
+        public string MemberInfoShrink { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>

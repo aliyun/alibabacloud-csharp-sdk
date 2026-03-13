@@ -273,6 +273,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Amount { get; set; }
 
+                [NameInMap("payee_account_number")]
+                [Validation(Required=false)]
+                public string PayeeAccountNumber { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>userId</para>

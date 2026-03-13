@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TrainTicketScanQueryRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>2022-12-01</para>
         /// </summary>
@@ -27,6 +25,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public long? BillId { get; set; }
 
+        [NameInMap("invoice_date_end")]
+        [Validation(Required=false)]
+        public string InvoiceDateEnd { get; set; }
+
+        [NameInMap("invoice_date_start")]
+        [Validation(Required=false)]
+        public string InvoiceDateStart { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>456</para>
@@ -34,6 +40,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [NameInMap("invoice_sub_task_id")]
         [Validation(Required=false)]
         public long? InvoiceSubTaskId { get; set; }
+
+        [NameInMap("order_id")]
+        [Validation(Required=false)]
+        public long? OrderId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

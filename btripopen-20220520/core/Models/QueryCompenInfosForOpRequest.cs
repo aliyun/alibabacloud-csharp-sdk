@@ -8,34 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
-    public class FlightOtaItemDetailRequest : TeaModel {
+    public class QueryCompenInfosForOpRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cheshi</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("isv_name")]
+        [NameInMap("category")]
         [Validation(Required=false)]
-        public string IsvName { get; set; }
+        public int? Category { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>82508250249123456</para>
+        /// </summary>
+        [NameInMap("compen_id")]
+        [Validation(Required=false)]
+        public string CompenId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1002086203277812345</para>
+        /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>68cdc6b37c87484c98b479b49306ffbb_0</para>
-        /// </summary>
-        [NameInMap("ota_item_id")]
-        [Validation(Required=false)]
-        public string OtaItemId { get; set; }
-
-        [NameInMap("out_order_id")]
-        [Validation(Required=false)]
-        public string OutOrderId { get; set; }
 
     }
 

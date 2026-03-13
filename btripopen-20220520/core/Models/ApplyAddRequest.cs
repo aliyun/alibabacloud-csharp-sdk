@@ -393,6 +393,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Y</para>
+        /// </summary>
         [NameInMap("international_flight_cabins")]
         [Validation(Required=false)]
         public string InternationalFlightCabins { get; set; }

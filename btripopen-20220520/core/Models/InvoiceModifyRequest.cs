@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string BankNo { get; set; }
 
+        [NameInMap("mail_third_part_id")]
+        [Validation(Required=false)]
+        public string MailThirdPartId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>122333121</para>

@@ -309,6 +309,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public int? OrderStatus { get; set; }
 
+                [NameInMap("replenish_order_ids")]
+                [Validation(Required=false)]
+                public string ReplenishOrderIds { get; set; }
+
+                [NameInMap("replenish_original_order_id")]
+                [Validation(Required=false)]
+                public string ReplenishOriginalOrderId { get; set; }
+
                 [NameInMap("thirdPart_business_id")]
                 [Validation(Required=false)]
                 public string ThirdPartBusinessId { get; set; }

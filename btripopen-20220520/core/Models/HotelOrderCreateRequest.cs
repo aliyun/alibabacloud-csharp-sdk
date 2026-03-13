@@ -223,6 +223,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string ItineraryNo { get; set; }
 
+        [NameInMap("member_info")]
+        [Validation(Required=false)]
+        public HotelOrderCreateRequestMemberInfo MemberInfo { get; set; }
+        public class HotelOrderCreateRequestMemberInfo : TeaModel {
+            [NameInMap("card_no")]
+            [Validation(Required=false)]
+            public string CardNo { get; set; }
+
+            [NameInMap("real_name")]
+            [Validation(Required=false)]
+            public string RealName { get; set; }
+
+        }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -245,6 +259,44 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("card_type")]
             [Validation(Required=false)]
             public int? CardType { get; set; }
+
+            [NameInMap("cascade_dept_name")]
+            [Validation(Required=false)]
+            public string CascadeDeptName { get; set; }
+
+            [NameInMap("cost_center_info")]
+            [Validation(Required=false)]
+            public HotelOrderCreateRequestOccupantInfoListCostCenterInfo CostCenterInfo { get; set; }
+            public class HotelOrderCreateRequestOccupantInfoListCostCenterInfo : TeaModel {
+                [NameInMap("cost_center_id")]
+                [Validation(Required=false)]
+                public string CostCenterId { get; set; }
+
+                [NameInMap("cost_center_name")]
+                [Validation(Required=false)]
+                public string CostCenterName { get; set; }
+
+                [NameInMap("cost_center_no")]
+                [Validation(Required=false)]
+                public string CostCenterNo { get; set; }
+
+                [NameInMap("invoice_id")]
+                [Validation(Required=false)]
+                public string InvoiceId { get; set; }
+
+                [NameInMap("invoice_title")]
+                [Validation(Required=false)]
+                public string InvoiceTitle { get; set; }
+
+                [NameInMap("project_code")]
+                [Validation(Required=false)]
+                public string ProjectCode { get; set; }
+
+                [NameInMap("project_title")]
+                [Validation(Required=false)]
+                public string ProjectTitle { get; set; }
+
+            }
 
             /// <summary>
             /// <b>Example:</b>
@@ -289,6 +341,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("first_name")]
             [Validation(Required=false)]
             public string FirstName { get; set; }
+
+            [NameInMap("is_booker")]
+            [Validation(Required=false)]
+            public bool? IsBooker { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string BillDate { get; set; }
 
+                [NameInMap("blue_or_red")]
+                [Validation(Required=false)]
+                public int? BlueOrRed { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -266,6 +270,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string OssUrl { get; set; }
 
+                [NameInMap("other_taxes")]
+                [Validation(Required=false)]
+                public string OtherTaxes { get; set; }
+
                 [NameInMap("passenger_name")]
                 [Validation(Required=false)]
                 public string PassengerName { get; set; }
@@ -346,6 +354,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("validation_code")]
                 [Validation(Required=false)]
                 public string ValidationCode { get; set; }
+
+                [NameInMap("xml_oss_url")]
+                [Validation(Required=false)]
+                public string XmlOssUrl { get; set; }
 
             }
 

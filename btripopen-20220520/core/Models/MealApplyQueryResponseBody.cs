@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public long? CostCenterId { get; set; }
 
+            [NameInMap("extend_field")]
+            [Validation(Required=false)]
+            public string ExtendField { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2022-07-04T16:13Z</para>

@@ -25,18 +25,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? CityCode { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>杭州</para>
-        /// </summary>
         [NameInMap("city_name")]
         [Validation(Required=false)]
         public string CityName { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>杭州东站</para>
-        /// </summary>
         [NameInMap("display_name")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
@@ -49,14 +41,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string HotelId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="https://gw.alicdn.com/imgextra/i3/O1CN01qKg25r1rKLOKxT3vB_!!6000000005612-2-tps-32-32.png">https://gw.alicdn.com/imgextra/i3/O1CN01qKg25r1rKLOKxT3vB_!!6000000005612-2-tps-32-32.png</a></para>
+        /// </summary>
         [NameInMap("icon")]
         [Validation(Required=false)]
         public string Icon { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>4.8分</para>
-        /// </summary>
         [NameInMap("point")]
         [Validation(Required=false)]
         public string Point { get; set; }
@@ -77,14 +69,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? Region { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public int? Type { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>景点</para>
-        /// </summary>
         [NameInMap("type_desc")]
         [Validation(Required=false)]
         public string TypeDesc { get; set; }

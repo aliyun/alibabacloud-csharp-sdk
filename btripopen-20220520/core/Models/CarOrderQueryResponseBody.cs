@@ -255,6 +255,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string BtripTitle { get; set; }
 
+                [NameInMap("car_order_source_type")]
+                [Validation(Required=false)]
+                public long? CarOrderSourceType { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>xxxxxxxx</para>

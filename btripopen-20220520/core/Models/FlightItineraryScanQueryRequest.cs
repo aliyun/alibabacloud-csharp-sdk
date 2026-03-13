@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string ItineraryNum { get; set; }
 
+        [NameInMap("order_id")]
+        [Validation(Required=false)]
+        public long? OrderId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>

@@ -116,6 +116,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string RoomType { get; set; }
 
+                [NameInMap("star")]
+                [Validation(Required=false)]
+                public string Star { get; set; }
+
             }
 
             [NameInMap("invoice_info")]

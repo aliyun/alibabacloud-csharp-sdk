@@ -69,9 +69,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Department { get; set; }
 
+                [NameInMap("electronic_ticket_no")]
+                [Validation(Required=false)]
+                public string ElectronicTicketNo { get; set; }
+
                 [NameInMap("fee_type_show_code")]
                 [Validation(Required=false)]
                 public int? FeeTypeShowCode { get; set; }
+
+                [NameInMap("has_changed")]
+                [Validation(Required=false)]
+                public bool? HasChanged { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -104,6 +112,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("order_id")]
                 [Validation(Required=false)]
                 public long? OrderId { get; set; }
+
+                [NameInMap("origin_ticket_no")]
+                [Validation(Required=false)]
+                public string OriginTicketNo { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -192,6 +204,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("train_no")]
                 [Validation(Required=false)]
                 public string TrainNo { get; set; }
+
+                [NameInMap("xml_url")]
+                [Validation(Required=false)]
+                public string XmlUrl { get; set; }
 
             }
 
