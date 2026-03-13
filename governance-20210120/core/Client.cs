@@ -707,6 +707,162 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>生成治理检测报告</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GenerateEvaluationReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateEvaluationReportResponse
+        /// </returns>
+        public GenerateEvaluationReportResponse GenerateEvaluationReportWithOptions(GenerateEvaluationReportRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GenerateEvaluationReportShrinkRequest request = new GenerateEvaluationReportShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AccountIds))
+            {
+                request.AccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AccountIds, "AccountIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIdsShrink))
+            {
+                query["AccountIds"] = request.AccountIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportType))
+            {
+                query["ReportType"] = request.ReportType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateEvaluationReport",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateEvaluationReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成治理检测报告</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GenerateEvaluationReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateEvaluationReportResponse
+        /// </returns>
+        public async Task<GenerateEvaluationReportResponse> GenerateEvaluationReportWithOptionsAsync(GenerateEvaluationReportRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GenerateEvaluationReportShrinkRequest request = new GenerateEvaluationReportShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AccountIds))
+            {
+                request.AccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AccountIds, "AccountIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIdsShrink))
+            {
+                query["AccountIds"] = request.AccountIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportType))
+            {
+                query["ReportType"] = request.ReportType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateEvaluationReport",
+                Version = "2021-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateEvaluationReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成治理检测报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateEvaluationReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateEvaluationReportResponse
+        /// </returns>
+        public GenerateEvaluationReportResponse GenerateEvaluationReport(GenerateEvaluationReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GenerateEvaluationReportWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成治理检测报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateEvaluationReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateEvaluationReportResponse
+        /// </returns>
+        public async Task<GenerateEvaluationReportResponse> GenerateEvaluationReportAsync(GenerateEvaluationReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GenerateEvaluationReportWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Obtains the details of an account factory baseline.</para>
         /// </summary>
         /// 
