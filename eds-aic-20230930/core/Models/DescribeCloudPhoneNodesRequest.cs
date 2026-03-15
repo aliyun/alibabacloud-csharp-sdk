@@ -107,6 +107,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<DescribeCloudPhoneNodesRequestTags> Tags { get; set; }
+        public class DescribeCloudPhoneNodesRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

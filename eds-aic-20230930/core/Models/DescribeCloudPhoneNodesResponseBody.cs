@@ -278,6 +278,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public int? SwapSize { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<DescribeCloudPhoneNodesResponseBodyNodeModelTags> Tags { get; set; }
+            public class DescribeCloudPhoneNodesResponseBodyNodeModelTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The vSwitch ID.</para>
             /// 

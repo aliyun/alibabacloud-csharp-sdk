@@ -228,6 +228,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>wya.wuying.aliyun.com/instanceGroup</para>
+        /// </summary>
+        [NameInMap("PaidCallBackUrl")]
+        [Validation(Required=false)]
+        public string PaidCallBackUrl { get; set; }
+
+        /// <summary>
         /// <para>The subscription duration. The unit is specified by PeriodUnit.</para>
         /// 
         /// <b>Example:</b>

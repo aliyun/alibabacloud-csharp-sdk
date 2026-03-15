@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         }
 
+        [NameInMap("Ports")]
+        [Validation(Required=false)]
+        public List<string> Ports { get; set; }
+
     }
 
 }

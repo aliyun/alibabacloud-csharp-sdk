@@ -920,6 +920,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["InstanceTasks"] = request.InstanceTasks;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ports))
+            {
+                query["Ports"] = request.Ports;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -977,6 +981,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTasks))
             {
                 query["InstanceTasks"] = request.InstanceTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ports))
+            {
+                query["Ports"] = request.Ports;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1495,6 +1503,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["OfficeSiteId"] = request.OfficeSiteId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
                 query["Period"] = request.Period;
@@ -1651,6 +1663,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
             {
                 query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
@@ -5416,6 +5432,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["Status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5493,6 +5513,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
