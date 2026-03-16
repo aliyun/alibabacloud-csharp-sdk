@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        [NameInMap("DBSecurityIpList")]
+        [Validation(Required=false)]
+        public string DBSecurityIpList { get; set; }
+
         /// <summary>
         /// <para>The Supabase Dashboard password (Not Used)</para>
         /// 

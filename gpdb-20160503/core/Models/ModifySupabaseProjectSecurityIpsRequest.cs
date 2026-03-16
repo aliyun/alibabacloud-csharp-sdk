@@ -48,6 +48,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string SecurityIPList { get; set; }
 
+        [NameInMap("UpdateDb")]
+        [Validation(Required=false)]
+        public bool? UpdateDb { get; set; }
+
+        [NameInMap("UpdateWeb")]
+        [Validation(Required=false)]
+        public bool? UpdateWeb { get; set; }
+
     }
 
 }

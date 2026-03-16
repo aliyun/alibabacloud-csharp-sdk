@@ -34966,6 +34966,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["SecurityIPList"] = request.SecurityIPList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateDb))
+            {
+                query["UpdateDb"] = request.UpdateDb;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateWeb))
+            {
+                query["UpdateWeb"] = request.UpdateWeb;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -35020,6 +35028,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPList))
             {
                 query["SecurityIPList"] = request.SecurityIPList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateDb))
+            {
+                query["UpdateDb"] = request.UpdateDb;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateWeb))
+            {
+                query["UpdateWeb"] = request.UpdateWeb;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
