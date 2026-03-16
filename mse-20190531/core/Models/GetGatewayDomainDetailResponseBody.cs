@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public long? BeforeDate { get; set; }
 
+            [NameInMap("CaCertIdentifier")]
+            [Validation(Required=false)]
+            public string CaCertIdentifier { get; set; }
+
             /// <summary>
             /// <para>The ID of the certificate.</para>
             /// 
@@ -184,6 +188,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("Issuer")]
             [Validation(Required=false)]
             public string Issuer { get; set; }
+
+            [NameInMap("MtlsEnabled")]
+            [Validation(Required=false)]
+            public bool? MtlsEnabled { get; set; }
 
             /// <summary>
             /// <para>Indicates whether HTTPS is forcibly used.</para>

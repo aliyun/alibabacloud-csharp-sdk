@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public CreateOrUpdateSwimmingLaneGroupResponseBodyData Data { get; set; }
         public class CreateOrUpdateSwimmingLaneGroupResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The list of application IDs that are separated by commas (,).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>abcd1@abcde123,abcd1@abcde124</para>
             /// </summary>
@@ -40,6 +42,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string DbGrayEnable { get; set; }
 
             /// <summary>
+            /// <para>The ingress application.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mse:abcd1@a2345</para>
             /// </summary>
@@ -47,11 +51,19 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string EntryApp { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the lane group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2047</para>
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The side for message filtering when the canary release for messaging feature is enabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Client</para>
             /// </summary>
@@ -59,6 +71,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string MessageQueueFilterSide { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to enable canary release for messaging.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("MessageQueueGrayEnable")]
             [Validation(Required=false)]
             public bool? MessageQueueGrayEnable { get; set; }
@@ -72,6 +90,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The name of the MSE namespace.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>prod</para>
             /// </summary>
@@ -83,11 +103,19 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Paths { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to record request details.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("RecordCanaryDetail")]
             [Validation(Required=false)]
             public bool? RecordCanaryDetail { get; set; }
 
             /// <summary>
+            /// <para>The region where the application resides.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -96,6 +124,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Region { get; set; }
 
             /// <summary>
+            /// <para>The ID of the user to which the application belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12345</para>
             /// </summary>

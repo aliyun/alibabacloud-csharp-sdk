@@ -52,66 +52,140 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Obsolete]
         public string EntryRule { get; set; }
 
+        /// <summary>
+        /// <para>The lane.</para>
+        /// </summary>
         [NameInMap("EntryRules")]
         [Validation(Required=false)]
         public List<CreateOrUpdateSwimmingLaneRequestEntryRules> EntryRules { get; set; }
         public class CreateOrUpdateSwimmingLaneRequestEntryRules : TeaModel {
             /// <summary>
+            /// <para>Specifies how RESTful items are combined into the final condition.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>AND</para>
+            /// <para>&quot;&quot;</para>
             /// </summary>
             [NameInMap("Condition")]
             [Validation(Required=false)]
             public string Condition { get; set; }
 
+            /// <summary>
+            /// <para>The paths.</para>
+            /// </summary>
             [NameInMap("Paths")]
             [Validation(Required=false)]
             public List<string> Paths { get; set; }
 
+            /// <summary>
+            /// <para>The priority.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
+            /// <summary>
+            /// <para>The matching list.</para>
+            /// </summary>
             [NameInMap("RestItems")]
             [Validation(Required=false)]
             public List<CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems> RestItems { get; set; }
             public class CreateOrUpdateSwimmingLaneRequestEntryRulesRestItems : TeaModel {
+                /// <summary>
+                /// <para>The matching character.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>=</para>
+                /// </summary>
                 [NameInMap("Cond")]
                 [Validation(Required=false)]
                 public string Cond { get; set; }
 
+                /// <summary>
+                /// <para>The value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>.params[0]</para>
+                /// </summary>
                 [NameInMap("Datum")]
                 [Validation(Required=false)]
                 public string Datum { get; set; }
 
+                /// <summary>
+                /// <para>The divisor.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
+                /// </summary>
                 [NameInMap("Divisor")]
                 [Validation(Required=false)]
                 public int? Divisor { get; set; }
 
+                /// <summary>
+                /// <para>The name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>&quot;&quot;</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>The matching list.</para>
+                /// </summary>
                 [NameInMap("NameList")]
                 [Validation(Required=false)]
                 public List<string> NameList { get; set; }
 
+                /// <summary>
+                /// <para>The operator.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mod</para>
+                /// </summary>
                 [NameInMap("Operator")]
                 [Validation(Required=false)]
                 public string Operator { get; set; }
 
+                /// <summary>
+                /// <para>The percentage.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
+                /// </summary>
                 [NameInMap("Rate")]
                 [Validation(Required=false)]
                 public int? Rate { get; set; }
 
+                /// <summary>
+                /// <para>The remainder.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
                 [NameInMap("Remainder")]
                 [Validation(Required=false)]
                 public int? Remainder { get; set; }
 
+                /// <summary>
+                /// <para>The matching type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>header</para>
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
+                /// <summary>
+                /// <para>The value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>&quot;&quot;</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

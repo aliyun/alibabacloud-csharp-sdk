@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<QueryAllSwimmingLaneGroupResponseBodyData> Data { get; set; }
         public class QueryAllSwimmingLaneGroupResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The application IDs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>abcde@abcde,abcde@abcde</para>
             /// </summary>
@@ -42,6 +44,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? CanaryModel { get; set; }
 
             /// <summary>
+            /// <para>The type and ID of the ingress application.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mse:abcde@abcde</para>
             /// </summary>
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string EntryApp { get; set; }
 
             /// <summary>
+            /// <para>The ID of the lane group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -58,6 +64,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The side at which canary release for messaging was enabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Client</para>
             /// </summary>
@@ -65,11 +73,19 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string MessageQueueFilterSide { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether canary release for messaging is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("MessageQueueGrayEnable")]
             [Validation(Required=false)]
             public bool? MessageQueueGrayEnable { get; set; }
 
             /// <summary>
+            /// <para>The name of the lane group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>swimmingGroup</para>
             /// </summary>
@@ -78,6 +94,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The MSE namespace to which the lane belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>default</para>
             /// </summary>
@@ -89,11 +107,19 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Paths { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the request details (metrics of end-to-end canary release) were recorded.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("RecordCanaryDetail")]
             [Validation(Required=false)]
             public bool? RecordCanaryDetail { get; set; }
 
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -106,6 +132,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? SwimVersion { get; set; }
 
             /// <summary>
+            /// <para>The ID of the user to which the lane belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12345</para>
             /// </summary>

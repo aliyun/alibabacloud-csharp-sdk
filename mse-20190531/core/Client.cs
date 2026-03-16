@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增服务鉴权规则</para>
+        /// <para>Creates a service authentication rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增服务鉴权规则</para>
+        /// <para>Creates a service authentication rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增服务鉴权规则</para>
+        /// <para>Creates a service authentication rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增服务鉴权规则</para>
+        /// <para>Creates a service authentication rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates authorization information for a gateway.</para>
+        /// <para>Adds authorization information for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates authorization information for a gateway.</para>
+        /// <para>Adds authorization information for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -391,7 +391,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates authorization information for a gateway.</para>
+        /// <para>Adds authorization information for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -409,7 +409,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates authorization information for a gateway.</para>
+        /// <para>Adds authorization information for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1502,6 +1502,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaCertIdentifier))
+            {
+                query["CaCertIdentifier"] = request.CaCertIdentifier;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertIdentifier))
             {
                 query["CertIdentifier"] = request.CertIdentifier;
@@ -1513,6 +1517,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Http2))
             {
                 query["Http2"] = request.Http2;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MtlsEnabled))
+            {
+                query["MtlsEnabled"] = request.MtlsEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MustHttps))
             {
@@ -1586,6 +1594,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaCertIdentifier))
+            {
+                query["CaCertIdentifier"] = request.CaCertIdentifier;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertIdentifier))
             {
                 query["CertIdentifier"] = request.CertIdentifier;
@@ -1597,6 +1609,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Http2))
             {
                 query["Http2"] = request.Http2;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MtlsEnabled))
+            {
+                query["MtlsEnabled"] = request.MtlsEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MustHttps))
             {
@@ -1979,7 +1995,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a service version.</para>
+        /// <para>Adds a service version for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2033,7 +2049,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a service version.</para>
+        /// <para>Adds a service version for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2087,7 +2103,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a service version.</para>
+        /// <para>Adds a service version for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2105,7 +2121,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a service version.</para>
+        /// <para>Adds a service version for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2527,7 +2543,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a mock rule.</para>
+        /// <para>Creates a service mocking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2613,7 +2629,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a mock rule.</para>
+        /// <para>Creates a service mocking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2699,7 +2715,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a mock rule.</para>
+        /// <para>Creates a service mocking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2717,7 +2733,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a mock rule.</para>
+        /// <para>Creates a service mocking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5371,7 +5387,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网关路由熔断规则</para>
+        /// <para>Creates a gateway circuit breaking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5477,7 +5493,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网关路由熔断规则</para>
+        /// <para>Creates a gateway circuit breaking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5583,7 +5599,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网关路由熔断规则</para>
+        /// <para>Creates a gateway circuit breaking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5601,7 +5617,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网关路由熔断规则</para>
+        /// <para>Creates a gateway circuit breaking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5827,7 +5843,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网关路由隔离规则</para>
+        /// <para>Creates a concurrency rule for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5913,7 +5929,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网关路由隔离规则</para>
+        /// <para>Creates a concurrency rule for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5999,7 +6015,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网关路由隔离规则</para>
+        /// <para>Creates a concurrency rule for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6017,7 +6033,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网关路由隔离规则</para>
+        /// <para>Creates a concurrency rule for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6035,7 +6051,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建隔离规则</para>
+        /// <para>Creates an isolation rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6109,7 +6125,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建隔离规则</para>
+        /// <para>Creates an isolation rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6183,7 +6199,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建隔离规则</para>
+        /// <para>Creates an isolation rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6201,7 +6217,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建隔离规则</para>
+        /// <para>Creates an isolation rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7291,7 +7307,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateNamespace</para>
+        /// <para>Creates a namespace for Microservices Governance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7351,7 +7367,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateNamespace</para>
+        /// <para>Creates a namespace for Microservices Governance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7411,7 +7427,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateNamespace</para>
+        /// <para>Creates a namespace for Microservices Governance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7429,7 +7445,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateNamespace</para>
+        /// <para>Creates a namespace for Microservices Governance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8323,7 +8339,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建热点参数防护规则（HTTP 请求）</para>
+        /// <para>Creates a hot parameter protection rule for HTTP requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8425,7 +8441,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建热点参数防护规则（HTTP 请求）</para>
+        /// <para>Creates a hot parameter protection rule for HTTP requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8527,7 +8543,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建热点参数防护规则（HTTP 请求）</para>
+        /// <para>Creates a hot parameter protection rule for HTTP requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8545,7 +8561,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建热点参数防护规则（HTTP 请求）</para>
+        /// <para>Creates a hot parameter protection rule for HTTP requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10123,7 +10139,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关路由熔断规则</para>
+        /// <para>Deletes a gateway circuit breaking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10177,7 +10193,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关路由熔断规则</para>
+        /// <para>Deletes a gateway circuit breaking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10231,7 +10247,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关路由熔断规则</para>
+        /// <para>Deletes a gateway circuit breaking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10249,7 +10265,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关路由熔断规则</para>
+        /// <para>Deletes a gateway circuit breaking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10267,7 +10283,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a domain name from a gateway.</para>
+        /// <para>Deletes a domain name that is associated with a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10317,7 +10333,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a domain name from a gateway.</para>
+        /// <para>Deletes a domain name that is associated with a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10367,7 +10383,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a domain name from a gateway.</para>
+        /// <para>Deletes a domain name that is associated with a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10385,7 +10401,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a domain name from a gateway.</para>
+        /// <para>Deletes a domain name that is associated with a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10403,7 +10419,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关路由流控规则</para>
+        /// <para>Deletes a throttling rule for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10457,7 +10473,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关路由流控规则</para>
+        /// <para>Deletes a throttling rule for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10511,7 +10527,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关路由流控规则</para>
+        /// <para>Deletes a throttling rule for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10529,7 +10545,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关路由流控规则</para>
+        /// <para>Deletes a throttling rule for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10547,7 +10563,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关路由隔离规则</para>
+        /// <para>Deletes the gateway concurrency rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10601,7 +10617,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关路由隔离规则</para>
+        /// <para>Deletes the gateway concurrency rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10655,7 +10671,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关路由隔离规则</para>
+        /// <para>Deletes the gateway concurrency rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10673,7 +10689,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关路由隔离规则</para>
+        /// <para>Deletes the gateway concurrency rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10827,7 +10843,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a service from a gateway.</para>
+        /// <para>Deletes a service from a gateway</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10881,7 +10897,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a service from a gateway.</para>
+        /// <para>Deletes a service from a gateway</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10935,7 +10951,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a service from a gateway.</para>
+        /// <para>Deletes a service from a gateway</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10953,7 +10969,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a service from a gateway.</para>
+        /// <para>Deletes a service from a gateway</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11267,7 +11283,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除隔离规则</para>
+        /// <para>Deletes isolation rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11327,7 +11343,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除隔离规则</para>
+        /// <para>Deletes isolation rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11387,7 +11403,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除隔离规则</para>
+        /// <para>Deletes isolation rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11405,7 +11421,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除隔离规则</para>
+        /// <para>Deletes isolation rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13287,7 +13303,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除热点参数防护规则（HTTP 请求）</para>
+        /// <para>Deletes a hot parameter protection rule for HTTP requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13341,7 +13357,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除热点参数防护规则（HTTP 请求）</para>
+        /// <para>Deletes a hot parameter protection rule for HTTP requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13395,7 +13411,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除热点参数防护规则（HTTP 请求）</para>
+        /// <para>Deletes a hot parameter protection rule for HTTP requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13413,7 +13429,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除热点参数防护规则（HTTP 请求）</para>
+        /// <para>Deletes a hot parameter protection rule for HTTP requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15715,7 +15731,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网关认证详情</para>
+        /// <para>Obtains the authentication details of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15769,7 +15785,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网关认证详情</para>
+        /// <para>Obtains the authentication details of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15823,7 +15839,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网关认证详情</para>
+        /// <para>Obtains the authentication details of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15841,7 +15857,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网关认证详情</para>
+        /// <para>Obtains the authentication details of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15859,7 +15875,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关全局配置</para>
+        /// <para>Obtains the parameter configurations of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15905,7 +15921,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关全局配置</para>
+        /// <para>Obtains the parameter configurations of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15951,7 +15967,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关全局配置</para>
+        /// <para>Obtains the parameter configurations of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15969,7 +15985,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取网关全局配置</para>
+        /// <para>Obtains the parameter configurations of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17111,7 +17127,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取同AZ路由规则</para>
+        /// <para>Obtains the Intra-zone Provider First rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17173,7 +17189,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取同AZ路由规则</para>
+        /// <para>Obtains the Intra-zone Provider First rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17235,7 +17251,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取同AZ路由规则</para>
+        /// <para>Obtains the Intra-zone Provider First rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17253,7 +17269,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取同AZ路由规则</para>
+        /// <para>Obtains the Intra-zone Provider First rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18243,7 +18259,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about service governance.</para>
+        /// <para>Queries overview information about Microservices Governance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -18298,7 +18314,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about service governance.</para>
+        /// <para>Queries overview information about Microservices Governance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -18353,7 +18369,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about service governance.</para>
+        /// <para>Queries overview information about Microservices Governance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -18376,7 +18392,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about service governance.</para>
+        /// <para>Queries overview information about Microservices Governance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19247,7 +19263,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务接口列表</para>
+        /// <para>Queries a list of service interfaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19345,7 +19361,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务接口列表</para>
+        /// <para>Queries a list of service interfaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19443,7 +19459,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务接口列表</para>
+        /// <para>Queries a list of service interfaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19461,7 +19477,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务接口列表</para>
+        /// <para>Queries a list of service interfaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20307,7 +20323,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户授权mseSLR</para>
+        /// <para>Creates a Microservices Engine (MSE) service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20357,7 +20373,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户授权mseSLR</para>
+        /// <para>Creates a Microservices Engine (MSE) service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20407,7 +20423,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户授权mseSLR</para>
+        /// <para>Creates a Microservices Engine (MSE) service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20425,7 +20441,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户授权mseSLR</para>
+        /// <para>Creates a Microservices Engine (MSE) service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24219,7 +24235,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看网关路由熔断规则</para>
+        /// <para>Queries a gateway circuit breaking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24265,7 +24281,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看网关路由熔断规则</para>
+        /// <para>Queries a gateway circuit breaking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24311,7 +24327,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看网关路由熔断规则</para>
+        /// <para>Queries a gateway circuit breaking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24329,7 +24345,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看网关路由熔断规则</para>
+        /// <para>Queries a gateway circuit breaking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24491,7 +24507,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看网关路由流控规则</para>
+        /// <para>Queries throttling rules of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24537,7 +24553,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看网关路由流控规则</para>
+        /// <para>Queries throttling rules of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24583,7 +24599,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看网关路由流控规则</para>
+        /// <para>Queries throttling rules of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24601,7 +24617,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看网关路由流控规则</para>
+        /// <para>Queries throttling rules of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24619,7 +24635,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看网关路由隔离规则</para>
+        /// <para>Queries the concurrency rule of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24665,7 +24681,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看网关路由隔离规则</para>
+        /// <para>Queries the concurrency rule of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24711,7 +24727,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看网关路由隔离规则</para>
+        /// <para>Queries the concurrency rule of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24729,7 +24745,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看网关路由隔离规则</para>
+        /// <para>Queries the concurrency rule of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25055,7 +25071,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of services that are subscribed with a gateway.</para>
+        /// <para>Queries a list of services that are subscribed to by a gateway.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25123,7 +25139,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of services that are subscribed with a gateway.</para>
+        /// <para>Queries a list of services that are subscribed to by a gateway.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25191,7 +25207,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of services that are subscribed with a gateway.</para>
+        /// <para>Queries a list of services that are subscribed to by a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25209,7 +25225,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of services that are subscribed with a gateway.</para>
+        /// <para>Queries a list of services that are subscribed to by a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25627,7 +25643,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询隔离规则</para>
+        /// <para>Queries isolation rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25697,7 +25713,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询隔离规则</para>
+        /// <para>Queries isolation rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25767,7 +25783,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询隔离规则</para>
+        /// <para>Queries isolation rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25785,7 +25801,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询隔离规则</para>
+        /// <para>Queries isolation rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26951,7 +26967,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示命名空间列表</para>
+        /// <para>Displays the list of namespaces, the number of online nodes in each namespace, and the total number of applications in each namespace. You can also call this operation to perform fuzzy queries based on the namespace name.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27019,7 +27035,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示命名空间列表</para>
+        /// <para>Displays the list of namespaces, the number of online nodes in each namespace, and the total number of applications in each namespace. You can also call this operation to perform fuzzy queries based on the namespace name.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27087,7 +27103,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示命名空间列表</para>
+        /// <para>Displays the list of namespaces, the number of online nodes in each namespace, and the total number of applications in each namespace. You can also call this operation to perform fuzzy queries based on the namespace name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27105,7 +27121,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示命名空间列表</para>
+        /// <para>Displays the list of namespaces, the number of online nodes in each namespace, and the total number of applications in each namespace. You can also call this operation to perform fuzzy queries based on the namespace name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28079,7 +28095,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询热点参数防护规则（HTTP 请求）</para>
+        /// <para>Queries hot parameter protection rules for HTTP requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28149,7 +28165,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询热点参数防护规则（HTTP 请求）</para>
+        /// <para>Queries hot parameter protection rules for HTTP requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28219,7 +28235,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询热点参数防护规则（HTTP 请求）</para>
+        /// <para>Queries hot parameter protection rules for HTTP requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28237,7 +28253,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询热点参数防护规则（HTTP 请求）</para>
+        /// <para>Queries hot parameter protection rules for HTTP requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28959,7 +28975,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unpublishes a route for a gateway.</para>
+        /// <para>Disables a route for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29009,7 +29025,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unpublishes a route for a gateway.</para>
+        /// <para>Disables a route for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29059,7 +29075,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unpublishes a route for a gateway.</para>
+        /// <para>Disables a route for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29077,7 +29093,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unpublishes a route for a gateway.</para>
+        /// <para>Disables a route for a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31511,7 +31527,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询nacos灰度配置</para>
+        /// <para>Queries canary configurations of a Nacos instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31581,7 +31597,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询nacos灰度配置</para>
+        /// <para>Queries canary configurations of a Nacos instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31651,7 +31667,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询nacos灰度配置</para>
+        /// <para>Queries canary configurations of a Nacos instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31669,7 +31685,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询nacos灰度配置</para>
+        /// <para>Queries canary configurations of a Nacos instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32223,7 +32239,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除单个应用</para>
+        /// <para>Deletes a single application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32281,7 +32297,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除单个应用</para>
+        /// <para>Deletes a single application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32339,7 +32355,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除单个应用</para>
+        /// <para>Deletes a single application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32357,7 +32373,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除单个应用</para>
+        /// <para>Deletes a single application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32373,6 +32389,11 @@ namespace AlibabaCloud.SDK.Mse20190531
             return await RemoveApplicationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service authentication rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveAuthPolicyRequest
         /// </param>
@@ -32414,6 +32435,11 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<RemoveAuthPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service authentication rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveAuthPolicyRequest
         /// </param>
@@ -32455,6 +32481,11 @@ namespace AlibabaCloud.SDK.Mse20190531
             return TeaModel.ToObject<RemoveAuthPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service authentication rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveAuthPolicyRequest
         /// </param>
@@ -32468,6 +32499,11 @@ namespace AlibabaCloud.SDK.Mse20190531
             return RemoveAuthPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service authentication rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveAuthPolicyRequest
         /// </param>
@@ -36051,7 +36087,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关路由熔断规则</para>
+        /// <para>Updates a gateway circuit breaking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36161,7 +36197,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关路由熔断规则</para>
+        /// <para>Updates a gateway circuit breaking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36271,7 +36307,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关路由熔断规则</para>
+        /// <para>Updates a gateway circuit breaking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36289,7 +36325,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关路由熔断规则</para>
+        /// <para>Updates a gateway circuit breaking rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36307,7 +36343,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关配置</para>
+        /// <para>Updates gateway configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36361,7 +36397,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关配置</para>
+        /// <para>Updates gateway configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36415,7 +36451,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关配置</para>
+        /// <para>Updates gateway configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36433,7 +36469,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关配置</para>
+        /// <para>Updates gateway configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36478,6 +36514,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaCertIdentifier))
+            {
+                query["CaCertIdentifier"] = request.CaCertIdentifier;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertIdentifier))
             {
                 query["CertIdentifier"] = request.CertIdentifier;
@@ -36493,6 +36533,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MtlsEnabled))
+            {
+                query["MtlsEnabled"] = request.MtlsEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MustHttps))
             {
@@ -36562,6 +36606,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaCertIdentifier))
+            {
+                query["CaCertIdentifier"] = request.CaCertIdentifier;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertIdentifier))
             {
                 query["CertIdentifier"] = request.CertIdentifier;
@@ -36577,6 +36625,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MtlsEnabled))
+            {
+                query["MtlsEnabled"] = request.MtlsEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MustHttps))
             {
@@ -36655,7 +36707,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关路由流控规则</para>
+        /// <para>Queries throttling rules of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36745,7 +36797,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关路由流控规则</para>
+        /// <para>Queries throttling rules of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36835,7 +36887,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关路由流控规则</para>
+        /// <para>Queries throttling rules of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36853,7 +36905,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关路由流控规则</para>
+        /// <para>Queries throttling rules of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36871,7 +36923,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关路由隔离规则</para>
+        /// <para>Updates the concurrency rule of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36961,7 +37013,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关路由隔离规则</para>
+        /// <para>Updates the concurrency rule of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37051,7 +37103,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关路由隔离规则</para>
+        /// <para>Updates the concurrency rule of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37069,7 +37121,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网关路由隔离规则</para>
+        /// <para>Updates the concurrency rule of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37087,7 +37139,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renames a gateway.</para>
+        /// <para>Updates the name of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37137,7 +37189,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renames a gateway.</para>
+        /// <para>Updates the name of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37187,7 +37239,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renames a gateway.</para>
+        /// <para>Updates the name of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37205,7 +37257,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renames a gateway.</para>
+        /// <para>Updates the name of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38767,7 +38819,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务</para>
+        /// <para>Updates gateways for fixed address services or DNS services.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -38855,7 +38907,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务</para>
+        /// <para>Updates gateways for fixed address services or DNS services.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -38943,7 +38995,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务</para>
+        /// <para>Updates gateways for fixed address services or DNS services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38961,7 +39013,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务</para>
+        /// <para>Updates gateways for fixed address services or DNS services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39363,7 +39415,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the version of a service.</para>
+        /// <para>Updates the service version of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39417,7 +39469,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the version of a service.</para>
+        /// <para>Updates the service version of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39471,7 +39523,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the version of a service.</para>
+        /// <para>Updates the service version of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39489,7 +39541,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the version of a service.</para>
+        /// <para>Updates the service version of a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39807,7 +39859,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新隔离规则</para>
+        /// <para>Updates an isolation rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39877,7 +39929,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新隔离规则</para>
+        /// <para>Updates an isolation rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39947,7 +39999,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新隔离规则</para>
+        /// <para>Updates an isolation rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39965,7 +40017,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新隔离规则</para>
+        /// <para>Updates an isolation rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39983,7 +40035,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新同AZ路由规则</para>
+        /// <para>Updates the Intra-zone Provider First rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40057,7 +40109,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新同AZ路由规则</para>
+        /// <para>Updates the Intra-zone Provider First rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40131,7 +40183,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新同AZ路由规则</para>
+        /// <para>Updates the Intra-zone Provider First rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40149,7 +40201,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新同AZ路由规则</para>
+        /// <para>Updates the Intra-zone Provider First rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41011,7 +41063,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新nacos灰度配置</para>
+        /// <para>Updates the canary release settings, which include beta release and tag-based canary release.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41109,7 +41161,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新nacos灰度配置</para>
+        /// <para>Updates the canary release settings, which include beta release and tag-based canary release.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41207,7 +41259,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新nacos灰度配置</para>
+        /// <para>Updates the canary release settings, which include beta release and tag-based canary release.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41225,7 +41277,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新nacos灰度配置</para>
+        /// <para>Updates the canary release settings, which include beta release and tag-based canary release.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41679,7 +41731,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a plug-in.</para>
+        /// <para>Updates plug-in configurations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41769,7 +41821,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a plug-in.</para>
+        /// <para>Updates plug-in configurations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41859,7 +41911,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a plug-in.</para>
+        /// <para>Updates plug-in configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41877,7 +41929,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a plug-in.</para>
+        /// <para>Updates plug-in configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42251,7 +42303,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新热点参数防护规则（HTTP 请求）</para>
+        /// <para>Updates a hot parameter protection rule for HTTP requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42349,7 +42401,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新热点参数防护规则（HTTP 请求）</para>
+        /// <para>Updates a hot parameter protection rule for HTTP requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42447,7 +42499,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新热点参数防护规则（HTTP 请求）</para>
+        /// <para>Updates a hot parameter protection rule for HTTP requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42465,7 +42517,7 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新热点参数防护规则（HTTP 请求）</para>
+        /// <para>Updates a hot parameter protection rule for HTTP requests.</para>
         /// </summary>
         /// 
         /// <param name="request">

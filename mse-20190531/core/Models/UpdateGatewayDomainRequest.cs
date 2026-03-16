@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        [NameInMap("CaCertIdentifier")]
+        [Validation(Required=false)]
+        public string CaCertIdentifier { get; set; }
+
         /// <summary>
         /// <para>The ID of the certificate.</para>
         /// 
@@ -67,6 +71,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
+
+        [NameInMap("MtlsEnabled")]
+        [Validation(Required=false)]
+        public bool? MtlsEnabled { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to forcibly use HTTPS.</para>
