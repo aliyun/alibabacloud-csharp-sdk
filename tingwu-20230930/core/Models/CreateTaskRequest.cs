@@ -213,6 +213,20 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 [Validation(Required=false)]
                 public bool? TranslateLlmSceneEnabled { get; set; }
 
+                [NameInMap("TranslationHotwordMap")]
+                [Validation(Required=false)]
+                public CreateTaskRequestParametersExtraParamsTranslationHotwordMap TranslationHotwordMap { get; set; }
+                public class CreateTaskRequestParametersExtraParamsTranslationHotwordMap : TeaModel {
+                    [NameInMap("bizType")]
+                    [Validation(Required=false)]
+                    public string BizType { get; set; }
+
+                    [NameInMap("bizUserId")]
+                    [Validation(Required=false)]
+                    public string BizUserId { get; set; }
+
+                }
+
             }
 
             [NameInMap("IdentityRecognition")]
