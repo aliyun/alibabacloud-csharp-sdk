@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string CustomDomainUrl { get; set; }
 
+        /// <summary>
+        /// <para>端点名称</para>
+        /// </summary>
+        [NameInMap("endpointName")]
+        [Validation(Required=false)]
+        public string EndpointName { get; set; }
+
         [NameInMap("endpointUrl")]
         [Validation(Required=false)]
         public string EndpointUrl { get; set; }

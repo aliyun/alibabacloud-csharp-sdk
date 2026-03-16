@@ -50,6 +50,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>是否禁用该端点的公网访问</para>
+        /// </summary>
+        [NameInMap("disablePublicNetworkAccess")]
+        [Validation(Required=false)]
+        public bool? DisablePublicNetworkAccess { get; set; }
+
+        /// <summary>
         /// <para>智能体运行时端点的公网访问地址</para>
         /// 
         /// <b>Example:</b>

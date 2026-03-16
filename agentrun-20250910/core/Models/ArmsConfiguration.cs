@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string ArmsLicenseKey { get; set; }
 
+        [NameInMap("cmsWorkspace")]
+        [Validation(Required=false)]
+        public string CmsWorkspace { get; set; }
+
         /// <summary>
         /// <para>是否启用应用实时监控服务（ARMS）</para>
         /// 

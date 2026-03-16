@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Obsolete]
         public int? SandboxTTLInSeconds { get; set; }
 
+        [NameInMap("scalingConfig")]
+        [Validation(Required=false)]
+        public ScalingConfig ScalingConfig { get; set; }
+
         /// <summary>
         /// <para>模板配置（灵活的对象结构，根据 templateType 不同而不同）</para>
         /// </summary>

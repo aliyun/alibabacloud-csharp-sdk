@@ -129,6 +129,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Obsolete]
         public string SandboxTTLInSeconds { get; set; }
 
+        [NameInMap("scalingStatus")]
+        [Validation(Required=false)]
+        public ScalingStatus ScalingStatus { get; set; }
+
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }

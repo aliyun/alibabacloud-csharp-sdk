@@ -9,8 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class GetDiscoveryEndpointsOutput : TeaModel {
+        /// <term><b>Obsolete</b></term>
         [NameInMap("credentialName")]
         [Validation(Required=false)]
+        [Obsolete]
         public string CredentialName { get; set; }
 
         [NameInMap("discoveryEndpoints")]
