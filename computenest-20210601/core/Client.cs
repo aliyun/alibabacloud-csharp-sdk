@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a cloud resource belongs.</para>
+        /// <para>Changes the resource group of a cloud resource based on the resource ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a cloud resource belongs.</para>
+        /// <para>Changes the resource group of a cloud resource based on the resource ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -291,7 +291,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a cloud resource belongs.</para>
+        /// <para>Changes the resource group of a cloud resource based on the resource ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a cloud resource belongs.</para>
+        /// <para>Changes the resource group of a cloud resource based on the resource ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -327,7 +327,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务实例部署前的预检查</para>
+        /// <para>Performs a precheck before deploying a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -393,7 +393,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务实例部署前的预检查</para>
+        /// <para>Performs a precheck before deploying a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -459,7 +459,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务实例部署前的预检查</para>
+        /// <para>Performs a precheck before deploying a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -477,7 +477,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务实例部署前的预检查</para>
+        /// <para>Performs a precheck before deploying a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1563,7 +1563,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete service instances.</para>
+        /// <para>Deletes service instances based on the region ID and service instance IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1613,7 +1613,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete service instances.</para>
+        /// <para>Deletes service instances based on the region ID and service instance IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1663,7 +1663,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete service instances.</para>
+        /// <para>Deletes service instances based on the region ID and service instance IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1681,7 +1681,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete service instances.</para>
+        /// <para>Deletes service instances based on the region ID and service instance IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1699,7 +1699,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploy service instance in Created status.</para>
+        /// <para>Deploys the created service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1749,7 +1749,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploy service instance in Created status.</para>
+        /// <para>Deploys the created service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1799,7 +1799,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploy service instance in Created status.</para>
+        /// <para>Deploys the created service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1817,7 +1817,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploy service instance in Created status.</para>
+        /// <para>Deploys the created service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1955,7 +1955,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成并校验服务创建stack所需要的权限</para>
+        /// <para>Queries the missing policies before creating a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2017,7 +2017,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成并校验服务创建stack所需要的权限</para>
+        /// <para>Queries the missing policies before creating a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2079,7 +2079,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成并校验服务创建stack所需要的权限</para>
+        /// <para>Queries the missing policies before creating a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2097,7 +2097,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成并校验服务创建stack所需要的权限</para>
+        /// <para>Queries the missing policies before creating a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2951,7 +2951,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query renewal prices for prepaid resources of private deployment service instance. You can query renewal prices for all prepaid resources included in a service instance, or query renewal prices for specified resources. Only one of the two methods can be used.</para>
+        /// <para>Inquiries the prices of subscription resources for private service instances. Renewal price inquiry is supported. You can make a unified renewal price inquiry for all subscription resources based on a specific service instance ID or make a renewal price inquiry for a specific resource. You can specify a service instance ID or a resource in a request, but cannot specify both of them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3017,7 +3017,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query renewal prices for prepaid resources of private deployment service instance. You can query renewal prices for all prepaid resources included in a service instance, or query renewal prices for specified resources. Only one of the two methods can be used.</para>
+        /// <para>Inquiries the prices of subscription resources for private service instances. Renewal price inquiry is supported. You can make a unified renewal price inquiry for all subscription resources based on a specific service instance ID or make a renewal price inquiry for a specific resource. You can specify a service instance ID or a resource in a request, but cannot specify both of them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3083,7 +3083,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query renewal prices for prepaid resources of private deployment service instance. You can query renewal prices for all prepaid resources included in a service instance, or query renewal prices for specified resources. Only one of the two methods can be used.</para>
+        /// <para>Inquiries the prices of subscription resources for private service instances. Renewal price inquiry is supported. You can make a unified renewal price inquiry for all subscription resources based on a specific service instance ID or make a renewal price inquiry for a specific resource. You can specify a service instance ID or a resource in a request, but cannot specify both of them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3101,7 +3101,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query renewal prices for prepaid resources of private deployment service instance. You can query renewal prices for all prepaid resources included in a service instance, or query renewal prices for specified resources. Only one of the two methods can be used.</para>
+        /// <para>Inquiries the prices of subscription resources for private service instances. Renewal price inquiry is supported. You can make a unified renewal price inquiry for all subscription resources based on a specific service instance ID or make a renewal price inquiry for a specific resource. You can specify a service instance ID or a resource in a request, but cannot specify both of them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3291,7 +3291,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the constraints on the parameters in an Resource Orchestration Service (ROS) template.</para>
+        /// <para>Queries the constraints on the parameters in a Resource Orchestration Service (ROS) template in a region based on the template name and service ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3373,7 +3373,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the constraints on the parameters in an Resource Orchestration Service (ROS) template.</para>
+        /// <para>Queries the constraints on the parameters in a Resource Orchestration Service (ROS) template in a region based on the template name and service ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3455,7 +3455,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the constraints on the parameters in an Resource Orchestration Service (ROS) template.</para>
+        /// <para>Queries the constraints on the parameters in a Resource Orchestration Service (ROS) template in a region based on the template name and service ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3473,7 +3473,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the constraints on the parameters in an Resource Orchestration Service (ROS) template.</para>
+        /// <para>Queries the constraints on the parameters in a Resource Orchestration Service (ROS) template in a region based on the template name and service ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3771,7 +3771,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Permission Policy List</para>
+        /// <para>Queires the permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3821,7 +3821,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Permission Policy List</para>
+        /// <para>Queires the permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3871,7 +3871,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Permission Policy List</para>
+        /// <para>Queires the permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3889,7 +3889,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Permission Policy List</para>
+        /// <para>Queires the permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4067,7 +4067,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务类别</para>
+        /// <para>Queries service categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4100,7 +4100,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务类别</para>
+        /// <para>Queries service categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4133,7 +4133,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务类别</para>
+        /// <para>Queries service categories.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4147,7 +4147,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务类别</para>
+        /// <para>Queries service categories.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4161,7 +4161,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示服务实例账单</para>
+        /// <para>Queries instance bills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4223,7 +4223,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示服务实例账单</para>
+        /// <para>Queries instance bills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4285,7 +4285,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示服务实例账单</para>
+        /// <para>Queries instance bills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4303,7 +4303,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示服务实例账单</para>
+        /// <para>Queries instance bills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5297,7 +5297,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签键列表</para>
+        /// <para>Queries the existing tag keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5347,7 +5347,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签键列表</para>
+        /// <para>Queries the existing tag keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5397,7 +5397,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签键列表</para>
+        /// <para>Queries the existing tag keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5415,7 +5415,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签键列表</para>
+        /// <para>Queries the existing tag keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5433,7 +5433,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签资源列表</para>
+        /// <para>Query tag resource list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5491,7 +5491,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签资源列表</para>
+        /// <para>Query tag resource list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5549,7 +5549,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签资源列表</para>
+        /// <para>Query tag resource list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5567,7 +5567,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签资源列表</para>
+        /// <para>Query tag resource list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5585,7 +5585,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签值列表</para>
+        /// <para>Queries the tag values of a tag key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5639,7 +5639,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签值列表</para>
+        /// <para>Queries the tag values of a tag key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5693,7 +5693,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签值列表</para>
+        /// <para>Queries the tag values of a tag key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5711,7 +5711,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签值列表</para>
+        /// <para>Queries the tag values of a tag key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5729,7 +5729,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renew the prepaid resources included in the private deployment service instance. You can renew all prepaid resources under the specified service instance ID, or you can renew the specified resources. Only one of the two renewal methods can be used.</para>
+        /// <para>Renews the subscription resources that are included in a private service instance. You can renew all subscription resources included in a private service instance based on the ID of the private service instance. You can also renew specific resources included in a private service instance. You can use only one of the preceding renewal methods.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5791,7 +5791,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renew the prepaid resources included in the private deployment service instance. You can renew all prepaid resources under the specified service instance ID, or you can renew the specified resources. Only one of the two renewal methods can be used.</para>
+        /// <para>Renews the subscription resources that are included in a private service instance. You can renew all subscription resources included in a private service instance based on the ID of the private service instance. You can also renew specific resources included in a private service instance. You can use only one of the preceding renewal methods.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5853,7 +5853,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renew the prepaid resources included in the private deployment service instance. You can renew all prepaid resources under the specified service instance ID, or you can renew the specified resources. Only one of the two renewal methods can be used.</para>
+        /// <para>Renews the subscription resources that are included in a private service instance. You can renew all subscription resources included in a private service instance based on the ID of the private service instance. You can also renew specific resources included in a private service instance. You can use only one of the preceding renewal methods.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5871,7 +5871,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renew the prepaid resources included in the private deployment service instance. You can renew all prepaid resources under the specified service instance ID, or you can renew the specified resources. Only one of the two renewal methods can be used.</para>
+        /// <para>Renews the subscription resources that are included in a private service instance. You can renew all subscription resources included in a private service instance based on the ID of the private service instance. You can also renew specific resources included in a private service instance. You can use only one of the preceding renewal methods.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5889,7 +5889,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When the service instance is Deployed, call the RestartServiceInstance interface to restart the service instance.</para>
+        /// <para>Restarts a service instance that is in the Deployed state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5939,7 +5939,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When the service instance is Deployed, call the RestartServiceInstance interface to restart the service instance.</para>
+        /// <para>Restarts a service instance that is in the Deployed state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5989,7 +5989,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When the service instance is Deployed, call the RestartServiceInstance interface to restart the service instance.</para>
+        /// <para>Restarts a service instance that is in the Deployed state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6007,7 +6007,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When the service instance is Deployed, call the RestartServiceInstance interface to restart the service instance.</para>
+        /// <para>Restarts a service instance that is in the Deployed state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6161,7 +6161,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When the service instance status is Stopped (Stopped) or StartFailed (Startup failed), the StartServiceInstance interface is invoked to start the service instance.</para>
+        /// <para>Starts a service instance that is in the Stopped or StartFailed state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6211,7 +6211,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When the service instance status is Stopped (Stopped) or StartFailed (Startup failed), the StartServiceInstance interface is invoked to start the service instance.</para>
+        /// <para>Starts a service instance that is in the Stopped or StartFailed state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6261,7 +6261,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When the service instance status is Stopped (Stopped) or StartFailed (Startup failed), the StartServiceInstance interface is invoked to start the service instance.</para>
+        /// <para>Starts a service instance that is in the Stopped or StartFailed state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6279,7 +6279,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When the service instance status is Stopped (Stopped) or StartFailed (Startup failed), the StartServiceInstance interface is invoked to start the service instance.</para>
+        /// <para>Starts a service instance that is in the Stopped or StartFailed state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6297,7 +6297,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When the service instance is Deployed and StopFailed, call the StopServiceInstance interface to stop the service instance.</para>
+        /// <para>Stops a service instance that is in the Deployed or StopFailed state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6347,7 +6347,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When the service instance is Deployed and StopFailed, call the StopServiceInstance interface to stop the service instance.</para>
+        /// <para>Stops a service instance that is in the Deployed or StopFailed state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6397,7 +6397,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When the service instance is Deployed and StopFailed, call the StopServiceInstance interface to stop the service instance.</para>
+        /// <para>Stops a service instance that is in the Deployed or StopFailed state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6415,7 +6415,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When the service instance is Deployed and StopFailed, call the StopServiceInstance interface to stop the service instance.</para>
+        /// <para>Stops a service instance that is in the Deployed or StopFailed state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6433,7 +6433,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给资源打标签</para>
+        /// <para>Creates and adds tags to a specified resource list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6487,7 +6487,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给资源打标签</para>
+        /// <para>Creates and adds tags to a specified resource list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6541,7 +6541,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给资源打标签</para>
+        /// <para>Creates and adds tags to a specified resource list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6559,7 +6559,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给资源打标签</para>
+        /// <para>Creates and adds tags to a specified resource list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6577,7 +6577,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给资源解除标签</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6635,7 +6635,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给资源解除标签</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6693,7 +6693,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给资源解除标签</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6711,7 +6711,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给资源解除标签</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             [Validation(Required=false)]
             public string Message { get; set; }
 
+            [NameInMap("Skippable")]
+            [Validation(Required=false)]
+            public bool? Skippable { get; set; }
+
             /// <summary>
             /// <para>Check type, invalid values:</para>
             /// <list type="bullet">
