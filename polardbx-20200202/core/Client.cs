@@ -17518,9 +17518,29 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             {
                 query["DBInstanceName"] = request.DBInstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstMainConnectString))
+            {
+                query["DstMainConnectString"] = request.DstMainConnectString;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstMainPort))
+            {
+                query["DstMainPort"] = request.DstMainPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsModifyEndpoint))
+            {
+                query["IsModifyEndpoint"] = request.IsModifyEndpoint;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcMainConnectString))
+            {
+                query["SrcMainConnectString"] = request.SrcMainConnectString;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcMainPort))
+            {
+                query["SrcMainPort"] = request.SrcMainPort;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchMode))
             {
@@ -17572,9 +17592,29 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             {
                 query["DBInstanceName"] = request.DBInstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstMainConnectString))
+            {
+                query["DstMainConnectString"] = request.DstMainConnectString;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstMainPort))
+            {
+                query["DstMainPort"] = request.DstMainPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsModifyEndpoint))
+            {
+                query["IsModifyEndpoint"] = request.IsModifyEndpoint;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcMainConnectString))
+            {
+                query["SrcMainConnectString"] = request.SrcMainConnectString;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcMainPort))
+            {
+                query["SrcMainPort"] = request.SrcMainPort;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchMode))
             {
