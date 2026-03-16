@@ -553,6 +553,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             {
                 request.CallTimeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallTimeList, "CallTimeList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallTimeStrList))
+            {
+                request.CallTimeStrListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallTimeStrList, "CallTimeStrList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RepeatReason))
             {
                 request.RepeatReasonShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RepeatReason, "RepeatReason", "json");
@@ -569,6 +573,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeListShrink))
             {
                 query["CallTimeList"] = request.CallTimeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeStrListShrink))
+            {
+                query["CallTimeStrList"] = request.CallTimeStrListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
             {
@@ -697,6 +705,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             {
                 request.CallTimeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallTimeList, "CallTimeList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallTimeStrList))
+            {
+                request.CallTimeStrListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallTimeStrList, "CallTimeStrList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RepeatReason))
             {
                 request.RepeatReasonShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RepeatReason, "RepeatReason", "json");
@@ -713,6 +725,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeListShrink))
             {
                 query["CallTimeList"] = request.CallTimeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeStrListShrink))
+            {
+                query["CallTimeStrList"] = request.CallTimeStrListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
             {
@@ -2385,6 +2401,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             {
                 request.CallTimeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallTimeList, "CallTimeList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallTimeStrList))
+            {
+                request.CallTimeStrListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallTimeStrList, "CallTimeStrList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RepeatReason))
             {
                 request.RepeatReasonShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RepeatReason, "RepeatReason", "json");
@@ -2401,6 +2421,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeListShrink))
             {
                 query["CallTimeList"] = request.CallTimeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeStrListShrink))
+            {
+                query["CallTimeStrList"] = request.CallTimeStrListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
             {
@@ -2529,6 +2553,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             {
                 request.CallTimeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallTimeList, "CallTimeList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallTimeStrList))
+            {
+                request.CallTimeStrListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallTimeStrList, "CallTimeStrList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RepeatReason))
             {
                 request.RepeatReasonShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RepeatReason, "RepeatReason", "json");
@@ -2545,6 +2573,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeListShrink))
             {
                 query["CallTimeList"] = request.CallTimeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeStrListShrink))
+            {
+                query["CallTimeStrList"] = request.CallTimeStrListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
             {
@@ -3561,6 +3593,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             {
                 request.CallTimeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallTimeList, "CallTimeList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallTimeStrList))
+            {
+                request.CallTimeStrListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallTimeStrList, "CallTimeStrList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentGroupId))
             {
@@ -3569,6 +3605,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeListShrink))
             {
                 query["CallTimeList"] = request.CallTimeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeStrListShrink))
+            {
+                query["CallTimeStrList"] = request.CallTimeStrListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -3649,6 +3689,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             {
                 request.CallTimeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallTimeList, "CallTimeList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallTimeStrList))
+            {
+                request.CallTimeStrListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallTimeStrList, "CallTimeStrList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentGroupId))
             {
@@ -3657,6 +3701,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeListShrink))
             {
                 query["CallTimeList"] = request.CallTimeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeStrListShrink))
+            {
+                query["CallTimeStrList"] = request.CallTimeStrListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {

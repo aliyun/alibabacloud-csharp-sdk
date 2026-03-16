@@ -17,6 +17,16 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         public string CallTimeListShrink { get; set; }
 
         /// <summary>
+        /// <para>外呼时间:精确到分钟.如果两个字段都存在值，以该字段为准。建议用该字段，精确到分钟, 08:31-12:05 13:33-19:00 则传[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]</para>
+        /// </summary>
+        [NameInMap("CallTimeStrList")]
+        [Validation(Required=false)]
+        public string CallTimeStrListShrink { get; set; }
+
+        /// <summary>
         /// <para>回调地址</para>
         /// 
         /// <b>Example:</b>
@@ -67,6 +77,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1234567890</para>
+        /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -145,10 +159,18 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         [Validation(Required=false)]
         public string RepeatTimesShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="mailto:example@aliyun.com">example@aliyun.com</a></para>
+        /// </summary>
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1885017412614451</para>
+        /// </summary>
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }

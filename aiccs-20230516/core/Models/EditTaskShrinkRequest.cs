@@ -11,10 +11,23 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
     public class EditTaskShrinkRequest : TeaModel {
         /// <summary>
         /// <para>外呼时间</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("CallTimeList")]
         [Validation(Required=false)]
         public string CallTimeListShrink { get; set; }
+
+        /// <summary>
+        /// <para>外呼时间:精确到分钟.如果两个字段都存在值，以该字段为准。建议用该字段，精确到分钟, 08:31-12:05 13:33-19:00 则传[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>外呼时间:精确到分钟.如果两个字段都存在值，以该字段为准。建议用该字段，精确到分钟, 08:31-12:05 13:33-19:00 则传[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</para>
+        /// </summary>
+        [NameInMap("CallTimeStrList")]
+        [Validation(Required=false)]
+        public string CallTimeStrListShrink { get; set; }
 
         /// <summary>
         /// <para>回调地址</para>
@@ -66,6 +79,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>456789123456</para>
+        /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -144,10 +161,18 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         [Validation(Required=false)]
         public string RepeatTimesShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>${&quot;curl 2W7xHcIl.popscan.xaliyun.com&quot;}</para>
+        /// </summary>
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1418129172157144</para>
+        /// </summary>
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
