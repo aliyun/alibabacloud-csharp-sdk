@@ -43,6 +43,20 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         [Validation(Required=false)]
         public AddImageResponseBodyPicInfo PicInfo { get; set; }
         public class AddImageResponseBodyPicInfo : TeaModel {
+            [NameInMap("AllCategories")]
+            [Validation(Required=false)]
+            public List<AddImageResponseBodyPicInfoAllCategories> AllCategories { get; set; }
+            public class AddImageResponseBodyPicInfoAllCategories : TeaModel {
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public int? Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The result of category prediction. If a category is specified in the request, the specified category prevails.</para>
             /// 
@@ -52,6 +66,16 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             [NameInMap("CategoryId")]
             [Validation(Required=false)]
             public int? CategoryId { get; set; }
+
+            [NameInMap("MultiRegion")]
+            [Validation(Required=false)]
+            public List<AddImageResponseBodyPicInfoMultiRegion> MultiRegion { get; set; }
+            public class AddImageResponseBodyPicInfoMultiRegion : TeaModel {
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The result of subject identification. The subject area of the image is in the format of <c>x1,x2,y1,y2</c>. <c>x1 and y1</c> represent the position in the upper-left corner, in pixels. <c>x2 and y2</c> represent the position in the lower-right corner, in pixels. If a subject area is specified in the request, the specified subject area prevails.</para>

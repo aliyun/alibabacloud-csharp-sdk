@@ -716,6 +716,142 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>CheckImageExists</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckImageExistsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckImageExistsResponse
+        /// </returns>
+        public CheckImageExistsResponse CheckImageExistsWithOptions(CheckImageExistsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                body["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PicName))
+            {
+                body["PicName"] = request.PicName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
+            {
+                body["ProductId"] = request.ProductId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckImageExists",
+                Version = "2020-12-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckImageExistsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CheckImageExists</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckImageExistsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckImageExistsResponse
+        /// </returns>
+        public async Task<CheckImageExistsResponse> CheckImageExistsWithOptionsAsync(CheckImageExistsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                body["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PicName))
+            {
+                body["PicName"] = request.PicName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
+            {
+                body["ProductId"] = request.ProductId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckImageExists",
+                Version = "2020-12-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckImageExistsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CheckImageExists</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckImageExistsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckImageExistsResponse
+        /// </returns>
+        public CheckImageExistsResponse CheckImageExists(CheckImageExistsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CheckImageExistsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CheckImageExists</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckImageExistsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckImageExistsResponse
+        /// </returns>
+        public async Task<CheckImageExistsResponse> CheckImageExistsAsync(CheckImageExistsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CheckImageExistsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>对比图片相似值</para>
         /// </summary>
         /// 
