@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class ModifyGroupRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ENTERPRISE</para>
+        /// </summary>
+        [NameInMap("BusinessChannel")]
+        [Validation(Required=false)]
+        public string BusinessChannel { get; set; }
+
+        /// <summary>
         /// <para>The new description of the user group.</para>
         /// 
         /// <b>Example:</b>

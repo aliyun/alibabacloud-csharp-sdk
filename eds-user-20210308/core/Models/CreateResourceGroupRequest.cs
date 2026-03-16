@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class CreateResourceGroupRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ENTERPRISE</para>
+        /// </summary>
+        [NameInMap("BusinessChannel")]
+        [Validation(Required=false)]
+        public string BusinessChannel { get; set; }
+
+        /// <summary>
         /// <remarks>
         /// <para> This parameter is not publicly available.</para>
         /// </remarks>

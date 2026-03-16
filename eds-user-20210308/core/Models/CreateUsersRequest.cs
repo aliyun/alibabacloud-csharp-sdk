@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string AutoLockTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ENTERPRISE</para>
+        /// </summary>
+        [NameInMap("BusinessChannel")]
+        [Validation(Required=false)]
+        public string BusinessChannel { get; set; }
+
         [NameInMap("IsLocalAdmin")]
         [Validation(Required=false)]
         public bool? IsLocalAdmin { get; set; }

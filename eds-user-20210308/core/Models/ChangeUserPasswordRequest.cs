@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
     public class ChangeUserPasswordRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>ENTERPRISE</para>
+        /// </summary>
+        [NameInMap("BusinessChannel")]
+        [Validation(Required=false)]
+        public string BusinessChannel { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>alice***</para>
         /// </summary>
         [NameInMap("EndUserId")]

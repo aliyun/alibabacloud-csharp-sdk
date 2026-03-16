@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class FilterUsersRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ENTERPRISE</para>
+        /// </summary>
+        [NameInMap("BusinessChannel")]
+        [Validation(Required=false)]
+        public string BusinessChannel { get; set; }
+
+        /// <summary>
         /// <para>The list of usernames to be precisely excluded.</para>
         /// </summary>
         [NameInMap("ExcludeEndUserIds")]
@@ -25,6 +33,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public string Filter { get; set; }
+
+        [NameInMap("FilterMap")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> FilterMap { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to return the number of cloud desktops that are assigned to the convenience user.</para>
@@ -77,6 +89,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [NameInMap("IncludeDesktopGroupCount")]
         [Validation(Required=false)]
         public bool? IncludeDesktopGroupCount { get; set; }
+
+        [NameInMap("IncludeEndUserIds")]
+        [Validation(Required=false)]
+        public List<string> IncludeEndUserIds { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to return the organization information.</para>

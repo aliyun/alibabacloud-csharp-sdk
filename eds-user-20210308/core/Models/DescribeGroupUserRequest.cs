@@ -22,6 +22,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BizType { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ENTERPRISE</para>
+        /// </summary>
+        [NameInMap("BusinessChannel")]
+        [Validation(Required=false)]
+        public string BusinessChannel { get; set; }
+
+        /// <summary>
         /// <para>The fuzzy search string that matches the username (EndUserId) and email address (Email) of the regular user.</para>
         /// 
         /// <b>Example:</b>

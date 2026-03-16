@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class ModifyUserRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ENTERPRISE</para>
+        /// </summary>
+        [NameInMap("BusinessChannel")]
+        [Validation(Required=false)]
+        public string BusinessChannel { get; set; }
+
+        /// <summary>
         /// <para>The email address of the convenience user. For a user-activated convenience user, the email address or mobile number must be verified. You can choose to verify the email address or the mobile number. For an administrator-activated convenience user, the email address and mobile number can be left empty.</para>
         /// 
         /// <b>Example:</b>

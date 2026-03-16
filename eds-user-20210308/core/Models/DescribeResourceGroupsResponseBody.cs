@@ -26,6 +26,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public List<DescribeResourceGroupsResponseBodyResourceGroup> ResourceGroup { get; set; }
         public class DescribeResourceGroupsResponseBodyResourceGroup : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>rg-123456</para>
+            /// </summary>
+            [NameInMap("AliyunResourceGroupId")]
+            [Validation(Required=false)]
+            public string AliyunResourceGroupId { get; set; }
+
             [NameInMap("AppRules")]
             [Validation(Required=false)]
             public List<DescribeResourceGroupsResponseBodyResourceGroupAppRules> AppRules { get; set; }

@@ -18,6 +18,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BizType { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ENTERPRISE</para>
+        /// </summary>
+        [NameInMap("BusinessChannel")]
+        [Validation(Required=false)]
+        public string BusinessChannel { get; set; }
+
+        /// <summary>
         /// <para>The usernames that must be exactly matched.</para>
         /// </summary>
         [NameInMap("EndUserIds")]
@@ -44,6 +52,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public string Filter { get; set; }
+
+        [NameInMap("FilterMap")]
+        [Validation(Required=false)]
+        public string FilterMapShrink { get; set; }
 
         [NameInMap("FilterWithAssignedResource")]
         [Validation(Required=false)]

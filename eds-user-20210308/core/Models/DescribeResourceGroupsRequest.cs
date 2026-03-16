@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DescribeResourceGroupsRequest : TeaModel {
+        [NameInMap("AliyunResourceGroupIds")]
+        [Validation(Required=false)]
+        public List<string> AliyunResourceGroupIds { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ENTERPRISE</para>
+        /// </summary>
+        [NameInMap("BusinessChannel")]
+        [Validation(Required=false)]
+        public string BusinessChannel { get; set; }
+
         /// <summary>
         /// <remarks>
         /// <para> This parameter is not publicly available.</para>

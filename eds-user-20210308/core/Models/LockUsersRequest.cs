@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class LockUsersRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ENTERPRISE</para>
+        /// </summary>
+        [NameInMap("BusinessChannel")]
+        [Validation(Required=false)]
+        public string BusinessChannel { get; set; }
+
         [NameInMap("LogoutSession")]
         [Validation(Required=false)]
         public bool? LogoutSession { get; set; }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
-    public class RemoveOrgRequest : TeaModel {
+    public class InitTenantAliasRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -16,17 +16,6 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [NameInMap("BusinessChannel")]
         [Validation(Required=false)]
         public string BusinessChannel { get; set; }
-
-        /// <summary>
-        /// <para>The organization ID.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>org-5yy5icj981xe5****</para>
-        /// </summary>
-        [NameInMap("OrgId")]
-        [Validation(Required=false)]
-        public string OrgId { get; set; }
 
     }
 

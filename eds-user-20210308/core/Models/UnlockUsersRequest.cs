@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string AutoLockTime { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ENTERPRISE</para>
+        /// </summary>
+        [NameInMap("BusinessChannel")]
+        [Validation(Required=false)]
+        public string BusinessChannel { get; set; }
+
+        /// <summary>
         /// <para>The usernames of the convenience users that you want to unlock.</para>
         /// <para>This parameter is required.</para>
         /// 
