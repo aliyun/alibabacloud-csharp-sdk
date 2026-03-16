@@ -41,6 +41,18 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string CPU { get; set; }
 
+            [NameInMap("City")]
+            [Validation(Required=false)]
+            public string City { get; set; }
+
+            [NameInMap("Continent")]
+            [Validation(Required=false)]
+            public string Continent { get; set; }
+
+            [NameInMap("Country")]
+            [Validation(Required=false)]
+            public string Country { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2023-07-17 18:46:55</para>
@@ -121,6 +133,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string EdrStatus { get; set; }
 
+            [NameInMap("FullDepartment")]
+            [Validation(Required=false)]
+            public List<string> FullDepartment { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>win10-64bit</para>
@@ -144,6 +160,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [NameInMap("InnerIP")]
             [Validation(Required=false)]
             public string InnerIP { get; set; }
+
+            [NameInMap("JoinAdDomain")]
+            [Validation(Required=false)]
+            public bool? JoinAdDomain { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -194,6 +214,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [NameInMap("PaStatus")]
             [Validation(Required=false)]
             public string PaStatus { get; set; }
+
+            [NameInMap("Province")]
+            [Validation(Required=false)]
+            public string Province { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

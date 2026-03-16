@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string AutoLoginStatus { get; set; }
 
+            [NameInMap("BatteryHealthPercentage")]
+            [Validation(Required=false)]
+            public int? BatteryHealthPercentage { get; set; }
+
+            [NameInMap("BatteryRemainingPercentage")]
+            [Validation(Required=false)]
+            public int? BatteryRemainingPercentage { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>Apple M1</para>
@@ -40,6 +48,18 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [NameInMap("CPU")]
             [Validation(Required=false)]
             public string CPU { get; set; }
+
+            [NameInMap("City")]
+            [Validation(Required=false)]
+            public string City { get; set; }
+
+            [NameInMap("Continent")]
+            [Validation(Required=false)]
+            public string Continent { get; set; }
+
+            [NameInMap("Country")]
+            [Validation(Required=false)]
+            public string Country { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -109,6 +129,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string Disk { get; set; }
 
+            [NameInMap("DiskAvailable")]
+            [Validation(Required=false)]
+            public int? DiskAvailable { get; set; }
+
+            [NameInMap("DiskUsed")]
+            [Validation(Required=false)]
+            public int? DiskUsed { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>Unauthorized</para>
@@ -163,6 +191,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string InnerIP { get; set; }
 
+            [NameInMap("JoinAdDomain")]
+            [Validation(Required=false)]
+            public bool? JoinAdDomain { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>48:9e:XX:XX:02:80</para>
@@ -213,6 +245,32 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string PaStatus { get; set; }
 
+            [NameInMap("Processes")]
+            [Validation(Required=false)]
+            public List<GetUserDeviceResponseBodyDeviceProcesses> Processes { get; set; }
+            public class GetUserDeviceResponseBodyDeviceProcesses : TeaModel {
+                [NameInMap("Cpu")]
+                [Validation(Required=false)]
+                public double? Cpu { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                [NameInMap("Memory")]
+                [Validation(Required=false)]
+                public int? Memory { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
+            [NameInMap("Province")]
+            [Validation(Required=false)]
+            public string Province { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</para>
@@ -256,6 +314,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [NameInMap("SrcIP")]
             [Validation(Required=false)]
             public string SrcIP { get; set; }
+
+            [NameInMap("TerminalInfoCollectTime")]
+            [Validation(Required=false)]
+            public long? TerminalInfoCollectTime { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

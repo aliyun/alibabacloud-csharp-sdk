@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string DevType { get; set; }
 
+            [NameInMap("FullDepartment")]
+            [Validation(Required=false)]
+            public List<string> FullDepartment { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>win10-64bit</para>
