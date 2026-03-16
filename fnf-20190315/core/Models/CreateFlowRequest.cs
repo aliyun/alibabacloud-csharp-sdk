@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// <para>The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, CloudFlow assumes the role to call API operations of relevant services.</para>
         /// 

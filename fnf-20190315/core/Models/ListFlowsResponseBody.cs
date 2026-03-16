@@ -123,6 +123,14 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>rg-xxx</para>
+            /// </summary>
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
+            /// <summary>
             /// <para>The Alibaba Cloud resource name (ARN) of the specified Resource Access Management (RAM) role that Serverless Workflow assumes to invoke resources when the flow is executed.</para>
             /// 
             /// <b>Example:</b>

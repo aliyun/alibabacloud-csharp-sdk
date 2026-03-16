@@ -103,6 +103,10 @@ namespace AlibabaCloud.SDK.Fnf20190315
             {
                 body["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleArn))
             {
                 body["RoleArn"] = request.RoleArn;
@@ -187,6 +191,10 @@ namespace AlibabaCloud.SDK.Fnf20190315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleArn))
             {
@@ -1575,7 +1583,7 @@ namespace AlibabaCloud.SDK.Fnf20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域信息列表</para>
+        /// <para>Queries the regions where CloudFlow is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1617,7 +1625,7 @@ namespace AlibabaCloud.SDK.Fnf20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域信息列表</para>
+        /// <para>Queries the regions where CloudFlow is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1659,7 +1667,7 @@ namespace AlibabaCloud.SDK.Fnf20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域信息列表</para>
+        /// <para>Queries the regions where CloudFlow is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1677,7 +1685,7 @@ namespace AlibabaCloud.SDK.Fnf20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域信息列表</para>
+        /// <para>Queries the regions where CloudFlow is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
