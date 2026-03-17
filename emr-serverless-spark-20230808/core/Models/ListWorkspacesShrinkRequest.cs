@@ -50,6 +50,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>rg-aek2thxggoqhmhq</para>
+        /// </summary>
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        /// <summary>
         /// <para>The state of the workspace.</para>
         /// 
         /// <b>Example:</b>

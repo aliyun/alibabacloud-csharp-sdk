@@ -144,6 +144,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ReleaseType { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>rg-xxxxxxx</para>
+        /// </summary>
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        /// <summary>
         /// <para>The resource specifications.</para>
         /// </summary>
         [NameInMap("resourceSpec")]

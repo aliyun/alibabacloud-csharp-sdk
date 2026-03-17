@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class TimeRange : TeaModel {
         /// <summary>
-        /// <para>时间范围结束时间。</para>
+        /// <para>The end time of the time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1688370894339</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>时间范围开始时间。</para>
+        /// <para>The start time of the time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1688370894339</para>

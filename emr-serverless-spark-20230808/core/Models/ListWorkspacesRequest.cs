@@ -50,6 +50,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>rg-aek2thxggoqhmhq</para>
+        /// </summary>
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        /// <summary>
         /// <para>The state of the workspace.</para>
         /// 
         /// <b>Example:</b>
@@ -63,10 +71,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public List<ListWorkspacesRequestTag> Tag { get; set; }
         public class ListWorkspacesRequestTag : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-shenzhen-finance.edas.config.server</para>
+            /// </summary>
             [NameInMap("key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>iphone磁盘空间剩余率</para>
+            /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
             public string Value { get; set; }

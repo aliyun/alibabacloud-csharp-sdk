@@ -2190,6 +2190,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["releaseType"] = request.ReleaseType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["resourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSpec))
             {
                 body["resourceSpec"] = request.ResourceSpec;
@@ -2301,6 +2305,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseType))
             {
                 body["releaseType"] = request.ReleaseType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["resourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSpec))
             {
@@ -5561,7 +5569,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListKyuubiServices</para>
+        /// <para>Gets the list of KyuubiServers</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5597,7 +5605,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListKyuubiServices</para>
+        /// <para>Gets the list of KyuubiServers</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5633,7 +5641,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListKyuubiServices</para>
+        /// <para>Gets the list of KyuubiServers</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5648,7 +5656,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListKyuubiServices</para>
+        /// <para>Gets the list of KyuubiServers</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6007,7 +6015,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出livy compute</para>
+        /// <para>List the Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6057,7 +6065,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出livy compute</para>
+        /// <para>List the Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6107,7 +6115,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出livy compute</para>
+        /// <para>List the Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6126,7 +6134,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出livy compute</para>
+        /// <para>List the Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7655,6 +7663,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 query["regionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["resourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
             {
                 query["state"] = request.State;
@@ -7726,6 +7738,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["resourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
             {

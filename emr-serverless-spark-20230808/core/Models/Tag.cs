@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class Tag : TeaModel {
         /// <summary>
-        /// <para>标签key值。</para>
+        /// <para>The tag key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workflowId</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>标签key值。</para>
+        /// <para>The tag value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>wf-123test</para>

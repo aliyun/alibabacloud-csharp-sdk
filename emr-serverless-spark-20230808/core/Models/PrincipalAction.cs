@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class PrincipalAction : TeaModel {
         /// <summary>
+        /// <para>The ARN of the behavior.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:emr::workspaceId:action/create_queue</para>
         /// </summary>
@@ -18,8 +20,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ActionArn { get; set; }
 
         /// <summary>
+        /// <para>The ARN of the principal.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>acs:emr::workspaceId:user/237593691541622267</para>
+        /// <para>acs:emr::workspaceId:user/23759369154162****</para>
         /// </summary>
         [NameInMap("principalArn")]
         [Validation(Required=false)]
