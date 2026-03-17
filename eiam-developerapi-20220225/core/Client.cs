@@ -1875,6 +1875,256 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>实例级授权服务器 Token 端点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateTokenByAuthorizationServerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateTokenByAuthorizationServerResponse
+        /// </returns>
+        public GenerateTokenByAuthorizationServerResponse GenerateTokenByAuthorizationServerWithOptions(string instanceId, string authorizationServerId, GenerateTokenByAuthorizationServerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationFederatedCredentialName))
+            {
+                query["application_federated_credential_name"] = request.ApplicationFederatedCredentialName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientAssertion))
+            {
+                query["client_assertion"] = request.ClientAssertion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientAssertionType))
+            {
+                query["client_assertion_type"] = request.ClientAssertionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["client_id"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientSecret))
+            {
+                query["client_secret"] = request.ClientSecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientX509))
+            {
+                query["client_x509"] = request.ClientX509;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientX509Chain))
+            {
+                query["client_x509_chain"] = request.ClientX509Chain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                query["code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeVerifier))
+            {
+                query["code_verifier"] = request.CodeVerifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceCode))
+            {
+                query["device_code"] = request.DeviceCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrantType))
+            {
+                query["grant_type"] = request.GrantType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedirectUri))
+            {
+                query["redirect_uri"] = request.RedirectUri;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefreshToken))
+            {
+                query["refresh_token"] = request.RefreshToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                query["scope"] = request.Scope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                query["username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateTokenByAuthorizationServer",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authorizationServer/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(authorizationServerId) + "/oauth2/token",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateTokenByAuthorizationServerResponse>(DoROARequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实例级授权服务器 Token 端点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateTokenByAuthorizationServerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateTokenByAuthorizationServerResponse
+        /// </returns>
+        public async Task<GenerateTokenByAuthorizationServerResponse> GenerateTokenByAuthorizationServerWithOptionsAsync(string instanceId, string authorizationServerId, GenerateTokenByAuthorizationServerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationFederatedCredentialName))
+            {
+                query["application_federated_credential_name"] = request.ApplicationFederatedCredentialName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientAssertion))
+            {
+                query["client_assertion"] = request.ClientAssertion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientAssertionType))
+            {
+                query["client_assertion_type"] = request.ClientAssertionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["client_id"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientSecret))
+            {
+                query["client_secret"] = request.ClientSecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientX509))
+            {
+                query["client_x509"] = request.ClientX509;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientX509Chain))
+            {
+                query["client_x509_chain"] = request.ClientX509Chain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                query["code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeVerifier))
+            {
+                query["code_verifier"] = request.CodeVerifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceCode))
+            {
+                query["device_code"] = request.DeviceCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrantType))
+            {
+                query["grant_type"] = request.GrantType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedirectUri))
+            {
+                query["redirect_uri"] = request.RedirectUri;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefreshToken))
+            {
+                query["refresh_token"] = request.RefreshToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                query["scope"] = request.Scope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                query["username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateTokenByAuthorizationServer",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authorizationServer/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(authorizationServerId) + "/oauth2/token",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateTokenByAuthorizationServerResponse>(await DoROARequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实例级授权服务器 Token 端点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateTokenByAuthorizationServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateTokenByAuthorizationServerResponse
+        /// </returns>
+        public GenerateTokenByAuthorizationServerResponse GenerateTokenByAuthorizationServer(string instanceId, string authorizationServerId, GenerateTokenByAuthorizationServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GenerateTokenByAuthorizationServerWithOptions(instanceId, authorizationServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实例级授权服务器 Token 端点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateTokenByAuthorizationServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateTokenByAuthorizationServerResponse
+        /// </returns>
+        public async Task<GenerateTokenByAuthorizationServerResponse> GenerateTokenByAuthorizationServerAsync(string instanceId, string authorizationServerId, GenerateTokenByAuthorizationServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GenerateTokenByAuthorizationServerWithOptionsAsync(instanceId, authorizationServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the synchronization scope of an application in an instance.</para>
         /// </summary>
         /// 
