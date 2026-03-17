@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 
             }
 
+            [NameInMap("trackingData")]
+            [Validation(Required=false)]
+            public string TrackingData { get; set; }
+
         }
 
         /// <summary>
