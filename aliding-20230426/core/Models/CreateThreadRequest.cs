@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class CreateThreadRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>assistantId1</para>
         /// </summary>
@@ -65,9 +63,21 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         /// <b>Example:</b>
         /// <para>agentKey1</para>
         /// </summary>
+        [NameInMap("sourceIdOfAssistantId")]
+        [Validation(Required=false)]
+        public string SourceIdOfAssistantId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>agentKey1</para>
+        /// </summary>
         [NameInMap("sourceIdOfOriginalAssistantId")]
         [Validation(Required=false)]
         public string SourceIdOfOriginalAssistantId { get; set; }
+
+        [NameInMap("sourceTypeOfAssistantId")]
+        [Validation(Required=false)]
+        public int? SourceTypeOfAssistantId { get; set; }
 
         [NameInMap("sourceTypeOfOriginalAssistantId")]
         [Validation(Required=false)]

@@ -7859,9 +7859,17 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["originalAssistantId"] = request.OriginalAssistantId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdOfAssistantId))
+            {
+                body["sourceIdOfAssistantId"] = request.SourceIdOfAssistantId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdOfOriginalAssistantId))
             {
                 body["sourceIdOfOriginalAssistantId"] = request.SourceIdOfOriginalAssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypeOfAssistantId))
+            {
+                body["sourceTypeOfAssistantId"] = request.SourceTypeOfAssistantId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypeOfOriginalAssistantId))
             {
@@ -7938,9 +7946,17 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["originalAssistantId"] = request.OriginalAssistantId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdOfAssistantId))
+            {
+                body["sourceIdOfAssistantId"] = request.SourceIdOfAssistantId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdOfOriginalAssistantId))
             {
                 body["sourceIdOfOriginalAssistantId"] = request.SourceIdOfOriginalAssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypeOfAssistantId))
+            {
+                body["sourceTypeOfAssistantId"] = request.SourceTypeOfAssistantId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypeOfOriginalAssistantId))
             {
@@ -9207,9 +9223,17 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["originalAssistantId"] = request.OriginalAssistantId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdOfAssistantId))
+            {
+                body["sourceIdOfAssistantId"] = request.SourceIdOfAssistantId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdOfOriginalAssistantId))
             {
                 body["sourceIdOfOriginalAssistantId"] = request.SourceIdOfOriginalAssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypeOfAssistantId))
+            {
+                body["sourceTypeOfAssistantId"] = request.SourceTypeOfAssistantId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypeOfOriginalAssistantId))
             {
@@ -9290,9 +9314,17 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["originalAssistantId"] = request.OriginalAssistantId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdOfAssistantId))
+            {
+                body["sourceIdOfAssistantId"] = request.SourceIdOfAssistantId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdOfOriginalAssistantId))
             {
                 body["sourceIdOfOriginalAssistantId"] = request.SourceIdOfOriginalAssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypeOfAssistantId))
+            {
+                body["sourceTypeOfAssistantId"] = request.SourceTypeOfAssistantId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypeOfOriginalAssistantId))
             {
@@ -10767,9 +10799,17 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["originalAssistantId"] = request.OriginalAssistantId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdOfAssistantId))
+            {
+                body["sourceIdOfAssistantId"] = request.SourceIdOfAssistantId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdOfOriginalAssistantId))
             {
                 body["sourceIdOfOriginalAssistantId"] = request.SourceIdOfOriginalAssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypeOfAssistantId))
+            {
+                body["sourceTypeOfAssistantId"] = request.SourceTypeOfAssistantId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypeOfOriginalAssistantId))
             {
@@ -10842,9 +10882,17 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["originalAssistantId"] = request.OriginalAssistantId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdOfAssistantId))
+            {
+                body["sourceIdOfAssistantId"] = request.SourceIdOfAssistantId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdOfOriginalAssistantId))
             {
                 body["sourceIdOfOriginalAssistantId"] = request.SourceIdOfOriginalAssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypeOfAssistantId))
+            {
+                body["sourceTypeOfAssistantId"] = request.SourceTypeOfAssistantId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypeOfOriginalAssistantId))
             {
@@ -18292,6 +18340,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 realHeaders["accountId"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountId);
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AiLogContextJson))
+            {
+                realHeaders["aiLogContextJson"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AiLogContextJson);
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = realHeaders,
@@ -18378,6 +18430,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountId))
             {
                 realHeaders["accountId"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountId);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AiLogContextJson))
+            {
+                realHeaders["aiLogContextJson"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AiLogContextJson);
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -33575,6 +33631,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowStructViewContent))
+            {
+                body["allowStructViewContent"] = request.AllowStructViewContent;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantId))
             {
                 body["assistantId"] = request.AssistantId;
@@ -33599,9 +33659,17 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["sessionId"] = request.SessionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdOfAssistantId))
+            {
+                body["sourceIdOfAssistantId"] = request.SourceIdOfAssistantId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdOfOriginalAssistantId))
             {
                 body["sourceIdOfOriginalAssistantId"] = request.SourceIdOfOriginalAssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypeOfAssistantId))
+            {
+                body["sourceTypeOfAssistantId"] = request.SourceTypeOfAssistantId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypeOfOriginalAssistantId))
             {
@@ -33619,6 +33687,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountId))
             {
                 realHeaders["accountId"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountId);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AiLogContextJson))
+            {
+                realHeaders["aiLogContextJson"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AiLogContextJson);
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AlidingSsoTicket))
             {
@@ -33666,6 +33738,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowStructViewContent))
+            {
+                body["allowStructViewContent"] = request.AllowStructViewContent;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantId))
             {
                 body["assistantId"] = request.AssistantId;
@@ -33690,9 +33766,17 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["sessionId"] = request.SessionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdOfAssistantId))
+            {
+                body["sourceIdOfAssistantId"] = request.SourceIdOfAssistantId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdOfOriginalAssistantId))
             {
                 body["sourceIdOfOriginalAssistantId"] = request.SourceIdOfOriginalAssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypeOfAssistantId))
+            {
+                body["sourceTypeOfAssistantId"] = request.SourceTypeOfAssistantId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypeOfOriginalAssistantId))
             {
@@ -33710,6 +33794,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountId))
             {
                 realHeaders["accountId"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountId);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AiLogContextJson))
+            {
+                realHeaders["aiLogContextJson"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AiLogContextJson);
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AlidingSsoTicket))
             {

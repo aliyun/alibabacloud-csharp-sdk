@@ -85,6 +85,24 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("thread")]
+        [Validation(Required=false)]
+        public GetAssistantCapabilityResponseBodyThread Thread { get; set; }
+        public class GetAssistantCapabilityResponseBodyThread : TeaModel {
+            [NameInMap("createAt")]
+            [Validation(Required=false)]
+            public long? CreateAt { get; set; }
+
+            [NameInMap("id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+        }
+
     }
 
 }

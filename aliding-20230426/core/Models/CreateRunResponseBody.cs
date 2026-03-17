@@ -480,6 +480,28 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
                     /// <summary>
                     /// <b>Example:</b>
+                    /// <para>{}</para>
+                    /// </summary>
+                    [NameInMap("infoPart")]
+                    [Validation(Required=false)]
+                    public CreateRunResponseBodyMessagesContentStructPartsInfoPart InfoPart { get; set; }
+                    public class CreateRunResponseBodyMessagesContentStructPartsInfoPart : TeaModel {
+                        [NameInMap("cateIdList")]
+                        [Validation(Required=false)]
+                        public List<string> CateIdList { get; set; }
+
+                        [NameInMap("needFeedback")]
+                        [Validation(Required=false)]
+                        public bool? NeedFeedback { get; set; }
+
+                        [NameInMap("origin")]
+                        [Validation(Required=false)]
+                        public string Origin { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <b>Example:</b>
                     /// <para>这是正文内容部分</para>
                     /// </summary>
                     [NameInMap("partDesc")]
