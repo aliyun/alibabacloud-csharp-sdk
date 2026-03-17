@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class UpgradeSmartAccessGatewayResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The ID of the order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>203384676330296</para>
+        /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>45F07029-1783-4B2D-B4CE-45B9EAA58440</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

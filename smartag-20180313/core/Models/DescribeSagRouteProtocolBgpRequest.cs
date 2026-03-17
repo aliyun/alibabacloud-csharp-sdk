@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID of the Smart Access Gateway (SAG) instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -29,10 +36,24 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the SAG instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sag-whfn****</para>
+        /// </summary>
         [NameInMap("SmartAGId")]
         [Validation(Required=false)]
         public string SmartAGId { get; set; }
 
+        /// <summary>
+        /// <para>The serial number of the SAG device that is associated with the SAG instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sag32a30****</para>
+        /// </summary>
         [NameInMap("SmartAGSn")]
         [Validation(Required=false)]
         public string SmartAGSn { get; set; }

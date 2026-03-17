@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeSagRemoteAccessResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The error code. The 200 error code indicates that the query task is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The error message. The Successful error message indicates that the query task is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -37,14 +49,36 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         }
 
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E38E950D-28A4-4C41-9428-A8908EC6AE5C</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the SAG instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sag-1um5x5nwhilymw****</para>
+        /// </summary>
         [NameInMap("SmartAGId")]
         [Validation(Required=false)]
         public string SmartAGId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the query task is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The query task is successful.</description></item>
+        /// <item><description><b>false</b>: The query task failed.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

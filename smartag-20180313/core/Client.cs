@@ -37,6 +37,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActivateSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActivateSmartAccessGatewayResponse
+        /// </returns>
         public ActivateSmartAccessGatewayResponse ActivateSmartAccessGatewayWithOptions(ActivateSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -84,6 +99,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ActivateSmartAccessGatewayResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActivateSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActivateSmartAccessGatewayResponse
+        /// </returns>
         public async Task<ActivateSmartAccessGatewayResponse> ActivateSmartAccessGatewayWithOptionsAsync(ActivateSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -131,18 +161,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ActivateSmartAccessGatewayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActivateSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActivateSmartAccessGatewayResponse
+        /// </returns>
         public ActivateSmartAccessGatewayResponse ActivateSmartAccessGateway(ActivateSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ActivateSmartAccessGatewayWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActivateSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActivateSmartAccessGatewayResponse
+        /// </returns>
         public async Task<ActivateSmartAccessGatewayResponse> ActivateSmartAccessGatewayAsync(ActivateSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ActivateSmartAccessGatewayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActiveFlowLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActiveFlowLogResponse
+        /// </returns>
         public ActiveFlowLogResponse ActiveFlowLogWithOptions(ActiveFlowLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -190,6 +259,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ActiveFlowLogResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActiveFlowLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActiveFlowLogResponse
+        /// </returns>
         public async Task<ActiveFlowLogResponse> ActiveFlowLogWithOptionsAsync(ActiveFlowLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -237,18 +321,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ActiveFlowLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActiveFlowLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActiveFlowLogResponse
+        /// </returns>
         public ActiveFlowLogResponse ActiveFlowLog(ActiveFlowLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ActiveFlowLogWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActiveFlowLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActiveFlowLogResponse
+        /// </returns>
         public async Task<ActiveFlowLogResponse> ActiveFlowLogAsync(ActiveFlowLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ActiveFlowLogWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control list (ACL) rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddACLRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddACLRuleResponse
+        /// </returns>
         public AddACLRuleResponse AddACLRuleWithOptions(AddACLRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -348,6 +471,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<AddACLRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control list (ACL) rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddACLRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddACLRuleResponse
+        /// </returns>
         public async Task<AddACLRuleResponse> AddACLRuleWithOptionsAsync(AddACLRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -447,18 +585,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<AddACLRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control list (ACL) rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddACLRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddACLRuleResponse
+        /// </returns>
         public AddACLRuleResponse AddACLRule(AddACLRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddACLRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control list (ACL) rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddACLRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddACLRuleResponse
+        /// </returns>
         public async Task<AddACLRuleResponse> AddACLRuleAsync(AddACLRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddACLRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a destination network address translation (DNAT) entry to a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDnatEntryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDnatEntryResponse
+        /// </returns>
         public AddDnatEntryResponse AddDnatEntryWithOptions(AddDnatEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -530,6 +707,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<AddDnatEntryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a destination network address translation (DNAT) entry to a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDnatEntryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDnatEntryResponse
+        /// </returns>
         public async Task<AddDnatEntryResponse> AddDnatEntryWithOptionsAsync(AddDnatEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -601,18 +793,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<AddDnatEntryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a destination network address translation (DNAT) entry to a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDnatEntryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDnatEntryResponse
+        /// </returns>
         public AddDnatEntryResponse AddDnatEntry(AddDnatEntryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddDnatEntryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a destination network address translation (DNAT) entry to a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDnatEntryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDnatEntryResponse
+        /// </returns>
         public async Task<AddDnatEntryResponse> AddDnatEntryAsync(AddDnatEntryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddDnatEntryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds DNS forwarding configurations to an SCG5000 or SCG5000-5G instance. The device version must be 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddSmartAccessGatewayDnsForwardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddSmartAccessGatewayDnsForwardResponse
+        /// </returns>
         public AddSmartAccessGatewayDnsForwardResponse AddSmartAccessGatewayDnsForwardWithOptions(AddSmartAccessGatewayDnsForwardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -676,6 +907,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<AddSmartAccessGatewayDnsForwardResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds DNS forwarding configurations to an SCG5000 or SCG5000-5G instance. The device version must be 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddSmartAccessGatewayDnsForwardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddSmartAccessGatewayDnsForwardResponse
+        /// </returns>
         public async Task<AddSmartAccessGatewayDnsForwardResponse> AddSmartAccessGatewayDnsForwardWithOptionsAsync(AddSmartAccessGatewayDnsForwardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -739,18 +985,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<AddSmartAccessGatewayDnsForwardResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds DNS forwarding configurations to an SCG5000 or SCG5000-5G instance. The device version must be 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddSmartAccessGatewayDnsForwardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddSmartAccessGatewayDnsForwardResponse
+        /// </returns>
         public AddSmartAccessGatewayDnsForwardResponse AddSmartAccessGatewayDnsForward(AddSmartAccessGatewayDnsForwardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddSmartAccessGatewayDnsForwardWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds DNS forwarding configurations to an SCG5000 or SCG5000-5G instance. The device version must be 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddSmartAccessGatewayDnsForwardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddSmartAccessGatewayDnsForwardResponse
+        /// </returns>
         public async Task<AddSmartAccessGatewayDnsForwardResponse> AddSmartAccessGatewayDnsForwardAsync(AddSmartAccessGatewayDnsForwardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddSmartAccessGatewayDnsForwardWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to add a source network address translation (SNAT) entry to a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddSnatEntryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddSnatEntryResponse
+        /// </returns>
         public AddSnatEntryResponse AddSnatEntryWithOptions(AddSnatEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -806,6 +1091,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<AddSnatEntryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to add a source network address translation (SNAT) entry to a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddSnatEntryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddSnatEntryResponse
+        /// </returns>
         public async Task<AddSnatEntryResponse> AddSnatEntryWithOptionsAsync(AddSnatEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -861,18 +1161,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<AddSnatEntryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to add a source network address translation (SNAT) entry to a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddSnatEntryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddSnatEntryResponse
+        /// </returns>
         public AddSnatEntryResponse AddSnatEntry(AddSnatEntryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddSnatEntryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to add a source network address translation (SNAT) entry to a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddSnatEntryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddSnatEntryResponse
+        /// </returns>
         public async Task<AddSnatEntryResponse> AddSnatEntryAsync(AddSnatEntryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddSnatEntryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates an access control list (ACL) with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateACLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateACLResponse
+        /// </returns>
         public AssociateACLResponse AssociateACLWithOptions(AssociateACLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -924,6 +1263,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<AssociateACLResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates an access control list (ACL) with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateACLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateACLResponse
+        /// </returns>
         public async Task<AssociateACLResponse> AssociateACLWithOptionsAsync(AssociateACLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -975,18 +1329,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<AssociateACLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates an access control list (ACL) with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateACLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateACLResponse
+        /// </returns>
         public AssociateACLResponse AssociateACL(AssociateACLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AssociateACLWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates an access control list (ACL) with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateACLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateACLResponse
+        /// </returns>
         public async Task<AssociateACLResponse> AssociateACLAsync(AssociateACLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AssociateACLWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a flow log with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateFlowLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateFlowLogResponse
+        /// </returns>
         public AssociateFlowLogResponse AssociateFlowLogWithOptions(AssociateFlowLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1038,6 +1431,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<AssociateFlowLogResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a flow log with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateFlowLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateFlowLogResponse
+        /// </returns>
         public async Task<AssociateFlowLogResponse> AssociateFlowLogWithOptionsAsync(AssociateFlowLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1089,18 +1497,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<AssociateFlowLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a flow log with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateFlowLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateFlowLogResponse
+        /// </returns>
         public AssociateFlowLogResponse AssociateFlowLog(AssociateFlowLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AssociateFlowLogWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a flow log with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateFlowLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateFlowLogResponse
+        /// </returns>
         public async Task<AssociateFlowLogResponse> AssociateFlowLogAsync(AssociateFlowLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AssociateFlowLogWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies a Quality of Service (QoS) policy to a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateQosRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateQosResponse
+        /// </returns>
         public AssociateQosResponse AssociateQosWithOptions(AssociateQosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1152,6 +1599,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<AssociateQosResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies a Quality of Service (QoS) policy to a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateQosRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateQosResponse
+        /// </returns>
         public async Task<AssociateQosResponse> AssociateQosWithOptionsAsync(AssociateQosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1203,18 +1665,69 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<AssociateQosResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies a Quality of Service (QoS) policy to a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateQosRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateQosResponse
+        /// </returns>
         public AssociateQosResponse AssociateQos(AssociateQosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AssociateQosWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies a Quality of Service (QoS) policy to a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateQosRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateQosResponse
+        /// </returns>
         public async Task<AssociateQosResponse> AssociateQosAsync(AssociateQosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AssociateQosWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a bandwidth plan for application acceleration with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you associate a bandwidth plan for application acceleration with an SAG instance, make sure that the following requirements are met:</para>
+        /// <list type="bullet">
+        /// <item><description>If you want to associate a bandwidth plan for application acceleration with an SAG CPE instance, the version of the SAG device associated with the SAG CPE instance must be 2.4.0 or later.
+        /// If the version of the SAG device is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/163948.html">Update the version of an SAG device</a>.</description></item>
+        /// <item><description>If you want to associate a bandwidth plan for application acceleration with an SAG app instance, the version of the SAG app must be 2.4.0 or later.
+        /// If the version of the SAG app is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/102544.html">Install the SAG app</a>.</description></item>
+        /// <item><description>The SAG instance to be associated is in the available state.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociateSmartAGWithApplicationBandwidthPackageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateSmartAGWithApplicationBandwidthPackageResponse
+        /// </returns>
         public AssociateSmartAGWithApplicationBandwidthPackageResponse AssociateSmartAGWithApplicationBandwidthPackageWithOptions(AssociateSmartAGWithApplicationBandwidthPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1258,6 +1771,33 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<AssociateSmartAGWithApplicationBandwidthPackageResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a bandwidth plan for application acceleration with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you associate a bandwidth plan for application acceleration with an SAG instance, make sure that the following requirements are met:</para>
+        /// <list type="bullet">
+        /// <item><description>If you want to associate a bandwidth plan for application acceleration with an SAG CPE instance, the version of the SAG device associated with the SAG CPE instance must be 2.4.0 or later.
+        /// If the version of the SAG device is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/163948.html">Update the version of an SAG device</a>.</description></item>
+        /// <item><description>If you want to associate a bandwidth plan for application acceleration with an SAG app instance, the version of the SAG app must be 2.4.0 or later.
+        /// If the version of the SAG app is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/102544.html">Install the SAG app</a>.</description></item>
+        /// <item><description>The SAG instance to be associated is in the available state.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociateSmartAGWithApplicationBandwidthPackageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateSmartAGWithApplicationBandwidthPackageResponse
+        /// </returns>
         public async Task<AssociateSmartAGWithApplicationBandwidthPackageResponse> AssociateSmartAGWithApplicationBandwidthPackageWithOptionsAsync(AssociateSmartAGWithApplicationBandwidthPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1301,18 +1841,81 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<AssociateSmartAGWithApplicationBandwidthPackageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a bandwidth plan for application acceleration with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you associate a bandwidth plan for application acceleration with an SAG instance, make sure that the following requirements are met:</para>
+        /// <list type="bullet">
+        /// <item><description>If you want to associate a bandwidth plan for application acceleration with an SAG CPE instance, the version of the SAG device associated with the SAG CPE instance must be 2.4.0 or later.
+        /// If the version of the SAG device is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/163948.html">Update the version of an SAG device</a>.</description></item>
+        /// <item><description>If you want to associate a bandwidth plan for application acceleration with an SAG app instance, the version of the SAG app must be 2.4.0 or later.
+        /// If the version of the SAG app is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/102544.html">Install the SAG app</a>.</description></item>
+        /// <item><description>The SAG instance to be associated is in the available state.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociateSmartAGWithApplicationBandwidthPackageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateSmartAGWithApplicationBandwidthPackageResponse
+        /// </returns>
         public AssociateSmartAGWithApplicationBandwidthPackageResponse AssociateSmartAGWithApplicationBandwidthPackage(AssociateSmartAGWithApplicationBandwidthPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AssociateSmartAGWithApplicationBandwidthPackageWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a bandwidth plan for application acceleration with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you associate a bandwidth plan for application acceleration with an SAG instance, make sure that the following requirements are met:</para>
+        /// <list type="bullet">
+        /// <item><description>If you want to associate a bandwidth plan for application acceleration with an SAG CPE instance, the version of the SAG device associated with the SAG CPE instance must be 2.4.0 or later.
+        /// If the version of the SAG device is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/163948.html">Update the version of an SAG device</a>.</description></item>
+        /// <item><description>If you want to associate a bandwidth plan for application acceleration with an SAG app instance, the version of the SAG app must be 2.4.0 or later.
+        /// If the version of the SAG app is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/102544.html">Install the SAG app</a>.</description></item>
+        /// <item><description>The SAG instance to be associated is in the available state.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociateSmartAGWithApplicationBandwidthPackageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateSmartAGWithApplicationBandwidthPackageResponse
+        /// </returns>
         public async Task<AssociateSmartAGWithApplicationBandwidthPackageResponse> AssociateSmartAGWithApplicationBandwidthPackageAsync(AssociateSmartAGWithApplicationBandwidthPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AssociateSmartAGWithApplicationBandwidthPackageWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Smart Access Gateway (SAG) device with an SAG instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindSerialNumberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSerialNumberResponse
+        /// </returns>
         public BindSerialNumberResponse BindSerialNumberWithOptions(BindSerialNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1364,6 +1967,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<BindSerialNumberResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Smart Access Gateway (SAG) device with an SAG instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindSerialNumberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSerialNumberResponse
+        /// </returns>
         public async Task<BindSerialNumberResponse> BindSerialNumberWithOptionsAsync(BindSerialNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1415,18 +2033,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<BindSerialNumberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Smart Access Gateway (SAG) device with an SAG instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindSerialNumberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSerialNumberResponse
+        /// </returns>
         public BindSerialNumberResponse BindSerialNumber(BindSerialNumberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BindSerialNumberWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Smart Access Gateway (SAG) device with an SAG instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindSerialNumberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSerialNumberResponse
+        /// </returns>
         public async Task<BindSerialNumberResponse> BindSerialNumberAsync(BindSerialNumberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BindSerialNumberWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Smart Access Gateway (SAG) instance with a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSmartAccessGatewayResponse
+        /// </returns>
         public BindSmartAccessGatewayResponse BindSmartAccessGatewayWithOptions(BindSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1482,6 +2139,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<BindSmartAccessGatewayResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Smart Access Gateway (SAG) instance with a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSmartAccessGatewayResponse
+        /// </returns>
         public async Task<BindSmartAccessGatewayResponse> BindSmartAccessGatewayWithOptionsAsync(BindSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1537,18 +2209,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<BindSmartAccessGatewayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Smart Access Gateway (SAG) instance with a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSmartAccessGatewayResponse
+        /// </returns>
         public BindSmartAccessGatewayResponse BindSmartAccessGateway(BindSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BindSmartAccessGatewayWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Smart Access Gateway (SAG) instance with a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSmartAccessGatewayResponse
+        /// </returns>
         public async Task<BindSmartAccessGatewayResponse> BindSmartAccessGatewayAsync(BindSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BindSmartAccessGatewayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Smart Access Gateway (SAG) instance with a virtual border router (VBR).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindVbrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindVbrResponse
+        /// </returns>
         public BindVbrResponse BindVbrWithOptions(BindVbrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1608,6 +2319,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<BindVbrResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Smart Access Gateway (SAG) instance with a virtual border router (VBR).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindVbrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindVbrResponse
+        /// </returns>
         public async Task<BindVbrResponse> BindVbrWithOptionsAsync(BindVbrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1667,18 +2393,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<BindVbrResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Smart Access Gateway (SAG) instance with a virtual border router (VBR).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindVbrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindVbrResponse
+        /// </returns>
         public BindVbrResponse BindVbr(BindVbrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BindVbrWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Smart Access Gateway (SAG) instance with a virtual border router (VBR).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindVbrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindVbrResponse
+        /// </returns>
         public async Task<BindVbrResponse> BindVbrAsync(BindVbrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BindVbrWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of a virtual customer-premises equipment (vCPE) device of Smart Access Gateway (SAG).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClearSagCipherRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearSagCipherResponse
+        /// </returns>
         public ClearSagCipherResponse ClearSagCipherWithOptions(ClearSagCipherRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1730,6 +2495,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ClearSagCipherResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of a virtual customer-premises equipment (vCPE) device of Smart Access Gateway (SAG).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClearSagCipherRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearSagCipherResponse
+        /// </returns>
         public async Task<ClearSagCipherResponse> ClearSagCipherWithOptionsAsync(ClearSagCipherRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1781,18 +2561,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ClearSagCipherResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of a virtual customer-premises equipment (vCPE) device of Smart Access Gateway (SAG).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClearSagCipherRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearSagCipherResponse
+        /// </returns>
         public ClearSagCipherResponse ClearSagCipher(ClearSagCipherRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ClearSagCipherWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of a virtual customer-premises equipment (vCPE) device of Smart Access Gateway (SAG).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClearSagCipherRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearSagCipherResponse
+        /// </returns>
         public async Task<ClearSagCipherResponse> ClearSagCipherAsync(ClearSagCipherRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ClearSagCipherWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears the routable IP addresses of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClearSagRouteableAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearSagRouteableAddressResponse
+        /// </returns>
         public ClearSagRouteableAddressResponse ClearSagRouteableAddressWithOptions(ClearSagRouteableAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1840,6 +2659,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ClearSagRouteableAddressResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears the routable IP addresses of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClearSagRouteableAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearSagRouteableAddressResponse
+        /// </returns>
         public async Task<ClearSagRouteableAddressResponse> ClearSagRouteableAddressWithOptionsAsync(ClearSagRouteableAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1887,18 +2721,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ClearSagRouteableAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears the routable IP addresses of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClearSagRouteableAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearSagRouteableAddressResponse
+        /// </returns>
         public ClearSagRouteableAddressResponse ClearSagRouteableAddress(ClearSagRouteableAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ClearSagRouteableAddressWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears the routable IP addresses of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClearSagRouteableAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearSagRouteableAddressResponse
+        /// </returns>
         public async Task<ClearSagRouteableAddressResponse> ClearSagRouteableAddressAsync(ClearSagRouteableAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ClearSagRouteableAddressWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateACLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateACLResponse
+        /// </returns>
         public CreateACLResponse CreateACLWithOptions(CreateACLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1950,6 +2823,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateACLResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateACLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateACLResponse
+        /// </returns>
         public async Task<CreateACLResponse> CreateACLWithOptionsAsync(CreateACLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2001,18 +2889,62 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateACLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateACLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateACLResponse
+        /// </returns>
         public CreateACLResponse CreateACL(CreateACLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateACLWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateACLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateACLResponse
+        /// </returns>
         public async Task<CreateACLResponse> CreateACLAsync(CreateACLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateACLWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CCN is a matrix consisting of Alibaba Cloud distributed access gateways. It is an important component of Smart Access Gateway (SAG). After you associate an SAG instance with a CCN instance, the SAG instance connects the private networks associated with Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/93667.html">Overview of Cloud Connect Network</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCloudConnectNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCloudConnectNetworkResponse
+        /// </returns>
         public CreateCloudConnectNetworkResponse CreateCloudConnectNetworkWithOptions(CreateCloudConnectNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2072,6 +3004,26 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateCloudConnectNetworkResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CCN is a matrix consisting of Alibaba Cloud distributed access gateways. It is an important component of Smart Access Gateway (SAG). After you associate an SAG instance with a CCN instance, the SAG instance connects the private networks associated with Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/93667.html">Overview of Cloud Connect Network</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCloudConnectNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCloudConnectNetworkResponse
+        /// </returns>
         public async Task<CreateCloudConnectNetworkResponse> CreateCloudConnectNetworkWithOptionsAsync(CreateCloudConnectNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2131,18 +3083,67 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateCloudConnectNetworkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CCN is a matrix consisting of Alibaba Cloud distributed access gateways. It is an important component of Smart Access Gateway (SAG). After you associate an SAG instance with a CCN instance, the SAG instance connects the private networks associated with Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/93667.html">Overview of Cloud Connect Network</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCloudConnectNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCloudConnectNetworkResponse
+        /// </returns>
         public CreateCloudConnectNetworkResponse CreateCloudConnectNetwork(CreateCloudConnectNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateCloudConnectNetworkWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CCN is a matrix consisting of Alibaba Cloud distributed access gateways. It is an important component of Smart Access Gateway (SAG). After you associate an SAG instance with a CCN instance, the SAG instance connects the private networks associated with Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/93667.html">Overview of Cloud Connect Network</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCloudConnectNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCloudConnectNetworkResponse
+        /// </returns>
         public async Task<CreateCloudConnectNetworkResponse> CreateCloudConnectNetworkAsync(CreateCloudConnectNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCloudConnectNetworkWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an enterprise code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEnterpriseCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEnterpriseCodeResponse
+        /// </returns>
         public CreateEnterpriseCodeResponse CreateEnterpriseCodeWithOptions(CreateEnterpriseCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2178,6 +3179,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateEnterpriseCodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an enterprise code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEnterpriseCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEnterpriseCodeResponse
+        /// </returns>
         public async Task<CreateEnterpriseCodeResponse> CreateEnterpriseCodeWithOptionsAsync(CreateEnterpriseCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2213,18 +3229,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateEnterpriseCodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an enterprise code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEnterpriseCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEnterpriseCodeResponse
+        /// </returns>
         public CreateEnterpriseCodeResponse CreateEnterpriseCode(CreateEnterpriseCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateEnterpriseCodeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an enterprise code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEnterpriseCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEnterpriseCodeResponse
+        /// </returns>
         public async Task<CreateEnterpriseCodeResponse> CreateEnterpriseCodeAsync(CreateEnterpriseCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateEnterpriseCodeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateFlowLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFlowLogResponse
+        /// </returns>
         public CreateFlowLogResponse CreateFlowLogWithOptions(CreateFlowLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2312,6 +3367,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateFlowLogResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateFlowLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFlowLogResponse
+        /// </returns>
         public async Task<CreateFlowLogResponse> CreateFlowLogWithOptionsAsync(CreateFlowLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2399,18 +3469,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateFlowLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateFlowLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFlowLogResponse
+        /// </returns>
         public CreateFlowLogResponse CreateFlowLog(CreateFlowLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateFlowLogWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateFlowLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFlowLogResponse
+        /// </returns>
         public async Task<CreateFlowLogResponse> CreateFlowLogAsync(CreateFlowLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateFlowLogWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a health check for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHealthCheckRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHealthCheckResponse
+        /// </returns>
         public CreateHealthCheckResponse CreateHealthCheckWithOptions(CreateHealthCheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2510,6 +3619,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateHealthCheckResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a health check for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHealthCheckRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHealthCheckResponse
+        /// </returns>
         public async Task<CreateHealthCheckResponse> CreateHealthCheckWithOptionsAsync(CreateHealthCheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2609,18 +3733,65 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateHealthCheckResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a health check for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHealthCheckRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHealthCheckResponse
+        /// </returns>
         public CreateHealthCheckResponse CreateHealthCheck(CreateHealthCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateHealthCheckWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a health check for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHealthCheckRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHealthCheckResponse
+        /// </returns>
         public async Task<CreateHealthCheckResponse> CreateHealthCheckAsync(CreateHealthCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateHealthCheckWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a probing task for a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only SAG-1000 devices whose software version is 2.7.0 or later support the probing feature.</para>
+        /// <list type="bullet">
+        /// <item><description>The SAG instance must have the deep packet inspection (DPI) feature enabled. You can call the <a href="https://help.aliyun.com/document_detail/476404.html">SetAdvancedMonitorState</a> operation to enable or disable the DPI feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProbeTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProbeTaskResponse
+        /// </returns>
         public CreateProbeTaskResponse CreateProbeTaskWithOptions(CreateProbeTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2688,6 +3859,29 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateProbeTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a probing task for a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only SAG-1000 devices whose software version is 2.7.0 or later support the probing feature.</para>
+        /// <list type="bullet">
+        /// <item><description>The SAG instance must have the deep packet inspection (DPI) feature enabled. You can call the <a href="https://help.aliyun.com/document_detail/476404.html">SetAdvancedMonitorState</a> operation to enable or disable the DPI feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProbeTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProbeTaskResponse
+        /// </returns>
         public async Task<CreateProbeTaskResponse> CreateProbeTaskWithOptionsAsync(CreateProbeTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2755,18 +3949,73 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateProbeTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a probing task for a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only SAG-1000 devices whose software version is 2.7.0 or later support the probing feature.</para>
+        /// <list type="bullet">
+        /// <item><description>The SAG instance must have the deep packet inspection (DPI) feature enabled. You can call the <a href="https://help.aliyun.com/document_detail/476404.html">SetAdvancedMonitorState</a> operation to enable or disable the DPI feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProbeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProbeTaskResponse
+        /// </returns>
         public CreateProbeTaskResponse CreateProbeTask(CreateProbeTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateProbeTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a probing task for a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only SAG-1000 devices whose software version is 2.7.0 or later support the probing feature.</para>
+        /// <list type="bullet">
+        /// <item><description>The SAG instance must have the deep packet inspection (DPI) feature enabled. You can call the <a href="https://help.aliyun.com/document_detail/476404.html">SetAdvancedMonitorState</a> operation to enable or disable the DPI feature.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProbeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProbeTaskResponse
+        /// </returns>
         public async Task<CreateProbeTaskResponse> CreateProbeTaskAsync(CreateProbeTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateProbeTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateQosRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQosResponse
+        /// </returns>
         public CreateQosResponse CreateQosWithOptions(CreateQosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2818,6 +4067,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateQosResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateQosRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQosResponse
+        /// </returns>
         public async Task<CreateQosResponse> CreateQosWithOptionsAsync(CreateQosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2869,18 +4133,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateQosResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateQosRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQosResponse
+        /// </returns>
         public CreateQosResponse CreateQos(CreateQosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateQosWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateQosRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQosResponse
+        /// </returns>
         public async Task<CreateQosResponse> CreateQosAsync(CreateQosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateQosWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a traffic throttling rule for a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateQosCarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQosCarResponse
+        /// </returns>
         public CreateQosCarResponse CreateQosCarWithOptions(CreateQosCarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2964,6 +4267,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateQosCarResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a traffic throttling rule for a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateQosCarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQosCarResponse
+        /// </returns>
         public async Task<CreateQosCarResponse> CreateQosCarWithOptionsAsync(CreateQosCarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3047,18 +4365,63 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateQosCarResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a traffic throttling rule for a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateQosCarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQosCarResponse
+        /// </returns>
         public CreateQosCarResponse CreateQosCar(CreateQosCarRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateQosCarWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a traffic throttling rule for a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateQosCarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQosCarResponse
+        /// </returns>
         public async Task<CreateQosCarResponse> CreateQosCarAsync(CreateQosCarRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateQosCarWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a traffic classification rule for a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Prerequisites</h2>
+        /// <para>A traffic throttling rule is created. For more information, see <a href="https://help.aliyun.com/document_detail/131806.html">CreateQosCar</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateQosPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQosPolicyResponse
+        /// </returns>
         public CreateQosPolicyResponse CreateQosPolicyWithOptions(CreateQosPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3154,6 +4517,27 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateQosPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a traffic classification rule for a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Prerequisites</h2>
+        /// <para>A traffic throttling rule is created. For more information, see <a href="https://help.aliyun.com/document_detail/131806.html">CreateQosCar</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateQosPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQosPolicyResponse
+        /// </returns>
         public async Task<CreateQosPolicyResponse> CreateQosPolicyWithOptionsAsync(CreateQosPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3249,18 +4633,69 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateQosPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a traffic classification rule for a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Prerequisites</h2>
+        /// <para>A traffic throttling rule is created. For more information, see <a href="https://help.aliyun.com/document_detail/131806.html">CreateQosCar</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateQosPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQosPolicyResponse
+        /// </returns>
         public CreateQosPolicyResponse CreateQosPolicy(CreateQosPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateQosPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a traffic classification rule for a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Prerequisites</h2>
+        /// <para>A traffic throttling rule is created. For more information, see <a href="https://help.aliyun.com/document_detail/131806.html">CreateQosCar</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateQosPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateQosPolicyResponse
+        /// </returns>
         public async Task<CreateQosPolicyResponse> CreateQosPolicyAsync(CreateQosPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateQosPolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a subinterface for an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSagExpressConnectInterfaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSagExpressConnectInterfaceResponse
+        /// </returns>
         public CreateSagExpressConnectInterfaceResponse CreateSagExpressConnectInterfaceWithOptions(CreateSagExpressConnectInterfaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3328,6 +4763,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateSagExpressConnectInterfaceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a subinterface for an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSagExpressConnectInterfaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSagExpressConnectInterfaceResponse
+        /// </returns>
         public async Task<CreateSagExpressConnectInterfaceResponse> CreateSagExpressConnectInterfaceWithOptionsAsync(CreateSagExpressConnectInterfaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3395,18 +4845,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateSagExpressConnectInterfaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a subinterface for an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSagExpressConnectInterfaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSagExpressConnectInterfaceResponse
+        /// </returns>
         public CreateSagExpressConnectInterfaceResponse CreateSagExpressConnectInterface(CreateSagExpressConnectInterfaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSagExpressConnectInterfaceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a subinterface for an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSagExpressConnectInterfaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSagExpressConnectInterfaceResponse
+        /// </returns>
         public async Task<CreateSagExpressConnectInterfaceResponse> CreateSagExpressConnectInterfaceAsync(CreateSagExpressConnectInterfaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSagExpressConnectInterfaceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a static route to a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSagStaticRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSagStaticRouteResponse
+        /// </returns>
         public CreateSagStaticRouteResponse CreateSagStaticRouteWithOptions(CreateSagStaticRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3474,6 +4963,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateSagStaticRouteResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a static route to a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSagStaticRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSagStaticRouteResponse
+        /// </returns>
         public async Task<CreateSagStaticRouteResponse> CreateSagStaticRouteWithOptionsAsync(CreateSagStaticRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3541,18 +5045,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateSagStaticRouteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a static route to a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSagStaticRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSagStaticRouteResponse
+        /// </returns>
         public CreateSagStaticRouteResponse CreateSagStaticRoute(CreateSagStaticRouteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSagStaticRouteWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a static route to a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSagStaticRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSagStaticRouteResponse
+        /// </returns>
         public async Task<CreateSagStaticRouteResponse> CreateSagStaticRouteAsync(CreateSagStaticRouteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSagStaticRouteWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a service address for a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceAddressResponse
+        /// </returns>
         public CreateServiceAddressResponse CreateServiceAddressWithOptions(CreateServiceAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3596,6 +5139,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateServiceAddressResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a service address for a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceAddressResponse
+        /// </returns>
         public async Task<CreateServiceAddressResponse> CreateServiceAddressWithOptionsAsync(CreateServiceAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3639,18 +5197,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateServiceAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a service address for a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceAddressResponse
+        /// </returns>
         public CreateServiceAddressResponse CreateServiceAddress(CreateServiceAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateServiceAddressWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a service address for a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceAddressResponse
+        /// </returns>
         public async Task<CreateServiceAddressResponse> CreateServiceAddressAsync(CreateServiceAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateServiceAddressWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Smart Access Gateway (SAG) CPE or vCPE instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmartAccessGatewayResponse
+        /// </returns>
         public CreateSmartAccessGatewayResponse CreateSmartAccessGatewayWithOptions(CreateSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3782,6 +5379,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateSmartAccessGatewayResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Smart Access Gateway (SAG) CPE or vCPE instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmartAccessGatewayResponse
+        /// </returns>
         public async Task<CreateSmartAccessGatewayResponse> CreateSmartAccessGatewayWithOptionsAsync(CreateSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3913,18 +5525,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateSmartAccessGatewayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Smart Access Gateway (SAG) CPE or vCPE instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmartAccessGatewayResponse
+        /// </returns>
         public CreateSmartAccessGatewayResponse CreateSmartAccessGateway(CreateSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSmartAccessGatewayWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Smart Access Gateway (SAG) CPE or vCPE instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmartAccessGatewayResponse
+        /// </returns>
         public async Task<CreateSmartAccessGatewayResponse> CreateSmartAccessGatewayAsync(CreateSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSmartAccessGatewayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a client account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmartAccessGatewayClientUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmartAccessGatewayClientUserResponse
+        /// </returns>
         public CreateSmartAccessGatewayClientUserResponse CreateSmartAccessGatewayClientUserWithOptions(CreateSmartAccessGatewayClientUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3992,6 +5643,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateSmartAccessGatewayClientUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a client account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmartAccessGatewayClientUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmartAccessGatewayClientUserResponse
+        /// </returns>
         public async Task<CreateSmartAccessGatewayClientUserResponse> CreateSmartAccessGatewayClientUserWithOptionsAsync(CreateSmartAccessGatewayClientUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4059,18 +5725,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateSmartAccessGatewayClientUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a client account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmartAccessGatewayClientUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmartAccessGatewayClientUserResponse
+        /// </returns>
         public CreateSmartAccessGatewayClientUserResponse CreateSmartAccessGatewayClientUser(CreateSmartAccessGatewayClientUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSmartAccessGatewayClientUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a client account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmartAccessGatewayClientUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmartAccessGatewayClientUserResponse
+        /// </returns>
         public async Task<CreateSmartAccessGatewayClientUserResponse> CreateSmartAccessGatewayClientUserAsync(CreateSmartAccessGatewayClientUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSmartAccessGatewayClientUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmartAccessGatewaySoftwareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmartAccessGatewaySoftwareResponse
+        /// </returns>
         public CreateSmartAccessGatewaySoftwareResponse CreateSmartAccessGatewaySoftwareWithOptions(CreateSmartAccessGatewaySoftwareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4134,6 +5839,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateSmartAccessGatewaySoftwareResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmartAccessGatewaySoftwareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmartAccessGatewaySoftwareResponse
+        /// </returns>
         public async Task<CreateSmartAccessGatewaySoftwareResponse> CreateSmartAccessGatewaySoftwareWithOptionsAsync(CreateSmartAccessGatewaySoftwareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4197,18 +5917,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<CreateSmartAccessGatewaySoftwareResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmartAccessGatewaySoftwareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmartAccessGatewaySoftwareResponse
+        /// </returns>
         public CreateSmartAccessGatewaySoftwareResponse CreateSmartAccessGatewaySoftware(CreateSmartAccessGatewaySoftwareRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSmartAccessGatewaySoftwareWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmartAccessGatewaySoftwareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmartAccessGatewaySoftwareResponse
+        /// </returns>
         public async Task<CreateSmartAccessGatewaySoftwareResponse> CreateSmartAccessGatewaySoftwareAsync(CreateSmartAccessGatewaySoftwareRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSmartAccessGatewaySoftwareWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeactiveFlowLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeactiveFlowLogResponse
+        /// </returns>
         public DeactiveFlowLogResponse DeactiveFlowLogWithOptions(DeactiveFlowLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4256,6 +6015,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeactiveFlowLogResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeactiveFlowLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeactiveFlowLogResponse
+        /// </returns>
         public async Task<DeactiveFlowLogResponse> DeactiveFlowLogWithOptionsAsync(DeactiveFlowLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4303,18 +6077,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeactiveFlowLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeactiveFlowLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeactiveFlowLogResponse
+        /// </returns>
         public DeactiveFlowLogResponse DeactiveFlowLog(DeactiveFlowLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeactiveFlowLogWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeactiveFlowLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeactiveFlowLogResponse
+        /// </returns>
         public async Task<DeactiveFlowLogResponse> DeactiveFlowLogAsync(DeactiveFlowLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeactiveFlowLogWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteACLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteACLResponse
+        /// </returns>
         public DeleteACLResponse DeleteACLWithOptions(DeleteACLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4362,6 +6175,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteACLResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteACLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteACLResponse
+        /// </returns>
         public async Task<DeleteACLResponse> DeleteACLWithOptionsAsync(DeleteACLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4409,18 +6237,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteACLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteACLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteACLResponse
+        /// </returns>
         public DeleteACLResponse DeleteACL(DeleteACLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteACLWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteACLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteACLResponse
+        /// </returns>
         public async Task<DeleteACLResponse> DeleteACLAsync(DeleteACLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteACLWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a rule from an ACL.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteACLRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteACLRuleResponse
+        /// </returns>
         public DeleteACLRuleResponse DeleteACLRuleWithOptions(DeleteACLRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4472,6 +6339,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteACLRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a rule from an ACL.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteACLRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteACLRuleResponse
+        /// </returns>
         public async Task<DeleteACLRuleResponse> DeleteACLRuleWithOptionsAsync(DeleteACLRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4523,18 +6405,64 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteACLRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a rule from an ACL.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteACLRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteACLRuleResponse
+        /// </returns>
         public DeleteACLRuleResponse DeleteACLRule(DeleteACLRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteACLRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a rule from an ACL.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteACLRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteACLRuleResponse
+        /// </returns>
         public async Task<DeleteACLRuleResponse> DeleteACLRuleAsync(DeleteACLRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteACLRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> Make sure that the CCN instance you want to delete is not associated with a Smart Access Gateway (SAG) instance or a Cloud Enterprise Network (CEN) instance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteCloudConnectNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCloudConnectNetworkResponse
+        /// </returns>
         public DeleteCloudConnectNetworkResponse DeleteCloudConnectNetworkWithOptions(DeleteCloudConnectNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4582,6 +6510,28 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteCloudConnectNetworkResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> Make sure that the CCN instance you want to delete is not associated with a Smart Access Gateway (SAG) instance or a Cloud Enterprise Network (CEN) instance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteCloudConnectNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCloudConnectNetworkResponse
+        /// </returns>
         public async Task<DeleteCloudConnectNetworkResponse> DeleteCloudConnectNetworkWithOptionsAsync(DeleteCloudConnectNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4629,18 +6579,71 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteCloudConnectNetworkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> Make sure that the CCN instance you want to delete is not associated with a Smart Access Gateway (SAG) instance or a Cloud Enterprise Network (CEN) instance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteCloudConnectNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCloudConnectNetworkResponse
+        /// </returns>
         public DeleteCloudConnectNetworkResponse DeleteCloudConnectNetwork(DeleteCloudConnectNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteCloudConnectNetworkWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> Make sure that the CCN instance you want to delete is not associated with a Smart Access Gateway (SAG) instance or a Cloud Enterprise Network (CEN) instance.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteCloudConnectNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCloudConnectNetworkResponse
+        /// </returns>
         public async Task<DeleteCloudConnectNetworkResponse> DeleteCloudConnectNetworkAsync(DeleteCloudConnectNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCloudConnectNetworkWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a DNAT entry from a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDnatEntryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDnatEntryResponse
+        /// </returns>
         public DeleteDnatEntryResponse DeleteDnatEntryWithOptions(DeleteDnatEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4692,6 +6695,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteDnatEntryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a DNAT entry from a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDnatEntryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDnatEntryResponse
+        /// </returns>
         public async Task<DeleteDnatEntryResponse> DeleteDnatEntryWithOptionsAsync(DeleteDnatEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4743,18 +6761,68 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteDnatEntryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a DNAT entry from a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDnatEntryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDnatEntryResponse
+        /// </returns>
         public DeleteDnatEntryResponse DeleteDnatEntry(DeleteDnatEntryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteDnatEntryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a DNAT entry from a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDnatEntryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDnatEntryResponse
+        /// </returns>
         public async Task<DeleteDnatEntryResponse> DeleteDnatEntryAsync(DeleteDnatEntryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDnatEntryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified enterprise code.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following rules:</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot delete default enterprise codes.
+        /// To delete a default enterprise code, change it to a custom enterprise code and then delete it. For more information, see <a href="https://help.aliyun.com/document_detail/197700.html">UpdateEnterpriseCode</a>.</description></item>
+        /// <item><description>You cannot delete enterprise codes that are associated with a Smart Access Gateway (SAG) APP instance.
+        /// To delete an enterprise code that is associated with an SAG APP instance, associate the SAG APP instance with another enterprise code, and then delete the enterprise code. For more information, see <a href="https://help.aliyun.com/document_detail/197701.html">UpdateSmartAGEnterpriseCode</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteEnterpriseCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEnterpriseCodeResponse
+        /// </returns>
         public DeleteEnterpriseCodeResponse DeleteEnterpriseCodeWithOptions(DeleteEnterpriseCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4790,6 +6858,32 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteEnterpriseCodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified enterprise code.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following rules:</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot delete default enterprise codes.
+        /// To delete a default enterprise code, change it to a custom enterprise code and then delete it. For more information, see <a href="https://help.aliyun.com/document_detail/197700.html">UpdateEnterpriseCode</a>.</description></item>
+        /// <item><description>You cannot delete enterprise codes that are associated with a Smart Access Gateway (SAG) APP instance.
+        /// To delete an enterprise code that is associated with an SAG APP instance, associate the SAG APP instance with another enterprise code, and then delete the enterprise code. For more information, see <a href="https://help.aliyun.com/document_detail/197701.html">UpdateSmartAGEnterpriseCode</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteEnterpriseCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEnterpriseCodeResponse
+        /// </returns>
         public async Task<DeleteEnterpriseCodeResponse> DeleteEnterpriseCodeWithOptionsAsync(DeleteEnterpriseCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4825,18 +6919,79 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteEnterpriseCodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified enterprise code.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following rules:</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot delete default enterprise codes.
+        /// To delete a default enterprise code, change it to a custom enterprise code and then delete it. For more information, see <a href="https://help.aliyun.com/document_detail/197700.html">UpdateEnterpriseCode</a>.</description></item>
+        /// <item><description>You cannot delete enterprise codes that are associated with a Smart Access Gateway (SAG) APP instance.
+        /// To delete an enterprise code that is associated with an SAG APP instance, associate the SAG APP instance with another enterprise code, and then delete the enterprise code. For more information, see <a href="https://help.aliyun.com/document_detail/197701.html">UpdateSmartAGEnterpriseCode</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteEnterpriseCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEnterpriseCodeResponse
+        /// </returns>
         public DeleteEnterpriseCodeResponse DeleteEnterpriseCode(DeleteEnterpriseCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteEnterpriseCodeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified enterprise code.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following rules:</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot delete default enterprise codes.
+        /// To delete a default enterprise code, change it to a custom enterprise code and then delete it. For more information, see <a href="https://help.aliyun.com/document_detail/197700.html">UpdateEnterpriseCode</a>.</description></item>
+        /// <item><description>You cannot delete enterprise codes that are associated with a Smart Access Gateway (SAG) APP instance.
+        /// To delete an enterprise code that is associated with an SAG APP instance, associate the SAG APP instance with another enterprise code, and then delete the enterprise code. For more information, see <a href="https://help.aliyun.com/document_detail/197701.html">UpdateSmartAGEnterpriseCode</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteEnterpriseCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEnterpriseCodeResponse
+        /// </returns>
         public async Task<DeleteEnterpriseCodeResponse> DeleteEnterpriseCodeAsync(DeleteEnterpriseCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteEnterpriseCodeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFlowLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowLogResponse
+        /// </returns>
         public DeleteFlowLogResponse DeleteFlowLogWithOptions(DeleteFlowLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4884,6 +7039,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteFlowLogResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFlowLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowLogResponse
+        /// </returns>
         public async Task<DeleteFlowLogResponse> DeleteFlowLogWithOptionsAsync(DeleteFlowLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4931,18 +7101,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteFlowLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFlowLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowLogResponse
+        /// </returns>
         public DeleteFlowLogResponse DeleteFlowLog(DeleteFlowLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteFlowLogWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFlowLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowLogResponse
+        /// </returns>
         public async Task<DeleteFlowLogResponse> DeleteFlowLogAsync(DeleteFlowLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteFlowLogWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete a health check instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHealthCheckRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHealthCheckResponse
+        /// </returns>
         public DeleteHealthCheckResponse DeleteHealthCheckWithOptions(DeleteHealthCheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4990,6 +7199,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteHealthCheckResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete a health check instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHealthCheckRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHealthCheckResponse
+        /// </returns>
         public async Task<DeleteHealthCheckResponse> DeleteHealthCheckWithOptionsAsync(DeleteHealthCheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5037,18 +7261,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteHealthCheckResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete a health check instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHealthCheckRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHealthCheckResponse
+        /// </returns>
         public DeleteHealthCheckResponse DeleteHealthCheck(DeleteHealthCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteHealthCheckWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete a health check instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHealthCheckRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHealthCheckResponse
+        /// </returns>
         public async Task<DeleteHealthCheckResponse> DeleteHealthCheckAsync(DeleteHealthCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteHealthCheckWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a probe task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProbeTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProbeTaskResponse
+        /// </returns>
         public DeleteProbeTaskResponse DeleteProbeTaskWithOptions(DeleteProbeTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5088,6 +7351,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteProbeTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a probe task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProbeTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProbeTaskResponse
+        /// </returns>
         public async Task<DeleteProbeTaskResponse> DeleteProbeTaskWithOptionsAsync(DeleteProbeTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5127,18 +7405,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteProbeTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a probe task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProbeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProbeTaskResponse
+        /// </returns>
         public DeleteProbeTaskResponse DeleteProbeTask(DeleteProbeTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteProbeTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a probe task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProbeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProbeTaskResponse
+        /// </returns>
         public async Task<DeleteProbeTaskResponse> DeleteProbeTaskAsync(DeleteProbeTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteProbeTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Quality of Service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteQosRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQosResponse
+        /// </returns>
         public DeleteQosResponse DeleteQosWithOptions(DeleteQosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5186,6 +7503,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteQosResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Quality of Service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteQosRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQosResponse
+        /// </returns>
         public async Task<DeleteQosResponse> DeleteQosWithOptionsAsync(DeleteQosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5233,18 +7565,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteQosResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Quality of Service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteQosRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQosResponse
+        /// </returns>
         public DeleteQosResponse DeleteQos(DeleteQosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteQosWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Quality of Service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteQosRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQosResponse
+        /// </returns>
         public async Task<DeleteQosResponse> DeleteQosAsync(DeleteQosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteQosWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a speed limiting rule of a Quality of Service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteQosCarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQosCarResponse
+        /// </returns>
         public DeleteQosCarResponse DeleteQosCarWithOptions(DeleteQosCarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5296,6 +7667,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteQosCarResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a speed limiting rule of a Quality of Service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteQosCarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQosCarResponse
+        /// </returns>
         public async Task<DeleteQosCarResponse> DeleteQosCarWithOptionsAsync(DeleteQosCarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5347,18 +7733,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteQosCarResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a speed limiting rule of a Quality of Service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteQosCarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQosCarResponse
+        /// </returns>
         public DeleteQosCarResponse DeleteQosCar(DeleteQosCarRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteQosCarWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a speed limiting rule of a Quality of Service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteQosCarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQosCarResponse
+        /// </returns>
         public async Task<DeleteQosCarResponse> DeleteQosCarAsync(DeleteQosCarRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteQosCarWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a quintuple rule of a Quality of Service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteQosPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQosPolicyResponse
+        /// </returns>
         public DeleteQosPolicyResponse DeleteQosPolicyWithOptions(DeleteQosPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5410,6 +7835,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteQosPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a quintuple rule of a Quality of Service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteQosPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQosPolicyResponse
+        /// </returns>
         public async Task<DeleteQosPolicyResponse> DeleteQosPolicyWithOptionsAsync(DeleteQosPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5461,18 +7901,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteQosPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a quintuple rule of a Quality of Service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteQosPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQosPolicyResponse
+        /// </returns>
         public DeleteQosPolicyResponse DeleteQosPolicy(DeleteQosPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteQosPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a quintuple rule of a Quality of Service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteQosPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteQosPolicyResponse
+        /// </returns>
         public async Task<DeleteQosPolicyResponse> DeleteQosPolicyAsync(DeleteQosPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteQosPolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a route advertisement policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRouteDistributionStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRouteDistributionStrategyResponse
+        /// </returns>
         public DeleteRouteDistributionStrategyResponse DeleteRouteDistributionStrategyWithOptions(DeleteRouteDistributionStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5532,6 +8011,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteRouteDistributionStrategyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a route advertisement policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRouteDistributionStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRouteDistributionStrategyResponse
+        /// </returns>
         public async Task<DeleteRouteDistributionStrategyResponse> DeleteRouteDistributionStrategyWithOptionsAsync(DeleteRouteDistributionStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5591,18 +8085,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteRouteDistributionStrategyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a route advertisement policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRouteDistributionStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRouteDistributionStrategyResponse
+        /// </returns>
         public DeleteRouteDistributionStrategyResponse DeleteRouteDistributionStrategy(DeleteRouteDistributionStrategyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteRouteDistributionStrategyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a route advertisement policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRouteDistributionStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRouteDistributionStrategyResponse
+        /// </returns>
         public async Task<DeleteRouteDistributionStrategyResponse> DeleteRouteDistributionStrategyAsync(DeleteRouteDistributionStrategyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteRouteDistributionStrategyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a subinterface from a leased line port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSagExpressConnectInterfaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSagExpressConnectInterfaceResponse
+        /// </returns>
         public DeleteSagExpressConnectInterfaceResponse DeleteSagExpressConnectInterfaceWithOptions(DeleteSagExpressConnectInterfaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5662,6 +8195,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteSagExpressConnectInterfaceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a subinterface from a leased line port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSagExpressConnectInterfaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSagExpressConnectInterfaceResponse
+        /// </returns>
         public async Task<DeleteSagExpressConnectInterfaceResponse> DeleteSagExpressConnectInterfaceWithOptionsAsync(DeleteSagExpressConnectInterfaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5721,18 +8269,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteSagExpressConnectInterfaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a subinterface from a leased line port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSagExpressConnectInterfaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSagExpressConnectInterfaceResponse
+        /// </returns>
         public DeleteSagExpressConnectInterfaceResponse DeleteSagExpressConnectInterface(DeleteSagExpressConnectInterfaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSagExpressConnectInterfaceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a subinterface from a leased line port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSagExpressConnectInterfaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSagExpressConnectInterfaceResponse
+        /// </returns>
         public async Task<DeleteSagExpressConnectInterfaceResponse> DeleteSagExpressConnectInterfaceAsync(DeleteSagExpressConnectInterfaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSagExpressConnectInterfaceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete a static route.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSagStaticRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSagStaticRouteResponse
+        /// </returns>
         public DeleteSagStaticRouteResponse DeleteSagStaticRouteWithOptions(DeleteSagStaticRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5796,6 +8383,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteSagStaticRouteResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete a static route.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSagStaticRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSagStaticRouteResponse
+        /// </returns>
         public async Task<DeleteSagStaticRouteResponse> DeleteSagStaticRouteWithOptionsAsync(DeleteSagStaticRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5859,18 +8461,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteSagStaticRouteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete a static route.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSagStaticRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSagStaticRouteResponse
+        /// </returns>
         public DeleteSagStaticRouteResponse DeleteSagStaticRoute(DeleteSagStaticRouteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSagStaticRouteWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete a static route.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSagStaticRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSagStaticRouteResponse
+        /// </returns>
         public async Task<DeleteSagStaticRouteResponse> DeleteSagStaticRouteAsync(DeleteSagStaticRouteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSagStaticRouteWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service address from a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceAddressResponse
+        /// </returns>
         public DeleteServiceAddressResponse DeleteServiceAddressWithOptions(DeleteServiceAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5914,6 +8555,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteServiceAddressResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service address from a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceAddressResponse
+        /// </returns>
         public async Task<DeleteServiceAddressResponse> DeleteServiceAddressWithOptionsAsync(DeleteServiceAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5957,18 +8613,66 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteServiceAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service address from a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceAddressResponse
+        /// </returns>
         public DeleteServiceAddressResponse DeleteServiceAddress(DeleteServiceAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteServiceAddressWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service address from a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceAddressResponse
+        /// </returns>
         public async Task<DeleteServiceAddressResponse> DeleteServiceAddressAsync(DeleteServiceAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteServiceAddressWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The SAG instance that you want to delete is an SAG CPE instance or an SAG vCPE instance.</para>
+        /// <list type="bullet">
+        /// <item><description>The SAG instance that you want to delete is locked due to overdue payments.</description></item>
+        /// <item><description>The SAG instance that you want to delete is not associated with a Cloud Connect Network (CCN) instance or a virtual border router (VBR). If the SAG instance is associated with a CCN instance or a VBR, dissociate the SAG instance from the CCN instance or VBR first. For more information, see <a href="https://help.aliyun.com/document_detail/164903.html">Detach a network</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSmartAccessGatewayResponse
+        /// </returns>
         public DeleteSmartAccessGatewayResponse DeleteSmartAccessGatewayWithOptions(DeleteSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6004,6 +8708,30 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteSmartAccessGatewayResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The SAG instance that you want to delete is an SAG CPE instance or an SAG vCPE instance.</para>
+        /// <list type="bullet">
+        /// <item><description>The SAG instance that you want to delete is locked due to overdue payments.</description></item>
+        /// <item><description>The SAG instance that you want to delete is not associated with a Cloud Connect Network (CCN) instance or a virtual border router (VBR). If the SAG instance is associated with a CCN instance or a VBR, dissociate the SAG instance from the CCN instance or VBR first. For more information, see <a href="https://help.aliyun.com/document_detail/164903.html">Detach a network</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSmartAccessGatewayResponse
+        /// </returns>
         public async Task<DeleteSmartAccessGatewayResponse> DeleteSmartAccessGatewayWithOptionsAsync(DeleteSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6039,18 +8767,75 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteSmartAccessGatewayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The SAG instance that you want to delete is an SAG CPE instance or an SAG vCPE instance.</para>
+        /// <list type="bullet">
+        /// <item><description>The SAG instance that you want to delete is locked due to overdue payments.</description></item>
+        /// <item><description>The SAG instance that you want to delete is not associated with a Cloud Connect Network (CCN) instance or a virtual border router (VBR). If the SAG instance is associated with a CCN instance or a VBR, dissociate the SAG instance from the CCN instance or VBR first. For more information, see <a href="https://help.aliyun.com/document_detail/164903.html">Detach a network</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSmartAccessGatewayResponse
+        /// </returns>
         public DeleteSmartAccessGatewayResponse DeleteSmartAccessGateway(DeleteSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSmartAccessGatewayWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The SAG instance that you want to delete is an SAG CPE instance or an SAG vCPE instance.</para>
+        /// <list type="bullet">
+        /// <item><description>The SAG instance that you want to delete is locked due to overdue payments.</description></item>
+        /// <item><description>The SAG instance that you want to delete is not associated with a Cloud Connect Network (CCN) instance or a virtual border router (VBR). If the SAG instance is associated with a CCN instance or a VBR, dissociate the SAG instance from the CCN instance or VBR first. For more information, see <a href="https://help.aliyun.com/document_detail/164903.html">Detach a network</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSmartAccessGatewayResponse
+        /// </returns>
         public async Task<DeleteSmartAccessGatewayResponse> DeleteSmartAccessGatewayAsync(DeleteSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSmartAccessGatewayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a client account from a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSmartAccessGatewayClientUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSmartAccessGatewayClientUserResponse
+        /// </returns>
         public DeleteSmartAccessGatewayClientUserResponse DeleteSmartAccessGatewayClientUserWithOptions(DeleteSmartAccessGatewayClientUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6102,6 +8887,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteSmartAccessGatewayClientUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a client account from a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSmartAccessGatewayClientUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSmartAccessGatewayClientUserResponse
+        /// </returns>
         public async Task<DeleteSmartAccessGatewayClientUserResponse> DeleteSmartAccessGatewayClientUserWithOptionsAsync(DeleteSmartAccessGatewayClientUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6153,18 +8953,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteSmartAccessGatewayClientUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a client account from a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSmartAccessGatewayClientUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSmartAccessGatewayClientUserResponse
+        /// </returns>
         public DeleteSmartAccessGatewayClientUserResponse DeleteSmartAccessGatewayClientUser(DeleteSmartAccessGatewayClientUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSmartAccessGatewayClientUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a client account from a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSmartAccessGatewayClientUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSmartAccessGatewayClientUserResponse
+        /// </returns>
         public async Task<DeleteSmartAccessGatewayClientUserResponse> DeleteSmartAccessGatewayClientUserAsync(DeleteSmartAccessGatewayClientUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSmartAccessGatewayClientUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables DNS forwarding for SCG5000 or SCG5000-5G devices whose software version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSmartAccessGatewayDnsForwardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSmartAccessGatewayDnsForwardResponse
+        /// </returns>
         public DeleteSmartAccessGatewayDnsForwardResponse DeleteSmartAccessGatewayDnsForwardWithOptions(DeleteSmartAccessGatewayDnsForwardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6204,6 +9043,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteSmartAccessGatewayDnsForwardResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables DNS forwarding for SCG5000 or SCG5000-5G devices whose software version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSmartAccessGatewayDnsForwardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSmartAccessGatewayDnsForwardResponse
+        /// </returns>
         public async Task<DeleteSmartAccessGatewayDnsForwardResponse> DeleteSmartAccessGatewayDnsForwardWithOptionsAsync(DeleteSmartAccessGatewayDnsForwardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6243,18 +9097,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteSmartAccessGatewayDnsForwardResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables DNS forwarding for SCG5000 or SCG5000-5G devices whose software version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSmartAccessGatewayDnsForwardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSmartAccessGatewayDnsForwardResponse
+        /// </returns>
         public DeleteSmartAccessGatewayDnsForwardResponse DeleteSmartAccessGatewayDnsForward(DeleteSmartAccessGatewayDnsForwardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSmartAccessGatewayDnsForwardWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables DNS forwarding for SCG5000 or SCG5000-5G devices whose software version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSmartAccessGatewayDnsForwardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSmartAccessGatewayDnsForwardResponse
+        /// </returns>
         public async Task<DeleteSmartAccessGatewayDnsForwardResponse> DeleteSmartAccessGatewayDnsForwardAsync(DeleteSmartAccessGatewayDnsForwardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSmartAccessGatewayDnsForwardWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes an SNAT entry from a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSnatEntryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSnatEntryResponse
+        /// </returns>
         public DeleteSnatEntryResponse DeleteSnatEntryWithOptions(DeleteSnatEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6306,6 +9199,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteSnatEntryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes an SNAT entry from a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSnatEntryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSnatEntryResponse
+        /// </returns>
         public async Task<DeleteSnatEntryResponse> DeleteSnatEntryWithOptionsAsync(DeleteSnatEntryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6357,18 +9265,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DeleteSnatEntryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes an SNAT entry from a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSnatEntryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSnatEntryResponse
+        /// </returns>
         public DeleteSnatEntryResponse DeleteSnatEntry(DeleteSnatEntryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSnatEntryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes an SNAT entry from a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSnatEntryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSnatEntryResponse
+        /// </returns>
         public async Task<DeleteSnatEntryResponse> DeleteSnatEntryAsync(DeleteSnatEntryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSnatEntryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeACLAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeACLAttributeResponse
+        /// </returns>
         public DescribeACLAttributeResponse DescribeACLAttributeWithOptions(DescribeACLAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6436,6 +9383,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeACLAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeACLAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeACLAttributeResponse
+        /// </returns>
         public async Task<DescribeACLAttributeResponse> DescribeACLAttributeWithOptionsAsync(DescribeACLAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6503,18 +9465,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeACLAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeACLAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeACLAttributeResponse
+        /// </returns>
         public DescribeACLAttributeResponse DescribeACLAttribute(DescribeACLAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeACLAttributeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeACLAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeACLAttributeResponse
+        /// </returns>
         public async Task<DescribeACLAttributeResponse> DescribeACLAttributeAsync(DescribeACLAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeACLAttributeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries access control lists (ACLs) in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeACLsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeACLsResponse
+        /// </returns>
         public DescribeACLsResponse DescribeACLsWithOptions(DescribeACLsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6578,6 +9579,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeACLsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries access control lists (ACLs) in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeACLsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeACLsResponse
+        /// </returns>
         public async Task<DescribeACLsResponse> DescribeACLsWithOptionsAsync(DescribeACLsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6641,18 +9657,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeACLsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries access control lists (ACLs) in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeACLsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeACLsResponse
+        /// </returns>
         public DescribeACLsResponse DescribeACLs(DescribeACLsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeACLsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries access control lists (ACLs) in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeACLsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeACLsResponse
+        /// </returns>
         public async Task<DescribeACLsResponse> DescribeACLsAsync(DescribeACLsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeACLsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Smart Access Gateway (SAG) instances in a region that can be associated with a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBindableSmartAccessGatewaysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBindableSmartAccessGatewaysResponse
+        /// </returns>
         public DescribeBindableSmartAccessGatewaysResponse DescribeBindableSmartAccessGatewaysWithOptions(DescribeBindableSmartAccessGatewaysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6720,6 +9775,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeBindableSmartAccessGatewaysResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Smart Access Gateway (SAG) instances in a region that can be associated with a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBindableSmartAccessGatewaysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBindableSmartAccessGatewaysResponse
+        /// </returns>
         public async Task<DescribeBindableSmartAccessGatewaysResponse> DescribeBindableSmartAccessGatewaysWithOptionsAsync(DescribeBindableSmartAccessGatewaysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6787,18 +9857,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeBindableSmartAccessGatewaysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Smart Access Gateway (SAG) instances in a region that can be associated with a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBindableSmartAccessGatewaysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBindableSmartAccessGatewaysResponse
+        /// </returns>
         public DescribeBindableSmartAccessGatewaysResponse DescribeBindableSmartAccessGateways(DescribeBindableSmartAccessGatewaysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeBindableSmartAccessGatewaysWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Smart Access Gateway (SAG) instances in a region that can be associated with a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBindableSmartAccessGatewaysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBindableSmartAccessGatewaysResponse
+        /// </returns>
         public async Task<DescribeBindableSmartAccessGatewaysResponse> DescribeBindableSmartAccessGatewaysAsync(DescribeBindableSmartAccessGatewaysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeBindableSmartAccessGatewaysWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS settings of a Smart Access Gateway (SAG) instance associated with SAG app.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClientUserDNSRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClientUserDNSResponse
+        /// </returns>
         public DescribeClientUserDNSResponse DescribeClientUserDNSWithOptions(DescribeClientUserDNSRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6846,6 +9955,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeClientUserDNSResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS settings of a Smart Access Gateway (SAG) instance associated with SAG app.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClientUserDNSRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClientUserDNSResponse
+        /// </returns>
         public async Task<DescribeClientUserDNSResponse> DescribeClientUserDNSWithOptionsAsync(DescribeClientUserDNSRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6893,18 +10017,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeClientUserDNSResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS settings of a Smart Access Gateway (SAG) instance associated with SAG app.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClientUserDNSRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClientUserDNSResponse
+        /// </returns>
         public DescribeClientUserDNSResponse DescribeClientUserDNS(DescribeClientUserDNSRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeClientUserDNSWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS settings of a Smart Access Gateway (SAG) instance associated with SAG app.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClientUserDNSRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClientUserDNSResponse
+        /// </returns>
         public async Task<DescribeClientUserDNSResponse> DescribeClientUserDNSAsync(DescribeClientUserDNSRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeClientUserDNSWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Cloud Connect Network (CCN) instances that you have created in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudConnectNetworksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudConnectNetworksResponse
+        /// </returns>
         public DescribeCloudConnectNetworksResponse DescribeCloudConnectNetworksWithOptions(DescribeCloudConnectNetworksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6968,6 +10131,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeCloudConnectNetworksResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Cloud Connect Network (CCN) instances that you have created in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudConnectNetworksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudConnectNetworksResponse
+        /// </returns>
         public async Task<DescribeCloudConnectNetworksResponse> DescribeCloudConnectNetworksWithOptionsAsync(DescribeCloudConnectNetworksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7031,18 +10209,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeCloudConnectNetworksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Cloud Connect Network (CCN) instances that you have created in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudConnectNetworksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudConnectNetworksResponse
+        /// </returns>
         public DescribeCloudConnectNetworksResponse DescribeCloudConnectNetworks(DescribeCloudConnectNetworksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCloudConnectNetworksWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Cloud Connect Network (CCN) instances that you have created in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudConnectNetworksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudConnectNetworksResponse
+        /// </returns>
         public async Task<DescribeCloudConnectNetworksResponse> DescribeCloudConnectNetworksAsync(DescribeCloudConnectNetworksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCloudConnectNetworksWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the automatic upgrade policy of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDeviceAutoUpgradePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDeviceAutoUpgradePolicyResponse
+        /// </returns>
         public DescribeDeviceAutoUpgradePolicyResponse DescribeDeviceAutoUpgradePolicyWithOptions(DescribeDeviceAutoUpgradePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7098,6 +10315,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeDeviceAutoUpgradePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the automatic upgrade policy of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDeviceAutoUpgradePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDeviceAutoUpgradePolicyResponse
+        /// </returns>
         public async Task<DescribeDeviceAutoUpgradePolicyResponse> DescribeDeviceAutoUpgradePolicyWithOptionsAsync(DescribeDeviceAutoUpgradePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7153,18 +10385,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeDeviceAutoUpgradePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the automatic upgrade policy of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDeviceAutoUpgradePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDeviceAutoUpgradePolicyResponse
+        /// </returns>
         public DescribeDeviceAutoUpgradePolicyResponse DescribeDeviceAutoUpgradePolicy(DescribeDeviceAutoUpgradePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDeviceAutoUpgradePolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the automatic upgrade policy of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDeviceAutoUpgradePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDeviceAutoUpgradePolicyResponse
+        /// </returns>
         public async Task<DescribeDeviceAutoUpgradePolicyResponse> DescribeDeviceAutoUpgradePolicyAsync(DescribeDeviceAutoUpgradePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDeviceAutoUpgradePolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries DNAT entries that are associated with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDnatEntriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDnatEntriesResponse
+        /// </returns>
         public DescribeDnatEntriesResponse DescribeDnatEntriesWithOptions(DescribeDnatEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7224,6 +10495,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeDnatEntriesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries DNAT entries that are associated with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDnatEntriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDnatEntriesResponse
+        /// </returns>
         public async Task<DescribeDnatEntriesResponse> DescribeDnatEntriesWithOptionsAsync(DescribeDnatEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7283,18 +10569,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeDnatEntriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries DNAT entries that are associated with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDnatEntriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDnatEntriesResponse
+        /// </returns>
         public DescribeDnatEntriesResponse DescribeDnatEntries(DescribeDnatEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDnatEntriesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries DNAT entries that are associated with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDnatEntriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDnatEntriesResponse
+        /// </returns>
         public async Task<DescribeDnatEntriesResponse> DescribeDnatEntriesAsync(DescribeDnatEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDnatEntriesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Smart Access Gateway (SAG) instances that are associated with a specified flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowLogSagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowLogSagsResponse
+        /// </returns>
         public DescribeFlowLogSagsResponse DescribeFlowLogSagsWithOptions(DescribeFlowLogSagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7350,6 +10675,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeFlowLogSagsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Smart Access Gateway (SAG) instances that are associated with a specified flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowLogSagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowLogSagsResponse
+        /// </returns>
         public async Task<DescribeFlowLogSagsResponse> DescribeFlowLogSagsWithOptionsAsync(DescribeFlowLogSagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7405,18 +10745,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeFlowLogSagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Smart Access Gateway (SAG) instances that are associated with a specified flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowLogSagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowLogSagsResponse
+        /// </returns>
         public DescribeFlowLogSagsResponse DescribeFlowLogSags(DescribeFlowLogSagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeFlowLogSagsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Smart Access Gateway (SAG) instances that are associated with a specified flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowLogSagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowLogSagsResponse
+        /// </returns>
         public async Task<DescribeFlowLogSagsResponse> DescribeFlowLogSagsAsync(DescribeFlowLogSagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeFlowLogSagsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries flow logs in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowLogsResponse
+        /// </returns>
         public DescribeFlowLogsResponse DescribeFlowLogsWithOptions(DescribeFlowLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7488,6 +10867,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeFlowLogsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries flow logs in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowLogsResponse
+        /// </returns>
         public async Task<DescribeFlowLogsResponse> DescribeFlowLogsWithOptionsAsync(DescribeFlowLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7559,18 +10953,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeFlowLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries flow logs in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowLogsResponse
+        /// </returns>
         public DescribeFlowLogsResponse DescribeFlowLogs(DescribeFlowLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeFlowLogsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries flow logs in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFlowLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFlowLogsResponse
+        /// </returns>
         public async Task<DescribeFlowLogsResponse> DescribeFlowLogsAsync(DescribeFlowLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeFlowLogsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the authorization information about a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGrantRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGrantRulesResponse
+        /// </returns>
         public DescribeGrantRulesResponse DescribeGrantRulesWithOptions(DescribeGrantRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7626,6 +11059,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeGrantRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the authorization information about a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGrantRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGrantRulesResponse
+        /// </returns>
         public async Task<DescribeGrantRulesResponse> DescribeGrantRulesWithOptionsAsync(DescribeGrantRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7681,18 +11129,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeGrantRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the authorization information about a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGrantRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGrantRulesResponse
+        /// </returns>
         public DescribeGrantRulesResponse DescribeGrantRules(DescribeGrantRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeGrantRulesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the authorization information about a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGrantRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGrantRulesResponse
+        /// </returns>
         public async Task<DescribeGrantRulesResponse> DescribeGrantRulesAsync(DescribeGrantRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeGrantRulesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the permission information about a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGrantSagRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGrantSagRulesResponse
+        /// </returns>
         public DescribeGrantSagRulesResponse DescribeGrantSagRulesWithOptions(DescribeGrantSagRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7748,6 +11235,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeGrantSagRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the permission information about a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGrantSagRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGrantSagRulesResponse
+        /// </returns>
         public async Task<DescribeGrantSagRulesResponse> DescribeGrantSagRulesWithOptionsAsync(DescribeGrantSagRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7803,18 +11305,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeGrantSagRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the permission information about a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGrantSagRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGrantSagRulesResponse
+        /// </returns>
         public DescribeGrantSagRulesResponse DescribeGrantSagRules(DescribeGrantSagRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeGrantSagRulesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the permission information about a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGrantSagRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGrantSagRulesResponse
+        /// </returns>
         public async Task<DescribeGrantSagRulesResponse> DescribeGrantSagRulesAsync(DescribeGrantSagRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeGrantSagRulesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries authorization information about Smart Access Gateway (SAG) instances and cross-account virtual border routers (VBRs).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGrantSagVbrRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGrantSagVbrRulesResponse
+        /// </returns>
         public DescribeGrantSagVbrRulesResponse DescribeGrantSagVbrRulesWithOptions(DescribeGrantSagVbrRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7874,6 +11415,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeGrantSagVbrRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries authorization information about Smart Access Gateway (SAG) instances and cross-account virtual border routers (VBRs).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGrantSagVbrRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGrantSagVbrRulesResponse
+        /// </returns>
         public async Task<DescribeGrantSagVbrRulesResponse> DescribeGrantSagVbrRulesWithOptionsAsync(DescribeGrantSagVbrRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7933,18 +11489,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeGrantSagVbrRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries authorization information about Smart Access Gateway (SAG) instances and cross-account virtual border routers (VBRs).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGrantSagVbrRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGrantSagVbrRulesResponse
+        /// </returns>
         public DescribeGrantSagVbrRulesResponse DescribeGrantSagVbrRules(DescribeGrantSagVbrRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeGrantSagVbrRulesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries authorization information about Smart Access Gateway (SAG) instances and cross-account virtual border routers (VBRs).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGrantSagVbrRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGrantSagVbrRulesResponse
+        /// </returns>
         public async Task<DescribeGrantSagVbrRulesResponse> DescribeGrantSagVbrRulesAsync(DescribeGrantSagVbrRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeGrantSagVbrRulesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a health check instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHealthCheckAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHealthCheckAttributeResponse
+        /// </returns>
         public DescribeHealthCheckAttributeResponse DescribeHealthCheckAttributeWithOptions(DescribeHealthCheckAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7996,6 +11591,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeHealthCheckAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a health check instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHealthCheckAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHealthCheckAttributeResponse
+        /// </returns>
         public async Task<DescribeHealthCheckAttributeResponse> DescribeHealthCheckAttributeWithOptionsAsync(DescribeHealthCheckAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8047,18 +11657,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeHealthCheckAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a health check instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHealthCheckAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHealthCheckAttributeResponse
+        /// </returns>
         public DescribeHealthCheckAttributeResponse DescribeHealthCheckAttribute(DescribeHealthCheckAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHealthCheckAttributeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a health check instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHealthCheckAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHealthCheckAttributeResponse
+        /// </returns>
         public async Task<DescribeHealthCheckAttributeResponse> DescribeHealthCheckAttributeAsync(DescribeHealthCheckAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHealthCheckAttributeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries health checks that are associated with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHealthChecksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHealthChecksResponse
+        /// </returns>
         public DescribeHealthChecksResponse DescribeHealthChecksWithOptions(DescribeHealthChecksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8122,6 +11771,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeHealthChecksResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries health checks that are associated with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHealthChecksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHealthChecksResponse
+        /// </returns>
         public async Task<DescribeHealthChecksResponse> DescribeHealthChecksWithOptionsAsync(DescribeHealthChecksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8185,18 +11849,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeHealthChecksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries health checks that are associated with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHealthChecksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHealthChecksResponse
+        /// </returns>
         public DescribeHealthChecksResponse DescribeHealthChecks(DescribeHealthChecksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeHealthChecksWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries health checks that are associated with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHealthChecksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHealthChecksResponse
+        /// </returns>
         public async Task<DescribeHealthChecksResponse> DescribeHealthChecksAsync(DescribeHealthChecksRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHealthChecksWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries traffic throttling rules of a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeQosCarsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQosCarsResponse
+        /// </returns>
         public DescribeQosCarsResponse DescribeQosCarsWithOptions(DescribeQosCarsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8264,6 +11967,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeQosCarsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries traffic throttling rules of a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeQosCarsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQosCarsResponse
+        /// </returns>
         public async Task<DescribeQosCarsResponse> DescribeQosCarsWithOptionsAsync(DescribeQosCarsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8331,18 +12049,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeQosCarsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries traffic throttling rules of a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeQosCarsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQosCarsResponse
+        /// </returns>
         public DescribeQosCarsResponse DescribeQosCars(DescribeQosCarsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeQosCarsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries traffic throttling rules of a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeQosCarsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQosCarsResponse
+        /// </returns>
         public async Task<DescribeQosCarsResponse> DescribeQosCarsAsync(DescribeQosCarsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeQosCarsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries quality of service (QoS) rules that contain 5-tuples.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeQosPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQosPoliciesResponse
+        /// </returns>
         public DescribeQosPoliciesResponse DescribeQosPoliciesWithOptions(DescribeQosPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8410,6 +12167,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeQosPoliciesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries quality of service (QoS) rules that contain 5-tuples.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeQosPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQosPoliciesResponse
+        /// </returns>
         public async Task<DescribeQosPoliciesResponse> DescribeQosPoliciesWithOptionsAsync(DescribeQosPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8477,18 +12249,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeQosPoliciesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries quality of service (QoS) rules that contain 5-tuples.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeQosPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQosPoliciesResponse
+        /// </returns>
         public DescribeQosPoliciesResponse DescribeQosPolicies(DescribeQosPoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeQosPoliciesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries quality of service (QoS) rules that contain 5-tuples.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeQosPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQosPoliciesResponse
+        /// </returns>
         public async Task<DescribeQosPoliciesResponse> DescribeQosPoliciesAsync(DescribeQosPoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeQosPoliciesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries quality of service (QoS) policies in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeQosesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQosesResponse
+        /// </returns>
         public DescribeQosesResponse DescribeQosesWithOptions(DescribeQosesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8548,6 +12359,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeQosesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries quality of service (QoS) policies in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeQosesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQosesResponse
+        /// </returns>
         public async Task<DescribeQosesResponse> DescribeQosesWithOptionsAsync(DescribeQosesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8607,18 +12433,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeQosesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries quality of service (QoS) policies in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeQosesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQosesResponse
+        /// </returns>
         public DescribeQosesResponse DescribeQoses(DescribeQosesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeQosesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries quality of service (QoS) policies in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeQosesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQosesResponse
+        /// </returns>
         public async Task<DescribeQosesResponse> DescribeQosesAsync(DescribeQosesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeQosesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8662,6 +12527,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8705,18 +12585,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRegionsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRegionsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries route advertisement policies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRouteDistributionStrategiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRouteDistributionStrategiesResponse
+        /// </returns>
         public DescribeRouteDistributionStrategiesResponse DescribeRouteDistributionStrategiesWithOptions(DescribeRouteDistributionStrategiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8776,6 +12695,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeRouteDistributionStrategiesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries route advertisement policies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRouteDistributionStrategiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRouteDistributionStrategiesResponse
+        /// </returns>
         public async Task<DescribeRouteDistributionStrategiesResponse> DescribeRouteDistributionStrategiesWithOptionsAsync(DescribeRouteDistributionStrategiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8835,18 +12769,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeRouteDistributionStrategiesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries route advertisement policies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRouteDistributionStrategiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRouteDistributionStrategiesResponse
+        /// </returns>
         public DescribeRouteDistributionStrategiesResponse DescribeRouteDistributionStrategies(DescribeRouteDistributionStrategiesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeRouteDistributionStrategiesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries route advertisement policies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRouteDistributionStrategiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRouteDistributionStrategiesResponse
+        /// </returns>
         public async Task<DescribeRouteDistributionStrategiesResponse> DescribeRouteDistributionStrategiesAsync(DescribeRouteDistributionStrategiesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRouteDistributionStrategiesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSAGDeviceInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSAGDeviceInfoResponse
+        /// </returns>
         public DescribeSAGDeviceInfoResponse DescribeSAGDeviceInfoWithOptions(DescribeSAGDeviceInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8898,6 +12871,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSAGDeviceInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSAGDeviceInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSAGDeviceInfoResponse
+        /// </returns>
         public async Task<DescribeSAGDeviceInfoResponse> DescribeSAGDeviceInfoWithOptionsAsync(DescribeSAGDeviceInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8949,18 +12937,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSAGDeviceInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSAGDeviceInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSAGDeviceInfoResponse
+        /// </returns>
         public DescribeSAGDeviceInfoResponse DescribeSAGDeviceInfo(DescribeSAGDeviceInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSAGDeviceInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSAGDeviceInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSAGDeviceInfoResponse
+        /// </returns>
         public async Task<DescribeSAGDeviceInfoResponse> DescribeSAGDeviceInfoAsync(DescribeSAGDeviceInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSAGDeviceInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS servers used by a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagCurrentDnsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagCurrentDnsResponse
+        /// </returns>
         public DescribeSagCurrentDnsResponse DescribeSagCurrentDnsWithOptions(DescribeSagCurrentDnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9012,6 +13039,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagCurrentDnsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS servers used by a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagCurrentDnsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagCurrentDnsResponse
+        /// </returns>
         public async Task<DescribeSagCurrentDnsResponse> DescribeSagCurrentDnsWithOptionsAsync(DescribeSagCurrentDnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9063,18 +13105,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagCurrentDnsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS servers used by a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagCurrentDnsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagCurrentDnsResponse
+        /// </returns>
         public DescribeSagCurrentDnsResponse DescribeSagCurrentDns(DescribeSagCurrentDnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagCurrentDnsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS servers used by a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagCurrentDnsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagCurrentDnsResponse
+        /// </returns>
         public async Task<DescribeSagCurrentDnsResponse> DescribeSagCurrentDnsAsync(DescribeSagCurrentDnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagCurrentDnsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the top 10 Smart Access Gateway (SAG) instances that have the highest packet loss rates in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagDropTopNRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagDropTopNResponse
+        /// </returns>
         public DescribeSagDropTopNResponse DescribeSagDropTopNWithOptions(DescribeSagDropTopNRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9122,6 +13203,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagDropTopNResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the top 10 Smart Access Gateway (SAG) instances that have the highest packet loss rates in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagDropTopNRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagDropTopNResponse
+        /// </returns>
         public async Task<DescribeSagDropTopNResponse> DescribeSagDropTopNWithOptionsAsync(DescribeSagDropTopNRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9169,18 +13265,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagDropTopNResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the top 10 Smart Access Gateway (SAG) instances that have the highest packet loss rates in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagDropTopNRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagDropTopNResponse
+        /// </returns>
         public DescribeSagDropTopNResponse DescribeSagDropTopN(DescribeSagDropTopNRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagDropTopNWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the top 10 Smart Access Gateway (SAG) instances that have the highest packet loss rates in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagDropTopNRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagDropTopNResponse
+        /// </returns>
         public async Task<DescribeSagDropTopNResponse> DescribeSagDropTopNAsync(DescribeSagDropTopNRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagDropTopNWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries sub-interfaces added to an Express Connect circuit port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagExpressConnectInterfaceListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagExpressConnectInterfaceListResponse
+        /// </returns>
         public DescribeSagExpressConnectInterfaceListResponse DescribeSagExpressConnectInterfaceListWithOptions(DescribeSagExpressConnectInterfaceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9236,6 +13371,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagExpressConnectInterfaceListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries sub-interfaces added to an Express Connect circuit port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagExpressConnectInterfaceListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagExpressConnectInterfaceListResponse
+        /// </returns>
         public async Task<DescribeSagExpressConnectInterfaceListResponse> DescribeSagExpressConnectInterfaceListWithOptionsAsync(DescribeSagExpressConnectInterfaceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9291,18 +13441,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagExpressConnectInterfaceListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries sub-interfaces added to an Express Connect circuit port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagExpressConnectInterfaceListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagExpressConnectInterfaceListResponse
+        /// </returns>
         public DescribeSagExpressConnectInterfaceListResponse DescribeSagExpressConnectInterfaceList(DescribeSagExpressConnectInterfaceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagExpressConnectInterfaceListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries sub-interfaces added to an Express Connect circuit port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagExpressConnectInterfaceListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagExpressConnectInterfaceListResponse
+        /// </returns>
         public async Task<DescribeSagExpressConnectInterfaceListResponse> DescribeSagExpressConnectInterfaceListAsync(DescribeSagExpressConnectInterfaceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagExpressConnectInterfaceListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global routing protocol.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagGlobalRouteProtocolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagGlobalRouteProtocolResponse
+        /// </returns>
         public DescribeSagGlobalRouteProtocolResponse DescribeSagGlobalRouteProtocolWithOptions(DescribeSagGlobalRouteProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9354,6 +13543,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagGlobalRouteProtocolResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global routing protocol.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagGlobalRouteProtocolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagGlobalRouteProtocolResponse
+        /// </returns>
         public async Task<DescribeSagGlobalRouteProtocolResponse> DescribeSagGlobalRouteProtocolWithOptionsAsync(DescribeSagGlobalRouteProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9405,18 +13609,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagGlobalRouteProtocolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global routing protocol.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagGlobalRouteProtocolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagGlobalRouteProtocolResponse
+        /// </returns>
         public DescribeSagGlobalRouteProtocolResponse DescribeSagGlobalRouteProtocol(DescribeSagGlobalRouteProtocolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagGlobalRouteProtocolWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global routing protocol.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagGlobalRouteProtocolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagGlobalRouteProtocolResponse
+        /// </returns>
         public async Task<DescribeSagGlobalRouteProtocolResponse> DescribeSagGlobalRouteProtocolAsync(DescribeSagGlobalRouteProtocolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagGlobalRouteProtocolWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the high availability (HA) configuration of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagHaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagHaResponse
+        /// </returns>
         public DescribeSagHaResponse DescribeSagHaWithOptions(DescribeSagHaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9468,6 +13711,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagHaResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the high availability (HA) configuration of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagHaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagHaResponse
+        /// </returns>
         public async Task<DescribeSagHaResponse> DescribeSagHaWithOptionsAsync(DescribeSagHaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9519,18 +13777,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagHaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the high availability (HA) configuration of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagHaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagHaResponse
+        /// </returns>
         public DescribeSagHaResponse DescribeSagHa(DescribeSagHaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagHaWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the high availability (HA) configuration of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagHaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagHaResponse
+        /// </returns>
         public async Task<DescribeSagHaResponse> DescribeSagHaAsync(DescribeSagHaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagHaWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the LAN port settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagLanListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagLanListResponse
+        /// </returns>
         public DescribeSagLanListResponse DescribeSagLanListWithOptions(DescribeSagLanListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9582,6 +13879,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagLanListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the LAN port settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagLanListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagLanListResponse
+        /// </returns>
         public async Task<DescribeSagLanListResponse> DescribeSagLanListWithOptionsAsync(DescribeSagLanListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9633,18 +13945,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagLanListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the LAN port settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagLanListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagLanListResponse
+        /// </returns>
         public DescribeSagLanListResponse DescribeSagLanList(DescribeSagLanListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagLanListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the LAN port settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagLanListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagLanListResponse
+        /// </returns>
         public async Task<DescribeSagLanListResponse> DescribeSagLanListAsync(DescribeSagLanListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagLanListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the management port settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagManagementPortRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagManagementPortResponse
+        /// </returns>
         public DescribeSagManagementPortResponse DescribeSagManagementPortWithOptions(DescribeSagManagementPortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9696,6 +14047,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagManagementPortResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the management port settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagManagementPortRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagManagementPortResponse
+        /// </returns>
         public async Task<DescribeSagManagementPortResponse> DescribeSagManagementPortWithOptionsAsync(DescribeSagManagementPortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9747,18 +14113,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagManagementPortResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the management port settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagManagementPortRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagManagementPortResponse
+        /// </returns>
         public DescribeSagManagementPortResponse DescribeSagManagementPort(DescribeSagManagementPortRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagManagementPortWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the management port settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagManagementPortRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagManagementPortResponse
+        /// </returns>
         public async Task<DescribeSagManagementPortResponse> DescribeSagManagementPortAsync(DescribeSagManagementPortRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagManagementPortWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of clients connected to Alibaba Cloud through a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagOnlineClientStatisticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagOnlineClientStatisticsResponse
+        /// </returns>
         public DescribeSagOnlineClientStatisticsResponse DescribeSagOnlineClientStatisticsWithOptions(DescribeSagOnlineClientStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9806,6 +14211,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagOnlineClientStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of clients connected to Alibaba Cloud through a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagOnlineClientStatisticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagOnlineClientStatisticsResponse
+        /// </returns>
         public async Task<DescribeSagOnlineClientStatisticsResponse> DescribeSagOnlineClientStatisticsWithOptionsAsync(DescribeSagOnlineClientStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9853,18 +14273,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagOnlineClientStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of clients connected to Alibaba Cloud through a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagOnlineClientStatisticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagOnlineClientStatisticsResponse
+        /// </returns>
         public DescribeSagOnlineClientStatisticsResponse DescribeSagOnlineClientStatistics(DescribeSagOnlineClientStatisticsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagOnlineClientStatisticsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of clients connected to Alibaba Cloud through a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagOnlineClientStatisticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagOnlineClientStatisticsResponse
+        /// </returns>
         public async Task<DescribeSagOnlineClientStatisticsResponse> DescribeSagOnlineClientStatisticsAsync(DescribeSagOnlineClientStatisticsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagOnlineClientStatisticsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the information of a physical port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagPortListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagPortListResponse
+        /// </returns>
         public DescribeSagPortListResponse DescribeSagPortListWithOptions(DescribeSagPortListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9916,6 +14375,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagPortListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the information of a physical port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagPortListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagPortListResponse
+        /// </returns>
         public async Task<DescribeSagPortListResponse> DescribeSagPortListWithOptionsAsync(DescribeSagPortListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9967,18 +14441,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagPortListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the information of a physical port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagPortListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagPortListResponse
+        /// </returns>
         public DescribeSagPortListResponse DescribeSagPortList(DescribeSagPortListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagPortListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the information of a physical port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagPortListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagPortListResponse
+        /// </returns>
         public async Task<DescribeSagPortListResponse> DescribeSagPortListAsync(DescribeSagPortListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagPortListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports for which the specified routing protocol is enabled.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagPortRouteProtocolListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagPortRouteProtocolListResponse
+        /// </returns>
         public DescribeSagPortRouteProtocolListResponse DescribeSagPortRouteProtocolListWithOptions(DescribeSagPortRouteProtocolListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10030,6 +14543,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagPortRouteProtocolListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports for which the specified routing protocol is enabled.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagPortRouteProtocolListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagPortRouteProtocolListResponse
+        /// </returns>
         public async Task<DescribeSagPortRouteProtocolListResponse> DescribeSagPortRouteProtocolListWithOptionsAsync(DescribeSagPortRouteProtocolListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10081,18 +14609,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagPortRouteProtocolListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports for which the specified routing protocol is enabled.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagPortRouteProtocolListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagPortRouteProtocolListResponse
+        /// </returns>
         public DescribeSagPortRouteProtocolListResponse DescribeSagPortRouteProtocolList(DescribeSagPortRouteProtocolListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagPortRouteProtocolListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports for which the specified routing protocol is enabled.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagPortRouteProtocolListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagPortRouteProtocolListResponse
+        /// </returns>
         public async Task<DescribeSagPortRouteProtocolListResponse> DescribeSagPortRouteProtocolListAsync(DescribeSagPortRouteProtocolListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagPortRouteProtocolListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries remote logon information about a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagRemoteAccessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagRemoteAccessResponse
+        /// </returns>
         public DescribeSagRemoteAccessResponse DescribeSagRemoteAccessWithOptions(DescribeSagRemoteAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10144,6 +14711,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagRemoteAccessResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries remote logon information about a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagRemoteAccessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagRemoteAccessResponse
+        /// </returns>
         public async Task<DescribeSagRemoteAccessResponse> DescribeSagRemoteAccessWithOptionsAsync(DescribeSagRemoteAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10195,18 +14777,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagRemoteAccessResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries remote logon information about a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagRemoteAccessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagRemoteAccessResponse
+        /// </returns>
         public DescribeSagRemoteAccessResponse DescribeSagRemoteAccess(DescribeSagRemoteAccessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagRemoteAccessWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries remote logon information about a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagRemoteAccessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagRemoteAccessResponse
+        /// </returns>
         public async Task<DescribeSagRemoteAccessResponse> DescribeSagRemoteAccessAsync(DescribeSagRemoteAccessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagRemoteAccessWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the routes of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagRouteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagRouteListResponse
+        /// </returns>
         public DescribeSagRouteListResponse DescribeSagRouteListWithOptions(DescribeSagRouteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10258,6 +14879,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagRouteListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the routes of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagRouteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagRouteListResponse
+        /// </returns>
         public async Task<DescribeSagRouteListResponse> DescribeSagRouteListWithOptionsAsync(DescribeSagRouteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10309,18 +14945,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagRouteListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the routes of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagRouteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagRouteListResponse
+        /// </returns>
         public DescribeSagRouteListResponse DescribeSagRouteList(DescribeSagRouteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagRouteListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the routes of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagRouteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagRouteListResponse
+        /// </returns>
         public async Task<DescribeSagRouteListResponse> DescribeSagRouteListAsync(DescribeSagRouteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagRouteListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of Border Gateway Protocol (BGP) dynamic routing.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagRouteProtocolBgpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagRouteProtocolBgpResponse
+        /// </returns>
         public DescribeSagRouteProtocolBgpResponse DescribeSagRouteProtocolBgpWithOptions(DescribeSagRouteProtocolBgpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10372,6 +15047,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagRouteProtocolBgpResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of Border Gateway Protocol (BGP) dynamic routing.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagRouteProtocolBgpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagRouteProtocolBgpResponse
+        /// </returns>
         public async Task<DescribeSagRouteProtocolBgpResponse> DescribeSagRouteProtocolBgpWithOptionsAsync(DescribeSagRouteProtocolBgpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10423,18 +15113,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagRouteProtocolBgpResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of Border Gateway Protocol (BGP) dynamic routing.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagRouteProtocolBgpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagRouteProtocolBgpResponse
+        /// </returns>
         public DescribeSagRouteProtocolBgpResponse DescribeSagRouteProtocolBgp(DescribeSagRouteProtocolBgpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagRouteProtocolBgpWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of Border Gateway Protocol (BGP) dynamic routing.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagRouteProtocolBgpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagRouteProtocolBgpResponse
+        /// </returns>
         public async Task<DescribeSagRouteProtocolBgpResponse> DescribeSagRouteProtocolBgpAsync(DescribeSagRouteProtocolBgpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagRouteProtocolBgpWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the OSPF settings of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagRouteProtocolOspfRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagRouteProtocolOspfResponse
+        /// </returns>
         public DescribeSagRouteProtocolOspfResponse DescribeSagRouteProtocolOspfWithOptions(DescribeSagRouteProtocolOspfRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10486,6 +15215,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagRouteProtocolOspfResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the OSPF settings of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagRouteProtocolOspfRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagRouteProtocolOspfResponse
+        /// </returns>
         public async Task<DescribeSagRouteProtocolOspfResponse> DescribeSagRouteProtocolOspfWithOptionsAsync(DescribeSagRouteProtocolOspfRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10537,18 +15281,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagRouteProtocolOspfResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the OSPF settings of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagRouteProtocolOspfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagRouteProtocolOspfResponse
+        /// </returns>
         public DescribeSagRouteProtocolOspfResponse DescribeSagRouteProtocolOspf(DescribeSagRouteProtocolOspfRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagRouteProtocolOspfWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the OSPF settings of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagRouteProtocolOspfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagRouteProtocolOspfResponse
+        /// </returns>
         public async Task<DescribeSagRouteProtocolOspfResponse> DescribeSagRouteProtocolOspfAsync(DescribeSagRouteProtocolOspfRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagRouteProtocolOspfWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the static routes of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagStaticRouteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagStaticRouteListResponse
+        /// </returns>
         public DescribeSagStaticRouteListResponse DescribeSagStaticRouteListWithOptions(DescribeSagStaticRouteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10600,6 +15383,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagStaticRouteListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the static routes of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagStaticRouteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagStaticRouteListResponse
+        /// </returns>
         public async Task<DescribeSagStaticRouteListResponse> DescribeSagStaticRouteListWithOptionsAsync(DescribeSagStaticRouteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10651,18 +15449,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagStaticRouteListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the static routes of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagStaticRouteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagStaticRouteListResponse
+        /// </returns>
         public DescribeSagStaticRouteListResponse DescribeSagStaticRouteList(DescribeSagStaticRouteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagStaticRouteListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the static routes of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagStaticRouteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagStaticRouteListResponse
+        /// </returns>
         public async Task<DescribeSagStaticRouteListResponse> DescribeSagStaticRouteListAsync(DescribeSagStaticRouteListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagStaticRouteListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the top 10 Smart Access Gateway (SAG) instances that have the highest data transfer rates in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagTrafficTopNRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagTrafficTopNResponse
+        /// </returns>
         public DescribeSagTrafficTopNResponse DescribeSagTrafficTopNWithOptions(DescribeSagTrafficTopNRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10710,6 +15547,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagTrafficTopNResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the top 10 Smart Access Gateway (SAG) instances that have the highest data transfer rates in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagTrafficTopNRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagTrafficTopNResponse
+        /// </returns>
         public async Task<DescribeSagTrafficTopNResponse> DescribeSagTrafficTopNWithOptionsAsync(DescribeSagTrafficTopNRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10757,18 +15609,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagTrafficTopNResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the top 10 Smart Access Gateway (SAG) instances that have the highest data transfer rates in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagTrafficTopNRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagTrafficTopNResponse
+        /// </returns>
         public DescribeSagTrafficTopNResponse DescribeSagTrafficTopN(DescribeSagTrafficTopNRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagTrafficTopNWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the top 10 Smart Access Gateway (SAG) instances that have the highest data transfer rates in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagTrafficTopNRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagTrafficTopNResponse
+        /// </returns>
         public async Task<DescribeSagTrafficTopNResponse> DescribeSagTrafficTopNAsync(DescribeSagTrafficTopNRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagTrafficTopNWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS servers used by a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagUserDnsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagUserDnsResponse
+        /// </returns>
         public DescribeSagUserDnsResponse DescribeSagUserDnsWithOptions(DescribeSagUserDnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10820,6 +15711,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagUserDnsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS servers used by a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagUserDnsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagUserDnsResponse
+        /// </returns>
         public async Task<DescribeSagUserDnsResponse> DescribeSagUserDnsWithOptionsAsync(DescribeSagUserDnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10871,18 +15777,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagUserDnsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS servers used by a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagUserDnsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagUserDnsResponse
+        /// </returns>
         public DescribeSagUserDnsResponse DescribeSagUserDns(DescribeSagUserDnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagUserDnsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS servers used by a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagUserDnsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagUserDnsResponse
+        /// </returns>
         public async Task<DescribeSagUserDnsResponse> DescribeSagUserDnsAsync(DescribeSagUserDnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagUserDnsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether a specified virtual border router (VBR) is associated with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagVbrRelationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagVbrRelationsResponse
+        /// </returns>
         public DescribeSagVbrRelationsResponse DescribeSagVbrRelationsWithOptions(DescribeSagVbrRelationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10934,6 +15879,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagVbrRelationsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether a specified virtual border router (VBR) is associated with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagVbrRelationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagVbrRelationsResponse
+        /// </returns>
         public async Task<DescribeSagVbrRelationsResponse> DescribeSagVbrRelationsWithOptionsAsync(DescribeSagVbrRelationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10985,18 +15945,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagVbrRelationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether a specified virtual border router (VBR) is associated with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagVbrRelationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagVbrRelationsResponse
+        /// </returns>
         public DescribeSagVbrRelationsResponse DescribeSagVbrRelations(DescribeSagVbrRelationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagVbrRelationsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether a specified virtual border router (VBR) is associated with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagVbrRelationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagVbrRelationsResponse
+        /// </returns>
         public async Task<DescribeSagVbrRelationsResponse> DescribeSagVbrRelationsAsync(DescribeSagVbrRelationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagVbrRelationsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the 4G subscriber identity module (SIM) card used by the WAN port of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagWan4GRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagWan4GResponse
+        /// </returns>
         public DescribeSagWan4GResponse DescribeSagWan4GWithOptions(DescribeSagWan4GRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11048,6 +16047,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagWan4GResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the 4G subscriber identity module (SIM) card used by the WAN port of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagWan4GRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagWan4GResponse
+        /// </returns>
         public async Task<DescribeSagWan4GResponse> DescribeSagWan4GWithOptionsAsync(DescribeSagWan4GRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11099,18 +16113,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagWan4GResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the 4G subscriber identity module (SIM) card used by the WAN port of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagWan4GRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagWan4GResponse
+        /// </returns>
         public DescribeSagWan4GResponse DescribeSagWan4G(DescribeSagWan4GRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagWan4GWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the 4G subscriber identity module (SIM) card used by the WAN port of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagWan4GRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagWan4GResponse
+        /// </returns>
         public async Task<DescribeSagWan4GResponse> DescribeSagWan4GAsync(DescribeSagWan4GRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagWan4GWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the WAN port settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagWanListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagWanListResponse
+        /// </returns>
         public DescribeSagWanListResponse DescribeSagWanListWithOptions(DescribeSagWanListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11162,6 +16215,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagWanListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the WAN port settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagWanListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagWanListResponse
+        /// </returns>
         public async Task<DescribeSagWanListResponse> DescribeSagWanListWithOptionsAsync(DescribeSagWanListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11213,18 +16281,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagWanListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the WAN port settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagWanListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagWanListResponse
+        /// </returns>
         public DescribeSagWanListResponse DescribeSagWanList(DescribeSagWanListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagWanListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the WAN port settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagWanListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagWanListResponse
+        /// </returns>
         public async Task<DescribeSagWanListResponse> DescribeSagWanListAsync(DescribeSagWanListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagWanListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the SNAT settings of the WAN port of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagWanSnatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagWanSnatResponse
+        /// </returns>
         public DescribeSagWanSnatResponse DescribeSagWanSnatWithOptions(DescribeSagWanSnatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11276,6 +16383,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagWanSnatResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the SNAT settings of the WAN port of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagWanSnatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagWanSnatResponse
+        /// </returns>
         public async Task<DescribeSagWanSnatResponse> DescribeSagWanSnatWithOptionsAsync(DescribeSagWanSnatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11327,18 +16449,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagWanSnatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the SNAT settings of the WAN port of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagWanSnatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagWanSnatResponse
+        /// </returns>
         public DescribeSagWanSnatResponse DescribeSagWanSnat(DescribeSagWanSnatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagWanSnatWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the SNAT settings of the WAN port of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagWanSnatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagWanSnatResponse
+        /// </returns>
         public async Task<DescribeSagWanSnatResponse> DescribeSagWanSnatAsync(DescribeSagWanSnatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagWanSnatWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the Wi-Fi settings of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagWifiRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagWifiResponse
+        /// </returns>
         public DescribeSagWifiResponse DescribeSagWifiWithOptions(DescribeSagWifiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11390,6 +16551,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagWifiResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the Wi-Fi settings of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagWifiRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagWifiResponse
+        /// </returns>
         public async Task<DescribeSagWifiResponse> DescribeSagWifiWithOptionsAsync(DescribeSagWifiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11441,18 +16617,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSagWifiResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the Wi-Fi settings of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagWifiRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagWifiResponse
+        /// </returns>
         public DescribeSagWifiResponse DescribeSagWifi(DescribeSagWifiRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSagWifiWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the Wi-Fi settings of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSagWifiRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSagWifiResponse
+        /// </returns>
         public async Task<DescribeSagWifiResponse> DescribeSagWifiAsync(DescribeSagWifiRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagWifiWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewayAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewayAttributeResponse
+        /// </returns>
         public DescribeSmartAccessGatewayAttributeResponse DescribeSmartAccessGatewayAttributeWithOptions(DescribeSmartAccessGatewayAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11500,6 +16715,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSmartAccessGatewayAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewayAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewayAttributeResponse
+        /// </returns>
         public async Task<DescribeSmartAccessGatewayAttributeResponse> DescribeSmartAccessGatewayAttributeWithOptionsAsync(DescribeSmartAccessGatewayAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11547,18 +16777,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSmartAccessGatewayAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewayAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewayAttributeResponse
+        /// </returns>
         public DescribeSmartAccessGatewayAttributeResponse DescribeSmartAccessGatewayAttribute(DescribeSmartAccessGatewayAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSmartAccessGatewayAttributeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewayAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewayAttributeResponse
+        /// </returns>
         public async Task<DescribeSmartAccessGatewayAttributeResponse> DescribeSmartAccessGatewayAttributeAsync(DescribeSmartAccessGatewayAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSmartAccessGatewayAttributeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries client accounts added to a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewayClientUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewayClientUsersResponse
+        /// </returns>
         public DescribeSmartAccessGatewayClientUsersResponse DescribeSmartAccessGatewayClientUsersWithOptions(DescribeSmartAccessGatewayClientUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11622,6 +16891,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSmartAccessGatewayClientUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries client accounts added to a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewayClientUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewayClientUsersResponse
+        /// </returns>
         public async Task<DescribeSmartAccessGatewayClientUsersResponse> DescribeSmartAccessGatewayClientUsersWithOptionsAsync(DescribeSmartAccessGatewayClientUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11685,18 +16969,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSmartAccessGatewayClientUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries client accounts added to a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewayClientUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewayClientUsersResponse
+        /// </returns>
         public DescribeSmartAccessGatewayClientUsersResponse DescribeSmartAccessGatewayClientUsers(DescribeSmartAccessGatewayClientUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSmartAccessGatewayClientUsersWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries client accounts added to a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewayClientUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewayClientUsersResponse
+        /// </returns>
         public async Task<DescribeSmartAccessGatewayClientUsersResponse> DescribeSmartAccessGatewayClientUsersAsync(DescribeSmartAccessGatewayClientUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSmartAccessGatewayClientUsersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the high availability (HA) settings of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewayHaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewayHaResponse
+        /// </returns>
         public DescribeSmartAccessGatewayHaResponse DescribeSmartAccessGatewayHaWithOptions(DescribeSmartAccessGatewayHaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11744,6 +17067,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSmartAccessGatewayHaResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the high availability (HA) settings of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewayHaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewayHaResponse
+        /// </returns>
         public async Task<DescribeSmartAccessGatewayHaResponse> DescribeSmartAccessGatewayHaWithOptionsAsync(DescribeSmartAccessGatewayHaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11791,18 +17129,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSmartAccessGatewayHaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the high availability (HA) settings of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewayHaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewayHaResponse
+        /// </returns>
         public DescribeSmartAccessGatewayHaResponse DescribeSmartAccessGatewayHa(DescribeSmartAccessGatewayHaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSmartAccessGatewayHaWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the high availability (HA) settings of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewayHaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewayHaResponse
+        /// </returns>
         public async Task<DescribeSmartAccessGatewayHaResponse> DescribeSmartAccessGatewayHaAsync(DescribeSmartAccessGatewayHaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSmartAccessGatewayHaWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the version of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewayVersionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewayVersionsResponse
+        /// </returns>
         public DescribeSmartAccessGatewayVersionsResponse DescribeSmartAccessGatewayVersionsWithOptions(DescribeSmartAccessGatewayVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11858,6 +17235,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSmartAccessGatewayVersionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the version of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewayVersionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewayVersionsResponse
+        /// </returns>
         public async Task<DescribeSmartAccessGatewayVersionsResponse> DescribeSmartAccessGatewayVersionsWithOptionsAsync(DescribeSmartAccessGatewayVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11913,18 +17305,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSmartAccessGatewayVersionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the version of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewayVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewayVersionsResponse
+        /// </returns>
         public DescribeSmartAccessGatewayVersionsResponse DescribeSmartAccessGatewayVersions(DescribeSmartAccessGatewayVersionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSmartAccessGatewayVersionsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the version of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewayVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewayVersionsResponse
+        /// </returns>
         public async Task<DescribeSmartAccessGatewayVersionsResponse> DescribeSmartAccessGatewayVersionsAsync(DescribeSmartAccessGatewayVersionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSmartAccessGatewayVersionsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Smart Access Gateway (SAG) instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewaysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewaysResponse
+        /// </returns>
         public DescribeSmartAccessGatewaysResponse DescribeSmartAccessGatewaysWithOptions(DescribeSmartAccessGatewaysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12040,6 +17471,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSmartAccessGatewaysResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Smart Access Gateway (SAG) instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewaysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewaysResponse
+        /// </returns>
         public async Task<DescribeSmartAccessGatewaysResponse> DescribeSmartAccessGatewaysWithOptionsAsync(DescribeSmartAccessGatewaysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12155,18 +17601,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSmartAccessGatewaysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Smart Access Gateway (SAG) instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewaysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewaysResponse
+        /// </returns>
         public DescribeSmartAccessGatewaysResponse DescribeSmartAccessGateways(DescribeSmartAccessGatewaysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSmartAccessGatewaysWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Smart Access Gateway (SAG) instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSmartAccessGatewaysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSmartAccessGatewaysResponse
+        /// </returns>
         public async Task<DescribeSmartAccessGatewaysResponse> DescribeSmartAccessGatewaysAsync(DescribeSmartAccessGatewaysRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSmartAccessGatewaysWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query source network address translation (SNAT) entries associated with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSnatEntriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSnatEntriesResponse
+        /// </returns>
         public DescribeSnatEntriesResponse DescribeSnatEntriesWithOptions(DescribeSnatEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12222,6 +17707,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSnatEntriesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query source network address translation (SNAT) entries associated with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSnatEntriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSnatEntriesResponse
+        /// </returns>
         public async Task<DescribeSnatEntriesResponse> DescribeSnatEntriesWithOptionsAsync(DescribeSnatEntriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12277,18 +17777,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeSnatEntriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query source network address translation (SNAT) entries associated with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSnatEntriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSnatEntriesResponse
+        /// </returns>
         public DescribeSnatEntriesResponse DescribeSnatEntries(DescribeSnatEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeSnatEntriesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query source network address translation (SNAT) entries associated with a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSnatEntriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSnatEntriesResponse
+        /// </returns>
         public async Task<DescribeSnatEntriesResponse> DescribeSnatEntriesAsync(DescribeSnatEntriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSnatEntriesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Smart Access Gateway (SAG) instances that are not associated with a flow log in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUnbindFlowLogSagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUnbindFlowLogSagsResponse
+        /// </returns>
         public DescribeUnbindFlowLogSagsResponse DescribeUnbindFlowLogSagsWithOptions(DescribeUnbindFlowLogSagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12332,6 +17871,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeUnbindFlowLogSagsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Smart Access Gateway (SAG) instances that are not associated with a flow log in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUnbindFlowLogSagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUnbindFlowLogSagsResponse
+        /// </returns>
         public async Task<DescribeUnbindFlowLogSagsResponse> DescribeUnbindFlowLogSagsWithOptionsAsync(DescribeUnbindFlowLogSagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12375,18 +17929,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeUnbindFlowLogSagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Smart Access Gateway (SAG) instances that are not associated with a flow log in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUnbindFlowLogSagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUnbindFlowLogSagsResponse
+        /// </returns>
         public DescribeUnbindFlowLogSagsResponse DescribeUnbindFlowLogSags(DescribeUnbindFlowLogSagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUnbindFlowLogSagsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Smart Access Gateway (SAG) instances that are not associated with a flow log in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUnbindFlowLogSagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUnbindFlowLogSagsResponse
+        /// </returns>
         public async Task<DescribeUnbindFlowLogSagsResponse> DescribeUnbindFlowLogSagsAsync(DescribeUnbindFlowLogSagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUnbindFlowLogSagsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the amount of data transfer generated by each client account of a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserFlowStatisticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserFlowStatisticsResponse
+        /// </returns>
         public DescribeUserFlowStatisticsResponse DescribeUserFlowStatisticsWithOptions(DescribeUserFlowStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12442,6 +18035,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeUserFlowStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the amount of data transfer generated by each client account of a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserFlowStatisticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserFlowStatisticsResponse
+        /// </returns>
         public async Task<DescribeUserFlowStatisticsResponse> DescribeUserFlowStatisticsWithOptionsAsync(DescribeUserFlowStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12497,18 +18105,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeUserFlowStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the amount of data transfer generated by each client account of a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserFlowStatisticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserFlowStatisticsResponse
+        /// </returns>
         public DescribeUserFlowStatisticsResponse DescribeUserFlowStatistics(DescribeUserFlowStatisticsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUserFlowStatisticsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the amount of data transfer generated by each client account of a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserFlowStatisticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserFlowStatisticsResponse
+        /// </returns>
         public async Task<DescribeUserFlowStatisticsResponse> DescribeUserFlowStatisticsAsync(DescribeUserFlowStatisticsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUserFlowStatisticsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of clients that are connected to Alibaba Cloud through a specific Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserOnlineClientStatisticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserOnlineClientStatisticsResponse
+        /// </returns>
         public DescribeUserOnlineClientStatisticsResponse DescribeUserOnlineClientStatisticsWithOptions(DescribeUserOnlineClientStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12560,6 +18207,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeUserOnlineClientStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of clients that are connected to Alibaba Cloud through a specific Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserOnlineClientStatisticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserOnlineClientStatisticsResponse
+        /// </returns>
         public async Task<DescribeUserOnlineClientStatisticsResponse> DescribeUserOnlineClientStatisticsWithOptionsAsync(DescribeUserOnlineClientStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12611,18 +18273,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeUserOnlineClientStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of clients that are connected to Alibaba Cloud through a specific Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserOnlineClientStatisticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserOnlineClientStatisticsResponse
+        /// </returns>
         public DescribeUserOnlineClientStatisticsResponse DescribeUserOnlineClientStatistics(DescribeUserOnlineClientStatisticsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUserOnlineClientStatisticsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of clients that are connected to Alibaba Cloud through a specific Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserOnlineClientStatisticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserOnlineClientStatisticsResponse
+        /// </returns>
         public async Task<DescribeUserOnlineClientStatisticsResponse> DescribeUserOnlineClientStatisticsAsync(DescribeUserOnlineClientStatisticsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUserOnlineClientStatisticsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the connection information about a client based on the ID of the Smart Access Gateway (SAG) APP instance and username of the client account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserOnlineClientsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserOnlineClientsResponse
+        /// </returns>
         public DescribeUserOnlineClientsResponse DescribeUserOnlineClientsWithOptions(DescribeUserOnlineClientsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12674,6 +18375,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeUserOnlineClientsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the connection information about a client based on the ID of the Smart Access Gateway (SAG) APP instance and username of the client account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserOnlineClientsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserOnlineClientsResponse
+        /// </returns>
         public async Task<DescribeUserOnlineClientsResponse> DescribeUserOnlineClientsWithOptionsAsync(DescribeUserOnlineClientsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12725,18 +18441,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DescribeUserOnlineClientsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the connection information about a client based on the ID of the Smart Access Gateway (SAG) APP instance and username of the client account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserOnlineClientsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserOnlineClientsResponse
+        /// </returns>
         public DescribeUserOnlineClientsResponse DescribeUserOnlineClients(DescribeUserOnlineClientsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUserOnlineClientsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the connection information about a client based on the ID of the Smart Access Gateway (SAG) APP instance and username of the client account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserOnlineClientsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserOnlineClientsResponse
+        /// </returns>
         public async Task<DescribeUserOnlineClientsResponse> DescribeUserOnlineClientsAsync(DescribeUserOnlineClientsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUserOnlineClientsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables diagnostics for Smart Access Gateway (SAG) devices</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DiagnoseSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DiagnoseSmartAccessGatewayResponse
+        /// </returns>
         public DiagnoseSmartAccessGatewayResponse DiagnoseSmartAccessGatewayWithOptions(DiagnoseSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12788,6 +18543,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DiagnoseSmartAccessGatewayResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables diagnostics for Smart Access Gateway (SAG) devices</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DiagnoseSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DiagnoseSmartAccessGatewayResponse
+        /// </returns>
         public async Task<DiagnoseSmartAccessGatewayResponse> DiagnoseSmartAccessGatewayWithOptionsAsync(DiagnoseSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12839,18 +18609,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DiagnoseSmartAccessGatewayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables diagnostics for Smart Access Gateway (SAG) devices</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DiagnoseSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DiagnoseSmartAccessGatewayResponse
+        /// </returns>
         public DiagnoseSmartAccessGatewayResponse DiagnoseSmartAccessGateway(DiagnoseSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DiagnoseSmartAccessGatewayWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables diagnostics for Smart Access Gateway (SAG) devices</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DiagnoseSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DiagnoseSmartAccessGatewayResponse
+        /// </returns>
         public async Task<DiagnoseSmartAccessGatewayResponse> DiagnoseSmartAccessGatewayAsync(DiagnoseSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DiagnoseSmartAccessGatewayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableSmartAGDpiMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableSmartAGDpiMonitorResponse
+        /// </returns>
         public DisableSmartAGDpiMonitorResponse DisableSmartAGDpiMonitorWithOptions(DisableSmartAGDpiMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12906,6 +18715,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DisableSmartAGDpiMonitorResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableSmartAGDpiMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableSmartAGDpiMonitorResponse
+        /// </returns>
         public async Task<DisableSmartAGDpiMonitorResponse> DisableSmartAGDpiMonitorWithOptionsAsync(DisableSmartAGDpiMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12961,18 +18785,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DisableSmartAGDpiMonitorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableSmartAGDpiMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableSmartAGDpiMonitorResponse
+        /// </returns>
         public DisableSmartAGDpiMonitorResponse DisableSmartAGDpiMonitor(DisableSmartAGDpiMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableSmartAGDpiMonitorWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableSmartAGDpiMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableSmartAGDpiMonitorResponse
+        /// </returns>
         public async Task<DisableSmartAGDpiMonitorResponse> DisableSmartAGDpiMonitorAsync(DisableSmartAGDpiMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableSmartAGDpiMonitorWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a client account of a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableSmartAccessGatewayUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableSmartAccessGatewayUserResponse
+        /// </returns>
         public DisableSmartAccessGatewayUserResponse DisableSmartAccessGatewayUserWithOptions(DisableSmartAccessGatewayUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13024,6 +18887,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DisableSmartAccessGatewayUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a client account of a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableSmartAccessGatewayUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableSmartAccessGatewayUserResponse
+        /// </returns>
         public async Task<DisableSmartAccessGatewayUserResponse> DisableSmartAccessGatewayUserWithOptionsAsync(DisableSmartAccessGatewayUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13075,18 +18953,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DisableSmartAccessGatewayUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a client account of a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableSmartAccessGatewayUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableSmartAccessGatewayUserResponse
+        /// </returns>
         public DisableSmartAccessGatewayUserResponse DisableSmartAccessGatewayUser(DisableSmartAccessGatewayUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableSmartAccessGatewayUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a client account of a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableSmartAccessGatewayUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableSmartAccessGatewayUserResponse
+        /// </returns>
         public async Task<DisableSmartAccessGatewayUserResponse> DisableSmartAccessGatewayUserAsync(DisableSmartAccessGatewayUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableSmartAccessGatewayUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates an access control list (ACL) from a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateACLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateACLResponse
+        /// </returns>
         public DisassociateACLResponse DisassociateACLWithOptions(DisassociateACLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13138,6 +19055,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DisassociateACLResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates an access control list (ACL) from a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateACLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateACLResponse
+        /// </returns>
         public async Task<DisassociateACLResponse> DisassociateACLWithOptionsAsync(DisassociateACLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13189,18 +19121,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DisassociateACLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates an access control list (ACL) from a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateACLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateACLResponse
+        /// </returns>
         public DisassociateACLResponse DisassociateACL(DisassociateACLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisassociateACLWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates an access control list (ACL) from a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateACLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateACLResponse
+        /// </returns>
         public async Task<DisassociateACLResponse> DisassociateACLAsync(DisassociateACLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisassociateACLWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateFlowLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateFlowLogResponse
+        /// </returns>
         public DisassociateFlowLogResponse DisassociateFlowLogWithOptions(DisassociateFlowLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13252,6 +19223,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DisassociateFlowLogResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateFlowLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateFlowLogResponse
+        /// </returns>
         public async Task<DisassociateFlowLogResponse> DisassociateFlowLogWithOptionsAsync(DisassociateFlowLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13303,18 +19289,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DisassociateFlowLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateFlowLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateFlowLogResponse
+        /// </returns>
         public DisassociateFlowLogResponse DisassociateFlowLog(DisassociateFlowLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisassociateFlowLogWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateFlowLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateFlowLogResponse
+        /// </returns>
         public async Task<DisassociateFlowLogResponse> DisassociateFlowLogAsync(DisassociateFlowLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisassociateFlowLogWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a Quality of Service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateQosRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateQosResponse
+        /// </returns>
         public DisassociateQosResponse DisassociateQosWithOptions(DisassociateQosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13366,6 +19391,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DisassociateQosResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a Quality of Service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateQosRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateQosResponse
+        /// </returns>
         public async Task<DisassociateQosResponse> DisassociateQosWithOptionsAsync(DisassociateQosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13417,18 +19457,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DisassociateQosResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a Quality of Service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateQosRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateQosResponse
+        /// </returns>
         public DisassociateQosResponse DisassociateQos(DisassociateQosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisassociateQosWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a Quality of Service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateQosRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateQosResponse
+        /// </returns>
         public async Task<DisassociateQosResponse> DisassociateQosAsync(DisassociateQosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisassociateQosWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a diagnosis report for a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DiscribeSmartAccessGatewayDiagnosisReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DiscribeSmartAccessGatewayDiagnosisReportResponse
+        /// </returns>
         public DiscribeSmartAccessGatewayDiagnosisReportResponse DiscribeSmartAccessGatewayDiagnosisReportWithOptions(DiscribeSmartAccessGatewayDiagnosisReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13480,6 +19559,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DiscribeSmartAccessGatewayDiagnosisReportResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a diagnosis report for a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DiscribeSmartAccessGatewayDiagnosisReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DiscribeSmartAccessGatewayDiagnosisReportResponse
+        /// </returns>
         public async Task<DiscribeSmartAccessGatewayDiagnosisReportResponse> DiscribeSmartAccessGatewayDiagnosisReportWithOptionsAsync(DiscribeSmartAccessGatewayDiagnosisReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13531,18 +19625,62 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DiscribeSmartAccessGatewayDiagnosisReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a diagnosis report for a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DiscribeSmartAccessGatewayDiagnosisReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DiscribeSmartAccessGatewayDiagnosisReportResponse
+        /// </returns>
         public DiscribeSmartAccessGatewayDiagnosisReportResponse DiscribeSmartAccessGatewayDiagnosisReport(DiscribeSmartAccessGatewayDiagnosisReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DiscribeSmartAccessGatewayDiagnosisReportWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a diagnosis report for a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DiscribeSmartAccessGatewayDiagnosisReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DiscribeSmartAccessGatewayDiagnosisReportResponse
+        /// </returns>
         public async Task<DiscribeSmartAccessGatewayDiagnosisReportResponse> DiscribeSmartAccessGatewayDiagnosisReportAsync(DiscribeSmartAccessGatewayDiagnosisReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DiscribeSmartAccessGatewayDiagnosisReportWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a bandwidth plan for application acceleration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call <b>DissociateSmartAGFromApplicationBandwidthPackage</b>, you can set the <b>SmartAGId</b> parameter to specify an SAG instance, or set the <b>SmartAGIdList</b> to specify multiple SAG instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DissociateSmartAGFromApplicationBandwidthPackageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DissociateSmartAGFromApplicationBandwidthPackageResponse
+        /// </returns>
         public DissociateSmartAGFromApplicationBandwidthPackageResponse DissociateSmartAGFromApplicationBandwidthPackageWithOptions(DissociateSmartAGFromApplicationBandwidthPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13590,6 +19728,26 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DissociateSmartAGFromApplicationBandwidthPackageResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a bandwidth plan for application acceleration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call <b>DissociateSmartAGFromApplicationBandwidthPackage</b>, you can set the <b>SmartAGId</b> parameter to specify an SAG instance, or set the <b>SmartAGIdList</b> to specify multiple SAG instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DissociateSmartAGFromApplicationBandwidthPackageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DissociateSmartAGFromApplicationBandwidthPackageResponse
+        /// </returns>
         public async Task<DissociateSmartAGFromApplicationBandwidthPackageResponse> DissociateSmartAGFromApplicationBandwidthPackageWithOptionsAsync(DissociateSmartAGFromApplicationBandwidthPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13637,18 +19795,67 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DissociateSmartAGFromApplicationBandwidthPackageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a bandwidth plan for application acceleration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call <b>DissociateSmartAGFromApplicationBandwidthPackage</b>, you can set the <b>SmartAGId</b> parameter to specify an SAG instance, or set the <b>SmartAGIdList</b> to specify multiple SAG instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DissociateSmartAGFromApplicationBandwidthPackageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DissociateSmartAGFromApplicationBandwidthPackageResponse
+        /// </returns>
         public DissociateSmartAGFromApplicationBandwidthPackageResponse DissociateSmartAGFromApplicationBandwidthPackage(DissociateSmartAGFromApplicationBandwidthPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DissociateSmartAGFromApplicationBandwidthPackageWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a bandwidth plan for application acceleration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call <b>DissociateSmartAGFromApplicationBandwidthPackage</b>, you can set the <b>SmartAGId</b> parameter to specify an SAG instance, or set the <b>SmartAGIdList</b> to specify multiple SAG instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DissociateSmartAGFromApplicationBandwidthPackageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DissociateSmartAGFromApplicationBandwidthPackageResponse
+        /// </returns>
         public async Task<DissociateSmartAGFromApplicationBandwidthPackageResponse> DissociateSmartAGFromApplicationBandwidthPackageAsync(DissociateSmartAGFromApplicationBandwidthPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DissociateSmartAGFromApplicationBandwidthPackageWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Downgrades the bandwidth of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DowngradeSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DowngradeSmartAccessGatewayResponse
+        /// </returns>
         public DowngradeSmartAccessGatewayResponse DowngradeSmartAccessGatewayWithOptions(DowngradeSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13704,6 +19911,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DowngradeSmartAccessGatewayResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Downgrades the bandwidth of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DowngradeSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DowngradeSmartAccessGatewayResponse
+        /// </returns>
         public async Task<DowngradeSmartAccessGatewayResponse> DowngradeSmartAccessGatewayWithOptionsAsync(DowngradeSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13759,18 +19981,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DowngradeSmartAccessGatewayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Downgrades the bandwidth of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DowngradeSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DowngradeSmartAccessGatewayResponse
+        /// </returns>
         public DowngradeSmartAccessGatewayResponse DowngradeSmartAccessGateway(DowngradeSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DowngradeSmartAccessGatewayWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Downgrades the bandwidth of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DowngradeSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DowngradeSmartAccessGatewayResponse
+        /// </returns>
         public async Task<DowngradeSmartAccessGatewayResponse> DowngradeSmartAccessGatewayAsync(DowngradeSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DowngradeSmartAccessGatewayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Decreases the quota of client accounts that can be connected to a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DowngradeSmartAccessGatewaySoftwareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DowngradeSmartAccessGatewaySoftwareResponse
+        /// </returns>
         public DowngradeSmartAccessGatewaySoftwareResponse DowngradeSmartAccessGatewaySoftwareWithOptions(DowngradeSmartAccessGatewaySoftwareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13830,6 +20091,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DowngradeSmartAccessGatewaySoftwareResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Decreases the quota of client accounts that can be connected to a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DowngradeSmartAccessGatewaySoftwareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DowngradeSmartAccessGatewaySoftwareResponse
+        /// </returns>
         public async Task<DowngradeSmartAccessGatewaySoftwareResponse> DowngradeSmartAccessGatewaySoftwareWithOptionsAsync(DowngradeSmartAccessGatewaySoftwareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13889,18 +20165,65 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<DowngradeSmartAccessGatewaySoftwareResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Decreases the quota of client accounts that can be connected to a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DowngradeSmartAccessGatewaySoftwareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DowngradeSmartAccessGatewaySoftwareResponse
+        /// </returns>
         public DowngradeSmartAccessGatewaySoftwareResponse DowngradeSmartAccessGatewaySoftware(DowngradeSmartAccessGatewaySoftwareRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DowngradeSmartAccessGatewaySoftwareWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Decreases the quota of client accounts that can be connected to a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DowngradeSmartAccessGatewaySoftwareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DowngradeSmartAccessGatewaySoftwareResponse
+        /// </returns>
         public async Task<DowngradeSmartAccessGatewaySoftwareResponse> DowngradeSmartAccessGatewaySoftwareAsync(DowngradeSmartAccessGatewaySoftwareRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DowngradeSmartAccessGatewaySoftwareWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables monitoring based on the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The DPI feature is enabled for the SAG instance. For more information, see <a href="https://help.aliyun.com/document_detail/196146.html">UpdateSmartAGDpiAttribute</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Log Service is activated. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Quick Start</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableSmartAGDpiMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableSmartAGDpiMonitorResponse
+        /// </returns>
         public EnableSmartAGDpiMonitorResponse EnableSmartAGDpiMonitorWithOptions(EnableSmartAGDpiMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13964,6 +20287,29 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<EnableSmartAGDpiMonitorResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables monitoring based on the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The DPI feature is enabled for the SAG instance. For more information, see <a href="https://help.aliyun.com/document_detail/196146.html">UpdateSmartAGDpiAttribute</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Log Service is activated. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Quick Start</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableSmartAGDpiMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableSmartAGDpiMonitorResponse
+        /// </returns>
         public async Task<EnableSmartAGDpiMonitorResponse> EnableSmartAGDpiMonitorWithOptionsAsync(EnableSmartAGDpiMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14027,18 +20373,73 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<EnableSmartAGDpiMonitorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables monitoring based on the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The DPI feature is enabled for the SAG instance. For more information, see <a href="https://help.aliyun.com/document_detail/196146.html">UpdateSmartAGDpiAttribute</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Log Service is activated. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Quick Start</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableSmartAGDpiMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableSmartAGDpiMonitorResponse
+        /// </returns>
         public EnableSmartAGDpiMonitorResponse EnableSmartAGDpiMonitor(EnableSmartAGDpiMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableSmartAGDpiMonitorWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables monitoring based on the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The DPI feature is enabled for the SAG instance. For more information, see <a href="https://help.aliyun.com/document_detail/196146.html">UpdateSmartAGDpiAttribute</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>Log Service is activated. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Quick Start</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableSmartAGDpiMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableSmartAGDpiMonitorResponse
+        /// </returns>
         public async Task<EnableSmartAGDpiMonitorResponse> EnableSmartAGDpiMonitorAsync(EnableSmartAGDpiMonitorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableSmartAGDpiMonitorWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates a client account of a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableSmartAccessGatewayUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableSmartAccessGatewayUserResponse
+        /// </returns>
         public EnableSmartAccessGatewayUserResponse EnableSmartAccessGatewayUserWithOptions(EnableSmartAccessGatewayUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14090,6 +20491,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<EnableSmartAccessGatewayUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates a client account of a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableSmartAccessGatewayUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableSmartAccessGatewayUserResponse
+        /// </returns>
         public async Task<EnableSmartAccessGatewayUserResponse> EnableSmartAccessGatewayUserWithOptionsAsync(EnableSmartAccessGatewayUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14141,18 +20557,65 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<EnableSmartAccessGatewayUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates a client account of a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableSmartAccessGatewayUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableSmartAccessGatewayUserResponse
+        /// </returns>
         public EnableSmartAccessGatewayUserResponse EnableSmartAccessGatewayUser(EnableSmartAccessGatewayUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableSmartAccessGatewayUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates a client account of a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableSmartAccessGatewayUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableSmartAccessGatewayUserResponse
+        /// </returns>
         public async Task<EnableSmartAccessGatewayUserResponse> EnableSmartAccessGatewayUserAsync(EnableSmartAccessGatewayUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableSmartAccessGatewayUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration errors of the deep packet inspection (DPI) feature in an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  An application-aware ACL is created. For more information, see <a href="https://help.aliyun.com/document_detail/114012.html">AddACLRule</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>The application-aware ACL is applied to a Smart Access Gateway (SAG) instance. For more information, see <a href="https://help.aliyun.com/document_detail/114009.html">AssociateACL</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAclAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAclAttributeResponse
+        /// </returns>
         public GetAclAttributeResponse GetAclAttributeWithOptions(GetAclAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14184,6 +20647,29 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GetAclAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration errors of the deep packet inspection (DPI) feature in an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  An application-aware ACL is created. For more information, see <a href="https://help.aliyun.com/document_detail/114012.html">AddACLRule</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>The application-aware ACL is applied to a Smart Access Gateway (SAG) instance. For more information, see <a href="https://help.aliyun.com/document_detail/114009.html">AssociateACL</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAclAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAclAttributeResponse
+        /// </returns>
         public async Task<GetAclAttributeResponse> GetAclAttributeWithOptionsAsync(GetAclAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14215,18 +20701,73 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GetAclAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration errors of the deep packet inspection (DPI) feature in an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  An application-aware ACL is created. For more information, see <a href="https://help.aliyun.com/document_detail/114012.html">AddACLRule</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>The application-aware ACL is applied to a Smart Access Gateway (SAG) instance. For more information, see <a href="https://help.aliyun.com/document_detail/114009.html">AssociateACL</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAclAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAclAttributeResponse
+        /// </returns>
         public GetAclAttributeResponse GetAclAttribute(GetAclAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAclAttributeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration errors of the deep packet inspection (DPI) feature in an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  An application-aware ACL is created. For more information, see <a href="https://help.aliyun.com/document_detail/114012.html">AddACLRule</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>The application-aware ACL is applied to a Smart Access Gateway (SAG) instance. For more information, see <a href="https://help.aliyun.com/document_detail/114009.html">AssociateACL</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAclAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAclAttributeResponse
+        /// </returns>
         public async Task<GetAclAttributeResponse> GetAclAttributeAsync(GetAclAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAclAttributeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the deep packet inspection (DPI) feature of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAdvancedMonitorStateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAdvancedMonitorStateResponse
+        /// </returns>
         public GetAdvancedMonitorStateResponse GetAdvancedMonitorStateWithOptions(GetAdvancedMonitorStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14258,6 +20799,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GetAdvancedMonitorStateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the deep packet inspection (DPI) feature of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAdvancedMonitorStateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAdvancedMonitorStateResponse
+        /// </returns>
         public async Task<GetAdvancedMonitorStateResponse> GetAdvancedMonitorStateWithOptionsAsync(GetAdvancedMonitorStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14289,18 +20845,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GetAdvancedMonitorStateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the deep packet inspection (DPI) feature of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAdvancedMonitorStateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAdvancedMonitorStateResponse
+        /// </returns>
         public GetAdvancedMonitorStateResponse GetAdvancedMonitorState(GetAdvancedMonitorStateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAdvancedMonitorStateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the deep packet inspection (DPI) feature of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAdvancedMonitorStateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAdvancedMonitorStateResponse
+        /// </returns>
         public async Task<GetAdvancedMonitorStateResponse> GetAdvancedMonitorStateAsync(GetAdvancedMonitorStateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAdvancedMonitorStateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of Cloud Connect Network (CCN) instances that can be created within the current account in a region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCloudConnectNetworkUseLimitRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCloudConnectNetworkUseLimitResponse
+        /// </returns>
         public GetCloudConnectNetworkUseLimitResponse GetCloudConnectNetworkUseLimitWithOptions(GetCloudConnectNetworkUseLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14344,6 +20939,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GetCloudConnectNetworkUseLimitResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of Cloud Connect Network (CCN) instances that can be created within the current account in a region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCloudConnectNetworkUseLimitRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCloudConnectNetworkUseLimitResponse
+        /// </returns>
         public async Task<GetCloudConnectNetworkUseLimitResponse> GetCloudConnectNetworkUseLimitWithOptionsAsync(GetCloudConnectNetworkUseLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14387,25 +20997,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GetCloudConnectNetworkUseLimitResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of Cloud Connect Network (CCN) instances that can be created within the current account in a region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCloudConnectNetworkUseLimitRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCloudConnectNetworkUseLimitResponse
+        /// </returns>
         public GetCloudConnectNetworkUseLimitResponse GetCloudConnectNetworkUseLimit(GetCloudConnectNetworkUseLimitRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetCloudConnectNetworkUseLimitWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of Cloud Connect Network (CCN) instances that can be created within the current account in a region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCloudConnectNetworkUseLimitRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCloudConnectNetworkUseLimitResponse
+        /// </returns>
         public async Task<GetCloudConnectNetworkUseLimitResponse> GetCloudConnectNetworkUseLimitAsync(GetCloudConnectNetworkUseLimitRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetCloudConnectNetworkUseLimitWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ****
-          *
-          * @param request GetQosAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetQosAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attributes of a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQosAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQosAttributeResponse
+        /// </returns>
         public GetQosAttributeResponse GetQosAttributeWithOptions(GetQosAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14437,13 +21079,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GetQosAttributeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ****
-          *
-          * @param request GetQosAttributeRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetQosAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attributes of a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQosAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQosAttributeResponse
+        /// </returns>
         public async Task<GetQosAttributeResponse> GetQosAttributeWithOptionsAsync(GetQosAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14475,30 +21125,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GetQosAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ****
-          *
-          * @param request GetQosAttributeRequest
-          * @return GetQosAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attributes of a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQosAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQosAttributeResponse
+        /// </returns>
         public GetQosAttributeResponse GetQosAttribute(GetQosAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetQosAttributeWithOptions(request, runtime);
         }
 
-        /**
-          * ****
-          *
-          * @param request GetQosAttributeRequest
-          * @return GetQosAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attributes of a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQosAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQosAttributeResponse
+        /// </returns>
         public async Task<GetQosAttributeResponse> GetQosAttributeAsync(GetQosAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetQosAttributeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the settings of the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSmartAGDpiAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmartAGDpiAttributeResponse
+        /// </returns>
         public GetSmartAGDpiAttributeResponse GetSmartAGDpiAttributeWithOptions(GetSmartAGDpiAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14546,6 +21223,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GetSmartAGDpiAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the settings of the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSmartAGDpiAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmartAGDpiAttributeResponse
+        /// </returns>
         public async Task<GetSmartAGDpiAttributeResponse> GetSmartAGDpiAttributeWithOptionsAsync(GetSmartAGDpiAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14593,18 +21285,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GetSmartAGDpiAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the settings of the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSmartAGDpiAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmartAGDpiAttributeResponse
+        /// </returns>
         public GetSmartAGDpiAttributeResponse GetSmartAGDpiAttribute(GetSmartAGDpiAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetSmartAGDpiAttributeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the settings of the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSmartAGDpiAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmartAGDpiAttributeResponse
+        /// </returns>
         public async Task<GetSmartAGDpiAttributeResponse> GetSmartAGDpiAttributeAsync(GetSmartAGDpiAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetSmartAGDpiAttributeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of Smart Access Gateway (SAG) instances that you can purchase.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSmartAccessGatewayUseLimitRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmartAccessGatewayUseLimitResponse
+        /// </returns>
         public GetSmartAccessGatewayUseLimitResponse GetSmartAccessGatewayUseLimitWithOptions(GetSmartAccessGatewayUseLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14648,6 +21379,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GetSmartAccessGatewayUseLimitResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of Smart Access Gateway (SAG) instances that you can purchase.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSmartAccessGatewayUseLimitRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmartAccessGatewayUseLimitResponse
+        /// </returns>
         public async Task<GetSmartAccessGatewayUseLimitResponse> GetSmartAccessGatewayUseLimitWithOptionsAsync(GetSmartAccessGatewayUseLimitRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14691,18 +21437,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GetSmartAccessGatewayUseLimitResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of Smart Access Gateway (SAG) instances that you can purchase.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSmartAccessGatewayUseLimitRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmartAccessGatewayUseLimitResponse
+        /// </returns>
         public GetSmartAccessGatewayUseLimitResponse GetSmartAccessGatewayUseLimit(GetSmartAccessGatewayUseLimitRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetSmartAccessGatewayUseLimitWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of Smart Access Gateway (SAG) instances that you can purchase.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSmartAccessGatewayUseLimitRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmartAccessGatewayUseLimitResponse
+        /// </returns>
         public async Task<GetSmartAccessGatewayUseLimitResponse> GetSmartAccessGatewayUseLimitAsync(GetSmartAccessGatewayUseLimitRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetSmartAccessGatewayUseLimitWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a Cloud Enterprise Network (CEN) instance to communicate with a Cloud Connect Network (CCN) instance that belongs to another Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantInstanceToCbnRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantInstanceToCbnResponse
+        /// </returns>
         public GrantInstanceToCbnResponse GrantInstanceToCbnWithOptions(GrantInstanceToCbnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14762,6 +21547,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GrantInstanceToCbnResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a Cloud Enterprise Network (CEN) instance to communicate with a Cloud Connect Network (CCN) instance that belongs to another Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantInstanceToCbnRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantInstanceToCbnResponse
+        /// </returns>
         public async Task<GrantInstanceToCbnResponse> GrantInstanceToCbnWithOptionsAsync(GrantInstanceToCbnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14821,18 +21621,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GrantInstanceToCbnResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a Cloud Enterprise Network (CEN) instance to communicate with a Cloud Connect Network (CCN) instance that belongs to another Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantInstanceToCbnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantInstanceToCbnResponse
+        /// </returns>
         public GrantInstanceToCbnResponse GrantInstanceToCbn(GrantInstanceToCbnRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GrantInstanceToCbnWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a Cloud Enterprise Network (CEN) instance to communicate with a Cloud Connect Network (CCN) instance that belongs to another Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantInstanceToCbnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantInstanceToCbnResponse
+        /// </returns>
         public async Task<GrantInstanceToCbnResponse> GrantInstanceToCbnAsync(GrantInstanceToCbnRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GrantInstanceToCbnWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a Smart Access Gateway (SAG) instance to communicate with a Cloud Connect Network (CCN) instance that belongs to another Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantSagInstanceToCcnRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantSagInstanceToCcnResponse
+        /// </returns>
         public GrantSagInstanceToCcnResponse GrantSagInstanceToCcnWithOptions(GrantSagInstanceToCcnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14892,6 +21731,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GrantSagInstanceToCcnResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a Smart Access Gateway (SAG) instance to communicate with a Cloud Connect Network (CCN) instance that belongs to another Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantSagInstanceToCcnRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantSagInstanceToCcnResponse
+        /// </returns>
         public async Task<GrantSagInstanceToCcnResponse> GrantSagInstanceToCcnWithOptionsAsync(GrantSagInstanceToCcnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14951,18 +21805,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GrantSagInstanceToCcnResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a Smart Access Gateway (SAG) instance to communicate with a Cloud Connect Network (CCN) instance that belongs to another Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantSagInstanceToCcnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantSagInstanceToCcnResponse
+        /// </returns>
         public GrantSagInstanceToCcnResponse GrantSagInstanceToCcn(GrantSagInstanceToCcnRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GrantSagInstanceToCcnWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Authorizes a Smart Access Gateway (SAG) instance to communicate with a Cloud Connect Network (CCN) instance that belongs to another Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantSagInstanceToCcnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantSagInstanceToCcnResponse
+        /// </returns>
         public async Task<GrantSagInstanceToCcnResponse> GrantSagInstanceToCcnAsync(GrantSagInstanceToCcnRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GrantSagInstanceToCcnWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Acquires permissions from a virtual border router (VBR) under another account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantSagInstanceToVbrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantSagInstanceToVbrResponse
+        /// </returns>
         public GrantSagInstanceToVbrResponse GrantSagInstanceToVbrWithOptions(GrantSagInstanceToVbrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15022,6 +21915,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GrantSagInstanceToVbrResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Acquires permissions from a virtual border router (VBR) under another account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantSagInstanceToVbrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantSagInstanceToVbrResponse
+        /// </returns>
         public async Task<GrantSagInstanceToVbrResponse> GrantSagInstanceToVbrWithOptionsAsync(GrantSagInstanceToVbrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15081,18 +21989,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<GrantSagInstanceToVbrResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Acquires permissions from a virtual border router (VBR) under another account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantSagInstanceToVbrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantSagInstanceToVbrResponse
+        /// </returns>
         public GrantSagInstanceToVbrResponse GrantSagInstanceToVbr(GrantSagInstanceToVbrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GrantSagInstanceToVbrWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Acquires permissions from a virtual border router (VBR) under another account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantSagInstanceToVbrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantSagInstanceToVbrResponse
+        /// </returns>
         public async Task<GrantSagInstanceToVbrResponse> GrantSagInstanceToVbrAsync(GrantSagInstanceToVbrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GrantSagInstanceToVbrWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Closes a connection based on the Smart Access Gateway (SAG) app instance ID and username.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// KickOutClientsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// KickOutClientsResponse
+        /// </returns>
         public KickOutClientsResponse KickOutClientsWithOptions(KickOutClientsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15144,6 +22091,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<KickOutClientsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Closes a connection based on the Smart Access Gateway (SAG) app instance ID and username.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// KickOutClientsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// KickOutClientsResponse
+        /// </returns>
         public async Task<KickOutClientsResponse> KickOutClientsWithOptionsAsync(KickOutClientsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15195,18 +22157,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<KickOutClientsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Closes a connection based on the Smart Access Gateway (SAG) app instance ID and username.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// KickOutClientsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// KickOutClientsResponse
+        /// </returns>
         public KickOutClientsResponse KickOutClients(KickOutClientsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return KickOutClientsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Closes a connection based on the Smart Access Gateway (SAG) app instance ID and username.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// KickOutClientsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// KickOutClientsResponse
+        /// </returns>
         public async Task<KickOutClientsResponse> KickOutClientsAsync(KickOutClientsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await KickOutClientsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries network qualities of endpoints for Smart Access Gateway (SAG) instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAccessPointNetworkQualitiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccessPointNetworkQualitiesResponse
+        /// </returns>
         public ListAccessPointNetworkQualitiesResponse ListAccessPointNetworkQualitiesWithOptions(ListAccessPointNetworkQualitiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15254,6 +22255,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListAccessPointNetworkQualitiesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries network qualities of endpoints for Smart Access Gateway (SAG) instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAccessPointNetworkQualitiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccessPointNetworkQualitiesResponse
+        /// </returns>
         public async Task<ListAccessPointNetworkQualitiesResponse> ListAccessPointNetworkQualitiesWithOptionsAsync(ListAccessPointNetworkQualitiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15301,18 +22317,62 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListAccessPointNetworkQualitiesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries network qualities of endpoints for Smart Access Gateway (SAG) instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAccessPointNetworkQualitiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccessPointNetworkQualitiesResponse
+        /// </returns>
         public ListAccessPointNetworkQualitiesResponse ListAccessPointNetworkQualities(ListAccessPointNetworkQualitiesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAccessPointNetworkQualitiesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries network qualities of endpoints for Smart Access Gateway (SAG) instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAccessPointNetworkQualitiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccessPointNetworkQualitiesResponse
+        /// </returns>
         public async Task<ListAccessPointNetworkQualitiesResponse> ListAccessPointNetworkQualitiesAsync(ListAccessPointNetworkQualitiesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAccessPointNetworkQualitiesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries access points in a region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An access point connects Smart Access Gateway (SAG) instances to Cloud Connect Network (CCN). Some regions may contain more than one access point. After an SAG instance is associated with a CCN instance, the system selects the nearest access point to establish connections to Alibaba Cloud. This topic describes how to query access points in a specific region. For more information about the areas that support CCN, see <a href="https://help.aliyun.com/document_detail/93667.html">Introduction to CCN</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAccessPointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccessPointsResponse
+        /// </returns>
         public ListAccessPointsResponse ListAccessPointsWithOptions(ListAccessPointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15368,6 +22428,26 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListAccessPointsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries access points in a region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An access point connects Smart Access Gateway (SAG) instances to Cloud Connect Network (CCN). Some regions may contain more than one access point. After an SAG instance is associated with a CCN instance, the system selects the nearest access point to establish connections to Alibaba Cloud. This topic describes how to query access points in a specific region. For more information about the areas that support CCN, see <a href="https://help.aliyun.com/document_detail/93667.html">Introduction to CCN</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAccessPointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccessPointsResponse
+        /// </returns>
         public async Task<ListAccessPointsResponse> ListAccessPointsWithOptionsAsync(ListAccessPointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15423,18 +22503,67 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListAccessPointsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries access points in a region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An access point connects Smart Access Gateway (SAG) instances to Cloud Connect Network (CCN). Some regions may contain more than one access point. After an SAG instance is associated with a CCN instance, the system selects the nearest access point to establish connections to Alibaba Cloud. This topic describes how to query access points in a specific region. For more information about the areas that support CCN, see <a href="https://help.aliyun.com/document_detail/93667.html">Introduction to CCN</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAccessPointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccessPointsResponse
+        /// </returns>
         public ListAccessPointsResponse ListAccessPoints(ListAccessPointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAccessPointsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries access points in a region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An access point connects Smart Access Gateway (SAG) instances to Cloud Connect Network (CCN). Some regions may contain more than one access point. After an SAG instance is associated with a CCN instance, the system selects the nearest access point to establish connections to Alibaba Cloud. This topic describes how to query access points in a specific region. For more information about the areas that support CCN, see <a href="https://help.aliyun.com/document_detail/93667.html">Introduction to CCN</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAccessPointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccessPointsResponse
+        /// </returns>
         public async Task<ListAccessPointsResponse> ListAccessPointsAsync(ListAccessPointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAccessPointsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the service addresses of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAvailableServiceAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAvailableServiceAddressResponse
+        /// </returns>
         public ListAvailableServiceAddressResponse ListAvailableServiceAddressWithOptions(ListAvailableServiceAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15474,6 +22603,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListAvailableServiceAddressResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the service addresses of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAvailableServiceAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAvailableServiceAddressResponse
+        /// </returns>
         public async Task<ListAvailableServiceAddressResponse> ListAvailableServiceAddressWithOptionsAsync(ListAvailableServiceAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15513,18 +22657,63 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListAvailableServiceAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the service addresses of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAvailableServiceAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAvailableServiceAddressResponse
+        /// </returns>
         public ListAvailableServiceAddressResponse ListAvailableServiceAddress(ListAvailableServiceAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAvailableServiceAddressWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the service addresses of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAvailableServiceAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAvailableServiceAddressResponse
+        /// </returns>
         public async Task<ListAvailableServiceAddressResponse> ListAvailableServiceAddressAsync(ListAvailableServiceAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAvailableServiceAddressWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries configuration errors of the deep packet inspection (DPI) feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Background information</h2>
+        /// <para>If you have configured an application-aware access control list (ACL) or a quality of service (QoS) policy and associated it with a Smart Access Gateway (SAG) instance, you can call this operation to query whether the ACL rules or 5-tuples in the QoS policy are applied to the SAG instance. If settings are not applied to the SAG instance, the error information is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDpiConfigErrorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDpiConfigErrorResponse
+        /// </returns>
         public ListDpiConfigErrorResponse ListDpiConfigErrorWithOptions(ListDpiConfigErrorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15572,6 +22761,27 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListDpiConfigErrorResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries configuration errors of the deep packet inspection (DPI) feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Background information</h2>
+        /// <para>If you have configured an application-aware access control list (ACL) or a quality of service (QoS) policy and associated it with a Smart Access Gateway (SAG) instance, you can call this operation to query whether the ACL rules or 5-tuples in the QoS policy are applied to the SAG instance. If settings are not applied to the SAG instance, the error information is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDpiConfigErrorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDpiConfigErrorResponse
+        /// </returns>
         public async Task<ListDpiConfigErrorResponse> ListDpiConfigErrorWithOptionsAsync(ListDpiConfigErrorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15619,18 +22829,69 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListDpiConfigErrorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries configuration errors of the deep packet inspection (DPI) feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Background information</h2>
+        /// <para>If you have configured an application-aware access control list (ACL) or a quality of service (QoS) policy and associated it with a Smart Access Gateway (SAG) instance, you can call this operation to query whether the ACL rules or 5-tuples in the QoS policy are applied to the SAG instance. If settings are not applied to the SAG instance, the error information is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDpiConfigErrorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDpiConfigErrorResponse
+        /// </returns>
         public ListDpiConfigErrorResponse ListDpiConfigError(ListDpiConfigErrorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDpiConfigErrorWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries configuration errors of the deep packet inspection (DPI) feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Background information</h2>
+        /// <para>If you have configured an application-aware access control list (ACL) or a quality of service (QoS) policy and associated it with a Smart Access Gateway (SAG) instance, you can call this operation to query whether the ACL rules or 5-tuples in the QoS policy are applied to the SAG instance. If settings are not applied to the SAG instance, the error information is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDpiConfigErrorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDpiConfigErrorResponse
+        /// </returns>
         public async Task<ListDpiConfigErrorResponse> ListDpiConfigErrorAsync(ListDpiConfigErrorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDpiConfigErrorWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about application groups supported by Smart Access Gateway (SAG) instances in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDpiGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDpiGroupsResponse
+        /// </returns>
         public ListDpiGroupsResponse ListDpiGroupsWithOptions(ListDpiGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15690,6 +22951,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListDpiGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about application groups supported by Smart Access Gateway (SAG) instances in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDpiGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDpiGroupsResponse
+        /// </returns>
         public async Task<ListDpiGroupsResponse> ListDpiGroupsWithOptionsAsync(ListDpiGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15749,18 +23025,69 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListDpiGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about application groups supported by Smart Access Gateway (SAG) instances in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDpiGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDpiGroupsResponse
+        /// </returns>
         public ListDpiGroupsResponse ListDpiGroups(ListDpiGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDpiGroupsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about application groups supported by Smart Access Gateway (SAG) instances in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDpiGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDpiGroupsResponse
+        /// </returns>
         public async Task<ListDpiGroupsResponse> ListDpiGroupsAsync(ListDpiGroupsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDpiGroupsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an application or an application group in a region, or about the applications supported by Smart Access Gateway (SAG) in a region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports the following features:</para>
+        /// <list type="bullet">
+        /// <item><description>Queries the information about all applications supported by the SAG instance in a specified region.</description></item>
+        /// <item><description>Queries the information about an application by application ID in a specified region.</description></item>
+        /// <item><description>Queries the information about an application by application name in a specified region.</description></item>
+        /// <item><description>Queries the information about an application group by group ID in a specified region.
+        /// If this is the first time you call this operation, we recommend that you query all applications supported by the SAG instance in the specified region by region ID. Then, you can query the information about a specified application.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDpiSignaturesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDpiSignaturesResponse
+        /// </returns>
         public ListDpiSignaturesResponse ListDpiSignaturesWithOptions(ListDpiSignaturesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15824,6 +23151,33 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListDpiSignaturesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an application or an application group in a region, or about the applications supported by Smart Access Gateway (SAG) in a region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports the following features:</para>
+        /// <list type="bullet">
+        /// <item><description>Queries the information about all applications supported by the SAG instance in a specified region.</description></item>
+        /// <item><description>Queries the information about an application by application ID in a specified region.</description></item>
+        /// <item><description>Queries the information about an application by application name in a specified region.</description></item>
+        /// <item><description>Queries the information about an application group by group ID in a specified region.
+        /// If this is the first time you call this operation, we recommend that you query all applications supported by the SAG instance in the specified region by region ID. Then, you can query the information about a specified application.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDpiSignaturesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDpiSignaturesResponse
+        /// </returns>
         public async Task<ListDpiSignaturesResponse> ListDpiSignaturesWithOptionsAsync(ListDpiSignaturesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15887,18 +23241,81 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListDpiSignaturesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an application or an application group in a region, or about the applications supported by Smart Access Gateway (SAG) in a region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports the following features:</para>
+        /// <list type="bullet">
+        /// <item><description>Queries the information about all applications supported by the SAG instance in a specified region.</description></item>
+        /// <item><description>Queries the information about an application by application ID in a specified region.</description></item>
+        /// <item><description>Queries the information about an application by application name in a specified region.</description></item>
+        /// <item><description>Queries the information about an application group by group ID in a specified region.
+        /// If this is the first time you call this operation, we recommend that you query all applications supported by the SAG instance in the specified region by region ID. Then, you can query the information about a specified application.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDpiSignaturesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDpiSignaturesResponse
+        /// </returns>
         public ListDpiSignaturesResponse ListDpiSignatures(ListDpiSignaturesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDpiSignaturesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an application or an application group in a region, or about the applications supported by Smart Access Gateway (SAG) in a region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports the following features:</para>
+        /// <list type="bullet">
+        /// <item><description>Queries the information about all applications supported by the SAG instance in a specified region.</description></item>
+        /// <item><description>Queries the information about an application by application ID in a specified region.</description></item>
+        /// <item><description>Queries the information about an application by application name in a specified region.</description></item>
+        /// <item><description>Queries the information about an application group by group ID in a specified region.
+        /// If this is the first time you call this operation, we recommend that you query all applications supported by the SAG instance in the specified region by region ID. Then, you can query the information about a specified application.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDpiSignaturesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDpiSignaturesResponse
+        /// </returns>
         public async Task<ListDpiSignaturesResponse> ListDpiSignaturesAsync(ListDpiSignaturesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDpiSignaturesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries enterprise codes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterpriseCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterpriseCodeResponse
+        /// </returns>
         public ListEnterpriseCodeResponse ListEnterpriseCodeWithOptions(ListEnterpriseCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15942,6 +23359,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListEnterpriseCodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries enterprise codes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterpriseCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterpriseCodeResponse
+        /// </returns>
         public async Task<ListEnterpriseCodeResponse> ListEnterpriseCodeWithOptionsAsync(ListEnterpriseCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15985,18 +23417,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListEnterpriseCodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries enterprise codes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterpriseCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterpriseCodeResponse
+        /// </returns>
         public ListEnterpriseCodeResponse ListEnterpriseCode(ListEnterpriseCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListEnterpriseCodeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries enterprise codes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterpriseCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterpriseCodeResponse
+        /// </returns>
         public async Task<ListEnterpriseCodeResponse> ListEnterpriseCodeAsync(ListEnterpriseCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListEnterpriseCodeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a probe task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListProbeTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProbeTaskResponse
+        /// </returns>
         public ListProbeTaskResponse ListProbeTaskWithOptions(ListProbeTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16056,6 +23527,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListProbeTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a probe task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListProbeTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProbeTaskResponse
+        /// </returns>
         public async Task<ListProbeTaskResponse> ListProbeTaskWithOptionsAsync(ListProbeTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16115,18 +23601,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListProbeTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a probe task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListProbeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProbeTaskResponse
+        /// </returns>
         public ListProbeTaskResponse ListProbeTask(ListProbeTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListProbeTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a probe task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListProbeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProbeTaskResponse
+        /// </returns>
         public async Task<ListProbeTaskResponse> ListProbeTaskAsync(ListProbeTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListProbeTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries features that are not supported by a specified Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSmartAGApiUnsupportedFeatureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSmartAGApiUnsupportedFeatureResponse
+        /// </returns>
         public ListSmartAGApiUnsupportedFeatureResponse ListSmartAGApiUnsupportedFeatureWithOptions(ListSmartAGApiUnsupportedFeatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16182,6 +23707,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListSmartAGApiUnsupportedFeatureResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries features that are not supported by a specified Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSmartAGApiUnsupportedFeatureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSmartAGApiUnsupportedFeatureResponse
+        /// </returns>
         public async Task<ListSmartAGApiUnsupportedFeatureResponse> ListSmartAGApiUnsupportedFeatureWithOptionsAsync(ListSmartAGApiUnsupportedFeatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16237,18 +23777,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListSmartAGApiUnsupportedFeatureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries features that are not supported by a specified Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSmartAGApiUnsupportedFeatureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSmartAGApiUnsupportedFeatureResponse
+        /// </returns>
         public ListSmartAGApiUnsupportedFeatureResponse ListSmartAGApiUnsupportedFeature(ListSmartAGApiUnsupportedFeatureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSmartAGApiUnsupportedFeatureWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries features that are not supported by a specified Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSmartAGApiUnsupportedFeatureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSmartAGApiUnsupportedFeatureResponse
+        /// </returns>
         public async Task<ListSmartAGApiUnsupportedFeatureResponse> ListSmartAGApiUnsupportedFeatureAsync(ListSmartAGApiUnsupportedFeatureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListSmartAGApiUnsupportedFeatureWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about Smart Access Gateway (SAG) instances within specific access points in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSmartAGByAccessPointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSmartAGByAccessPointResponse
+        /// </returns>
         public ListSmartAGByAccessPointResponse ListSmartAGByAccessPointWithOptions(ListSmartAGByAccessPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16308,6 +23887,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListSmartAGByAccessPointResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about Smart Access Gateway (SAG) instances within specific access points in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSmartAGByAccessPointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSmartAGByAccessPointResponse
+        /// </returns>
         public async Task<ListSmartAGByAccessPointResponse> ListSmartAGByAccessPointWithOptionsAsync(ListSmartAGByAccessPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16367,18 +23961,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ListSmartAGByAccessPointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about Smart Access Gateway (SAG) instances within specific access points in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSmartAGByAccessPointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSmartAGByAccessPointResponse
+        /// </returns>
         public ListSmartAGByAccessPointResponse ListSmartAGByAccessPoint(ListSmartAGByAccessPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSmartAGByAccessPointWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about Smart Access Gateway (SAG) instances within specific access points in a specific region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSmartAGByAccessPointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSmartAGByAccessPointResponse
+        /// </returns>
         public async Task<ListSmartAGByAccessPointResponse> ListSmartAGByAccessPointAsync(ListSmartAGByAccessPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListSmartAGByAccessPointWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyACLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyACLResponse
+        /// </returns>
         public ModifyACLResponse ModifyACLWithOptions(ModifyACLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16430,6 +24063,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyACLResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyACLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyACLResponse
+        /// </returns>
         public async Task<ModifyACLResponse> ModifyACLWithOptionsAsync(ModifyACLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16481,18 +24129,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyACLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyACLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyACLResponse
+        /// </returns>
         public ModifyACLResponse ModifyACL(ModifyACLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyACLWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of an access control list (ACL).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyACLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyACLResponse
+        /// </returns>
         public async Task<ModifyACLResponse> ModifyACLAsync(ModifyACLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyACLWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an access control list (ACL) rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyACLRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyACLRuleResponse
+        /// </returns>
         public ModifyACLRuleResponse ModifyACLRuleWithOptions(ModifyACLRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16596,6 +24283,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyACLRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an access control list (ACL) rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyACLRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyACLRuleResponse
+        /// </returns>
         public async Task<ModifyACLRuleResponse> ModifyACLRuleWithOptionsAsync(ModifyACLRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16699,18 +24401,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyACLRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an access control list (ACL) rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyACLRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyACLRuleResponse
+        /// </returns>
         public ModifyACLRuleResponse ModifyACLRule(ModifyACLRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyACLRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an access control list (ACL) rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyACLRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyACLRuleResponse
+        /// </returns>
         public async Task<ModifyACLRuleResponse> ModifyACLRuleAsync(ModifyACLRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyACLRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the DNS settings of a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyClientUserDNSRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyClientUserDNSResponse
+        /// </returns>
         public ModifyClientUserDNSResponse ModifyClientUserDNSWithOptions(ModifyClientUserDNSRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16766,6 +24507,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyClientUserDNSResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the DNS settings of a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyClientUserDNSRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyClientUserDNSResponse
+        /// </returns>
         public async Task<ModifyClientUserDNSResponse> ModifyClientUserDNSWithOptionsAsync(ModifyClientUserDNSRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16821,18 +24577,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyClientUserDNSResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the DNS settings of a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyClientUserDNSRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyClientUserDNSResponse
+        /// </returns>
         public ModifyClientUserDNSResponse ModifyClientUserDNS(ModifyClientUserDNSRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyClientUserDNSWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the DNS settings of a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyClientUserDNSRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyClientUserDNSResponse
+        /// </returns>
         public async Task<ModifyClientUserDNSResponse> ModifyClientUserDNSAsync(ModifyClientUserDNSRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyClientUserDNSWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCloudConnectNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCloudConnectNetworkResponse
+        /// </returns>
         public ModifyCloudConnectNetworkResponse ModifyCloudConnectNetworkWithOptions(ModifyCloudConnectNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16896,6 +24691,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyCloudConnectNetworkResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCloudConnectNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCloudConnectNetworkResponse
+        /// </returns>
         public async Task<ModifyCloudConnectNetworkResponse> ModifyCloudConnectNetworkWithOptionsAsync(ModifyCloudConnectNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16959,18 +24769,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyCloudConnectNetworkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCloudConnectNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCloudConnectNetworkResponse
+        /// </returns>
         public ModifyCloudConnectNetworkResponse ModifyCloudConnectNetwork(ModifyCloudConnectNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyCloudConnectNetworkWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configurations of a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCloudConnectNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCloudConnectNetworkResponse
+        /// </returns>
         public async Task<ModifyCloudConnectNetworkResponse> ModifyCloudConnectNetworkAsync(ModifyCloudConnectNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyCloudConnectNetworkWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the automatic upgrade policy of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDeviceAutoUpgradePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDeviceAutoUpgradePolicyResponse
+        /// </returns>
         public ModifyDeviceAutoUpgradePolicyResponse ModifyDeviceAutoUpgradePolicyWithOptions(ModifyDeviceAutoUpgradePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17042,6 +24891,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyDeviceAutoUpgradePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the automatic upgrade policy of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDeviceAutoUpgradePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDeviceAutoUpgradePolicyResponse
+        /// </returns>
         public async Task<ModifyDeviceAutoUpgradePolicyResponse> ModifyDeviceAutoUpgradePolicyWithOptionsAsync(ModifyDeviceAutoUpgradePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17113,18 +24977,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyDeviceAutoUpgradePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the automatic upgrade policy of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDeviceAutoUpgradePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDeviceAutoUpgradePolicyResponse
+        /// </returns>
         public ModifyDeviceAutoUpgradePolicyResponse ModifyDeviceAutoUpgradePolicy(ModifyDeviceAutoUpgradePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyDeviceAutoUpgradePolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the automatic upgrade policy of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDeviceAutoUpgradePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDeviceAutoUpgradePolicyResponse
+        /// </returns>
         public async Task<ModifyDeviceAutoUpgradePolicyResponse> ModifyDeviceAutoUpgradePolicyAsync(ModifyDeviceAutoUpgradePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDeviceAutoUpgradePolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the settings of a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyFlowLogAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFlowLogAttributeResponse
+        /// </returns>
         public ModifyFlowLogAttributeResponse ModifyFlowLogAttributeWithOptions(ModifyFlowLogAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17216,6 +25119,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyFlowLogAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the settings of a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyFlowLogAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFlowLogAttributeResponse
+        /// </returns>
         public async Task<ModifyFlowLogAttributeResponse> ModifyFlowLogAttributeWithOptionsAsync(ModifyFlowLogAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17307,18 +25225,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyFlowLogAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the settings of a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyFlowLogAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFlowLogAttributeResponse
+        /// </returns>
         public ModifyFlowLogAttributeResponse ModifyFlowLogAttribute(ModifyFlowLogAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyFlowLogAttributeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the settings of a flow log.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyFlowLogAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFlowLogAttributeResponse
+        /// </returns>
         public async Task<ModifyFlowLogAttributeResponse> ModifyFlowLogAttributeAsync(ModifyFlowLogAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyFlowLogAttributeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a health check.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHealthCheckRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHealthCheckResponse
+        /// </returns>
         public ModifyHealthCheckResponse ModifyHealthCheckWithOptions(ModifyHealthCheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17422,6 +25379,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyHealthCheckResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a health check.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHealthCheckRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHealthCheckResponse
+        /// </returns>
         public async Task<ModifyHealthCheckResponse> ModifyHealthCheckWithOptionsAsync(ModifyHealthCheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17525,18 +25497,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyHealthCheckResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a health check.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHealthCheckRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHealthCheckResponse
+        /// </returns>
         public ModifyHealthCheckResponse ModifyHealthCheck(ModifyHealthCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyHealthCheckWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a health check.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHealthCheckRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHealthCheckResponse
+        /// </returns>
         public async Task<ModifyHealthCheckResponse> ModifyHealthCheckAsync(ModifyHealthCheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyHealthCheckWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify a quality of service (QoS) policy, for example, its name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyQosRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosResponse
+        /// </returns>
         public ModifyQosResponse ModifyQosWithOptions(ModifyQosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17592,6 +25603,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyQosResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify a quality of service (QoS) policy, for example, its name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyQosRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosResponse
+        /// </returns>
         public async Task<ModifyQosResponse> ModifyQosWithOptionsAsync(ModifyQosRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17647,18 +25673,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyQosResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify a quality of service (QoS) policy, for example, its name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyQosRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosResponse
+        /// </returns>
         public ModifyQosResponse ModifyQos(ModifyQosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyQosWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify a quality of service (QoS) policy, for example, its name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyQosRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosResponse
+        /// </returns>
         public async Task<ModifyQosResponse> ModifyQosAsync(ModifyQosRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyQosWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a traffic throttling rule in a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyQosCarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosCarResponse
+        /// </returns>
         public ModifyQosCarResponse ModifyQosCarWithOptions(ModifyQosCarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17746,6 +25811,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyQosCarResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a traffic throttling rule in a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyQosCarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosCarResponse
+        /// </returns>
         public async Task<ModifyQosCarResponse> ModifyQosCarWithOptionsAsync(ModifyQosCarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17833,18 +25913,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyQosCarResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a traffic throttling rule in a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyQosCarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosCarResponse
+        /// </returns>
         public ModifyQosCarResponse ModifyQosCar(ModifyQosCarRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyQosCarWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a traffic throttling rule in a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyQosCarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosCarResponse
+        /// </returns>
         public async Task<ModifyQosCarResponse> ModifyQosCarAsync(ModifyQosCarRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyQosCarWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a traffic classification rule of a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyQosPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosPolicyResponse
+        /// </returns>
         public ModifyQosPolicyResponse ModifyQosPolicyWithOptions(ModifyQosPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -17944,6 +26063,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyQosPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a traffic classification rule of a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyQosPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosPolicyResponse
+        /// </returns>
         public async Task<ModifyQosPolicyResponse> ModifyQosPolicyWithOptionsAsync(ModifyQosPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18043,18 +26177,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyQosPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a traffic classification rule of a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyQosPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosPolicyResponse
+        /// </returns>
         public ModifyQosPolicyResponse ModifyQosPolicy(ModifyQosPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyQosPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a traffic classification rule of a quality of service (QoS) policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyQosPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyQosPolicyResponse
+        /// </returns>
         public async Task<ModifyQosPolicyResponse> ModifyQosPolicyAsync(ModifyQosPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyQosPolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the route advertisement policy for a CIDR block.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRouteDistributionStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRouteDistributionStrategyResponse
+        /// </returns>
         public ModifyRouteDistributionStrategyResponse ModifyRouteDistributionStrategyWithOptions(ModifyRouteDistributionStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18122,6 +26295,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyRouteDistributionStrategyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the route advertisement policy for a CIDR block.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRouteDistributionStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRouteDistributionStrategyResponse
+        /// </returns>
         public async Task<ModifyRouteDistributionStrategyResponse> ModifyRouteDistributionStrategyWithOptionsAsync(ModifyRouteDistributionStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18189,18 +26377,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifyRouteDistributionStrategyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the route advertisement policy for a CIDR block.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRouteDistributionStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRouteDistributionStrategyResponse
+        /// </returns>
         public ModifyRouteDistributionStrategyResponse ModifyRouteDistributionStrategy(ModifyRouteDistributionStrategyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyRouteDistributionStrategyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the route advertisement policy for a CIDR block.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRouteDistributionStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRouteDistributionStrategyResponse
+        /// </returns>
         public async Task<ModifyRouteDistributionStrategyResponse> ModifyRouteDistributionStrategyAsync(ModifyRouteDistributionStrategyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyRouteDistributionStrategyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the password that is used to log on to a smart access gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySAGAdminPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySAGAdminPasswordResponse
+        /// </returns>
         public ModifySAGAdminPasswordResponse ModifySAGAdminPasswordWithOptions(ModifySAGAdminPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18256,6 +26483,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySAGAdminPasswordResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the password that is used to log on to a smart access gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySAGAdminPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySAGAdminPasswordResponse
+        /// </returns>
         public async Task<ModifySAGAdminPasswordResponse> ModifySAGAdminPasswordWithOptionsAsync(ModifySAGAdminPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18311,18 +26553,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySAGAdminPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the password that is used to log on to a smart access gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySAGAdminPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySAGAdminPasswordResponse
+        /// </returns>
         public ModifySAGAdminPasswordResponse ModifySAGAdminPassword(ModifySAGAdminPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySAGAdminPasswordWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the password that is used to log on to a smart access gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySAGAdminPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySAGAdminPasswordResponse
+        /// </returns>
         public async Task<ModifySAGAdminPasswordResponse> ModifySAGAdminPasswordAsync(ModifySAGAdminPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySAGAdminPasswordWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the sub-interface information of an Express Connect circuit port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagExpressConnectInterfaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagExpressConnectInterfaceResponse
+        /// </returns>
         public ModifySagExpressConnectInterfaceResponse ModifySagExpressConnectInterfaceWithOptions(ModifySagExpressConnectInterfaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18390,6 +26671,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagExpressConnectInterfaceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the sub-interface information of an Express Connect circuit port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagExpressConnectInterfaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagExpressConnectInterfaceResponse
+        /// </returns>
         public async Task<ModifySagExpressConnectInterfaceResponse> ModifySagExpressConnectInterfaceWithOptionsAsync(ModifySagExpressConnectInterfaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18457,18 +26753,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagExpressConnectInterfaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the sub-interface information of an Express Connect circuit port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagExpressConnectInterfaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagExpressConnectInterfaceResponse
+        /// </returns>
         public ModifySagExpressConnectInterfaceResponse ModifySagExpressConnectInterface(ModifySagExpressConnectInterfaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySagExpressConnectInterfaceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the sub-interface information of an Express Connect circuit port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagExpressConnectInterfaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagExpressConnectInterfaceResponse
+        /// </returns>
         public async Task<ModifySagExpressConnectInterfaceResponse> ModifySagExpressConnectInterfaceAsync(ModifySagExpressConnectInterfaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySagExpressConnectInterfaceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the routing protocol of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagGlobalRouteProtocolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagGlobalRouteProtocolResponse
+        /// </returns>
         public ModifySagGlobalRouteProtocolResponse ModifySagGlobalRouteProtocolWithOptions(ModifySagGlobalRouteProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18524,6 +26859,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagGlobalRouteProtocolResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the routing protocol of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagGlobalRouteProtocolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagGlobalRouteProtocolResponse
+        /// </returns>
         public async Task<ModifySagGlobalRouteProtocolResponse> ModifySagGlobalRouteProtocolWithOptionsAsync(ModifySagGlobalRouteProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18579,18 +26929,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagGlobalRouteProtocolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the routing protocol of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagGlobalRouteProtocolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagGlobalRouteProtocolResponse
+        /// </returns>
         public ModifySagGlobalRouteProtocolResponse ModifySagGlobalRouteProtocol(ModifySagGlobalRouteProtocolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySagGlobalRouteProtocolWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the routing protocol of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagGlobalRouteProtocolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagGlobalRouteProtocolResponse
+        /// </returns>
         public async Task<ModifySagGlobalRouteProtocolResponse> ModifySagGlobalRouteProtocolAsync(ModifySagGlobalRouteProtocolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySagGlobalRouteProtocolWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the high availability (HA) settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagHaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagHaResponse
+        /// </returns>
         public ModifySagHaResponse ModifySagHaWithOptions(ModifySagHaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18654,6 +27043,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagHaResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the high availability (HA) settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagHaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagHaResponse
+        /// </returns>
         public async Task<ModifySagHaResponse> ModifySagHaWithOptionsAsync(ModifySagHaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18717,18 +27121,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagHaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the high availability (HA) settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagHaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagHaResponse
+        /// </returns>
         public ModifySagHaResponse ModifySagHa(ModifySagHaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySagHaWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the high availability (HA) settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagHaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagHaResponse
+        /// </returns>
         public async Task<ModifySagHaResponse> ModifySagHaAsync(ModifySagHaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySagHaWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the LAN port configurations of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagLanRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagLanResponse
+        /// </returns>
         public ModifySagLanResponse ModifySagLanWithOptions(ModifySagLanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18808,6 +27251,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagLanResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the LAN port configurations of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagLanRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagLanResponse
+        /// </returns>
         public async Task<ModifySagLanResponse> ModifySagLanWithOptionsAsync(ModifySagLanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18887,18 +27345,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagLanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the LAN port configurations of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagLanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagLanResponse
+        /// </returns>
         public ModifySagLanResponse ModifySagLan(ModifySagLanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySagLanWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the LAN port configurations of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagLanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagLanResponse
+        /// </returns>
         public async Task<ModifySagLanResponse> ModifySagLanAsync(ModifySagLanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySagLanWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the settings of a Smart Access Gateway (SAG) device port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagManagementPortRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagManagementPortResponse
+        /// </returns>
         public ModifySagManagementPortResponse ModifySagManagementPortWithOptions(ModifySagManagementPortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18962,6 +27459,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagManagementPortResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the settings of a Smart Access Gateway (SAG) device port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagManagementPortRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagManagementPortResponse
+        /// </returns>
         public async Task<ModifySagManagementPortResponse> ModifySagManagementPortWithOptionsAsync(ModifySagManagementPortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19025,18 +27537,64 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagManagementPortResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the settings of a Smart Access Gateway (SAG) device port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagManagementPortRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagManagementPortResponse
+        /// </returns>
         public ModifySagManagementPortResponse ModifySagManagementPort(ModifySagManagementPortRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySagManagementPortWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the settings of a Smart Access Gateway (SAG) device port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagManagementPortRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagManagementPortResponse
+        /// </returns>
         public async Task<ModifySagManagementPortResponse> ModifySagManagementPortAsync(ModifySagManagementPortRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySagManagementPortWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the role of a port.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> If you modify the role of a port, the current role configurations of the port are deleted.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySagPortRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagPortRoleResponse
+        /// </returns>
         public ModifySagPortRoleResponse ModifySagPortRoleWithOptions(ModifySagPortRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19096,6 +27654,28 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagPortRoleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the role of a port.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> If you modify the role of a port, the current role configurations of the port are deleted.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySagPortRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagPortRoleResponse
+        /// </returns>
         public async Task<ModifySagPortRoleResponse> ModifySagPortRoleWithOptionsAsync(ModifySagPortRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19155,18 +27735,71 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagPortRoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the role of a port.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> If you modify the role of a port, the current role configurations of the port are deleted.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySagPortRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagPortRoleResponse
+        /// </returns>
         public ModifySagPortRoleResponse ModifySagPortRole(ModifySagPortRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySagPortRoleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the role of a port.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> If you modify the role of a port, the current role configurations of the port are deleted.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySagPortRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagPortRoleResponse
+        /// </returns>
         public async Task<ModifySagPortRoleResponse> ModifySagPortRoleAsync(ModifySagPortRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySagPortRoleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the routing protocol of a port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagPortRouteProtocolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagPortRouteProtocolResponse
+        /// </returns>
         public ModifySagPortRouteProtocolResponse ModifySagPortRouteProtocolWithOptions(ModifySagPortRouteProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19238,6 +27871,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagPortRouteProtocolResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the routing protocol of a port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagPortRouteProtocolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagPortRouteProtocolResponse
+        /// </returns>
         public async Task<ModifySagPortRouteProtocolResponse> ModifySagPortRouteProtocolWithOptionsAsync(ModifySagPortRouteProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19309,18 +27957,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagPortRouteProtocolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the routing protocol of a port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagPortRouteProtocolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagPortRouteProtocolResponse
+        /// </returns>
         public ModifySagPortRouteProtocolResponse ModifySagPortRouteProtocol(ModifySagPortRouteProtocolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySagPortRouteProtocolWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the routing protocol of a port.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagPortRouteProtocolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagPortRouteProtocolResponse
+        /// </returns>
         public async Task<ModifySagPortRouteProtocolResponse> ModifySagPortRouteProtocolAsync(ModifySagPortRouteProtocolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySagPortRouteProtocolWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the remote access IP address of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagRemoteAccessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagRemoteAccessResponse
+        /// </returns>
         public ModifySagRemoteAccessResponse ModifySagRemoteAccessWithOptions(ModifySagRemoteAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19372,6 +28059,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagRemoteAccessResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the remote access IP address of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagRemoteAccessRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagRemoteAccessResponse
+        /// </returns>
         public async Task<ModifySagRemoteAccessResponse> ModifySagRemoteAccessWithOptionsAsync(ModifySagRemoteAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19423,18 +28125,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagRemoteAccessResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the remote access IP address of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagRemoteAccessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagRemoteAccessResponse
+        /// </returns>
         public ModifySagRemoteAccessResponse ModifySagRemoteAccess(ModifySagRemoteAccessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySagRemoteAccessWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the remote access IP address of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagRemoteAccessRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagRemoteAccessResponse
+        /// </returns>
         public async Task<ModifySagRemoteAccessResponse> ModifySagRemoteAccessAsync(ModifySagRemoteAccessRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySagRemoteAccessWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Border Gateway Protocol (BGP) settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagRouteProtocolBgpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagRouteProtocolBgpResponse
+        /// </returns>
         public ModifySagRouteProtocolBgpResponse ModifySagRouteProtocolBgpWithOptions(ModifySagRouteProtocolBgpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19502,6 +28243,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagRouteProtocolBgpResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Border Gateway Protocol (BGP) settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagRouteProtocolBgpRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagRouteProtocolBgpResponse
+        /// </returns>
         public async Task<ModifySagRouteProtocolBgpResponse> ModifySagRouteProtocolBgpWithOptionsAsync(ModifySagRouteProtocolBgpRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19569,18 +28325,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagRouteProtocolBgpResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Border Gateway Protocol (BGP) settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagRouteProtocolBgpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagRouteProtocolBgpResponse
+        /// </returns>
         public ModifySagRouteProtocolBgpResponse ModifySagRouteProtocolBgp(ModifySagRouteProtocolBgpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySagRouteProtocolBgpWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Border Gateway Protocol (BGP) settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagRouteProtocolBgpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagRouteProtocolBgpResponse
+        /// </returns>
         public async Task<ModifySagRouteProtocolBgpResponse> ModifySagRouteProtocolBgpAsync(ModifySagRouteProtocolBgpRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySagRouteProtocolBgpWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Open Shortest Path First (OSPF) settings of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagRouteProtocolOspfRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagRouteProtocolOspfResponse
+        /// </returns>
         public ModifySagRouteProtocolOspfResponse ModifySagRouteProtocolOspfWithOptions(ModifySagRouteProtocolOspfRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19664,6 +28459,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagRouteProtocolOspfResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Open Shortest Path First (OSPF) settings of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagRouteProtocolOspfRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagRouteProtocolOspfResponse
+        /// </returns>
         public async Task<ModifySagRouteProtocolOspfResponse> ModifySagRouteProtocolOspfWithOptionsAsync(ModifySagRouteProtocolOspfRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19747,18 +28557,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagRouteProtocolOspfResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Open Shortest Path First (OSPF) settings of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagRouteProtocolOspfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagRouteProtocolOspfResponse
+        /// </returns>
         public ModifySagRouteProtocolOspfResponse ModifySagRouteProtocolOspf(ModifySagRouteProtocolOspfRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySagRouteProtocolOspfWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Open Shortest Path First (OSPF) settings of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagRouteProtocolOspfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagRouteProtocolOspfResponse
+        /// </returns>
         public async Task<ModifySagRouteProtocolOspfResponse> ModifySagRouteProtocolOspfAsync(ModifySagRouteProtocolOspfRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySagRouteProtocolOspfWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a static route.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagStaticRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagStaticRouteResponse
+        /// </returns>
         public ModifySagStaticRouteResponse ModifySagStaticRouteWithOptions(ModifySagStaticRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19826,6 +28675,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagStaticRouteResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a static route.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagStaticRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagStaticRouteResponse
+        /// </returns>
         public async Task<ModifySagStaticRouteResponse> ModifySagStaticRouteWithOptionsAsync(ModifySagStaticRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19893,18 +28757,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagStaticRouteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a static route.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagStaticRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagStaticRouteResponse
+        /// </returns>
         public ModifySagStaticRouteResponse ModifySagStaticRoute(ModifySagStaticRouteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySagStaticRouteWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a static route.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagStaticRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagStaticRouteResponse
+        /// </returns>
         public async Task<ModifySagStaticRouteResponse> ModifySagStaticRouteAsync(ModifySagStaticRouteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySagStaticRouteWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the DNS servers used by a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagUserDnsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagUserDnsResponse
+        /// </returns>
         public ModifySagUserDnsResponse ModifySagUserDnsWithOptions(ModifySagUserDnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -19964,6 +28867,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagUserDnsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the DNS servers used by a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagUserDnsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagUserDnsResponse
+        /// </returns>
         public async Task<ModifySagUserDnsResponse> ModifySagUserDnsWithOptionsAsync(ModifySagUserDnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20023,18 +28941,62 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagUserDnsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the DNS servers used by a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagUserDnsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagUserDnsResponse
+        /// </returns>
         public ModifySagUserDnsResponse ModifySagUserDns(ModifySagUserDnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySagUserDnsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the DNS servers used by a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagUserDnsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagUserDnsResponse
+        /// </returns>
         public async Task<ModifySagUserDnsResponse> ModifySagUserDnsAsync(ModifySagUserDnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySagUserDnsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the WAN port configurations of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>We recommend that you understand the functionality of a WAN port before you modify its settings. For more information, see <a href="https://help.aliyun.com/document_detail/163955.html">Configure a WAN port</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySagWanRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagWanResponse
+        /// </returns>
         public ModifySagWanResponse ModifySagWanWithOptions(ModifySagWanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20130,6 +29092,26 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagWanResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the WAN port configurations of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>We recommend that you understand the functionality of a WAN port before you modify its settings. For more information, see <a href="https://help.aliyun.com/document_detail/163955.html">Configure a WAN port</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySagWanRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagWanResponse
+        /// </returns>
         public async Task<ModifySagWanResponse> ModifySagWanWithOptionsAsync(ModifySagWanRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20225,18 +29207,67 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagWanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the WAN port configurations of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>We recommend that you understand the functionality of a WAN port before you modify its settings. For more information, see <a href="https://help.aliyun.com/document_detail/163955.html">Configure a WAN port</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySagWanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagWanResponse
+        /// </returns>
         public ModifySagWanResponse ModifySagWan(ModifySagWanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySagWanWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the WAN port configurations of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>We recommend that you understand the functionality of a WAN port before you modify its settings. For more information, see <a href="https://help.aliyun.com/document_detail/163955.html">Configure a WAN port</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifySagWanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagWanResponse
+        /// </returns>
         public async Task<ModifySagWanResponse> ModifySagWanAsync(ModifySagWanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySagWanWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the SNAT configurations of a WAN port of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagWanSnatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagWanSnatResponse
+        /// </returns>
         public ModifySagWanSnatResponse ModifySagWanSnatWithOptions(ModifySagWanSnatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20292,6 +29323,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagWanSnatResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the SNAT configurations of a WAN port of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagWanSnatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagWanSnatResponse
+        /// </returns>
         public async Task<ModifySagWanSnatResponse> ModifySagWanSnatWithOptionsAsync(ModifySagWanSnatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20347,18 +29393,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagWanSnatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the SNAT configurations of a WAN port of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagWanSnatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagWanSnatResponse
+        /// </returns>
         public ModifySagWanSnatResponse ModifySagWanSnat(ModifySagWanSnatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySagWanSnatWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the SNAT configurations of a WAN port of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagWanSnatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagWanSnatResponse
+        /// </returns>
         public async Task<ModifySagWanSnatResponse> ModifySagWanSnatAsync(ModifySagWanSnatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySagWanSnatWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the Wi-Fi settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagWifiRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagWifiResponse
+        /// </returns>
         public ModifySagWifiResponse ModifySagWifiWithOptions(ModifySagWifiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20446,6 +29531,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagWifiResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the Wi-Fi settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagWifiRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagWifiResponse
+        /// </returns>
         public async Task<ModifySagWifiResponse> ModifySagWifiWithOptionsAsync(ModifySagWifiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20533,18 +29633,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySagWifiResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the Wi-Fi settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagWifiRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagWifiResponse
+        /// </returns>
         public ModifySagWifiResponse ModifySagWifi(ModifySagWifiRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySagWifiWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the Wi-Fi settings of a Smart Access Gateway (SAG) device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySagWifiRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySagWifiResponse
+        /// </returns>
         public async Task<ModifySagWifiResponse> ModifySagWifiAsync(ModifySagWifiRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySagWifiWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySmartAccessGatewayResponse
+        /// </returns>
         public ModifySmartAccessGatewayResponse ModifySmartAccessGatewayWithOptions(ModifySmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20620,6 +29759,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySmartAccessGatewayResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySmartAccessGatewayResponse
+        /// </returns>
         public async Task<ModifySmartAccessGatewayResponse> ModifySmartAccessGatewayWithOptionsAsync(ModifySmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20695,18 +29849,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySmartAccessGatewayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySmartAccessGatewayResponse
+        /// </returns>
         public ModifySmartAccessGatewayResponse ModifySmartAccessGateway(ModifySmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySmartAccessGatewayWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySmartAccessGatewayResponse
+        /// </returns>
         public async Task<ModifySmartAccessGatewayResponse> ModifySmartAccessGatewayAsync(ModifySmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySmartAccessGatewayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maximum bandwidth and email address of a client account on a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySmartAccessGatewayClientUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySmartAccessGatewayClientUserResponse
+        /// </returns>
         public ModifySmartAccessGatewayClientUserResponse ModifySmartAccessGatewayClientUserWithOptions(ModifySmartAccessGatewayClientUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20766,6 +29959,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySmartAccessGatewayClientUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maximum bandwidth and email address of a client account on a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySmartAccessGatewayClientUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySmartAccessGatewayClientUserResponse
+        /// </returns>
         public async Task<ModifySmartAccessGatewayClientUserResponse> ModifySmartAccessGatewayClientUserWithOptionsAsync(ModifySmartAccessGatewayClientUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20825,18 +30033,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySmartAccessGatewayClientUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maximum bandwidth and email address of a client account on a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySmartAccessGatewayClientUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySmartAccessGatewayClientUserResponse
+        /// </returns>
         public ModifySmartAccessGatewayClientUserResponse ModifySmartAccessGatewayClientUser(ModifySmartAccessGatewayClientUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySmartAccessGatewayClientUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maximum bandwidth and email address of a client account on a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySmartAccessGatewayClientUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySmartAccessGatewayClientUserResponse
+        /// </returns>
         public async Task<ModifySmartAccessGatewayClientUserResponse> ModifySmartAccessGatewayClientUserAsync(ModifySmartAccessGatewayClientUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySmartAccessGatewayClientUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the parameters of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySmartAccessGatewayUpBandwidthRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySmartAccessGatewayUpBandwidthResponse
+        /// </returns>
         public ModifySmartAccessGatewayUpBandwidthResponse ModifySmartAccessGatewayUpBandwidthWithOptions(ModifySmartAccessGatewayUpBandwidthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20892,6 +30139,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySmartAccessGatewayUpBandwidthResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the parameters of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySmartAccessGatewayUpBandwidthRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySmartAccessGatewayUpBandwidthResponse
+        /// </returns>
         public async Task<ModifySmartAccessGatewayUpBandwidthResponse> ModifySmartAccessGatewayUpBandwidthWithOptionsAsync(ModifySmartAccessGatewayUpBandwidthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -20947,18 +30209,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ModifySmartAccessGatewayUpBandwidthResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the parameters of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySmartAccessGatewayUpBandwidthRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySmartAccessGatewayUpBandwidthResponse
+        /// </returns>
         public ModifySmartAccessGatewayUpBandwidthResponse ModifySmartAccessGatewayUpBandwidth(ModifySmartAccessGatewayUpBandwidthRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifySmartAccessGatewayUpBandwidthWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the parameters of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySmartAccessGatewayUpBandwidthRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySmartAccessGatewayUpBandwidthResponse
+        /// </returns>
         public async Task<ModifySmartAccessGatewayUpBandwidthResponse> ModifySmartAccessGatewayUpBandwidthAsync(ModifySmartAccessGatewayUpBandwidthRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySmartAccessGatewayUpBandwidthWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves Smart Access Gateway (SAG) resources from one resource group to another.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveResourceGroupResponse
+        /// </returns>
         public MoveResourceGroupResponse MoveResourceGroupWithOptions(MoveResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21014,6 +30315,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<MoveResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves Smart Access Gateway (SAG) resources from one resource group to another.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveResourceGroupResponse
+        /// </returns>
         public async Task<MoveResourceGroupResponse> MoveResourceGroupWithOptionsAsync(MoveResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21069,18 +30385,66 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<MoveResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves Smart Access Gateway (SAG) resources from one resource group to another.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveResourceGroupResponse
+        /// </returns>
         public MoveResourceGroupResponse MoveResourceGroup(MoveResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return MoveResourceGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves Smart Access Gateway (SAG) resources from one resource group to another.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveResourceGroupResponse
+        /// </returns>
         public async Task<MoveResourceGroupResponse> MoveResourceGroupAsync(MoveResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await MoveResourceGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Probes the network connectivity between a Smart Access Gateway (SAG) instance and an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to test the connectivity between an SAG instance and a specified access point.</para>
+        /// <list type="bullet">
+        /// <item><description>If the SAG instance can connect to the access point, the ID of the request is returned in this operation.</description></item>
+        /// <item><description>If the SAG instance cannot connect to the access point, the ID of the request and corresponding error messages are returned in this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ProbeAccessPointNetworkQualityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ProbeAccessPointNetworkQualityResponse
+        /// </returns>
         public ProbeAccessPointNetworkQualityResponse ProbeAccessPointNetworkQualityWithOptions(ProbeAccessPointNetworkQualityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21132,6 +30496,30 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ProbeAccessPointNetworkQualityResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Probes the network connectivity between a Smart Access Gateway (SAG) instance and an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to test the connectivity between an SAG instance and a specified access point.</para>
+        /// <list type="bullet">
+        /// <item><description>If the SAG instance can connect to the access point, the ID of the request is returned in this operation.</description></item>
+        /// <item><description>If the SAG instance cannot connect to the access point, the ID of the request and corresponding error messages are returned in this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ProbeAccessPointNetworkQualityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ProbeAccessPointNetworkQualityResponse
+        /// </returns>
         public async Task<ProbeAccessPointNetworkQualityResponse> ProbeAccessPointNetworkQualityWithOptionsAsync(ProbeAccessPointNetworkQualityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21183,18 +30571,75 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ProbeAccessPointNetworkQualityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Probes the network connectivity between a Smart Access Gateway (SAG) instance and an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to test the connectivity between an SAG instance and a specified access point.</para>
+        /// <list type="bullet">
+        /// <item><description>If the SAG instance can connect to the access point, the ID of the request is returned in this operation.</description></item>
+        /// <item><description>If the SAG instance cannot connect to the access point, the ID of the request and corresponding error messages are returned in this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ProbeAccessPointNetworkQualityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ProbeAccessPointNetworkQualityResponse
+        /// </returns>
         public ProbeAccessPointNetworkQualityResponse ProbeAccessPointNetworkQuality(ProbeAccessPointNetworkQualityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ProbeAccessPointNetworkQualityWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Probes the network connectivity between a Smart Access Gateway (SAG) instance and an access point.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to test the connectivity between an SAG instance and a specified access point.</para>
+        /// <list type="bullet">
+        /// <item><description>If the SAG instance can connect to the access point, the ID of the request is returned in this operation.</description></item>
+        /// <item><description>If the SAG instance cannot connect to the access point, the ID of the request and corresponding error messages are returned in this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ProbeAccessPointNetworkQualityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ProbeAccessPointNetworkQualityResponse
+        /// </returns>
         public async Task<ProbeAccessPointNetworkQualityResponse> ProbeAccessPointNetworkQualityAsync(ProbeAccessPointNetworkQualityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ProbeAccessPointNetworkQualityWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RebootSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebootSmartAccessGatewayResponse
+        /// </returns>
         public RebootSmartAccessGatewayResponse RebootSmartAccessGatewayWithOptions(RebootSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21246,6 +30691,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<RebootSmartAccessGatewayResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RebootSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebootSmartAccessGatewayResponse
+        /// </returns>
         public async Task<RebootSmartAccessGatewayResponse> RebootSmartAccessGatewayWithOptionsAsync(RebootSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21297,18 +30757,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<RebootSmartAccessGatewayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RebootSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebootSmartAccessGatewayResponse
+        /// </returns>
         public RebootSmartAccessGatewayResponse RebootSmartAccessGateway(RebootSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RebootSmartAccessGatewayWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RebootSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebootSmartAccessGatewayResponse
+        /// </returns>
         public async Task<RebootSmartAccessGatewayResponse> RebootSmartAccessGatewayAsync(RebootSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RebootSmartAccessGatewayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password that a client account uses to log on to the Smart Access Gateway (SAG) app.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetSmartAccessGatewayClientUserPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetSmartAccessGatewayClientUserPasswordResponse
+        /// </returns>
         public ResetSmartAccessGatewayClientUserPasswordResponse ResetSmartAccessGatewayClientUserPasswordWithOptions(ResetSmartAccessGatewayClientUserPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21364,6 +30863,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ResetSmartAccessGatewayClientUserPasswordResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password that a client account uses to log on to the Smart Access Gateway (SAG) app.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetSmartAccessGatewayClientUserPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetSmartAccessGatewayClientUserPasswordResponse
+        /// </returns>
         public async Task<ResetSmartAccessGatewayClientUserPasswordResponse> ResetSmartAccessGatewayClientUserPasswordWithOptionsAsync(ResetSmartAccessGatewayClientUserPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21419,18 +30933,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ResetSmartAccessGatewayClientUserPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password that a client account uses to log on to the Smart Access Gateway (SAG) app.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetSmartAccessGatewayClientUserPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetSmartAccessGatewayClientUserPasswordResponse
+        /// </returns>
         public ResetSmartAccessGatewayClientUserPasswordResponse ResetSmartAccessGatewayClientUserPassword(ResetSmartAccessGatewayClientUserPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ResetSmartAccessGatewayClientUserPasswordWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password that a client account uses to log on to the Smart Access Gateway (SAG) app.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetSmartAccessGatewayClientUserPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetSmartAccessGatewayClientUserPasswordResponse
+        /// </returns>
         public async Task<ResetSmartAccessGatewayClientUserPasswordResponse> ResetSmartAccessGatewayClientUserPasswordAsync(ResetSmartAccessGatewayClientUserPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetSmartAccessGatewayClientUserPasswordWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disallows a Cloud Enterprise Network (CEN) instance to communicate with a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeInstanceFromCbnRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeInstanceFromCbnResponse
+        /// </returns>
         public RevokeInstanceFromCbnResponse RevokeInstanceFromCbnWithOptions(RevokeInstanceFromCbnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21482,6 +31035,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<RevokeInstanceFromCbnResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disallows a Cloud Enterprise Network (CEN) instance to communicate with a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeInstanceFromCbnRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeInstanceFromCbnResponse
+        /// </returns>
         public async Task<RevokeInstanceFromCbnResponse> RevokeInstanceFromCbnWithOptionsAsync(RevokeInstanceFromCbnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21533,18 +31101,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<RevokeInstanceFromCbnResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disallows a Cloud Enterprise Network (CEN) instance to communicate with a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeInstanceFromCbnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeInstanceFromCbnResponse
+        /// </returns>
         public RevokeInstanceFromCbnResponse RevokeInstanceFromCbn(RevokeInstanceFromCbnRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RevokeInstanceFromCbnWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disallows a Cloud Enterprise Network (CEN) instance to communicate with a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeInstanceFromCbnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeInstanceFromCbnResponse
+        /// </returns>
         public async Task<RevokeInstanceFromCbnResponse> RevokeInstanceFromCbnAsync(RevokeInstanceFromCbnRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RevokeInstanceFromCbnWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes the permissions that a Smart Access Gateway (SAG) instance has on virtual border routers (VBRs) in a different Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeInstanceFromVbrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeInstanceFromVbrResponse
+        /// </returns>
         public RevokeInstanceFromVbrResponse RevokeInstanceFromVbrWithOptions(RevokeInstanceFromVbrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21596,6 +31203,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<RevokeInstanceFromVbrResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes the permissions that a Smart Access Gateway (SAG) instance has on virtual border routers (VBRs) in a different Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeInstanceFromVbrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeInstanceFromVbrResponse
+        /// </returns>
         public async Task<RevokeInstanceFromVbrResponse> RevokeInstanceFromVbrWithOptionsAsync(RevokeInstanceFromVbrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21647,18 +31269,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<RevokeInstanceFromVbrResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes the permissions that a Smart Access Gateway (SAG) instance has on virtual border routers (VBRs) in a different Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeInstanceFromVbrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeInstanceFromVbrResponse
+        /// </returns>
         public RevokeInstanceFromVbrResponse RevokeInstanceFromVbr(RevokeInstanceFromVbrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RevokeInstanceFromVbrWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes the permissions that a Smart Access Gateway (SAG) instance has on virtual border routers (VBRs) in a different Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeInstanceFromVbrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeInstanceFromVbrResponse
+        /// </returns>
         public async Task<RevokeInstanceFromVbrResponse> RevokeInstanceFromVbrAsync(RevokeInstanceFromVbrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RevokeInstanceFromVbrWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disallows a Smart Access Gateway (SAG) instance to communicate with a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeSagInstanceFromCcnRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeSagInstanceFromCcnResponse
+        /// </returns>
         public RevokeSagInstanceFromCcnResponse RevokeSagInstanceFromCcnWithOptions(RevokeSagInstanceFromCcnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21710,6 +31371,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<RevokeSagInstanceFromCcnResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disallows a Smart Access Gateway (SAG) instance to communicate with a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeSagInstanceFromCcnRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeSagInstanceFromCcnResponse
+        /// </returns>
         public async Task<RevokeSagInstanceFromCcnResponse> RevokeSagInstanceFromCcnWithOptionsAsync(RevokeSagInstanceFromCcnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21761,18 +31437,62 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<RevokeSagInstanceFromCcnResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disallows a Smart Access Gateway (SAG) instance to communicate with a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeSagInstanceFromCcnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeSagInstanceFromCcnResponse
+        /// </returns>
         public RevokeSagInstanceFromCcnResponse RevokeSagInstanceFromCcn(RevokeSagInstanceFromCcnRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RevokeSagInstanceFromCcnWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disallows a Smart Access Gateway (SAG) instance to communicate with a Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeSagInstanceFromCcnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeSagInstanceFromCcnResponse
+        /// </returns>
         public async Task<RevokeSagInstanceFromCcnResponse> RevokeSagInstanceFromCcnAsync(RevokeSagInstanceFromCcnRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RevokeSagInstanceFromCcnWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables roaming for the SAG app to allow clients to access Alibaba Cloud across regions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call <c>RoamClientUser</c>, we recommend that you read and understand the features and usage notes of roaming. For more information, see <a href="https://help.aliyun.com/document_detail/177220.html">Configure roaming on clients</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RoamClientUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RoamClientUserResponse
+        /// </returns>
         public RoamClientUserResponse RoamClientUserWithOptions(RoamClientUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21832,6 +31552,26 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<RoamClientUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables roaming for the SAG app to allow clients to access Alibaba Cloud across regions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call <c>RoamClientUser</c>, we recommend that you read and understand the features and usage notes of roaming. For more information, see <a href="https://help.aliyun.com/document_detail/177220.html">Configure roaming on clients</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RoamClientUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RoamClientUserResponse
+        /// </returns>
         public async Task<RoamClientUserResponse> RoamClientUserWithOptionsAsync(RoamClientUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21891,18 +31631,67 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<RoamClientUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables roaming for the SAG app to allow clients to access Alibaba Cloud across regions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call <c>RoamClientUser</c>, we recommend that you read and understand the features and usage notes of roaming. For more information, see <a href="https://help.aliyun.com/document_detail/177220.html">Configure roaming on clients</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RoamClientUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RoamClientUserResponse
+        /// </returns>
         public RoamClientUserResponse RoamClientUser(RoamClientUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RoamClientUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables roaming for the SAG app to allow clients to access Alibaba Cloud across regions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call <c>RoamClientUser</c>, we recommend that you read and understand the features and usage notes of roaming. For more information, see <a href="https://help.aliyun.com/document_detail/177220.html">Configure roaming on clients</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RoamClientUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RoamClientUserResponse
+        /// </returns>
         public async Task<RoamClientUserResponse> RoamClientUserAsync(RoamClientUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RoamClientUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAdvancedMonitorStateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAdvancedMonitorStateResponse
+        /// </returns>
         public SetAdvancedMonitorStateResponse SetAdvancedMonitorStateWithOptions(SetAdvancedMonitorStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21938,6 +31727,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<SetAdvancedMonitorStateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAdvancedMonitorStateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAdvancedMonitorStateResponse
+        /// </returns>
         public async Task<SetAdvancedMonitorStateResponse> SetAdvancedMonitorStateWithOptionsAsync(SetAdvancedMonitorStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21973,18 +31777,66 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<SetAdvancedMonitorStateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAdvancedMonitorStateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAdvancedMonitorStateResponse
+        /// </returns>
         public SetAdvancedMonitorStateResponse SetAdvancedMonitorState(SetAdvancedMonitorStateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SetAdvancedMonitorStateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAdvancedMonitorStateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAdvancedMonitorStateResponse
+        /// </returns>
         public async Task<SetAdvancedMonitorStateResponse> SetAdvancedMonitorStateAsync(SetAdvancedMonitorStateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetAdvancedMonitorStateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes the settings of a Smart Access Gateway (SAG) device to the associated SAG instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>SynchronizeSmartAGWebConfig</em>* is an asynchronous operation. After you send a request, the request ID is returned but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/164279.html">DescribeSAGDeviceInfo</a> operation to query the status of an SAG device.</para>
+        /// <list type="bullet">
+        /// <item><description>If an SAG device is in the <b>Synchronizing</b> state, the settings of the SAG device are being synchronized to the associated SAG instance.</description></item>
+        /// <item><description>If an SAG device is in the <b>Synchronized</b> state, the settings of the SAG device are synchronized to the associated SAG instance.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SynchronizeSmartAGWebConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SynchronizeSmartAGWebConfigResponse
+        /// </returns>
         public SynchronizeSmartAGWebConfigResponse SynchronizeSmartAGWebConfigWithOptions(SynchronizeSmartAGWebConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22036,6 +31888,30 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<SynchronizeSmartAGWebConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes the settings of a Smart Access Gateway (SAG) device to the associated SAG instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>SynchronizeSmartAGWebConfig</em>* is an asynchronous operation. After you send a request, the request ID is returned but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/164279.html">DescribeSAGDeviceInfo</a> operation to query the status of an SAG device.</para>
+        /// <list type="bullet">
+        /// <item><description>If an SAG device is in the <b>Synchronizing</b> state, the settings of the SAG device are being synchronized to the associated SAG instance.</description></item>
+        /// <item><description>If an SAG device is in the <b>Synchronized</b> state, the settings of the SAG device are synchronized to the associated SAG instance.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SynchronizeSmartAGWebConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SynchronizeSmartAGWebConfigResponse
+        /// </returns>
         public async Task<SynchronizeSmartAGWebConfigResponse> SynchronizeSmartAGWebConfigWithOptionsAsync(SynchronizeSmartAGWebConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22087,18 +31963,75 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<SynchronizeSmartAGWebConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes the settings of a Smart Access Gateway (SAG) device to the associated SAG instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>SynchronizeSmartAGWebConfig</em>* is an asynchronous operation. After you send a request, the request ID is returned but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/164279.html">DescribeSAGDeviceInfo</a> operation to query the status of an SAG device.</para>
+        /// <list type="bullet">
+        /// <item><description>If an SAG device is in the <b>Synchronizing</b> state, the settings of the SAG device are being synchronized to the associated SAG instance.</description></item>
+        /// <item><description>If an SAG device is in the <b>Synchronized</b> state, the settings of the SAG device are synchronized to the associated SAG instance.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SynchronizeSmartAGWebConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SynchronizeSmartAGWebConfigResponse
+        /// </returns>
         public SynchronizeSmartAGWebConfigResponse SynchronizeSmartAGWebConfig(SynchronizeSmartAGWebConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SynchronizeSmartAGWebConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes the settings of a Smart Access Gateway (SAG) device to the associated SAG instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>SynchronizeSmartAGWebConfig</em>* is an asynchronous operation. After you send a request, the request ID is returned but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/164279.html">DescribeSAGDeviceInfo</a> operation to query the status of an SAG device.</para>
+        /// <list type="bullet">
+        /// <item><description>If an SAG device is in the <b>Synchronizing</b> state, the settings of the SAG device are being synchronized to the associated SAG instance.</description></item>
+        /// <item><description>If an SAG device is in the <b>Synchronized</b> state, the settings of the SAG device are synchronized to the associated SAG instance.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SynchronizeSmartAGWebConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SynchronizeSmartAGWebConfigResponse
+        /// </returns>
         public async Task<SynchronizeSmartAGWebConfigResponse> SynchronizeSmartAGWebConfigAsync(SynchronizeSmartAGWebConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SynchronizeSmartAGWebConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) device from the associated SAG instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindSerialNumberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindSerialNumberResponse
+        /// </returns>
         public UnbindSerialNumberResponse UnbindSerialNumberWithOptions(UnbindSerialNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22150,6 +32083,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UnbindSerialNumberResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) device from the associated SAG instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindSerialNumberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindSerialNumberResponse
+        /// </returns>
         public async Task<UnbindSerialNumberResponse> UnbindSerialNumberWithOptionsAsync(UnbindSerialNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22201,18 +32149,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UnbindSerialNumberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) device from the associated SAG instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindSerialNumberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindSerialNumberResponse
+        /// </returns>
         public UnbindSerialNumberResponse UnbindSerialNumber(UnbindSerialNumberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnbindSerialNumberWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) device from the associated SAG instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindSerialNumberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindSerialNumberResponse
+        /// </returns>
         public async Task<UnbindSerialNumberResponse> UnbindSerialNumberAsync(UnbindSerialNumberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UnbindSerialNumberWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from the associated Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindSmartAccessGatewayResponse
+        /// </returns>
         public UnbindSmartAccessGatewayResponse UnbindSmartAccessGatewayWithOptions(UnbindSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22268,6 +32255,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UnbindSmartAccessGatewayResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from the associated Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindSmartAccessGatewayResponse
+        /// </returns>
         public async Task<UnbindSmartAccessGatewayResponse> UnbindSmartAccessGatewayWithOptionsAsync(UnbindSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22323,18 +32325,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UnbindSmartAccessGatewayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from the associated Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindSmartAccessGatewayResponse
+        /// </returns>
         public UnbindSmartAccessGatewayResponse UnbindSmartAccessGateway(UnbindSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnbindSmartAccessGatewayWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from the associated Cloud Connect Network (CCN) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindSmartAccessGatewayResponse
+        /// </returns>
         public async Task<UnbindSmartAccessGatewayResponse> UnbindSmartAccessGatewayAsync(UnbindSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UnbindSmartAccessGatewayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a virtual border router (VBR).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindVbrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindVbrResponse
+        /// </returns>
         public UnbindVbrResponse UnbindVbrWithOptions(UnbindVbrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22394,6 +32435,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UnbindVbrResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a virtual border router (VBR).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindVbrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindVbrResponse
+        /// </returns>
         public async Task<UnbindVbrResponse> UnbindVbrWithOptionsAsync(UnbindVbrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22453,18 +32509,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UnbindVbrResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a virtual border router (VBR).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindVbrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindVbrResponse
+        /// </returns>
         public UnbindVbrResponse UnbindVbr(UnbindVbrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnbindVbrWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a virtual border router (VBR).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindVbrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindVbrResponse
+        /// </returns>
         public async Task<UnbindVbrResponse> UnbindVbrAsync(UnbindVbrRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UnbindVbrWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlocks a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnlockSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockSmartAccessGatewayResponse
+        /// </returns>
         public UnlockSmartAccessGatewayResponse UnlockSmartAccessGatewayWithOptions(UnlockSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22512,6 +32607,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UnlockSmartAccessGatewayResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlocks a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnlockSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockSmartAccessGatewayResponse
+        /// </returns>
         public async Task<UnlockSmartAccessGatewayResponse> UnlockSmartAccessGatewayWithOptionsAsync(UnlockSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22559,18 +32669,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UnlockSmartAccessGatewayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlocks a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnlockSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockSmartAccessGatewayResponse
+        /// </returns>
         public UnlockSmartAccessGatewayResponse UnlockSmartAccessGateway(UnlockSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnlockSmartAccessGatewayWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlocks a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnlockSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnlockSmartAccessGatewayResponse
+        /// </returns>
         public async Task<UnlockSmartAccessGatewayResponse> UnlockSmartAccessGatewayAsync(UnlockSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UnlockSmartAccessGatewayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the attributes of a specified enterprise code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEnterpriseCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEnterpriseCodeResponse
+        /// </returns>
         public UpdateEnterpriseCodeResponse UpdateEnterpriseCodeWithOptions(UpdateEnterpriseCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22610,6 +32759,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateEnterpriseCodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the attributes of a specified enterprise code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEnterpriseCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEnterpriseCodeResponse
+        /// </returns>
         public async Task<UpdateEnterpriseCodeResponse> UpdateEnterpriseCodeWithOptionsAsync(UpdateEnterpriseCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22649,18 +32813,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateEnterpriseCodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the attributes of a specified enterprise code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEnterpriseCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEnterpriseCodeResponse
+        /// </returns>
         public UpdateEnterpriseCodeResponse UpdateEnterpriseCode(UpdateEnterpriseCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateEnterpriseCodeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the attributes of a specified enterprise code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEnterpriseCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEnterpriseCodeResponse
+        /// </returns>
         public async Task<UpdateEnterpriseCodeResponse> UpdateEnterpriseCodeAsync(UpdateEnterpriseCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateEnterpriseCodeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a probe task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProbeTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProbeTaskResponse
+        /// </returns>
         public UpdateProbeTaskResponse UpdateProbeTaskWithOptions(UpdateProbeTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22728,6 +32931,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateProbeTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a probe task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProbeTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProbeTaskResponse
+        /// </returns>
         public async Task<UpdateProbeTaskResponse> UpdateProbeTaskWithOptionsAsync(UpdateProbeTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22795,18 +33013,63 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateProbeTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a probe task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProbeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProbeTaskResponse
+        /// </returns>
         public UpdateProbeTaskResponse UpdateProbeTask(UpdateProbeTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateProbeTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a probe task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProbeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProbeTaskResponse
+        /// </returns>
         public async Task<UpdateProbeTaskResponse> UpdateProbeTaskAsync(UpdateProbeTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateProbeTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches the access point of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Prerequisites</h2>
+        /// <para>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/183876.html">ListAccessPoints</a> operation to view the switchable access points of the SAG instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAGAccessPointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAGAccessPointResponse
+        /// </returns>
         public UpdateSmartAGAccessPointResponse UpdateSmartAGAccessPointWithOptions(UpdateSmartAGAccessPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22858,6 +33121,27 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAGAccessPointResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches the access point of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Prerequisites</h2>
+        /// <para>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/183876.html">ListAccessPoints</a> operation to view the switchable access points of the SAG instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAGAccessPointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAGAccessPointResponse
+        /// </returns>
         public async Task<UpdateSmartAGAccessPointResponse> UpdateSmartAGAccessPointWithOptionsAsync(UpdateSmartAGAccessPointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22909,18 +33193,69 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAGAccessPointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches the access point of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Prerequisites</h2>
+        /// <para>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/183876.html">ListAccessPoints</a> operation to view the switchable access points of the SAG instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAGAccessPointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAGAccessPointResponse
+        /// </returns>
         public UpdateSmartAGAccessPointResponse UpdateSmartAGAccessPoint(UpdateSmartAGAccessPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSmartAGAccessPointWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches the access point of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Prerequisites</h2>
+        /// <para>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/183876.html">ListAccessPoints</a> operation to view the switchable access points of the SAG instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAGAccessPointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAGAccessPointResponse
+        /// </returns>
         public async Task<UpdateSmartAGAccessPointResponse> UpdateSmartAGAccessPointAsync(UpdateSmartAGAccessPointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSmartAGAccessPointWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAGDpiAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAGDpiAttributeResponse
+        /// </returns>
         public UpdateSmartAGDpiAttributeResponse UpdateSmartAGDpiAttributeWithOptions(UpdateSmartAGDpiAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -22980,6 +33315,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAGDpiAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAGDpiAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAGDpiAttributeResponse
+        /// </returns>
         public async Task<UpdateSmartAGDpiAttributeResponse> UpdateSmartAGDpiAttributeWithOptionsAsync(UpdateSmartAGDpiAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23039,18 +33389,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAGDpiAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAGDpiAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAGDpiAttributeResponse
+        /// </returns>
         public UpdateSmartAGDpiAttributeResponse UpdateSmartAGDpiAttribute(UpdateSmartAGDpiAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSmartAGDpiAttributeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAGDpiAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAGDpiAttributeResponse
+        /// </returns>
         public async Task<UpdateSmartAGDpiAttributeResponse> UpdateSmartAGDpiAttributeAsync(UpdateSmartAGDpiAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSmartAGDpiAttributeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Smart Access Gateway (SAG) APP instance with another enterprise code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAGEnterpriseCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAGEnterpriseCodeResponse
+        /// </returns>
         public UpdateSmartAGEnterpriseCodeResponse UpdateSmartAGEnterpriseCodeWithOptions(UpdateSmartAGEnterpriseCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23090,6 +33479,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAGEnterpriseCodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Smart Access Gateway (SAG) APP instance with another enterprise code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAGEnterpriseCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAGEnterpriseCodeResponse
+        /// </returns>
         public async Task<UpdateSmartAGEnterpriseCodeResponse> UpdateSmartAGEnterpriseCodeWithOptionsAsync(UpdateSmartAGEnterpriseCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23129,18 +33533,67 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAGEnterpriseCodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Smart Access Gateway (SAG) APP instance with another enterprise code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAGEnterpriseCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAGEnterpriseCodeResponse
+        /// </returns>
         public UpdateSmartAGEnterpriseCodeResponse UpdateSmartAGEnterpriseCode(UpdateSmartAGEnterpriseCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSmartAGEnterpriseCodeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Smart Access Gateway (SAG) APP instance with another enterprise code.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAGEnterpriseCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAGEnterpriseCodeResponse
+        /// </returns>
         public async Task<UpdateSmartAGEnterpriseCodeResponse> UpdateSmartAGEnterpriseCodeAsync(UpdateSmartAGEnterpriseCodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSmartAGEnterpriseCodeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maximum bandwidth for application acceleration of client accounts on Smart Access Gateway (SAG) app.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you set a maximum bandwidth value for a client, take note of the following rules:</para>
+        /// <list type="bullet">
+        /// <item><description>The maximum bandwidth value of a client cannot exceed that of the SAG app instance to which the client belongs.</description></item>
+        /// <item><description>If you have not set maximum bandwidth values for clients that belong to an SAG app instance, and the maximum bandwidth value of the instance is less than 5 Mbit/s, for example, 4 Mbit/s, the maximum bandwidth value of each client that belongs to the SAG app instance is 4 Mbit/s by default.</description></item>
+        /// <item><description>If you have not set maximum bandwidth values for clients that belong to an SAG app instance, and the maximum bandwidth value of the instance is 5 Mbit/s or higher, the maximum bandwidth value of each client that belongs to the SAG app instance is 5 Mbit/s by default.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAGUserAccelerateConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAGUserAccelerateConfigResponse
+        /// </returns>
         public UpdateSmartAGUserAccelerateConfigResponse UpdateSmartAGUserAccelerateConfigWithOptions(UpdateSmartAGUserAccelerateConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23188,6 +33641,31 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAGUserAccelerateConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maximum bandwidth for application acceleration of client accounts on Smart Access Gateway (SAG) app.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you set a maximum bandwidth value for a client, take note of the following rules:</para>
+        /// <list type="bullet">
+        /// <item><description>The maximum bandwidth value of a client cannot exceed that of the SAG app instance to which the client belongs.</description></item>
+        /// <item><description>If you have not set maximum bandwidth values for clients that belong to an SAG app instance, and the maximum bandwidth value of the instance is less than 5 Mbit/s, for example, 4 Mbit/s, the maximum bandwidth value of each client that belongs to the SAG app instance is 4 Mbit/s by default.</description></item>
+        /// <item><description>If you have not set maximum bandwidth values for clients that belong to an SAG app instance, and the maximum bandwidth value of the instance is 5 Mbit/s or higher, the maximum bandwidth value of each client that belongs to the SAG app instance is 5 Mbit/s by default.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAGUserAccelerateConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAGUserAccelerateConfigResponse
+        /// </returns>
         public async Task<UpdateSmartAGUserAccelerateConfigResponse> UpdateSmartAGUserAccelerateConfigWithOptionsAsync(UpdateSmartAGUserAccelerateConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23235,18 +33713,82 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAGUserAccelerateConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maximum bandwidth for application acceleration of client accounts on Smart Access Gateway (SAG) app.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you set a maximum bandwidth value for a client, take note of the following rules:</para>
+        /// <list type="bullet">
+        /// <item><description>The maximum bandwidth value of a client cannot exceed that of the SAG app instance to which the client belongs.</description></item>
+        /// <item><description>If you have not set maximum bandwidth values for clients that belong to an SAG app instance, and the maximum bandwidth value of the instance is less than 5 Mbit/s, for example, 4 Mbit/s, the maximum bandwidth value of each client that belongs to the SAG app instance is 4 Mbit/s by default.</description></item>
+        /// <item><description>If you have not set maximum bandwidth values for clients that belong to an SAG app instance, and the maximum bandwidth value of the instance is 5 Mbit/s or higher, the maximum bandwidth value of each client that belongs to the SAG app instance is 5 Mbit/s by default.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAGUserAccelerateConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAGUserAccelerateConfigResponse
+        /// </returns>
         public UpdateSmartAGUserAccelerateConfigResponse UpdateSmartAGUserAccelerateConfig(UpdateSmartAGUserAccelerateConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSmartAGUserAccelerateConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maximum bandwidth for application acceleration of client accounts on Smart Access Gateway (SAG) app.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you set a maximum bandwidth value for a client, take note of the following rules:</para>
+        /// <list type="bullet">
+        /// <item><description>The maximum bandwidth value of a client cannot exceed that of the SAG app instance to which the client belongs.</description></item>
+        /// <item><description>If you have not set maximum bandwidth values for clients that belong to an SAG app instance, and the maximum bandwidth value of the instance is less than 5 Mbit/s, for example, 4 Mbit/s, the maximum bandwidth value of each client that belongs to the SAG app instance is 4 Mbit/s by default.</description></item>
+        /// <item><description>If you have not set maximum bandwidth values for clients that belong to an SAG app instance, and the maximum bandwidth value of the instance is 5 Mbit/s or higher, the maximum bandwidth value of each client that belongs to the SAG app instance is 5 Mbit/s by default.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAGUserAccelerateConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAGUserAccelerateConfigResponse
+        /// </returns>
         public async Task<UpdateSmartAGUserAccelerateConfigResponse> UpdateSmartAGUserAccelerateConfigAsync(UpdateSmartAGUserAccelerateConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSmartAGUserAccelerateConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the password that is used to log on to an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify passwords that are used to log on to only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayAdminPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayAdminPasswordResponse
+        /// </returns>
         public UpdateSmartAccessGatewayAdminPasswordResponse UpdateSmartAccessGatewayAdminPasswordWithOptions(UpdateSmartAccessGatewayAdminPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23294,6 +33836,26 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAccessGatewayAdminPasswordResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the password that is used to log on to an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify passwords that are used to log on to only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayAdminPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayAdminPasswordResponse
+        /// </returns>
         public async Task<UpdateSmartAccessGatewayAdminPasswordResponse> UpdateSmartAccessGatewayAdminPasswordWithOptionsAsync(UpdateSmartAccessGatewayAdminPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23341,18 +33903,72 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAccessGatewayAdminPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the password that is used to log on to an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify passwords that are used to log on to only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayAdminPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayAdminPasswordResponse
+        /// </returns>
         public UpdateSmartAccessGatewayAdminPasswordResponse UpdateSmartAccessGatewayAdminPassword(UpdateSmartAccessGatewayAdminPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSmartAccessGatewayAdminPasswordWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the password that is used to log on to an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify passwords that are used to log on to only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayAdminPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayAdminPasswordResponse
+        /// </returns>
         public async Task<UpdateSmartAccessGatewayAdminPasswordResponse> UpdateSmartAccessGatewayAdminPasswordAsync(UpdateSmartAccessGatewayAdminPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSmartAccessGatewayAdminPasswordWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the BGP configurations of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the BGP configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayBgpRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayBgpRouteResponse
+        /// </returns>
         public UpdateSmartAccessGatewayBgpRouteResponse UpdateSmartAccessGatewayBgpRouteWithOptions(UpdateSmartAccessGatewayBgpRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23412,6 +34028,26 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAccessGatewayBgpRouteResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the BGP configurations of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the BGP configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayBgpRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayBgpRouteResponse
+        /// </returns>
         public async Task<UpdateSmartAccessGatewayBgpRouteResponse> UpdateSmartAccessGatewayBgpRouteWithOptionsAsync(UpdateSmartAccessGatewayBgpRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23471,18 +34107,72 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAccessGatewayBgpRouteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the BGP configurations of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the BGP configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayBgpRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayBgpRouteResponse
+        /// </returns>
         public UpdateSmartAccessGatewayBgpRouteResponse UpdateSmartAccessGatewayBgpRoute(UpdateSmartAccessGatewayBgpRouteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSmartAccessGatewayBgpRouteWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the BGP configurations of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the BGP configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayBgpRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayBgpRouteResponse
+        /// </returns>
         public async Task<UpdateSmartAccessGatewayBgpRouteResponse> UpdateSmartAccessGatewayBgpRouteAsync(UpdateSmartAccessGatewayBgpRouteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSmartAccessGatewayBgpRouteWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the DNS configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the DNS configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayDnsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayDnsResponse
+        /// </returns>
         public UpdateSmartAccessGatewayDnsResponse UpdateSmartAccessGatewayDnsWithOptions(UpdateSmartAccessGatewayDnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23534,6 +34224,26 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAccessGatewayDnsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the DNS configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the DNS configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayDnsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayDnsResponse
+        /// </returns>
         public async Task<UpdateSmartAccessGatewayDnsResponse> UpdateSmartAccessGatewayDnsWithOptionsAsync(UpdateSmartAccessGatewayDnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23585,18 +34295,67 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAccessGatewayDnsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the DNS configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the DNS configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayDnsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayDnsResponse
+        /// </returns>
         public UpdateSmartAccessGatewayDnsResponse UpdateSmartAccessGatewayDns(UpdateSmartAccessGatewayDnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSmartAccessGatewayDnsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the DNS configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the DNS configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayDnsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayDnsResponse
+        /// </returns>
         public async Task<UpdateSmartAccessGatewayDnsResponse> UpdateSmartAccessGatewayDnsAsync(UpdateSmartAccessGatewayDnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSmartAccessGatewayDnsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the DNS forwarding configurations for a Smart Access Gateway (SAG) SCG5000 or SCG5000-5G instance. The version of the device must be 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayDnsForwardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayDnsForwardResponse
+        /// </returns>
         public UpdateSmartAccessGatewayDnsForwardResponse UpdateSmartAccessGatewayDnsForwardWithOptions(UpdateSmartAccessGatewayDnsForwardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23664,6 +34423,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAccessGatewayDnsForwardResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the DNS forwarding configurations for a Smart Access Gateway (SAG) SCG5000 or SCG5000-5G instance. The version of the device must be 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayDnsForwardRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayDnsForwardResponse
+        /// </returns>
         public async Task<UpdateSmartAccessGatewayDnsForwardResponse> UpdateSmartAccessGatewayDnsForwardWithOptionsAsync(UpdateSmartAccessGatewayDnsForwardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23731,18 +34505,62 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAccessGatewayDnsForwardResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the DNS forwarding configurations for a Smart Access Gateway (SAG) SCG5000 or SCG5000-5G instance. The version of the device must be 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayDnsForwardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayDnsForwardResponse
+        /// </returns>
         public UpdateSmartAccessGatewayDnsForwardResponse UpdateSmartAccessGatewayDnsForward(UpdateSmartAccessGatewayDnsForwardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSmartAccessGatewayDnsForwardWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the DNS forwarding configurations for a Smart Access Gateway (SAG) SCG5000 or SCG5000-5G instance. The version of the device must be 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayDnsForwardRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayDnsForwardResponse
+        /// </returns>
         public async Task<UpdateSmartAccessGatewayDnsForwardResponse> UpdateSmartAccessGatewayDnsForwardAsync(UpdateSmartAccessGatewayDnsForwardRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSmartAccessGatewayDnsForwardWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the global routing protocol of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the global routing protocol only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayGlobalRouteProtocolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayGlobalRouteProtocolResponse
+        /// </returns>
         public UpdateSmartAccessGatewayGlobalRouteProtocolResponse UpdateSmartAccessGatewayGlobalRouteProtocolWithOptions(UpdateSmartAccessGatewayGlobalRouteProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23790,6 +34608,26 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAccessGatewayGlobalRouteProtocolResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the global routing protocol of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the global routing protocol only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayGlobalRouteProtocolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayGlobalRouteProtocolResponse
+        /// </returns>
         public async Task<UpdateSmartAccessGatewayGlobalRouteProtocolResponse> UpdateSmartAccessGatewayGlobalRouteProtocolWithOptionsAsync(UpdateSmartAccessGatewayGlobalRouteProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23837,18 +34675,67 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAccessGatewayGlobalRouteProtocolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the global routing protocol of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the global routing protocol only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayGlobalRouteProtocolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayGlobalRouteProtocolResponse
+        /// </returns>
         public UpdateSmartAccessGatewayGlobalRouteProtocolResponse UpdateSmartAccessGatewayGlobalRouteProtocol(UpdateSmartAccessGatewayGlobalRouteProtocolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSmartAccessGatewayGlobalRouteProtocolWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the global routing protocol of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the global routing protocol only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayGlobalRouteProtocolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayGlobalRouteProtocolResponse
+        /// </returns>
         public async Task<UpdateSmartAccessGatewayGlobalRouteProtocolResponse> UpdateSmartAccessGatewayGlobalRouteProtocolAsync(UpdateSmartAccessGatewayGlobalRouteProtocolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSmartAccessGatewayGlobalRouteProtocolWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the OSPF configurations for an SAG SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayOspfRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayOspfRouteResponse
+        /// </returns>
         public UpdateSmartAccessGatewayOspfRouteResponse UpdateSmartAccessGatewayOspfRouteWithOptions(UpdateSmartAccessGatewayOspfRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -23944,6 +34831,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAccessGatewayOspfRouteResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the OSPF configurations for an SAG SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayOspfRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayOspfRouteResponse
+        /// </returns>
         public async Task<UpdateSmartAccessGatewayOspfRouteResponse> UpdateSmartAccessGatewayOspfRouteWithOptionsAsync(UpdateSmartAccessGatewayOspfRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24039,18 +34941,62 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAccessGatewayOspfRouteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the OSPF configurations for an SAG SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayOspfRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayOspfRouteResponse
+        /// </returns>
         public UpdateSmartAccessGatewayOspfRouteResponse UpdateSmartAccessGatewayOspfRoute(UpdateSmartAccessGatewayOspfRouteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSmartAccessGatewayOspfRouteWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the OSPF configurations for an SAG SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayOspfRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayOspfRouteResponse
+        /// </returns>
         public async Task<UpdateSmartAccessGatewayOspfRouteResponse> UpdateSmartAccessGatewayOspfRouteAsync(UpdateSmartAccessGatewayOspfRouteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSmartAccessGatewayOspfRouteWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the port protocol of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the port protocol only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayPortRouteProtocolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayPortRouteProtocolResponse
+        /// </returns>
         public UpdateSmartAccessGatewayPortRouteProtocolResponse UpdateSmartAccessGatewayPortRouteProtocolWithOptions(UpdateSmartAccessGatewayPortRouteProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24114,6 +35060,26 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAccessGatewayPortRouteProtocolResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the port protocol of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the port protocol only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayPortRouteProtocolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayPortRouteProtocolResponse
+        /// </returns>
         public async Task<UpdateSmartAccessGatewayPortRouteProtocolResponse> UpdateSmartAccessGatewayPortRouteProtocolWithOptionsAsync(UpdateSmartAccessGatewayPortRouteProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24177,18 +35143,67 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAccessGatewayPortRouteProtocolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the port protocol of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the port protocol only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayPortRouteProtocolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayPortRouteProtocolResponse
+        /// </returns>
         public UpdateSmartAccessGatewayPortRouteProtocolResponse UpdateSmartAccessGatewayPortRouteProtocol(UpdateSmartAccessGatewayPortRouteProtocolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSmartAccessGatewayPortRouteProtocolWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the port protocol of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the port protocol only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayPortRouteProtocolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayPortRouteProtocolResponse
+        /// </returns>
         public async Task<UpdateSmartAccessGatewayPortRouteProtocolResponse> UpdateSmartAccessGatewayPortRouteProtocolAsync(UpdateSmartAccessGatewayPortRouteProtocolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSmartAccessGatewayPortRouteProtocolWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades a SAG device to a later version.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayVersionResponse
+        /// </returns>
         public UpdateSmartAccessGatewayVersionResponse UpdateSmartAccessGatewayVersionWithOptions(UpdateSmartAccessGatewayVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24248,6 +35263,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAccessGatewayVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades a SAG device to a later version.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayVersionResponse
+        /// </returns>
         public async Task<UpdateSmartAccessGatewayVersionResponse> UpdateSmartAccessGatewayVersionWithOptionsAsync(UpdateSmartAccessGatewayVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24307,18 +35337,62 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAccessGatewayVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades a SAG device to a later version.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayVersionResponse
+        /// </returns>
         public UpdateSmartAccessGatewayVersionResponse UpdateSmartAccessGatewayVersion(UpdateSmartAccessGatewayVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSmartAccessGatewayVersionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades a SAG device to a later version.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayVersionResponse
+        /// </returns>
         public async Task<UpdateSmartAccessGatewayVersionResponse> UpdateSmartAccessGatewayVersionAsync(UpdateSmartAccessGatewayVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSmartAccessGatewayVersionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Source Network Address Translation (SNAT) configuration of the WAN port on an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the SNAT configuration of the WAN port only on SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayWanSnatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayWanSnatResponse
+        /// </returns>
         public UpdateSmartAccessGatewayWanSnatResponse UpdateSmartAccessGatewayWanSnatWithOptions(UpdateSmartAccessGatewayWanSnatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24366,6 +35440,26 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAccessGatewayWanSnatResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Source Network Address Translation (SNAT) configuration of the WAN port on an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the SNAT configuration of the WAN port only on SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayWanSnatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayWanSnatResponse
+        /// </returns>
         public async Task<UpdateSmartAccessGatewayWanSnatResponse> UpdateSmartAccessGatewayWanSnatWithOptionsAsync(UpdateSmartAccessGatewayWanSnatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24413,18 +35507,67 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpdateSmartAccessGatewayWanSnatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Source Network Address Translation (SNAT) configuration of the WAN port on an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the SNAT configuration of the WAN port only on SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayWanSnatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayWanSnatResponse
+        /// </returns>
         public UpdateSmartAccessGatewayWanSnatResponse UpdateSmartAccessGatewayWanSnat(UpdateSmartAccessGatewayWanSnatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSmartAccessGatewayWanSnatWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Source Network Address Translation (SNAT) configuration of the WAN port on an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can modify the SNAT configuration of the WAN port only on SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSmartAccessGatewayWanSnatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmartAccessGatewayWanSnatResponse
+        /// </returns>
         public async Task<UpdateSmartAccessGatewayWanSnatResponse> UpdateSmartAccessGatewayWanSnatAsync(UpdateSmartAccessGatewayWanSnatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSmartAccessGatewayWanSnatWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Increases the bandwidth of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeSmartAccessGatewayResponse
+        /// </returns>
         public UpgradeSmartAccessGatewayResponse UpgradeSmartAccessGatewayWithOptions(UpgradeSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24480,6 +35623,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpgradeSmartAccessGatewayResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Increases the bandwidth of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeSmartAccessGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeSmartAccessGatewayResponse
+        /// </returns>
         public async Task<UpgradeSmartAccessGatewayResponse> UpgradeSmartAccessGatewayWithOptionsAsync(UpgradeSmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24535,18 +35693,57 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpgradeSmartAccessGatewayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Increases the bandwidth of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeSmartAccessGatewayResponse
+        /// </returns>
         public UpgradeSmartAccessGatewayResponse UpgradeSmartAccessGateway(UpgradeSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeSmartAccessGatewayWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Increases the bandwidth of a Smart Access Gateway (SAG) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeSmartAccessGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeSmartAccessGatewayResponse
+        /// </returns>
         public async Task<UpgradeSmartAccessGatewayResponse> UpgradeSmartAccessGatewayAsync(UpgradeSmartAccessGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradeSmartAccessGatewayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Increases the maximum number of client accounts supported by a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeSmartAccessGatewaySoftwareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeSmartAccessGatewaySoftwareResponse
+        /// </returns>
         public UpgradeSmartAccessGatewaySoftwareResponse UpgradeSmartAccessGatewaySoftwareWithOptions(UpgradeSmartAccessGatewaySoftwareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24606,6 +35803,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpgradeSmartAccessGatewaySoftwareResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Increases the maximum number of client accounts supported by a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeSmartAccessGatewaySoftwareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeSmartAccessGatewaySoftwareResponse
+        /// </returns>
         public async Task<UpgradeSmartAccessGatewaySoftwareResponse> UpgradeSmartAccessGatewaySoftwareWithOptionsAsync(UpgradeSmartAccessGatewaySoftwareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24665,18 +35877,62 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<UpgradeSmartAccessGatewaySoftwareResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Increases the maximum number of client accounts supported by a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeSmartAccessGatewaySoftwareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeSmartAccessGatewaySoftwareResponse
+        /// </returns>
         public UpgradeSmartAccessGatewaySoftwareResponse UpgradeSmartAccessGatewaySoftware(UpgradeSmartAccessGatewaySoftwareRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeSmartAccessGatewaySoftwareWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Increases the maximum number of client accounts supported by a Smart Access Gateway (SAG) app instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeSmartAccessGatewaySoftwareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeSmartAccessGatewaySoftwareResponse
+        /// </returns>
         public async Task<UpgradeSmartAccessGatewaySoftwareResponse> UpgradeSmartAccessGatewaySoftwareAsync(UpgradeSmartAccessGatewaySoftwareRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradeSmartAccessGatewaySoftwareWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the BGP configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the BGP configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayBgpRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayBgpRouteResponse
+        /// </returns>
         public ViewSmartAccessGatewayBgpRouteResponse ViewSmartAccessGatewayBgpRouteWithOptions(ViewSmartAccessGatewayBgpRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24720,6 +35976,26 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ViewSmartAccessGatewayBgpRouteResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the BGP configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the BGP configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayBgpRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayBgpRouteResponse
+        /// </returns>
         public async Task<ViewSmartAccessGatewayBgpRouteResponse> ViewSmartAccessGatewayBgpRouteWithOptionsAsync(ViewSmartAccessGatewayBgpRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24763,18 +36039,72 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ViewSmartAccessGatewayBgpRouteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the BGP configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the BGP configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayBgpRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayBgpRouteResponse
+        /// </returns>
         public ViewSmartAccessGatewayBgpRouteResponse ViewSmartAccessGatewayBgpRoute(ViewSmartAccessGatewayBgpRouteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ViewSmartAccessGatewayBgpRouteWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the BGP configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the BGP configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayBgpRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayBgpRouteResponse
+        /// </returns>
         public async Task<ViewSmartAccessGatewayBgpRouteResponse> ViewSmartAccessGatewayBgpRouteAsync(ViewSmartAccessGatewayBgpRouteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ViewSmartAccessGatewayBgpRouteWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the DNS configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayDnsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayDnsResponse
+        /// </returns>
         public ViewSmartAccessGatewayDnsResponse ViewSmartAccessGatewayDnsWithOptions(ViewSmartAccessGatewayDnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24818,6 +36148,26 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ViewSmartAccessGatewayDnsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the DNS configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayDnsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayDnsResponse
+        /// </returns>
         public async Task<ViewSmartAccessGatewayDnsResponse> ViewSmartAccessGatewayDnsWithOptionsAsync(ViewSmartAccessGatewayDnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24861,18 +36211,67 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ViewSmartAccessGatewayDnsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the DNS configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayDnsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayDnsResponse
+        /// </returns>
         public ViewSmartAccessGatewayDnsResponse ViewSmartAccessGatewayDns(ViewSmartAccessGatewayDnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ViewSmartAccessGatewayDnsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the DNS configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayDnsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayDnsResponse
+        /// </returns>
         public async Task<ViewSmartAccessGatewayDnsResponse> ViewSmartAccessGatewayDnsAsync(ViewSmartAccessGatewayDnsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ViewSmartAccessGatewayDnsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS forwarding list of a Smart Access Gateway (SAG) SCG5000 or SCG5000-5G instance. The version of the device must be 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayDnsForwardsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayDnsForwardsResponse
+        /// </returns>
         public ViewSmartAccessGatewayDnsForwardsResponse ViewSmartAccessGatewayDnsForwardsWithOptions(ViewSmartAccessGatewayDnsForwardsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24908,6 +36307,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ViewSmartAccessGatewayDnsForwardsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS forwarding list of a Smart Access Gateway (SAG) SCG5000 or SCG5000-5G instance. The version of the device must be 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayDnsForwardsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayDnsForwardsResponse
+        /// </returns>
         public async Task<ViewSmartAccessGatewayDnsForwardsResponse> ViewSmartAccessGatewayDnsForwardsWithOptionsAsync(ViewSmartAccessGatewayDnsForwardsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24943,18 +36357,62 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ViewSmartAccessGatewayDnsForwardsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS forwarding list of a Smart Access Gateway (SAG) SCG5000 or SCG5000-5G instance. The version of the device must be 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayDnsForwardsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayDnsForwardsResponse
+        /// </returns>
         public ViewSmartAccessGatewayDnsForwardsResponse ViewSmartAccessGatewayDnsForwards(ViewSmartAccessGatewayDnsForwardsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ViewSmartAccessGatewayDnsForwardsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the DNS forwarding list of a Smart Access Gateway (SAG) SCG5000 or SCG5000-5G instance. The version of the device must be 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayDnsForwardsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayDnsForwardsResponse
+        /// </returns>
         public async Task<ViewSmartAccessGatewayDnsForwardsResponse> ViewSmartAccessGatewayDnsForwardsAsync(ViewSmartAccessGatewayDnsForwardsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ViewSmartAccessGatewayDnsForwardsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global routing protocol of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the global protocol only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayGlobalRouteProtocolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayGlobalRouteProtocolResponse
+        /// </returns>
         public ViewSmartAccessGatewayGlobalRouteProtocolResponse ViewSmartAccessGatewayGlobalRouteProtocolWithOptions(ViewSmartAccessGatewayGlobalRouteProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24998,6 +36456,26 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ViewSmartAccessGatewayGlobalRouteProtocolResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global routing protocol of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the global protocol only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayGlobalRouteProtocolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayGlobalRouteProtocolResponse
+        /// </returns>
         public async Task<ViewSmartAccessGatewayGlobalRouteProtocolResponse> ViewSmartAccessGatewayGlobalRouteProtocolWithOptionsAsync(ViewSmartAccessGatewayGlobalRouteProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25041,18 +36519,72 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ViewSmartAccessGatewayGlobalRouteProtocolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global routing protocol of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the global protocol only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayGlobalRouteProtocolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayGlobalRouteProtocolResponse
+        /// </returns>
         public ViewSmartAccessGatewayGlobalRouteProtocolResponse ViewSmartAccessGatewayGlobalRouteProtocol(ViewSmartAccessGatewayGlobalRouteProtocolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ViewSmartAccessGatewayGlobalRouteProtocolWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global routing protocol of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the global protocol only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayGlobalRouteProtocolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayGlobalRouteProtocolResponse
+        /// </returns>
         public async Task<ViewSmartAccessGatewayGlobalRouteProtocolResponse> ViewSmartAccessGatewayGlobalRouteProtocolAsync(ViewSmartAccessGatewayGlobalRouteProtocolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ViewSmartAccessGatewayGlobalRouteProtocolWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the BGP configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later and has OSPF enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the BGP configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later and have OSPF enabled.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayOspfRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayOspfRouteResponse
+        /// </returns>
         public ViewSmartAccessGatewayOspfRouteResponse ViewSmartAccessGatewayOspfRouteWithOptions(ViewSmartAccessGatewayOspfRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25096,6 +36628,26 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ViewSmartAccessGatewayOspfRouteResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the BGP configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later and has OSPF enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the BGP configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later and have OSPF enabled.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayOspfRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayOspfRouteResponse
+        /// </returns>
         public async Task<ViewSmartAccessGatewayOspfRouteResponse> ViewSmartAccessGatewayOspfRouteWithOptionsAsync(ViewSmartAccessGatewayOspfRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25139,18 +36691,67 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ViewSmartAccessGatewayOspfRouteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the BGP configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later and has OSPF enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the BGP configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later and have OSPF enabled.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayOspfRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayOspfRouteResponse
+        /// </returns>
         public ViewSmartAccessGatewayOspfRouteResponse ViewSmartAccessGatewayOspfRoute(ViewSmartAccessGatewayOspfRouteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ViewSmartAccessGatewayOspfRouteWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the BGP configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later and has OSPF enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the BGP configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later and have OSPF enabled.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayOspfRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayOspfRouteResponse
+        /// </returns>
         public async Task<ViewSmartAccessGatewayOspfRouteResponse> ViewSmartAccessGatewayOspfRouteAsync(ViewSmartAccessGatewayOspfRouteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ViewSmartAccessGatewayOspfRouteWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports that have routing protocols enabled on an SAG SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayPortRouteProtocolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayPortRouteProtocolResponse
+        /// </returns>
         public ViewSmartAccessGatewayPortRouteProtocolResponse ViewSmartAccessGatewayPortRouteProtocolWithOptions(ViewSmartAccessGatewayPortRouteProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25194,6 +36795,21 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ViewSmartAccessGatewayPortRouteProtocolResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports that have routing protocols enabled on an SAG SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayPortRouteProtocolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayPortRouteProtocolResponse
+        /// </returns>
         public async Task<ViewSmartAccessGatewayPortRouteProtocolResponse> ViewSmartAccessGatewayPortRouteProtocolWithOptionsAsync(ViewSmartAccessGatewayPortRouteProtocolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25237,18 +36853,62 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ViewSmartAccessGatewayPortRouteProtocolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports that have routing protocols enabled on an SAG SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayPortRouteProtocolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayPortRouteProtocolResponse
+        /// </returns>
         public ViewSmartAccessGatewayPortRouteProtocolResponse ViewSmartAccessGatewayPortRouteProtocol(ViewSmartAccessGatewayPortRouteProtocolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ViewSmartAccessGatewayPortRouteProtocolWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports that have routing protocols enabled on an SAG SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayPortRouteProtocolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayPortRouteProtocolResponse
+        /// </returns>
         public async Task<ViewSmartAccessGatewayPortRouteProtocolResponse> ViewSmartAccessGatewayPortRouteProtocolAsync(ViewSmartAccessGatewayPortRouteProtocolRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ViewSmartAccessGatewayPortRouteProtocolWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the route details about an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the route details only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayRoutesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayRoutesResponse
+        /// </returns>
         public ViewSmartAccessGatewayRoutesResponse ViewSmartAccessGatewayRoutesWithOptions(ViewSmartAccessGatewayRoutesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25292,6 +36952,26 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ViewSmartAccessGatewayRoutesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the route details about an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the route details only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayRoutesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayRoutesResponse
+        /// </returns>
         public async Task<ViewSmartAccessGatewayRoutesResponse> ViewSmartAccessGatewayRoutesWithOptionsAsync(ViewSmartAccessGatewayRoutesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25335,18 +37015,72 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ViewSmartAccessGatewayRoutesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the route details about an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the route details only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayRoutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayRoutesResponse
+        /// </returns>
         public ViewSmartAccessGatewayRoutesResponse ViewSmartAccessGatewayRoutes(ViewSmartAccessGatewayRoutesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ViewSmartAccessGatewayRoutesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the route details about an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the route details only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayRoutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayRoutesResponse
+        /// </returns>
         public async Task<ViewSmartAccessGatewayRoutesResponse> ViewSmartAccessGatewayRoutesAsync(ViewSmartAccessGatewayRoutesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ViewSmartAccessGatewayRoutesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Source Network Address Translation (SNAT) configuration of the WAN port on an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the SNAT configuration of the WAN port only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayWanSnatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayWanSnatResponse
+        /// </returns>
         public ViewSmartAccessGatewayWanSnatResponse ViewSmartAccessGatewayWanSnatWithOptions(ViewSmartAccessGatewayWanSnatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25390,6 +37124,26 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ViewSmartAccessGatewayWanSnatResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Source Network Address Translation (SNAT) configuration of the WAN port on an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the SNAT configuration of the WAN port only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayWanSnatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayWanSnatResponse
+        /// </returns>
         public async Task<ViewSmartAccessGatewayWanSnatResponse> ViewSmartAccessGatewayWanSnatWithOptionsAsync(ViewSmartAccessGatewayWanSnatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25433,12 +37187,46 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return TeaModel.ToObject<ViewSmartAccessGatewayWanSnatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Source Network Address Translation (SNAT) configuration of the WAN port on an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the SNAT configuration of the WAN port only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayWanSnatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayWanSnatResponse
+        /// </returns>
         public ViewSmartAccessGatewayWanSnatResponse ViewSmartAccessGatewayWanSnat(ViewSmartAccessGatewayWanSnatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ViewSmartAccessGatewayWanSnatWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Source Network Address Translation (SNAT) configuration of the WAN port on an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can query the SNAT configuration of the WAN port only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ViewSmartAccessGatewayWanSnatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ViewSmartAccessGatewayWanSnatResponse
+        /// </returns>
         public async Task<ViewSmartAccessGatewayWanSnatResponse> ViewSmartAccessGatewayWanSnatAsync(ViewSmartAccessGatewayWanSnatRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

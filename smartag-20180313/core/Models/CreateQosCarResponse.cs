@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class CreateQosCarResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public CreateQosCarResponseBody Body { get; set; }
 
     }

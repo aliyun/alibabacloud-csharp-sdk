@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                [NameInMap("NewAgw")]
+                [Validation(Required=false)]
+                public bool? NewAgw { get; set; }
+
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
@@ -64,6 +68,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 [NameInMap("SnatCidrBlock")]
                 [Validation(Required=false)]
                 public string SnatCidrBlock { get; set; }
+
+                [NameInMap("Subnet")]
+                [Validation(Required=false)]
+                public string Subnet { get; set; }
 
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -89,18 +97,42 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         }
 
+        /// <summary>
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3F2A0B80-D6D1-4764-8D77-38067DBBA345</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The total number of the CCN instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

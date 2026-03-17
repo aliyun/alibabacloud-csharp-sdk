@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class UpdateSmartAGDpiAttributeResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

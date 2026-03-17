@@ -9,6 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeRegionsRequest : TeaModel {
+        /// <summary>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh-CN</b> (default): Chinese</description></item>
+        /// <item><description><b>en-US</b>: English</description></item>
+        /// <item><description><b>ja</b>: Japanese</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }

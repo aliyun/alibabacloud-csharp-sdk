@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DeleteCloudConnectNetworkRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the CCN instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ccn-bxuau4ezctts2*****</para>
+        /// </summary>
         [NameInMap("CcnId")]
         [Validation(Required=false)]
         public string CcnId { get; set; }
@@ -21,6 +28,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the region where the CCN instance is deployed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
