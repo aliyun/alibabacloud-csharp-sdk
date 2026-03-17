@@ -38,7 +38,6 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
         /// <summary>
         /// <para>The IDs of the related instances. Separate multiple IDs with commas (,).</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze6mk259v322****,rm-2zef3b65430j0****</para>
@@ -55,9 +54,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("ReportLanguage")]
         [Validation(Required=false)]
         public string ReportLanguage { get; set; }
+
+        [NameInMap("ReportType")]
+        [Validation(Required=false)]
+        public string ReportType { get; set; }
 
         /// <summary>
         /// <para>The time when the inspection task is executed. Specify the time in the ISO 8601 standard in the HH:mm:ssZ format. The time must be in UTC. Default value: 02:00 AM.</para>

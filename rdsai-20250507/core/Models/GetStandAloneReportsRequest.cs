@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        [NameInMap("ReportType")]
+        [Validation(Required=false)]
+        public string ReportType { get; set; }
+
         /// <summary>
         /// <para>The task start time based on which the reports are filtered. If you do not specify this parameter, all reports are returned.</para>
         /// 

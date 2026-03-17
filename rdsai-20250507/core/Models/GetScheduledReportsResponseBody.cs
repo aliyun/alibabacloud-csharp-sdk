@@ -63,9 +63,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
             [NameInMap("ReportLanguage")]
             [Validation(Required=false)]
             public string ReportLanguage { get; set; }
+
+            [NameInMap("ReportType")]
+            [Validation(Required=false)]
+            public string ReportType { get; set; }
 
             /// <summary>
             /// <para>The start time of the inspection task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>

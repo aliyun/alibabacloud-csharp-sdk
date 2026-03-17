@@ -46,7 +46,6 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
         /// <summary>
         /// <para>The instances covered by the task. Separates multiple instance IDs with commas (,).</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze6mk259v322****,rm-2zef3b65430j0****</para>
@@ -55,9 +54,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("ReportLanguage")]
         [Validation(Required=false)]
         public string ReportLanguage { get; set; }
+
+        [NameInMap("ReportType")]
+        [Validation(Required=false)]
+        public string ReportType { get; set; }
 
         /// <summary>
         /// <para>The start time of the inspection task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. By default, the time range of the task is the latest 24 hours.</para>

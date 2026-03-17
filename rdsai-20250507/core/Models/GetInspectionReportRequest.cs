@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("ReportType")]
+        [Validation(Required=false)]
+        public string ReportType { get; set; }
+
         /// <summary>
         /// <para>The ID of the inspection report.</para>
         /// <para>This parameter is required.</para>
