@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         }
 
+        [NameInMap("ParentId")]
+        [Validation(Required=false)]
+        public string ParentId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>polardb</para>
@@ -94,6 +98,24 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [NameInMap("SessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }
+
+        [NameInMap("SubAgentCall")]
+        [Validation(Required=false)]
+        public List<GetYaoChiAgentResponseBodySubAgentCall> SubAgentCall { get; set; }
+        public class GetYaoChiAgentResponseBodySubAgentCall : TeaModel {
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("SubAgentId")]
+            [Validation(Required=false)]
+            public string SubAgentId { get; set; }
+
+            [NameInMap("SubAgentName")]
+            [Validation(Required=false)]
+            public string SubAgentName { get; set; }
+
+        }
 
         [NameInMap("UiFunctionCall")]
         [Validation(Required=false)]

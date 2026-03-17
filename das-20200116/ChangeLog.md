@@ -1,3 +1,8 @@
+2026-03-17 Version: 2.9.2
+- Update API GetYaoChiAgent: add response parameters Body.ParentId.
+- Update API GetYaoChiAgent: add response parameters Body.SubAgentCall.
+
+
 2026-03-12 Version: 2.9.1
 - Generated csharp 2020-01-16 for DAS.
 
