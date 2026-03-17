@@ -1,3 +1,9 @@
+2026-03-17 Version: 1.41.0
+- Support API SaveOrUpdateOssConfig.
+- Update API ListDatasetDocuments: add request parameters NextToken.
+- Update API ListDatasetDocuments: add response parameters Body.NextToken.
+
+
 2026-03-13 Version: 1.40.2
 - Update API AsyncCreateClipsTimeLine: add request parameters HighLightConfig.
 - Update API AsyncCreateClipsTimeLine: add request parameters RecommendAudio.

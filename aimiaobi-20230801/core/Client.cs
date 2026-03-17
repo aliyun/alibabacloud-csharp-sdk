@@ -15510,6 +15510,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["IncludeFields"] = request.IncludeFieldsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 body["PageNumber"] = request.PageNumber;
@@ -15665,6 +15669,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeFieldsShrink))
             {
                 body["IncludeFields"] = request.IncludeFieldsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -27659,6 +27667,142 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SaveMaterialDocumentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置oss访问参数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveOrUpdateOssConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveOrUpdateOssConfigResponse
+        /// </returns>
+        public SaveOrUpdateOssConfigResponse SaveOrUpdateOssConfigWithOptions(SaveOrUpdateOssConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                body["BucketName"] = request.BucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndPoint))
+            {
+                body["EndPoint"] = request.EndPoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveOrUpdateOssConfig",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveOrUpdateOssConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置oss访问参数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveOrUpdateOssConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveOrUpdateOssConfigResponse
+        /// </returns>
+        public async Task<SaveOrUpdateOssConfigResponse> SaveOrUpdateOssConfigWithOptionsAsync(SaveOrUpdateOssConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                body["BucketName"] = request.BucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndPoint))
+            {
+                body["EndPoint"] = request.EndPoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveOrUpdateOssConfig",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveOrUpdateOssConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置oss访问参数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveOrUpdateOssConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveOrUpdateOssConfigResponse
+        /// </returns>
+        public SaveOrUpdateOssConfigResponse SaveOrUpdateOssConfig(SaveOrUpdateOssConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SaveOrUpdateOssConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置oss访问参数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveOrUpdateOssConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveOrUpdateOssConfigResponse
+        /// </returns>
+        public async Task<SaveOrUpdateOssConfigResponse> SaveOrUpdateOssConfigAsync(SaveOrUpdateOssConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SaveOrUpdateOssConfigWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

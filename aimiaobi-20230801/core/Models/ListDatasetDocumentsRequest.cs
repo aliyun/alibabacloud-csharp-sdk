@@ -87,6 +87,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>xxx</para>
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
