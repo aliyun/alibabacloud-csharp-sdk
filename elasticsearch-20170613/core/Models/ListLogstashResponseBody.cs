@@ -95,6 +95,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>4928745600000</para>
+            /// </summary>
+            [NameInMap("endTime")]
+            [Validation(Required=false)]
+            public long? EndTime { get; set; }
+
+            /// <summary>
             /// <para>The tag value of the cloud disk.</para>
             /// 
             /// <b>Example:</b>

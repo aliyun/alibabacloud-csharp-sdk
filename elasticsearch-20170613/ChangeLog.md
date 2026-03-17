@@ -1,3 +1,8 @@
+2026-03-17 Version: 3.1.1
+- Update API DescribeLogstash: add response parameters Body.Result.endTime.
+- Update API ListLogstash: add response parameters Body.Result.$.endTime.
+
+
 2026-03-12 Version: 3.1.0
 - Support API GrayPublish.
 

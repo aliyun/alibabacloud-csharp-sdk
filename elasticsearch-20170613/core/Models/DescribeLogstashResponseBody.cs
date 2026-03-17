@@ -145,6 +145,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("endTime")]
+            [Validation(Required=false)]
+            public long? EndTime { get; set; }
+
             /// <summary>
             /// <para>The ID of the zone where the node resides.</para>
             /// </summary>
