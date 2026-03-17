@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public AddMediaConnectFlowInputResponseBodyContent Content { get; set; }
         public class AddMediaConnectFlowInputResponseBodyContent : TeaModel {
+            [NameInMap("InnerInputUrl")]
+            [Validation(Required=false)]
+            public string InnerInputUrl { get; set; }
+
             /// <summary>
             /// <para>The source URL.</para>
             /// 

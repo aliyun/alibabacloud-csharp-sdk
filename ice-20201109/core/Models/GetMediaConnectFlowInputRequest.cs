@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string FlowId { get; set; }
 
+        [NameInMap("WithInternalVip")]
+        [Validation(Required=false)]
+        public string WithInternalVip { get; set; }
+
     }
 
 }

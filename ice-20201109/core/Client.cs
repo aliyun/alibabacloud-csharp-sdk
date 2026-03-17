@@ -935,6 +935,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["SrtPbkeyLen"] = request.SrtPbkeyLen;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithInternalVip))
+            {
+                query["WithInternalVip"] = request.WithInternalVip;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1032,6 +1036,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrtPbkeyLen))
             {
                 query["SrtPbkeyLen"] = request.SrtPbkeyLen;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithInternalVip))
+            {
+                query["WithInternalVip"] = request.WithInternalVip;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9323,6 +9331,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["FileExt"] = request.FileExt;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                query["FileType"] = request.FileType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9364,6 +9376,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileExt))
             {
                 query["FileExt"] = request.FileExt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                query["FileType"] = request.FileType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -22846,6 +22862,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["FlowId"] = request.FlowId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithInternalVip))
+            {
+                query["WithInternalVip"] = request.WithInternalVip;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -22892,6 +22912,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowId))
             {
                 query["FlowId"] = request.FlowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithInternalVip))
+            {
+                query["WithInternalVip"] = request.WithInternalVip;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -27624,6 +27648,126 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetYikeAssetMediaInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻AI应用任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeStoryboardJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeStoryboardJobResponse
+        /// </returns>
+        public GetYikeStoryboardJobResponse GetYikeStoryboardJobWithOptions(GetYikeStoryboardJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetYikeStoryboardJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetYikeStoryboardJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻AI应用任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeStoryboardJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeStoryboardJobResponse
+        /// </returns>
+        public async Task<GetYikeStoryboardJobResponse> GetYikeStoryboardJobWithOptionsAsync(GetYikeStoryboardJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetYikeStoryboardJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetYikeStoryboardJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻AI应用任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeStoryboardJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeStoryboardJobResponse
+        /// </returns>
+        public GetYikeStoryboardJobResponse GetYikeStoryboardJob(GetYikeStoryboardJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetYikeStoryboardJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻AI应用任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeStoryboardJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeStoryboardJobResponse
+        /// </returns>
+        public async Task<GetYikeStoryboardJobResponse> GetYikeStoryboardJobAsync(GetYikeStoryboardJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetYikeStoryboardJobWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -54612,6 +54756,218 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitYikeAIAppJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一刻AI应用任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeStoryboardJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeStoryboardJobResponse
+        /// </returns>
+        public SubmitYikeStoryboardJobResponse SubmitYikeStoryboardJobWithOptions(SubmitYikeStoryboardJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AspectRatio))
+            {
+                query["AspectRatio"] = request.AspectRatio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelParams))
+            {
+                query["ModelParams"] = request.ModelParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NarrationVoiceId))
+            {
+                query["NarrationVoiceId"] = request.NarrationVoiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resolution))
+            {
+                query["Resolution"] = request.Resolution;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShotPromptMode))
+            {
+                query["ShotPromptMode"] = request.ShotPromptMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoModel))
+            {
+                query["VideoModel"] = request.VideoModel;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileURL))
+            {
+                body["FileURL"] = request.FileURL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShotSplitMode))
+            {
+                body["ShotSplitMode"] = request.ShotSplitMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                body["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StyleId))
+            {
+                body["StyleId"] = request.StyleId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitYikeStoryboardJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitYikeStoryboardJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一刻AI应用任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeStoryboardJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeStoryboardJobResponse
+        /// </returns>
+        public async Task<SubmitYikeStoryboardJobResponse> SubmitYikeStoryboardJobWithOptionsAsync(SubmitYikeStoryboardJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AspectRatio))
+            {
+                query["AspectRatio"] = request.AspectRatio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelParams))
+            {
+                query["ModelParams"] = request.ModelParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NarrationVoiceId))
+            {
+                query["NarrationVoiceId"] = request.NarrationVoiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resolution))
+            {
+                query["Resolution"] = request.Resolution;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShotPromptMode))
+            {
+                query["ShotPromptMode"] = request.ShotPromptMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoModel))
+            {
+                query["VideoModel"] = request.VideoModel;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileURL))
+            {
+                body["FileURL"] = request.FileURL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShotSplitMode))
+            {
+                body["ShotSplitMode"] = request.ShotSplitMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                body["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StyleId))
+            {
+                body["StyleId"] = request.StyleId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitYikeStoryboardJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitYikeStoryboardJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一刻AI应用任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeStoryboardJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeStoryboardJobResponse
+        /// </returns>
+        public SubmitYikeStoryboardJobResponse SubmitYikeStoryboardJob(SubmitYikeStoryboardJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitYikeStoryboardJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一刻AI应用任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeStoryboardJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeStoryboardJobResponse
+        /// </returns>
+        public async Task<SubmitYikeStoryboardJobResponse> SubmitYikeStoryboardJobAsync(SubmitYikeStoryboardJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitYikeStoryboardJobWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

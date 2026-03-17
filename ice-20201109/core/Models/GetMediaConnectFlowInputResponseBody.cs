@@ -24,6 +24,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string BackupCreateTime { get; set; }
 
+            [NameInMap("BackupInnerInputUrl")]
+            [Validation(Required=false)]
+            public string BackupInnerInputUrl { get; set; }
+
             [NameInMap("BackupInputName")]
             [Validation(Required=false)]
             public string BackupInputName { get; set; }
@@ -71,6 +75,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
+            [NameInMap("InnerInputUrl")]
+            [Validation(Required=false)]
+            public string InnerInputUrl { get; set; }
 
             /// <summary>
             /// <para>The source name.</para>

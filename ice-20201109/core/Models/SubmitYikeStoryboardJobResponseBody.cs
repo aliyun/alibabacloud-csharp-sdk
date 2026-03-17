@@ -8,24 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
-    public class CreateYikeAssetUploadRequest : TeaModel {
+    public class SubmitYikeStoryboardJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>mp4</para>
+        /// <para>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</para>
         /// </summary>
-        [NameInMap("FileExt")]
+        [NameInMap("JobId")]
         [Validation(Required=false)]
-        public string FileExt { get; set; }
+        public string JobId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>StoryboardInput</para>
+        /// <para><b><b><b>3B-0E1A-586A-AC29-742247</b></b></b></para>
         /// </summary>
-        [NameInMap("FileType")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string FileType { get; set; }
+        public string RequestId { get; set; }
 
     }
 

@@ -137,6 +137,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string SrtPbkeyLen { get; set; }
 
+        [NameInMap("WithInternalVip")]
+        [Validation(Required=false)]
+        public string WithInternalVip { get; set; }
+
     }
 
 }
