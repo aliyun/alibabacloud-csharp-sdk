@@ -125,6 +125,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [Validation(Required=false)]
                 public string SourceTypeName { get; set; }
 
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
             }
 
             [NameInMap("Next")]
