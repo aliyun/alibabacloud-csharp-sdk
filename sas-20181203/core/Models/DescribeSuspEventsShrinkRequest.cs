@@ -391,7 +391,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StrictMode { get; set; }
 
         /// <summary>
-        /// <para>告警支持的操作类型列表。</para>
+        /// <para>List of supported alarm operation types</para>
         /// </summary>
         [NameInMap("SupportOperateCodeList")]
         [Validation(Required=false)]

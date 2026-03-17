@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [Validation(Required=false)]
                 public string Module { get; set; }
 
+                [NameInMap("ModuleAuth")]
+                [Validation(Required=false)]
+                public bool? ModuleAuth { get; set; }
+
                 /// <summary>
                 /// <para>The display name of the module.</para>
                 /// 

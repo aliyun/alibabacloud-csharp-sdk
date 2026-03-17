@@ -1,3 +1,7 @@
+2026-03-17 Version: 9.0.2
+- Update API GetSupportedModules: add response parameters Body.SupportedModuleResponse.$.SupportedModules.$.ModuleAuth.
+
+
 2026-02-27 Version: 9.0.1
 - Update API DescribeSuspEvents: add request parameters DetectSource.
 - Update API DescribeSuspEvents: add response parameters Body.SuspEvents.$.DetectSource.

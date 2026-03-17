@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVersionConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that uses Security Center.</para>
+        /// <para>The Alibaba Cloud account ID using the Cloud Security Center service.   </para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/28681.html">GetUser</a> operation to query the IDs of Alibaba Cloud accounts.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/28681.html">GetUser</a> API to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>

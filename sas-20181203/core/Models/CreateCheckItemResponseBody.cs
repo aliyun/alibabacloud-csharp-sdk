@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public CreateCheckItemResponseBodyData Data { get; set; }
         public class CreateCheckItemResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>创建成功返回的检查项ID。</para>
+            /// <para>The ID of the inspection item returned upon successful creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100000000001</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListCheckPoliciesResponseBodyPageInfo PageInfo { get; set; }
         public class ListCheckPoliciesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>分页查询时，当前页显示的数据条数。</para>
+            /// <para>The number of data entries displayed on the current page when performing a paginated query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -126,13 +126,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PolicyType { get; set; }
 
             /// <summary>
-            /// <para>关联的策略大类的名称（PolicyType取值为STANDARD时为必填）：</para>
+            /// <para>Name of the associated major policy category (required when PolicyType is STANDARD): </para>
             /// <list type="bullet">
-            /// <item><description><b>AISPM</b>：AI配置管理（AI-SPM）</description></item>
-            /// <item><description><b>KISPM</b>：Kubernetes配置管理(KSPM)</description></item>
-            /// <item><description><b>IDENTITY_PERMISSION</b>：身份权限管理(CIEM)</description></item>
-            /// <item><description><b>RISK</b>：安全风险</description></item>
-            /// <item><description><b>COMPLIANCE</b>：合规风险</description></item>
+            /// <item><description><b>AISPM</b>: AI Configuration Management (AI-SPM) </description></item>
+            /// <item><description><b>KISPM</b>: Kubernetes Configuration Management (KSPM) </description></item>
+            /// <item><description><b>IDENTITY_PERMISSION</b>: Identity and Permission Management (CIEM)</description></item>
+            /// <item><description><b>RISK</b>: Security Risk</description></item>
+            /// <item><description><b>COMPLIANCE</b>: Compliance Risk</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

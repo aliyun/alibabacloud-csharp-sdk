@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string SectionShowName { get; set; }
 
                 /// <summary>
-                /// <para>检查项的标准ID。</para>
+                /// <para>Standard ID of the inspection item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000000001</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>自定义检查项定义规则。</para>
+            /// <para>Define rules for custom inspection items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;AssociatedData&quot;:{&quot;ToDataList&quot;:[{&quot;DataName&quot;:&quot;ACS_ECS_Instance&quot;,&quot;PropertyPath&quot;:&quot;InstanceId&quot;,&quot;FromPropertyPath&quot;:&quot;InstanceId&quot;}]},&quot;MatchProperty&quot;:{&quot;Operator&quot;:&quot;AND&quot;,&quot;MatchProperties&quot;:[{&quot;DataName&quot;:&quot;ACS_ECS_Disk&quot;,&quot;PropertyPath&quot;:&quot;InstanceId&quot;,&quot;MatchOperator&quot;:&quot;EQ&quot;,&quot;MatchPropertyValue&quot;:&quot;testId&quot;},{&quot;DataName&quot;:&quot;ACS_ECS_Instance&quot;,&quot;PropertyPath&quot;:&quot;InstanceId&quot;,&quot;MatchOperator&quot;:&quot;EQ&quot;,&quot;MatchPropertyValue&quot;:&quot;testInstanceId&quot;}]}}</para>

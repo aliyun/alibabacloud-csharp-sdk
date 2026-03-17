@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAntiBruteForceRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>Set which page of the returned results to start displaying the query results. The default value is <b>1</b>, indicating that the display starts from the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the defense rule.</para>
+        /// <para>The ID of the anti-brute force rule.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeAntiBruteForceRules~~">DescribeAntiBruteForceRules</a> operation to query the IDs of defense rules.</para>
+        /// <para>You can obtain this parameter by calling the <a href="~~DescribeAntiBruteForceRules~~">DescribeAntiBruteForceRules</a> interface.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the rule.</para>
+        /// <para>The name of the brute force rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testName</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The maximum number of data entries displayed per page during a paginated query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>121.69.XX.XX</para>

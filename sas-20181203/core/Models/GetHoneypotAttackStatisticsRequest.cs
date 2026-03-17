@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetHoneypotAttackStatisticsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>Set the page number from which to start displaying the query results. The starting value is <b>1</b>. The default value is <b>1</b>, indicating that the display starts from the <b>1st</b> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end time. The value is a UNIX timestamp.</para>
+        /// <para>End time, in timestamp format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1675058931215</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTimeStamp { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>Sets the language type for requests and received messages, default is <b>zh</b>. Values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>zh</b>: Chinese </description></item>
         /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page. We recommend that you do not leave this parameter empty.</para>
+        /// <para>Specifies the maximum number of data entries displayed per page for paginated queries. The default number of entries displayed per page is 20. If the pagesize parameter is empty, 20 entries will be returned by default. It is recommended that the pagesize value should not be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The risk levels.</para>
+        /// <para>List of risk levels</para>
         /// </summary>
         [NameInMap("RiskLevelList")]
         [Validation(Required=false)]
         public List<string> RiskLevelList { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the attack.</para>
+        /// <para>Attacker\&quot;s IP</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SrcIp { get; set; }
 
         /// <summary>
-        /// <para>The start time. The value is a UNIX timestamp.</para>
+        /// <para>Start time, in timestamp format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1681624877761</para>
@@ -82,12 +82,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StartTimeStamp { get; set; }
 
         /// <summary>
-        /// <para>The type of the attack source statistics. Valid values:</para>
+        /// <para>The type of attack source statistics. Values:</para>
         /// <list type="bullet">
-        /// <item><description><b>TOP_ATTACKED_AGENT</b>: the top 5 probes that are attacked the most frequently</description></item>
-        /// <item><description><b>TOP_ATTACKED_IP</b>: the top 5 IP addresses that are attacked the most frequently</description></item>
-        /// <item><description><b>ATTACK_EVENT_TYPE</b>: the type of the intrusion event</description></item>
-        /// <item><description><b>ATTACK_HONEYPOT_TYPE</b>: the type of the attacked honeypot</description></item>
+        /// <item><description><b>TOP_ATTACKED_AGENT</b>: Top 5 most attacked probes. </description></item>
+        /// <item><description><b>TOP_ATTACKED_IP</b>: Top 5 most attacked IP addresses.</description></item>
+        /// <item><description><b>ATTACK_EVENT_TYPE</b>: Type of intrusion event. </description></item>
+        /// <item><description><b>ATTACK_HONEYPOT_TYPE</b>: Type of compromised honeypot.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

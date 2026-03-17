@@ -1097,7 +1097,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public ListMultiUserInstancesResponseBodySaleInstanceListVersionSummaryEcsCount EcsCount { get; set; }
                 public class ListMultiUserInstancesResponseBodySaleInstanceListVersionSummaryEcsCount : TeaModel {
                     /// <summary>
-                    /// <para>已分配已购授权台数。</para>
+                    /// <para>Number of purchased licenses allocated.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>

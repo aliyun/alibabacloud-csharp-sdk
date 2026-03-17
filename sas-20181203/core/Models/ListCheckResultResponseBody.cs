@@ -304,6 +304,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>CHECKING</b>: being checked</description></item>
             /// <item><description><b>NOT_CHECK</b>: not checked</description></item>
             /// <item><description><b>WHITELIST</b>: added to the whitelist</description></item>
+            /// <item><description><b>FAILED</b>: failed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

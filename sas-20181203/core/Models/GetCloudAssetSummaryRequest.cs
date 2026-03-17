@@ -17,110 +17,109 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<GetCloudAssetSummaryRequestCloudAssetTypes> CloudAssetTypes { get; set; }
         public class GetCloudAssetSummaryRequestCloudAssetTypes : TeaModel {
             /// <summary>
-            /// <para>云产品的子类型。
-            /// 资产的类型-子类型。取值：</para>
+            /// <para>Subtypes of cloud products. Asset type-subtype. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>：云服务器 ECS <list type="bullet">
-            /// <item><description><b>1</b>：磁盘（存储）</description></item>
-            /// <item><description><b>2</b>：安全组</description></item>
-            /// <item><description><b>100</b>：实例</description></item>
+            /// <item><description><b>0</b>: ECS (Elastic Compute Service)<list type="bullet">
+            /// <item><description><b>1</b>: Disk (Storage)</description></item>
+            /// <item><description><b>2</b>: Security Group</description></item>
+            /// <item><description><b>100</b>: Instance</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>1</b>：负载均衡<list type="bullet">
-            /// <item><description><b>0</b>：负载均衡</description></item>
-            /// <item><description><b>1</b>：应用型负载均衡</description></item>
+            /// <item><description><b>1</b>: Load Balancer <list type="bullet">
+            /// <item><description><b>0</b>: Load Balancer </description></item>
+            /// <item><description><b>1</b>: Application Load Balancer</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>3</b>：云数据库 RDS<list type="bullet">
-            /// <item><description><b>0</b>：实例</description></item>
+            /// <item><description><b>3</b>: ApsaraDB RDS <list type="bullet">
+            /// <item><description><b>0</b>: Instance</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>4</b>：云数据库 MongoDB 版<list type="bullet">
-            /// <item><description><b>0</b>：实例</description></item>
+            /// <item><description><b>4</b>: ApsaraDB for MongoDB <list type="bullet">
+            /// <item><description><b>0</b>: Instance</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>5</b>：云数据库 Tair（兼容 Redis）<list type="bullet">
-            /// <item><description><b>0</b>：实例</description></item>
+            /// <item><description><b>5</b>: ApsaraDB Tair (Redis Compatible) <list type="bullet">
+            /// <item><description><b>0</b>: Instance</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>6</b>：容器镜像服务<list type="bullet">
-            /// <item><description><b>1</b>：企业版</description></item>
-            /// <item><description><b>2</b>：个人版</description></item>
+            /// <item><description><b>6</b>: Container Registry <list type="bullet">
+            /// <item><description><b>1</b>: Enterprise Edition </description></item>
+            /// <item><description><b>2</b>: Personal Edition</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>8</b>：容器服务Kubernetes版<list type="bullet">
-            /// <item><description><b>0</b>：集群</description></item>
+            /// <item><description><b>8</b>: Container Service for Kubernetes <list type="bullet">
+            /// <item><description><b>0</b>: Cluster</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>9</b>：专有网络VPC<list type="bullet">
-            /// <item><description><b>0</b>：NAT网关</description></item>
-            /// <item><description><b>1</b>：EIP</description></item>
-            /// <item><description><b>2</b>：VPN</description></item>
-            /// <item><description><b>3</b>：FLOW_LOG</description></item>
+            /// <item><description><b>9</b>: Virtual Private Cloud (VPC) <list type="bullet">
+            /// <item><description><b>0</b>: NAT Gateway </description></item>
+            /// <item><description><b>1</b>: EIP (Elastic IP) </description></item>
+            /// <item><description><b>2</b>: VPN </description></item>
+            /// <item><description><b>3</b>: FLOW_LOG</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>11</b>：操作审计<list type="bullet">
-            /// <item><description><b>0</b>：跟踪</description></item>
+            /// <item><description><b>11</b>: ActionTrail <list type="bullet">
+            /// <item><description><b>0</b>: Trail</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>12</b>：CDN<list type="bullet">
-            /// <item><description><b>0</b>：实例</description></item>
+            /// <item><description><b>12</b>: CDN <list type="bullet">
+            /// <item><description><b>0</b>: Instance</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>13</b>：数字证书管理服务（原SSL证书）<list type="bullet">
-            /// <item><description><b>0</b>：证书</description></item>
+            /// <item><description><b>13</b>: Digital Certificate Management Service (formerly SSL Certificates) <list type="bullet">
+            /// <item><description><b>0</b>: Certificate</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>14</b>：云效<list type="bullet">
-            /// <item><description><b>0</b>：组织</description></item>
+            /// <item><description><b>14</b>: DevOps <list type="bullet">
+            /// <item><description><b>0</b>: Organization</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>16</b>：DDoS防护<list type="bullet">
-            /// <item><description><b>0</b>：实例</description></item>
+            /// <item><description><b>16</b>: DDoS Protection <list type="bullet">
+            /// <item><description><b>0</b>: Instance</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>17</b>：Web应用防火墙<list type="bullet">
-            /// <item><description><b>0</b>：域名</description></item>
+            /// <item><description><b>17</b>: Web Application Firewall <list type="bullet">
+            /// <item><description><b>0</b>: Domain</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>18</b>：对象存储<list type="bullet">
-            /// <item><description><b>0</b>：Bucket</description></item>
+            /// <item><description><b>18</b>: Object Storage <list type="bullet">
+            /// <item><description><b>0</b>: Bucket</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>19</b>：云原生关系型数据库 PolarDB<list type="bullet">
-            /// <item><description><b>0</b>：集群</description></item>
+            /// <item><description><b>19</b>: PolarDB (Cloud-Native Relational Database) <list type="bullet">
+            /// <item><description><b>0</b>: Cluster</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>20</b>：云数据库 PostgreSQL 版<list type="bullet">
-            /// <item><description><b>0</b>：实例</description></item>
+            /// <item><description><b>20</b>: ApsaraDB for PostgreSQL <list type="bullet">
+            /// <item><description><b>0</b>: Instance</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>21</b>：微服务引擎<list type="bullet">
-            /// <item><description><b>0</b>：集群</description></item>
+            /// <item><description><b>21</b>: Microservices Engine <list type="bullet">
+            /// <item><description><b>0</b>: Cluster</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>22</b>：文件存储NAS<list type="bullet">
-            /// <item><description><b>0</b>：文件系统</description></item>
+            /// <item><description><b>22</b>: File Storage NAS <list type="bullet">
+            /// <item><description><b>0</b>: File System</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>23</b>：数据安全中心<list type="bullet">
-            /// <item><description><b>0</b>：实例</description></item>
+            /// <item><description><b>23</b>: Data Security Center <list type="bullet">
+            /// <item><description><b>0</b>: Instance</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>24</b>：弹性公网IP<list type="bullet">
-            /// <item><description><b>0</b>：任播弹性公网IP</description></item>
+            /// <item><description><b>24</b>: Elastic Public IP <list type="bullet">
+            /// <item><description><b>0</b>: Anycast Elastic Public IP</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>25</b>：云身份服务-EIAM<list type="bullet">
-            /// <item><description><b>0</b>：实例</description></item>
+            /// <item><description><b>25</b>: Cloud Identity Service - EIAM <list type="bullet">
+            /// <item><description><b>0</b>: Instance</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>26</b>：PolarDB-X<list type="bullet">
-            /// <item><description><b>0</b>：实例</description></item>
+            /// <item><description><b>26</b>: PolarDB-X <list type="bullet">
+            /// <item><description><b>0</b>: Instance</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>27</b>：Elasticsearch<list type="bullet">
-            /// <item><description><b>0</b>：实例</description></item>
+            /// <item><description><b>27</b>: Elasticsearch <list type="bullet">
+            /// <item><description><b>0</b>: Instance</description></item>
             /// </list>
             /// </description></item>
             /// </list>

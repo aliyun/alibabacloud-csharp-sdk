@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<ListCheckItemWarningMachineResponseBodyList> List { get; set; }
         public class ListCheckItemWarningMachineResponseBodyList : TeaModel {
             /// <summary>
-            /// <para>云产品资产的类型。</para>
+            /// <para>Type of cloud product assets</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
