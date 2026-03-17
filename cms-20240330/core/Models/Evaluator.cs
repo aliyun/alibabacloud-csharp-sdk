@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Config { get; set; }
 
-        [NameInMap("dataScope")]
-        [Validation(Required=false)]
-        public string DataScope { get; set; }
-
         [NameInMap("filters")]
         [Validation(Required=false)]
         public Dictionary<string, string> Filters { get; set; }

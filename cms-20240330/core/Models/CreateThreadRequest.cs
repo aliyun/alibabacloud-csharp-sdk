@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateThreadRequest : TeaModel {
+        [NameInMap("attributes")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Attributes { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>test</para>

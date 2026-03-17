@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public List<ListThreadsResponseBodyThreads> Threads { get; set; }
         public class ListThreadsResponseBodyThreads : TeaModel {
+            [NameInMap("attributes")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> Attributes { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2025-04-22T12:46:34Z</para>

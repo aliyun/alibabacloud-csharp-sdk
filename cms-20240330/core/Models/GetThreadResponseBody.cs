@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetThreadResponseBody : TeaModel {
+        [NameInMap("attributes")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Attributes { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2025-12-19T15:19:55.040403272+08:00</para>
