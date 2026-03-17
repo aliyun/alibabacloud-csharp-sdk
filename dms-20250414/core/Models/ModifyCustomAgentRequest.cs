@@ -9,6 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ModifyCustomAgentRequest : TeaModel {
+        [NameInMap("CallbackConfig")]
+        [Validation(Required=false)]
+        public ModifyCustomAgentRequestCallbackConfig CallbackConfig { get; set; }
+        public class ModifyCustomAgentRequestCallbackConfig : TeaModel {
+            [NameInMap("CallbackArgs")]
+            [Validation(Required=false)]
+            public string CallbackArgs { get; set; }
+
+            [NameInMap("CallbackPrompt")]
+            [Validation(Required=false)]
+            public string CallbackPrompt { get; set; }
+
+            [NameInMap("CallbackTime")]
+            [Validation(Required=false)]
+            public int? CallbackTime { get; set; }
+
+            [NameInMap("ToolId")]
+            [Validation(Required=false)]
+            public string ToolId { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

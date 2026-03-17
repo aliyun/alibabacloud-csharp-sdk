@@ -1097,6 +1097,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateCustomAgentShrinkRequest request = new CreateCustomAgentShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallbackConfig))
+            {
+                request.CallbackConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallbackConfig, "CallbackConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExecutionConfig))
             {
                 request.ExecutionConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExecutionConfig, "ExecutionConfig", "json");
@@ -1110,6 +1114,10 @@ namespace AlibabaCloud.SDK.Dms20250414
                 request.ScheduleTaskConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleTaskConfig, "ScheduleTaskConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackConfigShrink))
+            {
+                query["CallbackConfig"] = request.CallbackConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
             {
                 query["DMSUnit"] = request.DMSUnit;
@@ -1197,6 +1205,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateCustomAgentShrinkRequest request = new CreateCustomAgentShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallbackConfig))
+            {
+                request.CallbackConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallbackConfig, "CallbackConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExecutionConfig))
             {
                 request.ExecutionConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExecutionConfig, "ExecutionConfig", "json");
@@ -1210,6 +1222,10 @@ namespace AlibabaCloud.SDK.Dms20250414
                 request.ScheduleTaskConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleTaskConfig, "ScheduleTaskConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackConfigShrink))
+            {
+                query["CallbackConfig"] = request.CallbackConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
             {
                 query["DMSUnit"] = request.DMSUnit;
@@ -8701,6 +8717,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyCustomAgentShrinkRequest request = new ModifyCustomAgentShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallbackConfig))
+            {
+                request.CallbackConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallbackConfig, "CallbackConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExecutionConfig))
             {
                 request.ExecutionConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExecutionConfig, "ExecutionConfig", "json");
@@ -8714,6 +8734,10 @@ namespace AlibabaCloud.SDK.Dms20250414
                 request.ScheduleTaskConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleTaskConfig, "ScheduleTaskConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackConfigShrink))
+            {
+                query["CallbackConfig"] = request.CallbackConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAgentId))
             {
                 query["CustomAgentId"] = request.CustomAgentId;
@@ -8805,6 +8829,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyCustomAgentShrinkRequest request = new ModifyCustomAgentShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallbackConfig))
+            {
+                request.CallbackConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallbackConfig, "CallbackConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExecutionConfig))
             {
                 request.ExecutionConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExecutionConfig, "ExecutionConfig", "json");
@@ -8818,6 +8846,10 @@ namespace AlibabaCloud.SDK.Dms20250414
                 request.ScheduleTaskConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleTaskConfig, "ScheduleTaskConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackConfigShrink))
+            {
+                query["CallbackConfig"] = request.CallbackConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAgentId))
             {
                 query["CustomAgentId"] = request.CustomAgentId;

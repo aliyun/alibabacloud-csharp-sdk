@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ModifyCustomAgentShrinkRequest : TeaModel {
+        [NameInMap("CallbackConfig")]
+        [Validation(Required=false)]
+        public string CallbackConfigShrink { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

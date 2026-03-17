@@ -33,6 +33,32 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [Validation(Required=false)]
                 public string AliyunUid { get; set; }
 
+                [NameInMap("CallbackConfig")]
+                [Validation(Required=false)]
+                public ListCustomAgentResponseBodyDataContentCallbackConfig CallbackConfig { get; set; }
+                public class ListCustomAgentResponseBodyDataContentCallbackConfig : TeaModel {
+                    [NameInMap("CallbackArgs")]
+                    [Validation(Required=false)]
+                    public string CallbackArgs { get; set; }
+
+                    [NameInMap("CallbackPrompt")]
+                    [Validation(Required=false)]
+                    public string CallbackPrompt { get; set; }
+
+                    [NameInMap("CallbackTime")]
+                    [Validation(Required=false)]
+                    public int? CallbackTime { get; set; }
+
+                    [NameInMap("ToolId")]
+                    [Validation(Required=false)]
+                    public string ToolId { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>HaoY*****</para>
