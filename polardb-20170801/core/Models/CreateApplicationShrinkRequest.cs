@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateApplicationShrinkRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>pm-xxxxxx</para>
+        /// </summary>
+        [NameInMap("AIDBClusterId")]
+        [Validation(Required=false)]
+        public string AIDBClusterId { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,6 +88,46 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("MemApplicationSpec")]
         [Validation(Required=false)]
         public string MemApplicationSpecShrink { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>openai-completions</para>
+        /// </summary>
+        [NameInMap("ModelApi")]
+        [Validation(Required=false)]
+        public string ModelApi { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>sk-xxxxxx</para>
+        /// </summary>
+        [NameInMap("ModelApiKey")]
+        [Validation(Required=false)]
+        public string ModelApiKey { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></para>
+        /// </summary>
+        [NameInMap("ModelBaseUrl")]
+        [Validation(Required=false)]
+        public string ModelBaseUrl { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>bailian</para>
+        /// </summary>
+        [NameInMap("ModelFrom")]
+        [Validation(Required=false)]
+        public string ModelFrom { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>qwen3-max</para>
+        /// </summary>
+        [NameInMap("ModelName")]
+        [Validation(Required=false)]
+        public string ModelName { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

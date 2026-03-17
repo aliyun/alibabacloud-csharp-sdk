@@ -4236,6 +4236,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
                 request.MemApplicationSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MemApplicationSpec, "MemApplicationSpec", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIDBClusterId))
+            {
+                query["AIDBClusterId"] = request.AIDBClusterId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationType))
             {
                 query["ApplicationType"] = request.ApplicationType;
@@ -4279,6 +4283,26 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemApplicationSpecShrink))
             {
                 query["MemApplicationSpec"] = request.MemApplicationSpecShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelApi))
+            {
+                query["ModelApi"] = request.ModelApi;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelApiKey))
+            {
+                query["ModelApiKey"] = request.ModelApiKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelBaseUrl))
+            {
+                query["ModelBaseUrl"] = request.ModelBaseUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelFrom))
+            {
+                query["ModelFrom"] = request.ModelFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
+            {
+                query["ModelName"] = request.ModelName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {
@@ -4376,6 +4400,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
                 request.MemApplicationSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MemApplicationSpec, "MemApplicationSpec", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIDBClusterId))
+            {
+                query["AIDBClusterId"] = request.AIDBClusterId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationType))
             {
                 query["ApplicationType"] = request.ApplicationType;
@@ -4419,6 +4447,26 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemApplicationSpecShrink))
             {
                 query["MemApplicationSpec"] = request.MemApplicationSpecShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelApi))
+            {
+                query["ModelApi"] = request.ModelApi;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelApiKey))
+            {
+                query["ModelApiKey"] = request.ModelApiKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelBaseUrl))
+            {
+                query["ModelBaseUrl"] = request.ModelBaseUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelFrom))
+            {
+                query["ModelFrom"] = request.ModelFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
+            {
+                query["ModelName"] = request.ModelName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {
