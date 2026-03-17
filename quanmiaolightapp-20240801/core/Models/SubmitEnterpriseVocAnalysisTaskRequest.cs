@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [Validation(Required=false)]
         public string ApiKey { get; set; }
 
+        [NameInMap("batchTask")]
+        [Validation(Required=false)]
+        public bool? BatchTask { get; set; }
+
         [NameInMap("contents")]
         [Validation(Required=false)]
         public List<SubmitEnterpriseVocAnalysisTaskRequestContents> Contents { get; set; }
@@ -72,6 +76,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [NameInMap("outputFormat")]
         [Validation(Required=false)]
         public string OutputFormat { get; set; }
+
+        [NameInMap("positiveFilter")]
+        [Validation(Required=false)]
+        public bool? PositiveFilter { get; set; }
 
         [NameInMap("sourceTrace")]
         [Validation(Required=false)]

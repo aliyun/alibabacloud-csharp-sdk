@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [Validation(Required=false)]
         public string OutputFormat { get; set; }
 
+        [NameInMap("positiveFilter")]
+        [Validation(Required=false)]
+        public bool? PositiveFilter { get; set; }
+
         [NameInMap("sourceTrace")]
         [Validation(Required=false)]
         public bool? SourceTrace { get; set; }

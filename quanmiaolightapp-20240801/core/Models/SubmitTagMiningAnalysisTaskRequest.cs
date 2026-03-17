@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [Validation(Required=false)]
         public string ApiKey { get; set; }
 
+        [NameInMap("batchTask")]
+        [Validation(Required=false)]
+        public bool? BatchTask { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>clueMining</para>
