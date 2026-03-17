@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public class AddCustomAudienceUserRequestUsers : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>示例值示例值示例值</para>
+            /// <para><a href="mailto:a@test.com">a@test.com</a></para>
             /// </summary>
             [NameInMap("Email")]
             [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>示例值示例值示例值</para>
+            /// <para>86138***</para>
             /// </summary>
             [NameInMap("Phone")]
             [Validation(Required=false)]

@@ -10,18 +10,21 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetPermissionByCodeShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Authorize code information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>flow_001</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The space ID of the RAM user within the independent software vendor (ISV) account.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>393847477</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -31,6 +34,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The permissions.</para>
+        /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
         public string PermissionsShrink { get; set; }

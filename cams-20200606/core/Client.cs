@@ -18271,7 +18271,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListFlowNodeGroup</para>
+        /// <para>列举流程组件分组</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18329,7 +18329,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListFlowNodeGroup</para>
+        /// <para>列举流程组件分组</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18387,7 +18387,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListFlowNodeGroup</para>
+        /// <para>列举流程组件分组</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18405,7 +18405,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListFlowNodeGroup</para>
+        /// <para>列举流程组件分组</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24823,6 +24823,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 query["AdAccountId"] = request.AdAccountId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
             {
                 query["ChannelType"] = request.ChannelType;
@@ -25015,6 +25019,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdAccountId))
             {
                 query["AdAccountId"] = request.AdAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
             {

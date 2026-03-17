@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateFlowShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The categories of the Flow.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Categories")]
@@ -17,8 +18,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CategoriesShrink { get; set; }
 
         /// <summary>
+        /// <para>The space ID of the user within the independent software vendor (ISV) account.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>93994848</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -33,10 +36,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string EndpointUri { get; set; }
 
         /// <summary>
+        /// <para>The name of the Flow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>flow_001</para>
         /// </summary>
         [NameInMap("FlowName")]
         [Validation(Required=false)]

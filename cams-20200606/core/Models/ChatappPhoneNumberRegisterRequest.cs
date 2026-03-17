@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ChatappPhoneNumberRegisterRequest : TeaModel {
         /// <summary>
+        /// <para>The space ID of the user under the independent software vendor (ISV) account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>939283893939</para>
+        /// <para>939283893939***</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -24,10 +25,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8613800000000</para>
+        /// <para>8613800001234</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
