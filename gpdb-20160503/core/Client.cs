@@ -35540,6 +35540,134 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>暂停Supabase实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PauseSupabaseProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseSupabaseProjectResponse
+        /// </returns>
+        public PauseSupabaseProjectResponse PauseSupabaseProjectWithOptions(PauseSupabaseProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PauseSupabaseProject",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PauseSupabaseProjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停Supabase实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PauseSupabaseProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseSupabaseProjectResponse
+        /// </returns>
+        public async Task<PauseSupabaseProjectResponse> PauseSupabaseProjectWithOptionsAsync(PauseSupabaseProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PauseSupabaseProject",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PauseSupabaseProjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停Supabase实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PauseSupabaseProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseSupabaseProjectResponse
+        /// </returns>
+        public PauseSupabaseProjectResponse PauseSupabaseProject(PauseSupabaseProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PauseSupabaseProjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停Supabase实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PauseSupabaseProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseSupabaseProjectResponse
+        /// </returns>
+        public async Task<PauseSupabaseProjectResponse> PauseSupabaseProjectAsync(PauseSupabaseProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PauseSupabaseProjectWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Query Vector Data</para>
         /// </summary>
         /// 
@@ -37936,6 +38064,134 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResumeInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复Supabase实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeSupabaseProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeSupabaseProjectResponse
+        /// </returns>
+        public ResumeSupabaseProjectResponse ResumeSupabaseProjectWithOptions(ResumeSupabaseProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResumeSupabaseProject",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResumeSupabaseProjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复Supabase实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeSupabaseProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeSupabaseProjectResponse
+        /// </returns>
+        public async Task<ResumeSupabaseProjectResponse> ResumeSupabaseProjectWithOptionsAsync(ResumeSupabaseProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResumeSupabaseProject",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResumeSupabaseProjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复Supabase实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeSupabaseProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeSupabaseProjectResponse
+        /// </returns>
+        public ResumeSupabaseProjectResponse ResumeSupabaseProject(ResumeSupabaseProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ResumeSupabaseProjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复Supabase实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeSupabaseProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeSupabaseProjectResponse
+        /// </returns>
+        public async Task<ResumeSupabaseProjectResponse> ResumeSupabaseProjectAsync(ResumeSupabaseProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ResumeSupabaseProjectWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
