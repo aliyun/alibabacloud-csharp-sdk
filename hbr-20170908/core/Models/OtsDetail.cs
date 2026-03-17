@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class OtsDetail : TeaModel {
+        /// <summary>
+        /// <para>public</para>
+        /// </summary>
         [NameInMap("TableNames")]
         [Validation(Required=false)]
         public List<string> TableNames { get; set; }

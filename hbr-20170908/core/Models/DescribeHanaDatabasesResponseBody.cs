@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>The information about SAP HANA databases.</para>
-        /// </summary>
         [NameInMap("HanaDatabases")]
         [Validation(Required=false)]
         public DescribeHanaDatabasesResponseBodyHanaDatabases HanaDatabases { get; set; }
@@ -30,66 +27,26 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [Validation(Required=false)]
             public List<DescribeHanaDatabasesResponseBodyHanaDatabasesHanaDatabase> HanaDatabase { get; set; }
             public class DescribeHanaDatabasesResponseBodyHanaDatabasesHanaDatabase : TeaModel {
-                /// <summary>
-                /// <para>Indicates whether the database is started. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>YES</b>: The database is started.</description></item>
-                /// <item><description><b>NO</b>: The database is not started.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>YES</para>
-                /// </summary>
                 [NameInMap("ActiveStatus")]
                 [Validation(Required=false)]
                 public string ActiveStatus { get; set; }
 
-                /// <summary>
-                /// <para>The database name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>SYSTEMDB</para>
-                /// </summary>
                 [NameInMap("DatabaseName")]
                 [Validation(Required=false)]
                 public string DatabaseName { get; set; }
 
-                /// <summary>
-                /// <para>The detailed information.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>master</para>
-                /// </summary>
                 [NameInMap("Detail")]
                 [Validation(Required=false)]
                 public string Detail { get; set; }
 
-                /// <summary>
-                /// <para>The hostname.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>izbp1jbf3zy******antqmz</para>
-                /// </summary>
                 [NameInMap("Host")]
                 [Validation(Required=false)]
                 public string Host { get; set; }
 
-                /// <summary>
-                /// <para>The service name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>indexserver</para>
-                /// </summary>
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
                 public string ServiceName { get; set; }
 
-                /// <summary>
-                /// <para>The port number.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>30013</para>
-                /// </summary>
                 [NameInMap("SqlPort")]
                 [Validation(Required=false)]
                 public int? SqlPort { get; set; }

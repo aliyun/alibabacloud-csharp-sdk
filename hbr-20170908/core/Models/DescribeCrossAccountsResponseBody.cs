@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>The information about the accounts used in cross-account backup.</para>
-        /// </summary>
         [NameInMap("CrossAccounts")]
         [Validation(Required=false)]
         public DescribeCrossAccountsResponseBodyCrossAccounts CrossAccounts { get; set; }
@@ -30,32 +27,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [Validation(Required=false)]
             public List<DescribeCrossAccountsResponseBodyCrossAccountsCrossAccount> CrossAccount { get; set; }
             public class DescribeCrossAccountsResponseBodyCrossAccountsCrossAccount : TeaModel {
-                /// <summary>
-                /// <para>The account alias. The value can be up to 32 bits in length.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>content</para>
-                /// </summary>
                 [NameInMap("Alias")]
                 [Validation(Required=false)]
                 public string Alias { get; set; }
 
-                /// <summary>
-                /// <para>The time when the account was created. This value is a UNIX timestamp. Unit: seconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1654570439</para>
-                /// </summary>
                 [NameInMap("CreatedTime")]
                 [Validation(Required=false)]
                 public long? CreatedTime { get; set; }
 
-                /// <summary>
-                /// <para>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>BackupRole</para>
-                /// </summary>
                 [NameInMap("CrossAccountRoleName")]
                 [Validation(Required=false)]
                 public string CrossAccountRoleName { get; set; }
@@ -68,42 +47,18 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public string CrossAccountType { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>15897534xxxxx625</para>
-                /// </summary>
                 [NameInMap("CrossAccountUserId")]
                 [Validation(Required=false)]
                 public long? CrossAccountUserId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the backup type.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the current account.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>184164xxxxx49795</para>
-                /// </summary>
                 [NameInMap("OwnerId")]
                 [Validation(Required=false)]
                 public long? OwnerId { get; set; }
 
-                /// <summary>
-                /// <para>The time when the account information was updated. The value is a UNIX timestamp. Unit: seconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1640157098</para>
-                /// </summary>
                 [NameInMap("UpdatedTime")]
                 [Validation(Required=false)]
                 public long? UpdatedTime { get; set; }

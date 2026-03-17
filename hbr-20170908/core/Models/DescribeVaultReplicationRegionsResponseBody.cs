@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// <para>The regions that support cross-region replication.</para>
-        /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public DescribeVaultReplicationRegionsResponseBodyRegions Regions { get; set; }

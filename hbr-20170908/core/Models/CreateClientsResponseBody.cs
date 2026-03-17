@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>The status of the ECS instance. If you specify more than one instance IDs in the request and the status of an ECS instance does not meet the requirements to install an HBR client, an error message is returned based on the value of this parameter.</para>
-        /// </summary>
         [NameInMap("InstanceStatuses")]
         [Validation(Required=false)]
         public CreateClientsResponseBodyInstanceStatuses InstanceStatuses { get; set; }
@@ -30,26 +27,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [Validation(Required=false)]
             public List<CreateClientsResponseBodyInstanceStatusesInstanceStatus> InstanceStatus { get; set; }
             public class CreateClientsResponseBodyInstanceStatusesInstanceStatus : TeaModel {
-                /// <summary>
-                /// <para>The ID of the ECS instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>i-2zegp3cdu******uj9i</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether an HBR client can be installed on the ECS instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>true: An HBR client can be installed on the ECS instance.</description></item>
-                /// <item><description>false: An HBR client cannot be installed on the ECS instance.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("ValidInstance")]
                 [Validation(Required=false)]
                 public bool? ValidInstance { get; set; }

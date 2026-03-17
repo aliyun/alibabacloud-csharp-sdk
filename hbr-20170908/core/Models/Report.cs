@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class Report : TeaModel {
         /// <summary>
+        /// <para>The report path of failed files.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>temp/report/r-0000dnz7p4pk31u6madf_failed.csv</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string FailedFiles { get; set; }
 
         /// <summary>
+        /// <para>The report path of skipped files.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>temp/report/r-0000dnz7p4pk31u6madf_skipped.csv</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string SkippedFiles { get; set; }
 
         /// <summary>
+        /// <para>The report path of success files.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>temp/report/r-0000dnz7p4pk31u6madf_success.csv</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string SuccessFiles { get; set; }
 
         /// <summary>
+        /// <para>The report path of total files.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>temp/report/r-0000dnz7p4pk31u6madf_total.csv</para>
         /// </summary>
