@@ -38296,6 +38296,134 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>检查应用参数是否合法</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PrecheckYikeAIAppJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckYikeAIAppJobResponse
+        /// </returns>
+        public PrecheckYikeAIAppJobResponse PrecheckYikeAIAppJobWithOptions(PrecheckYikeAIAppJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppParams))
+            {
+                query["AppParams"] = request.AppParams;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PrecheckYikeAIAppJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PrecheckYikeAIAppJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查应用参数是否合法</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PrecheckYikeAIAppJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckYikeAIAppJobResponse
+        /// </returns>
+        public async Task<PrecheckYikeAIAppJobResponse> PrecheckYikeAIAppJobWithOptionsAsync(PrecheckYikeAIAppJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppParams))
+            {
+                query["AppParams"] = request.AppParams;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PrecheckYikeAIAppJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PrecheckYikeAIAppJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查应用参数是否合法</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PrecheckYikeAIAppJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckYikeAIAppJobResponse
+        /// </returns>
+        public PrecheckYikeAIAppJobResponse PrecheckYikeAIAppJob(PrecheckYikeAIAppJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PrecheckYikeAIAppJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查应用参数是否合法</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PrecheckYikeAIAppJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckYikeAIAppJobResponse
+        /// </returns>
+        public async Task<PrecheckYikeAIAppJobResponse> PrecheckYikeAIAppJobAsync(PrecheckYikeAIAppJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PrecheckYikeAIAppJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a job for extracting a copyright watermark.</para>
         /// </summary>
         /// 

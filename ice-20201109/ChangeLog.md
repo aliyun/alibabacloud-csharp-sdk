@@ -1,3 +1,7 @@
+2026-03-18 Version: 6.13.0
+- Support API PrecheckYikeAIAppJob.
+
+
 2026-03-18 Version: 6.12.1
 - Generated csharp 2020-11-09 for ICE.
 
