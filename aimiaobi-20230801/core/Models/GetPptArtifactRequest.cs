@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetPptArtifactRequest : TeaModel {
+        [NameInMap("ExternalUserId")]
+        [Validation(Required=false)]
+        public string ExternalUserId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>5232136</para>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class DeletePptArtifactRequest : TeaModel {
+        [NameInMap("ExternalUserId")]
+        [Validation(Required=false)]
+        public string ExternalUserId { get; set; }
+
         [NameInMap("PptArtifactId")]
         [Validation(Required=false)]
         public string PptArtifactId { get; set; }

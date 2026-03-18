@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class GetPptConfigRequest : TeaModel {
+        [NameInMap("ExternalUserId")]
+        [Validation(Required=false)]
+        public string ExternalUserId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>llm-az2gglkjauwnnhpq</para>

@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public int? ArtifactId { get; set; }
 
+        [NameInMap("ExternalUserId")]
+        [Validation(Required=false)]
+        public string ExternalUserId { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunPptOutlineGenerationRequest : TeaModel {
+        [NameInMap("ExternalUserId")]
+        [Validation(Required=false)]
+        public string ExternalUserId { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
