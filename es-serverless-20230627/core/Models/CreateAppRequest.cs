@@ -138,6 +138,18 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
             [Validation(Required=false)]
             public int? Cu { get; set; }
 
+            [NameInMap("elastic")]
+            [Validation(Required=false)]
+            public bool? Elastic { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
+            [NameInMap("minCu")]
+            [Validation(Required=false)]
+            public int? MinCu { get; set; }
+
             [NameInMap("storage")]
             [Validation(Required=false)]
             public int? Storage { get; set; }
