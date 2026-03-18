@@ -1507,6 +1507,162 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>拉取一个有效的OAuth认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FetchOAuthAuthenticationTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// FetchOAuthAuthenticationTokenHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FetchOAuthAuthenticationTokenResponse
+        /// </returns>
+        public FetchOAuthAuthenticationTokenResponse FetchOAuthAuthenticationTokenWithOptions(string instanceId, FetchOAuthAuthenticationTokenRequest request, FetchOAuthAuthenticationTokenHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderIdentifier))
+            {
+                body["credentialProviderIdentifier"] = request.CredentialProviderIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                body["scope"] = request.Scope;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FetchOAuthAuthenticationToken",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authenticationTokens/_/actions/fetchOAuthAccessToken",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FetchOAuthAuthenticationTokenResponse>(DoROARequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拉取一个有效的OAuth认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FetchOAuthAuthenticationTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// FetchOAuthAuthenticationTokenHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FetchOAuthAuthenticationTokenResponse
+        /// </returns>
+        public async Task<FetchOAuthAuthenticationTokenResponse> FetchOAuthAuthenticationTokenWithOptionsAsync(string instanceId, FetchOAuthAuthenticationTokenRequest request, FetchOAuthAuthenticationTokenHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderIdentifier))
+            {
+                body["credentialProviderIdentifier"] = request.CredentialProviderIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                body["scope"] = request.Scope;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FetchOAuthAuthenticationToken",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authenticationTokens/_/actions/fetchOAuthAccessToken",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FetchOAuthAuthenticationTokenResponse>(await DoROARequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拉取一个有效的OAuth认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FetchOAuthAuthenticationTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FetchOAuthAuthenticationTokenResponse
+        /// </returns>
+        public FetchOAuthAuthenticationTokenResponse FetchOAuthAuthenticationToken(string instanceId, FetchOAuthAuthenticationTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            FetchOAuthAuthenticationTokenHeaders headers = new FetchOAuthAuthenticationTokenHeaders();
+            return FetchOAuthAuthenticationTokenWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拉取一个有效的OAuth认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FetchOAuthAuthenticationTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FetchOAuthAuthenticationTokenResponse
+        /// </returns>
+        public async Task<FetchOAuthAuthenticationTokenResponse> FetchOAuthAuthenticationTokenAsync(string instanceId, FetchOAuthAuthenticationTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            FetchOAuthAuthenticationTokenHeaders headers = new FetchOAuthAuthenticationTokenHeaders();
+            return await FetchOAuthAuthenticationTokenWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Generates a device code.</para>
         /// </summary>
         /// 
@@ -1633,6 +1789,202 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GenerateDeviceCodeWithOptionsAsync(instanceId, applicationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成一个有效的JWT认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateJwtAuthenticationTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// GenerateJwtAuthenticationTokenHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateJwtAuthenticationTokenResponse
+        /// </returns>
+        public GenerateJwtAuthenticationTokenResponse GenerateJwtAuthenticationTokenWithOptions(string instanceId, GenerateJwtAuthenticationTokenRequest request, GenerateJwtAuthenticationTokenHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Audiences))
+            {
+                body["audiences"] = request.Audiences;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderIdentifier))
+            {
+                body["credentialProviderIdentifier"] = request.CredentialProviderIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomClaims))
+            {
+                body["customClaims"] = request.CustomClaims;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expiration))
+            {
+                body["expiration"] = request.Expiration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeDerivedShortToken))
+            {
+                body["includeDerivedShortToken"] = request.IncludeDerivedShortToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Issuer))
+            {
+                body["issuer"] = request.Issuer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Subject))
+            {
+                body["subject"] = request.Subject;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateJwtAuthenticationToken",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authenticationTokens/_/actions/generateJwt",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateJwtAuthenticationTokenResponse>(DoROARequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成一个有效的JWT认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateJwtAuthenticationTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// GenerateJwtAuthenticationTokenHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateJwtAuthenticationTokenResponse
+        /// </returns>
+        public async Task<GenerateJwtAuthenticationTokenResponse> GenerateJwtAuthenticationTokenWithOptionsAsync(string instanceId, GenerateJwtAuthenticationTokenRequest request, GenerateJwtAuthenticationTokenHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Audiences))
+            {
+                body["audiences"] = request.Audiences;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderIdentifier))
+            {
+                body["credentialProviderIdentifier"] = request.CredentialProviderIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomClaims))
+            {
+                body["customClaims"] = request.CustomClaims;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expiration))
+            {
+                body["expiration"] = request.Expiration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeDerivedShortToken))
+            {
+                body["includeDerivedShortToken"] = request.IncludeDerivedShortToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Issuer))
+            {
+                body["issuer"] = request.Issuer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Subject))
+            {
+                body["subject"] = request.Subject;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateJwtAuthenticationToken",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authenticationTokens/_/actions/generateJwt",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateJwtAuthenticationTokenResponse>(await DoROARequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成一个有效的JWT认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateJwtAuthenticationTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateJwtAuthenticationTokenResponse
+        /// </returns>
+        public GenerateJwtAuthenticationTokenResponse GenerateJwtAuthenticationToken(string instanceId, GenerateJwtAuthenticationTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GenerateJwtAuthenticationTokenHeaders headers = new GenerateJwtAuthenticationTokenHeaders();
+            return GenerateJwtAuthenticationTokenWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成一个有效的JWT认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateJwtAuthenticationTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateJwtAuthenticationTokenResponse
+        /// </returns>
+        public async Task<GenerateJwtAuthenticationTokenResponse> GenerateJwtAuthenticationTokenAsync(string instanceId, GenerateJwtAuthenticationTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GenerateJwtAuthenticationTokenHeaders headers = new GenerateJwtAuthenticationTokenHeaders();
+            return await GenerateJwtAuthenticationTokenWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3533,6 +3885,194 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>列举认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAuthenticationTokensRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListAuthenticationTokensHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAuthenticationTokensResponse
+        /// </returns>
+        public ListAuthenticationTokensResponse ListAuthenticationTokensWithOptions(string instanceId, ListAuthenticationTokensRequest request, ListAuthenticationTokensHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerId))
+            {
+                query["consumerId"] = request.ConsumerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderIdentifier))
+            {
+                query["credentialProviderIdentifier"] = request.CredentialProviderIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expired))
+            {
+                query["expired"] = request.Expired;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Revoked))
+            {
+                query["revoked"] = request.Revoked;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAuthenticationTokens",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authenticationTokens",
+                Method = "GET",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAuthenticationTokensResponse>(DoROARequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAuthenticationTokensRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListAuthenticationTokensHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAuthenticationTokensResponse
+        /// </returns>
+        public async Task<ListAuthenticationTokensResponse> ListAuthenticationTokensWithOptionsAsync(string instanceId, ListAuthenticationTokensRequest request, ListAuthenticationTokensHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerId))
+            {
+                query["consumerId"] = request.ConsumerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderIdentifier))
+            {
+                query["credentialProviderIdentifier"] = request.CredentialProviderIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expired))
+            {
+                query["expired"] = request.Expired;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Revoked))
+            {
+                query["revoked"] = request.Revoked;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAuthenticationTokens",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authenticationTokens",
+                Method = "GET",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAuthenticationTokensResponse>(await DoROARequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAuthenticationTokensRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAuthenticationTokensResponse
+        /// </returns>
+        public ListAuthenticationTokensResponse ListAuthenticationTokens(string instanceId, ListAuthenticationTokensRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ListAuthenticationTokensHeaders headers = new ListAuthenticationTokensHeaders();
+            return ListAuthenticationTokensWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAuthenticationTokensRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAuthenticationTokensResponse
+        /// </returns>
+        public async Task<ListAuthenticationTokensResponse> ListAuthenticationTokensAsync(string instanceId, ListAuthenticationTokensRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ListAuthenticationTokensHeaders headers = new ListAuthenticationTokensHeaders();
+            return await ListAuthenticationTokensWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries information about Employee Identity and Access Management (EIAM) groups by page.</para>
         /// </summary>
         /// 
@@ -4753,6 +5293,136 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>使用派生短令牌查询对应的JWT认证令牌详情。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ObtainJwtAuthenticationTokenByDerivedShortTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ObtainJwtAuthenticationTokenByDerivedShortTokenResponse
+        /// </returns>
+        public ObtainJwtAuthenticationTokenByDerivedShortTokenResponse ObtainJwtAuthenticationTokenByDerivedShortTokenWithOptions(string instanceId, ObtainJwtAuthenticationTokenByDerivedShortTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DerivedShortToken))
+            {
+                body["derivedShortToken"] = request.DerivedShortToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ObtainJwtAuthenticationTokenByDerivedShortToken",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authenticationTokens/_/actions/obtainJwtByDerivedShortToken",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ObtainJwtAuthenticationTokenByDerivedShortTokenResponse>(DoROARequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>使用派生短令牌查询对应的JWT认证令牌详情。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ObtainJwtAuthenticationTokenByDerivedShortTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ObtainJwtAuthenticationTokenByDerivedShortTokenResponse
+        /// </returns>
+        public async Task<ObtainJwtAuthenticationTokenByDerivedShortTokenResponse> ObtainJwtAuthenticationTokenByDerivedShortTokenWithOptionsAsync(string instanceId, ObtainJwtAuthenticationTokenByDerivedShortTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DerivedShortToken))
+            {
+                body["derivedShortToken"] = request.DerivedShortToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ObtainJwtAuthenticationTokenByDerivedShortToken",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authenticationTokens/_/actions/obtainJwtByDerivedShortToken",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ObtainJwtAuthenticationTokenByDerivedShortTokenResponse>(await DoROARequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>使用派生短令牌查询对应的JWT认证令牌详情。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ObtainJwtAuthenticationTokenByDerivedShortTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ObtainJwtAuthenticationTokenByDerivedShortTokenResponse
+        /// </returns>
+        public ObtainJwtAuthenticationTokenByDerivedShortTokenResponse ObtainJwtAuthenticationTokenByDerivedShortToken(string instanceId, ObtainJwtAuthenticationTokenByDerivedShortTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ObtainJwtAuthenticationTokenByDerivedShortTokenWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>使用派生短令牌查询对应的JWT认证令牌详情。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ObtainJwtAuthenticationTokenByDerivedShortTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ObtainJwtAuthenticationTokenByDerivedShortTokenResponse
+        /// </returns>
+        public async Task<ObtainJwtAuthenticationTokenByDerivedShortTokenResponse> ObtainJwtAuthenticationTokenByDerivedShortTokenAsync(string instanceId, ObtainJwtAuthenticationTokenByDerivedShortTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ObtainJwtAuthenticationTokenByDerivedShortTokenWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies information about an Employee Identity and Access Management (EIAM) group.</para>
         /// </summary>
         /// 
@@ -5301,6 +5971,318 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>恢复一个认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReinstateAuthenticationTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// ReinstateAuthenticationTokenHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReinstateAuthenticationTokenResponse
+        /// </returns>
+        public ReinstateAuthenticationTokenResponse ReinstateAuthenticationTokenWithOptions(string instanceId, ReinstateAuthenticationTokenRequest request, ReinstateAuthenticationTokenHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                body["token"] = request.Token;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenTypeHint))
+            {
+                body["token_type_hint"] = request.TokenTypeHint;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReinstateAuthenticationToken",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authenticationTokens/_/actions/reinstate",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<ReinstateAuthenticationTokenResponse>(DoROARequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复一个认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReinstateAuthenticationTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// ReinstateAuthenticationTokenHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReinstateAuthenticationTokenResponse
+        /// </returns>
+        public async Task<ReinstateAuthenticationTokenResponse> ReinstateAuthenticationTokenWithOptionsAsync(string instanceId, ReinstateAuthenticationTokenRequest request, ReinstateAuthenticationTokenHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                body["token"] = request.Token;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenTypeHint))
+            {
+                body["token_type_hint"] = request.TokenTypeHint;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReinstateAuthenticationToken",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authenticationTokens/_/actions/reinstate",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<ReinstateAuthenticationTokenResponse>(await DoROARequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复一个认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReinstateAuthenticationTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReinstateAuthenticationTokenResponse
+        /// </returns>
+        public ReinstateAuthenticationTokenResponse ReinstateAuthenticationToken(string instanceId, ReinstateAuthenticationTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ReinstateAuthenticationTokenHeaders headers = new ReinstateAuthenticationTokenHeaders();
+            return ReinstateAuthenticationTokenWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复一个认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReinstateAuthenticationTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReinstateAuthenticationTokenResponse
+        /// </returns>
+        public async Task<ReinstateAuthenticationTokenResponse> ReinstateAuthenticationTokenAsync(string instanceId, ReinstateAuthenticationTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ReinstateAuthenticationTokenHeaders headers = new ReinstateAuthenticationTokenHeaders();
+            return await ReinstateAuthenticationTokenWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>基于使用者吊销认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReinstateAuthenticationTokenByConsumerRequest
+        /// </param>
+        /// <param name="headers">
+        /// ReinstateAuthenticationTokenByConsumerHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReinstateAuthenticationTokenByConsumerResponse
+        /// </returns>
+        public ReinstateAuthenticationTokenByConsumerResponse ReinstateAuthenticationTokenByConsumerWithOptions(string instanceId, ReinstateAuthenticationTokenByConsumerRequest request, ReinstateAuthenticationTokenByConsumerHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerId))
+            {
+                body["consumerId"] = request.ConsumerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderIdentifier))
+            {
+                body["credentialProviderIdentifier"] = request.CredentialProviderIdentifier;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReinstateAuthenticationTokenByConsumer",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authenticationTokens/_/actions/reinstateByConsumer",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<ReinstateAuthenticationTokenByConsumerResponse>(DoROARequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>基于使用者吊销认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReinstateAuthenticationTokenByConsumerRequest
+        /// </param>
+        /// <param name="headers">
+        /// ReinstateAuthenticationTokenByConsumerHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReinstateAuthenticationTokenByConsumerResponse
+        /// </returns>
+        public async Task<ReinstateAuthenticationTokenByConsumerResponse> ReinstateAuthenticationTokenByConsumerWithOptionsAsync(string instanceId, ReinstateAuthenticationTokenByConsumerRequest request, ReinstateAuthenticationTokenByConsumerHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerId))
+            {
+                body["consumerId"] = request.ConsumerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderIdentifier))
+            {
+                body["credentialProviderIdentifier"] = request.CredentialProviderIdentifier;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReinstateAuthenticationTokenByConsumer",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authenticationTokens/_/actions/reinstateByConsumer",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<ReinstateAuthenticationTokenByConsumerResponse>(await DoROARequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>基于使用者吊销认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReinstateAuthenticationTokenByConsumerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReinstateAuthenticationTokenByConsumerResponse
+        /// </returns>
+        public ReinstateAuthenticationTokenByConsumerResponse ReinstateAuthenticationTokenByConsumer(string instanceId, ReinstateAuthenticationTokenByConsumerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ReinstateAuthenticationTokenByConsumerHeaders headers = new ReinstateAuthenticationTokenByConsumerHeaders();
+            return ReinstateAuthenticationTokenByConsumerWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>基于使用者吊销认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReinstateAuthenticationTokenByConsumerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReinstateAuthenticationTokenByConsumerResponse
+        /// </returns>
+        public async Task<ReinstateAuthenticationTokenByConsumerResponse> ReinstateAuthenticationTokenByConsumerAsync(string instanceId, ReinstateAuthenticationTokenByConsumerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ReinstateAuthenticationTokenByConsumerHeaders headers = new ReinstateAuthenticationTokenByConsumerHeaders();
+            return await ReinstateAuthenticationTokenByConsumerWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>将账户从多个组织移除【不支持移除主组织】</para>
         /// </summary>
         /// 
@@ -5593,6 +6575,318 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             RemoveUsersFromGroupHeaders headers = new RemoveUsersFromGroupHeaders();
             return await RemoveUsersFromGroupWithOptionsAsync(instanceId, applicationId, groupId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>吊销一个认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeAuthenticationTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// RevokeAuthenticationTokenHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeAuthenticationTokenResponse
+        /// </returns>
+        public RevokeAuthenticationTokenResponse RevokeAuthenticationTokenWithOptions(string instanceId, RevokeAuthenticationTokenRequest request, RevokeAuthenticationTokenHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                body["token"] = request.Token;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenTypeHint))
+            {
+                body["token_type_hint"] = request.TokenTypeHint;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeAuthenticationToken",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authenticationTokens/_/actions/revoke",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<RevokeAuthenticationTokenResponse>(DoROARequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>吊销一个认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeAuthenticationTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// RevokeAuthenticationTokenHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeAuthenticationTokenResponse
+        /// </returns>
+        public async Task<RevokeAuthenticationTokenResponse> RevokeAuthenticationTokenWithOptionsAsync(string instanceId, RevokeAuthenticationTokenRequest request, RevokeAuthenticationTokenHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                body["token"] = request.Token;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenTypeHint))
+            {
+                body["token_type_hint"] = request.TokenTypeHint;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeAuthenticationToken",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authenticationTokens/_/actions/revoke",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<RevokeAuthenticationTokenResponse>(await DoROARequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>吊销一个认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeAuthenticationTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeAuthenticationTokenResponse
+        /// </returns>
+        public RevokeAuthenticationTokenResponse RevokeAuthenticationToken(string instanceId, RevokeAuthenticationTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            RevokeAuthenticationTokenHeaders headers = new RevokeAuthenticationTokenHeaders();
+            return RevokeAuthenticationTokenWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>吊销一个认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeAuthenticationTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeAuthenticationTokenResponse
+        /// </returns>
+        public async Task<RevokeAuthenticationTokenResponse> RevokeAuthenticationTokenAsync(string instanceId, RevokeAuthenticationTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            RevokeAuthenticationTokenHeaders headers = new RevokeAuthenticationTokenHeaders();
+            return await RevokeAuthenticationTokenWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>基于使用者吊销认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeAuthenticationTokenByConsumerRequest
+        /// </param>
+        /// <param name="headers">
+        /// RevokeAuthenticationTokenByConsumerHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeAuthenticationTokenByConsumerResponse
+        /// </returns>
+        public RevokeAuthenticationTokenByConsumerResponse RevokeAuthenticationTokenByConsumerWithOptions(string instanceId, RevokeAuthenticationTokenByConsumerRequest request, RevokeAuthenticationTokenByConsumerHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerId))
+            {
+                body["consumerId"] = request.ConsumerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderIdentifier))
+            {
+                body["credentialProviderIdentifier"] = request.CredentialProviderIdentifier;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeAuthenticationTokenByConsumer",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authenticationTokens/_/actions/revokeByConsumer",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<RevokeAuthenticationTokenByConsumerResponse>(DoROARequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>基于使用者吊销认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeAuthenticationTokenByConsumerRequest
+        /// </param>
+        /// <param name="headers">
+        /// RevokeAuthenticationTokenByConsumerHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeAuthenticationTokenByConsumerResponse
+        /// </returns>
+        public async Task<RevokeAuthenticationTokenByConsumerResponse> RevokeAuthenticationTokenByConsumerWithOptionsAsync(string instanceId, RevokeAuthenticationTokenByConsumerRequest request, RevokeAuthenticationTokenByConsumerHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerId))
+            {
+                body["consumerId"] = request.ConsumerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderIdentifier))
+            {
+                body["credentialProviderIdentifier"] = request.CredentialProviderIdentifier;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeAuthenticationTokenByConsumer",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authenticationTokens/_/actions/revokeByConsumer",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<RevokeAuthenticationTokenByConsumerResponse>(await DoROARequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>基于使用者吊销认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeAuthenticationTokenByConsumerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeAuthenticationTokenByConsumerResponse
+        /// </returns>
+        public RevokeAuthenticationTokenByConsumerResponse RevokeAuthenticationTokenByConsumer(string instanceId, RevokeAuthenticationTokenByConsumerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            RevokeAuthenticationTokenByConsumerHeaders headers = new RevokeAuthenticationTokenByConsumerHeaders();
+            return RevokeAuthenticationTokenByConsumerWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>基于使用者吊销认证令牌。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeAuthenticationTokenByConsumerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeAuthenticationTokenByConsumerResponse
+        /// </returns>
+        public async Task<RevokeAuthenticationTokenByConsumerResponse> RevokeAuthenticationTokenByConsumerAsync(string instanceId, RevokeAuthenticationTokenByConsumerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            RevokeAuthenticationTokenByConsumerHeaders headers = new RevokeAuthenticationTokenByConsumerHeaders();
+            return await RevokeAuthenticationTokenByConsumerWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6043,6 +7337,144 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             UpdateUserPasswordHeaders headers = new UpdateUserPasswordHeaders();
             return await UpdateUserPasswordWithOptionsAsync(instanceId, applicationId, userId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验认证令牌是否有效。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateAuthenticationTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateAuthenticationTokenResponse
+        /// </returns>
+        public ValidateAuthenticationTokenResponse ValidateAuthenticationTokenWithOptions(string instanceId, ValidateAuthenticationTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                body["token"] = request.Token;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenTypeHint))
+            {
+                body["token_type_hint"] = request.TokenTypeHint;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidateAuthenticationToken",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authenticationTokens/_/actions/validate",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidateAuthenticationTokenResponse>(DoROARequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验认证令牌是否有效。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateAuthenticationTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateAuthenticationTokenResponse
+        /// </returns>
+        public async Task<ValidateAuthenticationTokenResponse> ValidateAuthenticationTokenWithOptionsAsync(string instanceId, ValidateAuthenticationTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                body["token"] = request.Token;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenTypeHint))
+            {
+                body["token_type_hint"] = request.TokenTypeHint;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidateAuthenticationToken",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/authenticationTokens/_/actions/validate",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidateAuthenticationTokenResponse>(await DoROARequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验认证令牌是否有效。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateAuthenticationTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateAuthenticationTokenResponse
+        /// </returns>
+        public ValidateAuthenticationTokenResponse ValidateAuthenticationToken(string instanceId, ValidateAuthenticationTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ValidateAuthenticationTokenWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验认证令牌是否有效。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateAuthenticationTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateAuthenticationTokenResponse
+        /// </returns>
+        public async Task<ValidateAuthenticationTokenResponse> ValidateAuthenticationTokenAsync(string instanceId, ValidateAuthenticationTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ValidateAuthenticationTokenWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
     }
