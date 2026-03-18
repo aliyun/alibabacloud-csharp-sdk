@@ -708,6 +708,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string RestartTimes { get; set; }
 
+        [NameInMap("RoleSystemEnvs")]
+        [Validation(Required=false)]
+        public Dictionary<string, Dictionary<string, object>> RoleSystemEnvs { get; set; }
+
         /// <summary>
         /// <para>The additional parameter configurations of the job.</para>
         /// </summary>

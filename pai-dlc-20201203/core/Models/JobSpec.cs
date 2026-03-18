@@ -94,6 +94,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public long? PodCount { get; set; }
 
+        [NameInMap("QuotaId")]
+        [Validation(Required=false)]
+        public string QuotaId { get; set; }
+
         /// <summary>
         /// <para>The resource configurations.</para>
         /// </summary>

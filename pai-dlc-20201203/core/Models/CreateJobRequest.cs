@@ -104,6 +104,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public List<CreateJobRequestDataSources> DataSources { get; set; }
         public class CreateJobRequestDataSources : TeaModel {
+            [NameInMap("AccessPointId")]
+            [Validation(Required=false)]
+            public string AccessPointId { get; set; }
+
             /// <summary>
             /// <para>The data source ID.</para>
             /// 
@@ -149,6 +153,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             [NameInMap("Options")]
             [Validation(Required=false)]
             public string Options { get; set; }
+
+            [NameInMap("RoleChain")]
+            [Validation(Required=false)]
+            public string RoleChain { get; set; }
 
             /// <summary>
             /// <para>The data source path.</para>
