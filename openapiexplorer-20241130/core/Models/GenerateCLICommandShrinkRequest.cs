@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
 {
     public class GenerateCLICommandShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable aggregation. If you enable this feature, the CLI automatically reads full data by page and aggregates the results.</para>
+        /// <para>Enable aggregation. If enabled, the CLI automatically reads full data using pagination and aggregates the results.</para>
         /// <remarks>
         /// <para>Warning: </para>
         /// </remarks>
-        /// <para>Only List operations that support paging can use this switch.</para>
+        /// <para>You can use this option only with List operations that support pagination.</para>
         /// <list type="bullet">
-        /// <item><description><para>true: enables aggregation.</para>
+        /// <item><description><para>true: Enable</para>
         /// </description></item>
-        /// <item><description><para>false: disables aggregation.</para>
+        /// <item><description><para>false: Disable</para>
         /// </description></item>
         /// </list>
         /// 
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
         public bool? AggregatePagination { get; set; }
 
         /// <summary>
-        /// <para>The name of the API.</para>
+        /// <para>API name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The request parameters.</para>
+        /// <para>Request parameters.</para>
         /// </summary>
         [NameInMap("apiParams")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
         public string ApiParamsShrink { get; set; }
 
         /// <summary>
-        /// <para>The version of the API.</para>
+        /// <para>API version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
         public string ApiVersion { get; set; }
 
         /// <summary>
-        /// <para>The request parameters for the API in JSON format. This parameter has a lower priority than \<c>apiParams\\</c>. If \<c>apiParams\\</c> is set, this parameter is ignored.</para>
+        /// <para>API input parameters in JSON format. This parameter has lower priority than apiParams. If you set apiParams, this parameter is ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -76,12 +76,11 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
         public string JsonApiParams { get; set; }
 
         /// <summary>
-        /// <para>The product code.</para>
+        /// <para>Product code.</para>
         /// <list type="bullet">
-        /// <item><description><para>Call the GetRequestLog operation to obtain the product code from the response.</para>
+        /// <item><description><para>Call the GetRequestLog operation and get the product code from the response.</para>
         /// </description></item>
-        /// <item><description><para>Find the product code in the URL of the product in OpenAPI Portal. For example, &lt;props=&quot;china&quot;&gt;the OpenAPI Portal URL for Short Message Service is https\://api.aliyun.com/product/Dysmsapi. The product code for Short Message Service is Dysmsapi.
-        /// &lt;props=&quot;intl&quot;&gt;the OpenAPI Portal URL for Short Message Service is https\://api.alibabacloud.com/product/Dysmsapi. The product code for Short Message Service is Dysmsapi.</para>
+        /// <item><description><para>Find the product code in the OpenAPI portal URL. For example, the OpenAPI portal URL for Short Message Service is https\://api.aliyun.com/product/Dysmsapi. The product code for Short Message Service is Dysmsapi. In international regions, the URL is https\://api.alibabacloud.com/product/Dysmsapi. The product code remains Dysmsapi.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -94,7 +93,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
         public string Product { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>Region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
 {
     public class GenerateCLICommandResponseBody : TeaModel {
         /// <summary>
-        /// <para>The CLI instruction.</para>
+        /// <para>CLI command.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun ecs DescribeRegions --ResourceType instance</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
         public string Cli { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A707AFA8-1A4C-5B2A-A165-8436C1EA38DB</para>
@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("unifiedCli")]
+        [Validation(Required=false)]
+        public string UnifiedCli { get; set; }
 
     }
 

@@ -570,7 +570,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates commands for the Alibaba Cloud command-line interface (CLI).</para>
+        /// <para>Generates an Alibaba Cloud CLI command dynamically.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -646,7 +646,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates commands for the Alibaba Cloud command-line interface (CLI).</para>
+        /// <para>Generates an Alibaba Cloud CLI command dynamically.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -722,7 +722,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates commands for the Alibaba Cloud command-line interface (CLI).</para>
+        /// <para>Generates an Alibaba Cloud CLI command dynamically.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -741,7 +741,7 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates commands for the Alibaba Cloud command-line interface (CLI).</para>
+        /// <para>Generates an Alibaba Cloud CLI command dynamically.</para>
         /// </summary>
         /// 
         /// <param name="request">
