@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListComputeQuotaPlanResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListComputeQuotaPlanResponseBodyData Data { get; set; }
         public class ListComputeQuotaPlanResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of quota plan.</para>
+            /// <para>The list of quota plans.</para>
             /// </summary>
             [NameInMap("planList")]
             [Validation(Required=false)]
             public List<ListComputeQuotaPlanResponseBodyDataPlanList> PlanList { get; set; }
             public class ListComputeQuotaPlanResponseBodyDataPlanList : TeaModel {
                 /// <summary>
-                /// <para>The time when the quota plan was created.</para>
+                /// <para>The time when the plan was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1731394621890</para>
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The details of the quota.</para>
+                /// <para>The quota properties.</para>
                 /// </summary>
                 [NameInMap("quota")]
                 [Validation(Required=false)]
                 public ListComputeQuotaPlanResponseBodyDataPlanListQuota Quota { get; set; }
                 public class ListComputeQuotaPlanResponseBodyDataPlanListQuota : TeaModel {
                     /// <summary>
-                    /// <para>Cluster ID.</para>
+                    /// <para>The cluster ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>AT-120N</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string Cluster { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the level-1 quota was created.</para>
+                    /// <para>The time when the quota was created.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1730247361356</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public long? CreateTime { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the Alibaba Cloud account that is used to create the resource.</para>
+                    /// <para>The creator of the resource. This is the UID of an Alibaba Cloud account.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>672863518</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string NickName { get; set; }
 
                     /// <summary>
-                    /// <para>The description of the level-1 quota.</para>
+                    /// <para>The quota configuration parameters.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     }
 
                     /// <summary>
-                    /// <para>Region ID.</para>
+                    /// <para>The region ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-beijing</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string RegionId { get; set; }
 
                     /// <summary>
-                    /// <para>Resource status.</para>
+                    /// <para>The resource status.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ON</para>
@@ -163,14 +163,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// <para>The list of subquotas.</para>
+                    /// <para>The list of level-2 quotas.</para>
                     /// </summary>
                     [NameInMap("subQuotaInfoList")]
                     [Validation(Required=false)]
                     public List<ListComputeQuotaPlanResponseBodyDataPlanListQuotaSubQuotaInfoList> SubQuotaInfoList { get; set; }
                     public class ListComputeQuotaPlanResponseBodyDataPlanListQuotaSubQuotaInfoList : TeaModel {
                         /// <summary>
-                        /// <para>Cluster ID.</para>
+                        /// <para>The cluster ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>AT-120N</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public string Cluster { get; set; }
 
                         /// <summary>
-                        /// <para>The creation time.</para>
+                        /// <para>The time when the quota was created.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1730946421757</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public long? CreateTime { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the Alibaba Cloud account that is used to create the resource.</para>
+                        /// <para>The creator of the resource. This is the UID of an Alibaba Cloud account.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>672863518</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public string NickName { get; set; }
 
                         /// <summary>
-                        /// <para>The description of the level-2 quota.</para>
+                        /// <para>The quota configuration parameters.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>{
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         }
 
                         /// <summary>
-                        /// <para>Region ID.</para>
+                        /// <para>The region ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>cn-beijing</para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public string RegionId { get; set; }
 
                         /// <summary>
-                        /// <para>Resource status.</para>
+                        /// <para>The resource status.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ON</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public string Status { get; set; }
 
                         /// <summary>
-                        /// <para>Tenant ID.</para>
+                        /// <para>The tenant ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>478403690625249</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public string TenantId { get; set; }
 
                         /// <summary>
-                        /// <para>The type of quota.</para>
+                        /// <para>The quota type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>FUXI_ONLINE</para>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     }
 
                     /// <summary>
-                    /// <para>Tenant ID.</para>
+                    /// <para>The tenant ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>478403690625249</para>
@@ -324,7 +324,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string TenantId { get; set; }
 
                     /// <summary>
-                    /// <para>The type of quota.</para>
+                    /// <para>This corresponds to the resourceSystemType field of the control cluster.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>FUXI_ONLINE</para>
@@ -334,7 +334,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The version number.</para>
+                    /// <para>The version.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2056</para>
@@ -370,14 +370,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
-        /// <list type="bullet">
-        /// <item><description>1xx: informational response. The request is received and is being processed.</description></item>
-        /// <item><description>2xx: success. The request is successfully received, understood, and accepted by the server.</description></item>
-        /// <item><description>3xx: redirection. The request is redirected, and further actions are required to complete the request.</description></item>
-        /// <item><description>4xx: client error. The request contains invalid request parameters or syntaxes, or specific request conditions cannot be met.</description></item>
-        /// <item><description>5xx: server error. The server cannot meet requirements due to other reasons.</description></item>
-        /// </list>
+        /// <para>The HTTP status code returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

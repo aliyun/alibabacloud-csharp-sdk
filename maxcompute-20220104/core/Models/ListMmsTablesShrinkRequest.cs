@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public ListMmsTablesShrinkRequestSorter Sorter { get; set; }
         public class ListMmsTablesShrinkRequestSorter : TeaModel {
             /// <summary>
+            /// <para>The sort order for lastDdlTime.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>desc</para>
             /// </summary>
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string LastDdlTime { get; set; }
 
             /// <summary>
+            /// <para>The sort order for the number of rows.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>desc</para>
             /// </summary>
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string NumRows { get; set; }
 
             /// <summary>
+            /// <para>The sort order for the data size.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>asc</para>
             /// </summary>
@@ -40,6 +46,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
+        /// <para>The ID of the database.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>197</para>
         /// </summary>
@@ -48,6 +56,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? DbId { get; set; }
 
         /// <summary>
+        /// <para>The name of the database.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mms_test</para>
         /// </summary>
@@ -56,6 +66,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string DbName { get; set; }
 
         /// <summary>
+        /// <para>The name of the destination MaxCompute table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -64,6 +76,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string DstName { get; set; }
 
         /// <summary>
+        /// <para>The name of the destination MaxCompute project.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mms_test</para>
         /// </summary>
@@ -72,6 +86,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string DstProjectName { get; set; }
 
         /// <summary>
+        /// <para>The name of the destination MaxCompute schema. This parameter is null if the destination MaxCompute project does not have a schema layer.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>
@@ -80,6 +96,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string DstSchemaName { get; set; }
 
         /// <summary>
+        /// <para>The partitioned table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -88,6 +106,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public bool? HasPartitions { get; set; }
 
         /// <summary>
+        /// <para>The end of the time range for lastDdlTime.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-12-19 15:44:42</para>
         /// </summary>
@@ -96,6 +116,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string LastDdlTimeEnd { get; set; }
 
         /// <summary>
+        /// <para>The start of the time range for lastDdlTime.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-12-17 15:44:42</para>
         /// </summary>
@@ -104,6 +126,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string LastDdlTimeStart { get; set; }
 
         /// <summary>
+        /// <para>The name of the table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -112,6 +136,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to return only the names of the tables.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -120,6 +146,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public bool? OnlyName { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -128,6 +156,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -135,11 +165,19 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The migration status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
         public string StatusShrink { get; set; }
 
         /// <summary>
+        /// <para>The table type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MANAGED_TABLE</para>
         /// </summary>

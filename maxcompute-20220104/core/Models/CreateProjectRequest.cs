@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class CreateProjectRequest : TeaModel {
-        /// <summary>
-        /// <para>The request body parameters.</para>
-        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public string Body { get; set; }

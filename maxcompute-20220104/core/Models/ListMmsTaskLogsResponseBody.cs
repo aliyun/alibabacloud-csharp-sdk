@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListMmsTaskLogsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of logs.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListMmsTaskLogsResponseBodyData> Data { get; set; }
         public class ListMmsTaskLogsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The operation performed by the migration task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>create schema if not exists mms_test.default;</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Action { get; set; }
 
             /// <summary>
+            /// <para>The time when the log was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-12-17 15:44:00</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The log ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10000</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The result of the migration task operation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ok</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Msg { get; set; }
 
             /// <summary>
+            /// <para>The data source ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2000015</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? SourceId { get; set; }
 
             /// <summary>
+            /// <para>The migration task status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>DATA_DOING</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The migration task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4023</para>
             /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A3AE5649-EF90-54BD-86D0-C632FA950988</para>
         /// </summary>

@@ -8,31 +8,31 @@ using Tea;
 
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
-    public class CreateMmsFetchMetadataJobResponseBody : TeaModel {
+    public class CreateQuotaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>Response parameters.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
-        public CreateMmsFetchMetadataJobResponseBodyData Data { get; set; }
-        public class CreateMmsFetchMetadataJobResponseBodyData : TeaModel {
+        public CreateQuotaResponseBodyData Data { get; set; }
+        public class CreateQuotaResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the asynchronous task that syncs metadata.</para>
+            /// <para>Quota alias.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1000002</para>
+            /// <para>os_PayAsYouGoQuota_p</para>
             /// </summary>
-            [NameInMap("scanId")]
+            [NameInMap("nickName")]
             [Validation(Required=false)]
-            public long? ScanId { get; set; }
+            public string NickName { get; set; }
 
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CC4D05E8-0613-5A8E-9339-A0EBD097A69E</para>
+        /// <para>0bc520ad17171208978521777d742c</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

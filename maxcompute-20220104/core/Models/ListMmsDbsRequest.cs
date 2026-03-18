@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListMmsDbsRequest : TeaModel {
         /// <summary>
+        /// <para>Data source name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>demo</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>Page number</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>Number of records per page</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>Sorting conditions</para>
+        /// </summary>
         [NameInMap("sorter")]
         [Validation(Required=false)]
         public ListMmsDbsRequestSorter Sorter { get; set; }
         public class ListMmsDbsRequestSorter : TeaModel {
             /// <summary>
+            /// <para>Number of data rows in the database</para>
+            /// 
             /// <b>Example:</b>
             /// <para>desc</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string NumRows { get; set; }
 
             /// <summary>
+            /// <para>Size of data in the database</para>
+            /// 
             /// <b>Example:</b>
             /// <para>asc</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Size { get; set; }
 
             /// <summary>
+            /// <para>Update time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-12-17 15:44:17</para>
             /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
+        /// <para>Data source status</para>
+        /// 
         /// <b>Example:</b>
         /// <para>STARTED</para>
         /// </summary>

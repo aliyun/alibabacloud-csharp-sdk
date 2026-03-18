@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListJobInfosRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to sort query results in ascending or descending order.</para>
+        /// <para>Specifies whether to sort the results in ascending or descending order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public bool? AscOrder { get; set; }
 
         /// <summary>
-        /// <para>The ancestor node IDs.</para>
+        /// <para>The upstream node ID.</para>
         /// </summary>
         [NameInMap("extNodeIdList")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public List<string> ExtNodeNameList { get; set; }
 
         /// <summary>
-        /// <para>The start timestamp.</para>
+        /// <para>The start UNIX timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,35 +42,35 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? From { get; set; }
 
         /// <summary>
-        /// <para>The job instance IDs.</para>
+        /// <para>The job instance ID.</para>
         /// </summary>
         [NameInMap("instanceIdList")]
         [Validation(Required=false)]
         public List<string> InstanceIdList { get; set; }
 
         /// <summary>
-        /// <para>The job owners.</para>
+        /// <para>The job owner.</para>
         /// </summary>
         [NameInMap("jobOwnerList")]
         [Validation(Required=false)]
         public List<string> JobOwnerList { get; set; }
 
         /// <summary>
-        /// <para>The job priorities.</para>
+        /// <para>The job priority.</para>
         /// </summary>
         [NameInMap("priorityList")]
         [Validation(Required=false)]
         public List<long?> PriorityList { get; set; }
 
         /// <summary>
-        /// <para>The project names.</para>
+        /// <para>The project name.</para>
         /// </summary>
         [NameInMap("projectList")]
         [Validation(Required=false)]
         public List<string> ProjectList { get; set; }
 
         /// <summary>
-        /// <para>The quota nickname.</para>
+        /// <para>The nickname of the quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quota_nickname</para>
@@ -80,35 +80,35 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string QuotaNickname { get; set; }
 
         /// <summary>
-        /// <para>The intelligent diagnostics tags.</para>
+        /// <para>The smart diagnosis tag.</para>
         /// </summary>
         [NameInMap("sceneTagList")]
         [Validation(Required=false)]
         public List<string> SceneTagList { get; set; }
 
         /// <summary>
-        /// <para>The job signatures.</para>
+        /// <para>The job signature.</para>
         /// </summary>
         [NameInMap("signatureList")]
         [Validation(Required=false)]
         public List<string> SignatureList { get; set; }
 
         /// <summary>
-        /// <para>The sorting columns.</para>
+        /// <para>The fields for multi-column sorting.</para>
         /// </summary>
         [NameInMap("sortByList")]
         [Validation(Required=false)]
         public List<string> SortByList { get; set; }
 
         /// <summary>
-        /// <para>The orders for the sorting columns.</para>
+        /// <para>The sort orders for multi-column sorting.</para>
         /// </summary>
         [NameInMap("sortOrderList")]
         [Validation(Required=false)]
         public List<string> SortOrderList { get; set; }
 
         /// <summary>
-        /// <para>The job states.</para>
+        /// <para>The job status.</para>
         /// </summary>
         [NameInMap("statusList")]
         [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public List<string> TaskNameList { get; set; }
 
         /// <summary>
-        /// <para>The end timestamp.</para>
+        /// <para>The end UNIX timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -130,14 +130,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? To { get; set; }
 
         /// <summary>
-        /// <para>The job types.</para>
+        /// <para>The job type.</para>
         /// </summary>
         [NameInMap("typeList")]
         [Validation(Required=false)]
         public List<string> TypeList { get; set; }
 
         /// <summary>
-        /// <para>The column based on which you want to sort query results.</para>
+        /// <para>The column to use for sorting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cuUsage</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

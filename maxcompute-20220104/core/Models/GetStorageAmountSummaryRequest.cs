@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetStorageAmountSummaryRequest : TeaModel {
         /// <summary>
+        /// <para>The date for which the statistics are collected. The statistics are collected on a daily basis. Specify the date in the YYYYMMDD format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20241205</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Date { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID. You can log on to the MaxCompute console and choose <b>Tenant Management</b> &gt; <b>Tenant Properties</b> in the navigation pane on the left to view the tenant ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>478403690625249</para>
         /// </summary>

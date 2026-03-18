@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public ListMmsTasksRequestSorter Sorter { get; set; }
         public class ListMmsTasksRequestSorter : TeaModel {
             /// <summary>
+            /// <para>Sorts tasks by start time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>desc</para>
             /// </summary>
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string StartTime { get; set; }
 
             /// <summary>
+            /// <para>Sorts tasks by status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>asc</para>
             /// </summary>
@@ -32,6 +36,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
+        /// <para>The destination MaxCompute project.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mms_test</para>
         /// </summary>
@@ -40,6 +46,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string DstDbName { get; set; }
 
         /// <summary>
+        /// <para>The destination MaxCompute table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_table_1</para>
         /// </summary>
@@ -48,6 +56,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string DstTableName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the migration job.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -56,6 +66,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? JobId { get; set; }
 
         /// <summary>
+        /// <para>The name of the job.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test1</para>
         /// </summary>
@@ -64,6 +76,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string JobName { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -72,6 +86,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -80,6 +96,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The partition value. This parameter is used to filter migration tasks by a specific partition value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>p1=1/p2=abc</para>
         /// </summary>
@@ -88,6 +106,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Partition { get; set; }
 
         /// <summary>
+        /// <para>The name of the source database.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_db_1</para>
         /// </summary>
@@ -96,6 +116,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string SrcDbName { get; set; }
 
         /// <summary>
+        /// <para>The name of the source table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_table_1</para>
         /// </summary>
@@ -104,6 +126,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string SrcTableName { get; set; }
 
         /// <summary>
+        /// <para>The status of the migration task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DATA_DOING</para>
         /// </summary>

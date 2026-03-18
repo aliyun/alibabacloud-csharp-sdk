@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListMmsDataSourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>demo</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The page number. If you leave this parameter empty, all data sources are returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. If you leave this parameter empty, all data sources are returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>The type of the data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BIGQUERY</para>
         /// </summary>
