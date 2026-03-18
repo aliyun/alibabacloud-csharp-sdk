@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             [Validation(Required=false)]
             public int? Port { get; set; }
 
+            [NameInMap("PortRange")]
+            [Validation(Required=false)]
+            public string PortRange { get; set; }
+
             /// <summary>
             /// <para>The protocol type of the protected object. Valid values:</para>
             /// <list type="bullet">

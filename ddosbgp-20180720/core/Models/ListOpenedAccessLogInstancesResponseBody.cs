@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The configuration of log analysis for the Anti-DDoS Origin instance.</para>
+        /// <para>The configuration of log analysis for the Anti-DDoS Origin instances.</para>
         /// </summary>
         [NameInMap("SlsConfigStatus")]
         [Validation(Required=false)]

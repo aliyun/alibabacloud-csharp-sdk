@@ -90,6 +90,12 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             [Validation(Required=false)]
             public long? Time { get; set; }
 
+            /// <summary>
+            /// <para>The total IP traffic of regular Alibaba Cloud services.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6302081067</para>
+            /// </summary>
             [NameInMap("TotalBillFlow")]
             [Validation(Required=false)]
             public long? TotalBillFlow { get; set; }

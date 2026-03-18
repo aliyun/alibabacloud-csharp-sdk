@@ -289,7 +289,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 /// <list type="bullet">
                 /// <item><description><b>2</b>: The traffic is discarded.</description></item>
                 /// </list>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -300,7 +299,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
                 /// <summary>
                 /// <para>The match conditions.</para>
-                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("ConditionList")]
                 [Validation(Required=false)]
@@ -311,7 +309,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                     /// <remarks>
                     /// <para> If Method is set to <b>char</b>, the value of this parameter must be ASCII strings. If Method is set to <b>hex</b>, the value of this parameter must be hexadecimal strings. Maximum length: 2,048.</para>
                     /// </remarks>
-                    /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>abcd</para>
@@ -320,9 +317,12 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                     [Validation(Required=false)]
                     public string Arg { get; set; }
 
+                    [NameInMap("Content")]
+                    [Validation(Required=false)]
+                    public string Content { get; set; }
+
                     /// <summary>
                     /// <para>The number of bytes from the start position for matching. Valid values: <b>1</b> to <b>2048</b>.</para>
-                    /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1200</para>
@@ -331,9 +331,30 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                     [Validation(Required=false)]
                     public int? Depth { get; set; }
 
+                    [NameInMap("Encode")]
+                    [Validation(Required=false)]
+                    public string Encode { get; set; }
+
+                    [NameInMap("Offset")]
+                    [Validation(Required=false)]
+                    public ModifyPolicyRequestContentL4RuleListConditionListOffset Offset { get; set; }
+                    public class ModifyPolicyRequestContentL4RuleListConditionListOffset : TeaModel {
+                        [NameInMap("End")]
+                        [Validation(Required=false)]
+                        public int? End { get; set; }
+
+                        [NameInMap("Start")]
+                        [Validation(Required=false)]
+                        public int? Start { get; set; }
+
+                    }
+
+                    [NameInMap("Pattern")]
+                    [Validation(Required=false)]
+                    public string Pattern { get; set; }
+
                     /// <summary>
                     /// <para>The start position for matching. Valid values: <b>0</b> to <b>2047</b>.</para>
-                    /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -346,7 +367,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
                 /// <summary>
                 /// <para>The minimum number of bytes in a session to trigger matching. Valid values: <b>0</b> to <b>2048</b>.</para>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -361,7 +381,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 /// <item><description><b>0</b>: If the rule is matched, the action specified in the rule is performed.</description></item>
                 /// <item><description><b>1</b>: If the rule is not matched, the action specified in the rule is performed.</description></item>
                 /// </list>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -376,7 +395,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 /// <item><description><b>char</b>: string match.</description></item>
                 /// <item><description><b>hex</b>: hexadecimal string match.</description></item>
                 /// </list>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>char</para>
@@ -401,7 +419,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 /// <remarks>
                 /// <para> A smaller value indicates a higher priority.</para>
                 /// </remarks>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -686,6 +703,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("PortVersion")]
+        [Validation(Required=false)]
+        public string PortVersion { get; set; }
 
     }
 

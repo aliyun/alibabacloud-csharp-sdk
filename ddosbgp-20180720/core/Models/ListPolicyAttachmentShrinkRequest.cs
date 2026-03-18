@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         [Validation(Required=false)]
         public string PolicyType { get; set; }
 
+        [NameInMap("PortVersion")]
+        [Validation(Required=false)]
+        public string PortVersion { get; set; }
+
     }
 
 }

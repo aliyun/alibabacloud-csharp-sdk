@@ -280,6 +280,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                         [Validation(Required=false)]
                         public string Arg { get; set; }
 
+                        [NameInMap("Content")]
+                        [Validation(Required=false)]
+                        public string Content { get; set; }
+
                         /// <summary>
                         /// <para>The number of bytes from the start position for matching. Valid values: <b>1</b> to <b>2048</b>.</para>
                         /// 
@@ -289,6 +293,28 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                         [NameInMap("Depth")]
                         [Validation(Required=false)]
                         public int? Depth { get; set; }
+
+                        [NameInMap("Encode")]
+                        [Validation(Required=false)]
+                        public string Encode { get; set; }
+
+                        [NameInMap("Offset")]
+                        [Validation(Required=false)]
+                        public ListPolicyResponseBodyPolicyListContentL4RuleListConditionListOffset Offset { get; set; }
+                        public class ListPolicyResponseBodyPolicyListContentL4RuleListConditionListOffset : TeaModel {
+                            [NameInMap("End")]
+                            [Validation(Required=false)]
+                            public int? End { get; set; }
+
+                            [NameInMap("Start")]
+                            [Validation(Required=false)]
+                            public int? Start { get; set; }
+
+                        }
+
+                        [NameInMap("Pattern")]
+                        [Validation(Required=false)]
+                        public string Pattern { get; set; }
 
                         /// <summary>
                         /// <para>The start position for matching. Valid values: <b>0</b> to <b>2047</b>.</para>
@@ -457,6 +483,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                     public int? SrcPortStart { get; set; }
 
                 }
+
+                [NameInMap("PortVersion")]
+                [Validation(Required=false)]
+                public string PortVersion { get; set; }
 
                 /// <summary>
                 /// <para>The ports whose traffic is filtered out by the filtering policies for UDP reflection attacks.</para>

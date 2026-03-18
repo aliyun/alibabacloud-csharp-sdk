@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeRdMemberListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of the members.</para>
+        /// <para>The information about the members.</para>
         /// </summary>
         [NameInMap("MemberList")]
         [Validation(Required=false)]

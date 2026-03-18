@@ -94,6 +94,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</para>
         /// <para>If you do not specify this parameter, the instance belongs to the default resource group.</para>
@@ -103,6 +105,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ResourceGroupId { get; set; }
 
     }

@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("PortVersion")]
+        [Validation(Required=false)]
+        public string PortVersion { get; set; }
+
         /// <summary>
         /// <para>The type of the policy. Valid values:</para>
         /// <list type="bullet">

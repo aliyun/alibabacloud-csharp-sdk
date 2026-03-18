@@ -537,6 +537,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
             {
                 query["PolicyId"] = request.PolicyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortVersion))
+            {
+                query["PortVersion"] = request.PortVersion;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -588,6 +592,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
             {
                 query["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortVersion))
+            {
+                query["PortVersion"] = request.PortVersion;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -914,214 +922,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a scheduling rule of an anti-DDoS diversion instance.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ConfigSchedruleOnDemandRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ConfigSchedruleOnDemandResponse
-        /// </returns>
-        public ConfigSchedruleOnDemandResponse ConfigSchedruleOnDemandWithOptions(ConfigSchedruleOnDemandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleAction))
-            {
-                query["RuleAction"] = request.RuleAction;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleConditionCnt))
-            {
-                query["RuleConditionCnt"] = request.RuleConditionCnt;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleConditionKpps))
-            {
-                query["RuleConditionKpps"] = request.RuleConditionKpps;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleConditionMbps))
-            {
-                query["RuleConditionMbps"] = request.RuleConditionMbps;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
-            {
-                query["RuleName"] = request.RuleName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleSwitch))
-            {
-                query["RuleSwitch"] = request.RuleSwitch;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleUndoBeginTime))
-            {
-                query["RuleUndoBeginTime"] = request.RuleUndoBeginTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleUndoEndTime))
-            {
-                query["RuleUndoEndTime"] = request.RuleUndoEndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleUndoMode))
-            {
-                query["RuleUndoMode"] = request.RuleUndoMode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeZone))
-            {
-                query["TimeZone"] = request.TimeZone;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ConfigSchedruleOnDemand",
-                Version = "2018-07-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ConfigSchedruleOnDemandResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Modifies a scheduling rule of an anti-DDoS diversion instance.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ConfigSchedruleOnDemandRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ConfigSchedruleOnDemandResponse
-        /// </returns>
-        public async Task<ConfigSchedruleOnDemandResponse> ConfigSchedruleOnDemandWithOptionsAsync(ConfigSchedruleOnDemandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleAction))
-            {
-                query["RuleAction"] = request.RuleAction;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleConditionCnt))
-            {
-                query["RuleConditionCnt"] = request.RuleConditionCnt;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleConditionKpps))
-            {
-                query["RuleConditionKpps"] = request.RuleConditionKpps;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleConditionMbps))
-            {
-                query["RuleConditionMbps"] = request.RuleConditionMbps;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
-            {
-                query["RuleName"] = request.RuleName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleSwitch))
-            {
-                query["RuleSwitch"] = request.RuleSwitch;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleUndoBeginTime))
-            {
-                query["RuleUndoBeginTime"] = request.RuleUndoBeginTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleUndoEndTime))
-            {
-                query["RuleUndoEndTime"] = request.RuleUndoEndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleUndoMode))
-            {
-                query["RuleUndoMode"] = request.RuleUndoMode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeZone))
-            {
-                query["TimeZone"] = request.TimeZone;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ConfigSchedruleOnDemand",
-                Version = "2018-07-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ConfigSchedruleOnDemandResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Modifies a scheduling rule of an anti-DDoS diversion instance.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ConfigSchedruleOnDemandRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ConfigSchedruleOnDemandResponse
-        /// </returns>
-        public ConfigSchedruleOnDemandResponse ConfigSchedruleOnDemand(ConfigSchedruleOnDemandRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ConfigSchedruleOnDemandWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Modifies a scheduling rule of an anti-DDoS diversion instance.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ConfigSchedruleOnDemandRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ConfigSchedruleOnDemandResponse
-        /// </returns>
-        public async Task<ConfigSchedruleOnDemandResponse> ConfigSchedruleOnDemandAsync(ConfigSchedruleOnDemandRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ConfigSchedruleOnDemandWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
         /// <para>Creates a mitigation policy.</para>
         /// </summary>
         /// 
@@ -1142,6 +942,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortVersion))
+            {
+                query["PortVersion"] = request.PortVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -1188,6 +992,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortVersion))
+            {
+                query["PortVersion"] = request.PortVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -1246,214 +1054,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreatePolicyWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Creates a scheduling rule for an anti-DDoS diversion instance.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateSchedruleOnDemandRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateSchedruleOnDemandResponse
-        /// </returns>
-        public CreateSchedruleOnDemandResponse CreateSchedruleOnDemandWithOptions(CreateSchedruleOnDemandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleAction))
-            {
-                query["RuleAction"] = request.RuleAction;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleConditionCnt))
-            {
-                query["RuleConditionCnt"] = request.RuleConditionCnt;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleConditionKpps))
-            {
-                query["RuleConditionKpps"] = request.RuleConditionKpps;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleConditionMbps))
-            {
-                query["RuleConditionMbps"] = request.RuleConditionMbps;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
-            {
-                query["RuleName"] = request.RuleName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleSwitch))
-            {
-                query["RuleSwitch"] = request.RuleSwitch;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleUndoBeginTime))
-            {
-                query["RuleUndoBeginTime"] = request.RuleUndoBeginTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleUndoEndTime))
-            {
-                query["RuleUndoEndTime"] = request.RuleUndoEndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleUndoMode))
-            {
-                query["RuleUndoMode"] = request.RuleUndoMode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeZone))
-            {
-                query["TimeZone"] = request.TimeZone;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateSchedruleOnDemand",
-                Version = "2018-07-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateSchedruleOnDemandResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Creates a scheduling rule for an anti-DDoS diversion instance.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateSchedruleOnDemandRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateSchedruleOnDemandResponse
-        /// </returns>
-        public async Task<CreateSchedruleOnDemandResponse> CreateSchedruleOnDemandWithOptionsAsync(CreateSchedruleOnDemandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleAction))
-            {
-                query["RuleAction"] = request.RuleAction;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleConditionCnt))
-            {
-                query["RuleConditionCnt"] = request.RuleConditionCnt;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleConditionKpps))
-            {
-                query["RuleConditionKpps"] = request.RuleConditionKpps;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleConditionMbps))
-            {
-                query["RuleConditionMbps"] = request.RuleConditionMbps;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
-            {
-                query["RuleName"] = request.RuleName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleSwitch))
-            {
-                query["RuleSwitch"] = request.RuleSwitch;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleUndoBeginTime))
-            {
-                query["RuleUndoBeginTime"] = request.RuleUndoBeginTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleUndoEndTime))
-            {
-                query["RuleUndoEndTime"] = request.RuleUndoEndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleUndoMode))
-            {
-                query["RuleUndoMode"] = request.RuleUndoMode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeZone))
-            {
-                query["TimeZone"] = request.TimeZone;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateSchedruleOnDemand",
-                Version = "2018-07-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateSchedruleOnDemandResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Creates a scheduling rule for an anti-DDoS diversion instance.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateSchedruleOnDemandRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateSchedruleOnDemandResponse
-        /// </returns>
-        public CreateSchedruleOnDemandResponse CreateSchedruleOnDemand(CreateSchedruleOnDemandRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CreateSchedruleOnDemandWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Creates a scheduling rule for an anti-DDoS diversion instance.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateSchedruleOnDemandRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateSchedruleOnDemandResponse
-        /// </returns>
-        public async Task<CreateSchedruleOnDemandResponse> CreateSchedruleOnDemandAsync(CreateSchedruleOnDemandRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CreateSchedruleOnDemandWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2086,142 +1686,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteRdMemberListWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Deletes a scheduling rule of an anti-DDoS diversion instance.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DeleteSchedruleOnDemandRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteSchedruleOnDemandResponse
-        /// </returns>
-        public DeleteSchedruleOnDemandResponse DeleteSchedruleOnDemandWithOptions(DeleteSchedruleOnDemandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
-            {
-                query["RuleName"] = request.RuleName;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteSchedruleOnDemand",
-                Version = "2018-07-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeleteSchedruleOnDemandResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Deletes a scheduling rule of an anti-DDoS diversion instance.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DeleteSchedruleOnDemandRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteSchedruleOnDemandResponse
-        /// </returns>
-        public async Task<DeleteSchedruleOnDemandResponse> DeleteSchedruleOnDemandWithOptionsAsync(DeleteSchedruleOnDemandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
-            {
-                query["RuleName"] = request.RuleName;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteSchedruleOnDemand",
-                Version = "2018-07-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeleteSchedruleOnDemandResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Deletes a scheduling rule of an anti-DDoS diversion instance.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DeleteSchedruleOnDemandRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteSchedruleOnDemandResponse
-        /// </returns>
-        public DeleteSchedruleOnDemandResponse DeleteSchedruleOnDemand(DeleteSchedruleOnDemandRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DeleteSchedruleOnDemandWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Deletes a scheduling rule of an anti-DDoS diversion instance.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DeleteSchedruleOnDemandRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteSchedruleOnDemandResponse
-        /// </returns>
-        public async Task<DeleteSchedruleOnDemandResponse> DeleteSchedruleOnDemandAsync(DeleteSchedruleOnDemandRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DeleteSchedruleOnDemandWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3402,338 +2866,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DDoS attack events recorded for the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can use this operation to query the details about the DDoS attack events that occurred on the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin by page. The details include the start time, end time, volume of attack traffic, and status of each event.</para>
-        /// <h3><a href="#qps-"></a>Limits</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DescribeOnDemandDdosEventRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeOnDemandDdosEventResponse
-        /// </returns>
-        public DescribeOnDemandDdosEventResponse DescribeOnDemandDdosEventWithOptions(DescribeOnDemandDdosEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
-            {
-                query["EndTime"] = request.EndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
-            {
-                query["Ip"] = request.Ip;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
-            {
-                query["PageNo"] = request.PageNo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                query["ResourceGroupId"] = request.ResourceGroupId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
-            {
-                query["StartTime"] = request.StartTime;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeOnDemandDdosEvent",
-                Version = "2018-07-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeOnDemandDdosEventResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the DDoS attack events recorded for the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can use this operation to query the details about the DDoS attack events that occurred on the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin by page. The details include the start time, end time, volume of attack traffic, and status of each event.</para>
-        /// <h3><a href="#qps-"></a>Limits</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DescribeOnDemandDdosEventRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeOnDemandDdosEventResponse
-        /// </returns>
-        public async Task<DescribeOnDemandDdosEventResponse> DescribeOnDemandDdosEventWithOptionsAsync(DescribeOnDemandDdosEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
-            {
-                query["EndTime"] = request.EndTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
-            {
-                query["Ip"] = request.Ip;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
-            {
-                query["PageNo"] = request.PageNo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
-            {
-                query["ResourceGroupId"] = request.ResourceGroupId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
-            {
-                query["StartTime"] = request.StartTime;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeOnDemandDdosEvent",
-                Version = "2018-07-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeOnDemandDdosEventResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the DDoS attack events recorded for the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can use this operation to query the details about the DDoS attack events that occurred on the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin by page. The details include the start time, end time, volume of attack traffic, and status of each event.</para>
-        /// <h3><a href="#qps-"></a>Limits</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DescribeOnDemandDdosEventRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeOnDemandDdosEventResponse
-        /// </returns>
-        public DescribeOnDemandDdosEventResponse DescribeOnDemandDdosEvent(DescribeOnDemandDdosEventRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeOnDemandDdosEventWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the DDoS attack events recorded for the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can use this operation to query the details about the DDoS attack events that occurred on the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin by page. The details include the start time, end time, volume of attack traffic, and status of each event.</para>
-        /// <h3><a href="#qps-"></a>Limits</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DescribeOnDemandDdosEventRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeOnDemandDdosEventResponse
-        /// </returns>
-        public async Task<DescribeOnDemandDdosEventResponse> DescribeOnDemandDdosEventAsync(DescribeOnDemandDdosEventRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeOnDemandDdosEventWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the details of anti-DDoS diversion instances.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeOnDemandInstanceStatusRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeOnDemandInstanceStatusResponse
-        /// </returns>
-        public DescribeOnDemandInstanceStatusResponse DescribeOnDemandInstanceStatusWithOptions(DescribeOnDemandInstanceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdList))
-            {
-                query["InstanceIdList"] = request.InstanceIdList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeOnDemandInstanceStatus",
-                Version = "2018-07-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeOnDemandInstanceStatusResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the details of anti-DDoS diversion instances.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeOnDemandInstanceStatusRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeOnDemandInstanceStatusResponse
-        /// </returns>
-        public async Task<DescribeOnDemandInstanceStatusResponse> DescribeOnDemandInstanceStatusWithOptionsAsync(DescribeOnDemandInstanceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdList))
-            {
-                query["InstanceIdList"] = request.InstanceIdList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeOnDemandInstanceStatus",
-                Version = "2018-07-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeOnDemandInstanceStatusResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the details of anti-DDoS diversion instances.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeOnDemandInstanceStatusRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeOnDemandInstanceStatusResponse
-        /// </returns>
-        public DescribeOnDemandInstanceStatusResponse DescribeOnDemandInstanceStatus(DescribeOnDemandInstanceStatusRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeOnDemandInstanceStatusWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the details of anti-DDoS diversion instances.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeOnDemandInstanceStatusRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeOnDemandInstanceStatusResponse
-        /// </returns>
-        public async Task<DescribeOnDemandInstanceStatusResponse> DescribeOnDemandInstanceStatusAsync(DescribeOnDemandInstanceStatusRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeOnDemandInstanceStatusWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
         /// <para>Queries the operation logs of an Anti-DDoS Origin instance.</para>
         /// </summary>
         /// 
@@ -4158,7 +3290,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries members that are managed by using the multi-account management feature.</para>
+        /// <para>Queries members in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4208,7 +3340,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries members that are managed by using the multi-account management feature.</para>
+        /// <para>Queries members in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4258,7 +3390,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries members that are managed by using the multi-account management feature.</para>
+        /// <para>Queries members in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4276,7 +3408,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries members that are managed by using the multi-account management feature.</para>
+        /// <para>Queries members in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4771,6 +3903,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
             {
                 query["PolicyType"] = request.PolicyType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortVersion))
+            {
+                query["PortVersion"] = request.PortVersion;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4822,6 +3958,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
             {
                 query["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortVersion))
+            {
+                query["PortVersion"] = request.PortVersion;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5487,6 +4627,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
             {
                 query["PolicyType"] = request.PolicyType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortVersion))
+            {
+                query["PortVersion"] = request.PortVersion;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5550,6 +4694,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
             {
                 query["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortVersion))
+            {
+                query["PortVersion"] = request.PortVersion;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5992,6 +5140,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortVersion))
+            {
+                query["PortVersion"] = request.PortVersion;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -6056,6 +5208,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortVersion))
+            {
+                query["PortVersion"] = request.PortVersion;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6164,6 +5320,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortVersion))
+            {
+                query["PortVersion"] = request.PortVersion;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -6224,6 +5384,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortVersion))
+            {
+                query["PortVersion"] = request.PortVersion;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6608,134 +5772,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scheduling rule of an anti-DDoS diversion instance.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// QuerySchedruleOnDemandRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// QuerySchedruleOnDemandResponse
-        /// </returns>
-        public QuerySchedruleOnDemandResponse QuerySchedruleOnDemandWithOptions(QuerySchedruleOnDemandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "QuerySchedruleOnDemand",
-                Version = "2018-07-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<QuerySchedruleOnDemandResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the scheduling rule of an anti-DDoS diversion instance.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// QuerySchedruleOnDemandRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// QuerySchedruleOnDemandResponse
-        /// </returns>
-        public async Task<QuerySchedruleOnDemandResponse> QuerySchedruleOnDemandWithOptionsAsync(QuerySchedruleOnDemandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "QuerySchedruleOnDemand",
-                Version = "2018-07-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<QuerySchedruleOnDemandResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the scheduling rule of an anti-DDoS diversion instance.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// QuerySchedruleOnDemandRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// QuerySchedruleOnDemandResponse
-        /// </returns>
-        public QuerySchedruleOnDemandResponse QuerySchedruleOnDemand(QuerySchedruleOnDemandRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return QuerySchedruleOnDemandWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the scheduling rule of an anti-DDoS diversion instance.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// QuerySchedruleOnDemandRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// QuerySchedruleOnDemandResponse
-        /// </returns>
-        public async Task<QuerySchedruleOnDemandResponse> QuerySchedruleOnDemandAsync(QuerySchedruleOnDemandRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await QuerySchedruleOnDemandWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
         /// <para>Releases a pay-as-you-go Anti-DDoS Origin instance.</para>
         /// </summary>
         /// 
@@ -6852,142 +5888,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReleaseDdosOriginInstanceWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Specifies the scheduling mode for on-demand instances.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// SetInstanceModeOnDemandRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// SetInstanceModeOnDemandResponse
-        /// </returns>
-        public SetInstanceModeOnDemandResponse SetInstanceModeOnDemandWithOptions(SetInstanceModeOnDemandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdList))
-            {
-                query["InstanceIdList"] = request.InstanceIdList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
-            {
-                query["Mode"] = request.Mode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "SetInstanceModeOnDemand",
-                Version = "2018-07-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<SetInstanceModeOnDemandResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Specifies the scheduling mode for on-demand instances.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// SetInstanceModeOnDemandRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// SetInstanceModeOnDemandResponse
-        /// </returns>
-        public async Task<SetInstanceModeOnDemandResponse> SetInstanceModeOnDemandWithOptionsAsync(SetInstanceModeOnDemandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdList))
-            {
-                query["InstanceIdList"] = request.InstanceIdList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
-            {
-                query["Mode"] = request.Mode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "SetInstanceModeOnDemand",
-                Version = "2018-07-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<SetInstanceModeOnDemandResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Specifies the scheduling mode for on-demand instances.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// SetInstanceModeOnDemandRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// SetInstanceModeOnDemandResponse
-        /// </returns>
-        public SetInstanceModeOnDemandResponse SetInstanceModeOnDemand(SetInstanceModeOnDemandRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return SetInstanceModeOnDemandWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Specifies the scheduling mode for on-demand instances.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// SetInstanceModeOnDemandRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// SetInstanceModeOnDemandResponse
-        /// </returns>
-        public async Task<SetInstanceModeOnDemandResponse> SetInstanceModeOnDemandAsync(SetInstanceModeOnDemandRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await SetInstanceModeOnDemandWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

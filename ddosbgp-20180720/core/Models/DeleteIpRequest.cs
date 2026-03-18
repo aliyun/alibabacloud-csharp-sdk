@@ -53,6 +53,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the Anti-DDoS Origin instance belongs to the default resource group.</para>
         /// <para>For information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</para>
@@ -62,6 +64,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ResourceGroupId { get; set; }
 
     }
