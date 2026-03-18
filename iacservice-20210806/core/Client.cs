@@ -6058,6 +6058,108 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取资源栈部署结果</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStackExecutionResultResponse
+        /// </returns>
+        public GetStackExecutionResultResponse GetStackExecutionResultWithOptions(string triggerId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetStackExecutionResult",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/stacks/trigger/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(triggerId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetStackExecutionResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取资源栈部署结果</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStackExecutionResultResponse
+        /// </returns>
+        public async Task<GetStackExecutionResultResponse> GetStackExecutionResultWithOptionsAsync(string triggerId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetStackExecutionResult",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/stacks/trigger/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(triggerId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetStackExecutionResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取资源栈部署结果</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetStackExecutionResultResponse
+        /// </returns>
+        public GetStackExecutionResultResponse GetStackExecutionResult(string triggerId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetStackExecutionResultWithOptions(triggerId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取资源栈部署结果</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetStackExecutionResultResponse
+        /// </returns>
+        public async Task<GetStackExecutionResultResponse> GetStackExecutionResultAsync(string triggerId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetStackExecutionResultWithOptionsAsync(triggerId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询任务详情</para>
         /// </summary>
         /// 
@@ -10124,6 +10226,168 @@ namespace AlibabaCloud.SDK.IaCService20210806
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await RemoveSharedAccountsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发资源栈部署</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TriggerStackExecutionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerStackExecutionResponse
+        /// </returns>
+        public TriggerStackExecutionResponse TriggerStackExecutionWithOptions(TriggerStackExecutionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
+            {
+                body["action"] = request.Action;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangedFolders))
+            {
+                body["changedFolders"] = request.ChangedFolders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodePackagePath))
+            {
+                body["codePackagePath"] = request.CodePackagePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeVersionId))
+            {
+                body["codeVersionId"] = request.CodeVersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TriggerStackExecution",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/stacks/trigger",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TriggerStackExecutionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发资源栈部署</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TriggerStackExecutionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerStackExecutionResponse
+        /// </returns>
+        public async Task<TriggerStackExecutionResponse> TriggerStackExecutionWithOptionsAsync(TriggerStackExecutionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
+            {
+                body["action"] = request.Action;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangedFolders))
+            {
+                body["changedFolders"] = request.ChangedFolders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodePackagePath))
+            {
+                body["codePackagePath"] = request.CodePackagePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeVersionId))
+            {
+                body["codeVersionId"] = request.CodeVersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TriggerStackExecution",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/stacks/trigger",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TriggerStackExecutionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发资源栈部署</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TriggerStackExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerStackExecutionResponse
+        /// </returns>
+        public TriggerStackExecutionResponse TriggerStackExecution(TriggerStackExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return TriggerStackExecutionWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发资源栈部署</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TriggerStackExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerStackExecutionResponse
+        /// </returns>
+        public async Task<TriggerStackExecutionResponse> TriggerStackExecutionAsync(TriggerStackExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await TriggerStackExecutionWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
