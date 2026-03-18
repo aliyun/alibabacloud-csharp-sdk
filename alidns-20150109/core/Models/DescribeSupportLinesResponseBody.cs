@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeSupportLinesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The Alibaba Cloud DNS lines.</para>
-        /// </summary>
         [NameInMap("RecordLines")]
         [Validation(Required=false)]
         public DescribeSupportLinesResponseBodyRecordLines RecordLines { get; set; }
@@ -20,42 +17,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeSupportLinesResponseBodyRecordLinesRecordLine> RecordLine { get; set; }
             public class DescribeSupportLinesResponseBodyRecordLinesRecordLine : TeaModel {
-                /// <summary>
-                /// <para>The code of the parent line. Currently, no data is returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>unicom</para>
-                /// </summary>
                 [NameInMap("FatherCode")]
                 [Validation(Required=false)]
                 public string FatherCode { get; set; }
 
-                /// <summary>
-                /// <para>The code of the child line.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn_unicom_shanxi</para>
-                /// </summary>
                 [NameInMap("LineCode")]
                 [Validation(Required=false)]
                 public string LineCode { get; set; }
 
-                /// <summary>
-                /// <para>The display name of the line.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>China Unicom</para>
-                /// </summary>
                 [NameInMap("LineDisplayName")]
                 [Validation(Required=false)]
                 public string LineDisplayName { get; set; }
 
-                /// <summary>
-                /// <para>The name of the child line.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>China Unicom_Shanxi</para>
-                /// </summary>
                 [NameInMap("LineName")]
                 [Validation(Required=false)]
                 public string LineName { get; set; }

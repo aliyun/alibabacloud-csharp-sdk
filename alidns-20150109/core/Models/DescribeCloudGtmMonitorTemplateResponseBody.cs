@@ -119,9 +119,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string IpVersion { get; set; }
 
-        /// <summary>
-        /// <para>Probe node list, detailed information can be obtained by calling ListCloudGtmMonitorNodes.</para>
-        /// </summary>
         [NameInMap("IspCityNodes")]
         [Validation(Required=false)]
         public DescribeCloudGtmMonitorTemplateResponseBodyIspCityNodes IspCityNodes { get; set; }
@@ -130,87 +127,34 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeCloudGtmMonitorTemplateResponseBodyIspCityNodesIspCityNode> IspCityNode { get; set; }
             public class DescribeCloudGtmMonitorTemplateResponseBodyIspCityNodesIspCityNode : TeaModel {
-                /// <summary>
-                /// <para>City code</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>357</para>
-                /// </summary>
                 [NameInMap("CityCode")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
 
-                /// <summary>
-                /// <para>City name</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Shanghai</para>
-                /// </summary>
                 [NameInMap("CityName")]
                 [Validation(Required=false)]
                 public string CityName { get; set; }
 
-                /// <summary>
-                /// <para>Country Code</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>629</para>
-                /// </summary>
                 [NameInMap("CountryCode")]
                 [Validation(Required=false)]
                 public string CountryCode { get; set; }
 
-                /// <summary>
-                /// <para>Country Name</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>China</para>
-                /// </summary>
                 [NameInMap("CountryName")]
                 [Validation(Required=false)]
                 public string CountryName { get; set; }
 
-                /// <summary>
-                /// <para>Probe node group type name</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>BGP Nodes</para>
-                /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
-                /// <summary>
-                /// <para>Probe node group types:</para>
-                /// <list type="bullet">
-                /// <item><description>BGP: BGP nodes</description></item>
-                /// <item><description>OVERSEAS: International nodes</description></item>
-                /// <item><description>ISP: Carrier nodes</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>BGP</para>
-                /// </summary>
                 [NameInMap("GroupType")]
                 [Validation(Required=false)]
                 public string GroupType { get; set; }
 
-                /// <summary>
-                /// <para>Operator Code</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>465</para>
-                /// </summary>
                 [NameInMap("IspCode")]
                 [Validation(Required=false)]
                 public string IspCode { get; set; }
 
-                /// <summary>
-                /// <para>Operator Name</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Alibaba</para>
-                /// </summary>
                 [NameInMap("IspName")]
                 [Validation(Required=false)]
                 public string IspName { get; set; }

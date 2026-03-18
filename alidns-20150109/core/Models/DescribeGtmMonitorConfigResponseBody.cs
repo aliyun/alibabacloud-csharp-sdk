@@ -49,9 +49,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public int? Interval { get; set; }
 
-        /// <summary>
-        /// <para>The monitored nodes.</para>
-        /// </summary>
         [NameInMap("IspCityNodes")]
         [Validation(Required=false)]
         public DescribeGtmMonitorConfigResponseBodyIspCityNodes IspCityNodes { get; set; }
@@ -60,62 +57,26 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeGtmMonitorConfigResponseBodyIspCityNodesIspCityNode> IspCityNode { get; set; }
             public class DescribeGtmMonitorConfigResponseBodyIspCityNodesIspCityNode : TeaModel {
-                /// <summary>
-                /// <para>The code of the city where the monitored node is deployed.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>503</para>
-                /// </summary>
                 [NameInMap("CityCode")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
 
-                /// <summary>
-                /// <para>The display name of the city where the monitored node is deployed.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Zhangjiakou</para>
-                /// </summary>
                 [NameInMap("CityName")]
                 [Validation(Required=false)]
                 public string CityName { get; set; }
 
-                /// <summary>
-                /// <para>The code of the country where the monitored node is deployed.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>001</para>
-                /// </summary>
                 [NameInMap("CountryCode")]
                 [Validation(Required=false)]
                 public string CountryCode { get; set; }
 
-                /// <summary>
-                /// <para>The display name of the country where the monitored node is deployed.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>China</para>
-                /// </summary>
                 [NameInMap("CountryName")]
                 [Validation(Required=false)]
                 public string CountryName { get; set; }
 
-                /// <summary>
-                /// <para>The code of the Internet service provider (ISP) to which the monitored node belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>465</para>
-                /// </summary>
                 [NameInMap("IspCode")]
                 [Validation(Required=false)]
                 public string IspCode { get; set; }
 
-                /// <summary>
-                /// <para>The display name of the ISP to which the monitored node belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Alibaba</para>
-                /// </summary>
                 [NameInMap("IspName")]
                 [Validation(Required=false)]
                 public string IspName { get; set; }

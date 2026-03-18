@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDomainResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The Domain Name System (DNS) servers configured for the domain name.</para>
-        /// </summary>
         [NameInMap("DnsServers")]
         [Validation(Required=false)]
         public AddDomainResponseBodyDnsServers DnsServers { get; set; }

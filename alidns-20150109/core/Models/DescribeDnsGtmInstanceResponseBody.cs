@@ -16,9 +16,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public DescribeDnsGtmInstanceResponseBodyConfig Config { get; set; }
         public class DescribeDnsGtmInstanceResponseBodyConfig : TeaModel {
-            /// <summary>
-            /// <para>The alert notification method.</para>
-            /// </summary>
             [NameInMap("AlertConfig")]
             [Validation(Required=false)]
             public DescribeDnsGtmInstanceResponseBodyConfigAlertConfig AlertConfig { get; set; }
@@ -31,48 +28,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     [Validation(Required=false)]
                     public bool? DingtalkNotice { get; set; }
 
-                    /// <summary>
-                    /// <para>Indicates whether email notification is configured. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>true: Email notification is configured.</description></item>
-                    /// <item><description>false: Email notification is not configured. null: Email notification is not configured.</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>true</para>
-                    /// </summary>
                     [NameInMap("EmailNotice")]
                     [Validation(Required=false)]
                     public bool? EmailNotice { get; set; }
 
-                    /// <summary>
-                    /// <para>The type of the alert event. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>ADDR_ALERT: The address is unavailable.</description></item>
-                    /// <item><description>ADDR_RESUME: The address is restored and becomes available.</description></item>
-                    /// <item><description>ADDR_POOL_GROUP_UNAVAILABLE: The address pool group is unavailable.</description></item>
-                    /// <item><description>ADDR_POOL_GROUP_AVAILABLE: The address pool group is restored and becomes available.</description></item>
-                    /// <item><description>ACCESS_STRATEGY_POOL_GROUP_SWITCH: Switchover is triggered between the primary and secondary address pools.</description></item>
-                    /// <item><description>MONITOR_NODE_IP_CHANGE: The IP address of the monitoring node has changed.</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>ADDR_ALERT</para>
-                    /// </summary>
                     [NameInMap("NoticeType")]
                     [Validation(Required=false)]
                     public string NoticeType { get; set; }
 
-                    /// <summary>
-                    /// <para>Indicates whether SMS notification is configured. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>true: SMS notification is configured.</description></item>
-                    /// <item><description>false: SMS notification is not configured. null: SMS notification is not configured.</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>true</para>
-                    /// </summary>
                     [NameInMap("SmsNotice")]
                     [Validation(Required=false)]
                     public bool? SmsNotice { get; set; }

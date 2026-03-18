@@ -132,9 +132,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string HealthStatus { get; set; }
 
-        /// <summary>
-        /// <para>The health check tasks referenced by the address.</para>
-        /// </summary>
         [NameInMap("HealthTasks")]
         [Validation(Required=false)]
         public DescribeCloudGtmAddressResponseBodyHealthTasks HealthTasks { get; set; }
@@ -143,47 +140,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeCloudGtmAddressResponseBodyHealthTasksHealthTask> HealthTask { get; set; }
             public class DescribeCloudGtmAddressResponseBodyHealthTasksHealthTask : TeaModel {
-                /// <summary>
-                /// <para>The state of the health check task. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>ok: The task is normal.</description></item>
-                /// <item><description>alert: An alert is triggered.</description></item>
-                /// <item><description>no_data: No data is available. In most cases, the health check task is newly created and no data is collected.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ok</para>
-                /// </summary>
                 [NameInMap("MonitorStatus")]
                 [Validation(Required=false)]
                 public string MonitorStatus { get; set; }
 
-                /// <summary>
-                /// <para>The target service port for health checks. When the Ping protocol is selected for health checks, configuration of the service port is not supported.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>80</para>
-                /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the health check template associated with the address.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>mtp-89518052425100**80</para>
-                /// </summary>
                 [NameInMap("TemplateId")]
                 [Validation(Required=false)]
                 public string TemplateId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the health check template.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Ping-IPv4</para>
-                /// </summary>
                 [NameInMap("TemplateName")]
                 [Validation(Required=false)]
                 public string TemplateName { get; set; }

@@ -49,150 +49,74 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<SearchRecursionRecordsResponseBodyRecordsRecord> Record { get; set; }
             public class SearchRecursionRecordsResponseBodyRecordsRecord : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2025-06-16T02:18Z</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1615182315000</para>
-                /// </summary>
                 [NameInMap("CreateTimestamp")]
                 [Validation(Required=false)]
                 public long? CreateTimestamp { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1521021611066866</para>
-                /// </summary>
                 [NameInMap("Creator")]
                 [Validation(Required=false)]
                 public long? Creator { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>custom</para>
-                /// </summary>
                 [NameInMap("CreatorSubType")]
                 [Validation(Required=false)]
                 public string CreatorSubType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>user</para>
-                /// </summary>
                 [NameInMap("CreatorType")]
                 [Validation(Required=false)]
                 public string CreatorType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>enable</para>
-                /// </summary>
                 [NameInMap("EnableStatus")]
                 [Validation(Required=false)]
                 public string EnableStatus { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Priority")]
                 [Validation(Required=false)]
                 public int? Priority { get; set; }
 
-                /// <summary>
-                /// <para>record ID</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1927184083990351872</para>
-                /// </summary>
                 [NameInMap("RecordId")]
                 [Validation(Required=false)]
                 public string RecordId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>vxwk</para>
-                /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>default</para>
-                /// </summary>
                 [NameInMap("RequestSource")]
                 [Validation(Required=false)]
                 public string RequestSource { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>wap</para>
-                /// </summary>
                 [NameInMap("Rr")]
                 [Validation(Required=false)]
                 public string Rr { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>60</para>
-                /// </summary>
                 [NameInMap("Ttl")]
                 [Validation(Required=false)]
                 public int? Ttl { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>A</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2022-10-28T13:07Z</para>
-                /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
                 public string UpdateTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1722107570000</para>
-                /// </summary>
                 [NameInMap("UpdateTimestamp")]
                 [Validation(Required=false)]
                 public long? UpdateTimestamp { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>14.19.85.71</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>4</para>
-                /// </summary>
                 [NameInMap("Weight")]
                 [Validation(Required=false)]
                 public string Weight { get; set; }
 
-                /// <summary>
-                /// <para>zone ID</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>169783221000012</para>
-                /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }

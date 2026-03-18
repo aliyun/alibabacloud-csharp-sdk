@@ -49,9 +49,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public int? Interval { get; set; }
 
-        /// <summary>
-        /// <para>The health check nodes.</para>
-        /// </summary>
         [NameInMap("IspCityNodes")]
         [Validation(Required=false)]
         public DescribeDnsGtmMonitorConfigResponseBodyIspCityNodes IspCityNodes { get; set; }
@@ -60,62 +57,26 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmMonitorConfigResponseBodyIspCityNodesIspCityNode> IspCityNode { get; set; }
             public class DescribeDnsGtmMonitorConfigResponseBodyIspCityNodesIspCityNode : TeaModel {
-                /// <summary>
-                /// <para>The city code.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>572</para>
-                /// </summary>
                 [NameInMap("CityCode")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
 
-                /// <summary>
-                /// <para>The display name of the city.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Qingdao</para>
-                /// </summary>
                 [NameInMap("CityName")]
                 [Validation(Required=false)]
                 public string CityName { get; set; }
 
-                /// <summary>
-                /// <para>The code of the country or region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>001</para>
-                /// </summary>
                 [NameInMap("CountryCode")]
                 [Validation(Required=false)]
                 public string CountryCode { get; set; }
 
-                /// <summary>
-                /// <para>The display name of the country or region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>China</para>
-                /// </summary>
                 [NameInMap("CountryName")]
                 [Validation(Required=false)]
                 public string CountryName { get; set; }
 
-                /// <summary>
-                /// <para>The Internet service provider (ISP) code.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>123</para>
-                /// </summary>
                 [NameInMap("IspCode")]
                 [Validation(Required=false)]
                 public string IspCode { get; set; }
 
-                /// <summary>
-                /// <para>The display name of the ISP.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Alibaba</para>
-                /// </summary>
                 [NameInMap("IspName")]
                 [Validation(Required=false)]
                 public string IspName { get; set; }

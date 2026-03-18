@@ -108,9 +108,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string DnsSecurity { get; set; }
 
-        /// <summary>
-        /// <para>The DNS servers configured for the domain names.</para>
-        /// </summary>
         [NameInMap("DnsServers")]
         [Validation(Required=false)]
         public DescribeDnsProductInstanceResponseBodyDnsServers DnsServers { get; set; }

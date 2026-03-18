@@ -57,18 +57,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeRecursionZoneResponseBodyEffectiveScopesEffectiveScope> EffectiveScope { get; set; }
             public class DescribeRecursionZoneResponseBodyEffectiveScopesEffectiveScope : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>account</para>
-                /// </summary>
                 [NameInMap("EffectiveType")]
                 [Validation(Required=false)]
                 public string EffectiveType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>[20003]</para>
-                /// </summary>
                 [NameInMap("Scopes")]
                 [Validation(Required=false)]
                 public DescribeRecursionZoneResponseBodyEffectiveScopesEffectiveScopeScopes Scopes { get; set; }

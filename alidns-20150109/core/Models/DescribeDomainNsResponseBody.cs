@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string DetectFailedReasonCode { get; set; }
 
-        /// <summary>
-        /// <para>The DNS server names configured for the domain name.</para>
-        /// </summary>
         [NameInMap("DnsServers")]
         [Validation(Required=false)]
         public DescribeDomainNsResponseBodyDnsServers DnsServers { get; set; }
@@ -42,9 +39,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         }
 
-        /// <summary>
-        /// <para>The Domain Name System (DNS) server names assigned by Alibaba Cloud DNS.</para>
-        /// </summary>
         [NameInMap("ExpectDnsServers")]
         [Validation(Required=false)]
         public DescribeDomainNsResponseBodyExpectDnsServers ExpectDnsServers { get; set; }

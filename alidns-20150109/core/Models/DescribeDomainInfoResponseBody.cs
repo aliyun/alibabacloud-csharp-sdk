@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public bool? AliDomain { get; set; }
 
-        /// <summary>
-        /// <para>The available time to live (TTL) values that can be configured for the domain name. Available TTL values are not returned by default. If you want to query such information, set NeedDetailAttributes to true.</para>
-        /// </summary>
         [NameInMap("AvailableTtls")]
         [Validation(Required=false)]
         public DescribeDomainInfoResponseBodyAvailableTtls AvailableTtls { get; set; }
@@ -42,9 +39,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
-        /// <summary>
-        /// <para>The DNS servers that are used to resolve the domain name.</para>
-        /// </summary>
         [NameInMap("DnsServers")]
         [Validation(Required=false)]
         public DescribeDomainInfoResponseBodyDnsServers DnsServers { get; set; }
@@ -172,9 +166,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string RecordLineTreeJson { get; set; }
 
-        /// <summary>
-        /// <para>The DNS request lines.</para>
-        /// </summary>
         [NameInMap("RecordLines")]
         [Validation(Required=false)]
         public DescribeDomainInfoResponseBodyRecordLines RecordLines { get; set; }
@@ -183,36 +174,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDomainInfoResponseBodyRecordLinesRecordLine> RecordLine { get; set; }
             public class DescribeDomainInfoResponseBodyRecordLinesRecordLine : TeaModel {
-                /// <summary>
-                /// <para>The code of the parent line. This parameter is not returned if the line has no parent line.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>internal</para>
-                /// </summary>
                 [NameInMap("FatherCode")]
                 [Validation(Required=false)]
                 public string FatherCode { get; set; }
 
-                /// <summary>
-                /// <para>The code of the line.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn_region_xibei</para>
-                /// </summary>
                 [NameInMap("LineCode")]
                 [Validation(Required=false)]
                 public string LineCode { get; set; }
 
-                /// <summary>
-                /// <para>The name of the parent line.</para>
-                /// </summary>
                 [NameInMap("LineDisplayName")]
                 [Validation(Required=false)]
                 public string LineDisplayName { get; set; }
 
-                /// <summary>
-                /// <para>The name of the line.</para>
-                /// </summary>
                 [NameInMap("LineName")]
                 [Validation(Required=false)]
                 public string LineName { get; set; }

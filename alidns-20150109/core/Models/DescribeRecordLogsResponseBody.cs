@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        /// <summary>
-        /// <para>The operation logs.</para>
-        /// </summary>
         [NameInMap("RecordLogs")]
         [Validation(Required=false)]
         public DescribeRecordLogsResponseBodyRecordLogs RecordLogs { get; set; }
@@ -40,46 +37,22 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeRecordLogsResponseBodyRecordLogsRecordLog> RecordLog { get; set; }
             public class DescribeRecordLogsResponseBodyRecordLogsRecordLog : TeaModel {
-                /// <summary>
-                /// <para>The operation that you performed.</para>
-                /// </summary>
                 [NameInMap("Action")]
                 [Validation(Required=false)]
                 public string Action { get; set; }
 
-                /// <summary>
-                /// <para>The time when you performed the operation.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-12-12T09:23Z</para>
-                /// </summary>
                 [NameInMap("ActionTime")]
                 [Validation(Required=false)]
                 public string ActionTime { get; set; }
 
-                /// <summary>
-                /// <para>The time when you performed the operation. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>134514540000</para>
-                /// </summary>
                 [NameInMap("ActionTimestamp")]
                 [Validation(Required=false)]
                 public long? ActionTimestamp { get; set; }
 
-                /// <summary>
-                /// <para>The IP address of the operator.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>182.92.253.XX</para>
-                /// </summary>
                 [NameInMap("ClientIp")]
                 [Validation(Required=false)]
                 public string ClientIp { get; set; }
 
-                /// <summary>
-                /// <para>The operation message.</para>
-                /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }

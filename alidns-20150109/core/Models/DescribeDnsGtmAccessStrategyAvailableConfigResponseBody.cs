@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The available address pools of the domain name type.</para>
-        /// </summary>
         [NameInMap("DomainAddrPools")]
         [Validation(Required=false)]
         public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyDomainAddrPools DomainAddrPools { get; set; }
@@ -20,32 +17,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyDomainAddrPoolsDomainAddrPool> DomainAddrPool { get; set; }
             public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyDomainAddrPoolsDomainAddrPool : TeaModel {
-                /// <summary>
-                /// <para>The number of addresses in the address pool.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("AddrCount")]
                 [Validation(Required=false)]
                 public int? AddrCount { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the address pool.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>pool1</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
-                /// <summary>
-                /// <para>The name of the address pool.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testpool</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -54,9 +33,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         }
 
-        /// <summary>
-        /// <para>The available address pools of the IPv4 type.</para>
-        /// </summary>
         [NameInMap("Ipv4AddrPools")]
         [Validation(Required=false)]
         public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv4AddrPools Ipv4AddrPools { get; set; }
@@ -65,32 +41,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv4AddrPoolsIpv4AddrPool> Ipv4AddrPool { get; set; }
             public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv4AddrPoolsIpv4AddrPool : TeaModel {
-                /// <summary>
-                /// <para>The number of addresses in the address pool.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("AddrCount")]
                 [Validation(Required=false)]
                 public int? AddrCount { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the address pool.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>pool1</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
-                /// <summary>
-                /// <para>The name of the address pool.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testpool</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -99,9 +57,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         }
 
-        /// <summary>
-        /// <para>The available address pools of the IPv6 type.</para>
-        /// </summary>
         [NameInMap("Ipv6AddrPools")]
         [Validation(Required=false)]
         public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv6AddrPools Ipv6AddrPools { get; set; }
@@ -110,32 +65,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv6AddrPoolsIpv6AddrPool> Ipv6AddrPool { get; set; }
             public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv6AddrPoolsIpv6AddrPool : TeaModel {
-                /// <summary>
-                /// <para>The number of addresses in the address pool.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("AddrCount")]
                 [Validation(Required=false)]
                 public int? AddrCount { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the address pool.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>pool1</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
-                /// <summary>
-                /// <para>The name of the address pool.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testpool</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -144,9 +81,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         }
 
-        /// <summary>
-        /// <para>The source regions.</para>
-        /// </summary>
         [NameInMap("Lines")]
         [Validation(Required=false)]
         public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyLines Lines { get; set; }
@@ -155,52 +89,22 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyLinesLine> Line { get; set; }
             public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyLinesLine : TeaModel {
-                /// <summary>
-                /// <para>The parent line code of the source region. Leave it blank if no parent line exists.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>telecom</para>
-                /// </summary>
                 [NameInMap("FatherCode")]
                 [Validation(Required=false)]
                 public string FatherCode { get; set; }
 
-                /// <summary>
-                /// <para>The line name of the source region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>default</para>
-                /// </summary>
                 [NameInMap("GroupCode")]
                 [Validation(Required=false)]
                 public string GroupCode { get; set; }
 
-                /// <summary>
-                /// <para>The name of the source region group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>global</para>
-                /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
-                /// <summary>
-                /// <para>The line code of the source region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>default</para>
-                /// </summary>
                 [NameInMap("LineCode")]
                 [Validation(Required=false)]
                 public string LineCode { get; set; }
 
-                /// <summary>
-                /// <para>The code of the source region group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>global</para>
-                /// </summary>
                 [NameInMap("LineName")]
                 [Validation(Required=false)]
                 public string LineName { get; set; }

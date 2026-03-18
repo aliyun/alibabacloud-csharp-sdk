@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ListCloudGtmAvailableAlertGroupsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The alert contact groups.</para>
-        /// </summary>
         [NameInMap("AlertGroups")]
         [Validation(Required=false)]
         public ListCloudGtmAvailableAlertGroupsResponseBodyAlertGroups AlertGroups { get; set; }
@@ -20,12 +17,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<ListCloudGtmAvailableAlertGroupsResponseBodyAlertGroupsAlertGroup> AlertGroup { get; set; }
             public class ListCloudGtmAvailableAlertGroupsResponseBodyAlertGroupsAlertGroup : TeaModel {
-                /// <summary>
-                /// <para>The name of the alert contact group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>[\&quot;Default\&quot;]</para>
-                /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }

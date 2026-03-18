@@ -73,9 +73,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string DefaultAddrPoolType { get; set; }
 
-        /// <summary>
-        /// <para>The address pools in the primary address pool group.</para>
-        /// </summary>
         [NameInMap("DefaultAddrPools")]
         [Validation(Required=false)]
         public DescribeDnsGtmAccessStrategyResponseBodyDefaultAddrPools DefaultAddrPools { get; set; }
@@ -84,42 +81,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmAccessStrategyResponseBodyDefaultAddrPoolsDefaultAddrPool> DefaultAddrPool { get; set; }
             public class DescribeDnsGtmAccessStrategyResponseBodyDefaultAddrPoolsDefaultAddrPool : TeaModel {
-                /// <summary>
-                /// <para>The number of addresses in the address pool.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("AddrCount")]
                 [Validation(Required=false)]
                 public int? AddrCount { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the address pool.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>pool1</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
-                /// <summary>
-                /// <para>The weight of the address pool.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("LbaWeight")]
                 [Validation(Required=false)]
                 public int? LbaWeight { get; set; }
 
-                /// <summary>
-                /// <para>The name of the address pool.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -229,9 +202,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string FailoverAddrPoolType { get; set; }
 
-        /// <summary>
-        /// <para>The address pools in the secondary address pool group.</para>
-        /// </summary>
         [NameInMap("FailoverAddrPools")]
         [Validation(Required=false)]
         public DescribeDnsGtmAccessStrategyResponseBodyFailoverAddrPools FailoverAddrPools { get; set; }
@@ -240,42 +210,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmAccessStrategyResponseBodyFailoverAddrPoolsFailoverAddrPool> FailoverAddrPool { get; set; }
             public class DescribeDnsGtmAccessStrategyResponseBodyFailoverAddrPoolsFailoverAddrPool : TeaModel {
-                /// <summary>
-                /// <para>The number of addresses in the address pool.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("AddrCount")]
                 [Validation(Required=false)]
                 public int? AddrCount { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the address pool.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>pool1</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
-                /// <summary>
-                /// <para>The weight of the address pool.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("LbaWeight")]
                 [Validation(Required=false)]
                 public int? LbaWeight { get; set; }
 
-                /// <summary>
-                /// <para>The name of the address pool.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -352,9 +298,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        /// <summary>
-        /// <para>The source regions.</para>
-        /// </summary>
         [NameInMap("Lines")]
         [Validation(Required=false)]
         public DescribeDnsGtmAccessStrategyResponseBodyLines Lines { get; set; }
@@ -363,42 +306,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmAccessStrategyResponseBodyLinesLine> Line { get; set; }
             public class DescribeDnsGtmAccessStrategyResponseBodyLinesLine : TeaModel {
-                /// <summary>
-                /// <para>The code of the source region group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>default</para>
-                /// </summary>
                 [NameInMap("GroupCode")]
                 [Validation(Required=false)]
                 public string GroupCode { get; set; }
 
-                /// <summary>
-                /// <para>The name of the source region group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>global</para>
-                /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
-                /// <summary>
-                /// <para>The line code of the source region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>default</para>
-                /// </summary>
                 [NameInMap("LineCode")]
                 [Validation(Required=false)]
                 public string LineCode { get; set; }
 
-                /// <summary>
-                /// <para>The line name of the source region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>global</para>
-                /// </summary>
                 [NameInMap("LineName")]
                 [Validation(Required=false)]
                 public string LineName { get; set; }

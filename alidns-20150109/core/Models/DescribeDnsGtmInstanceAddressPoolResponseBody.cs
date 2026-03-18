@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string AddrPoolId { get; set; }
 
-        /// <summary>
-        /// <para>The addresses in the address pool.</para>
-        /// </summary>
         [NameInMap("Addrs")]
         [Validation(Required=false)]
         public DescribeDnsGtmInstanceAddressPoolResponseBodyAddrs Addrs { get; set; }
@@ -40,116 +37,42 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDnsGtmInstanceAddressPoolResponseBodyAddrsAddr> Addr { get; set; }
             public class DescribeDnsGtmInstanceAddressPoolResponseBodyAddrsAddr : TeaModel {
-                /// <summary>
-                /// <para>The address.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1.1.1.1</para>
-                /// </summary>
                 [NameInMap("Addr")]
                 [Validation(Required=false)]
                 public string Addr { get; set; }
 
-                /// <summary>
-                /// <para>The status of the last health check on the address. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>OK: No active alerts are triggered.</description></item>
-                /// <item><description>ALERT: Alerts are triggered based on the alert rules.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ok</para>
-                /// </summary>
                 [NameInMap("AlertStatus")]
                 [Validation(Required=false)]
                 public string AlertStatus { get; set; }
 
-                /// <summary>
-                /// <para>The source region of the address.</para>
-                /// <list type="bullet">
-                /// <item><description>lineCode: the line code of the source region of the address. This parameter is deprecated, and lineCodes prevails.</description></item>
-                /// <item><description>lineName: the line name of the source region of the address. This parameter is deprecated.</description></item>
-                /// <item><description>lineCodes: the line codes of the source regions of the address.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>&quot;lineCode&quot;:&quot;aliyun_r_cn-zhangjiakou&quot;, &quot;lineName&quot;: &quot;Alibaba Cloud_China (Zhangjiakou)&quot;, &quot;lineCodes&quot;: [&quot;aliyun_r_cn-zhangjiakou&quot;]</para>
-                /// </summary>
                 [NameInMap("AttributeInfo")]
                 [Validation(Required=false)]
                 public string AttributeInfo { get; set; }
 
-                /// <summary>
-                /// <para>The time when the address was added into the address pool.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2017-12-28T13:08Z</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp that indicates the time when the address was added into the address pool.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1527690629357</para>
-                /// </summary>
                 [NameInMap("CreateTimestamp")]
                 [Validation(Required=false)]
                 public long? CreateTimestamp { get; set; }
 
-                /// <summary>
-                /// <para>The weight of the address.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("LbaWeight")]
                 [Validation(Required=false)]
                 public int? LbaWeight { get; set; }
 
-                /// <summary>
-                /// <para>The mode of the address. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>SMART: smart return</description></item>
-                /// <item><description>ONLINE: always online</description></item>
-                /// <item><description>OFFLINE: always offline</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>online</para>
-                /// </summary>
                 [NameInMap("Mode")]
                 [Validation(Required=false)]
                 public string Mode { get; set; }
 
-                /// <summary>
-                /// <para>The description of the address.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
 
-                /// <summary>
-                /// <para>The time when the address was last updated.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2017-12-28T13:08Z</para>
-                /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
                 public string UpdateTime { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp that indicates the time when the address was last updated.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1527690629357</para>
-                /// </summary>
                 [NameInMap("UpdateTimestamp")]
                 [Validation(Required=false)]
                 public long? UpdateTimestamp { get; set; }

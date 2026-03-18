@@ -73,42 +73,22 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<SearchRecursionZonesResponseBodyZonesZone> Zone { get; set; }
             public class SearchRecursionZonesResponseBodyZonesZone : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2022-10-17T06:13Z</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1749694625000</para>
-                /// </summary>
                 [NameInMap("CreateTimestamp")]
                 [Validation(Required=false)]
                 public long? CreateTimestamp { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <hr>
-                /// </summary>
                 [NameInMap("Creator")]
                 [Validation(Required=false)]
                 public string Creator { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>SUB</para>
-                /// </summary>
                 [NameInMap("CreatorSubType")]
                 [Validation(Required=false)]
                 public string CreatorSubType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>USER</para>
-                /// </summary>
                 [NameInMap("CreatorType")]
                 [Validation(Required=false)]
                 public string CreatorType { get; set; }
@@ -121,18 +101,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     [Validation(Required=false)]
                     public List<SearchRecursionZonesResponseBodyZonesZoneEffectiveScopesEffectiveScope> EffectiveScope { get; set; }
                     public class SearchRecursionZonesResponseBodyZonesZoneEffectiveScopesEffectiveScope : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>account</para>
-                        /// </summary>
                         [NameInMap("EffectiveType")]
                         [Validation(Required=false)]
                         public string EffectiveType { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>[20003]</para>
-                        /// </summary>
                         [NameInMap("Scopes")]
                         [Validation(Required=false)]
                         public SearchRecursionZonesResponseBodyZonesZoneEffectiveScopesEffectiveScopeScopes Scopes { get; set; }
@@ -147,58 +119,30 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>record</para>
-                /// </summary>
                 [NameInMap("ProxyPattern")]
                 [Validation(Required=false)]
                 public string ProxyPattern { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>20</para>
-                /// </summary>
                 [NameInMap("RecordCount")]
                 [Validation(Required=false)]
                 public int? RecordCount { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>107</para>
-                /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2024-08-13T01:44Z</para>
-                /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
                 public string UpdateTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1639621006000</para>
-                /// </summary>
                 [NameInMap("UpdateTimestamp")]
                 [Validation(Required=false)]
                 public long? UpdateTimestamp { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>169439170000011</para>
-                /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>ixiqiu.cn</para>
-                /// </summary>
                 [NameInMap("ZoneName")]
                 [Validation(Required=false)]
                 public string ZoneName { get; set; }

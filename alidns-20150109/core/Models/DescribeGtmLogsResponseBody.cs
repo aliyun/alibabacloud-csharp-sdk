@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmLogsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The list of logs returned.</para>
-        /// </summary>
         [NameInMap("Logs")]
         [Validation(Required=false)]
         public DescribeGtmLogsResponseBodyLogs Logs { get; set; }
@@ -20,92 +17,38 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeGtmLogsResponseBodyLogsLog> Log { get; set; }
             public class DescribeGtmLogsResponseBodyLogsLog : TeaModel {
-                /// <summary>
-                /// <para>The formatted message content.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>addtest-pool-1</para>
-                /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the object that was operated on.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>121212</para>
-                /// </summary>
                 [NameInMap("EntityId")]
                 [Validation(Required=false)]
                 public string EntityId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the object that was operated on.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test-pool-1</para>
-                /// </summary>
                 [NameInMap("EntityName")]
                 [Validation(Required=false)]
                 public string EntityName { get; set; }
 
-                /// <summary>
-                /// <para>The type of the object that was operated on.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>POOL</para>
-                /// </summary>
                 [NameInMap("EntityType")]
                 [Validation(Required=false)]
                 public string EntityType { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the log record.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>6726</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
-                /// <summary>
-                /// <para>The operation performed.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>add</para>
-                /// </summary>
                 [NameInMap("OperAction")]
                 [Validation(Required=false)]
                 public string OperAction { get; set; }
 
-                /// <summary>
-                /// <para>The IP address subject to the operation.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>106.11.34.X</para>
-                /// </summary>
                 [NameInMap("OperIp")]
                 [Validation(Required=false)]
                 public string OperIp { get; set; }
 
-                /// <summary>
-                /// <para>The time when the operation was performed.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2018-01-24T07:35Z</para>
-                /// </summary>
                 [NameInMap("OperTime")]
                 [Validation(Required=false)]
                 public string OperTime { get; set; }
 
-                /// <summary>
-                /// <para>A timestamp that indicates the time when the operation was performed.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1516779348000</para>
-                /// </summary>
                 [NameInMap("OperTimestamp")]
                 [Validation(Required=false)]
                 public long? OperTimestamp { get; set; }

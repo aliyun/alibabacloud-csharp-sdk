@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The DNS requests.</para>
-        /// </summary>
         [NameInMap("Statistics")]
         [Validation(Required=false)]
         public DescribeRecordStatisticsSummaryResponseBodyStatistics Statistics { get; set; }
@@ -50,22 +47,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeRecordStatisticsSummaryResponseBodyStatisticsStatistic> Statistic { get; set; }
             public class DescribeRecordStatisticsSummaryResponseBodyStatisticsStatistic : TeaModel {
-                /// <summary>
-                /// <para>The number of DNS requests.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>838711553</para>
-                /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public long? Count { get; set; }
 
-                /// <summary>
-                /// <para>The subdomain.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>t1.alitest2.com</para>
-                /// </summary>
                 [NameInMap("SubDomain")]
                 [Validation(Required=false)]
                 public string SubDomain { get; set; }

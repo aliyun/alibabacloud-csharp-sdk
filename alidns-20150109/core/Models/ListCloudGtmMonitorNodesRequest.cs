@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        [NameInMap("ShowDisabledNodes")]
+        [Validation(Required=false)]
+        public bool? ShowDisabledNodes { get; set; }
+
     }
 
 }

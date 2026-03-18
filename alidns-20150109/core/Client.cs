@@ -1219,7 +1219,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup task for a domain name.</para>
+        /// <para>Creates a backup for the domain name based on the specified domain name and backup cycle.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1269,7 +1269,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup task for a domain name.</para>
+        /// <para>Creates a backup for the domain name based on the specified domain name and backup cycle.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1319,7 +1319,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup task for a domain name.</para>
+        /// <para>Creates a backup for the domain name based on the specified domain name and backup cycle.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1337,7 +1337,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup task for a domain name.</para>
+        /// <para>Creates a backup for the domain name based on the specified domain name and backup cycle.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1665,6 +1665,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await AddDomainRecordWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to create an access policy for a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddGtmAccessStrategyRequest
         /// </param>
@@ -1722,6 +1727,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<AddGtmAccessStrategyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to create an access policy for a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddGtmAccessStrategyRequest
         /// </param>
@@ -1779,6 +1789,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<AddGtmAccessStrategyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to create an access policy for a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddGtmAccessStrategyRequest
         /// </param>
@@ -1792,6 +1807,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return AddGtmAccessStrategyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to create an access policy for a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddGtmAccessStrategyRequest
         /// </param>
@@ -2343,7 +2363,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增递归解析内置权威解析记录</para>
+        /// <para>Adds HTTPDNS authoritative DNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2421,7 +2441,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增递归解析内置权威解析记录</para>
+        /// <para>Adds HTTPDNS authoritative DNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2499,7 +2519,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增递归解析内置权威解析记录</para>
+        /// <para>Adds HTTPDNS authoritative DNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2517,7 +2537,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增递归解析内置权威解析记录</para>
+        /// <para>Adds HTTPDNS authoritative DNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2535,7 +2555,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增递归解析内置权威域名zone</para>
+        /// <para>Adds HTTPDNS zone</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2585,7 +2605,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增递归解析内置权威域名zone</para>
+        /// <para>Adds HTTPDNS zone</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2635,7 +2655,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增递归解析内置权威域名zone</para>
+        /// <para>Adds HTTPDNS zone</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2653,7 +2673,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增递归解析内置权威域名zone</para>
+        /// <para>Adds HTTPDNS zone</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4483,7 +4503,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建公共DNS AppKey</para>
+        /// <para>Creates an AppKey in Alibaba Cloud Public DNS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4529,7 +4549,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建公共DNS AppKey</para>
+        /// <para>Creates an AppKey in Alibaba Cloud Public DNS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4575,7 +4595,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建公共DNS AppKey</para>
+        /// <para>Creates an AppKey in Alibaba Cloud Public DNS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4593,7 +4613,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建公共DNS AppKey</para>
+        /// <para>Creates an AppKey in Alibaba Cloud Public DNS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5561,6 +5581,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DeleteDnsCacheDomainWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access policy by policy ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDnsGtmAccessStrategyRequest
         /// </param>
@@ -5602,6 +5627,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DeleteDnsGtmAccessStrategyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access policy by policy ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDnsGtmAccessStrategyRequest
         /// </param>
@@ -5643,6 +5673,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DeleteDnsGtmAccessStrategyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access policy by policy ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDnsGtmAccessStrategyRequest
         /// </param>
@@ -5656,6 +5691,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return DeleteDnsGtmAccessStrategyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an access policy by policy ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDnsGtmAccessStrategyRequest
         /// </param>
@@ -5669,6 +5709,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DeleteDnsGtmAccessStrategyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an address pool by address pool ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDnsGtmAddressPoolRequest
         /// </param>
@@ -5710,6 +5755,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DeleteDnsGtmAddressPoolResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an address pool by address pool ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDnsGtmAddressPoolRequest
         /// </param>
@@ -5751,6 +5801,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DeleteDnsGtmAddressPoolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an address pool by address pool ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDnsGtmAddressPoolRequest
         /// </param>
@@ -5764,6 +5819,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return DeleteDnsGtmAddressPoolWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an address pool by address pool ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDnsGtmAddressPoolRequest
         /// </param>
@@ -6197,6 +6257,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DeleteDomainRecordWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete an access policy of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGtmAccessStrategyRequest
         /// </param>
@@ -6238,6 +6303,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DeleteGtmAccessStrategyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete an access policy of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGtmAccessStrategyRequest
         /// </param>
@@ -6279,6 +6349,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DeleteGtmAccessStrategyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete an access policy of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGtmAccessStrategyRequest
         /// </param>
@@ -6292,6 +6367,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return DeleteGtmAccessStrategyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete an access policy of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGtmAccessStrategyRequest
         /// </param>
@@ -6305,6 +6385,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DeleteGtmAccessStrategyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete an address pool of a Global Traffic Manager (GTM).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGtmAddressPoolRequest
         /// </param>
@@ -6346,6 +6431,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DeleteGtmAddressPoolResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete an address pool of a Global Traffic Manager (GTM).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGtmAddressPoolRequest
         /// </param>
@@ -6387,6 +6477,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DeleteGtmAddressPoolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete an address pool of a Global Traffic Manager (GTM).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGtmAddressPoolRequest
         /// </param>
@@ -6400,6 +6495,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return DeleteGtmAddressPoolWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to delete an address pool of a Global Traffic Manager (GTM).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGtmAddressPoolRequest
         /// </param>
@@ -6413,6 +6513,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DeleteGtmAddressPoolWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a disaster recovery plan.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGtmRecoveryPlanRequest
         /// </param>
@@ -6454,6 +6559,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DeleteGtmRecoveryPlanResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a disaster recovery plan.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGtmRecoveryPlanRequest
         /// </param>
@@ -6495,6 +6605,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DeleteGtmRecoveryPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a disaster recovery plan.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGtmRecoveryPlanRequest
         /// </param>
@@ -6508,6 +6623,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return DeleteGtmRecoveryPlanWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a disaster recovery plan.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGtmRecoveryPlanRequest
         /// </param>
@@ -6523,7 +6643,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除递归解析内置权威解析记录</para>
+        /// <para>Deletes HTTPDNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6569,7 +6689,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除递归解析内置权威解析记录</para>
+        /// <para>Deletes HTTPDNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6615,7 +6735,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除递归解析内置权威解析记录</para>
+        /// <para>Deletes HTTPDNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6633,7 +6753,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除递归解析内置权威解析记录</para>
+        /// <para>Deletes HTTPDNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6651,7 +6771,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除递归解析内置权威域名zone</para>
+        /// <para>Deletes HTTPDNS authoritative domain zone</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6697,7 +6817,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除递归解析内置权威域名zone</para>
+        /// <para>Deletes HTTPDNS authoritative domain zone</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6743,7 +6863,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除递归解析内置权威域名zone</para>
+        /// <para>Deletes HTTPDNS authoritative domain zone</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6761,7 +6881,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除递归解析内置权威域名zone</para>
+        /// <para>Deletes HTTPDNS authoritative domain zone</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8941,7 +9061,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询代理域名</para>
+        /// <para>Queries cache-accelerated domain names within your account based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8995,7 +9115,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询代理域名</para>
+        /// <para>Queries cache-accelerated domain names within your account based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9049,7 +9169,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询代理域名</para>
+        /// <para>Queries cache-accelerated domain names within your account based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9067,7 +9187,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询代理域名</para>
+        /// <para>Queries cache-accelerated domain names within your account based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9085,7 +9205,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access policies of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the access policies of a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9143,7 +9263,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access policies of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the access policies of a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9201,7 +9321,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access policies of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the access policies of a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9219,7 +9339,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access policies of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the access policies of a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9237,7 +9357,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about an access policy of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the details about an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9283,7 +9403,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about an access policy of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the details about an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9329,7 +9449,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about an access policy of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the details about an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9347,7 +9467,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about an access policy of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the details about an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9365,7 +9485,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available configurations of an access policy of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the configuration items that can be set for an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9415,7 +9535,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available configurations of an access policy of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the configuration items that can be set for an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9465,7 +9585,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available configurations of an access policy of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the configuration items that can be set for an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9483,7 +9603,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available configurations of an access policy of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the configuration items that can be set for an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9637,7 +9757,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available configurations of an address pool of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the available configurations of an address pool of a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9683,7 +9803,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available configurations of an address pool of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the available configurations of an address pool of a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9729,7 +9849,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available configurations of an address pool of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the available configurations of an address pool of a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9747,7 +9867,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available configurations of an address pool of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the available configurations of an address pool of a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9763,6 +9883,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeDnsGtmAddressPoolAvailableConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available alert groups of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDnsGtmAvailableAlertGroupRequest
         /// </param>
@@ -9800,6 +9925,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDnsGtmAvailableAlertGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available alert groups of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDnsGtmAvailableAlertGroupRequest
         /// </param>
@@ -9837,6 +9967,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDnsGtmAvailableAlertGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available alert groups of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDnsGtmAvailableAlertGroupRequest
         /// </param>
@@ -9850,6 +9985,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return DescribeDnsGtmAvailableAlertGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available alert groups of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDnsGtmAvailableAlertGroupRequest
         /// </param>
@@ -9865,7 +10005,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Obtains the details of an instance based on the ID of the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9911,7 +10051,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Obtains the details of an instance based on the ID of the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9957,7 +10097,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Obtains the details of an instance based on the ID of the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9975,7 +10115,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Obtains the details of an instance based on the ID of the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9993,7 +10133,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about an address pool of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries detailed information about an address pool by address pool ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10039,7 +10179,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about an address pool of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries detailed information about an address pool by address pool ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10085,7 +10225,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about an address pool of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries detailed information about an address pool by address pool ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10103,7 +10243,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about an address pool of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries detailed information about an address pool by address pool ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10121,7 +10261,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the address pools of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries address pools by the IDs of GTM instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10175,7 +10315,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the address pools of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries address pools by the IDs of GTM instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10229,7 +10369,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the address pools of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries address pools by the IDs of GTM instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10247,7 +10387,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the address pools of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries address pools by the IDs of GTM instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10265,7 +10405,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Obtains the current status of the instance by instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10311,7 +10451,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Obtains the current status of the instance by instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10357,7 +10497,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Obtains the current status of the instance by instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10375,7 +10515,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Obtains the current status of the instance by instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10393,7 +10533,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the CNAME domain name assigned by the system for a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the canonical name (CNAME) assigned by the system for a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10439,7 +10579,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the CNAME domain name assigned by the system for a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the canonical name (CNAME) assigned by the system for a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10485,7 +10625,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the CNAME domain name assigned by the system for a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the canonical name (CNAME) assigned by the system for a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10503,7 +10643,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the CNAME domain name assigned by the system for a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries the canonical name (CNAME) assigned by the system for a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10673,7 +10813,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries operation logs of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Obtains the operation logs by instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10739,7 +10879,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries operation logs of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Obtains the operation logs by instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10805,7 +10945,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries operation logs of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Obtains the operation logs by instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10823,7 +10963,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries operation logs of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Obtains the operation logs by instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11427,6 +11567,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeDnsProductInstancesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on DoH-based requests for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohAccountStatisticsRequest
         /// </param>
@@ -11472,6 +11617,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDohAccountStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on DoH-based requests for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohAccountStatisticsRequest
         /// </param>
@@ -11517,6 +11667,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDohAccountStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on DoH-based requests for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohAccountStatisticsRequest
         /// </param>
@@ -11530,6 +11685,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return DescribeDohAccountStatisticsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on DoH-based requests for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohAccountStatisticsRequest
         /// </param>
@@ -11545,7 +11705,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DOH域名请求量数据</para>
+        /// <para>The statistics on DoH-based requests for a domain name are queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11599,7 +11759,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DOH域名请求量数据</para>
+        /// <para>The statistics on DoH-based requests for a domain name are queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11653,7 +11813,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DOH域名请求量数据</para>
+        /// <para>The statistics on DoH-based requests for a domain name are queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11671,7 +11831,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DOH域名请求量数据</para>
+        /// <para>The statistics on DoH-based requests for a domain name are queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11687,6 +11847,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeDohDomainStatisticsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on DoH-based requests for domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohDomainStatisticsSummaryRequest
         /// </param>
@@ -11744,6 +11909,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDohDomainStatisticsSummaryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on DoH-based requests for domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohDomainStatisticsSummaryRequest
         /// </param>
@@ -11801,6 +11971,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDohDomainStatisticsSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on DoH-based requests for domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohDomainStatisticsSummaryRequest
         /// </param>
@@ -11814,6 +11989,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return DescribeDohDomainStatisticsSummaryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on DoH-based requests for domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohDomainStatisticsSummaryRequest
         /// </param>
@@ -11827,6 +12007,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeDohDomainStatisticsSummaryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the statistics on DoH-based requests for a subdomain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohSubDomainStatisticsRequest
         /// </param>
@@ -11876,6 +12061,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDohSubDomainStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the statistics on DoH-based requests for a subdomain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohSubDomainStatisticsRequest
         /// </param>
@@ -11925,6 +12115,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDohSubDomainStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the statistics on DoH-based requests for a subdomain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohSubDomainStatisticsRequest
         /// </param>
@@ -11938,6 +12133,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return DescribeDohSubDomainStatisticsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the statistics on DoH-based requests for a subdomain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohSubDomainStatisticsRequest
         /// </param>
@@ -11951,6 +12151,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeDohSubDomainStatisticsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on DoH-based requests for subdomain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohSubDomainStatisticsSummaryRequest
         /// </param>
@@ -12012,6 +12217,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDohSubDomainStatisticsSummaryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on DoH-based requests for subdomain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohSubDomainStatisticsSummaryRequest
         /// </param>
@@ -12073,6 +12283,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDohSubDomainStatisticsSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on DoH-based requests for subdomain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohSubDomainStatisticsSummaryRequest
         /// </param>
@@ -12086,6 +12301,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return DescribeDohSubDomainStatisticsSummaryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on DoH-based requests for subdomain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohSubDomainStatisticsSummaryRequest
         /// </param>
@@ -14575,6 +14795,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeGtmAccessStrategyAvailableConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the available alert groups for a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGtmAvailableAlertGroupRequest
         /// </param>
@@ -14612,6 +14837,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeGtmAvailableAlertGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the available alert groups for a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGtmAvailableAlertGroupRequest
         /// </param>
@@ -14649,6 +14879,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeGtmAvailableAlertGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the available alert groups for a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGtmAvailableAlertGroupRequest
         /// </param>
@@ -14662,6 +14897,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return DescribeGtmAvailableAlertGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the available alert groups for a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGtmAvailableAlertGroupRequest
         /// </param>
@@ -15211,6 +15451,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeGtmInstanceStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the CNAME record assigned by the system.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGtmInstanceSystemCnameRequest
         /// </param>
@@ -15252,6 +15497,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeGtmInstanceSystemCnameResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the CNAME record assigned by the system.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGtmInstanceSystemCnameRequest
         /// </param>
@@ -15293,6 +15543,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeGtmInstanceSystemCnameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the CNAME record assigned by the system.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGtmInstanceSystemCnameRequest
         /// </param>
@@ -15306,6 +15561,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return DescribeGtmInstanceSystemCnameWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to query the CNAME record assigned by the system.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGtmInstanceSystemCnameRequest
         /// </param>
@@ -16145,7 +16405,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the disaster recovery plans for a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries disaster recovery plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16199,7 +16459,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the disaster recovery plans for a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries disaster recovery plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16253,7 +16513,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the disaster recovery plans for a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries disaster recovery plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16271,7 +16531,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the disaster recovery plans for a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Queries disaster recovery plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17801,7 +18061,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics on requests for Alibaba Cloud Public DNS.</para>
+        /// <para>Queries the number of requests for public DNS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17863,7 +18123,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics on requests for Alibaba Cloud Public DNS.</para>
+        /// <para>Queries the number of requests for public DNS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17925,7 +18185,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics on requests for Alibaba Cloud Public DNS.</para>
+        /// <para>Queries the number of requests for public DNS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17943,7 +18203,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics on requests for Alibaba Cloud Public DNS.</para>
+        /// <para>Queries the number of requests for public DNS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19685,7 +19945,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询递归解析内置权威解析记录详情</para>
+        /// <para>Queries the details of HTTPDNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19727,7 +19987,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询递归解析内置权威解析记录详情</para>
+        /// <para>Queries the details of HTTPDNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19769,7 +20029,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询递归解析内置权威解析记录详情</para>
+        /// <para>Queries the details of HTTPDNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19787,7 +20047,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询递归解析内置权威解析记录详情</para>
+        /// <para>Queries the details of HTTPDNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20101,7 +20361,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询支持的所有线路</para>
+        /// <para>Queries all lines that are supported by Alibaba Cloud DNS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20151,7 +20411,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询支持的所有线路</para>
+        /// <para>Queries all lines that are supported by Alibaba Cloud DNS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20201,7 +20461,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询支持的所有线路</para>
+        /// <para>Queries all lines that are supported by Alibaba Cloud DNS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20219,7 +20479,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询支持的所有线路</para>
+        /// <para>Queries all lines that are supported by Alibaba Cloud DNS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21781,7 +22041,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Global Traffic Manager (GTM) 3.0 instances.</para>
+        /// <para>Obtains the GTM 3.0 instances based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21847,7 +22107,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Global Traffic Manager (GTM) 3.0 instances.</para>
+        /// <para>Obtains the GTM 3.0 instances based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21913,7 +22173,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Global Traffic Manager (GTM) 3.0 instances.</para>
+        /// <para>Obtains the GTM 3.0 instances based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21931,7 +22191,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Global Traffic Manager (GTM) 3.0 instances.</para>
+        /// <para>Obtains the GTM 3.0 instances based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21969,6 +22229,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowDisabledNodes))
+            {
+                query["ShowDisabledNodes"] = request.ShowDisabledNodes;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -22011,6 +22275,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowDisabledNodes))
+            {
+                query["ShowDisabledNodes"] = request.ShowDisabledNodes;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -22069,7 +22337,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of health check templates.</para>
+        /// <para>Queries a list of health check templates based on specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22131,7 +22399,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of health check templates.</para>
+        /// <para>Queries a list of health check templates based on specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22193,7 +22461,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of health check templates.</para>
+        /// <para>Queries a list of health check templates based on specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22211,7 +22479,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of health check templates.</para>
+        /// <para>Queries a list of health check templates based on specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22229,7 +22497,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询递归解析内置权威解析记录</para>
+        /// <para>Queries the record details of HTTPDNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22315,7 +22583,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询递归解析内置权威解析记录</para>
+        /// <para>Queries the record details of HTTPDNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22401,7 +22669,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询递归解析内置权威解析记录</para>
+        /// <para>Queries the record details of HTTPDNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22419,7 +22687,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询递归解析内置权威解析记录</para>
+        /// <para>Queries the record details of HTTPDNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22437,7 +22705,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询递归解析内置权威域名zone</para>
+        /// <para>Queries HTTPDNS authoritative zones</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22499,7 +22767,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询递归解析内置权威域名zone</para>
+        /// <para>Queries HTTPDNS authoritative zones</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22561,7 +22829,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询递归解析内置权威域名zone</para>
+        /// <para>Queries HTTPDNS authoritative zones</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22579,7 +22847,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询递归解析内置权威域名zone</para>
+        /// <para>Queries HTTPDNS authoritative zones</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23493,7 +23761,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to preview a disaster recovery plan of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Views disaster recovery plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23547,7 +23815,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to preview a disaster recovery plan of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Views disaster recovery plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23601,7 +23869,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to preview a disaster recovery plan of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Views disaster recovery plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23619,7 +23887,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to preview a disaster recovery plan of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Views disaster recovery plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24417,7 +24685,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces address pools that are associated with a Global Traffic Manager (GTM) 3.0 instance with new address pools.</para>
+        /// <para>Replaces address pools that are associated with a GTM instance with new address pools.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24481,7 +24749,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces address pools that are associated with a Global Traffic Manager (GTM) 3.0 instance with new address pools.</para>
+        /// <para>Replaces address pools that are associated with a GTM instance with new address pools.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24545,7 +24813,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces address pools that are associated with a Global Traffic Manager (GTM) 3.0 instance with new address pools.</para>
+        /// <para>Replaces address pools that are associated with a GTM instance with new address pools.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24563,7 +24831,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces address pools that are associated with a Global Traffic Manager (GTM) 3.0 instance with new address pools.</para>
+        /// <para>Replaces address pools that are associated with a GTM instance with new address pools.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26669,7 +26937,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an access policy.</para>
+        /// <para>Modifies the access policy that is available in address pools.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26724,7 +26992,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an access policy.</para>
+        /// <para>Modifies the access policy that is available in address pools.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26779,7 +27047,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an access policy.</para>
+        /// <para>Modifies the access policy that is available in address pools.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26802,7 +27070,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an access policy.</para>
+        /// <para>Modifies the access policy that is available in address pools.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27375,6 +27643,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await SetGtmAccessModeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to enable health check for an address pool of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetGtmMonitorStatusRequest
         /// </param>
@@ -27420,6 +27693,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<SetGtmMonitorStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to enable health check for an address pool of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetGtmMonitorStatusRequest
         /// </param>
@@ -27465,6 +27743,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<SetGtmMonitorStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to enable health check for an address pool of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetGtmMonitorStatusRequest
         /// </param>
@@ -27478,6 +27761,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return SetGtmMonitorStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to enable health check for an address pool of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetGtmMonitorStatusRequest
         /// </param>
@@ -27637,7 +27925,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the access policy type for a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Changes the access policy type for a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27687,7 +27975,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the access policy type for a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Changes the access policy type for a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27737,7 +28025,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the access policy type for a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Changes the access policy type for a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27755,7 +28043,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the access policy type for a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Changes the access policy type for a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30293,7 +30581,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the enabling status of an access domain name.</para>
+        /// <para>Updates the enabling status of an access domain name based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -30359,7 +30647,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the enabling status of an access domain name.</para>
+        /// <para>Updates the enabling status of an access domain name based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -30425,7 +30713,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the enabling status of an access domain name.</para>
+        /// <para>Updates the enabling status of an access domain name based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -30451,7 +30739,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the enabling status of an access domain name.</para>
+        /// <para>Updates the enabling status of an access domain name based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -30477,7 +30765,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the load balancing policy of a Global Traffic Manager (GTM) 3.0 instance.</para>
+        /// <para>Updates the load balancing policy of a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30539,7 +30827,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the load balancing policy of a Global Traffic Manager (GTM) 3.0 instance.</para>
+        /// <para>Updates the load balancing policy of a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30601,7 +30889,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the load balancing policy of a Global Traffic Manager (GTM) 3.0 instance.</para>
+        /// <para>Updates the load balancing policy of a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30619,7 +30907,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the load balancing policy of a Global Traffic Manager (GTM) 3.0 instance.</para>
+        /// <para>Updates the load balancing policy of a GTM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30637,7 +30925,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a Global Traffic Manager (GTM) 3.0 instance.</para>
+        /// <para>Updates the description of a GTM instance based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30695,7 +30983,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a Global Traffic Manager (GTM) 3.0 instance.</para>
+        /// <para>Updates the description of a GTM instance based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30753,7 +31041,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a Global Traffic Manager (GTM) 3.0 instance.</para>
+        /// <para>Updates the description of a GTM instance based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30771,7 +31059,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a Global Traffic Manager (GTM) 3.0 instance.</para>
+        /// <para>Updates the description of a GTM instance based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30913,7 +31201,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a health check template.</para>
+        /// <para>Modifies the information about a health check template based on specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30997,7 +31285,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a health check template.</para>
+        /// <para>Modifies the information about a health check template based on specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31081,7 +31369,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a health check template.</para>
+        /// <para>Modifies the information about a health check template based on specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31099,7 +31387,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a health check template.</para>
+        /// <para>Modifies the information about a health check template based on specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32113,7 +32401,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an address pool.</para>
+        /// <para>Modifies an address pool based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32171,7 +32459,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an address pool.</para>
+        /// <para>Modifies an address pool based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32229,7 +32517,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an address pool.</para>
+        /// <para>Modifies an address pool based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32247,7 +32535,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an address pool.</para>
+        /// <para>Modifies an address pool based on the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32265,7 +32553,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Modifies the configurations of a Global Traffic Manager (GTM) instance by instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32351,7 +32639,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Modifies the configurations of a Global Traffic Manager (GTM) instance by instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32437,7 +32725,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Modifies the configurations of a Global Traffic Manager (GTM) instance by instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32455,7 +32743,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a Global Traffic Manager (GTM) instance.</para>
+        /// <para>Modifies the configurations of a Global Traffic Manager (GTM) instance by instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33267,6 +33555,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await UpdateDomainRemarkWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the access policy of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateGtmAccessStrategyRequest
         /// </param>
@@ -33324,6 +33617,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<UpdateGtmAccessStrategyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the access policy of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateGtmAccessStrategyRequest
         /// </param>
@@ -33381,6 +33679,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<UpdateGtmAccessStrategyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the access policy of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateGtmAccessStrategyRequest
         /// </param>
@@ -33394,6 +33697,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return UpdateGtmAccessStrategyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify the access policy of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateGtmAccessStrategyRequest
         /// </param>
@@ -33407,6 +33715,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await UpdateGtmAccessStrategyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify an address pool of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateGtmAddressPoolRequest
         /// </param>
@@ -33464,6 +33777,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<UpdateGtmAddressPoolResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify an address pool of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateGtmAddressPoolRequest
         /// </param>
@@ -33521,6 +33839,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<UpdateGtmAddressPoolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify an address pool of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateGtmAddressPoolRequest
         /// </param>
@@ -33534,6 +33857,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return UpdateGtmAddressPoolWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to modify an address pool of a Global Traffic Manager (GTM) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateGtmAddressPoolRequest
         /// </param>
@@ -34197,7 +34525,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威解析记录</para>
+        /// <para>Modifies HTTPDNS resolution records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34271,7 +34599,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威解析记录</para>
+        /// <para>Modifies HTTPDNS resolution records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34345,7 +34673,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威解析记录</para>
+        /// <para>Modifies HTTPDNS resolution records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34363,7 +34691,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威解析记录</para>
+        /// <para>Modifies HTTPDNS resolution records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34381,7 +34709,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改内置权威解析记录启用状态</para>
+        /// <para>Modifies the status of HTTPDNS authoritative DNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34431,7 +34759,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改内置权威解析记录启用状态</para>
+        /// <para>Modifies the status of HTTPDNS authoritative DNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34481,7 +34809,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改内置权威解析记录启用状态</para>
+        /// <para>Modifies the status of HTTPDNS authoritative DNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34499,7 +34827,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改内置权威解析记录启用状态</para>
+        /// <para>Modifies the status of HTTPDNS authoritative DNS resolution records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34517,7 +34845,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威解析记录备注</para>
+        /// <para>Modifies description of HTTPDNS resolution records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34567,7 +34895,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威解析记录备注</para>
+        /// <para>Modifies description of HTTPDNS resolution records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34617,7 +34945,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威解析记录备注</para>
+        /// <para>Modifies description of HTTPDNS resolution records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34635,7 +34963,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威解析记录备注</para>
+        /// <para>Modifies description of HTTPDNS resolution records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34653,7 +34981,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威解析记录权重</para>
+        /// <para>Modifies HTTPDNS authoritative DNS resolution record weights.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34703,7 +35031,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威解析记录权重</para>
+        /// <para>Modifies HTTPDNS authoritative DNS resolution record weights.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34753,7 +35081,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威解析记录权重</para>
+        /// <para>Modifies HTTPDNS authoritative DNS resolution record weights.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34771,7 +35099,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威解析记录权重</para>
+        /// <para>Modifies HTTPDNS authoritative DNS resolution record weights.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34789,7 +35117,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威解析记录权重算法启用状态</para>
+        /// <para>Modifies the status of weight algorithm of authoritative records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34851,7 +35179,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威解析记录权重算法启用状态</para>
+        /// <para>Modifies the status of weight algorithm of authoritative records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34913,7 +35241,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威解析记录权重算法启用状态</para>
+        /// <para>Modifies the status of weight algorithm of authoritative records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34931,7 +35259,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威解析记录权重算法启用状态</para>
+        /// <para>Modifies the status of weight algorithm of authoritative records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34949,7 +35277,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威域名zone生效范围</para>
+        /// <para>Modifies the effective scope of HTTPDNS</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35005,7 +35333,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威域名zone生效范围</para>
+        /// <para>Modifies the effective scope of HTTPDNS</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35061,7 +35389,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威域名zone生效范围</para>
+        /// <para>Modifies the effective scope of HTTPDNS</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35079,7 +35407,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威域名zone生效范围</para>
+        /// <para>Modifies the effective scope of HTTPDNS</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35097,7 +35425,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威域名zone递归代理模式</para>
+        /// <para>Modify the HTTPDNS recursive proxy mode</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35147,7 +35475,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威域名zone递归代理模式</para>
+        /// <para>Modify the HTTPDNS recursive proxy mode</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35197,7 +35525,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威域名zone递归代理模式</para>
+        /// <para>Modify the HTTPDNS recursive proxy mode</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35215,7 +35543,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威域名zone递归代理模式</para>
+        /// <para>Modify the HTTPDNS recursive proxy mode</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35233,7 +35561,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威域名zone备注</para>
+        /// <para>Modifies the description of HTTPDNS authoritative domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35283,7 +35611,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威域名zone备注</para>
+        /// <para>Modifies the description of HTTPDNS authoritative domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35333,7 +35661,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威域名zone备注</para>
+        /// <para>Modifies the description of HTTPDNS authoritative domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35351,7 +35679,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改递归解析内置权威域名zone备注</para>
+        /// <para>Modifies the description of HTTPDNS authoritative domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">

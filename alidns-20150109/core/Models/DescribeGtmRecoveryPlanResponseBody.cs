@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public int? FaultAddrPoolNum { get; set; }
 
-        /// <summary>
-        /// <para>The faulty address pools.</para>
-        /// </summary>
         [NameInMap("FaultAddrPools")]
         [Validation(Required=false)]
         public DescribeGtmRecoveryPlanResponseBodyFaultAddrPools FaultAddrPools { get; set; }
@@ -50,19 +47,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool> FaultAddrPool { get; set; }
             public class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool : TeaModel {
-                /// <summary>
-                /// <para>The address pool ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>hra0oq</para>
-                /// </summary>
                 [NameInMap("AddrPoolId")]
                 [Validation(Required=false)]
                 public string AddrPoolId { get; set; }
 
-                /// <summary>
-                /// <para>The address pool name.</para>
-                /// </summary>
                 [NameInMap("AddrPoolName")]
                 [Validation(Required=false)]
                 public string AddrPoolName { get; set; }
@@ -75,32 +63,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     [Validation(Required=false)]
                     public List<DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrsAddr> Addr { get; set; }
                     public class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrsAddr : TeaModel {
-                        /// <summary>
-                        /// <para>The address ID.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>739</para>
-                        /// </summary>
                         [NameInMap("Id")]
                         [Validation(Required=false)]
                         public long? Id { get; set; }
 
-                        /// <summary>
-                        /// <para>The address mode.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>OFFLINE</para>
-                        /// </summary>
                         [NameInMap("Mode")]
                         [Validation(Required=false)]
                         public string Mode { get; set; }
 
-                        /// <summary>
-                        /// <para>The address.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>1.1.1.1</para>
-                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -109,12 +79,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
                 }
 
-                /// <summary>
-                /// <para>The instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>instance-zwy-38</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }

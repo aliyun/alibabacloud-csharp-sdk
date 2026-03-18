@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainGroupsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The domain name groups.</para>
-        /// </summary>
         [NameInMap("DomainGroups")]
         [Validation(Required=false)]
         public DescribeDomainGroupsResponseBodyDomainGroups DomainGroups { get; set; }
@@ -20,36 +17,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDomainGroupsResponseBodyDomainGroupsDomainGroup> DomainGroup { get; set; }
             public class DescribeDomainGroupsResponseBodyDomainGroupsDomainGroup : TeaModel {
-                /// <summary>
-                /// <para>The number of domain name groups.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("DomainCount")]
                 [Validation(Required=false)]
                 public long? DomainCount { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the domain name group. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>defaultGroup: the default group</description></item>
-                /// <item><description>If an empty string is returned, it indicates the group that contains all domain names.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2223</para>
-                /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the domain name group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>MyGroup</para>
-                /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainLogsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The operation logs.</para>
-        /// </summary>
         [NameInMap("DomainLogs")]
         [Validation(Required=false)]
         public DescribeDomainLogsResponseBodyDomainLogs DomainLogs { get; set; }
@@ -20,72 +17,30 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeDomainLogsResponseBodyDomainLogsDomainLog> DomainLog { get; set; }
             public class DescribeDomainLogsResponseBodyDomainLogsDomainLog : TeaModel {
-                /// <summary>
-                /// <para>The operation.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Add</para>
-                /// </summary>
                 [NameInMap("Action")]
                 [Validation(Required=false)]
                 public string Action { get; set; }
 
-                /// <summary>
-                /// <para>The time when the operation is performed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-12-12T09:23Z</para>
-                /// </summary>
                 [NameInMap("ActionTime")]
                 [Validation(Required=false)]
                 public string ActionTime { get; set; }
 
-                /// <summary>
-                /// <para>The time when the operation was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>143562300000</para>
-                /// </summary>
                 [NameInMap("ActionTimestamp")]
                 [Validation(Required=false)]
                 public long? ActionTimestamp { get; set; }
 
-                /// <summary>
-                /// <para>The IP address of the operator.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>182.92.253.20</para>
-                /// </summary>
                 [NameInMap("ClientIp")]
                 [Validation(Required=false)]
                 public string ClientIp { get; set; }
 
-                /// <summary>
-                /// <para>The domain name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>abc.com</para>
-                /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
-                /// <summary>
-                /// <para>The message for the operation.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>To the DNS record list</para>
-                /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the private zone.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cxfd345sd234</para>
-                /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }

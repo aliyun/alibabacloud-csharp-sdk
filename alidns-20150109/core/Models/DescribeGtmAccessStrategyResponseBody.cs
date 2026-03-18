@@ -117,9 +117,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        /// <summary>
-        /// <para>The returned lines of access regions.</para>
-        /// </summary>
         [NameInMap("Lines")]
         [Validation(Required=false)]
         public DescribeGtmAccessStrategyResponseBodyLines Lines { get; set; }
@@ -128,42 +125,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<DescribeGtmAccessStrategyResponseBodyLinesLine> Line { get; set; }
             public class DescribeGtmAccessStrategyResponseBodyLinesLine : TeaModel {
-                /// <summary>
-                /// <para>The code of the access region group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>DEFAULT</para>
-                /// </summary>
                 [NameInMap("GroupCode")]
                 [Validation(Required=false)]
                 public string GroupCode { get; set; }
 
-                /// <summary>
-                /// <para>The name of the access region group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Global</para>
-                /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
-                /// <summary>
-                /// <para>The code for the line of the access region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>default</para>
-                /// </summary>
                 [NameInMap("LineCode")]
                 [Validation(Required=false)]
                 public string LineCode { get; set; }
 
-                /// <summary>
-                /// <para>The name for the line of the access region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Global</para>
-                /// </summary>
                 [NameInMap("LineName")]
                 [Validation(Required=false)]
                 public string LineName { get; set; }
