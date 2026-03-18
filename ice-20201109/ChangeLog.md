@@ -1,3 +1,6 @@
+2026-03-18 Version: 6.12.1
+- Generated csharp 2020-11-09 for ICE.
+
 2026-03-17 Version: 6.12.0
 - Support API GetYikeStoryboardJob.
 - Support API SubmitYikeStoryboardJob.
