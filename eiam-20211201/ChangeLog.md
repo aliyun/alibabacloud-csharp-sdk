@@ -1,3 +1,14 @@
+2026-03-18 Version: 1.23.0
+- Support API CreateCredentialProvider.
+- Support API DeleteCredentialProvider.
+- Support API DisableCredentialProvider.
+- Support API EnableCredentialProvider.
+- Support API GetCredentialProvider.
+- Support API ListCredentialProviders.
+- Support API UpdateCredentialProvider.
+- Support API UpdateCredentialProviderDescription.
+
+
 2026-03-13 Version: 1.22.0
 - Support API GenerateWebAuthnAuthenticatorRegistrationUrl.
 - Update API ListCredentials: add request parameters CredentialTypes.

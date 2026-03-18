@@ -4931,6 +4931,174 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCredentialProviderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCredentialProviderResponse
+        /// </returns>
+        public CreateCredentialProviderResponse CreateCredentialProviderWithOptions(CreateCredentialProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderConfig))
+            {
+                query["CredentialProviderConfig"] = request.CredentialProviderConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderIdentifier))
+            {
+                query["CredentialProviderIdentifier"] = request.CredentialProviderIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderName))
+            {
+                query["CredentialProviderName"] = request.CredentialProviderName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderType))
+            {
+                query["CredentialProviderType"] = request.CredentialProviderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCredentialProvider",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCredentialProviderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCredentialProviderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCredentialProviderResponse
+        /// </returns>
+        public async Task<CreateCredentialProviderResponse> CreateCredentialProviderWithOptionsAsync(CreateCredentialProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderConfig))
+            {
+                query["CredentialProviderConfig"] = request.CredentialProviderConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderIdentifier))
+            {
+                query["CredentialProviderIdentifier"] = request.CredentialProviderIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderName))
+            {
+                query["CredentialProviderName"] = request.CredentialProviderName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderType))
+            {
+                query["CredentialProviderType"] = request.CredentialProviderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCredentialProvider",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCredentialProviderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCredentialProviderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCredentialProviderResponse
+        /// </returns>
+        public CreateCredentialProviderResponse CreateCredentialProvider(CreateCredentialProviderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCredentialProviderWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCredentialProviderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCredentialProviderResponse
+        /// </returns>
+        public async Task<CreateCredentialProviderResponse> CreateCredentialProviderAsync(CreateCredentialProviderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCredentialProviderWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建扩展字段</para>
         /// </summary>
         /// 
@@ -9163,6 +9331,134 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>启用凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCredentialProviderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCredentialProviderResponse
+        /// </returns>
+        public DeleteCredentialProviderResponse DeleteCredentialProviderWithOptions(DeleteCredentialProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderId))
+            {
+                query["CredentialProviderId"] = request.CredentialProviderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCredentialProvider",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCredentialProviderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCredentialProviderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCredentialProviderResponse
+        /// </returns>
+        public async Task<DeleteCredentialProviderResponse> DeleteCredentialProviderWithOptionsAsync(DeleteCredentialProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderId))
+            {
+                query["CredentialProviderId"] = request.CredentialProviderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCredentialProvider",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCredentialProviderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCredentialProviderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCredentialProviderResponse
+        /// </returns>
+        public DeleteCredentialProviderResponse DeleteCredentialProvider(DeleteCredentialProviderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteCredentialProviderWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCredentialProviderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCredentialProviderResponse
+        /// </returns>
+        public async Task<DeleteCredentialProviderResponse> DeleteCredentialProviderAsync(DeleteCredentialProviderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteCredentialProviderWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>删除扩展字段</para>
         /// </summary>
         /// 
@@ -13283,6 +13579,134 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>禁用凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableCredentialProviderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableCredentialProviderResponse
+        /// </returns>
+        public DisableCredentialProviderResponse DisableCredentialProviderWithOptions(DisableCredentialProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderId))
+            {
+                query["CredentialProviderId"] = request.CredentialProviderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableCredentialProvider",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableCredentialProviderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>禁用凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableCredentialProviderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableCredentialProviderResponse
+        /// </returns>
+        public async Task<DisableCredentialProviderResponse> DisableCredentialProviderWithOptionsAsync(DisableCredentialProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderId))
+            {
+                query["CredentialProviderId"] = request.CredentialProviderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableCredentialProvider",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableCredentialProviderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>禁用凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableCredentialProviderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableCredentialProviderResponse
+        /// </returns>
+        public DisableCredentialProviderResponse DisableCredentialProvider(DisableCredentialProviderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DisableCredentialProviderWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>禁用凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableCredentialProviderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableCredentialProviderResponse
+        /// </returns>
+        public async Task<DisableCredentialProviderResponse> DisableCredentialProviderAsync(DisableCredentialProviderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DisableCredentialProviderWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>禁用字段</para>
         /// </summary>
         /// 
@@ -16703,6 +17127,134 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableCredentialWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCredentialProviderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCredentialProviderResponse
+        /// </returns>
+        public EnableCredentialProviderResponse EnableCredentialProviderWithOptions(EnableCredentialProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderId))
+            {
+                query["CredentialProviderId"] = request.CredentialProviderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableCredentialProvider",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableCredentialProviderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCredentialProviderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCredentialProviderResponse
+        /// </returns>
+        public async Task<EnableCredentialProviderResponse> EnableCredentialProviderWithOptionsAsync(EnableCredentialProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderId))
+            {
+                query["CredentialProviderId"] = request.CredentialProviderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableCredentialProvider",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableCredentialProviderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCredentialProviderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCredentialProviderResponse
+        /// </returns>
+        public EnableCredentialProviderResponse EnableCredentialProvider(EnableCredentialProviderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnableCredentialProviderWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCredentialProviderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCredentialProviderResponse
+        /// </returns>
+        public async Task<EnableCredentialProviderResponse> EnableCredentialProviderAsync(EnableCredentialProviderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnableCredentialProviderWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -21283,6 +21835,134 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetCredentialWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询凭据提供商详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCredentialProviderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCredentialProviderResponse
+        /// </returns>
+        public GetCredentialProviderResponse GetCredentialProviderWithOptions(GetCredentialProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderId))
+            {
+                query["CredentialProviderId"] = request.CredentialProviderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCredentialProvider",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCredentialProviderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询凭据提供商详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCredentialProviderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCredentialProviderResponse
+        /// </returns>
+        public async Task<GetCredentialProviderResponse> GetCredentialProviderWithOptionsAsync(GetCredentialProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderId))
+            {
+                query["CredentialProviderId"] = request.CredentialProviderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCredentialProvider",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCredentialProviderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询凭据提供商详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCredentialProviderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCredentialProviderResponse
+        /// </returns>
+        public GetCredentialProviderResponse GetCredentialProvider(GetCredentialProviderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCredentialProviderWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询凭据提供商详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCredentialProviderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCredentialProviderResponse
+        /// </returns>
+        public async Task<GetCredentialProviderResponse> GetCredentialProviderAsync(GetCredentialProviderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCredentialProviderWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -29619,6 +30299,174 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListConditionalAccessPoliciesForUserWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCredentialProvidersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCredentialProvidersResponse
+        /// </returns>
+        public ListCredentialProvidersResponse ListCredentialProvidersWithOptions(ListCredentialProvidersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderIds))
+            {
+                query["CredentialProviderIds"] = request.CredentialProviderIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderTypes))
+            {
+                query["CredentialProviderTypes"] = request.CredentialProviderTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Statuses))
+            {
+                query["Statuses"] = request.Statuses;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCredentialProviders",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCredentialProvidersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCredentialProvidersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCredentialProvidersResponse
+        /// </returns>
+        public async Task<ListCredentialProvidersResponse> ListCredentialProvidersWithOptionsAsync(ListCredentialProvidersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderIds))
+            {
+                query["CredentialProviderIds"] = request.CredentialProviderIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderTypes))
+            {
+                query["CredentialProviderTypes"] = request.CredentialProviderTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Statuses))
+            {
+                query["Statuses"] = request.Statuses;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCredentialProviders",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCredentialProvidersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCredentialProvidersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCredentialProvidersResponse
+        /// </returns>
+        public ListCredentialProvidersResponse ListCredentialProviders(ListCredentialProvidersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCredentialProvidersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCredentialProvidersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCredentialProvidersResponse
+        /// </returns>
+        public async Task<ListCredentialProvidersResponse> ListCredentialProvidersAsync(ListCredentialProvidersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCredentialProvidersWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -44901,6 +45749,294 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateCredentialDescriptionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCredentialProviderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCredentialProviderResponse
+        /// </returns>
+        public UpdateCredentialProviderResponse UpdateCredentialProviderWithOptions(UpdateCredentialProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderConfig))
+            {
+                query["CredentialProviderConfig"] = request.CredentialProviderConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderId))
+            {
+                query["CredentialProviderId"] = request.CredentialProviderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderName))
+            {
+                query["CredentialProviderName"] = request.CredentialProviderName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCredentialProvider",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCredentialProviderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCredentialProviderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCredentialProviderResponse
+        /// </returns>
+        public async Task<UpdateCredentialProviderResponse> UpdateCredentialProviderWithOptionsAsync(UpdateCredentialProviderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderConfig))
+            {
+                query["CredentialProviderConfig"] = request.CredentialProviderConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderId))
+            {
+                query["CredentialProviderId"] = request.CredentialProviderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderName))
+            {
+                query["CredentialProviderName"] = request.CredentialProviderName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCredentialProvider",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCredentialProviderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCredentialProviderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCredentialProviderResponse
+        /// </returns>
+        public UpdateCredentialProviderResponse UpdateCredentialProvider(UpdateCredentialProviderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateCredentialProviderWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新凭据提供商</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCredentialProviderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCredentialProviderResponse
+        /// </returns>
+        public async Task<UpdateCredentialProviderResponse> UpdateCredentialProviderAsync(UpdateCredentialProviderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateCredentialProviderWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新凭据提供商描述</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCredentialProviderDescriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCredentialProviderDescriptionResponse
+        /// </returns>
+        public UpdateCredentialProviderDescriptionResponse UpdateCredentialProviderDescriptionWithOptions(UpdateCredentialProviderDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderId))
+            {
+                query["CredentialProviderId"] = request.CredentialProviderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCredentialProviderDescription",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCredentialProviderDescriptionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新凭据提供商描述</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCredentialProviderDescriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCredentialProviderDescriptionResponse
+        /// </returns>
+        public async Task<UpdateCredentialProviderDescriptionResponse> UpdateCredentialProviderDescriptionWithOptionsAsync(UpdateCredentialProviderDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderId))
+            {
+                query["CredentialProviderId"] = request.CredentialProviderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCredentialProviderDescription",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCredentialProviderDescriptionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新凭据提供商描述</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCredentialProviderDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCredentialProviderDescriptionResponse
+        /// </returns>
+        public UpdateCredentialProviderDescriptionResponse UpdateCredentialProviderDescription(UpdateCredentialProviderDescriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateCredentialProviderDescriptionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新凭据提供商描述</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCredentialProviderDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCredentialProviderDescriptionResponse
+        /// </returns>
+        public async Task<UpdateCredentialProviderDescriptionResponse> UpdateCredentialProviderDescriptionAsync(UpdateCredentialProviderDescriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateCredentialProviderDescriptionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
