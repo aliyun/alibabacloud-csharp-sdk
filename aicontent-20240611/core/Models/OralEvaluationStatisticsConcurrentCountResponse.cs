@@ -33,6 +33,9 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
                     /// <summary>
                     /// <para>This parameter is required.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2025-01</para>
                     /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]
@@ -41,7 +44,11 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 }
 
                 /// <summary>
+                /// <para>appkey</para>
                 /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>a0007g7</para>
                 /// </summary>
                 [NameInMap("applicationAccessId")]
                 [Validation(Required=false)]
@@ -51,6 +58,9 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>11</para>
             /// </summary>
             [NameInMap("applicationInternalId")]
             [Validation(Required=false)]
@@ -60,6 +70,9 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("projectId")]
         [Validation(Required=false)]

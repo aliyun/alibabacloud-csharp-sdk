@@ -49,10 +49,6 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public string ServiceCode { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>AI算法模型-个性化文生图-在线按量调用</para>
-        /// </summary>
         [NameInMap("serviceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }

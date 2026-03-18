@@ -27,6 +27,9 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                     public class OralEvaluationStatisticsErrorCountResponseProjectDataApplicationDataDataData : TeaModel {
                         /// <summary>
                         /// <para>This parameter is required.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>230</para>
                         /// </summary>
                         [NameInMap("count")]
                         [Validation(Required=false)]
@@ -34,6 +37,9 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
                         /// <summary>
                         /// <para>This parameter is required.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2025-02</para>
                         /// </summary>
                         [NameInMap("name")]
                         [Validation(Required=false)]
@@ -41,10 +47,18 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>51000</para>
+                    /// </summary>
                     [NameInMap("ErrorCode")]
                     [Validation(Required=false)]
                     public string ErrorCode { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>start the core unsuccessfull.</para>
+                    /// </summary>
                     [NameInMap("ErrorMessage")]
                     [Validation(Required=false)]
                     public string ErrorMessage { get; set; }
@@ -52,7 +66,11 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 }
 
                 /// <summary>
+                /// <para>appId,appkey</para>
                 /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>t000797</para>
                 /// </summary>
                 [NameInMap("applicationAccessId")]
                 [Validation(Required=false)]
@@ -62,6 +80,9 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("applicationInternalId")]
             [Validation(Required=false)]
@@ -71,6 +92,9 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("projectId")]
         [Validation(Required=false)]

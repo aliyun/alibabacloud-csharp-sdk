@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
-    public class ExecuteHundredThousandWhysDialogueResponse : TeaModel {
+    public class ModelRouterQueryNacosTagsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ExecuteHundredThousandWhysDialogueResponseBody Body { get; set; }
+        public ModelRouterQueryNacosTagsResponseBody Body { get; set; }
 
     }
 
