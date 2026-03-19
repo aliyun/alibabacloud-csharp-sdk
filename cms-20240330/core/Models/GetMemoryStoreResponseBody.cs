@@ -59,6 +59,20 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("shortTermStorage")]
+        [Validation(Required=false)]
+        public GetMemoryStoreResponseBodyShortTermStorage ShortTermStorage { get; set; }
+        public class GetMemoryStoreResponseBodyShortTermStorage : TeaModel {
+            [NameInMap("logstore")]
+            [Validation(Required=false)]
+            public string Logstore { get; set; }
+
+            [NameInMap("project")]
+            [Validation(Required=false)]
+            public string Project { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>10</para>
