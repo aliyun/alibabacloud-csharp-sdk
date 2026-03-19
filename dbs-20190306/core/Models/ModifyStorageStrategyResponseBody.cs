@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class ModifyStorageStrategyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup schedule.</para>
+        /// <para>Backup plan ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dbsqdss5tmh****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupPlanId { get; set; }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>Error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Param.NotFound</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>Error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>findValidDBSJob error</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -50,10 +50,12 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a precheck is triggered. Valid values:</para>
+        /// <para>Indicates whether this modification triggers a precheck. Return values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: A precheck is triggered. You must manually call the <a href="https://help.aliyun.com/document_detail/2869818.html">StartBackupPlan</a> operation to start the backup schedule.</description></item>
-        /// <item><description><b>false</b>: No precheck is triggered.</description></item>
+        /// <item><description><para><b>true</b>: A precheck is triggered. Manually call the <a href="https://help.aliyun.com/document_detail/2869818.html">StartBackupPlan</a> API to start the backup plan.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: No precheck is triggered.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public bool? NeedPrecheck { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E995F91F-6F89-503B-9F7D-502F58FD****</para>
@@ -74,10 +76,12 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Return values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request is successful.</description></item>
-        /// <item><description><b>false</b>: The request fails.</description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

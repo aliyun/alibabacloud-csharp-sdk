@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DescribeJobErrorCodeRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>A client token. It is used to ensure the idempotence of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>The language of the error message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>en</b> (default): English</description></item>
-        /// <item><description><b>cn</b>: Chinese</description></item>
+        /// <item><description><para><b>en</b>: English (Default)</para>
+        /// </description></item>
+        /// <item><description><para><b>cn</b>: Chinese</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,11 +40,11 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the full backup or restore task.</para>
+        /// <para>The ID of the full backup or restore job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dbstooi0****</para>
+        /// <para>r1iv62ud****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

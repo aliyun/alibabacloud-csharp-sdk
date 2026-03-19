@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <para>The ID of the backup gateway.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>160813</para>
+        /// <para>160***</para>
         /// </summary>
         [NameInMap("BackupGatewayId")]
         [Validation(Required=false)]

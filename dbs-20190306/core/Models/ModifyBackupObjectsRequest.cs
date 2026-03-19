@@ -10,36 +10,44 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class ModifyBackupObjectsRequest : TeaModel {
         /// <summary>
-        /// <para>The backup objects that are defined in a JSON string in the following format:</para>
+        /// <para>The backup objects, specified as a JSON string. The structure is as follows:</para>
         /// <pre><c>[
         ///     {
-        ///         &quot;DBName&quot;:&quot;The name of the database that you want to back up&quot;,
-        ///         &quot;SchemaName&quot;:&quot;The name of the schema that you want to back up&quot;,
+        ///         &quot;DBName&quot;:&quot;The name of the database to back up&quot;,
+        ///         &quot;SchemaName&quot;:&quot;The name of the schema to back up&quot;,
         ///         &quot;TableIncludes&quot;:[{
-        ///             &quot;TableName&quot;:&quot;The name of the table that you want to back up&quot;
+        ///             &quot;TableName&quot;:&quot;The name of the table to back up&quot;
         ///         }],
         ///         &quot;TableExcludes&quot;:[{
-        ///             &quot;TableName&quot;:&quot;The name of the table that you want to exclude during the backup&quot;
+        ///             &quot;TableName&quot;:&quot;The name of a table in the database that you do not want to back up&quot;
         ///         }]
         ///     }
         /// ]
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description><para>If you specify only <c>DBName</c> and do not specify objects of lower levels, all objects in the database are backed up.</para>
+        /// <item><description><para>If you specify only <c>DBName</c> without configuring rules for sub-objects, all objects in the database are backed up.</para>
         /// </description></item>
-        /// <item><description><para>If you specify <c>DBName</c> and some objects of lower levels, only the specified objects are backed up by default. You can use the following regular expressions to define object names:</para>
+        /// <item><description><para>If you specify <c>DBName</c> and configure rules for some objects, any objects without configured rules are not backed up by default. The following regular expressions are supported for defining object names:</para>
         /// <list type="bullet">
-        /// <item><description>A period <c>.</c> matches any single character except <c>\\r\\n</c>.</description></item>
-        /// <item><description>An asterisk <c>*</c> matches zero or more occurrences of a preceding subexpression. For example, <c>h.*llo</c> matches strings such as <c>hllo</c> and <c>heeeello</c>.</description></item>
-        /// <item><description>A question mark <c>?</c> matches zero or one occurrence of a preceding subexpression. For example, <c>h.?llo</c> matches strings such as <c>hllo</c> and <c>hello</c>, but not <c>haello</c>.</description></item>
-        /// <item><description>Character set <c>[Characters]</c> matches a character included in the brackets ([ ]). For example, <c>h[ae]llo</c> matches <c>hallo</c> and <c>hello</c>.</description></item>
-        /// <item><description>Negative character set <c>[^Characters]</c> does not match a character in the brackets ([ ]). For example, <c>h[^ae]llo</c> matches <c>hcllo</c> and <c>hdllo</c>, but not <c>hallo</c> or <c>hello</c>.</description></item>
-        /// <item><description>Character range <c>[character1-character2]</c> matches any character included in the range from <c>character1 to character2</c>, such as <c>[0-9]</c> and <c>[a-z]</c>.</description></item>
+        /// <item><description>A period (<c>.</c>) matches any single character except `</description></item>
         /// </list>
+        /// </description></item>
+        /// </list>
+        /// <para>`.</para>
+        /// <list type="bullet">
+        /// <item><description><para>An asterisk (<c>*</c>) matches the preceding subexpression zero or more times. For example, <c>h*llo</c> matches <c>hllo</c> and <c>heeeello</c>.</para>
+        /// </description></item>
+        /// <item><description><para>A question mark (<c>?</c>) matches the preceding subexpression zero or one time. For example, <c>h.?llo</c> matches <c>hllo</c> and <c>hello</c>, but not <c>haello</c>.</para>
+        /// </description></item>
+        /// <item><description><para>A character set <c>[characters]</c> matches any single character within the brackets. For example, <c>h[aello]</c> matches <c>hallo</c> and <c>hello</c>.</para>
+        /// </description></item>
+        /// <item><description><para>A negated character set <c>[^characters]</c> matches any single character not within the brackets. For example, <c>h[^ae]llo</c> matches <c>hcllo</c> and <c>hdllo</c>, but not <c>hallo</c> or <c>hello</c>.</para>
+        /// </description></item>
+        /// <item><description><para>A character range <c>[character1-character2]</c> matches any character within the specified range, such as <c>[0-9]</c> or <c>[a-z]</c>.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> <c>SchemaName</c> and <c>NewSchemaName</c> apply only to SQL Server databases. Use <c>DBName</c> and <c>NewDBName</c> to specify the names of other databases.</para>
+        /// <para><c>SchemaName</c> and <c>NewSchemaName</c> are used only for SQL Server. For other database engines, use <c>DBName</c> and <c>NewDBName</c> to specify database names.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -51,7 +59,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupObjects { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup schedule.</para>
+        /// <para>The ID of the backup plan.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +70,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupPlanId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>A client token to ensure the request is idempotent. This prevents the same request from being submitted multiple times.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>

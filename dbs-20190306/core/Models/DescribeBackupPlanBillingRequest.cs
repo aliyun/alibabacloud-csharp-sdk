@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DescribeBackupPlanBillingRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup gateway.</para>
+        /// <para>The ID of the backup plan. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the value of this parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>160813</para>
+        /// <para>dbstooi01ex****</para>
         /// </summary>
         [NameInMap("BackupPlanId")]
         [Validation(Required=false)]
         public string BackupPlanId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token to ensure the idempotence of the request. The client generates this value. It must be unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxxxxxx</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the storage type is displayed.</para>
+        /// <para>Specifies whether to display the storage class.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

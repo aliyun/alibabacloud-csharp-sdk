@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class StopBackupPlanRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup schedule.</para>
+        /// <para>The ID of the backup plan.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dbstooi01****</para>
+        /// <para>dbstooi01XXXX</para>
         /// </summary>
         [NameInMap("BackupPlanId")]
         [Validation(Required=false)]
         public string BackupPlanId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>A client token to ensure the idempotence of the request. This prevents the same request from being sent repeatedly.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCz****</para>
+        /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -35,10 +35,12 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to stop the backup schedule. Valid values:</para>
+        /// <para>The method used to pause the backup plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ALL: stops the backup schedule, full data backup tasks, incremental log backup tasks, and restore tasks</description></item>
-        /// <item><description>PLAN: stops only the backup schedule.</description></item>
+        /// <item><description><para>ALL: Pauses the backup schedule, full data backup jobs, incremental log backup jobs, and restore jobs.</para>
+        /// </description></item>
+        /// <item><description><para>PLAN: Pauses only the backup schedule.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <para>The ID of the backup gateway that is used to download the backup set.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2331****</para>
+        /// <para>23312323</para>
         /// </summary>
         [NameInMap("BackupGatewayId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dbstooi01****</para>
+        /// <para>dbstooi01xxxx</para>
         /// </summary>
         [NameInMap("BackupPlanId")]
         [Validation(Required=false)]
@@ -56,10 +56,14 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>The type of the destination directory to which the backup set is downloaded. This parameter is required if the automatic download feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>local</description></item>
-        /// <item><description>nas</description></item>
-        /// <item><description>ftp</description></item>
-        /// <item><description>minio</description></item>
+        /// <item><description><para>local</para>
+        /// </description></item>
+        /// <item><description><para>nas</para>
+        /// </description></item>
+        /// <item><description><para>ftp</para>
+        /// </description></item>
+        /// <item><description><para>minio</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>Default value: local.</para>
@@ -76,7 +80,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCzx****</para>
+        /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -85,10 +89,14 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>The format in which the full backup set is downloaded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Native</description></item>
-        /// <item><description>SQL</description></item>
-        /// <item><description>CSV</description></item>
-        /// <item><description>JSON</description></item>
+        /// <item><description><para>Native</para>
+        /// </description></item>
+        /// <item><description><para>SQL</para>
+        /// </description></item>
+        /// <item><description><para>CSV</para>
+        /// </description></item>
+        /// <item><description><para>JSON</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>Default value: CSV.</para>
@@ -104,10 +112,14 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>The format in which the incremental backup set is downloaded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Native</description></item>
-        /// <item><description>SQL</description></item>
-        /// <item><description>CSV</description></item>
-        /// <item><description>JSON</description></item>
+        /// <item><description><para>Native</para>
+        /// </description></item>
+        /// <item><description><para>SQL</para>
+        /// </description></item>
+        /// <item><description><para>CSV</para>
+        /// </description></item>
+        /// <item><description><para>JSON</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>Default value: Native.</para>

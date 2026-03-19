@@ -10,20 +10,22 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class CreateAndStartBackupPlanResponseBody : TeaModel {
         /// <summary>
-        /// <para>The backup schedule ID.</para>
+        /// <para>The ID of the backup plan.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dbs1hvb0wwweusfa</para>
+        /// <para>dbs1hvb0wwwe****</para>
         /// </summary>
         [NameInMap("BackupPlanId")]
         [Validation(Required=false)]
         public string BackupPlanId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a backup is performed immediately after the backup schedule is configured. Valid values:</para>
+        /// <para>Indicates whether the backup set is enabled. The return value is one of the following:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Enabled</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4F1888AC-1138-4995-B9FE-D2734F61C058</para>
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

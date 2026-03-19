@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class ModifyBackupSourceEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup schedule.</para>
+        /// <para>The backup plan ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dbs1h****usfa</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a precheck is triggered. If the value of this parameter is true, you must start the backup schedule by calling the StartBackupPlan operation.</para>
+        /// <para>Indicates whether this change triggers a precheck. If this value is true, call StartBackupPlan to restart the backup plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public bool? NeedPrecheck { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D6E068C3-25BC-455A-85FE-45F0B22E****</para>
@@ -70,10 +70,12 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request succeeded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request is successful.</description></item>
-        /// <item><description><b>false</b>: The request fails.</description></item>
+        /// <item><description><para><b>true</b>: The request succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

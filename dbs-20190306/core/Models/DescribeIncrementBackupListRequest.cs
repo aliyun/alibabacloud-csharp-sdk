@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DescribeIncrementBackupListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup schedule. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID.</para>
+        /// <para>The backup plan ID. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> interface to get this parameter\&quot;s value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupPlanId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>A unique string that ensures the idempotence of the request and prevents duplicate requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query.</para>
+        /// <para>The end backup UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1570701361600</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be a positive integer. Default value: 0.</para>
+        /// <para>The page number. The value must be greater than or equal to 0 and less than or equal to the maximum integer value. The default value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -55,9 +55,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 30, 50, and 100.</para>
+        /// <para>The number of entries per page. Valid values are 30, 50, and 100.</para>
         /// <remarks>
-        /// <para>Default value: 30.</para>
+        /// <para>The default number of entries per page is 30.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -68,13 +68,15 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the storage class. Valid values:</para>
+        /// <para>Indicates whether to display the storage class. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Default value: true.</para>
+        /// <para>The default value is true.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -85,7 +87,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public bool? ShowStorageType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
+        /// <para>The start backup UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1570701361528</para>

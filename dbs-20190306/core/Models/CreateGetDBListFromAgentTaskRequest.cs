@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>The ID of the backup gateway. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the ID.</para>
         /// <remarks>
-        /// <para> This parameter is required.</para>
+        /// <para>This parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,14 +35,22 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>The type of the database. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b></description></item>
-        /// <item><description><b>MSSQL</b></description></item>
-        /// <item><description><b>Oracle</b></description></item>
-        /// <item><description><b>MariaDB</b></description></item>
-        /// <item><description><b>PostgreSQL</b></description></item>
-        /// <item><description><b>DRDS</b></description></item>
-        /// <item><description><b>MongoDB</b></description></item>
-        /// <item><description><b>Redis</b></description></item>
+        /// <item><description><para><b>MySQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>MSSQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Oracle</b></para>
+        /// </description></item>
+        /// <item><description><para><b>MariaDB</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PostgreSQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>DRDS</b></para>
+        /// </description></item>
+        /// <item><description><para><b>MongoDB</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Redis</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +68,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <para>The URL that is used to access the database.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123.0.0.1</para>
+        /// <para>123.0.XX.XX</para>
         /// </summary>
         [NameInMap("SourceEndpointIP")]
         [Validation(Required=false)]

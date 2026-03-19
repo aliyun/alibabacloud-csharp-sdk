@@ -40,17 +40,19 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The billing information of the backup schedule.</para>
+        /// <para>The billing information of the backup plan.</para>
         /// </summary>
         [NameInMap("Item")]
         [Validation(Required=false)]
         public DescribeBackupPlanBillingResponseBodyItem Item { get; set; }
         public class DescribeBackupPlanBillingResponseBodyItem : TeaModel {
             /// <summary>
-            /// <para>The billing method. Valid values:</para>
+            /// <para>The billing method of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PREPAY</description></item>
-            /// <item><description>POSTPAY</description></item>
+            /// <item><description><para><b>PREPAY</b>: subscription</para>
+            /// </description></item>
+            /// <item><description><para><b>POSTPAY</b>: pay-as-you-go</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
             /// <para>The timestamp that indicates when the instance was purchased.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1554560477000</para>
+            /// <para>1658372830000</para>
             /// </summary>
             [NameInMap("BuyCreateTimestamp")]
             [Validation(Required=false)]
@@ -73,18 +75,18 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
             /// <summary>
             /// <para>The timestamp that indicates when the instance expires.</para>
             /// <remarks>
-            /// <para>This parameter is available only if the value of the BuyChargeType parameter is PREPAY.</para>
+            /// <para>This parameter is returned only when BuyChargeType is set to PREPAY.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>1554560477000</para>
+            /// <para>1661097600000</para>
             /// </summary>
             [NameInMap("BuyExpiredTimestamp")]
             [Validation(Required=false)]
             public long? BuyExpiredTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The specifications of the instance.</para>
+            /// <para>The instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>micro</para>
@@ -94,29 +96,29 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
             public string BuySpec { get; set; }
 
             /// <summary>
-            /// <para>The size of the built-in storage for storing incremental backup data.</para>
+            /// <para>The storage space used by incremental backup data. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>12134</para>
+            /// <para>10437039</para>
             /// </summary>
             [NameInMap("ContStorageSize")]
             [Validation(Required=false)]
             public long? ContStorageSize { get; set; }
 
             /// <summary>
-            /// <para>The size of the built-in storage for storing full backup data.</para>
+            /// <para>The storage space used by full backup data. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>13123</para>
+            /// <para>151</para>
             /// </summary>
             [NameInMap("FullStorageSize")]
             [Validation(Required=false)]
             public long? FullStorageSize { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the instance expired.</para>
+            /// <para>Indicates whether the instance has expired.</para>
             /// <remarks>
-            /// <para>This parameter is available only if the value of the BuyChargeType parameter is PREPAY.</para>
+            /// <para>This parameter is returned only when BuyChargeType is set to PREPAY.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -127,7 +129,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
             public bool? IsExpired { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the instance has no backup traffic limit.</para>
+            /// <para>Indicates whether the instance provides unlimited free backup traffic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -137,63 +139,63 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
             public bool? IsFreeBytesUnlimited { get; set; }
 
             /// <summary>
-            /// <para>The total paid backup traffic in the current month.</para>
+            /// <para>The total paid backup traffic in the current month. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>213213</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("PaiedBytes")]
             [Validation(Required=false)]
             public long? PaiedBytes { get; set; }
 
             /// <summary>
-            /// <para>The timestamp that indicates when the billing cycle of free backup traffic ends.</para>
+            /// <para>The timestamp that indicates the end of the billing cycle for the free backup traffic.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1554560477000</para>
+            /// <para>1659283200000</para>
             /// </summary>
             [NameInMap("QuotaEndTimestamp")]
             [Validation(Required=false)]
             public long? QuotaEndTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The timestamp that indicates when the billing cycle of free backup traffic starts.</para>
+            /// <para>The timestamp that indicates the start of the billing cycle for the free backup traffic.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1554560477000</para>
+            /// <para>1656604800000</para>
             /// </summary>
             [NameInMap("QuotaStartTimestamp")]
             [Validation(Required=false)]
             public long? QuotaStartTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The total free backup traffic in the current month.</para>
+            /// <para>The total free backup traffic in the current month. Unit: bytes.</para>
             /// <remarks>
-            /// <para>This parameter is available only if the value of the BuyChargeType parameter is PREPAY and the value of the IsFreeBytesUnlimited parameter is false.</para>
+            /// <para>This parameter is returned only when BuyChargeType is set to PREPAY and IsFreeBytesUnlimited is false.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>13123</para>
+            /// <para>858993459200</para>
             /// </summary>
             [NameInMap("TotalFreeBytes")]
             [Validation(Required=false)]
             public long? TotalFreeBytes { get; set; }
 
             /// <summary>
-            /// <para>The paid full backup traffic in the current month.</para>
+            /// <para>The paid traffic for full backups in the current month. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1312313</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("UsedFullBytes")]
             [Validation(Required=false)]
             public long? UsedFullBytes { get; set; }
 
             /// <summary>
-            /// <para>The paid incremental backup traffic in the current month.</para>
+            /// <para>The paid traffic for incremental backups in the current month. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>131231</para>
+            /// <para>9406734</para>
             /// </summary>
             [NameInMap("UsedIncrementBytes")]
             [Validation(Required=false)]
@@ -202,10 +204,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>EB4DFD5E-3618-498D-BE35-4DBEA0072122</para>
+        /// <para>DD7BC7F5-4E3A-5DF3-BFF9-831503C4D9E3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

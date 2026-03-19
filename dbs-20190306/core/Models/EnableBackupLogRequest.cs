@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class EnableBackupLogRequest : TeaModel {
         /// <summary>
-        /// <para>The backup schedule ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID.</para>
+        /// <para>The ID of the backup plan. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dbstooi01xxxx</para>
+        /// <para>dbstooi******</para>
         /// </summary>
         [NameInMap("BackupPlanId")]
         [Validation(Required=false)]
         public string BackupPlanId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>Any string value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dbs</para>
@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("EnableMysqlPhysicalBackupBinlog")]
+        [Validation(Required=false)]
+        public string EnableMysqlPhysicalBackupBinlog { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]

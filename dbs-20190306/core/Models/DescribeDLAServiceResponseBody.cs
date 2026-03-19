@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>Specifies whether to enable the feature of automatically adding incremental data to a data lake. If this feature is enabled, DBS adds the backup sets that are newly generated to the data lake that is created for the backup schedule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables the feature.</description></item>
-        /// <item><description><b>false</b>: disables the feature.</description></item>
+        /// <item><description><para><b>true</b>: enables the feature.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: disables the feature.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,8 +48,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>Indicates whether a failed DLA task exists in the return result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: A failed DLA task exists.</description></item>
-        /// <item><description><b>false</b>: No failed DLA task exists.</description></item>
+        /// <item><description><para><b>true</b>: A failed DLA task exists.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: No failed DLA task exists.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,9 +84,12 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>The status of the DLA service for the backup schedule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Running</b>: DLA is running.</description></item>
-        /// <item><description><b>Closing</b>: DLA is being disabled.</description></item>
-        /// <item><description><b>Closed</b>: DLA is disabled.</description></item>
+        /// <item><description><para><b>Running</b>: DLA is running.</para>
+        /// </description></item>
+        /// <item><description><para><b>Closing</b>: DLA is being disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>Closed</b>: DLA is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

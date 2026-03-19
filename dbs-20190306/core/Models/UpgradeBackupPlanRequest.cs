@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dbstooi01e****</para>
+        /// <para>dbstooi01eXXXX</para>
         /// </summary>
         [NameInMap("BackupPlanId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCz****</para>
+        /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -33,11 +33,16 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>The specifications of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>micro</description></item>
-        /// <item><description>small</description></item>
-        /// <item><description>medium</description></item>
-        /// <item><description>large</description></item>
-        /// <item><description>xlarge</description></item>
+        /// <item><description><para>micro</para>
+        /// </description></item>
+        /// <item><description><para>small</para>
+        /// </description></item>
+        /// <item><description><para>medium</para>
+        /// </description></item>
+        /// <item><description><para>large</para>
+        /// </description></item>
+        /// <item><description><para>xlarge</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

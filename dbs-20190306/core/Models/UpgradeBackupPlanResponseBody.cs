@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <para>The ID of the backup schedule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dbstooi01****</para>
+        /// <para>dbstooi01XXXX</para>
         /// </summary>
         [NameInMap("BackupPlanId")]
         [Validation(Required=false)]

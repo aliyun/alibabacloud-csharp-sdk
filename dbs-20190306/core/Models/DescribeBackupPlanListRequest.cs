@@ -10,7 +10,15 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DescribeBackupPlanListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup schedule. You can query multiple backup schedule IDs. Separate multiple IDs with commas (,).</para>
+        /// <b>Example:</b>
+        /// <para>logical</para>
+        /// </summary>
+        [NameInMap("BackupMethod")]
+        [Validation(Required=false)]
+        public string BackupMethod { get; set; }
+
+        /// <summary>
+        /// <para>Backup plan ID. To list multiple backup plans, separate IDs with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dbstooi01exXXXX</para>
@@ -30,15 +38,22 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupPlanName { get; set; }
 
         /// <summary>
-        /// <para>Backup plan status, the values are as follows:</para>
+        /// <para>Backup plan status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>wait</b>: Not configured</description></item>
-        /// <item><description><b>init</b>: Not started (pre-check failed)</description></item>
-        /// <item><description><b>running</b>: Running</description></item>
-        /// <item><description><b>stop</b>: Failed</description></item>
-        /// <item><description><b>pause</b>: Paused</description></item>
-        /// <item><description><b>locked</b>: Locked</description></item>
-        /// <item><description><b>check_pass</b>: Pre-check passed</description></item>
+        /// <item><description><para><b>wait</b>: Not configured.</para>
+        /// </description></item>
+        /// <item><description><para><b>init</b>: Not started (precheck failed).</para>
+        /// </description></item>
+        /// <item><description><para><b>running</b>: Running.</para>
+        /// </description></item>
+        /// <item><description><para><b>stop</b>: Failed.</para>
+        /// </description></item>
+        /// <item><description><para><b>pause</b>: Paused.</para>
+        /// </description></item>
+        /// <item><description><para><b>locked</b>: Locked.</para>
+        /// </description></item>
+        /// <item><description><para><b>check_pass</b>: Precheck passed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +64,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupPlanStatus { get; set; }
 
         /// <summary>
-        /// <para>Used to ensure the idempotence of the request, preventing duplicate submissions.</para>
+        /// <para>A client token used to ensure idempotence and prevent duplicate requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ASDASDASDSADASFCZXVZ</para>
@@ -63,7 +78,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Page number, must be greater than or equal to 0 and not exceed the maximum value of Integer. The default value is 0.</para>
+        /// <para>Page number. Valid values: integers greater than or equal to 0 and less than or equal to the maximum integer value. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -73,9 +88,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>Number of records per page, the value should be between 1 and 100.</para>
+        /// <para>Number of records per page. Valid values: 1 to 100.</para>
         /// <remarks>
-        /// <para>The default is <b>30</b>.</para>
+        /// <para>Default value: <b>30</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -86,7 +101,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>DBS region, you can view the supported DBS regions by calling the <a href="https://help.aliyun.com/document_detail/2869853.html">DescribeRegions</a> interface.</para>
+        /// <para>DBS region. Call <a href="https://help.aliyun.com/document_detail/2869853.html">DescribeRegions</a> to view supported regions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -104,6 +119,18 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("ShowBackupStrategyInfo")]
+        [Validation(Required=false)]
+        public bool? ShowBackupStrategyInfo { get; set; }
+
+        [NameInMap("ShowRecoverTimeRange")]
+        [Validation(Required=false)]
+        public bool? ShowRecoverTimeRange { get; set; }
+
+        [NameInMap("ShowStorageStrategyInfo")]
+        [Validation(Required=false)]
+        public bool? ShowStorageStrategyInfo { get; set; }
 
     }
 

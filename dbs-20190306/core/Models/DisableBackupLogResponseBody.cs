@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DisableBackupLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The backup schedule ID.</para>
+        /// <para>The ID of the backup plan.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dbstooi01xxxx</para>
+        /// <para>dbstooi01****</para>
         /// </summary>
         [NameInMap("BackupPlanId")]
         [Validation(Required=false)]
@@ -50,10 +50,12 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a precheck is triggered. Valid values:</para>
+        /// <para>Indicates whether this change triggers a precheck. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: A precheck is triggered. You must call the <a href="https://help.aliyun.com/document_detail/2869816.html">StartBackupPlan</a> operation to start the backup schedule.</description></item>
-        /// <item><description>false: No precheck is triggered.</description></item>
+        /// <item><description><para>true: A precheck is triggered. You must manually call the <a href="https://help.aliyun.com/document_detail/2869816.html">StartBackupPlan</a> operation to start the backup plan.</para>
+        /// </description></item>
+        /// <item><description><para>false: No precheck is triggered.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +76,13 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the operation succeeded. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: The operation succeeded.</para>
+        /// </description></item>
+        /// <item><description><para>false: The operation failed.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

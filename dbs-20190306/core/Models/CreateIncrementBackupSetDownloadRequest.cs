@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>The format in which the incremental backup set is downloaded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Native</b></description></item>
-        /// <item><description><b>SQL</b></description></item>
-        /// <item><description><b>CSV</b></description></item>
-        /// <item><description><b>JSON</b></description></item>
+        /// <item><description><para><b>Native</b></para>
+        /// </description></item>
+        /// <item><description><para><b>SQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>CSV</b></para>
+        /// </description></item>
+        /// <item><description><para><b>JSON</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>Default value: Native.</para>
@@ -33,7 +37,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dbstooi01e****</para>
+        /// <para>t4yh0g0g****</para>
         /// </summary>
         [NameInMap("BackupSetId")]
         [Validation(Required=false)]
@@ -44,7 +48,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>mysql-bin.000054</para>
         /// </summary>
         [NameInMap("BackupSetName")]
         [Validation(Required=false)]
@@ -54,7 +58,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCz****</para>
+        /// <para>ETnLKlblzczshOTUbOCz********</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]

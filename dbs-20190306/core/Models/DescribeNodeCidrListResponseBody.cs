@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
-        /// <summary>
-        /// <para>The public CIDR blocks.</para>
-        /// </summary>
         [NameInMap("InternetIPs")]
         [Validation(Required=false)]
         public DescribeNodeCidrListResponseBodyInternetIPs InternetIPs { get; set; }
@@ -52,9 +49,6 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 
         }
 
-        /// <summary>
-        /// <para>The internal CIDR blocks.</para>
-        /// </summary>
         [NameInMap("IntranetIPs")]
         [Validation(Required=false)]
         public DescribeNodeCidrListResponseBodyIntranetIPs IntranetIPs { get; set; }

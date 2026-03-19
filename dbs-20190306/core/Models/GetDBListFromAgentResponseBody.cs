@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class GetDBListFromAgentResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The details of the databases.</para>
-        /// </summary>
         [NameInMap("DbList")]
         [Validation(Required=false)]
         public GetDBListFromAgentResponseBodyDbList DbList { get; set; }

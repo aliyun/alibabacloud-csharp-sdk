@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class ModifyBackupSourceEndpointRequest : TeaModel {
         /// <summary>
-        /// <para>The backup gateway ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID.</para>
+        /// <para>The backup gateway ID. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</para>
         /// <remarks>
-        /// <para> If you set <b>SourceEndpointInstanceType</b> to Agent, this parameter is required.</para>
+        /// <para>You must specify this parameter when <b>SourceEndpointInstanceType</b> is Agent.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,17 +23,17 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public long? BackupGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The backup object. If you set SourceEndpointInstanceType to Agent, this parameter is optional. Otherwise, it is required. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the backup object.</para>
+        /// <para>The backup objects. This parameter is optional when SourceEndpointInstanceType is Agent. For all other cases, you must specify it. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{ &quot;DBName&quot;:&quot;Name of the database to be backed up&quot;, &quot;SchemaName&quot;:&quot;Name of the schema to be backed up&quot;, &quot;TableIncludes&quot;:[{ &quot;TableName&quot;:&quot;Name of the table to be backed up&quot; }], &quot;TableExcludes&quot;:[{&quot;TableName&quot;:&quot;Name of the table to be excluded during the backup&quot; }] } ]</para>
+        /// <para>[{  &quot;DBName&quot;:&quot;待备份库名&quot;, &quot;SchemaName&quot;:&quot;待备份 Schema 名&quot;, &quot;TableIncludes&quot;:[{ &quot;TableName&quot;:&quot;待备份表表名&quot; }],  &quot;TableExcludes&quot;:[{&quot;TableName&quot;:&quot;待备份库名不需要备份表的表名&quot; }] } ]</para>
         /// </summary>
         [NameInMap("BackupObjects")]
         [Validation(Required=false)]
         public string BackupObjects { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup schedule. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain it.</para>
+        /// <para>The backup plan ID. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupPlanId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>A unique string that ensures idempotence and prevents duplicate requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The unique ID (UID) of the Alibaba Cloud account to which the backup schedule belongs. You can call the <a href="https://help.aliyun.com/document_detail/2869838.html">DescribeRestoreTaskList</a> operation to obtain the UID.</para>
+        /// <para>The UID of the Alibaba Cloud account used for cross-account backup. Call <a href="https://help.aliyun.com/document_detail/2869838.html">DescribeRestoreTaskList</a> to get this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2xxx7778xxxxxxxxxx</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string CrossAliyunId { get; set; }
 
         /// <summary>
-        /// <para>The name of the RAM role that is used to perform backups across Alibaba Cloud accounts. You can call the <a href="https://help.aliyun.com/document_detail/2869838.html">DescribeRestoreTaskList</a> operation to obtain the RAM role.</para>
+        /// <para>The RAM role name used for cross-account backup. Call <a href="https://help.aliyun.com/document_detail/2869838.html">DescribeRestoreTaskList</a> to get this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test123</para>
@@ -73,15 +73,25 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public string CrossRoleName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("EnableSourceEndpointSsl")]
+        [Validation(Required=false)]
+        public string EnableSourceEndpointSsl { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// <list type="bullet">
-        /// <item><description>This parameter is required if the database is a PostgreSQL or MongoDB database.</description></item>
-        /// <item><description>This parameter is required if the database is an SQL Server database that is connected to DBS over a DBS backup gateway.</description></item>
+        /// <item><description><para>You must specify this parameter for PostgreSQL or MongoDB databases.</para>
+        /// </description></item>
+        /// <item><description><para>You must specify this parameter for Microsoft SQL Server databases connected through a backup gateway.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,9 +102,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string SourceEndpointDatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The endpoint of the database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the endpoint.</para>
+        /// <para>The database endpoint. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</para>
         /// <remarks>
-        /// <para> If you set <b>SourceEndpointInstanceType</b> to Express, Agent, or Other, this parameter is required.</para>
+        /// <para>You must specify this parameter when <b>SourceEndpointInstanceType</b> is Express, Agent, or Other.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -105,9 +115,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string SourceEndpointIP { get; set; }
 
         /// <summary>
-        /// <para>The database instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID.</para>
+        /// <para>The database instance ID. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</para>
         /// <remarks>
-        /// <para> If you set <b>SourceEndpointInstanceType</b> to RDS, ECS, DDS, or Express, this parameter is required.</para>
+        /// <para>You must specify this parameter when <b>SourceEndpointInstanceType</b> is RDS, ECS, DDS, or Express.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -118,14 +128,20 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string SourceEndpointInstanceID { get; set; }
 
         /// <summary>
-        /// <para>The location of the database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain it. Valid values:</para>
+        /// <para>The location of the database. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RDS</b></description></item>
-        /// <item><description><b>ECS</b></description></item>
-        /// <item><description><b>Express</b>: The database is connected to DBS via Express Connect, VPN Gateway, or Smart Access Gateway.</description></item>
-        /// <item><description><b>Agent</b>: The database is connected to DBS over a DBS backup gateway.</description></item>
-        /// <item><description><b>DDS</b>: The database is an ApsaraDB for MongoDB database.</description></item>
-        /// <item><description><b>Other</b>: The database is connected to DBS using the IP address and port of the database.</description></item>
+        /// <item><description><para><b>RDS</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ECS</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Express</b>: A database connected through a leased line, VPN Gateway, or Smart Access Gateway</para>
+        /// </description></item>
+        /// <item><description><para><b>Agent</b>: A database connected through a backup gateway</para>
+        /// </description></item>
+        /// <item><description><para><b>DDS</b>: A MongoDB instance on Alibaba Cloud</para>
+        /// </description></item>
+        /// <item><description><para><b>Other</b>: A database connected directly using an IP address and port</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -137,7 +153,15 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string SourceEndpointInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The SID of the Oracle source database. If the database is an Oracle database, this parameter is required.</para>
+        /// <b>Example:</b>
+        /// <para>/home/test</para>
+        /// </summary>
+        [NameInMap("SourceEndpointOracleHome")]
+        [Validation(Required=false)]
+        public string SourceEndpointOracleHome { get; set; }
+
+        /// <summary>
+        /// <para>The Oracle system ID (SID). You must specify this parameter for Oracle databases.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -147,8 +171,8 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string SourceEndpointOracleSID { get; set; }
 
         /// <summary>
-        /// <para>The password of the account that is used to connect to the database.</para>
-        /// <para>This parameter is required except that the database is an SQL Server database that is connected to DBS over a DBS backup gateway or a Redis database.</para>
+        /// <para>The password.</para>
+        /// <para>This parameter is optional for Redis databases or for Microsoft SQL Server databases connected through a backup gateway. For all other cases, you must specify it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -158,9 +182,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string SourceEndpointPassword { get; set; }
 
         /// <summary>
-        /// <para>The port that is used to connect to the database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the port.</para>
+        /// <para>The database port. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</para>
         /// <remarks>
-        /// <para> If you set <b>SourceEndpointInstanceType</b> to Express, Agent, Other, or ECS, this parameter is required.</para>
+        /// <para>You must specify this parameter when <b>SourceEndpointInstanceType</b> is Express, Agent, Other, or ECS.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -171,9 +195,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? SourceEndpointPort { get; set; }
 
         /// <summary>
-        /// <para>The region in which the database you want to back up resides. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the region.</para>
+        /// <para>The region where the database is located. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</para>
         /// <remarks>
-        /// <para> If you set <b>SourceEndpointInstanceType</b> to RDS, ECS, DDS, Express, or Agent, this parameter is required.</para>
+        /// <para>You must specify this parameter when <b>SourceEndpointInstanceType</b> is RDS, ECS, DDS, Express, or Agent.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -184,8 +208,8 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string SourceEndpointRegion { get; set; }
 
         /// <summary>
-        /// <para>The account that is used to log on to the database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the account.</para>
-        /// <para>If the database is an SQL Server database connected to DBS over a DBS backup gateway or a Redis database, this parameter is optional. Otherwise, it is required.</para>
+        /// <para>The database account. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</para>
+        /// <para>This parameter is optional for Redis databases or for Microsoft SQL Server databases connected through a backup gateway. For all other cases, you must specify it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -193,6 +217,14 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [NameInMap("SourceEndpointUserName")]
         [Validation(Required=false)]
         public string SourceEndpointUserName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>-----BEGIN CERTIFICATE----- ... -----END CERTIFICATE-----</para>
+        /// </summary>
+        [NameInMap("SslCaPem")]
+        [Validation(Required=false)]
+        public string SslCaPem { get; set; }
 
     }
 

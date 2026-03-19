@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dbstooi01ex****</para>
+        /// <para>dbstooi01exXXXX</para>
         /// </summary>
         [NameInMap("BackupPlanId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DescribeBackupGatewayListRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>A client token used to ensure the idempotence of the request. This prevents duplicate requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the backup gateway. You can query multiple backup gateways. Separate multiple identifiers with commas (,).</para>
+        /// <para>The unique identifier of the backup gateway. You can query multiple gateways by separating the identifiers with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>7213527653217</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be a positive integer. Default value: 0.</para>
+        /// <para>The page number. The value must be greater than or equal to 0 and cannot exceed the maximum value of an integer. The default value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,14 +44,17 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <para>The number of records on each page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b></description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b></para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Default value: 30.</para>
+        /// <para>The default value is 30.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -62,18 +65,28 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region in which Database Backup (DBS) is activated. Valid values:</para>
+        /// <para>The region of the DBS instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b>: China (Hangzhou)</description></item>
-        /// <item><description><b>cn-shanghai</b>: China (Shanghai)</description></item>
-        /// <item><description><b>cn-qingdao</b>: China (Qingdao)</description></item>
-        /// <item><description><b>cn-beijing</b>: China (Beijing)</description></item>
-        /// <item><description><b>cn-shenzhen</b>: China (Shenzhen)</description></item>
-        /// <item><description><b>cn-hongkong</b>: China (Hong Kong)</description></item>
-        /// <item><description><b>ap-southeast-1</b>: Singapore (Singapore)</description></item>
-        /// <item><description><b>cn-hangzhou-finance</b>: China East 1 Finance</description></item>
-        /// <item><description><b>cn-shanghai-finance</b>: China East 2 Finance</description></item>
-        /// <item><description><b>cn-shenzhen-finance</b>: China South 1 Finance</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: China (Hangzhou)</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-shanghai</b>: China (Shanghai)</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-qingdao</b>: China (Qingdao)</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-beijing</b>: China (Beijing)</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-shenzhen</b>: China (Shenzhen)</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hongkong</b>: China (Hong Kong)</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: Singapore</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hangzhou-finance</b>: Hangzhou Finance Cloud</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-shanghai-finance</b>: Shanghai Finance Cloud</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-shenzhen-finance</b>: Shenzhen Finance Cloud</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

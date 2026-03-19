@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a DBS backup schedule.</para>
+        /// <para>This API is used to configure a DBS backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -126,6 +126,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             {
                 query["BackupStartTime"] = request.BackupStartTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupStorageEncryptMethod))
+            {
+                query["BackupStorageEncryptMethod"] = request.BackupStorageEncryptMethod;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupStorageType))
             {
                 query["BackupStorageType"] = request.BackupStorageType;
@@ -158,6 +162,14 @@ namespace AlibabaCloud.SDK.Dbs20190306
             {
                 query["EnableBackupLog"] = request.EnableBackupLog;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableMysqlPhysicalBackupBinlog))
+            {
+                query["EnableMysqlPhysicalBackupBinlog"] = request.EnableMysqlPhysicalBackupBinlog;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSourceEndpointSsl))
+            {
+                query["EnableSourceEndpointSsl"] = request.EnableSourceEndpointSsl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSSBucketName))
             {
                 query["OSSBucketName"] = request.OSSBucketName;
@@ -186,6 +198,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             {
                 query["SourceEndpointInstanceType"] = request.SourceEndpointInstanceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceEndpointOracleHome))
+            {
+                query["SourceEndpointOracleHome"] = request.SourceEndpointOracleHome;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceEndpointOracleSID))
             {
                 query["SourceEndpointOracleSID"] = request.SourceEndpointOracleSID;
@@ -205,6 +221,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceEndpointUserName))
             {
                 query["SourceEndpointUserName"] = request.SourceEndpointUserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SslCaPem))
+            {
+                query["SslCaPem"] = request.SslCaPem;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -227,7 +247,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a DBS backup schedule.</para>
+        /// <para>This API is used to configure a DBS backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -288,6 +308,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             {
                 query["BackupStartTime"] = request.BackupStartTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupStorageEncryptMethod))
+            {
+                query["BackupStorageEncryptMethod"] = request.BackupStorageEncryptMethod;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupStorageType))
             {
                 query["BackupStorageType"] = request.BackupStorageType;
@@ -320,6 +344,14 @@ namespace AlibabaCloud.SDK.Dbs20190306
             {
                 query["EnableBackupLog"] = request.EnableBackupLog;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableMysqlPhysicalBackupBinlog))
+            {
+                query["EnableMysqlPhysicalBackupBinlog"] = request.EnableMysqlPhysicalBackupBinlog;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSourceEndpointSsl))
+            {
+                query["EnableSourceEndpointSsl"] = request.EnableSourceEndpointSsl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSSBucketName))
             {
                 query["OSSBucketName"] = request.OSSBucketName;
@@ -348,6 +380,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             {
                 query["SourceEndpointInstanceType"] = request.SourceEndpointInstanceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceEndpointOracleHome))
+            {
+                query["SourceEndpointOracleHome"] = request.SourceEndpointOracleHome;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceEndpointOracleSID))
             {
                 query["SourceEndpointOracleSID"] = request.SourceEndpointOracleSID;
@@ -367,6 +403,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceEndpointUserName))
             {
                 query["SourceEndpointUserName"] = request.SourceEndpointUserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SslCaPem))
+            {
+                query["SslCaPem"] = request.SslCaPem;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -389,7 +429,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a DBS backup schedule.</para>
+        /// <para>This API is used to configure a DBS backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -407,7 +447,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a DBS backup schedule.</para>
+        /// <para>This API is used to configure a DBS backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -425,12 +465,12 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates, configures, and starts a backup schedule.</para>
+        /// <para>Creates, configures, and starts a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/70005.html">pricing</a> of Database Backup (DBS).</para>
+        /// <para>Before you call this operation, ensure that you understand the <a href="https://help.aliyun.com/document_detail/70005.html">billing methods and pricing</a> of Database Backup (DBS).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -636,12 +676,12 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates, configures, and starts a backup schedule.</para>
+        /// <para>Creates, configures, and starts a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/70005.html">pricing</a> of Database Backup (DBS).</para>
+        /// <para>Before you call this operation, ensure that you understand the <a href="https://help.aliyun.com/document_detail/70005.html">billing methods and pricing</a> of Database Backup (DBS).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -847,12 +887,12 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates, configures, and starts a backup schedule.</para>
+        /// <para>Creates, configures, and starts a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/70005.html">pricing</a> of Database Backup (DBS).</para>
+        /// <para>Before you call this operation, ensure that you understand the <a href="https://help.aliyun.com/document_detail/70005.html">billing methods and pricing</a> of Database Backup (DBS).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -870,12 +910,12 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates, configures, and starts a backup schedule.</para>
+        /// <para>Creates, configures, and starts a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/70005.html">pricing</a> of Database Backup (DBS).</para>
+        /// <para>Before you call this operation, ensure that you understand the <a href="https://help.aliyun.com/document_detail/70005.html">billing methods and pricing</a> of Database Backup (DBS).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -893,12 +933,12 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup schedule.</para>
+        /// <para>Creates a Database Backup Service (DBS) backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to create a backup schedule in the Database Backup (DBS) console, see <a href="https://help.aliyun.com/document_detail/65909.html">Purchase a backup schedule</a>.</para>
+        /// <para>To perform this operation in the console, see <a href="https://help.aliyun.com/document_detail/65909.html">Purchase a backup plan</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -996,12 +1036,12 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup schedule.</para>
+        /// <para>Creates a Database Backup Service (DBS) backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to create a backup schedule in the Database Backup (DBS) console, see <a href="https://help.aliyun.com/document_detail/65909.html">Purchase a backup schedule</a>.</para>
+        /// <para>To perform this operation in the console, see <a href="https://help.aliyun.com/document_detail/65909.html">Purchase a backup plan</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1099,12 +1139,12 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup schedule.</para>
+        /// <para>Creates a Database Backup Service (DBS) backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to create a backup schedule in the Database Backup (DBS) console, see <a href="https://help.aliyun.com/document_detail/65909.html">Purchase a backup schedule</a>.</para>
+        /// <para>To perform this operation in the console, see <a href="https://help.aliyun.com/document_detail/65909.html">Purchase a backup plan</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1122,12 +1162,12 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup schedule.</para>
+        /// <para>Creates a Database Backup Service (DBS) backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to create a backup schedule in the Database Backup (DBS) console, see <a href="https://help.aliyun.com/document_detail/65909.html">Purchase a backup schedule</a>.</para>
+        /// <para>To perform this operation in the console, see <a href="https://help.aliyun.com/document_detail/65909.html">Purchase a backup plan</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1145,7 +1185,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and starts a full backup set download task.</para>
+        /// <para>This operation creates a task to download a full backup set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1199,7 +1239,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and starts a full backup set download task.</para>
+        /// <para>This operation creates a task to download a full backup set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1253,7 +1293,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and starts a full backup set download task.</para>
+        /// <para>This operation creates a task to download a full backup set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1271,7 +1311,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and starts a full backup set download task.</para>
+        /// <para>This operation creates a task to download a full backup set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1629,8 +1669,17 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a restoration task.</para>
+        /// <para>This interface creates DBS restore jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Related operations</h3>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/85543.html">Recover databases</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/197144.html">Tutorials for various database restore configurations</a></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRestoreTaskRequest
@@ -1646,6 +1695,14 @@ namespace AlibabaCloud.SDK.Dbs20190306
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoOpenDatabase))
+            {
+                query["AutoOpenDatabase"] = request.AutoOpenDatabase;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoShutdownDatabase))
+            {
+                query["AutoShutdownDatabase"] = request.AutoShutdownDatabase;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupGatewayId))
             {
                 query["BackupGatewayId"] = request.BackupGatewayId;
@@ -1669,6 +1726,34 @@ namespace AlibabaCloud.SDK.Dbs20190306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossRoleName))
             {
                 query["CrossRoleName"] = request.CrossRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDatabaseInstanceClass))
+            {
+                query["DestDatabaseInstanceClass"] = request.DestDatabaseInstanceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDatabaseInstanceDatabaseVersion))
+            {
+                query["DestDatabaseInstanceDatabaseVersion"] = request.DestDatabaseInstanceDatabaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDatabaseInstanceRegion))
+            {
+                query["DestDatabaseInstanceRegion"] = request.DestDatabaseInstanceRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDatabaseInstanceStorageSize))
+            {
+                query["DestDatabaseInstanceStorageSize"] = request.DestDatabaseInstanceStorageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDatabaseInstanceType))
+            {
+                query["DestDatabaseInstanceType"] = request.DestDatabaseInstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDatabaseInstanceVSwitch))
+            {
+                query["DestDatabaseInstanceVSwitch"] = request.DestDatabaseInstanceVSwitch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDatabaseInstanceVpc))
+            {
+                query["DestDatabaseInstanceVpc"] = request.DestDatabaseInstanceVpc;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationEndpointDatabaseName))
             {
@@ -1710,9 +1795,17 @@ namespace AlibabaCloud.SDK.Dbs20190306
             {
                 query["DuplicateConflict"] = request.DuplicateConflict;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDestinationEndpointSsl))
+            {
+                query["EnableDestinationEndpointSsl"] = request.EnableDestinationEndpointSsl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreDestinationMode))
+            {
+                query["RestoreDestinationMode"] = request.RestoreDestinationMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreDir))
             {
@@ -1733,6 +1826,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreTime))
             {
                 query["RestoreTime"] = request.RestoreTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SslCaPem))
+            {
+                query["SslCaPem"] = request.SslCaPem;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1755,8 +1852,17 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a restoration task.</para>
+        /// <para>This interface creates DBS restore jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Related operations</h3>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/85543.html">Recover databases</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/197144.html">Tutorials for various database restore configurations</a></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRestoreTaskRequest
@@ -1772,6 +1878,14 @@ namespace AlibabaCloud.SDK.Dbs20190306
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoOpenDatabase))
+            {
+                query["AutoOpenDatabase"] = request.AutoOpenDatabase;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoShutdownDatabase))
+            {
+                query["AutoShutdownDatabase"] = request.AutoShutdownDatabase;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupGatewayId))
             {
                 query["BackupGatewayId"] = request.BackupGatewayId;
@@ -1795,6 +1909,34 @@ namespace AlibabaCloud.SDK.Dbs20190306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossRoleName))
             {
                 query["CrossRoleName"] = request.CrossRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDatabaseInstanceClass))
+            {
+                query["DestDatabaseInstanceClass"] = request.DestDatabaseInstanceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDatabaseInstanceDatabaseVersion))
+            {
+                query["DestDatabaseInstanceDatabaseVersion"] = request.DestDatabaseInstanceDatabaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDatabaseInstanceRegion))
+            {
+                query["DestDatabaseInstanceRegion"] = request.DestDatabaseInstanceRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDatabaseInstanceStorageSize))
+            {
+                query["DestDatabaseInstanceStorageSize"] = request.DestDatabaseInstanceStorageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDatabaseInstanceType))
+            {
+                query["DestDatabaseInstanceType"] = request.DestDatabaseInstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDatabaseInstanceVSwitch))
+            {
+                query["DestDatabaseInstanceVSwitch"] = request.DestDatabaseInstanceVSwitch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestDatabaseInstanceVpc))
+            {
+                query["DestDatabaseInstanceVpc"] = request.DestDatabaseInstanceVpc;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationEndpointDatabaseName))
             {
@@ -1836,9 +1978,17 @@ namespace AlibabaCloud.SDK.Dbs20190306
             {
                 query["DuplicateConflict"] = request.DuplicateConflict;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDestinationEndpointSsl))
+            {
+                query["EnableDestinationEndpointSsl"] = request.EnableDestinationEndpointSsl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreDestinationMode))
+            {
+                query["RestoreDestinationMode"] = request.RestoreDestinationMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreDir))
             {
@@ -1859,6 +2009,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreTime))
             {
                 query["RestoreTime"] = request.RestoreTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SslCaPem))
+            {
+                query["SslCaPem"] = request.SslCaPem;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1881,8 +2035,17 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a restoration task.</para>
+        /// <para>This interface creates DBS restore jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Related operations</h3>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/85543.html">Recover databases</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/197144.html">Tutorials for various database restore configurations</a></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRestoreTaskRequest
@@ -1899,8 +2062,17 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a restoration task.</para>
+        /// <para>This interface creates DBS restore jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Related operations</h3>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/85543.html">Recover databases</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/197144.html">Tutorials for various database restore configurations</a></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRestoreTaskRequest
@@ -1917,7 +2089,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries backup gateways.</para>
+        /// <para>Queries a list of backup gateways in Database Backup Service (DBS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1979,7 +2151,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries backup gateways.</para>
+        /// <para>Queries a list of backup gateways in Database Backup Service (DBS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2041,7 +2213,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries backup gateways.</para>
+        /// <para>Queries a list of backup gateways in Database Backup Service (DBS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2059,7 +2231,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries backup gateways.</para>
+        /// <para>Queries a list of backup gateways in Database Backup Service (DBS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2077,7 +2249,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the billing information of a backup schedule.</para>
+        /// <para>This operation queries the billing information of a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2131,7 +2303,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the billing information of a backup schedule.</para>
+        /// <para>This operation queries the billing information of a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2185,7 +2357,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the billing information of a backup schedule.</para>
+        /// <para>This operation queries the billing information of a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2203,7 +2375,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the billing information of a backup schedule.</para>
+        /// <para>This operation queries the billing information of a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2221,12 +2393,12 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of backup plans</para>
+        /// <para>This operation lets you view a DBS backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this interface, please activate the OSS service in advance. For more information, see <a href="https://help.aliyun.com/document_detail/31817.html">Object Storage Service (OSS)</a>.</para>
+        /// <para>Before you use this operation, ensure that Object Storage Service (OSS) is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/31817.html">Object Storage Service</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2243,6 +2415,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupMethod))
+            {
+                query["BackupMethod"] = request.BackupMethod;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupPlanId))
             {
                 query["BackupPlanId"] = request.BackupPlanId;
@@ -2278,6 +2454,18 @@ namespace AlibabaCloud.SDK.Dbs20190306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowBackupStrategyInfo))
+            {
+                query["ShowBackupStrategyInfo"] = request.ShowBackupStrategyInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowRecoverTimeRange))
+            {
+                query["ShowRecoverTimeRange"] = request.ShowRecoverTimeRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowStorageStrategyInfo))
+            {
+                query["ShowStorageStrategyInfo"] = request.ShowStorageStrategyInfo;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2300,12 +2488,12 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of backup plans</para>
+        /// <para>This operation lets you view a DBS backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this interface, please activate the OSS service in advance. For more information, see <a href="https://help.aliyun.com/document_detail/31817.html">Object Storage Service (OSS)</a>.</para>
+        /// <para>Before you use this operation, ensure that Object Storage Service (OSS) is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/31817.html">Object Storage Service</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2322,6 +2510,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupMethod))
+            {
+                query["BackupMethod"] = request.BackupMethod;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupPlanId))
             {
                 query["BackupPlanId"] = request.BackupPlanId;
@@ -2358,6 +2550,18 @@ namespace AlibabaCloud.SDK.Dbs20190306
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowBackupStrategyInfo))
+            {
+                query["ShowBackupStrategyInfo"] = request.ShowBackupStrategyInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowRecoverTimeRange))
+            {
+                query["ShowRecoverTimeRange"] = request.ShowRecoverTimeRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowStorageStrategyInfo))
+            {
+                query["ShowStorageStrategyInfo"] = request.ShowStorageStrategyInfo;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2379,12 +2583,12 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of backup plans</para>
+        /// <para>This operation lets you view a DBS backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this interface, please activate the OSS service in advance. For more information, see <a href="https://help.aliyun.com/document_detail/31817.html">Object Storage Service (OSS)</a>.</para>
+        /// <para>Before you use this operation, ensure that Object Storage Service (OSS) is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/31817.html">Object Storage Service</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2402,12 +2606,12 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of backup plans</para>
+        /// <para>This operation lets you view a DBS backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this interface, please activate the OSS service in advance. For more information, see <a href="https://help.aliyun.com/document_detail/31817.html">Object Storage Service (OSS)</a>.</para>
+        /// <para>Before you use this operation, ensure that Object Storage Service (OSS) is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/31817.html">Object Storage Service</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2425,7 +2629,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries backup set download tasks.</para>
+        /// <para>Queries the list of download tasks for backup sets in Database Backup Service (DBS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2487,7 +2691,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries backup set download tasks.</para>
+        /// <para>Queries the list of download tasks for backup sets in Database Backup Service (DBS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2549,7 +2753,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries backup set download tasks.</para>
+        /// <para>Queries the list of download tasks for backup sets in Database Backup Service (DBS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2567,7 +2771,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries backup set download tasks.</para>
+        /// <para>Queries the list of download tasks for backup sets in Database Backup Service (DBS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2721,7 +2925,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cn-hangzhou</para>
+        /// <para>You can call this operation to list full backup jobs in Database Backup Service (DBS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2746,6 +2950,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             {
                 query["BackupSetId"] = request.BackupSetId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupSetStatus))
+            {
+                query["BackupSetStatus"] = request.BackupSetStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -2765,6 +2973,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowProgress))
+            {
+                query["ShowProgress"] = request.ShowProgress;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowStorageType))
             {
@@ -2795,7 +3007,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cn-hangzhou</para>
+        /// <para>You can call this operation to list full backup jobs in Database Backup Service (DBS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2820,6 +3032,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             {
                 query["BackupSetId"] = request.BackupSetId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupSetStatus))
+            {
+                query["BackupSetStatus"] = request.BackupSetStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -2839,6 +3055,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowProgress))
+            {
+                query["ShowProgress"] = request.ShowProgress;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowStorageType))
             {
@@ -2869,7 +3089,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cn-hangzhou</para>
+        /// <para>You can call this operation to list full backup jobs in Database Backup Service (DBS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2887,7 +3107,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cn-hangzhou</para>
+        /// <para>You can call this operation to list full backup jobs in Database Backup Service (DBS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2905,7 +3125,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries incremental backup tasks.</para>
+        /// <para>This operation queries the list of incremental backup tasks for DBS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2975,7 +3195,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries incremental backup tasks.</para>
+        /// <para>This operation queries the list of incremental backup tasks for DBS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3045,7 +3265,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries incremental backup tasks.</para>
+        /// <para>This operation queries the list of incremental backup tasks for DBS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3063,7 +3283,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries incremental backup tasks.</para>
+        /// <para>This operation queries the list of incremental backup tasks for DBS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3081,7 +3301,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the error information of a Database Backup (DBS) task.</para>
+        /// <para>Queries the error code of a Database Backup Service (DBS) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3135,7 +3355,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the error information of a Database Backup (DBS) task.</para>
+        /// <para>Queries the error code of a Database Backup Service (DBS) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3189,7 +3409,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the error information of a Database Backup (DBS) task.</para>
+        /// <para>Queries the error code of a Database Backup Service (DBS) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3207,7 +3427,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the error information of a Database Backup (DBS) task.</para>
+        /// <para>Queries the error code of a Database Backup Service (DBS) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3361,7 +3581,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the precheck progress of a backup schedule or a restore task.</para>
+        /// <para>This operation queries the precheck progress for a backup plan or a restore job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3415,7 +3635,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the precheck progress of a backup schedule or a restore task.</para>
+        /// <para>This operation queries the precheck progress for a backup plan or a restore job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3469,7 +3689,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the precheck progress of a backup schedule or a restore task.</para>
+        /// <para>This operation queries the precheck progress for a backup plan or a restore job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3487,7 +3707,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the precheck progress of a backup schedule or a restore task.</para>
+        /// <para>This operation queries the precheck progress for a backup plan or a restore job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3505,7 +3725,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions that Database Backup (DBS) supports.</para>
+        /// <para>Queries the regions where DBS is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3551,7 +3771,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions that Database Backup (DBS) supports.</para>
+        /// <para>Queries the regions where DBS is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3597,7 +3817,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions that Database Backup (DBS) supports.</para>
+        /// <para>Queries the regions where DBS is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3615,7 +3835,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions that Database Backup (DBS) supports.</para>
+        /// <para>Queries the regions where DBS is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3633,7 +3853,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the range of time to which you can restore data in a backup schedule.</para>
+        /// <para>This operation returns the time ranges available for restoring data from a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3695,7 +3915,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the range of time to which you can restore data in a backup schedule.</para>
+        /// <para>This operation returns the time ranges available for restoring data from a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3757,7 +3977,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the range of time to which you can restore data in a backup schedule.</para>
+        /// <para>This operation returns the time ranges available for restoring data from a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3775,7 +3995,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the range of time to which you can restore data in a backup schedule.</para>
+        /// <para>This operation returns the time ranges available for restoring data from a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3793,7 +4013,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries restore tasks.</para>
+        /// <para>Queries restore jobs in Database Backup Service (DBS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3863,7 +4083,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries restore tasks.</para>
+        /// <para>Queries restore jobs in Database Backup Service (DBS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3933,7 +4153,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries restore tasks.</para>
+        /// <para>Queries restore jobs in Database Backup Service (DBS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3951,7 +4171,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries restore tasks.</para>
+        /// <para>Queries restore jobs in Database Backup Service (DBS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3969,13 +4189,13 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables incremental backup for a backup schedule.</para>
+        /// <para>Disable incremental backup for a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Impact</h3>
-        /// <para>After you disable the incremental log backup feature, your backup schedule no longer performs incremental log backups.</para>
+        /// <h2>Impact</h2>
+        /// <para>After you disable incremental backup, the backup plan no longer performs incremental backups.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3999,6 +4219,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisableMysqlPhysicalBackupBinlogOnly))
+            {
+                query["DisableMysqlPhysicalBackupBinlogOnly"] = request.DisableMysqlPhysicalBackupBinlogOnly;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -4025,13 +4249,13 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables incremental backup for a backup schedule.</para>
+        /// <para>Disable incremental backup for a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Impact</h3>
-        /// <para>After you disable the incremental log backup feature, your backup schedule no longer performs incremental log backups.</para>
+        /// <h2>Impact</h2>
+        /// <para>After you disable incremental backup, the backup plan no longer performs incremental backups.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4055,6 +4279,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisableMysqlPhysicalBackupBinlogOnly))
+            {
+                query["DisableMysqlPhysicalBackupBinlogOnly"] = request.DisableMysqlPhysicalBackupBinlogOnly;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -4081,13 +4309,13 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables incremental backup for a backup schedule.</para>
+        /// <para>Disable incremental backup for a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Impact</h3>
-        /// <para>After you disable the incremental log backup feature, your backup schedule no longer performs incremental log backups.</para>
+        /// <h2>Impact</h2>
+        /// <para>After you disable incremental backup, the backup plan no longer performs incremental backups.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4105,13 +4333,13 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables incremental backup for a backup schedule.</para>
+        /// <para>Disable incremental backup for a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Impact</h3>
-        /// <para>After you disable the incremental log backup feature, your backup schedule no longer performs incremental log backups.</para>
+        /// <h2>Impact</h2>
+        /// <para>After you disable incremental backup, the backup plan no longer performs incremental backups.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4129,13 +4357,13 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables incremental backup for a backup schedule.</para>
+        /// <para>This operation enables incremental backup for a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Impact</h2>
-        /// <para>It is free to enable the incremental log backup feature. However, the backup traffic and storage capacity generated by the feature are billed in the same way as the full backup feature, and can be offset by the free quota of backup schedules or storage plans.</para>
+        /// <para>Enabling incremental backup incurs no additional charge. However, this operation generates backup traffic and consumes storage space. The fees for the traffic and storage are the same as those for a full backup. You can use the free quota from a backup plan or a storage plan to cover these costs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4159,6 +4387,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableMysqlPhysicalBackupBinlog))
+            {
+                query["EnableMysqlPhysicalBackupBinlog"] = request.EnableMysqlPhysicalBackupBinlog;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -4185,13 +4417,13 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables incremental backup for a backup schedule.</para>
+        /// <para>This operation enables incremental backup for a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Impact</h2>
-        /// <para>It is free to enable the incremental log backup feature. However, the backup traffic and storage capacity generated by the feature are billed in the same way as the full backup feature, and can be offset by the free quota of backup schedules or storage plans.</para>
+        /// <para>Enabling incremental backup incurs no additional charge. However, this operation generates backup traffic and consumes storage space. The fees for the traffic and storage are the same as those for a full backup. You can use the free quota from a backup plan or a storage plan to cover these costs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4215,6 +4447,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableMysqlPhysicalBackupBinlog))
+            {
+                query["EnableMysqlPhysicalBackupBinlog"] = request.EnableMysqlPhysicalBackupBinlog;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -4241,13 +4477,13 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables incremental backup for a backup schedule.</para>
+        /// <para>This operation enables incremental backup for a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Impact</h2>
-        /// <para>It is free to enable the incremental log backup feature. However, the backup traffic and storage capacity generated by the feature are billed in the same way as the full backup feature, and can be offset by the free quota of backup schedules or storage plans.</para>
+        /// <para>Enabling incremental backup incurs no additional charge. However, this operation generates backup traffic and consumes storage space. The fees for the traffic and storage are the same as those for a full backup. You can use the free quota from a backup plan or a storage plan to cover these costs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4265,13 +4501,13 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables incremental backup for a backup schedule.</para>
+        /// <para>This operation enables incremental backup for a backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Impact</h2>
-        /// <para>It is free to enable the incremental log backup feature. However, the backup traffic and storage capacity generated by the feature are billed in the same way as the full backup feature, and can be offset by the free quota of backup schedules or storage plans.</para>
+        /// <para>Enabling incremental backup incurs no additional charge. However, this operation generates backup traffic and consumes storage space. The fees for the traffic and storage are the same as those for a full backup. You can use the free quota from a backup plan or a storage plan to cover these costs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4291,6 +4527,11 @@ namespace AlibabaCloud.SDK.Dbs20190306
         /// <summary>
         /// <para>Queries the result of a task that is used to query a database list by using a backup gateway based on the ID of the task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>您需要调用 <a href="https://help.aliyun.com/document_detail/2869847.html">CreateGetDBListFromAgentTask</a> 接口创建一个异步任务获取 TaskId（异步任务 ID）。将 TaskId 传入 GetDBListFromAgent 接口后，即可获取物理备份库表数据。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDBListFromAgentRequest
@@ -4350,6 +4591,11 @@ namespace AlibabaCloud.SDK.Dbs20190306
         /// <para>Queries the result of a task that is used to query a database list by using a backup gateway based on the ID of the task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>您需要调用 <a href="https://help.aliyun.com/document_detail/2869847.html">CreateGetDBListFromAgentTask</a> 接口创建一个异步任务获取 TaskId（异步任务 ID）。将 TaskId 传入 GetDBListFromAgent 接口后，即可获取物理备份库表数据。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetDBListFromAgentRequest
         /// </param>
@@ -4408,6 +4654,11 @@ namespace AlibabaCloud.SDK.Dbs20190306
         /// <para>Queries the result of a task that is used to query a database list by using a backup gateway based on the ID of the task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>您需要调用 <a href="https://help.aliyun.com/document_detail/2869847.html">CreateGetDBListFromAgentTask</a> 接口创建一个异步任务获取 TaskId（异步任务 ID）。将 TaskId 传入 GetDBListFromAgent 接口后，即可获取物理备份库表数据。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetDBListFromAgentRequest
         /// </param>
@@ -4426,6 +4677,11 @@ namespace AlibabaCloud.SDK.Dbs20190306
         /// <para>Queries the result of a task that is used to query a database list by using a backup gateway based on the ID of the task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>您需要调用 <a href="https://help.aliyun.com/document_detail/2869847.html">CreateGetDBListFromAgentTask</a> 接口创建一个异步任务获取 TaskId（异步任务 ID）。将 TaskId 传入 GetDBListFromAgent 接口后，即可获取物理备份库表数据。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetDBListFromAgentRequest
         /// </param>
@@ -4441,8 +4697,13 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants the AliyunServiceRoleForDBS role to Database Backup (DBS).</para>
+        /// <para>Grants the service-linked role (AliyunServiceRoleForDBS) to Database Backup (DBS).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DBS uses the service-linked role (AliyunServiceRoleForDBS) to obtain the required access permissions to connect to ApsaraDB databases, such as RDS, MongoDB, Redis, and PolarDB, or self-managed databases on ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/162603.html">Activate the Database Backup service</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// InitializeDbsServiceLinkedRoleRequest
@@ -4474,8 +4735,13 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants the AliyunServiceRoleForDBS role to Database Backup (DBS).</para>
+        /// <para>Grants the service-linked role (AliyunServiceRoleForDBS) to Database Backup (DBS).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DBS uses the service-linked role (AliyunServiceRoleForDBS) to obtain the required access permissions to connect to ApsaraDB databases, such as RDS, MongoDB, Redis, and PolarDB, or self-managed databases on ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/162603.html">Activate the Database Backup service</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// InitializeDbsServiceLinkedRoleRequest
@@ -4507,8 +4773,13 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants the AliyunServiceRoleForDBS role to Database Backup (DBS).</para>
+        /// <para>Grants the service-linked role (AliyunServiceRoleForDBS) to Database Backup (DBS).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DBS uses the service-linked role (AliyunServiceRoleForDBS) to obtain the required access permissions to connect to ApsaraDB databases, such as RDS, MongoDB, Redis, and PolarDB, or self-managed databases on ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/162603.html">Activate the Database Backup service</a>.</para>
+        /// </description>
         /// 
         /// <returns>
         /// InitializeDbsServiceLinkedRoleResponse
@@ -4521,8 +4792,13 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants the AliyunServiceRoleForDBS role to Database Backup (DBS).</para>
+        /// <para>Grants the service-linked role (AliyunServiceRoleForDBS) to Database Backup (DBS).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DBS uses the service-linked role (AliyunServiceRoleForDBS) to obtain the required access permissions to connect to ApsaraDB databases, such as RDS, MongoDB, Redis, and PolarDB, or self-managed databases on ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/162603.html">Activate the Database Backup service</a>.</para>
+        /// </description>
         /// 
         /// <returns>
         /// InitializeDbsServiceLinkedRoleResponse
@@ -4535,7 +4811,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies backup objects of a backup schedule in Database Backup (DBS).</para>
+        /// <para>Modifies the objects included in a Database Backup Service (DBS) backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4589,7 +4865,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies backup objects of a backup schedule in Database Backup (DBS).</para>
+        /// <para>Modifies the objects included in a Database Backup Service (DBS) backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4643,7 +4919,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies backup objects of a backup schedule in Database Backup (DBS).</para>
+        /// <para>Modifies the objects included in a Database Backup Service (DBS) backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4661,7 +4937,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies backup objects of a backup schedule in Database Backup (DBS).</para>
+        /// <para>Modifies the objects included in a Database Backup Service (DBS) backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4679,7 +4955,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the name of a backup schedule.</para>
+        /// <para>Modifies the name of a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4733,7 +5009,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the name of a backup schedule.</para>
+        /// <para>Modifies the name of a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4787,7 +5063,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the name of a backup schedule.</para>
+        /// <para>Modifies the name of a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4805,7 +5081,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the name of a backup schedule.</para>
+        /// <para>Modifies the name of a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4825,6 +5101,11 @@ namespace AlibabaCloud.SDK.Dbs20190306
         /// <summary>
         /// <para>Enables, configures, or disables the automatic download feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用本接口前请先确认备份数据是否存储在 DBS 的内置 OSS 上，您可通过调用 <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> 接口查看 BackupStorageType 取值情况。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyBackupSetDownloadRulesRequest
@@ -4904,6 +5185,11 @@ namespace AlibabaCloud.SDK.Dbs20190306
         /// <para>Enables, configures, or disables the automatic download feature.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用本接口前请先确认备份数据是否存储在 DBS 的内置 OSS 上，您可通过调用 <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> 接口查看 BackupStorageType 取值情况。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyBackupSetDownloadRulesRequest
         /// </param>
@@ -4982,6 +5268,11 @@ namespace AlibabaCloud.SDK.Dbs20190306
         /// <para>Enables, configures, or disables the automatic download feature.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用本接口前请先确认备份数据是否存储在 DBS 的内置 OSS 上，您可通过调用 <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> 接口查看 BackupStorageType 取值情况。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyBackupSetDownloadRulesRequest
         /// </param>
@@ -5000,6 +5291,11 @@ namespace AlibabaCloud.SDK.Dbs20190306
         /// <para>Enables, configures, or disables the automatic download feature.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用本接口前请先确认备份数据是否存储在 DBS 的内置 OSS 上，您可通过调用 <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> 接口查看 BackupStorageType 取值情况。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyBackupSetDownloadRulesRequest
         /// </param>
@@ -5015,7 +5311,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the data source of a backup schedule.</para>
+        /// <para>This operation modifies a Database Backup source endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5056,6 +5352,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             {
                 query["CrossRoleName"] = request.CrossRoleName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSourceEndpointSsl))
+            {
+                query["EnableSourceEndpointSsl"] = request.EnableSourceEndpointSsl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -5076,6 +5376,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             {
                 query["SourceEndpointInstanceType"] = request.SourceEndpointInstanceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceEndpointOracleHome))
+            {
+                query["SourceEndpointOracleHome"] = request.SourceEndpointOracleHome;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceEndpointOracleSID))
             {
                 query["SourceEndpointOracleSID"] = request.SourceEndpointOracleSID;
@@ -5095,6 +5399,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceEndpointUserName))
             {
                 query["SourceEndpointUserName"] = request.SourceEndpointUserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SslCaPem))
+            {
+                query["SslCaPem"] = request.SslCaPem;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5117,7 +5425,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the data source of a backup schedule.</para>
+        /// <para>This operation modifies a Database Backup source endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5158,6 +5466,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             {
                 query["CrossRoleName"] = request.CrossRoleName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSourceEndpointSsl))
+            {
+                query["EnableSourceEndpointSsl"] = request.EnableSourceEndpointSsl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -5178,6 +5490,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             {
                 query["SourceEndpointInstanceType"] = request.SourceEndpointInstanceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceEndpointOracleHome))
+            {
+                query["SourceEndpointOracleHome"] = request.SourceEndpointOracleHome;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceEndpointOracleSID))
             {
                 query["SourceEndpointOracleSID"] = request.SourceEndpointOracleSID;
@@ -5197,6 +5513,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceEndpointUserName))
             {
                 query["SourceEndpointUserName"] = request.SourceEndpointUserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SslCaPem))
+            {
+                query["SslCaPem"] = request.SslCaPem;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5219,7 +5539,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the data source of a backup schedule.</para>
+        /// <para>This operation modifies a Database Backup source endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5237,7 +5557,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the data source of a backup schedule.</para>
+        /// <para>This operation modifies a Database Backup source endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5423,7 +5743,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the lifecycle of data that is backed up based on a backup schedule.</para>
+        /// <para>Modify the lifecycle of stored data in a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5448,6 +5768,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             {
                 query["BackupRetentionPeriod"] = request.BackupRetentionPeriod;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupStorageEncryptMethod))
+            {
+                query["BackupStorageEncryptMethod"] = request.BackupStorageEncryptMethod;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -5459,6 +5783,30 @@ namespace AlibabaCloud.SDK.Dbs20190306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DuplicationInfrequentAccessPeriod))
             {
                 query["DuplicationInfrequentAccessPeriod"] = request.DuplicationInfrequentAccessPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncrementBackupRetentionPeriod))
+            {
+                query["IncrementBackupRetentionPeriod"] = request.IncrementBackupRetentionPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncrementDuplicationArchivePeriod))
+            {
+                query["IncrementDuplicationArchivePeriod"] = request.IncrementDuplicationArchivePeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncrementDuplicationInfrequentAccessPeriod))
+            {
+                query["IncrementDuplicationInfrequentAccessPeriod"] = request.IncrementDuplicationInfrequentAccessPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogBackupRetentionPeriod))
+            {
+                query["LogBackupRetentionPeriod"] = request.LogBackupRetentionPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogDuplicationArchivePeriod))
+            {
+                query["LogDuplicationArchivePeriod"] = request.LogDuplicationArchivePeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogDuplicationInfrequentAccessPeriod))
+            {
+                query["LogDuplicationInfrequentAccessPeriod"] = request.LogDuplicationInfrequentAccessPeriod;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -5485,7 +5833,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the lifecycle of data that is backed up based on a backup schedule.</para>
+        /// <para>Modify the lifecycle of stored data in a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5510,6 +5858,10 @@ namespace AlibabaCloud.SDK.Dbs20190306
             {
                 query["BackupRetentionPeriod"] = request.BackupRetentionPeriod;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupStorageEncryptMethod))
+            {
+                query["BackupStorageEncryptMethod"] = request.BackupStorageEncryptMethod;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -5521,6 +5873,30 @@ namespace AlibabaCloud.SDK.Dbs20190306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DuplicationInfrequentAccessPeriod))
             {
                 query["DuplicationInfrequentAccessPeriod"] = request.DuplicationInfrequentAccessPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncrementBackupRetentionPeriod))
+            {
+                query["IncrementBackupRetentionPeriod"] = request.IncrementBackupRetentionPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncrementDuplicationArchivePeriod))
+            {
+                query["IncrementDuplicationArchivePeriod"] = request.IncrementDuplicationArchivePeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncrementDuplicationInfrequentAccessPeriod))
+            {
+                query["IncrementDuplicationInfrequentAccessPeriod"] = request.IncrementDuplicationInfrequentAccessPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogBackupRetentionPeriod))
+            {
+                query["LogBackupRetentionPeriod"] = request.LogBackupRetentionPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogDuplicationArchivePeriod))
+            {
+                query["LogDuplicationArchivePeriod"] = request.LogDuplicationArchivePeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogDuplicationInfrequentAccessPeriod))
+            {
+                query["LogDuplicationInfrequentAccessPeriod"] = request.LogDuplicationInfrequentAccessPeriod;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -5547,7 +5923,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the lifecycle of data that is backed up based on a backup schedule.</para>
+        /// <para>Modify the lifecycle of stored data in a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5565,7 +5941,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the lifecycle of data that is backed up based on a backup schedule.</para>
+        /// <para>Modify the lifecycle of stored data in a backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5583,13 +5959,13 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a pay-as-you-go backup schedule.</para>
+        /// <para>This operation releases a pay-as-you-go backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Impacts</h2>
-        /// <para>After a pay-as-you-go backup schedule is released, it stops providing services. Database Backup (DBS) no longer charges you fees for this backup schedule.</para>
+        /// <h2>Impact</h2>
+        /// <para>After you release a backup plan, the service for the backup instance is stopped and you are no longer charged for the instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5639,13 +6015,13 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a pay-as-you-go backup schedule.</para>
+        /// <para>This operation releases a pay-as-you-go backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Impacts</h2>
-        /// <para>After a pay-as-you-go backup schedule is released, it stops providing services. Database Backup (DBS) no longer charges you fees for this backup schedule.</para>
+        /// <h2>Impact</h2>
+        /// <para>After you release a backup plan, the service for the backup instance is stopped and you are no longer charged for the instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5695,13 +6071,13 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a pay-as-you-go backup schedule.</para>
+        /// <para>This operation releases a pay-as-you-go backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Impacts</h2>
-        /// <para>After a pay-as-you-go backup schedule is released, it stops providing services. Database Backup (DBS) no longer charges you fees for this backup schedule.</para>
+        /// <h2>Impact</h2>
+        /// <para>After you release a backup plan, the service for the backup instance is stopped and you are no longer charged for the instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5719,13 +6095,13 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a pay-as-you-go backup schedule.</para>
+        /// <para>This operation releases a pay-as-you-go backup plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Impacts</h2>
-        /// <para>After a pay-as-you-go backup schedule is released, it stops providing services. Database Backup (DBS) no longer charges you fees for this backup schedule.</para>
+        /// <h2>Impact</h2>
+        /// <para>After you release a backup plan, the service for the backup instance is stopped and you are no longer charged for the instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5895,7 +6271,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a backup schedule.</para>
+        /// <para>This operation starts a DBS backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5945,7 +6321,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a backup schedule.</para>
+        /// <para>This operation starts a DBS backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5995,7 +6371,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a backup schedule.</para>
+        /// <para>This operation starts a DBS backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6013,7 +6389,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a backup schedule.</para>
+        /// <para>This operation starts a DBS backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6031,7 +6407,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a restore task.</para>
+        /// <para>Starts a DBS restore job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6081,7 +6457,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a restore task.</para>
+        /// <para>Starts a DBS restore job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6131,7 +6507,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a restore task.</para>
+        /// <para>Starts a DBS restore job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6149,7 +6525,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a restore task.</para>
+        /// <para>Starts a DBS restore job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6167,7 +6543,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a backup schedule.</para>
+        /// <para>This operation pauses a DBS backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6221,7 +6597,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a backup schedule.</para>
+        /// <para>This operation pauses a DBS backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6275,7 +6651,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a backup schedule.</para>
+        /// <para>This operation pauses a DBS backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6293,7 +6669,7 @@ namespace AlibabaCloud.SDK.Dbs20190306
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a backup schedule.</para>
+        /// <para>This operation pauses a DBS backup plan.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class StartRestoreTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>A client token. It ensures the idempotence of the request and prevents the same request from being submitted multiple times.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the restore task.</para>
+        /// <para>The ID of the restore job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

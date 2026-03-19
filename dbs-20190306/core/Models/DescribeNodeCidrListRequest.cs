@@ -26,16 +26,26 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>The region in which DBS is activated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b>: China (Hangzhou)</description></item>
-        /// <item><description><b>cn-shanghai</b>: China (Shanghai)</description></item>
-        /// <item><description><b>cn-qingdao</b>: China (Qingdao)</description></item>
-        /// <item><description><b>cn-beijing</b>: China (Beijing)</description></item>
-        /// <item><description><b>cn-shenzhen</b>: China (Shenzhen)</description></item>
-        /// <item><description><b>cn-hongkong</b>: China (Hong Kong)</description></item>
-        /// <item><description><b>ap-southeast-1</b>: Singapore (Singapore)</description></item>
-        /// <item><description><b>cn-hangzhou-finance</b>: China East 1 Finance</description></item>
-        /// <item><description><b>cn-shanghai-finance</b>: China East 2 Finance</description></item>
-        /// <item><description><b>cn-shenzhen-finance</b>: China South 1 Finance</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: China (Hangzhou)</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-shanghai</b>: China (Shanghai)</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-qingdao</b>: China (Qingdao)</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-beijing</b>: China (Beijing)</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-shenzhen</b>: China (Shenzhen)</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hongkong</b>: China (Hong Kong)</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: Singapore (Singapore)</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hangzhou-finance</b>: China East 1 Finance</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-shanghai-finance</b>: China East 2 Finance</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-shenzhen-finance</b>: China South 1 Finance</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

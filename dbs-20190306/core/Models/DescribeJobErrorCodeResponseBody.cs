@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error information.</para>
+        /// <para>The details of the error code.</para>
         /// </summary>
         [NameInMap("Item")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The standard error message.</para>
+            /// <para>The standardized error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Describe preCheck progress failed.</para>
@@ -67,17 +67,17 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The ID of the full backup or restore task.</para>
+            /// <para>The ID of the full backup or restore job.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>tooi0****</para>
+            /// <para>r1iv62ud****</para>
             /// </summary>
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The status of the task.</para>
+            /// <para>The state of the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>init</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
             public string JobState { get; set; }
 
             /// <summary>
-            /// <para>The internal ID of the DBS task type.</para>
+            /// <para>The internal job type ID in DBS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testId</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

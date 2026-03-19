@@ -25,18 +25,25 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>The day of each week when the full backup task runs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Monday</description></item>
-        /// <item><description>Tuesday</description></item>
-        /// <item><description>Wednesday</description></item>
-        /// <item><description>Thursday</description></item>
-        /// <item><description>Friday</description></item>
-        /// <item><description>Saturday</description></item>
-        /// <item><description>Sunday</description></item>
+        /// <item><description><para>Monday</para>
+        /// </description></item>
+        /// <item><description><para>Tuesday</para>
+        /// </description></item>
+        /// <item><description><para>Wednesday</para>
+        /// </description></item>
+        /// <item><description><para>Thursday</para>
+        /// </description></item>
+        /// <item><description><para>Friday</para>
+        /// </description></item>
+        /// <item><description><para>Saturday</para>
+        /// </description></item>
+        /// <item><description><para>Sunday</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Monday</para>
+        /// <para>Monday,Tuesday,Wednesday</para>
         /// </summary>
         [NameInMap("BackupPeriod")]
         [Validation(Required=false)]
@@ -66,8 +73,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>The backup method that you want to use for full backups. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>simple</b>: scheduled backup. If you specify this value for the BackupStrategyType parameter, you must also specify the BackupPeriod and BackupStartTime parameters.</description></item>
-        /// <item><description><b>Manual</b>: manual backup.</description></item>
+        /// <item><description><para><b>simple</b>: scheduled backup. If you specify this value for the BackupStrategyType parameter, you must also specify the BackupPeriod and BackupStartTime parameters.</para>
+        /// </description></item>
+        /// <item><description><para><b>Manual</b>: manual backup.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>Default value: <b>simple</b>.</para>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <para>The ID of the backup set download task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dbstooi01e****</para>
+        /// <para>1jydacm******</para>
         /// </summary>
         [NameInMap("BackupSetDownloadTaskId")]
         [Validation(Required=false)]

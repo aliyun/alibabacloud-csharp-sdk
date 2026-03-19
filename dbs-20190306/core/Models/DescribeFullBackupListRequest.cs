@@ -10,28 +10,36 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DescribeFullBackupListRequest : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The ID of the backup plan.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The total number of full backup tasks.</para>
+        /// <para>dbsr179qz******</para>
         /// </summary>
         [NameInMap("BackupPlanId")]
         [Validation(Required=false)]
         public string BackupPlanId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the backup task, such as 1554560477000.</para>
+        /// <para>The ID of the backup set.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The point in time when the backup set expires, such as 1554560477000.</para>
+        /// <para>1iukx5h******</para>
         /// </summary>
         [NameInMap("BackupSetId")]
         [Validation(Required=false)]
         public string BackupSetId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <b>Example:</b>
+        /// <para>finish</para>
+        /// </summary>
+        [NameInMap("BackupSetStatus")]
+        [Validation(Required=false)]
+        public string BackupSetStatus { get; set; }
+
+        /// <summary>
+        /// <para>A token that ensures idempotence and prevents duplicate requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
@@ -40,6 +48,12 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>The end time of the backup, in UNIX timestamp format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1676887128</para>
+        /// </summary>
         [NameInMap("EndTimestamp")]
         [Validation(Required=false)]
         public long? EndTimestamp { get; set; }
@@ -49,7 +63,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>The page number. Valid values: integers from 0 to the maximum integer value. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -59,7 +73,16 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The number of entries per page. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>30</para>
+        /// </description></item>
+        /// <item><description><para>50</para>
+        /// </description></item>
+        /// <item><description><para>100</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -69,7 +92,15 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("ShowProgress")]
+        [Validation(Required=false)]
+        public string ShowProgress { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to return the storage class.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -79,7 +110,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public bool? ShowStorageType { get; set; }
 
         /// <summary>
-        /// <para>Queries full backup tasks.</para>
+        /// <para>The start time of the backup.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1676887100</para>
         /// </summary>
         [NameInMap("StartTimestamp")]
         [Validation(Required=false)]

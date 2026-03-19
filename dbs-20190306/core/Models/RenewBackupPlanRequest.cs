@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dbstooi01e****</para>
+        /// <para>dbstooi01exxx</para>
         /// </summary>
         [NameInMap("BackupPlanId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>HKAJHFIUEQWBFIJSNFO****</para>
+        /// <para>HKAJHFIUEQWBFIJSNFOIWHN</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -37,8 +37,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>Specifies whether to use yearly subscription or monthly subscription for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Year</description></item>
-        /// <item><description>Month</description></item>
+        /// <item><description><para>Year</para>
+        /// </description></item>
+        /// <item><description><para>Month</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,8 +54,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>The subscription duration of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the Period parameter is set to Year, the value of the UsedTime parameter ranges from 1 to 9.</description></item>
-        /// <item><description>If the Period parameter is set to Month, the value of the UsedTime parameter ranges from 1 to 11.</description></item>
+        /// <item><description><para>If the Period parameter is set to Year, the value of the UsedTime parameter ranges from 1 to 9.</para>
+        /// </description></item>
+        /// <item><description><para>If the Period parameter is set to Month, the value of the UsedTime parameter ranges from 1 to 11.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

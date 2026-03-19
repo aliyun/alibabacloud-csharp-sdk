@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DescribeRestoreTaskListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup schedule.</para>
+        /// <para>The ID of the backup plan.</para>
+        /// <remarks>
+        /// <para>Specify either BackupPlanId or RestoreTaskId.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>dbs1hvb0wwwXXXXX</para>
@@ -20,7 +23,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupPlanId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>A client token that is used to ensure the idempotence of the request. This prevents duplicate requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
@@ -30,7 +33,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query.</para>
+        /// <para>The end time of the backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1570701361528</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be a positive integer. Default value: 0.</para>
+        /// <para>The page number. The value must be greater than or equal to 0 and not exceed the maximum value of the integer data type. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,12 +57,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>30</description></item>
-        /// <item><description>50</description></item>
-        /// <item><description>100</description></item>
-        /// </list>
+        /// <para>The number of entries to return on each page. Valid values: 1 to 100.</para>
         /// <remarks>
         /// <para>Default value: 30.</para>
         /// </remarks>
@@ -72,9 +70,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The restoration task ID. Separate multiple IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/2869836.html">CreateRestoreTask</a> operation to obtain the ID.</para>
+        /// <para>The ID of the restore job. You can specify multiple IDs. Separate them with commas (,). Call the <a href="https://help.aliyun.com/document_detail/2869836.html">CreateRestoreTask</a> operation to obtain this parameter.</para>
         /// <remarks>
-        /// <para> Configure the BackupPlanId or RestoreTaskId parameter. If you configure the two parameters, an error is returned.</para>
+        /// <para>Specify either RestoreTaskId or BackupPlanId. An error occurs if you specify both parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -85,7 +83,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RestoreTaskId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
+        /// <para>The start time of the backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1570701361528</para>

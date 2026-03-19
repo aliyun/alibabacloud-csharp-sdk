@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class CreateAndStartBackupPlanRequest : TeaModel {
         /// <summary>
-        /// <para>The backup gateway ID.</para>
+        /// <para>The ID of the backup gateway.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If <b>SourceEndpointInstanceType</b> is set to <b>Agent</b>, this parameter is required.****</para>
+        /// <item><description><para>This parameter is required if <b>SourceEndpoint</b>.<b>InstanceType</b> is set to <b>agent</b>.</para>
         /// </description></item>
-        /// <item><description><para>For more information about how to install a backup gateway, see <a href="https://help.aliyun.com/document_detail/93250.html">Install a backup gateway</a>.</para>
+        /// <item><description><para>For more information about how to create a backup gateway, see <a href="https://help.aliyun.com/document_detail/93250.html">Add a backup gateway</a>.</para>
         /// </description></item>
-        /// <item><description><para>You can query a list of existing backup gateways by calling the <a href="https://help.aliyun.com/document_detail/2869840.html">DescribeBackupGatewayList</a> operation.</para>
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/2869840.html">DescribeBackupGatewayList</a> operation to view the list of existing backup gateways.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>23313123312</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public long? BackupGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The interval at which you want to perform incremental log backups. Unit: seconds.</para>
+        /// <para>The interval for incremental backups, in seconds.</para>
         /// <remarks>
-        /// <para> This parameter is required only if you set BackupMethod to <b>physical</b>.</para>
+        /// <para>This parameter is required only for <b>physical backups</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,11 +43,12 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? BackupLogIntervalSeconds { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to generate the backup file. Valid values:</para>
+        /// <para>The backup method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>logical</b>: logical backup</description></item>
-        /// <item><description><b>physical</b>: physical backup</description></item>
-        /// <item><description><b>duplication</b>: dump backup</description></item>
+        /// <item><description><para><b>logical</b>: logical backup</para>
+        /// </description></item>
+        /// <item><description><para><b>physical</b>: physical backup</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,28 +60,35 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupMethod { get; set; }
 
         /// <summary>
-        /// <para>The object to be backed up.</para>
+        /// <para>The backup objects.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[ { &quot;DBName&quot;:&quot;Name of the database to be backed up&quot;, &quot;SchemaName&quot;:&quot;Name of the schema to be backed up&quot;, &quot;TableIncludes&quot;:[{ &quot;TableName&quot;:&quot;Name of the table to be backed up&quot; }], &quot;TableExcludes&quot;:[{ &quot;TableName&quot;:&quot;Name of the table that you do not want to back up&quot; }] } ]</para>
+        /// <para>[     {         &quot;DBName&quot;:&quot;待备份库名&quot;,         &quot;SchemaName&quot;:&quot;待备份 Schema 名&quot;,         &quot;TableIncludes&quot;:[{             &quot;TableName&quot;:&quot;待备份表表名&quot;         }],         &quot;TableExcludes&quot;:[{             &quot;TableName&quot;:&quot;待备份库名不需要备份表的表名&quot;         }]     } ]</para>
         /// </summary>
         [NameInMap("BackupObjects")]
         [Validation(Required=false)]
         public string BackupObjects { get; set; }
 
         /// <summary>
-        /// <para>The day of the week on which you want to perform full backup. Valid values:</para>
+        /// <para>The full backup cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Monday</b></description></item>
-        /// <item><description><b>Tuesday</b></description></item>
-        /// <item><description><b>Wednesday</b></description></item>
-        /// <item><description><b>Thursday</b></description></item>
-        /// <item><description><b>Friday</b></description></item>
-        /// <item><description><b>Saturday</b></description></item>
-        /// <item><description><b>Sunday</b></description></item>
+        /// <item><description><para><b>Monday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Tuesday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Wednesday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Thursday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Friday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Saturday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Sunday</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can specify multiple values. Separate multiple values with commas (,).</para>
+        /// <para>You can select multiple values. Separate them with commas (,).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -91,7 +99,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupPeriod { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup schedule.</para>
+        /// <para>The ID of the backup plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dbstooi0*******</para>
@@ -101,7 +109,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupPlanId { get; set; }
 
         /// <summary>
-        /// <para>The name of the backup schedule.</para>
+        /// <para>The custom name of the backup plan.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -112,9 +120,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupPlanName { get; set; }
 
         /// <summary>
-        /// <para>The network bandwidth throttling. Unit: KB/s. DBS allows a maximum bandwidth of 10 GB/s.</para>
+        /// <para>The network bandwidth throttling limit, in KB/s. The maximum allowed value is 10 GB.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only when physical backups for MySQL databases are performed.</para>
+        /// <para>This parameter is valid only for MySQL physical backups.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -125,7 +133,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public long? BackupRateLimit { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which the backup data is retained. Valid values: 0 to 1825. Default value: 730.</para>
+        /// <para>The retention period for backup data, in days. Valid values: 0 to 1825. Default value: 730.</para>
         /// 
         /// <b>Example:</b>
         /// <para>730</para>
@@ -135,9 +143,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? BackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>The I/O limit for the disk. Unit: KB/s.</para>
+        /// <para>The disk I/O limit, in KB/s.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only when physical backups for MySQL databases are performed.</para>
+        /// <para>This parameter is valid only for MySQL physical backups.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -148,7 +156,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public long? BackupSpeedLimit { get; set; }
 
         /// <summary>
-        /// <para>The start time of full backup tasks. Specify the value in the <em>HH:mm</em> format. The time must be in UTC.</para>
+        /// <para>The start time for the full backup. The time is in the <em>HH:mm</em> format and is in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>14:22</para>
@@ -158,27 +166,31 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupStartTime { get; set; }
 
         /// <summary>
-        /// <para>The storage type. Valid values:</para>
+        /// <para>The built-in storage type:</para>
         /// <list type="bullet">
-        /// <item><description>Empty: If you do not specify this parameter, the system stores backup data in your OSS bucket.</description></item>
-        /// <item><description>system : The system stores backup data in the built-in OSS bucket of DBS.</description></item>
+        /// <item><description><para>Empty (default): Backup data is stored in your OSS bucket.</para>
+        /// </description></item>
+        /// <item><description><para>system: Backup data is stored in the built-in OSS bucket of DBS.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>N/A</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("BackupStorageType")]
         [Validation(Required=false)]
         public string BackupStorageType { get; set; }
 
         /// <summary>
-        /// <para>The backup method that you want to use for full backups. Valid values:</para>
+        /// <para>The full backup strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>simple</b>: scheduled backup. If you specify this value for the BackupStrategyType parameter, you must also specify the BackupPeriod and BackupStartTime parameters.</description></item>
-        /// <item><description><b>Manual</b>: manual backup.</description></item>
+        /// <item><description><para><b>simple</b>: periodic backup. Use this value with BackupPeriod and BackupStartTime.</para>
+        /// </description></item>
+        /// <item><description><para><b>manual</b>: manual backup.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Default value: <b>simple</b>.</para>
+        /// <para>The default value is <b>simple</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -189,27 +201,27 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupStrategyType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>A client token used to ensure the idempotence of the request. This prevents duplicate requests.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DBS</para>
+        /// <para>ASDASDASDSADASFCZXVZ</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The unique ID (UID) of the Alibaba Cloud account to which the source database belongs.</para>
+        /// <para>The UID of the Alibaba Cloud account for cross-account backup.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2xxx7778xxxxxxxxxx</para>
+        /// <para>1648821913******</para>
         /// </summary>
         [NameInMap("CrossAliyunId")]
         [Validation(Required=false)]
         public string CrossAliyunId { get; set; }
 
         /// <summary>
-        /// <para>The name of the RAM role that is used to perform backups across Alibaba Cloud accounts.</para>
+        /// <para>The name of the RAM role for cross-account backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test123</para>
@@ -219,10 +231,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string CrossRoleName { get; set; }
 
         /// <summary>
-        /// <para>The region in which the database that you want to back up resides.</para>
-        /// <remarks>
-        /// <para>This parameter is required if the <b>PayType</b> parameter is set to <b>postpay</b>.</para>
-        /// </remarks>
+        /// <para>The region where the database is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -232,16 +241,24 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string DatabaseRegion { get; set; }
 
         /// <summary>
-        /// <para>The type of the source database. Valid values:</para>
+        /// <para>The database type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b></description></item>
-        /// <item><description><b>MSSQL</b></description></item>
-        /// <item><description><b>Oracle</b></description></item>
-        /// <item><description><b>MariaDB</b></description></item>
-        /// <item><description><b>PostgreSQL</b></description></item>
-        /// <item><description><b>DRDS</b></description></item>
-        /// <item><description><b>MongoDB</b></description></item>
-        /// <item><description><b>Redis</b></description></item>
+        /// <item><description><para><b>MySQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>MSSQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Oracle</b></para>
+        /// </description></item>
+        /// <item><description><para><b>MariaDB</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PostgreSQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>DRDS</b></para>
+        /// </description></item>
+        /// <item><description><para><b>MongoDB</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Redis</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -253,7 +270,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string DatabaseType { get; set; }
 
         /// <summary>
-        /// <para>The number of days after which the storage class of the backup data is changed to Archive. Default value: 365.</para>
+        /// <para>The time after which backup data is converted to archive storage, in days. Default value: 365.</para>
         /// 
         /// <b>Example:</b>
         /// <para>365</para>
@@ -263,7 +280,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? DuplicationArchivePeriod { get; set; }
 
         /// <summary>
-        /// <para>The number of days after which the storage class of the backup data is changed to Infrequent Access (IA). Default value: 180.</para>
+        /// <para>The time after which backup data is converted to Infrequent Access (IA) storage, in days. Default value: 180.</para>
         /// 
         /// <b>Example:</b>
         /// <para>180</para>
@@ -273,10 +290,12 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? DuplicationInfrequentAccessPeriod { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the incremental log backup feature. Valid values:</para>
+        /// <para>Specifies whether to enable incremental log backup. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables the incremental log backup feature.</description></item>
-        /// <item><description><b>false</b>: disables the incremental log backup feature.</description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -287,7 +306,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public bool? EnableBackupLog { get; set; }
 
         /// <summary>
-        /// <para>The request source. Default value: OpenApi. You do not need to set this parameter.</para>
+        /// <para>The source of the request. The default value is OpenApi. You do not need to set this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OpenApi</para>
@@ -297,16 +316,21 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string FromApp { get; set; }
 
         /// <summary>
-        /// <para>The type of the backup schedule. Valid values:</para>
+        /// <para>The specification of the backup plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>micro</b></description></item>
-        /// <item><description><b>small</b></description></item>
-        /// <item><description><b>medium</b></description></item>
-        /// <item><description><b>large</b></description></item>
-        /// <item><description><b>xlarge</b></description></item>
+        /// <item><description><para><b>micro</b></para>
+        /// </description></item>
+        /// <item><description><para><b>small</b></para>
+        /// </description></item>
+        /// <item><description><para><b>medium</b></para>
+        /// </description></item>
+        /// <item><description><para><b>large</b></para>
+        /// </description></item>
+        /// <item><description><para><b>xlarge</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> A backup schedule type with higher specifications offers higher backup and restoration performance. For more information, see <a href="https://help.aliyun.com/document_detail/84372.html">Select a backup schedule type</a>.</para>
+        /// <para>Higher specifications provide better backup and recovery performance. For more information, see <a href="https://help.aliyun.com/document_detail/84372.html">Specifications</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -318,18 +342,21 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The type of the source database instance. Valid values:</para>
+        /// <para>The database instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RDS</b>: ApsaraDB RDS.</description></item>
-        /// <item><description><b>PolarDB</b>: PolarDB.</description></item>
-        /// <item><description><b>DDS</b>: ApsaraDB for MongoDB.</description></item>
-        /// <item><description><b>Kvstore</b>: ApsaraDB for Redis.</description></item>
-        /// <item><description><b>Other</b>: Database connected by using an IP address and a port number.</description></item>
-        /// <item><description><b>dg</b>: Self-managed database that has no public IP address or port number and is connected over Database Gateway.</description></item>
+        /// <item><description><para><b>RDS</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PolarDB</b></para>
+        /// </description></item>
+        /// <item><description><para><b>DDS</b>: Alibaba Cloud MongoDB</para>
+        /// </description></item>
+        /// <item><description><para><b>Kvstore</b>: Alibaba Cloud Redis</para>
+        /// </description></item>
+        /// <item><description><para><b>Other</b>: A database connected over an IP address and port.</para>
+        /// </description></item>
+        /// <item><description><para><b>dg</b>: A self-managed database without a public IP address or port, connected through Database Gateway (DG).</para>
+        /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para> If <b>PayType</b> is set to <b>postpay</b>, this parameter is required.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
@@ -339,7 +366,8 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The name of the Object Storage Service (OSS) bucket used to store backup files. By default, the system automatically generates a name for the OSS bucket.</para>
+        /// <para>The name of the Object Storage Service (OSS) bucket.
+        /// Default: The system automatically generates a new name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestOssBucket</para>
@@ -353,27 +381,23 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>postpay</b>: pay-as-you-go.</description></item>
-        /// <item><description><b>prepay</b>: subscription.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> The default value is <b>prepay</b>. You can set this parameter to <b>postpay</b> only if you set <b>BackupMethod</b> to <b>duplication</b>.</para>
-        /// </remarks>
+        /// <para>The payment method. Valid value:</para>
+        /// <para><b>prepay</b>: subscription</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Postpaid</para>
+        /// <para>prepay</para>
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use yearly subscription or monthly subscription for the instance. Valid values:</para>
+        /// <para>The billing cycle of the subscription instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b>: yearly subscription</description></item>
-        /// <item><description><b>Month</b>: monthly subscription</description></item>
+        /// <item><description><para><b>Year</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Month</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -384,7 +408,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which you want to store the backup data. You can query the supported regions of DBS by calling the <a href="https://help.aliyun.com/document_detail/2869853.html">DescribeRegions</a> operation.</para>
+        /// <para>The region where DBS is available. To view the available regions, call the <a href="https://help.aliyun.com/document_detail/2869853.html">DescribeRegions</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -404,9 +428,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// <remarks>
-        /// <para>This parameter is required if the DatabaseType parameter is set to <b>PostgreSQL</b> or <b>MongoDB</b>.</para>
+        /// <para>This parameter is required if the database type is <b>PostgreSQL</b> or <b>MongoDB</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -417,9 +441,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string SourceEndpointDatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The endpoint of the database.</para>
+        /// <para>The database endpoint.</para>
         /// <remarks>
-        /// <para>This parameter is required if the <b>SourceEndpointInstanceType</b> parameter is set to <b>Express</b>, <b>Agent</b>, or <b>Other</b>.</para>
+        /// <para>This parameter is required if <b>SourceEndpoint</b>.<b>InstanceType</b> is set to <b>express</b>, <b>agent</b>, or <b>other</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -432,7 +456,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>The ID of the database instance.</para>
         /// <remarks>
-        /// <para>This parameter is required if the <b>SourceEndpointInstanceType</b> parameter is set to <b>RDS</b>, <b>ECS</b>, <b>DDS</b>, or <b>Express</b>.</para>
+        /// <para>This parameter is required if <b>SourceEndpoint</b>.<b>InstanceType</b> is set to <b>RDS</b>, <b>ECS</b>, <b>DDS</b>, or <b>Express</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -443,15 +467,22 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string SourceEndpointInstanceID { get; set; }
 
         /// <summary>
-        /// <para>The location of the source database. Valid values:</para>
+        /// <para>The location of the database. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RDS</b>: The database is on an ApsaraDB RDS instance.</description></item>
-        /// <item><description><b>ECS</b>: The database is on an Elastic Compute Service (ECS) instance.</description></item>
-        /// <item><description><b>Express</b>: The database is connected to DBS by using Express Connect, VPN Gateway, or Smart Access Gateway.</description></item>
-        /// <item><description><b>Agent</b>: The database is connected to DBS over a DBS backup gateway.</description></item>
-        /// <item><description><b>DDS</b>: The database is on an ApsaraDB for MongoDB instance.</description></item>
-        /// <item><description><b>Other</b>: The database is connected to DBS by using an IP address and a port number.</description></item>
-        /// <item><description><b>dg</b>: The database is a self-managed database that has no public IP address or port number and is connected to DBS over Database Gateway.</description></item>
+        /// <item><description><para><b>RDS</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ECS</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Express</b>: A database connected through a leased line, VPN Gateway, or Smart Access Gateway.</para>
+        /// </description></item>
+        /// <item><description><para><b>Agent</b>: A database connected through a backup gateway.</para>
+        /// </description></item>
+        /// <item><description><para><b>DDS</b>: Alibaba Cloud MongoDB</para>
+        /// </description></item>
+        /// <item><description><para><b>Other</b>: A database connected directly over an IP address and port.</para>
+        /// </description></item>
+        /// <item><description><para><b>dg</b>: A self-managed database without a public IP address or port, connected through Database Gateway (DG).</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -463,7 +494,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string SourceEndpointInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The system ID (SID) of the Oracle database. This parameter is required if the source database is an Oracle database.</para>
+        /// <para>The Oracle system ID (SID). This parameter is required if the database type is Oracle.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -473,9 +504,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string SourceEndpointOracleSID { get; set; }
 
         /// <summary>
-        /// <para>The password of the account that is used to connect to the database.</para>
+        /// <para>The password for the database account.</para>
         /// <remarks>
-        /// <para>This parameter is required except that the database is an SQL Server database that is connected to DBS over a DBS backup gateway or a Redis database.</para>
+        /// <para>This parameter is optional if the database type is <b>Redis</b>, or if the database location is <b>agent</b> and the database type is <b>MSSQL</b>. In all other cases, this parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -486,9 +517,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string SourceEndpointPassword { get; set; }
 
         /// <summary>
-        /// <para>The port of the database.</para>
+        /// <para>The database port.</para>
         /// <remarks>
-        /// <para>This parameter is required if the <b>SourceEndpointInstanceType</b> parameter is set to <b>Express</b>, <b>Agent</b>, <b>Other</b>, or <b>ECS</b>.</para>
+        /// <para>This parameter is required if <b>SourceEndpoint</b>.<b>InstanceType</b> is set to <b>express</b>, <b>agent</b>, <b>other</b>, or <b>ECS</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -499,9 +530,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? SourceEndpointPort { get; set; }
 
         /// <summary>
-        /// <para>The region in which the database that you want to back up resides.</para>
+        /// <para>The region where the database is located.</para>
         /// <remarks>
-        /// <para>This parameter is required if the <b>SourceEndpointInstanceType</b> parameter is set to <b>RDS</b>, <b>ECS</b>, <b>DDS</b>, <b>Express</b>, or <b>Agent</b>.</para>
+        /// <para>This parameter is required if <b>SourceEndpoint</b>.<b>InstanceType</b> is set to <b>RDS</b>, <b>ECS</b>, <b>DDS</b>, <b>Express</b>, or <b>Agent</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -512,9 +543,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string SourceEndpointRegion { get; set; }
 
         /// <summary>
-        /// <para>The username of the account that is used to connect to the database.</para>
+        /// <para>The database account.</para>
         /// <remarks>
-        /// <para>This parameter is required except that the database is an SQL Server database that is connected to DBS over a DBS backup gateway or a Redis database.</para>
+        /// <para>This parameter is optional if the database type is <b>Redis</b>, or if the database location is <b>agent</b> and the database type is <b>MSSQL</b>. In all other cases, this parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -525,10 +556,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string SourceEndpointUserName { get; set; }
 
         /// <summary>
-        /// <para>The region in which you want to store the backup data.</para>
-        /// <remarks>
-        /// <para>This parameter is required if the <b>PayType</b> parameter is set to <b>postpay</b>.</para>
-        /// </remarks>
+        /// <para>The storage region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -538,10 +566,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string StorageRegion { get; set; }
 
         /// <summary>
-        /// <para>This parameter is unavailable.</para>
+        /// <para>This parameter is not yet available.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>N/A</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]
@@ -550,8 +578,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>The subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>Period</b> is set to <b>Year</b>, the valid values of <b>UsedTime</b> range from 1 to 5.</description></item>
-        /// <item><description>If <b>Period</b> is set to <b>Month</b>, the valid values of <b>UsedTime</b> range from 1 to 11.</description></item>
+        /// <item><description><para>If <b>Period</b> is set to <b>Year</b>, the value of <b>UsedTime</b> can be 1 to 5.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>Period</b> is set to <b>Month</b>, the value of <b>UsedTime</b> can be 1 to 11.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

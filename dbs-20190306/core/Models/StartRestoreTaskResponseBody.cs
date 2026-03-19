@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the restore task.</para>
+        /// <para>The ID of the restore job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s102h7rfXXXX</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RestoreTaskId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
