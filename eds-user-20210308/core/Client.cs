@@ -1068,6 +1068,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             {
                 query["BusinessChannel"] = request.BusinessChannel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAliyunResourceGroup))
+            {
+                query["EnableAliyunResourceGroup"] = request.EnableAliyunResourceGroup;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsResourceGroupWithOfficeSite))
             {
                 query["IsResourceGroupWithOfficeSite"] = request.IsResourceGroupWithOfficeSite;
@@ -1121,6 +1125,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
             {
                 query["BusinessChannel"] = request.BusinessChannel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAliyunResourceGroup))
+            {
+                query["EnableAliyunResourceGroup"] = request.EnableAliyunResourceGroup;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsResourceGroupWithOfficeSite))
             {
@@ -4343,7 +4351,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the contact information of a convenience account.</para>
+        /// <para>Modifies user information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4397,7 +4405,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the contact information of a convenience account.</para>
+        /// <para>Modifies user information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4451,7 +4459,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the contact information of a convenience account.</para>
+        /// <para>Modifies user information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4469,7 +4477,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the contact information of a convenience account.</para>
+        /// <para>Modifies user information.</para>
         /// </summary>
         /// 
         /// <param name="request">

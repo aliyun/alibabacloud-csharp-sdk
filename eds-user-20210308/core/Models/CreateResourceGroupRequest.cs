@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string BusinessChannel { get; set; }
 
+        [NameInMap("EnableAliyunResourceGroup")]
+        [Validation(Required=false)]
+        public bool? EnableAliyunResourceGroup { get; set; }
+
         /// <summary>
         /// <remarks>
         /// <para> This parameter is not publicly available.</para>
