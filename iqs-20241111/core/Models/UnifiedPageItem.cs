@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public string Summary { get; set; }
 
+        [NameInMap("tags")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Tags { get; set; }
+
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }
