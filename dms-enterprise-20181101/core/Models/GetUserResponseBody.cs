@@ -204,9 +204,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public long? ParentUid { get; set; }
 
-            /// <summary>
-            /// <para>The list of role IDs.</para>
-            /// </summary>
             [NameInMap("RoleIdList")]
             [Validation(Required=false)]
             public GetUserResponseBodyUserRoleIdList RoleIdList { get; set; }
@@ -217,9 +214,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
             }
 
-            /// <summary>
-            /// <para>The list of role names.</para>
-            /// </summary>
             [NameInMap("RoleNameList")]
             [Validation(Required=false)]
             public GetUserResponseBodyUserRoleNameList RoleNameList { get; set; }

@@ -56,9 +56,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string DatabaseId { get; set; }
 
-            /// <summary>
-            /// <para>The IDs of database shards of the logical database.</para>
-            /// </summary>
             [NameInMap("DatabaseIds")]
             [Validation(Required=false)]
             public GetLogicDatabaseResponseBodyLogicDatabaseDatabaseIds DatabaseIds { get; set; }
@@ -109,9 +106,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public bool? Logic { get; set; }
 
-            /// <summary>
-            /// <para>The IDs of the owners of the logical database.</para>
-            /// </summary>
             [NameInMap("OwnerIdList")]
             [Validation(Required=false)]
             public GetLogicDatabaseResponseBodyLogicDatabaseOwnerIdList OwnerIdList { get; set; }
@@ -122,9 +116,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
             }
 
-            /// <summary>
-            /// <para>The names of the owners of the logical database.</para>
-            /// </summary>
             [NameInMap("OwnerNameList")]
             [Validation(Required=false)]
             public GetLogicDatabaseResponseBodyLogicDatabaseOwnerNameList OwnerNameList { get; set; }

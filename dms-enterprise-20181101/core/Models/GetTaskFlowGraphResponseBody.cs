@@ -84,9 +84,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string DagName { get; set; }
 
-            /// <summary>
-            /// <para>The list of task flow edges.</para>
-            /// </summary>
             [NameInMap("Edges")]
             [Validation(Required=false)]
             public GetTaskFlowGraphResponseBodyTaskFlowGraphEdges Edges { get; set; }
@@ -95,42 +92,18 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public List<GetTaskFlowGraphResponseBodyTaskFlowGraphEdgesEdge> Edge { get; set; }
                 public class GetTaskFlowGraphResponseBodyTaskFlowGraphEdgesEdge : TeaModel {
-                    /// <summary>
-                    /// <para>The ID of the task flow.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>15***</para>
-                    /// </summary>
                     [NameInMap("DagId")]
                     [Validation(Required=false)]
                     public long? DagId { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the task flow edge.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>24***</para>
-                    /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public long? Id { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the end node on the edge.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>44***</para>
-                    /// </summary>
                     [NameInMap("NodeEnd")]
                     [Validation(Required=false)]
                     public long? NodeEnd { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the start node on the edge.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>44***</para>
-                    /// </summary>
                     [NameInMap("NodeFrom")]
                     [Validation(Required=false)]
                     public long? NodeFrom { get; set; }
@@ -139,9 +112,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
             }
 
-            /// <summary>
-            /// <para>The node list of the task flow.</para>
-            /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
             public GetTaskFlowGraphResponseBodyTaskFlowGraphNodes Nodes { get; set; }
@@ -150,79 +120,34 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public List<GetTaskFlowGraphResponseBodyTaskFlowGraphNodesNode> Node { get; set; }
                 public class GetTaskFlowGraphResponseBodyTaskFlowGraphNodesNode : TeaModel {
-                    /// <summary>
-                    /// <para>The ID of the task flow.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>15***</para>
-                    /// </summary>
                     [NameInMap("DagId")]
                     [Validation(Required=false)]
                     public long? DagId { get; set; }
 
-                    /// <summary>
-                    /// <para>The position of the node in the DAG.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>{\&quot;x\&quot;:541,\&quot;y\&quot;:322,\&quot;layoutType\&quot;:\&quot;Horizontal\&quot;}</para>
-                    /// </summary>
                     [NameInMap("GraphParam")]
                     [Validation(Required=false)]
                     public string GraphParam { get; set; }
 
-                    /// <summary>
-                    /// <para>The advanced configuration of the node.</para>
-                    /// </summary>
                     [NameInMap("NodeConfig")]
                     [Validation(Required=false)]
                     public string NodeConfig { get; set; }
 
-                    /// <summary>
-                    /// <para>The configuration of the node.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>{ODI3OTNRVC****UHVFT29&quot;}</para>
-                    /// </summary>
                     [NameInMap("NodeContent")]
                     [Validation(Required=false)]
                     public string NodeContent { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the node.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>44***</para>
-                    /// </summary>
                     [NameInMap("NodeId")]
                     [Validation(Required=false)]
                     public long? NodeId { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the node.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>test</para>
-                    /// </summary>
                     [NameInMap("NodeName")]
                     [Validation(Required=false)]
                     public string NodeName { get; set; }
 
-                    /// <summary>
-                    /// <para>The type of the node. For more information about the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/424705.html">NodeType parameter</a>.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>36</para>
-                    /// </summary>
                     [NameInMap("NodeType")]
                     [Validation(Required=false)]
                     public long? NodeType { get; set; }
 
-                    /// <summary>
-                    /// <para>The time variables for the node.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>{\&quot;variables\&quot;:[{\&quot;name\&quot;:\&quot;Today\&quot;,\&quot;pattern\&quot;:\&quot;yyyy-MM-dd|+1d\&quot;}]}</para>
-                    /// </summary>
                     [NameInMap("TimeVariables")]
                     [Validation(Required=false)]
                     public string TimeVariables { get; set; }

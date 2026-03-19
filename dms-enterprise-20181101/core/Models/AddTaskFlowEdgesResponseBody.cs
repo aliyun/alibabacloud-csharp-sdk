@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class AddTaskFlowEdgesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The list of task flow edge IDs.</para>
-        /// </summary>
         [NameInMap("EdgeIds")]
         [Validation(Required=false)]
         public AddTaskFlowEdgesResponseBodyEdgeIds EdgeIds { get; set; }

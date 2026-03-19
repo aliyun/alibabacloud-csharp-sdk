@@ -74,9 +74,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string WfCateName { get; set; }
 
-            /// <summary>
-            /// <para>The approval nodes.</para>
-            /// </summary>
             [NameInMap("WorkflowNodeList")]
             [Validation(Required=false)]
             public PreviewWorkflowResponseBodyWorkflowDetailWorkflowNodeList WorkflowNodeList { get; set; }
@@ -85,9 +82,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public List<PreviewWorkflowResponseBodyWorkflowDetailWorkflowNodeListWorkflowNode> WorkflowNode { get; set; }
                 public class PreviewWorkflowResponseBodyWorkflowDetailWorkflowNodeListWorkflowNode : TeaModel {
-                    /// <summary>
-                    /// <para>The approvers.</para>
-                    /// </summary>
                     [NameInMap("AuditUserList")]
                     [Validation(Required=false)]
                     public PreviewWorkflowResponseBodyWorkflowDetailWorkflowNodeListWorkflowNodeAuditUserList AuditUserList { get; set; }
@@ -96,32 +90,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                         [Validation(Required=false)]
                         public List<PreviewWorkflowResponseBodyWorkflowDetailWorkflowNodeListWorkflowNodeAuditUserListAuditUser> AuditUser { get; set; }
                         public class PreviewWorkflowResponseBodyWorkflowDetailWorkflowNodeListWorkflowNodeAuditUserListAuditUser : TeaModel {
-                            /// <summary>
-                            /// <para>The nickname of the approver.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>Owner</para>
-                            /// </summary>
                             [NameInMap("NickName")]
                             [Validation(Required=false)]
                             public string NickName { get; set; }
 
-                            /// <summary>
-                            /// <para>The name of the approver.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>db_test</para>
-                            /// </summary>
                             [NameInMap("RealName")]
                             [Validation(Required=false)]
                             public string RealName { get; set; }
 
-                            /// <summary>
-                            /// <para>The ID of the approver.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>16***</para>
-                            /// </summary>
                             [NameInMap("UserId")]
                             [Validation(Required=false)]
                             public long? UserId { get; set; }
@@ -130,35 +106,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
                     }
 
-                    /// <summary>
-                    /// <para>The remarks of the approval node.</para>
-                    /// </summary>
                     [NameInMap("Comment")]
                     [Validation(Required=false)]
                     public string Comment { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the approval node.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>Owner</para>
-                    /// </summary>
                     [NameInMap("NodeName")]
                     [Validation(Required=false)]
                     public string NodeName { get; set; }
 
-                    /// <summary>
-                    /// <para>The type of the approval node.</para>
-                    /// <para>Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>USER_LIST: The approval node is created by a user.</description></item>
-                    /// <item><description>UNKNOWN: The source of the approval node is unknown.</description></item>
-                    /// <item><description>SYS: The approval node is predefined by the system.</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>SYS</para>
-                    /// </summary>
                     [NameInMap("NodeType")]
                     [Validation(Required=false)]
                     public string NodeType { get; set; }

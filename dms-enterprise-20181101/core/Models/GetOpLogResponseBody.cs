@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        /// <summary>
-        /// <para>The details of the operation log.</para>
-        /// </summary>
         [NameInMap("OpLogDetails")]
         [Validation(Required=false)]
         public GetOpLogResponseBodyOpLogDetails OpLogDetails { get; set; }
@@ -40,93 +37,34 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<GetOpLogResponseBodyOpLogDetailsOpLogDetail> OpLogDetail { get; set; }
             public class GetOpLogResponseBodyOpLogDetailsOpLogDetail : TeaModel {
-                /// <summary>
-                /// <para>The endpoint of the database instance.</para>
-                /// <remarks>
-                /// </remarks>
-                /// <list type="bullet">
-                /// <item><description><para>This parameter is valid only for database instances of the LocalInstance type.</para>
-                /// </description></item>
-                /// <item><description><para>This parameter is valid only for operations on the functional modules related to tasks.</para>
-                /// </description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="mailto:dmstest_prod_database@dmstest.rds">dmstest_prod_database@dmstest.rds</a>... [Test instance]</para>
-                /// </summary>
                 [NameInMap("Database")]
                 [Validation(Required=false)]
                 public string Database { get; set; }
 
-                /// <summary>
-                /// <para>The functional module for which the operation log is queried.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>SECURITY_RULE</para>
-                /// </summary>
                 [NameInMap("Module")]
                 [Validation(Required=false)]
                 public string Module { get; set; }
 
-                /// <summary>
-                /// <para>The details of the operation.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>SELECT * FROM <c>orders</c> \n LIMIT 20</para>
-                /// </summary>
                 [NameInMap("OpContent")]
                 [Validation(Required=false)]
                 public string OpContent { get; set; }
 
-                /// <summary>
-                /// <para>The time when the operation was performed.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2022-03-28 16:45:19</para>
-                /// </summary>
                 [NameInMap("OpTime")]
                 [Validation(Required=false)]
                 public string OpTime { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the user who performed the operation.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>51****</para>
-                /// </summary>
                 [NameInMap("OpUserId")]
                 [Validation(Required=false)]
                 public long? OpUserId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the ticket or task.</para>
-                /// <remarks>
-                /// <para> This parameter is valid only for operations on the functional modules related to tasks and the task management module in system management.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>509****</para>
-                /// </summary>
                 [NameInMap("OrderId")]
                 [Validation(Required=false)]
                 public long? OrderId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the Alibaba Cloud account.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>22275482072787****</para>
-                /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public string UserId { get; set; }
 
-                /// <summary>
-                /// <para>The display name of the user.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test_name</para>
-                /// </summary>
                 [NameInMap("UserNick")]
                 [Validation(Required=false)]
                 public string UserNick { get; set; }

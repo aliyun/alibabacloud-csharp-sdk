@@ -36,9 +36,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
-            /// <summary>
-            /// <para>The information about the approver.</para>
-            /// </summary>
             [NameInMap("CurrentHandlers")]
             [Validation(Required=false)]
             public GetApprovalDetailResponseBodyApprovalDetailCurrentHandlers CurrentHandlers { get; set; }
@@ -47,22 +44,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public List<GetApprovalDetailResponseBodyApprovalDetailCurrentHandlersCurrentHandler> CurrentHandler { get; set; }
                 public class GetApprovalDetailResponseBodyApprovalDetailCurrentHandlersCurrentHandler : TeaModel {
-                    /// <summary>
-                    /// <para>The ID of the user.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1</para>
-                    /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public long? Id { get; set; }
 
-                    /// <summary>
-                    /// <para>The nickname of the user.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>nickName</para>
-                    /// </summary>
                     [NameInMap("NickName")]
                     [Validation(Required=false)]
                     public string NickName { get; set; }
@@ -111,9 +96,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string OrderType { get; set; }
 
-            /// <summary>
-            /// <para>The reasons for the approval.</para>
-            /// </summary>
             [NameInMap("ReasonList")]
             [Validation(Required=false)]
             public GetApprovalDetailResponseBodyApprovalDetailReasonList ReasonList { get; set; }
@@ -183,9 +165,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string WorkflowInsCode { get; set; }
 
-            /// <summary>
-            /// <para>The details of approval nodes.</para>
-            /// </summary>
             [NameInMap("WorkflowNodes")]
             [Validation(Required=false)]
             public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes WorkflowNodes { get; set; }
@@ -194,9 +173,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public List<GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode> WorkflowNode { get; set; }
                 public class GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode : TeaModel {
-                    /// <summary>
-                    /// <para>The IDs of the approvers.</para>
-                    /// </summary>
                     [NameInMap("AuditUserIdList")]
                     [Validation(Required=false)]
                     public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNodeAuditUserIdList AuditUserIdList { get; set; }
@@ -207,60 +183,22 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
                     }
 
-                    /// <summary>
-                    /// <para>The name of the approval node.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>DBA</para>
-                    /// </summary>
                     [NameInMap("NodeName")]
                     [Validation(Required=false)]
                     public string NodeName { get; set; }
 
-                    /// <summary>
-                    /// <para>The remarks of the approval.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>Reason: Approved</para>
-                    /// </summary>
                     [NameInMap("OperateComment")]
                     [Validation(Required=false)]
                     public string OperateComment { get; set; }
 
-                    /// <summary>
-                    /// <para>The time when the ticket was submitted.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>2019-10-15 13:47:54</para>
-                    /// </summary>
                     [NameInMap("OperateTime")]
                     [Validation(Required=false)]
                     public string OperateTime { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the user who submitted the ticket.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1****</para>
-                    /// </summary>
                     [NameInMap("OperatorId")]
                     [Validation(Required=false)]
                     public long? OperatorId { get; set; }
 
-                    /// <summary>
-                    /// <para>The approval status of the ticket. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>START</b>: The ticket was submitted.</description></item>
-                    /// <item><description><b>ERROR</b>: An error occurred.</description></item>
-                    /// <item><description><b>AUDITING</b>: The ticket is being reviewed.</description></item>
-                    /// <item><description><b>REJECT</b>: The ticket was rejected.</description></item>
-                    /// <item><description><b>CANCEL</b>: The ticket was revoked.</description></item>
-                    /// <item><description><b>APPROVED</b>: The ticket was approved.</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>APPROVED</para>
-                    /// </summary>
                     [NameInMap("WorkflowInsCode")]
                     [Validation(Required=false)]
                     public string WorkflowInsCode { get; set; }

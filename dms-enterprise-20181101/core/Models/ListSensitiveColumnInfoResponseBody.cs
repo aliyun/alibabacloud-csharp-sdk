@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The details of the sensitive field.</para>
-        /// </summary>
         [NameInMap("SensitiveColumnList")]
         [Validation(Required=false)]
         public ListSensitiveColumnInfoResponseBodySensitiveColumnList SensitiveColumnList { get; set; }
@@ -50,104 +47,48 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListSensitiveColumnInfoResponseBodySensitiveColumnListSensitiveColumn> SensitiveColumn { get; set; }
             public class ListSensitiveColumnInfoResponseBodySensitiveColumnListSensitiveColumn : TeaModel {
-                /// <summary>
-                /// <para>The name of the category.</para>
-                /// </summary>
                 [NameInMap("CategoryName")]
                 [Validation(Required=false)]
                 public string CategoryName { get; set; }
 
-                /// <summary>
-                /// <para>The name of the sensitive field.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test_column</para>
-                /// </summary>
                 [NameInMap("ColumnName")]
                 [Validation(Required=false)]
                 public string ColumnName { get; set; }
 
-                /// <summary>
-                /// <para>The information about the default masking algorithm.</para>
-                /// </summary>
                 [NameInMap("DefaultDesensitizationRule")]
                 [Validation(Required=false)]
                 public ListSensitiveColumnInfoResponseBodySensitiveColumnListSensitiveColumnDefaultDesensitizationRule DefaultDesensitizationRule { get; set; }
                 public class ListSensitiveColumnInfoResponseBodySensitiveColumnListSensitiveColumnDefaultDesensitizationRule : TeaModel {
-                    /// <summary>
-                    /// <para>The masking algorithm ID.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>101**</para>
-                    /// </summary>
                     [NameInMap("RuleId")]
                     [Validation(Required=false)]
                     public long? RuleId { get; set; }
 
-                    /// <summary>
-                    /// <para>The masking algorithm name.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>test</para>
-                    /// </summary>
                     [NameInMap("RuleName")]
                     [Validation(Required=false)]
                     public string RuleName { get; set; }
 
                 }
 
-                /// <summary>
-                /// <para>The ID of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>183****</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public int? InstanceId { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the sensitive field is displayed in plaintext.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>False</para>
-                /// </summary>
                 [NameInMap("IsPlain")]
                 [Validation(Required=false)]
                 public bool? IsPlain { get; set; }
 
-                /// <summary>
-                /// <para>The sample data.</para>
-                /// </summary>
                 [NameInMap("SampleData")]
                 [Validation(Required=false)]
                 public string SampleData { get; set; }
 
-                /// <summary>
-                /// <para>The name of the database.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test_schema</para>
-                /// </summary>
                 [NameInMap("SchemaName")]
                 [Validation(Required=false)]
                 public string SchemaName { get; set; }
 
-                /// <summary>
-                /// <para>The sensitivity level of the field. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Low</description></item>
-                /// <item><description>Medium</description></item>
-                /// <item><description>High</description></item>
-                /// </list>
-                /// </summary>
                 [NameInMap("SecurityLevel")]
                 [Validation(Required=false)]
                 public string SecurityLevel { get; set; }
 
-                /// <summary>
-                /// <para>The list of partial masking algorithms.</para>
-                /// </summary>
                 [NameInMap("SemiDesensitizationRuleList")]
                 [Validation(Required=false)]
                 public ListSensitiveColumnInfoResponseBodySensitiveColumnListSensitiveColumnSemiDesensitizationRuleList SemiDesensitizationRuleList { get; set; }
@@ -156,22 +97,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     [Validation(Required=false)]
                     public List<ListSensitiveColumnInfoResponseBodySensitiveColumnListSensitiveColumnSemiDesensitizationRuleListSemiDesensitizationRule> SemiDesensitizationRule { get; set; }
                     public class ListSensitiveColumnInfoResponseBodySensitiveColumnListSensitiveColumnSemiDesensitizationRuleListSemiDesensitizationRule : TeaModel {
-                        /// <summary>
-                        /// <para>The ID of the partial masking algorithm.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>10***</para>
-                        /// </summary>
                         [NameInMap("RuleId")]
                         [Validation(Required=false)]
                         public long? RuleId { get; set; }
 
-                        /// <summary>
-                        /// <para>The partial masking algorithm name.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>test01</para>
-                        /// </summary>
                         [NameInMap("RuleName")]
                         [Validation(Required=false)]
                         public string RuleName { get; set; }
@@ -180,22 +109,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
                 }
 
-                /// <summary>
-                /// <para>The name of the table.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test_table</para>
-                /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
                 public string TableName { get; set; }
 
-                /// <summary>
-                /// <para>The user-defined sensitivity level.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>S1</para>
-                /// </summary>
                 [NameInMap("UserSensitivityLevel")]
                 [Validation(Required=false)]
                 public string UserSensitivityLevel { get; set; }

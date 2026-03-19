@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateDatabaseExportOrderResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information about the ticket.</para>
-        /// </summary>
         [NameInMap("CreateOrderResult")]
         [Validation(Required=false)]
         public CreateDatabaseExportOrderResponseBodyCreateOrderResult CreateOrderResult { get; set; }

@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The list of SLA rules.</para>
-        /// </summary>
         [NameInMap("SLARuleList")]
         [Validation(Required=false)]
         public ListDefaultSLARulesResponseBodySLARuleList SLARuleList { get; set; }
@@ -50,56 +47,22 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListDefaultSLARulesResponseBodySLARuleListSLARule> SLARule { get; set; }
             public class ListDefaultSLARulesResponseBodySLARuleListSLARule : TeaModel {
-                /// <summary>
-                /// <para>The ID of the task flow.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("DagId")]
                 [Validation(Required=false)]
                 public long? DagId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the SLA rule.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
-                /// <summary>
-                /// <para>The timeout period. Unit: minutes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1080</para>
-                /// </summary>
                 [NameInMap("IntervalMinutes")]
                 [Validation(Required=false)]
                 public int? IntervalMinutes { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the task node.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public long? NodeId { get; set; }
 
-                /// <summary>
-                /// <para>The type of the rule. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>0</b>: an SLA rule for a task flow</description></item>
-                /// <item><description><b>1</b>: an SLA rule for a task node</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("RuleType")]
                 [Validation(Required=false)]
                 public int? RuleType { get; set; }

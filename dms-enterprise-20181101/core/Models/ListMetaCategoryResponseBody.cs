@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListMetaCategoryResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The list of categories.</para>
-        /// </summary>
         [NameInMap("CategoryList")]
         [Validation(Required=false)]
         public ListMetaCategoryResponseBodyCategoryList CategoryList { get; set; }

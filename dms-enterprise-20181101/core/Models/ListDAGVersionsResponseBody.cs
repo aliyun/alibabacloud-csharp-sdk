@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListDAGVersionsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information about the published versions.</para>
-        /// </summary>
         [NameInMap("DagVersionList")]
         [Validation(Required=false)]
         public ListDAGVersionsResponseBodyDagVersionList DagVersionList { get; set; }
@@ -20,62 +17,26 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListDAGVersionsResponseBodyDagVersionListDagVersion> DagVersion { get; set; }
             public class ListDAGVersionsResponseBodyDagVersionListDagVersion : TeaModel {
-                /// <summary>
-                /// <para>The name of the task flow.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Spark SQL</para>
-                /// </summary>
                 [NameInMap("DagName")]
                 [Validation(Required=false)]
                 public string DagName { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the task flow owner.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>51****</para>
-                /// </summary>
                 [NameInMap("DagOwnerId")]
                 [Validation(Required=false)]
                 public string DagOwnerId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the task flow owner.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>name</para>
-                /// </summary>
                 [NameInMap("DagOwnerNickName")]
                 [Validation(Required=false)]
                 public string DagOwnerNickName { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the previously published version.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2****</para>
-                /// </summary>
                 [NameInMap("LastVersionId")]
                 [Validation(Required=false)]
                 public long? LastVersionId { get; set; }
 
-                /// <summary>
-                /// <para>The description of the version.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test_OSS</para>
-                /// </summary>
                 [NameInMap("VersionComments")]
                 [Validation(Required=false)]
                 public string VersionComments { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the version.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2****</para>
-                /// </summary>
                 [NameInMap("VersionId")]
                 [Validation(Required=false)]
                 public long? VersionId { get; set; }

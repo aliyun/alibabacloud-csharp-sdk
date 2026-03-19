@@ -50,9 +50,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public bool? IgnoreAffectRows { get; set; }
 
-            /// <summary>
-            /// <para>The list of pre-check details.</para>
-            /// </summary>
             [NameInMap("PreCheckDetailList")]
             [Validation(Required=false)]
             public GetDataExportPreCheckDetailResponseBodyPreCheckResultPreCheckDetailList PreCheckDetailList { get; set; }
@@ -61,22 +58,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public List<GetDataExportPreCheckDetailResponseBodyPreCheckResultPreCheckDetailListPreCheckDetailList> PreCheckDetailList { get; set; }
                 public class GetDataExportPreCheckDetailResponseBodyPreCheckResultPreCheckDetailListPreCheckDetailList : TeaModel {
-                    /// <summary>
-                    /// <para>The estimated number of data rows to be affected.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1</para>
-                    /// </summary>
                     [NameInMap("AffectRows")]
                     [Validation(Required=false)]
                     public long? AffectRows { get; set; }
 
-                    /// <summary>
-                    /// <para>The SQL statement.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>SELECT * FROM tmp_table LIMIT 1</para>
-                    /// </summary>
                     [NameInMap("SQL")]
                     [Validation(Required=false)]
                     public string SQL { get; set; }

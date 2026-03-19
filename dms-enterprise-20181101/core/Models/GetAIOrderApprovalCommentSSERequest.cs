@@ -8,26 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class DLOrder : TeaModel {
+    public class GetAIOrderApprovalCommentSSERequest : TeaModel {
         /// <summary>
-        /// <para>The name of the column.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>col1</para>
+        /// <para>420****</para>
         /// </summary>
-        [NameInMap("Col")]
+        [NameInMap("OrderId")]
         [Validation(Required=false)]
-        public string Col { get; set; }
+        public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The position of the column in the sort.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>48363552-225c-4c93-aeab-ea9b9d064b96</para>
         /// </summary>
-        [NameInMap("Order")]
+        [NameInMap("SessionId")]
         [Validation(Required=false)]
-        public int? Order { get; set; }
+        public string SessionId { get; set; }
 
     }
 

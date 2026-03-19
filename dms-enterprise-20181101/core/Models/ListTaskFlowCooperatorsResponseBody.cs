@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListTaskFlowCooperatorsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The users that are involved in the task flow.</para>
-        /// </summary>
         [NameInMap("CooperatorList")]
         [Validation(Required=false)]
         public ListTaskFlowCooperatorsResponseBodyCooperatorList CooperatorList { get; set; }
@@ -20,42 +17,18 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListTaskFlowCooperatorsResponseBodyCooperatorListCooperator> Cooperator { get; set; }
             public class ListTaskFlowCooperatorsResponseBodyCooperatorListCooperator : TeaModel {
-                /// <summary>
-                /// <para>The email address of the user.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="mailto:test@XX.com">test@XX.com</a></para>
-                /// </summary>
                 [NameInMap("Email")]
                 [Validation(Required=false)]
                 public string Email { get; set; }
 
-                /// <summary>
-                /// <para>The username.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>name</para>
-                /// </summary>
                 [NameInMap("LoginName")]
                 [Validation(Required=false)]
                 public string LoginName { get; set; }
 
-                /// <summary>
-                /// <para>The alias of the user.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>name</para>
-                /// </summary>
                 [NameInMap("NickName")]
                 [Validation(Required=false)]
                 public string NickName { get; set; }
 
-                /// <summary>
-                /// <para>userId.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>123</para>
-                /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public string UserId { get; set; }

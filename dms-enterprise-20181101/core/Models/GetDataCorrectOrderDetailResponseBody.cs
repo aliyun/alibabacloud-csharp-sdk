@@ -274,9 +274,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
             }
 
-            /// <summary>
-            /// <para>The information about the database in which data is changed.</para>
-            /// </summary>
             [NameInMap("DatabaseList")]
             [Validation(Required=false)]
             public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailDatabaseList DatabaseList { get; set; }
@@ -285,66 +282,22 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public List<GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailDatabaseListDatabase> Database { get; set; }
                 public class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailDatabaseListDatabase : TeaModel {
-                    /// <summary>
-                    /// <para>The database ID.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1860****</para>
-                    /// </summary>
                     [NameInMap("DbId")]
                     [Validation(Required=false)]
                     public int? DbId { get; set; }
 
-                    /// <summary>
-                    /// <para>The engine of the database.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>mysql</para>
-                    /// </summary>
                     [NameInMap("DbType")]
                     [Validation(Required=false)]
                     public string DbType { get; set; }
 
-                    /// <summary>
-                    /// <para>The type of the environment to which the database belongs. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>product: production environment.</description></item>
-                    /// <item><description>dev: development environment.</description></item>
-                    /// <item><description>pre: pre-release environment.</description></item>
-                    /// <item><description>test: test environment.</description></item>
-                    /// <item><description>sit: system integration testing (SIT) environment</description></item>
-                    /// <item><description>uat: user acceptance testing (UAT) environment.</description></item>
-                    /// <item><description>pet: stress testing environment.</description></item>
-                    /// <item><description>stag: staging environment.</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>product</para>
-                    /// </summary>
                     [NameInMap("EnvType")]
                     [Validation(Required=false)]
                     public string EnvType { get; set; }
 
-                    /// <summary>
-                    /// <para>Indicates whether the database is a logical database. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>true.</b>: The database is a logical database.</description></item>
-                    /// <item><description><b>false</b>: The database is a physical database.</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>false</para>
-                    /// </summary>
                     [NameInMap("Logic")]
                     [Validation(Required=false)]
                     public bool? Logic { get; set; }
 
-                    /// <summary>
-                    /// <para>The name that is used to search for the database.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>xxx@xxx:3306</para>
-                    /// </summary>
                     [NameInMap("SearchName")]
                     [Validation(Required=false)]
                     public string SearchName { get; set; }
@@ -499,9 +452,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
             }
 
-            /// <summary>
-            /// <para>The precheck details of the ticket.</para>
-            /// </summary>
             [NameInMap("PreCheckDetail")]
             [Validation(Required=false)]
             public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailPreCheckDetail PreCheckDetail { get; set; }
@@ -510,44 +460,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public List<GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailPreCheckDetailTaskCheckDO> TaskCheckDO { get; set; }
                 public class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailPreCheckDetailTaskCheckDO : TeaModel {
-                    /// <summary>
-                    /// <para>The state of the precheck. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>WAITING</b>: The ticket is pending precheck.</description></item>
-                    /// <item><description><b>RUNNING</b>: The ticket is being prechecked.</description></item>
-                    /// <item><description><b>SUCCESS</b>: The ticket passes the precheck.</description></item>
-                    /// <item><description><b>FAIL</b>: The ticket fails the precheck.</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>SUCCESS</para>
-                    /// </summary>
                     [NameInMap("CheckStatus")]
                     [Validation(Required=false)]
                     public string CheckStatus { get; set; }
 
-                    /// <summary>
-                    /// <para>The check step of the precheck. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>SQL_PARSE</b>: The system checks the syntax of the SQL statement.</description></item>
-                    /// <item><description><b>SQL_TYPE_CHECK</b>: The system checks the type of the SQL statement.</description></item>
-                    /// <item><description><b>PERMISSION_CHECK</b>: The system checks the permissions required for the data change.</description></item>
-                    /// <item><description><b>ROW_CHECK</b>: The system checks the number of affected rows.</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>PERMISSION_CHECK</para>
-                    /// </summary>
                     [NameInMap("CheckStep")]
                     [Validation(Required=false)]
                     public string CheckStep { get; set; }
 
-                    /// <summary>
-                    /// <para>The message that appears when a check step is executed.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>tip messsage</para>
-                    /// </summary>
                     [NameInMap("UserTip")]
                     [Validation(Required=false)]
                     public string UserTip { get; set; }

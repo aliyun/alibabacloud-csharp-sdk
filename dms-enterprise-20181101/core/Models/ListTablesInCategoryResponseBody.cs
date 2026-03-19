@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListTablesInCategoryResponseBody : TeaModel {
-        /// <summary>
-        /// <para>List of table information associated with the asset category.</para>
-        /// </summary>
         [NameInMap("EntityList")]
         [Validation(Required=false)]
         public ListTablesInCategoryResponseBodyEntityList EntityList { get; set; }

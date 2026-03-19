@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListTaskFlowEdgesByConditionResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The list of task flow edges.</para>
-        /// </summary>
         [NameInMap("Edges")]
         [Validation(Required=false)]
         public ListTaskFlowEdgesByConditionResponseBodyEdges Edges { get; set; }
@@ -20,32 +17,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListTaskFlowEdgesByConditionResponseBodyEdgesEdge> Edge { get; set; }
             public class ListTaskFlowEdgesByConditionResponseBodyEdgesEdge : TeaModel {
-                /// <summary>
-                /// <para>The ID of the task flow edge.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>24***</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the end node on the edge.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>44***</para>
-                /// </summary>
                 [NameInMap("NodeEnd")]
                 [Validation(Required=false)]
                 public long? NodeEnd { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the start node on the edge.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>44***</para>
-                /// </summary>
                 [NameInMap("NodeFrom")]
                 [Validation(Required=false)]
                 public long? NodeFrom { get; set; }

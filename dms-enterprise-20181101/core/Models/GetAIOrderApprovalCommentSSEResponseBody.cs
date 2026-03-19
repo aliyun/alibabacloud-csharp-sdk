@@ -8,20 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class GetDataCorrectBackupFilesResponseBody : TeaModel {
-        [NameInMap("DataCorrectBackupFiles")]
+    public class GetAIOrderApprovalCommentSSEResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("Data")]
         [Validation(Required=false)]
-        public GetDataCorrectBackupFilesResponseBodyDataCorrectBackupFiles DataCorrectBackupFiles { get; set; }
-        public class GetDataCorrectBackupFilesResponseBodyDataCorrectBackupFiles : TeaModel {
-            [NameInMap("FileUrl")]
-            [Validation(Required=false)]
-            public List<string> FileUrl { get; set; }
-
-        }
+        public string Data { get; set; }
 
         /// <summary>
-        /// <para>The error code.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
         /// </summary>
@@ -30,8 +26,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
         /// </summary>
@@ -40,18 +34,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>4AFF4109-FEFB-44E8-96A3-923B1FA8C46E</para>
+        /// <para>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

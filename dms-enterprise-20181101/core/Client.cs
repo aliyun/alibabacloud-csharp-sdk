@@ -1231,7 +1231,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds directed edges for an existing task node.</para>
+        /// <para>Creates directed edges for the existing task nodes of a task flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1296,7 +1296,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds directed edges for an existing task node.</para>
+        /// <para>Creates directed edges for the existing task nodes of a task flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1361,7 +1361,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds directed edges for an existing task node.</para>
+        /// <para>Creates directed edges for the existing task nodes of a task flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1388,7 +1388,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds directed edges for an existing task node.</para>
+        /// <para>Creates directed edges for the existing task nodes of a task flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1935,7 +1935,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backfills data for task orchestration.</para>
+        /// <para>Backfills data for a task flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2032,7 +2032,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backfills data for task orchestration.</para>
+        /// <para>Backfills data for a task flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2129,7 +2129,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backfills data for task orchestration.</para>
+        /// <para>Backfills data for a task flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2152,7 +2152,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backfills data for task orchestration.</para>
+        /// <para>Backfills data for a task flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2879,7 +2879,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adjusts the sensitivity level of one or more fields.</para>
+        /// <para>Adjusts the sensitivity level of fields.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2945,7 +2945,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adjusts the sensitivity level of one or more fields.</para>
+        /// <para>Adjusts the sensitivity level of fields.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3011,7 +3011,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adjusts the sensitivity level of one or more fields.</para>
+        /// <para>Adjusts the sensitivity level of fields.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3029,7 +3029,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adjusts the sensitivity level of one or more fields.</para>
+        /// <para>Adjusts the sensitivity level of fields.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3215,7 +3215,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移交数仓开发任务流</para>
+        /// <para>Transfers the ownership of a task flow in a workspace of Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3274,7 +3274,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移交数仓开发任务流</para>
+        /// <para>Transfers the ownership of a task flow in a workspace of Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3333,7 +3333,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移交数仓开发任务流</para>
+        /// <para>Transfers the ownership of a task flow in a workspace of Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3360,7 +3360,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移交数仓开发任务流</para>
+        /// <para>Transfers the ownership of a task flow in a workspace of Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7126,6 +7126,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["DbStorageType"] = request.DbStorageType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DifyInstanceName))
+            {
+                query["DifyInstanceName"] = request.DifyInstanceName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
@@ -7237,6 +7241,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
             {
                 query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -7418,6 +7426,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["DbStorageType"] = request.DbStorageType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DifyInstanceName))
+            {
+                query["DifyInstanceName"] = request.DifyInstanceName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
@@ -7529,6 +7541,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
             {
                 query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -7683,7 +7699,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建无锁变更工单</para>
+        /// <para>Creates a lock-free change ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7761,7 +7777,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建无锁变更工单</para>
+        /// <para>Creates a lock-free change ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7839,7 +7855,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建无锁变更工单</para>
+        /// <para>Creates a lock-free change ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7863,7 +7879,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建无锁变更工单</para>
+        /// <para>Creates a lock-free change ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8095,7 +8111,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a logical database in Database Management (DMS).</para>
+        /// <para>Creates a logical database in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8151,7 +8167,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a logical database in Database Management (DMS).</para>
+        /// <para>Creates a logical database in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8207,7 +8223,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a logical database in Database Management (DMS).</para>
+        /// <para>Creates a logical database in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8225,7 +8241,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a logical database in Database Management (DMS).</para>
+        /// <para>Creates a logical database in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8415,7 +8431,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a ticket in Data Management (DMS).</para>
+        /// <para>Creates a ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8500,7 +8516,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a ticket in Data Management (DMS).</para>
+        /// <para>Creates a ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8585,7 +8601,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a ticket in Data Management (DMS).</para>
+        /// <para>Creates a ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8614,7 +8630,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a ticket in Data Management (DMS).</para>
+        /// <para>Creates a ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9015,7 +9031,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CreateProxyAccess to authorize users to access the DB instance through the Data Security Protection agent.</para>
+        /// <para>Grants a user the permissions to access a database instance by using the secure access proxy feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9081,7 +9097,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CreateProxyAccess to authorize users to access the DB instance through the Data Security Protection agent.</para>
+        /// <para>Grants a user the permissions to access a database instance by using the secure access proxy feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9147,7 +9163,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CreateProxyAccess to authorize users to access the DB instance through the Data Security Protection agent.</para>
+        /// <para>Grants a user the permissions to access a database instance by using the secure access proxy feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9173,7 +9189,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CreateProxyAccess to authorize users to access the DB instance through the Data Security Protection agent.</para>
+        /// <para>Grants a user the permissions to access a database instance by using the secure access proxy feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10319,7 +10335,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上传附件任务</para>
+        /// <para>Creates a task to upload an attachment file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10373,7 +10389,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上传附件任务</para>
+        /// <para>Creates a task to upload an attachment file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10427,7 +10443,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上传附件任务</para>
+        /// <para>Creates a task to upload an attachment file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10445,7 +10461,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上传附件任务</para>
+        /// <para>Creates a task to upload an attachment file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12155,7 +12171,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数仓空间成员</para>
+        /// <para>Removes a workspace member or a task flow developer in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12221,7 +12237,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数仓空间成员</para>
+        /// <para>Removes a workspace member or a task flow developer in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12287,7 +12303,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数仓空间成员</para>
+        /// <para>Removes a workspace member or a task flow developer in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12311,7 +12327,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数仓空间成员</para>
+        /// <para>Removes a workspace member or a task flow developer in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12335,7 +12351,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a logical database in Database Management (DMS). This operation only deletes the specified logical database but does not delete physical databases.</para>
+        /// <para>Deletes a logical database from Data Management (DMS). This operation only deletes the specified logical database but does not delete physical databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12381,7 +12397,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a logical database in Database Management (DMS). This operation only deletes the specified logical database but does not delete physical databases.</para>
+        /// <para>Deletes a logical database from Data Management (DMS). This operation only deletes the specified logical database but does not delete physical databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12427,7 +12443,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a logical database in Database Management (DMS). This operation only deletes the specified logical database but does not delete physical databases.</para>
+        /// <para>Deletes a logical database from Data Management (DMS). This operation only deletes the specified logical database but does not delete physical databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12445,7 +12461,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a logical database in Database Management (DMS). This operation only deletes the specified logical database but does not delete physical databases.</para>
+        /// <para>Deletes a logical database from Data Management (DMS). This operation only deletes the specified logical database but does not delete physical databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12463,7 +12479,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the routing algorithm of a logical table.</para>
+        /// <para>Deletes a routing algorithm from a logical table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12513,7 +12529,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the routing algorithm of a logical table.</para>
+        /// <para>Deletes a routing algorithm from a logical table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12563,7 +12579,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the routing algorithm of a logical table.</para>
+        /// <para>Deletes a routing algorithm from a logical table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12581,7 +12597,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the routing algorithm of a logical table.</para>
+        /// <para>Deletes a routing algorithm from a logical table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12875,7 +12891,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to DeleteProxyAccess reclaim the data security protection authorization of the target user.</para>
+        /// <para>Revokes the permissions to access a database instance by using the secure access proxy feature from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12921,7 +12937,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to DeleteProxyAccess reclaim the data security protection authorization of the target user.</para>
+        /// <para>Revokes the permissions to access a database instance by using the secure access proxy feature from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12967,7 +12983,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to DeleteProxyAccess reclaim the data security protection authorization of the target user.</para>
+        /// <para>Revokes the permissions to access a database instance by using the secure access proxy feature from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12985,7 +13001,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to DeleteProxyAccess reclaim the data security protection authorization of the target user.</para>
+        /// <para>Revokes the permissions to access a database instance by using the secure access proxy feature from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14007,7 +14023,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于创建DIFY实例及相关资源，支持自定义配置。</para>
+        /// <para>Queries the information about the Dify instance and related resources, including the Dify instance status, associated VPC, and computing resource specifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14075,7 +14091,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于创建DIFY实例及相关资源，支持自定义配置。</para>
+        /// <para>Queries the information about the Dify instance and related resources, including the Dify instance status, associated VPC, and computing resource specifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14143,7 +14159,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于创建DIFY实例及相关资源，支持自定义配置。</para>
+        /// <para>Queries the information about the Dify instance and related resources, including the Dify instance status, associated VPC, and computing resource specifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14175,7 +14191,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于创建DIFY实例及相关资源，支持自定义配置。</para>
+        /// <para>Queries the information about the Dify instance and related resources, including the Dify instance status, associated VPC, and computing resource specifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14767,7 +14783,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to disable a user that is temporarily not used in Data Management (DMS) Enterprise.</para>
+        /// <para>Disables a user that is temporarily not used in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14821,7 +14837,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to disable a user that is temporarily not used in Data Management (DMS) Enterprise.</para>
+        /// <para>Disables a user that is temporarily not used in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14875,7 +14891,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to disable a user that is temporarily not used in Data Management (DMS) Enterprise.</para>
+        /// <para>Disables a user that is temporarily not used in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14901,7 +14917,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to disable a user that is temporarily not used in Data Management (DMS) Enterprise.</para>
+        /// <para>Disables a user that is temporarily not used in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15147,7 +15163,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a logical database.</para>
+        /// <para>Edits the information about a logical database.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15207,7 +15223,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a logical database.</para>
+        /// <para>Edits the information about a logical database.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15267,7 +15283,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a logical database.</para>
+        /// <para>Edits the information about a logical database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15285,7 +15301,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a logical database.</para>
+        /// <para>Edits the information about a logical database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15475,7 +15491,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to enable a user that has been disabled in Data Management (DMS) Enterprise.</para>
+        /// <para>Enables a user that is disabled.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15529,7 +15545,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to enable a user that has been disabled in Data Management (DMS) Enterprise.</para>
+        /// <para>Enables a user that is disabled.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15583,7 +15599,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to enable a user that has been disabled in Data Management (DMS) Enterprise.</para>
+        /// <para>Enables a user that is disabled.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15609,7 +15625,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to enable a user that has been disabled in Data Management (DMS) Enterprise.</para>
+        /// <para>Enables a user that is disabled.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16571,7 +16587,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据用户提供的自然语言描述和数据库信息生成对应的SQL语句。</para>
+        /// <para>Automatically retrieves relevant database and business information and generates the executable SQL statement based on the natural language description provided.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16654,7 +16670,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据用户提供的自然语言描述和数据库信息生成对应的SQL语句。</para>
+        /// <para>Automatically retrieves relevant database and business information and generates the executable SQL statement based on the natural language description provided.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16737,7 +16753,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据用户提供的自然语言描述和数据库信息生成对应的SQL语句。</para>
+        /// <para>Automatically retrieves relevant database and business information and generates the executable SQL statement based on the natural language description provided.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16768,7 +16784,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据用户提供的自然语言描述和数据库信息生成对应的SQL语句。</para>
+        /// <para>Automatically retrieves relevant database and business information and generates the executable SQL statement based on the natural language description provided.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16795,6 +16811,134 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GenerateSqlFromNLWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取大模型工单审批建议</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAIOrderApprovalCommentSSERequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAIOrderApprovalCommentSSEResponse
+        /// </returns>
+        public GetAIOrderApprovalCommentSSEResponse GetAIOrderApprovalCommentSSEWithOptions(GetAIOrderApprovalCommentSSERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAIOrderApprovalCommentSSE",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAIOrderApprovalCommentSSEResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取大模型工单审批建议</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAIOrderApprovalCommentSSERequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAIOrderApprovalCommentSSEResponse
+        /// </returns>
+        public async Task<GetAIOrderApprovalCommentSSEResponse> GetAIOrderApprovalCommentSSEWithOptionsAsync(GetAIOrderApprovalCommentSSERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAIOrderApprovalCommentSSE",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAIOrderApprovalCommentSSEResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取大模型工单审批建议</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAIOrderApprovalCommentSSERequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAIOrderApprovalCommentSSEResponse
+        /// </returns>
+        public GetAIOrderApprovalCommentSSEResponse GetAIOrderApprovalCommentSSE(GetAIOrderApprovalCommentSSERequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAIOrderApprovalCommentSSEWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取大模型工单审批建议</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAIOrderApprovalCommentSSERequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAIOrderApprovalCommentSSEResponse
+        /// </returns>
+        public async Task<GetAIOrderApprovalCommentSSEResponse> GetAIOrderApprovalCommentSSEAsync(GetAIOrderApprovalCommentSSERequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAIOrderApprovalCommentSSEWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -18015,7 +18159,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download URL of the backup file for a data change ticket in Data Management (DMS).</para>
+        /// <para>Obtains the download URL of the backup file for the specified ticket.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18071,7 +18215,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download URL of the backup file for a data change ticket in Data Management (DMS).</para>
+        /// <para>Obtains the download URL of the backup file for the specified ticket.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18127,7 +18271,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download URL of the backup file for a data change ticket in Data Management (DMS).</para>
+        /// <para>Obtains the download URL of the backup file for the specified ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18145,7 +18289,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download URL of the backup file for a data change ticket in Data Management (DMS).</para>
+        /// <para>Obtains the download URL of the backup file for the specified ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25507,7 +25651,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the nodes in an execution record of a task flow.</para>
+        /// <para>Queries the task nodes of a task flow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25557,7 +25701,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the nodes in an execution record of a task flow.</para>
+        /// <para>Queries the task nodes of a task flow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25607,7 +25751,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the nodes in an execution record of a task flow.</para>
+        /// <para>Queries the task nodes of a task flow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25625,7 +25769,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the nodes in an execution record of a task flow.</para>
+        /// <para>Queries the task nodes of a task flow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28735,7 +28879,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the precheck information about an SQL statement that is specified in a data change ticket.</para>
+        /// <para>Queries the information about SQL statements that are involved in the precheck of a data change ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28798,7 +28942,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the precheck information about an SQL statement that is specified in a data change ticket.</para>
+        /// <para>Queries the information about SQL statements that are involved in the precheck of a data change ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28861,7 +29005,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the precheck information about an SQL statement that is specified in a data change ticket.</para>
+        /// <para>Queries the information about SQL statements that are involved in the precheck of a data change ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28884,7 +29028,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the precheck information about an SQL statement that is specified in a data change ticket.</para>
+        /// <para>Queries the information about SQL statements that are involved in the precheck of a data change ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31455,7 +31599,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries masking rules.</para>
+        /// <para>Queries a list of masking rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31521,7 +31665,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries masking rules.</para>
+        /// <para>Queries a list of masking rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31587,7 +31731,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries masking rules.</para>
+        /// <para>Queries a list of masking rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31605,7 +31749,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries masking rules.</para>
+        /// <para>Queries a list of masking rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32247,7 +32391,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the permissions of a user on a specific instance.</para>
+        /// <para>Queries the permissions of a user on an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32305,7 +32449,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the permissions of a user on a specific instance.</para>
+        /// <para>Queries the permissions of a user on an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32363,7 +32507,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the permissions of a user on a specific instance.</para>
+        /// <para>Queries the permissions of a user on an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32381,7 +32525,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the permissions of a user on a specific instance.</para>
+        /// <para>Queries the permissions of a user on an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32599,7 +32743,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the task flows corresponding to a specific business scenario in a workspace in Data Management (DMS).</para>
+        /// <para>Queries the information about task flows in the business scenarios of a workspace in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32657,7 +32801,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the task flows corresponding to a specific business scenario in a workspace in Data Management (DMS).</para>
+        /// <para>Queries the information about task flows in the business scenarios of a workspace in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32715,7 +32859,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the task flows corresponding to a specific business scenario in a workspace in Data Management (DMS).</para>
+        /// <para>Queries the information about task flows in the business scenarios of a workspace in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32741,7 +32885,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the task flows corresponding to a specific business scenario in a workspace in Data Management (DMS).</para>
+        /// <para>Queries the information about task flows in the business scenarios of a workspace in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32767,7 +32911,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of logical databases.</para>
+        /// <para>Queries the detailed information about logical databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32817,7 +32961,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of logical databases.</para>
+        /// <para>Queries the detailed information about logical databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32867,7 +33011,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of logical databases.</para>
+        /// <para>Queries the detailed information about logical databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32885,7 +33029,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of logical databases.</para>
+        /// <para>Queries the detailed information about logical databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33335,7 +33479,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tickets in Data Management (DMS).</para>
+        /// <para>Queries tickets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33413,7 +33557,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tickets in Data Management (DMS).</para>
+        /// <para>Queries tickets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33491,7 +33635,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tickets in Data Management (DMS).</para>
+        /// <para>Queries tickets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33509,7 +33653,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tickets in Data Management (DMS).</para>
+        /// <para>Queries tickets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33775,7 +33919,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>操作审计-数据安全代理SQL执行列表</para>
+        /// <para>Queries the audit logs generated by the secure access proxy feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33849,7 +33993,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>操作审计-数据安全代理SQL执行列表</para>
+        /// <para>Queries the audit logs generated by the secure access proxy feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33923,7 +34067,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>操作审计-数据安全代理SQL执行列表</para>
+        /// <para>Queries the audit logs generated by the secure access proxy feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33941,7 +34085,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>操作审计-数据安全代理SQL执行列表</para>
+        /// <para>Queries the audit logs generated by the secure access proxy feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33959,7 +34103,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom service level agreement (SLA) rules.</para>
+        /// <para>Queries the custom service level agreement (SLA) rules of a task flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34005,7 +34149,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom service level agreement (SLA) rules.</para>
+        /// <para>Queries the custom service level agreement (SLA) rules of a task flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34051,7 +34195,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom service level agreement (SLA) rules.</para>
+        /// <para>Queries the custom service level agreement (SLA) rules of a task flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34069,7 +34213,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom service level agreement (SLA) rules.</para>
+        /// <para>Queries the custom service level agreement (SLA) rules of a task flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34087,7 +34231,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries SQL statements that were written on the SQLConsole tab.</para>
+        /// <para>Queries the audit logs of SQL statements that are executed in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34161,7 +34305,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries SQL statements that were written on the SQLConsole tab.</para>
+        /// <para>Queries the audit logs of SQL statements that are executed in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34235,7 +34379,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries SQL statements that were written on the SQLConsole tab.</para>
+        /// <para>Queries the audit logs of SQL statements that are executed in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34253,7 +34397,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries SQL statements that were written on the SQLConsole tab.</para>
+        /// <para>Queries the audit logs of SQL statements that are executed in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35971,7 +36115,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务编排获取任务流列表</para>
+        /// <para>Queries a list of task flows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36013,7 +36157,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务编排获取任务流列表</para>
+        /// <para>Queries a list of task flows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36055,7 +36199,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务编排获取任务流列表</para>
+        /// <para>Queries a list of task flows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36073,7 +36217,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务编排获取任务流列表</para>
+        /// <para>Queries a list of task flows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36219,7 +36363,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the users that are involved in a specified task flow.</para>
+        /// <para>Queries a list of users that are involved in a task flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36265,7 +36409,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the users that are involved in a specified task flow.</para>
+        /// <para>Queries a list of users that are involved in a task flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36311,7 +36455,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the users that are involved in a specified task flow.</para>
+        /// <para>Queries a list of users that are involved in a task flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36329,7 +36473,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the users that are involved in a specified task flow.</para>
+        /// <para>Queries a list of users that are involved in a task flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36347,7 +36491,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the edges of the directed acyclic graph (DAG) for a specified task flow based on multiple conditions.</para>
+        /// <para>Queries the edges of the directed acyclic graph (DAG) for a task flow based on multiple conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -36410,7 +36554,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the edges of the directed acyclic graph (DAG) for a specified task flow based on multiple conditions.</para>
+        /// <para>Queries the edges of the directed acyclic graph (DAG) for a task flow based on multiple conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -36473,7 +36617,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the edges of the directed acyclic graph (DAG) for a specified task flow based on multiple conditions.</para>
+        /// <para>Queries the edges of the directed acyclic graph (DAG) for a task flow based on multiple conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -36496,7 +36640,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the edges of the directed acyclic graph (DAG) for a specified task flow based on multiple conditions.</para>
+        /// <para>Queries the edges of the directed acyclic graph (DAG) for a task flow based on multiple conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -36831,7 +36975,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries task flows by page.</para>
+        /// <para>Queries the details of task flows by page.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36899,7 +37043,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries task flows by page.</para>
+        /// <para>Queries the details of task flows by page.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36967,7 +37111,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries task flows by page.</para>
+        /// <para>Queries the details of task flows by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36985,7 +37129,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries task flows by page.</para>
+        /// <para>Queries the details of task flows by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37315,7 +37459,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the permissions of a specific user on a database or a table.</para>
+        /// <para>Queries the permissions of a user on databases and tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37393,7 +37537,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the permissions of a specific user on a database or a table.</para>
+        /// <para>Queries the permissions of a user on databases and tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37471,7 +37615,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the permissions of a specific user on a database or a table.</para>
+        /// <para>Queries the permissions of a user on databases and tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37489,7 +37633,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the permissions of a specific user on a database or a table.</para>
+        /// <para>Queries the permissions of a user on databases and tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37507,7 +37651,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户租户列表</para>
+        /// <para>Queries tenants.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37549,7 +37693,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户租户列表</para>
+        /// <para>Queries tenants.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37591,7 +37735,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户租户列表</para>
+        /// <para>Queries tenants.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37609,7 +37753,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户租户列表</para>
+        /// <para>Queries tenants.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39179,7 +39323,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unpublishes a published task flow.</para>
+        /// <para>Unpublishes a published task flow in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39225,7 +39369,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unpublishes a published task flow.</para>
+        /// <para>Unpublishes a published task flow in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39271,7 +39415,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unpublishes a published task flow.</para>
+        /// <para>Unpublishes a published task flow in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39289,7 +39433,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unpublishes a published task flow.</para>
+        /// <para>Unpublishes a published task flow in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40171,7 +40315,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部署任务流的历史版本</para>
+        /// <para>Redeploys the published versions of a task flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40221,7 +40365,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部署任务流的历史版本</para>
+        /// <para>Redeploys the published versions of a task flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40271,7 +40415,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部署任务流的历史版本</para>
+        /// <para>Redeploys the published versions of a task flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40289,7 +40433,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部署任务流的历史版本</para>
+        /// <para>Redeploys the published versions of a task flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41135,7 +41279,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a user for your enterprise.</para>
+        /// <para>Adds a user of your enterprise.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -41198,7 +41342,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a user for your enterprise.</para>
+        /// <para>Adds a user of your enterprise.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -41261,7 +41405,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a user for your enterprise.</para>
+        /// <para>Adds a user of your enterprise.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -41284,7 +41428,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a user for your enterprise.</para>
+        /// <para>Adds a user of your enterprise.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -41883,7 +42027,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a suspended task flow.</para>
+        /// <para>Resumes a suspended task flow instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -41942,7 +42086,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a suspended task flow.</para>
+        /// <para>Resumes a suspended task flow instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -42001,7 +42145,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a suspended task flow.</para>
+        /// <para>Resumes a suspended task flow instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -42024,7 +42168,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a suspended task flow.</para>
+        /// <para>Resumes a suspended task flow instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -43443,7 +43587,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加实例</para>
+        /// <para>This operation is suitable for special scenarios and is not recommended. To register an instance with DMS, we recommend that you call the AddInstance operation first.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43509,7 +43653,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加实例</para>
+        /// <para>This operation is suitable for special scenarios and is not recommended. To register an instance with DMS, we recommend that you call the AddInstance operation first.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43575,7 +43719,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加实例</para>
+        /// <para>This operation is suitable for special scenarios and is not recommended. To register an instance with DMS, we recommend that you call the AddInstance operation first.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43593,7 +43737,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加实例</para>
+        /// <para>This operation is suitable for special scenarios and is not recommended. To register an instance with DMS, we recommend that you call the AddInstance operation first.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46439,7 +46583,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the service level agreement (SLA) timeout reminder for a task flow.</para>
+        /// <para>Updates the timeout reminder for the service level agreement (SLA) rules of a task flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -46500,7 +46644,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the service level agreement (SLA) timeout reminder for a task flow.</para>
+        /// <para>Updates the timeout reminder for the service level agreement (SLA) rules of a task flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -46561,7 +46705,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the service level agreement (SLA) timeout reminder for a task flow.</para>
+        /// <para>Updates the timeout reminder for the service level agreement (SLA) rules of a task flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -46584,7 +46728,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the service level agreement (SLA) timeout reminder for a task flow.</para>
+        /// <para>Updates the timeout reminder for the service level agreement (SLA) rules of a task flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -47507,7 +47651,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the IDs of the users who are involved in the task flow.</para>
+        /// <para>Updates the IDs of the users that are involved in a task flow.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -47563,7 +47707,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the IDs of the users who are involved in the task flow.</para>
+        /// <para>Updates the IDs of the users that are involved in a task flow.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -47619,7 +47763,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the IDs of the users who are involved in the task flow.</para>
+        /// <para>Updates the IDs of the users that are involved in a task flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47637,7 +47781,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the IDs of the users who are involved in the task flow.</para>
+        /// <para>Updates the IDs of the users that are involved in a task flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47991,7 +48135,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the notification settings for task flows.</para>
+        /// <para>Updates the notification settings for a task flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48049,7 +48193,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the notification settings for task flows.</para>
+        /// <para>Updates the notification settings for a task flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48107,7 +48251,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the notification settings for task flows.</para>
+        /// <para>Updates the notification settings for a task flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48125,7 +48269,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the notification settings for task flows.</para>
+        /// <para>Updates the notification settings for a task flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48955,7 +49099,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the output variables for a specified task node.</para>
+        /// <para>Updates the output variables for a task node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -49010,7 +49154,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the output variables for a specified task node.</para>
+        /// <para>Updates the output variables for a task node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -49065,7 +49209,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the output variables for a specified task node.</para>
+        /// <para>Updates the output variables for a task node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -49088,7 +49232,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the output variables for a specified task node.</para>
+        /// <para>Updates the output variables for a task node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

@@ -105,9 +105,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     [Validation(Required=false)]
                     public string ExportContent { get; set; }
 
-                    /// <summary>
-                    /// <para>The type of schema that was exported.</para>
-                    /// </summary>
                     [NameInMap("ExportTypes")]
                     [Validation(Required=false)]
                     public GetDatabaseExportOrderDetailResponseBodyDatabaseExportOrderDetailKeyInfoConfigExportTypes ExportTypes { get; set; }
@@ -118,9 +115,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
                     }
 
-                    /// <summary>
-                    /// <para>The extension options of the SQL script.</para>
-                    /// </summary>
                     [NameInMap("SQLExtOption")]
                     [Validation(Required=false)]
                     public GetDatabaseExportOrderDetailResponseBodyDatabaseExportOrderDetailKeyInfoConfigSQLExtOption SQLExtOption { get; set; }
@@ -131,9 +125,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
                     }
 
-                    /// <summary>
-                    /// <para>The tables that were exported from the database.</para>
-                    /// </summary>
                     [NameInMap("SelectedTables")]
                     [Validation(Required=false)]
                     public GetDatabaseExportOrderDetailResponseBodyDatabaseExportOrderDetailKeyInfoConfigSelectedTables SelectedTables { get; set; }

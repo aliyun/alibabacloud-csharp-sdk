@@ -53,9 +53,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        /// <summary>
-        /// <para>The tasks in the task flow.</para>
-        /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public ListTasksInTaskFlowResponseBodyTasks Tasks { get; set; }
@@ -64,82 +61,34 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListTasksInTaskFlowResponseBodyTasksTask> Task { get; set; }
             public class ListTasksInTaskFlowResponseBodyTasksTask : TeaModel {
-                /// <summary>
-                /// <para>The position of the node on the Directed Acyclic Graph (DAG).</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>{\&quot;x\&quot;:435,\&quot;y\&quot;:192,\&quot;layoutType\&quot;:\&quot;Horizontal\&quot;}</para>
-                /// </summary>
                 [NameInMap("GraphParam")]
                 [Validation(Required=false)]
                 public string GraphParam { get; set; }
 
-                /// <summary>
-                /// <para>The advanced configuration for the node.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>{     &quot;rerun&quot;:{    &quot;rerunEnable&quot;:true,      &quot;rerunCount&quot;:1,   &quot;rerunInterval&quot;:10 //  }}</para>
-                /// </summary>
                 [NameInMap("NodeConfig")]
                 [Validation(Required=false)]
                 public string NodeConfig { get; set; }
 
-                /// <summary>
-                /// <para>The configuration for the node.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>{     &quot;dbId&quot;:123***,  &quot;sql&quot;:&quot;&quot;,    &quot;dbType&quot;:&quot;polardb&quot; }</para>
-                /// </summary>
                 [NameInMap("NodeContent")]
                 [Validation(Required=false)]
                 public string NodeContent { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the node.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>92***</para>
-                /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the node.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Cross-Database Spark SQL-1</para>
-                /// </summary>
                 [NameInMap("NodeName")]
                 [Validation(Required=false)]
                 public string NodeName { get; set; }
 
-                /// <summary>
-                /// <para>The output variables for the task.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>{  &quot;outputs&quot;:[{ { &quot;row&quot;:0, &quot;column&quot;:-1,                  &quot;combiner&quot;:&quot;,&quot; }            &quot;extractMethod&quot;:&quot;{\&quot;row\&quot;:0,\&quot;column\&quot;:-1,\&quot;combiner\&quot;:\&quot;,\&quot;}&quot;,         &quot;variableName&quot;:&quot;var&quot;,    &quot;description&quot;:&quot;For demo&quot;} ] }</para>
-                /// </summary>
                 [NameInMap("NodeOutput")]
                 [Validation(Required=false)]
                 public string NodeOutput { get; set; }
 
-                /// <summary>
-                /// <para>The type of the node. For more information about the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/424705.html">NodeType parameter</a>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>SPARK_SQL</para>
-                /// </summary>
                 [NameInMap("NodeType")]
                 [Validation(Required=false)]
                 public string NodeType { get; set; }
 
-                /// <summary>
-                /// <para>The time variables configured for the node.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>{\&quot;variables\&quot;:[{\&quot;name\&quot;:\&quot;test1\&quot;,\&quot;pattern\&quot;:\&quot;yyyy-MM-dd</para>
-                /// </summary>
                 [NameInMap("TimeVariables")]
                 [Validation(Required=false)]
                 public string TimeVariables { get; set; }

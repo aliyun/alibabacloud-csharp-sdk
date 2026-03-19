@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        /// <summary>
-        /// <para>The details about the tickets.</para>
-        /// </summary>
         [NameInMap("Orders")]
         [Validation(Required=false)]
         public ListOrdersResponseBodyOrders Orders { get; set; }
@@ -40,102 +37,38 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListOrdersResponseBodyOrdersOrder> Order { get; set; }
             public class ListOrdersResponseBodyOrdersOrder : TeaModel {
-                /// <summary>
-                /// <para>The remarks of the ticket.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
                 public string Comment { get; set; }
 
-                /// <summary>
-                /// <para>The user who submitted the ticket.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("Committer")]
                 [Validation(Required=false)]
                 public string Committer { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the user who submitted the ticket.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>51****</para>
-                /// </summary>
                 [NameInMap("CommitterId")]
                 [Validation(Required=false)]
                 public long? CommitterId { get; set; }
 
-                /// <summary>
-                /// <para>The time when the ticket was created.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2022-04-08 11:15:46</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
-                /// <summary>
-                /// <para>The time when the ticket was last modified.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2022-04-08 11:27:45</para>
-                /// </summary>
                 [NameInMap("LastModifyTime")]
                 [Validation(Required=false)]
                 public string LastModifyTime { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the ticket.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>51****</para>
-                /// </summary>
                 [NameInMap("OrderId")]
                 [Validation(Required=false)]
                 public long? OrderId { get; set; }
 
-                /// <summary>
-                /// <para>The type of the ticket.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>DC_COMMON</para>
-                /// </summary>
                 [NameInMap("PluginType")]
                 [Validation(Required=false)]
                 public string PluginType { get; set; }
 
-                /// <summary>
-                /// <para>The status code of the ticket. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>fail</b>: The ticket fails to be executed.</description></item>
-                /// <item><description><b>toaudit</b>: The ticket is waiting for approval.</description></item>
-                /// <item><description><b>cancel</b>: The ticket is cancelled.</description></item>
-                /// <item><description><b>processing</b>: The ticket is being executed.</description></item>
-                /// <item><description><b>approved</b>: The ticket is approved.</description></item>
-                /// <item><description><b>reject</b>: The ticket is rejected.</description></item>
-                /// <item><description><b>success</b>: The ticket is executed.</description></item>
-                /// <item><description><b>closed</b>: The ticket is closed.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>success</para>
-                /// </summary>
                 [NameInMap("StatusCode")]
                 [Validation(Required=false)]
                 public string StatusCode { get; set; }
 
-                /// <summary>
-                /// <para>The status description of the ticket.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>changed successfully</para>
-                /// </summary>
                 [NameInMap("StatusDesc")]
                 [Validation(Required=false)]
                 public string StatusDesc { get; set; }

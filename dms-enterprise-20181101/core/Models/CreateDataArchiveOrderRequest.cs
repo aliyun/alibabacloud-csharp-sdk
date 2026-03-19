@@ -200,10 +200,33 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<CreateDataArchiveOrderRequestParamVariables> Variables { get; set; }
             public class CreateDataArchiveOrderRequestParamVariables : TeaModel {
+                /// <summary>
+                /// <para>The name of the time variable. If the time variable is used as a filter condition for archiving data, the variable name must be the same as the one that is specified in <b>TableWhere</b>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>t</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>The format of the time variable. The format is used to define the value of the time variable. For more information, see <a href="https://help.aliyun.com/document_detail/209323.html">Configure variables</a>. The following examples show the formats of a time variable:</para>
+                /// <list type="bullet">
+                /// <item><description><b>yyyy-MM-dd|-3d</b>: three days before the point in time when the task is run.</description></item>
+                /// <item><description><b>yyyy-MM-dd|-1w</b>: seven days before the point in time when the task is run.</description></item>
+                /// <item><description><b>yyyy-MM-dd|-4M</b>: four months before the point in time when the task is run.</description></item>
+                /// <item><description><b>yyyy-MM-dd|-2y</b>: two years before the point in time when the task is run.</description></item>
+                /// <item><description><b>yyyy-MM-dd|-3h</b>: 3 hours before the point in time when the task is run.</description></item>
+                /// <item><description><b>yyyy-MM-dd|+5m</b>: 5 minutes after the point in time when the task is run.</description></item>
+                /// </list>
+                /// <remarks>
+                /// <para> In these examples, yyyy-MM-dd| indicates a fixed value. For the remaining part, a hyphen (-) indicates that the time is before that when the task is run, and a plus sign (+) indicates that the time is after that when the task is run.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>yyyy-MM-dd|-3d</para>
+                /// </summary>
                 [NameInMap("Pattern")]
                 [Validation(Required=false)]
                 public string Pattern { get; set; }

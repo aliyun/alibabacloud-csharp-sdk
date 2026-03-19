@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListWorkspacesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The dataset.</para>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListWorkspacesResponseBodyData Data { get; set; }
@@ -20,192 +17,78 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListWorkspacesResponseBodyDataBaseWorkspaces> BaseWorkspaces { get; set; }
             public class ListWorkspacesResponseBodyDataBaseWorkspaces : TeaModel {
-                /// <summary>
-                /// <para>Whether the current user has joined the workspace.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("AlreadyJoined")]
                 [Validation(Required=false)]
                 public bool? AlreadyJoined { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the creator.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>123</para>
-                /// </summary>
                 [NameInMap("CreatorId")]
                 [Validation(Required=false)]
                 public long? CreatorId { get; set; }
 
-                /// <summary>
-                /// <para>The nickname of the creator.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>work*****</para>
-                /// </summary>
                 [NameInMap("CreatorNickName")]
                 [Validation(Required=false)]
                 public string CreatorNickName { get; set; }
 
-                /// <summary>
-                /// <para>The Alibaba Cloud account UID of the creator.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1344****</para>
-                /// </summary>
                 [NameInMap("CreatorUid")]
                 [Validation(Required=false)]
                 public string CreatorUid { get; set; }
 
-                /// <summary>
-                /// <para>The description of the workspace.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Test</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The creation time.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2025-01-01 00:00:00</para>
-                /// </summary>
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
 
-                /// <summary>
-                /// <para>The update time.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2025-01-01 00:00:00</para>
-                /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
 
-                /// <summary>
-                /// <para>The name of the workspace.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>workspace-xxxx</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                /// <summary>
-                /// <para>The owner ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>123****</para>
-                /// </summary>
                 [NameInMap("OwnerId")]
                 [Validation(Required=false)]
                 public long? OwnerId { get; set; }
 
-                /// <summary>
-                /// <para>The nickname of the owner.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>hel****</para>
-                /// </summary>
                 [NameInMap("OwnerNickName")]
                 [Validation(Required=false)]
                 public string OwnerNickName { get; set; }
 
-                /// <summary>
-                /// <para>The Alibaba Cloud UID of the owner.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>15608564799****</para>
-                /// </summary>
                 [NameInMap("OwnerUid")]
                 [Validation(Required=false)]
                 public string OwnerUid { get; set; }
 
-                /// <summary>
-                /// <para>The region ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the service account.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>12345</para>
-                /// </summary>
                 [NameInMap("ServiceAccountId")]
                 [Validation(Required=false)]
                 public long? ServiceAccountId { get; set; }
 
-                /// <summary>
-                /// <para>The nickname of the service account.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testname</para>
-                /// </summary>
                 [NameInMap("ServiceAccountNickName")]
                 [Validation(Required=false)]
                 public string ServiceAccountNickName { get; set; }
 
-                /// <summary>
-                /// <para>The Alibaba Cloud account UID of the service account.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1422****</para>
-                /// </summary>
                 [NameInMap("ServiceAccountUid")]
                 [Validation(Required=false)]
                 public string ServiceAccountUid { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the tenant to which the workspace belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>23456</para>
-                /// </summary>
                 [NameInMap("TenantId")]
                 [Validation(Required=false)]
                 public long? TenantId { get; set; }
 
-                /// <summary>
-                /// <para>The VPC ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vpc-25fl3qjqb****</para>
-                /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
-                /// <summary>
-                /// <para>The workspace ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>8652340494****</para>
-                /// </summary>
                 [NameInMap("WorkspaceId")]
                 [Validation(Required=false)]
                 public long? WorkspaceId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the workspace.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test-workspace</para>
-                /// </summary>
                 [NameInMap("WorkspaceName")]
                 [Validation(Required=false)]
                 public string WorkspaceName { get; set; }

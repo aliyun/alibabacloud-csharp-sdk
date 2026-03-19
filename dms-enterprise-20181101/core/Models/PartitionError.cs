@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class PartitionError : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>auth failed</para>
+        /// </summary>
         [NameInMap("ErrorDetail")]
         [Validation(Required=false)]
         public string ErrorDetail { get; set; }

@@ -126,9 +126,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string PluginType { get; set; }
 
-            /// <summary>
-            /// <para>The IDs of the operators that are related to the ticket.</para>
-            /// </summary>
             [NameInMap("RelatedUserList")]
             [Validation(Required=false)]
             public GetOrderBaseInfoResponseBodyOrderBaseInfoRelatedUserList RelatedUserList { get; set; }
@@ -139,9 +136,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
             }
 
-            /// <summary>
-            /// <para>The nicknames of the operators that are related to the ticket.</para>
-            /// </summary>
             [NameInMap("RelatedUserNickList")]
             [Validation(Required=false)]
             public GetOrderBaseInfoResponseBodyOrderBaseInfoRelatedUserNickList RelatedUserNickList { get; set; }

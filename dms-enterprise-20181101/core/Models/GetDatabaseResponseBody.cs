@@ -126,9 +126,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
-            /// <summary>
-            /// <para>The IDs of the owners of the database.</para>
-            /// </summary>
             [NameInMap("OwnerIdList")]
             [Validation(Required=false)]
             public GetDatabaseResponseBodyDatabaseOwnerIdList OwnerIdList { get; set; }
@@ -139,9 +136,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
             }
 
-            /// <summary>
-            /// <para>The names of the owners of the database.</para>
-            /// </summary>
             [NameInMap("OwnerNameList")]
             [Validation(Required=false)]
             public GetDatabaseResponseBodyDatabaseOwnerNameList OwnerNameList { get; set; }

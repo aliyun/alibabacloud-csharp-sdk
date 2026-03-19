@@ -55,23 +55,67 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public class DescribeDifyAttributeResponseBodyRoot : TeaModel {
             /// <summary>
             /// <b>Example:</b>
+            /// <para>DIFY</para>
+            /// </summary>
+            [NameInMap("AppType")]
+            [Validation(Required=false)]
+            public string AppType { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>92748163-af62-4ca4-ad85-1****</para>
             /// </summary>
             [NameInMap("AppUuid")]
             [Validation(Required=false)]
             public string AppUuid { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ABCD</para>
+            /// </summary>
             [NameInMap("BillingInstanceId")]
             [Validation(Required=false)]
             public string BillingInstanceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>PREPAY</para>
+            /// </summary>
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>abc1-def2-ghi3-jkl4</para>
+            /// </summary>
+            [NameInMap("DifyInstanceId")]
+            [Validation(Required=false)]
+            public string DifyInstanceId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>This is dify instance</para>
+            /// </summary>
+            [NameInMap("DifyInstanceName")]
+            [Validation(Required=false)]
+            public string DifyInstanceName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>20251201</para>
+            /// </summary>
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public long? ExpireTime { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-chengdu</para>
+            /// </summary>
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -105,6 +149,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ESSD</para>
+            /// </summary>
             [NameInMap("StorageType")]
             [Validation(Required=false)]
             public string StorageType { get; set; }
@@ -150,6 +198,28 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<DescribeDifyAttributeResponseBodyTags> Tags { get; set; }
+        public class DescribeDifyAttributeResponseBodyTags : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Key</para>
+            /// </summary>
+            [NameInMap("TagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Value</para>
+            /// </summary>
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
 
     }
 

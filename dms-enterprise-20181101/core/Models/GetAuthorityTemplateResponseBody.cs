@@ -16,9 +16,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public GetAuthorityTemplateResponseBodyAuthorityTemplateView AuthorityTemplateView { get; set; }
         public class GetAuthorityTemplateResponseBodyAuthorityTemplateView : TeaModel {
-            /// <summary>
-            /// <para>The resource information in the permission template.</para>
-            /// </summary>
             [NameInMap("AuthorityTemplateItemList")]
             [Validation(Required=false)]
             public GetAuthorityTemplateResponseBodyAuthorityTemplateViewAuthorityTemplateItemList AuthorityTemplateItemList { get; set; }
@@ -27,91 +24,34 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public List<GetAuthorityTemplateResponseBodyAuthorityTemplateViewAuthorityTemplateItemListAuthorityTemplateItem> AuthorityTemplateItem { get; set; }
                 public class GetAuthorityTemplateResponseBodyAuthorityTemplateViewAuthorityTemplateItemListAuthorityTemplateItem : TeaModel {
-                    /// <summary>
-                    /// <para>Other information. For example, you can add the logon permission on an instance to the permission template.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>&quot;permissionTypes&quot;: [
-                    ///             &quot;LOGIN&quot;
-                    ///           ]</para>
-                    /// </summary>
                     [NameInMap("Attribute")]
                     [Validation(Required=false)]
                     public string Attribute { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the database.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>43***</para>
-                    /// </summary>
                     [NameInMap("DbId")]
                     [Validation(Required=false)]
                     public long? DbId { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the instance.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>188****</para>
-                    /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
                     public long? InstanceId { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the resource.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>12***</para>
-                    /// </summary>
                     [NameInMap("ItemId")]
                     [Validation(Required=false)]
                     public long? ItemId { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the user who modified the resource.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>51***</para>
-                    /// </summary>
                     [NameInMap("ModifierId")]
                     [Validation(Required=false)]
                     public long? ModifierId { get; set; }
 
-                    /// <summary>
-                    /// <para>The type of the resource. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>INSTANCE</b>: instance</description></item>
-                    /// <item><description><b>LOGIC_DB</b>: logical database</description></item>
-                    /// <item><description><b>META_DB</b>: physical database</description></item>
-                    /// <item><description><b>LOGIC_TABLE</b>: logical table</description></item>
-                    /// <item><description><b>SINGLE_TABLE</b>: physical table</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>INSTANCE</para>
-                    /// </summary>
                     [NameInMap("ResourceType")]
                     [Validation(Required=false)]
                     public string ResourceType { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the table.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>ExampleTable</para>
-                    /// </summary>
                     [NameInMap("TableName")]
                     [Validation(Required=false)]
                     public string TableName { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the permission template.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1563</para>
-                    /// </summary>
                     [NameInMap("TemplateId")]
                     [Validation(Required=false)]
                     public long? TemplateId { get; set; }

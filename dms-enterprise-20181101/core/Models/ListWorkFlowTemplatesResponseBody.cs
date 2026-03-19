@@ -49,9 +49,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        /// <summary>
-        /// <para>The approval templates.</para>
-        /// </summary>
         [NameInMap("WorkFlowTemplates")]
         [Validation(Required=false)]
         public ListWorkFlowTemplatesResponseBodyWorkFlowTemplates WorkFlowTemplates { get; set; }
@@ -60,77 +57,30 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate> WorkFlowTemplate { get; set; }
             public class ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate : TeaModel {
-                /// <summary>
-                /// <para>The description of the approval template.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
                 public string Comment { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the creator.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1234</para>
-                /// </summary>
                 [NameInMap("CreateUserId")]
                 [Validation(Required=false)]
                 public long? CreateUserId { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the approval template is enabled. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Y: The approval template is enabled.</description></item>
-                /// <item><description>N: The approval template is disabled.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Y</para>
-                /// </summary>
                 [NameInMap("Enabled")]
                 [Validation(Required=false)]
                 public string Enabled { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the approval template is predefined by the system. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>1: The approval template is predefined by the system.</description></item>
-                /// <item><description>0: The approval template is not predefined by the system.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("IsSystem")]
                 [Validation(Required=false)]
                 public int? IsSystem { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the approval template.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>12345</para>
-                /// </summary>
                 [NameInMap("TemplateId")]
                 [Validation(Required=false)]
                 public long? TemplateId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the approval template.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Admin</para>
-                /// </summary>
                 [NameInMap("TemplateName")]
                 [Validation(Required=false)]
                 public string TemplateName { get; set; }
 
-                /// <summary>
-                /// <para>The details of approval nodes.</para>
-                /// </summary>
                 [NameInMap("WorkflowNodes")]
                 [Validation(Required=false)]
                 public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodes WorkflowNodes { get; set; }
@@ -139,76 +89,30 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     [Validation(Required=false)]
                     public List<ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodesWorkflowNode> WorkflowNode { get; set; }
                     public class ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodesWorkflowNode : TeaModel {
-                        /// <summary>
-                        /// <para>The description of the approval node.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>test</para>
-                        /// </summary>
                         [NameInMap("Comment")]
                         [Validation(Required=false)]
                         public string Comment { get; set; }
 
-                        /// <summary>
-                        /// <para>The ID of the creator.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>1234</para>
-                        /// </summary>
                         [NameInMap("CreateUserId")]
                         [Validation(Required=false)]
                         public long? CreateUserId { get; set; }
 
-                        /// <summary>
-                        /// <para>The ID of the approval node.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>123</para>
-                        /// </summary>
                         [NameInMap("NodeId")]
                         [Validation(Required=false)]
                         public long? NodeId { get; set; }
 
-                        /// <summary>
-                        /// <para>The name of the approval node.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>test</para>
-                        /// </summary>
                         [NameInMap("NodeName")]
                         [Validation(Required=false)]
                         public string NodeName { get; set; }
 
-                        /// <summary>
-                        /// <para>The type of the approval node. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>SYS: The approval node is predefined by the system.</description></item>
-                        /// <item><description>USER_LIST: The approval node is created by a user.</description></item>
-                        /// </list>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>SYS</para>
-                        /// </summary>
                         [NameInMap("NodeType")]
                         [Validation(Required=false)]
                         public string NodeType { get; set; }
 
-                        /// <summary>
-                        /// <para>The position of the approval node.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>1</para>
-                        /// </summary>
                         [NameInMap("Position")]
                         [Validation(Required=false)]
                         public int? Position { get; set; }
 
-                        /// <summary>
-                        /// <para>The ID of the template.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>12345</para>
-                        /// </summary>
                         [NameInMap("TemplateId")]
                         [Validation(Required=false)]
                         public long? TemplateId { get; set; }

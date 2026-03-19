@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListTaskFlowConstantsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>A list of constant key-value pairs for the task flow.</para>
-        /// </summary>
         [NameInMap("DagConstants")]
         [Validation(Required=false)]
         public ListTaskFlowConstantsResponseBodyDagConstants DagConstants { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListTaskFlowConstantsResponseBodyDagConstantsDagConstant> DagConstant { get; set; }
             public class ListTaskFlowConstantsResponseBodyDagConstantsDagConstant : TeaModel {
-                /// <summary>
-                /// <para>The constant key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>example</para>
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
-                /// <summary>
-                /// <para>The constant value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

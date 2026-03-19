@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        /// <summary>
-        /// <para>The details of the logical tables.</para>
-        /// </summary>
         [NameInMap("LogicTableList")]
         [Validation(Required=false)]
         public ListLogicTablesResponseBodyLogicTableList LogicTableList { get; set; }
@@ -40,29 +37,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListLogicTablesResponseBodyLogicTableListLogicTable> LogicTable { get; set; }
             public class ListLogicTablesResponseBodyLogicTableListLogicTable : TeaModel {
-                /// <summary>
-                /// <para>The ID of the logical database.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("DatabaseId")]
                 [Validation(Required=false)]
                 public string DatabaseId { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the table is a logical table. The value is fixed to true.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("Logic")]
                 [Validation(Required=false)]
                 public bool? Logic { get; set; }
 
-                /// <summary>
-                /// <para>The IDs of the owners of the logical tables.</para>
-                /// </summary>
                 [NameInMap("OwnerIdList")]
                 [Validation(Required=false)]
                 public ListLogicTablesResponseBodyLogicTableListLogicTableOwnerIdList OwnerIdList { get; set; }
@@ -73,9 +55,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
                 }
 
-                /// <summary>
-                /// <para>The nicknames of the owners of the logical tables.</para>
-                /// </summary>
                 [NameInMap("OwnerNameList")]
                 [Validation(Required=false)]
                 public ListLogicTablesResponseBodyLogicTableListLogicTableOwnerNameList OwnerNameList { get; set; }
@@ -86,62 +65,26 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
                 }
 
-                /// <summary>
-                /// <para>The logical database to which the logical table belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>yuyang_test</para>
-                /// </summary>
                 [NameInMap("SchemaName")]
                 [Validation(Required=false)]
                 public string SchemaName { get; set; }
 
-                /// <summary>
-                /// <para>The number of logical tables.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>4</para>
-                /// </summary>
                 [NameInMap("TableCount")]
                 [Validation(Required=false)]
                 public string TableCount { get; set; }
 
-                /// <summary>
-                /// <para>The expression of the logical table.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test[1-4]</para>
-                /// </summary>
                 [NameInMap("TableExpr")]
                 [Validation(Required=false)]
                 public string TableExpr { get; set; }
 
-                /// <summary>
-                /// <para>The GUID of the logical table.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>IDB_L_308302.yuyang_test.test_ch</para>
-                /// </summary>
                 [NameInMap("TableGuid")]
                 [Validation(Required=false)]
                 public string TableGuid { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the logical table.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("TableId")]
                 [Validation(Required=false)]
                 public string TableId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the logical table.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
                 public string TableName { get; set; }

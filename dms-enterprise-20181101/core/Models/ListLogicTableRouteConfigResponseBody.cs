@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        /// <summary>
-        /// <para>The routing algorithms.</para>
-        /// </summary>
         [NameInMap("LogicTableRouteConfigList")]
         [Validation(Required=false)]
         public ListLogicTableRouteConfigResponseBodyLogicTableRouteConfigList LogicTableRouteConfigList { get; set; }
@@ -40,32 +37,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListLogicTableRouteConfigResponseBodyLogicTableRouteConfigListLogicTableRouteConfig> LogicTableRouteConfig { get; set; }
             public class ListLogicTableRouteConfigResponseBodyLogicTableRouteConfigListLogicTableRouteConfig : TeaModel {
-                /// <summary>
-                /// <para>The routing algorithm expression.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>#id#%16\t</para>
-                /// </summary>
                 [NameInMap("RouteExpr")]
                 [Validation(Required=false)]
                 public string RouteExpr { get; set; }
 
-                /// <summary>
-                /// <para>The unique key of the routing algorithm.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("RouteKey")]
                 [Validation(Required=false)]
                 public string RouteKey { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the logical table.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>4****</para>
-                /// </summary>
                 [NameInMap("TableId")]
                 [Validation(Required=false)]
                 public long? TableId { get; set; }

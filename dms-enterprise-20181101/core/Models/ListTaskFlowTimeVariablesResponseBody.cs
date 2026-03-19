@@ -53,9 +53,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        /// <summary>
-        /// <para>The time variables for the task flow.</para>
-        /// </summary>
         [NameInMap("TimeVariables")]
         [Validation(Required=false)]
         public ListTaskFlowTimeVariablesResponseBodyTimeVariables TimeVariables { get; set; }
@@ -64,22 +61,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListTaskFlowTimeVariablesResponseBodyTimeVariablesTimeVariable> TimeVariable { get; set; }
             public class ListTaskFlowTimeVariablesResponseBodyTimeVariablesTimeVariable : TeaModel {
-                /// <summary>
-                /// <para>The name of the time variable.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>time_test</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                /// <summary>
-                /// <para>The format of the time variable.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2018-09-26|+7h</para>
-                /// </summary>
                 [NameInMap("Pattern")]
                 [Validation(Required=false)]
                 public string Pattern { get; set; }
