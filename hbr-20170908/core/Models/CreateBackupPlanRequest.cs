@@ -159,6 +159,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public bool? Disabled { get; set; }
 
+        [NameInMap("Edition")]
+        [Validation(Required=false)]
+        public string Edition { get; set; }
+
         /// <summary>
         /// <para>This parameter is required only when <b>SourceType</b> is set to <b>ECS_FILE</b>. It specifies the path that should not be backed up, meaning all files under this path will not be included in the backup. The maximum length is 255 characters.</para>
         /// 
