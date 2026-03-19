@@ -6277,7 +6277,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对话管理/创建对话</para>
+        /// <para>对话管理/新建对话</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6331,7 +6331,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对话管理/创建对话</para>
+        /// <para>对话管理/新建对话</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6385,7 +6385,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对话管理/创建对话</para>
+        /// <para>对话管理/新建对话</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6404,7 +6404,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对话管理/创建对话</para>
+        /// <para>对话管理/新建对话</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6454,6 +6454,14 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxInputLength))
+            {
+                body["maxInputLength"] = request.MaxInputLength;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxOutputLength))
+            {
+                body["maxOutputLength"] = request.MaxOutputLength;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
             {
@@ -6528,6 +6536,14 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxInputLength))
+            {
+                body["maxInputLength"] = request.MaxInputLength;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxOutputLength))
+            {
+                body["maxOutputLength"] = request.MaxOutputLength;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
             {
@@ -8135,108 +8151,6 @@ namespace AlibabaCloud.SDK.AiContent20240611
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ModelRouterQueryModelListWithOptionsAsync(request, headers, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>模型管理/获取模型及API密钥详情</para>
-        /// </summary>
-        /// 
-        /// <param name="headers">
-        /// map
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ModelRouterQueryModelWithApiKeyResponse
-        /// </returns>
-        public ModelRouterQueryModelWithApiKeyResponse ModelRouterQueryModelWithApiKeyWithOptions(string id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ModelRouterQueryModelWithApiKey",
-                Version = "20240611",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/modelRouter/open/models/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id) + "/with-api-key",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ModelRouterQueryModelWithApiKeyResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>模型管理/获取模型及API密钥详情</para>
-        /// </summary>
-        /// 
-        /// <param name="headers">
-        /// map
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ModelRouterQueryModelWithApiKeyResponse
-        /// </returns>
-        public async Task<ModelRouterQueryModelWithApiKeyResponse> ModelRouterQueryModelWithApiKeyWithOptionsAsync(string id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ModelRouterQueryModelWithApiKey",
-                Version = "20240611",
-                Protocol = "HTTPS",
-                Pathname = "/api/v1/modelRouter/open/models/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id) + "/with-api-key",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ModelRouterQueryModelWithApiKeyResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>模型管理/获取模型及API密钥详情</para>
-        /// </summary>
-        /// 
-        /// <returns>
-        /// ModelRouterQueryModelWithApiKeyResponse
-        /// </returns>
-        public ModelRouterQueryModelWithApiKeyResponse ModelRouterQueryModelWithApiKey(string id)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ModelRouterQueryModelWithApiKeyWithOptions(id, headers, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>模型管理/获取模型及API密钥详情</para>
-        /// </summary>
-        /// 
-        /// <returns>
-        /// ModelRouterQueryModelWithApiKeyResponse
-        /// </returns>
-        public async Task<ModelRouterQueryModelWithApiKeyResponse> ModelRouterQueryModelWithApiKeyAsync(string id)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ModelRouterQueryModelWithApiKeyWithOptionsAsync(id, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

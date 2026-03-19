@@ -39,6 +39,22 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>32K</para>
+        /// </summary>
+        [NameInMap("maxInputLength")]
+        [Validation(Required=false)]
+        public string MaxInputLength { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>8K</para>
+        /// </summary>
+        [NameInMap("maxOutputLength")]
+        [Validation(Required=false)]
+        public string MaxOutputLength { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>qwen-turbo</para>
         /// </summary>
         [NameInMap("modelId")]
