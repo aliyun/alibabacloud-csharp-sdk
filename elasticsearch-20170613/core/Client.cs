@@ -12933,6 +12933,176 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取事件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEventRecordsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventRecordsResponse
+        /// </returns>
+        public ListEventRecordsResponse ListEventRecordsWithOptions(string eventType, ListEventRecordsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                query["beginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TermContent))
+            {
+                query["termContent"] = request.TermContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TermType))
+            {
+                query["termType"] = request.TermType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEventRecords",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(eventType) + "/listEventRecords",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEventRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取事件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEventRecordsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventRecordsResponse
+        /// </returns>
+        public async Task<ListEventRecordsResponse> ListEventRecordsWithOptionsAsync(string eventType, ListEventRecordsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                query["beginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TermContent))
+            {
+                query["termContent"] = request.TermContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TermType))
+            {
+                query["termType"] = request.TermType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEventRecords",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(eventType) + "/listEventRecords",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEventRecordsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取事件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEventRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventRecordsResponse
+        /// </returns>
+        public ListEventRecordsResponse ListEventRecords(string eventType, ListEventRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListEventRecordsWithOptions(eventType, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取事件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEventRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventRecordsResponse
+        /// </returns>
+        public async Task<ListEventRecordsResponse> ListEventRecordsAsync(string eventType, ListEventRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListEventRecordsWithOptionsAsync(eventType, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the extended file configuration of a Logstash instance.</para>
         /// </summary>
         /// 
@@ -15669,6 +15839,152 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>统计事件记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListStatsEventRecordsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStatsEventRecordsResponse
+        /// </returns>
+        public ListStatsEventRecordsResponse ListStatsEventRecordsWithOptions(ListStatsEventRecordsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
+            {
+                query["eventType"] = request.EventType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListStatsEventRecords",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/event/statsEventRecords",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListStatsEventRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计事件记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListStatsEventRecordsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStatsEventRecordsResponse
+        /// </returns>
+        public async Task<ListStatsEventRecordsResponse> ListStatsEventRecordsWithOptionsAsync(ListStatsEventRecordsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
+            {
+                query["eventType"] = request.EventType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["level"] = request.Level;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListStatsEventRecords",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/event/statsEventRecords",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListStatsEventRecordsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计事件记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListStatsEventRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStatsEventRecordsResponse
+        /// </returns>
+        public ListStatsEventRecordsResponse ListStatsEventRecords(ListStatsEventRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListStatsEventRecordsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计事件记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListStatsEventRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStatsEventRecordsResponse
+        /// </returns>
+        public async Task<ListStatsEventRecordsResponse> ListStatsEventRecordsAsync(ListStatsEventRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListStatsEventRecordsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the tags that are added to one or more resources.</para>
         /// </summary>
         /// 
@@ -16671,6 +16987,144 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ModifyInstanceMaintainTimeWithOptionsAsync(InstanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改计划执行时间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyScheduleExecuteTimeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyScheduleExecuteTimeResponse
+        /// </returns>
+        public ModifyScheduleExecuteTimeResponse ModifyScheduleExecuteTimeWithOptions(string instanceId, ModifyScheduleExecuteTimeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["eventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleExecuteTime))
+            {
+                query["scheduleExecuteTime"] = request.ScheduleExecuteTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyScheduleExecuteTime",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/event/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/actions/modify-execute-time",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyScheduleExecuteTimeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改计划执行时间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyScheduleExecuteTimeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyScheduleExecuteTimeResponse
+        /// </returns>
+        public async Task<ModifyScheduleExecuteTimeResponse> ModifyScheduleExecuteTimeWithOptionsAsync(string instanceId, ModifyScheduleExecuteTimeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["eventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleExecuteTime))
+            {
+                query["scheduleExecuteTime"] = request.ScheduleExecuteTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyScheduleExecuteTime",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/event/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/actions/modify-execute-time",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyScheduleExecuteTimeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改计划执行时间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyScheduleExecuteTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyScheduleExecuteTimeResponse
+        /// </returns>
+        public ModifyScheduleExecuteTimeResponse ModifyScheduleExecuteTime(string instanceId, ModifyScheduleExecuteTimeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModifyScheduleExecuteTimeWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改计划执行时间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyScheduleExecuteTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyScheduleExecuteTimeResponse
+        /// </returns>
+        public async Task<ModifyScheduleExecuteTimeResponse> ModifyScheduleExecuteTimeAsync(string instanceId, ModifyScheduleExecuteTimeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModifyScheduleExecuteTimeWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
