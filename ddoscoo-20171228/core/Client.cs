@@ -37,6 +37,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增加CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddLayer7CCRuleRequest
         /// </param>
@@ -106,6 +111,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<AddLayer7CCRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增加CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddLayer7CCRuleRequest
         /// </param>
@@ -175,6 +185,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<AddLayer7CCRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增加CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddLayer7CCRuleRequest
         /// </param>
@@ -188,6 +203,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return AddLayer7CCRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增加CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddLayer7CCRuleRequest
         /// </param>
@@ -201,6 +221,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await AddLayer7CCRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭日志分发</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CloseDomainSlsConfigRequest
         /// </param>
@@ -250,6 +275,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<CloseDomainSlsConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭日志分发</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CloseDomainSlsConfigRequest
         /// </param>
@@ -299,6 +329,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<CloseDomainSlsConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭日志分发</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CloseDomainSlsConfigRequest
         /// </param>
@@ -312,6 +347,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return CloseDomainSlsConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭日志分发</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CloseDomainSlsConfigRequest
         /// </param>
@@ -325,6 +365,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await CloseDomainSlsConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改健康检查</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigHealthCheckRequest
         /// </param>
@@ -374,6 +419,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ConfigHealthCheckResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改健康检查</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigHealthCheckRequest
         /// </param>
@@ -423,6 +473,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ConfigHealthCheckResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改健康检查</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigHealthCheckRequest
         /// </param>
@@ -436,6 +491,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return ConfigHealthCheckWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改健康检查</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigHealthCheckRequest
         /// </param>
@@ -449,6 +509,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await ConfigHealthCheckWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改端口规则</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// ConfigLayer4RuleRequest
         /// </param>
@@ -500,6 +565,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ConfigLayer4RuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改端口规则</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// ConfigLayer4RuleRequest
         /// </param>
@@ -551,6 +621,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ConfigLayer4RuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改端口规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer4RuleRequest
         /// </param>
@@ -564,6 +639,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return ConfigLayer4RuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改端口规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer4RuleRequest
         /// </param>
@@ -577,6 +657,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await ConfigLayer4RuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改端口规则属性</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer4RuleAttributeRequest
         /// </param>
@@ -630,6 +715,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ConfigLayer4RuleAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改端口规则属性</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer4RuleAttributeRequest
         /// </param>
@@ -683,6 +773,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ConfigLayer4RuleAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改端口规则属性</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer4RuleAttributeRequest
         /// </param>
@@ -696,6 +791,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return ConfigLayer4RuleAttributeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改端口规则属性</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer4RuleAttributeRequest
         /// </param>
@@ -709,6 +809,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await ConfigLayer4RuleAttributeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改黑白名单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7BlackWhiteListRequest
         /// </param>
@@ -758,6 +863,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ConfigLayer7BlackWhiteListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改黑白名单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7BlackWhiteListRequest
         /// </param>
@@ -807,6 +917,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ConfigLayer7BlackWhiteListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改黑白名单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7BlackWhiteListRequest
         /// </param>
@@ -820,6 +935,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return ConfigLayer7BlackWhiteListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改黑白名单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7BlackWhiteListRequest
         /// </param>
@@ -833,6 +953,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await ConfigLayer7BlackWhiteListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7CCRuleRequest
         /// </param>
@@ -902,6 +1027,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ConfigLayer7CCRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7CCRuleRequest
         /// </param>
@@ -971,6 +1101,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ConfigLayer7CCRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7CCRuleRequest
         /// </param>
@@ -984,6 +1119,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return ConfigLayer7CCRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7CCRuleRequest
         /// </param>
@@ -997,6 +1137,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await ConfigLayer7CCRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改CC模板</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7CCTemplateRequest
         /// </param>
@@ -1042,6 +1187,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ConfigLayer7CCTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改CC模板</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7CCTemplateRequest
         /// </param>
@@ -1087,6 +1237,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ConfigLayer7CCTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改CC模板</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7CCTemplateRequest
         /// </param>
@@ -1100,6 +1255,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return ConfigLayer7CCTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改CC模板</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7CCTemplateRequest
         /// </param>
@@ -1113,6 +1273,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await ConfigLayer7CCTemplateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改证书</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7CertRequest
         /// </param>
@@ -1178,6 +1343,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ConfigLayer7CertResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改证书</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7CertRequest
         /// </param>
@@ -1243,6 +1413,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ConfigLayer7CertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改证书</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7CertRequest
         /// </param>
@@ -1256,6 +1431,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return ConfigLayer7CertWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改证书</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7CertRequest
         /// </param>
@@ -1269,6 +1449,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await ConfigLayer7CertWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改域名接入规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7RuleRequest
         /// </param>
@@ -1330,6 +1515,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ConfigLayer7RuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改域名接入规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7RuleRequest
         /// </param>
@@ -1391,6 +1581,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ConfigLayer7RuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改域名接入规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7RuleRequest
         /// </param>
@@ -1404,6 +1599,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return ConfigLayer7RuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改域名接入规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigLayer7RuleRequest
         /// </param>
@@ -1417,6 +1617,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await ConfigLayer7RuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建异步任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAsyncTaskRequest
         /// </param>
@@ -1462,6 +1667,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<CreateAsyncTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建异步任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAsyncTaskRequest
         /// </param>
@@ -1507,6 +1717,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<CreateAsyncTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建异步任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAsyncTaskRequest
         /// </param>
@@ -1520,6 +1735,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return CreateAsyncTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建异步任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAsyncTaskRequest
         /// </param>
@@ -1533,6 +1753,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await CreateAsyncTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建端口接入</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// CreateLayer4RuleRequest
         /// </param>
@@ -1584,6 +1809,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<CreateLayer4RuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建端口接入</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// CreateLayer4RuleRequest
         /// </param>
@@ -1635,6 +1865,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<CreateLayer4RuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建端口接入</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateLayer4RuleRequest
         /// </param>
@@ -1648,6 +1883,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return CreateLayer4RuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建端口接入</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateLayer4RuleRequest
         /// </param>
@@ -1661,6 +1901,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await CreateLayer4RuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建域名接入规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateLayer7RuleRequest
         /// </param>
@@ -1714,6 +1959,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<CreateLayer7RuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建域名接入规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateLayer7RuleRequest
         /// </param>
@@ -1767,6 +2017,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<CreateLayer7RuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建域名接入规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateLayer7RuleRequest
         /// </param>
@@ -1780,6 +2035,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return CreateLayer7RuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建域名接入规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateLayer7RuleRequest
         /// </param>
@@ -1793,6 +2053,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await CreateLayer7RuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除异步任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAsyncTaskRequest
         /// </param>
@@ -1834,6 +2099,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DeleteAsyncTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除异步任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAsyncTaskRequest
         /// </param>
@@ -1875,6 +2145,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DeleteAsyncTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除异步任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAsyncTaskRequest
         /// </param>
@@ -1888,6 +2163,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DeleteAsyncTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除异步任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAsyncTaskRequest
         /// </param>
@@ -1901,6 +2181,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DeleteAsyncTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除端口接入规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteLayer4RuleRequest
         /// </param>
@@ -1938,6 +2223,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DeleteLayer4RuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除端口接入规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteLayer4RuleRequest
         /// </param>
@@ -1975,6 +2265,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DeleteLayer4RuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除端口接入规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteLayer4RuleRequest
         /// </param>
@@ -1988,6 +2283,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DeleteLayer4RuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除端口接入规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteLayer4RuleRequest
         /// </param>
@@ -2001,6 +2301,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DeleteLayer4RuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteLayer7CCRuleRequest
         /// </param>
@@ -2046,6 +2351,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DeleteLayer7CCRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteLayer7CCRuleRequest
         /// </param>
@@ -2091,6 +2401,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DeleteLayer7CCRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteLayer7CCRuleRequest
         /// </param>
@@ -2104,6 +2419,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DeleteLayer7CCRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteLayer7CCRuleRequest
         /// </param>
@@ -2117,6 +2437,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DeleteLayer7CCRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除域名接入规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteLayer7RuleRequest
         /// </param>
@@ -2158,6 +2483,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DeleteLayer7RuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除域名接入规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteLayer7RuleRequest
         /// </param>
@@ -2199,6 +2529,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DeleteLayer7RuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除域名接入规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteLayer7RuleRequest
         /// </param>
@@ -2212,6 +2547,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DeleteLayer7RuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除域名接入规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteLayer7RuleRequest
         /// </param>
@@ -2225,6 +2565,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DeleteLayer7RuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询回源网段</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackSourceCidrRequest
         /// </param>
@@ -2274,6 +2619,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeBackSourceCidrResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询回源网段</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackSourceCidrRequest
         /// </param>
@@ -2323,6 +2673,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeBackSourceCidrResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询回源网段</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackSourceCidrRequest
         /// </param>
@@ -2336,6 +2691,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeBackSourceCidrWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询回源网段</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackSourceCidrRequest
         /// </param>
@@ -2501,6 +2861,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeBatchSlsDispatchStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询事件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDDoSEventsRequest
         /// </param>
@@ -2562,6 +2927,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDDoSEventsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询事件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDDoSEventsRequest
         /// </param>
@@ -2623,6 +2993,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDDoSEventsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询事件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDDoSEventsRequest
         /// </param>
@@ -2636,6 +3011,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeDDoSEventsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询事件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDDoSEventsRequest
         /// </param>
@@ -2649,6 +3029,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeDDoSEventsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询流量</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDDoSTrafficRequest
         /// </param>
@@ -2706,6 +3091,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDDoSTrafficResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询流量</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDDoSTrafficRequest
         /// </param>
@@ -2763,6 +3153,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDDoSTrafficResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询流量</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDDoSTrafficRequest
         /// </param>
@@ -2776,6 +3171,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeDDoSTrafficWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询流量</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDDoSTrafficRequest
         /// </param>
@@ -2789,6 +3189,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeDDoSTrafficWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询防护次数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDefenseCountStatisticsRequest
         /// </param>
@@ -2830,6 +3235,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDefenseCountStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询防护次数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDefenseCountStatisticsRequest
         /// </param>
@@ -2871,6 +3281,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDefenseCountStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询防护次数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDefenseCountStatisticsRequest
         /// </param>
@@ -2884,6 +3299,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeDefenseCountStatisticsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询防护次数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDefenseCountStatisticsRequest
         /// </param>
@@ -2897,6 +3317,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeDefenseCountStatisticsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名接入模式</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainAccessModeRequest
         /// </param>
@@ -2938,6 +3363,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDomainAccessModeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名接入模式</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainAccessModeRequest
         /// </param>
@@ -2979,6 +3409,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDomainAccessModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名接入模式</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainAccessModeRequest
         /// </param>
@@ -2992,6 +3427,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeDomainAccessModeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名接入模式</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainAccessModeRequest
         /// </param>
@@ -3005,6 +3445,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeDomainAccessModeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名攻击事件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainAttackEventListRequest
         /// </param>
@@ -3062,6 +3507,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDomainAttackEventListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名攻击事件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainAttackEventListRequest
         /// </param>
@@ -3119,6 +3569,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDomainAttackEventListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名攻击事件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainAttackEventListRequest
         /// </param>
@@ -3132,6 +3587,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeDomainAttackEventListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名攻击事件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainAttackEventListRequest
         /// </param>
@@ -3145,6 +3605,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeDomainAttackEventListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名攻击最大QPS</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainAttackMaxQpsRequest
         /// </param>
@@ -3194,6 +3659,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDomainAttackMaxQpsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名攻击最大QPS</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainAttackMaxQpsRequest
         /// </param>
@@ -3243,6 +3713,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDomainAttackMaxQpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名攻击最大QPS</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainAttackMaxQpsRequest
         /// </param>
@@ -3256,6 +3731,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeDomainAttackMaxQpsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名攻击最大QPS</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainAttackMaxQpsRequest
         /// </param>
@@ -3269,6 +3749,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeDomainAttackMaxQpsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>域名概览</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainOverviewRequest
         /// </param>
@@ -3318,6 +3803,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDomainOverviewResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>域名概览</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainOverviewRequest
         /// </param>
@@ -3367,6 +3857,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDomainOverviewResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>域名概览</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainOverviewRequest
         /// </param>
@@ -3380,6 +3875,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeDomainOverviewWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>域名概览</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainOverviewRequest
         /// </param>
@@ -3393,6 +3893,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeDomainOverviewWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名QPS</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainQpsListRequest
         /// </param>
@@ -3446,6 +3951,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDomainQpsListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名QPS</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainQpsListRequest
         /// </param>
@@ -3499,6 +4009,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDomainQpsListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名QPS</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainQpsListRequest
         /// </param>
@@ -3512,6 +4027,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeDomainQpsListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名QPS</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainQpsListRequest
         /// </param>
@@ -3525,6 +4045,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeDomainQpsListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询qps</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainQpsWithCacheRequest
         /// </param>
@@ -3578,6 +4103,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDomainQpsWithCacheResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询qps</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainQpsWithCacheRequest
         /// </param>
@@ -3631,6 +4161,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDomainQpsWithCacheResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询qps</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainQpsWithCacheRequest
         /// </param>
@@ -3644,6 +4179,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeDomainQpsWithCacheWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询qps</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainQpsWithCacheRequest
         /// </param>
@@ -3657,6 +4197,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeDomainQpsWithCacheWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日志分发状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainSlsStatusRequest
         /// </param>
@@ -3706,6 +4251,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDomainSlsStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日志分发状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainSlsStatusRequest
         /// </param>
@@ -3755,6 +4305,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDomainSlsStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日志分发状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainSlsStatusRequest
         /// </param>
@@ -3768,6 +4323,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeDomainSlsStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日志分发状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainSlsStatusRequest
         /// </param>
@@ -3941,6 +4501,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeDomainStatusCodeListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainsRequest
         /// </param>
@@ -4002,6 +4567,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDomainsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainsRequest
         /// </param>
@@ -4063,6 +4633,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeDomainsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainsRequest
         /// </param>
@@ -4076,6 +4651,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeDomainsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainsRequest
         /// </param>
@@ -4089,6 +4669,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeDomainsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询弹性带宽规格</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeElasticBandwidthSpecRequest
         /// </param>
@@ -4130,6 +4715,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeElasticBandwidthSpecResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询弹性带宽规格</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeElasticBandwidthSpecRequest
         /// </param>
@@ -4171,6 +4761,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeElasticBandwidthSpecResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询弹性带宽规格</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeElasticBandwidthSpecRequest
         /// </param>
@@ -4184,6 +4779,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeElasticBandwidthSpecWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询弹性带宽规格</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeElasticBandwidthSpecRequest
         /// </param>
@@ -4197,6 +4797,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeElasticBandwidthSpecWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询健康检查列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeHealthCheckListRequest
         /// </param>
@@ -4238,6 +4843,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeHealthCheckListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询健康检查列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeHealthCheckListRequest
         /// </param>
@@ -4279,6 +4889,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeHealthCheckListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询健康检查列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeHealthCheckListRequest
         /// </param>
@@ -4292,6 +4907,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeHealthCheckListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询健康检查列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeHealthCheckListRequest
         /// </param>
@@ -4305,6 +4925,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeHealthCheckListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询监控检查状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeHealthCheckStatusListRequest
         /// </param>
@@ -4346,6 +4971,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeHealthCheckStatusListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询监控检查状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeHealthCheckStatusListRequest
         /// </param>
@@ -4387,6 +5017,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeHealthCheckStatusListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询监控检查状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeHealthCheckStatusListRequest
         /// </param>
@@ -4400,6 +5035,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeHealthCheckStatusListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询监控检查状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeHealthCheckStatusListRequest
         /// </param>
@@ -4413,6 +5053,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeHealthCheckStatusListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例详情</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceDetailsRequest
         /// </param>
@@ -4454,6 +5099,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeInstanceDetailsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例详情</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceDetailsRequest
         /// </param>
@@ -4495,6 +5145,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeInstanceDetailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例详情</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceDetailsRequest
         /// </param>
@@ -4508,6 +5163,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeInstanceDetailsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例详情</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceDetailsRequest
         /// </param>
@@ -4521,6 +5181,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeInstanceDetailsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例规格</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceSpecsRequest
         /// </param>
@@ -4562,6 +5227,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeInstanceSpecsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例规格</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceSpecsRequest
         /// </param>
@@ -4603,6 +5273,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeInstanceSpecsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例规格</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceSpecsRequest
         /// </param>
@@ -4616,6 +5291,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeInstanceSpecsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例规格</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceSpecsRequest
         /// </param>
@@ -4629,6 +5309,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeInstanceSpecsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例统计</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceStatisticsRequest
         /// </param>
@@ -4670,6 +5355,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeInstanceStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例统计</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceStatisticsRequest
         /// </param>
@@ -4711,6 +5401,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeInstanceStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例统计</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceStatisticsRequest
         /// </param>
@@ -4724,6 +5419,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeInstanceStatisticsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例统计</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceStatisticsRequest
         /// </param>
@@ -4737,6 +5437,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeInstanceStatisticsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstancesRequest
         /// </param>
@@ -4822,6 +5527,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstancesRequest
         /// </param>
@@ -4907,6 +5617,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstancesRequest
         /// </param>
@@ -4920,6 +5635,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeInstancesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstancesRequest
         /// </param>
@@ -4933,6 +5653,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeInstancesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询流量</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeIpTrafficRequest
         /// </param>
@@ -4998,6 +5723,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeIpTrafficResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询流量</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeIpTrafficRequest
         /// </param>
@@ -5063,6 +5793,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeIpTrafficResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询流量</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeIpTrafficRequest
         /// </param>
@@ -5076,6 +5811,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeIpTrafficWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询流量</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeIpTrafficRequest
         /// </param>
@@ -5089,6 +5829,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeIpTrafficWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询端口规则属性</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLayer4RuleAttributesRequest
         /// </param>
@@ -5130,6 +5875,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeLayer4RuleAttributesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询端口规则属性</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLayer4RuleAttributesRequest
         /// </param>
@@ -5171,6 +5921,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeLayer4RuleAttributesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询端口规则属性</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLayer4RuleAttributesRequest
         /// </param>
@@ -5184,6 +5939,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeLayer4RuleAttributesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询端口规则属性</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLayer4RuleAttributesRequest
         /// </param>
@@ -5357,6 +6117,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeLayer4RulesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLayer7CCRulesRequest
         /// </param>
@@ -5410,6 +6175,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeLayer7CCRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLayer7CCRulesRequest
         /// </param>
@@ -5463,6 +6233,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeLayer7CCRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLayer7CCRulesRequest
         /// </param>
@@ -5476,6 +6251,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeLayer7CCRulesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLayer7CCRulesRequest
         /// </param>
@@ -5489,6 +6269,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeLayer7CCRulesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日志库存在状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLogStoreExistStatusRequest
         /// </param>
@@ -5534,6 +6319,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeLogStoreExistStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日志库存在状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLogStoreExistStatusRequest
         /// </param>
@@ -5579,6 +6369,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeLogStoreExistStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日志库存在状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLogStoreExistStatusRequest
         /// </param>
@@ -5592,6 +6387,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeLogStoreExistStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日志库存在状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLogStoreExistStatusRequest
         /// </param>
@@ -5605,6 +6405,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeLogStoreExistStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询操作日志</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeOpEntitiesRequest
         /// </param>
@@ -5674,6 +6479,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeOpEntitiesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询操作日志</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeOpEntitiesRequest
         /// </param>
@@ -5743,6 +6553,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeOpEntitiesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询操作日志</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeOpEntitiesRequest
         /// </param>
@@ -5756,6 +6571,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeOpEntitiesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询操作日志</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeOpEntitiesRequest
         /// </param>
@@ -5769,6 +6589,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeOpEntitiesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSimpleDomainsRequest
         /// </param>
@@ -5818,6 +6643,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeSimpleDomainsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSimpleDomainsRequest
         /// </param>
@@ -5867,6 +6697,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeSimpleDomainsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSimpleDomainsRequest
         /// </param>
@@ -5880,6 +6715,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeSimpleDomainsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSimpleDomainsRequest
         /// </param>
@@ -5893,6 +6733,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeSimpleDomainsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询sls授权状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsAuthStatusRequest
         /// </param>
@@ -5938,6 +6783,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeSlsAuthStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询sls授权状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsAuthStatusRequest
         /// </param>
@@ -5983,6 +6833,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeSlsAuthStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询sls授权状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsAuthStatusRequest
         /// </param>
@@ -5996,6 +6851,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeSlsAuthStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询sls授权状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsAuthStatusRequest
         /// </param>
@@ -6009,6 +6869,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeSlsAuthStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询清空次数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsEmptyCountRequest
         /// </param>
@@ -6054,6 +6919,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeSlsEmptyCountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询清空次数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsEmptyCountRequest
         /// </param>
@@ -6099,6 +6969,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeSlsEmptyCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询清空次数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsEmptyCountRequest
         /// </param>
@@ -6112,6 +6987,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeSlsEmptyCountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询清空次数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsEmptyCountRequest
         /// </param>
@@ -6125,6 +7005,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeSlsEmptyCountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询全量日志信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsLogstoreInfoRequest
         /// </param>
@@ -6170,6 +7055,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeSlsLogstoreInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询全量日志信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsLogstoreInfoRequest
         /// </param>
@@ -6215,6 +7105,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeSlsLogstoreInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询全量日志信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsLogstoreInfoRequest
         /// </param>
@@ -6228,6 +7123,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeSlsLogstoreInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询全量日志信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsLogstoreInfoRequest
         /// </param>
@@ -6241,6 +7141,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeSlsLogstoreInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询sls开通状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsOpenStatusRequest
         /// </param>
@@ -6286,6 +7191,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeSlsOpenStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询sls开通状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsOpenStatusRequest
         /// </param>
@@ -6331,6 +7241,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribeSlsOpenStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询sls开通状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsOpenStatusRequest
         /// </param>
@@ -6344,6 +7259,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribeSlsOpenStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询sls开通状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsOpenStatusRequest
         /// </param>
@@ -6357,6 +7277,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribeSlsOpenStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询证书列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribleCertListRequest
         /// </param>
@@ -6374,6 +7299,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
             {
                 query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainList))
+            {
+                query["DomainList"] = request.DomainList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
@@ -6402,6 +7331,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribleCertListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询证书列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribleCertListRequest
         /// </param>
@@ -6419,6 +7353,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
             {
                 query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainList))
+            {
+                query["DomainList"] = request.DomainList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
@@ -6447,6 +7385,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribleCertListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询证书列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribleCertListRequest
         /// </param>
@@ -6460,6 +7403,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribleCertListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询证书列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribleCertListRequest
         /// </param>
@@ -6473,6 +7421,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribleCertListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名实例关系</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribleLayer7InstanceRelationsRequest
         /// </param>
@@ -6518,6 +7471,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribleLayer7InstanceRelationsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名实例关系</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribleLayer7InstanceRelationsRequest
         /// </param>
@@ -6563,6 +7521,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DescribleLayer7InstanceRelationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名实例关系</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribleLayer7InstanceRelationsRequest
         /// </param>
@@ -6576,6 +7539,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DescribleLayer7InstanceRelationsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名实例关系</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribleLayer7InstanceRelationsRequest
         /// </param>
@@ -6589,6 +7557,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DescribleLayer7InstanceRelationsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭CC</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableLayer7CCRequest
         /// </param>
@@ -6634,6 +7607,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DisableLayer7CCResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭CC</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableLayer7CCRequest
         /// </param>
@@ -6679,6 +7657,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DisableLayer7CCResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭CC</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableLayer7CCRequest
         /// </param>
@@ -6692,6 +7675,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DisableLayer7CCWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭CC</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableLayer7CCRequest
         /// </param>
@@ -6705,6 +7693,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DisableLayer7CCWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableLayer7CCRuleRequest
         /// </param>
@@ -6750,6 +7743,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DisableLayer7CCRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableLayer7CCRuleRequest
         /// </param>
@@ -6795,6 +7793,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<DisableLayer7CCRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableLayer7CCRuleRequest
         /// </param>
@@ -6808,6 +7811,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return DisableLayer7CCRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableLayer7CCRuleRequest
         /// </param>
@@ -6821,6 +7829,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await DisableLayer7CCRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>清除SLS日志库</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EmptySlsLogstoreRequest
         /// </param>
@@ -6866,6 +7879,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<EmptySlsLogstoreResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>清除SLS日志库</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EmptySlsLogstoreRequest
         /// </param>
@@ -6911,6 +7929,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<EmptySlsLogstoreResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>清除SLS日志库</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EmptySlsLogstoreRequest
         /// </param>
@@ -6924,6 +7947,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return EmptySlsLogstoreWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>清除SLS日志库</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EmptySlsLogstoreRequest
         /// </param>
@@ -6937,6 +7965,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await EmptySlsLogstoreWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启CC</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableLayer7CCRequest
         /// </param>
@@ -6982,6 +8015,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<EnableLayer7CCResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启CC</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableLayer7CCRequest
         /// </param>
@@ -7027,6 +8065,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<EnableLayer7CCResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启CC</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableLayer7CCRequest
         /// </param>
@@ -7040,6 +8083,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return EnableLayer7CCWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启CC</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableLayer7CCRequest
         /// </param>
@@ -7053,6 +8101,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await EnableLayer7CCWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableLayer7CCRuleRequest
         /// </param>
@@ -7098,6 +8151,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<EnableLayer7CCRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableLayer7CCRuleRequest
         /// </param>
@@ -7143,6 +8201,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<EnableLayer7CCRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableLayer7CCRuleRequest
         /// </param>
@@ -7156,6 +8219,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return EnableLayer7CCRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启CC规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableLayer7CCRuleRequest
         /// </param>
@@ -7169,6 +8237,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await EnableLayer7CCRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询异步任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAsyncTaskRequest
         /// </param>
@@ -7222,6 +8295,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ListAsyncTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询异步任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAsyncTaskRequest
         /// </param>
@@ -7275,6 +8353,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ListAsyncTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询异步任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAsyncTaskRequest
         /// </param>
@@ -7288,6 +8371,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return ListAsyncTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询异步任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAsyncTaskRequest
         /// </param>
@@ -7301,6 +8389,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await ListAsyncTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名接入端口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListLayer7CustomPortsRequest
         /// </param>
@@ -7346,6 +8439,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ListLayer7CustomPortsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名接入端口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListLayer7CustomPortsRequest
         /// </param>
@@ -7391,6 +8489,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ListLayer7CustomPortsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名接入端口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListLayer7CustomPortsRequest
         /// </param>
@@ -7404,6 +8507,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return ListLayer7CustomPortsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名接入端口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListLayer7CustomPortsRequest
         /// </param>
@@ -7417,6 +8525,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await ListLayer7CustomPortsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出tag</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagKeysRequest
         /// </param>
@@ -7470,6 +8583,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ListTagKeysResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出tag</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagKeysRequest
         /// </param>
@@ -7523,6 +8641,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ListTagKeysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出tag</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagKeysRequest
         /// </param>
@@ -7536,6 +8659,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return ListTagKeysWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出tag</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagKeysRequest
         /// </param>
@@ -7549,6 +8677,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await ListTagKeysWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagResourcesRequest
         /// </param>
@@ -7606,6 +8739,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagResourcesRequest
         /// </param>
@@ -7663,6 +8801,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagResourcesRequest
         /// </param>
@@ -7676,6 +8819,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return ListTagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagResourcesRequest
         /// </param>
@@ -7689,6 +8837,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日志实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListValueAddedRequest
         /// </param>
@@ -7730,6 +8883,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ListValueAddedResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日志实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListValueAddedRequest
         /// </param>
@@ -7771,6 +8929,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ListValueAddedResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日志实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListValueAddedRequest
         /// </param>
@@ -7784,6 +8947,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return ListValueAddedWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日志实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListValueAddedRequest
         /// </param>
@@ -7797,6 +8965,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await ListValueAddedWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改弹性业务带宽</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyElasticBandWidthRequest
         /// </param>
@@ -7842,6 +9015,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ModifyElasticBandWidthResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改弹性业务带宽</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyElasticBandWidthRequest
         /// </param>
@@ -7887,6 +9065,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ModifyElasticBandWidthResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改弹性业务带宽</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyElasticBandWidthRequest
         /// </param>
@@ -7900,6 +9083,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return ModifyElasticBandWidthWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改弹性业务带宽</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyElasticBandWidthRequest
         /// </param>
@@ -7913,6 +9101,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await ModifyElasticBandWidthWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改日志存储时长</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyFullLogTtlRequest
         /// </param>
@@ -7962,6 +9155,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ModifyFullLogTtlResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改日志存储时长</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyFullLogTtlRequest
         /// </param>
@@ -8011,6 +9209,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ModifyFullLogTtlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改日志存储时长</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyFullLogTtlRequest
         /// </param>
@@ -8024,6 +9227,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return ModifyFullLogTtlWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改日志存储时长</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyFullLogTtlRequest
         /// </param>
@@ -8037,6 +9245,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await ModifyFullLogTtlWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例备注</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceRemarkRequest
         /// </param>
@@ -8082,6 +9295,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ModifyInstanceRemarkResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例备注</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceRemarkRequest
         /// </param>
@@ -8127,6 +9345,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ModifyInstanceRemarkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例备注</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceRemarkRequest
         /// </param>
@@ -8140,6 +9363,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return ModifyInstanceRemarkWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例备注</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceRemarkRequest
         /// </param>
@@ -8153,6 +9381,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await ModifyInstanceRemarkWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启日志分发</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// OpenDomainSlsConfigRequest
         /// </param>
@@ -8202,6 +9435,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<OpenDomainSlsConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启日志分发</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// OpenDomainSlsConfigRequest
         /// </param>
@@ -8251,6 +9489,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<OpenDomainSlsConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启日志分发</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// OpenDomainSlsConfigRequest
         /// </param>
@@ -8264,6 +9507,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return OpenDomainSlsConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启日志分发</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// OpenDomainSlsConfigRequest
         /// </param>
@@ -8277,6 +9525,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await OpenDomainSlsConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseInstanceRequest
         /// </param>
@@ -8318,6 +9571,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ReleaseInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseInstanceRequest
         /// </param>
@@ -8359,6 +9617,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ReleaseInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseInstanceRequest
         /// </param>
@@ -8372,6 +9635,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return ReleaseInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseInstanceRequest
         /// </param>
@@ -8385,6 +9653,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await ReleaseInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放日志实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseValueAddedRequest
         /// </param>
@@ -8426,6 +9699,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ReleaseValueAddedResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放日志实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseValueAddedRequest
         /// </param>
@@ -8467,6 +9745,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<ReleaseValueAddedResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放日志实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseValueAddedRequest
         /// </param>
@@ -8480,6 +9763,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return ReleaseValueAddedWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放日志实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseValueAddedRequest
         /// </param>
@@ -8493,6 +9781,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await ReleaseValueAddedWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标签资源</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TagResourcesRequest
         /// </param>
@@ -8546,6 +9839,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标签资源</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TagResourcesRequest
         /// </param>
@@ -8599,6 +9897,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标签资源</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TagResourcesRequest
         /// </param>
@@ -8612,6 +9915,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标签资源</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TagResourcesRequest
         /// </param>
@@ -8625,6 +9933,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解除资源标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UntagResourcesRequest
         /// </param>
@@ -8682,6 +9995,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解除资源标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UntagResourcesRequest
         /// </param>
@@ -8739,6 +10057,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解除资源标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UntagResourcesRequest
         /// </param>
@@ -8752,6 +10075,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return UntagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解除资源标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UntagResourcesRequest
         /// </param>

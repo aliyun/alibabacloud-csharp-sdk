@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
         [Validation(Required=false)]
         public string Domain { get; set; }
 
+        [NameInMap("DomainList")]
+        [Validation(Required=false)]
+        public string DomainList { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>test</para>
