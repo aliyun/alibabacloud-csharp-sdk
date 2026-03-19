@@ -447,6 +447,14 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                         [Validation(Required=false)]
                         public string FileFormat { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>ad195fd1317a761d4425232867759d1e</para>
+                        /// </summary>
+                        [NameInMap("FileMd5")]
+                        [Validation(Required=false)]
+                        public string FileMd5 { get; set; }
+
                         [NameInMap("FileSize")]
                         [Validation(Required=false)]
                         public string FileSize { get; set; }
