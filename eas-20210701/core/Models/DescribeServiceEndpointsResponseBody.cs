@@ -26,10 +26,18 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public List<DescribeServiceEndpointsResponseBodyEndpoints> Endpoints { get; set; }
         public class DescribeServiceEndpointsResponseBodyEndpoints : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>nlb-5q4sp7u6oorkha****</para>
+            /// </summary>
             [NameInMap("BackendId")]
             [Validation(Required=false)]
             public string BackendId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Nlb</para>
+            /// </summary>
             [NameInMap("EndpointType")]
             [Validation(Required=false)]
             public string EndpointType { get; set; }
@@ -42,10 +50,18 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             [Validation(Required=false)]
             public List<string> IntranetEndpoints { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Service</para>
+            /// </summary>
             [NameInMap("PathType")]
             [Validation(Required=false)]
             public string PathType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>9090</para>
+            /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public int? Port { get; set; }

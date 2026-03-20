@@ -2563,6 +2563,144 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建连接服务的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceInstanceTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceInstanceTokenResponse
+        /// </returns>
+        public CreateServiceInstanceTokenResponse CreateServiceInstanceTokenWithOptions(string ClusterId, string ServiceName, string InstanceName, CreateServiceInstanceTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionType))
+            {
+                query["ActionType"] = request.ActionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerName))
+            {
+                query["WorkerName"] = request.WorkerName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceInstanceToken",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceName) + "/token",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceInstanceTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建连接服务的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceInstanceTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceInstanceTokenResponse
+        /// </returns>
+        public async Task<CreateServiceInstanceTokenResponse> CreateServiceInstanceTokenWithOptionsAsync(string ClusterId, string ServiceName, string InstanceName, CreateServiceInstanceTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionType))
+            {
+                query["ActionType"] = request.ActionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerName))
+            {
+                query["WorkerName"] = request.WorkerName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceInstanceToken",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceName) + "/token",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceInstanceTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建连接服务的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceInstanceTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceInstanceTokenResponse
+        /// </returns>
+        public CreateServiceInstanceTokenResponse CreateServiceInstanceToken(string ClusterId, string ServiceName, string InstanceName, CreateServiceInstanceTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateServiceInstanceTokenWithOptions(ClusterId, ServiceName, InstanceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建连接服务的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceInstanceTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceInstanceTokenResponse
+        /// </returns>
+        public async Task<CreateServiceInstanceTokenResponse> CreateServiceInstanceTokenAsync(string ClusterId, string ServiceName, string InstanceName, CreateServiceInstanceTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateServiceInstanceTokenWithOptionsAsync(ClusterId, ServiceName, InstanceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Enables the traffic mirroring feature for a service. After the feature is enabled, requests received by the service can be mirrored to another service.</para>
         /// </summary>
         /// 
@@ -3303,7 +3441,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关内网访问端点</para>
+        /// <para>Deletes an internal endpoint of a private gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3353,7 +3491,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关内网访问端点</para>
+        /// <para>Deletes an internal endpoint of a private gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3403,7 +3541,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关内网访问端点</para>
+        /// <para>Deletes an internal endpoint of a private gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3422,7 +3560,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关内网访问端点</para>
+        /// <para>Deletes an internal endpoint of a private gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
