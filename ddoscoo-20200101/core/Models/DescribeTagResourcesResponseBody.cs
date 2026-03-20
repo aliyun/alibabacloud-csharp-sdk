@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The tags that are added to the Anti-DDoS Proxy (Chinese Mainland) instance.</para>
-        /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public DescribeTagResourcesResponseBodyTagResources TagResources { get; set; }
@@ -40,42 +37,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public List<DescribeTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class DescribeTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
-                /// <summary>
-                /// <para>The ID of the Anti-DDoS Proxy (Chinese Mainland) instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ddoscoo-cn-zz121ogz****</para>
-                /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
-                /// <summary>
-                /// <para>The resource type. The value is fixed as <b>INSTANCE</b>, which indicates an Anti-DDoS Proxy instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>INSTANCE</para>
-                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
-                /// <summary>
-                /// <para>The key of the tag that is added to the Anti-DDoS Proxy (Chinese Mainland) instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testvalue</para>
-                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
-                /// <summary>
-                /// <para>The value of the tag that is added to the Anti-DDoS Proxy (Chinese Mainland) instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testkey</para>
-                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

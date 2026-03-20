@@ -37,6 +37,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds IP addresses to the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddAutoCcBlacklistRequest
         /// </param>
@@ -82,6 +87,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<AddAutoCcBlacklistResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds IP addresses to the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddAutoCcBlacklistRequest
         /// </param>
@@ -127,6 +137,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<AddAutoCcBlacklistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds IP addresses to the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddAutoCcBlacklistRequest
         /// </param>
@@ -140,6 +155,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return AddAutoCcBlacklistWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds IP addresses to the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddAutoCcBlacklistRequest
         /// </param>
@@ -763,7 +783,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置全局模板规则</para>
+        /// <para>Configures an Anti-DDoS global mitigation policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -809,7 +829,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置全局模板规则</para>
+        /// <para>Configures an Anti-DDoS global mitigation policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -855,7 +875,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置全局模板规则</para>
+        /// <para>Configures an Anti-DDoS global mitigation policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -873,7 +893,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置全局模板规则</para>
+        /// <para>Configures an Anti-DDoS global mitigation policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2099,7 +2119,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置新版基于匹配条件的cc规则</para>
+        /// <para>Creates or modifies the custom frequency control rule of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2149,7 +2169,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置新版基于匹配条件的cc规则</para>
+        /// <para>Creates or modifies the custom frequency control rule of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2199,7 +2219,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置新版基于匹配条件的cc规则</para>
+        /// <para>Creates or modifies the custom frequency control rule of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2217,7 +2237,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置新版基于匹配条件的cc规则</para>
+        /// <para>Creates or modifies the custom frequency control rule of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7381,6 +7401,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeCertsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the CNAME reuse information about websites.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCnameReusesRequest
         /// </param>
@@ -7422,6 +7447,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeCnameReusesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the CNAME reuse information about websites.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCnameReusesRequest
         /// </param>
@@ -7463,6 +7493,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeCnameReusesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the CNAME reuse information about websites.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCnameReusesRequest
         /// </param>
@@ -7476,6 +7511,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeCnameReusesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the CNAME reuse information about websites.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCnameReusesRequest
         /// </param>
@@ -9604,6 +9644,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             {
                 query["Limit"] = request.Limit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
@@ -9657,6 +9701,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
                 query["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -10800,6 +10848,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             {
                 query["Limit"] = request.Limit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["Region"] = request.Region;
@@ -10861,6 +10913,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
                 query["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
@@ -10956,6 +11012,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             {
                 query["Limit"] = request.Limit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["Region"] = request.Region;
@@ -11013,6 +11073,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
                 query["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
@@ -11108,6 +11172,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             {
                 query["Limit"] = request.Limit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["Region"] = request.Region;
@@ -11165,6 +11233,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
                 query["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
@@ -11260,6 +11332,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             {
                 query["Limit"] = request.Limit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["Region"] = request.Region;
@@ -11317,6 +11393,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
                 query["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
+            {
+                query["QueryType"] = request.QueryType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
@@ -13959,7 +14039,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示全局模板规则</para>
+        /// <para>Queries an Anti-DDoS global mitigation policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14005,7 +14085,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示全局模板规则</para>
+        /// <para>Queries an Anti-DDoS global mitigation policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14051,7 +14131,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示全局模板规则</para>
+        /// <para>Queries an Anti-DDoS global mitigation policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14069,7 +14149,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示全局模板规则</para>
+        /// <para>Queries an Anti-DDoS global mitigation policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16095,7 +16175,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic data of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
+        /// <para>Queries the traffic data of one or more Anti-DDoS Proxy instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16153,7 +16233,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic data of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
+        /// <para>Queries the traffic data of one or more Anti-DDoS Proxy instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16211,7 +16291,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic data of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
+        /// <para>Queries the traffic data of one or more Anti-DDoS Proxy instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16229,7 +16309,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic data of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
+        /// <para>Queries the traffic data of one or more Anti-DDoS Proxy instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17185,6 +17265,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeSceneDefensePoliciesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scheduling rules of Sec-Traffic Manager.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSchedulerRulesRequest
         /// </param>
@@ -17234,6 +17319,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSchedulerRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scheduling rules of Sec-Traffic Manager.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSchedulerRulesRequest
         /// </param>
@@ -17283,6 +17373,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSchedulerRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scheduling rules of Sec-Traffic Manager.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSchedulerRulesRequest
         /// </param>
@@ -17296,6 +17391,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeSchedulerRulesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scheduling rules of Sec-Traffic Manager.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSchedulerRulesRequest
         /// </param>
@@ -28067,10 +28167,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the instance that you want to release.</para>
-        /// <remarks>
-        /// <para>You can release only expired instances. You can call the <a href="https://help.aliyun.com/document_detail/91478.html">DescribeInstances</a> operation to query the IDs and expiration status of all instances.</para>
-        /// </remarks>
+        /// <para>Releases an expired Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28117,10 +28214,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the instance that you want to release.</para>
-        /// <remarks>
-        /// <para>You can release only expired instances. You can call the <a href="https://help.aliyun.com/document_detail/91478.html">DescribeInstances</a> operation to query the IDs and expiration status of all instances.</para>
-        /// </remarks>
+        /// <para>Releases an expired Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28167,10 +28261,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the instance that you want to release.</para>
-        /// <remarks>
-        /// <para>You can release only expired instances. You can call the <a href="https://help.aliyun.com/document_detail/91478.html">DescribeInstances</a> operation to query the IDs and expiration status of all instances.</para>
-        /// </remarks>
+        /// <para>Releases an expired Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28193,10 +28284,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the instance that you want to release.</para>
-        /// <remarks>
-        /// <para>You can release only expired instances. You can call the <a href="https://help.aliyun.com/document_detail/91478.html">DescribeInstances</a> operation to query the IDs and expiration status of all instances.</para>
-        /// </remarks>
+        /// <para>Releases an expired Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

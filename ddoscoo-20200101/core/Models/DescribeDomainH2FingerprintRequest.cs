@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public long? Limit { get; set; }
 
+        [NameInMap("QueryType")]
+        [Validation(Required=false)]
+        public string QueryType { get; set; }
+
         /// <summary>
         /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
         /// <remarks>

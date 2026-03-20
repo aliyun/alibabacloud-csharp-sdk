@@ -86,6 +86,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public long? Status4 { get; set; }
 
+            [NameInMap("Status410Pv")]
+            [Validation(Required=false)]
+            public long? Status410Pv { get; set; }
+
             /// <summary>
             /// <para>The total number of HTTP 5xx status codes during the step size period.</para>
             /// 

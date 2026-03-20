@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public long? Limit { get; set; }
 
+        [NameInMap("QueryType")]
+        [Validation(Required=false)]
+        public string QueryType { get; set; }
+
         /// <summary>
         /// <para>The region in which your service is deployed. Valid values:</para>
         /// <list type="bullet">
