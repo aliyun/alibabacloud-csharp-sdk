@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters. If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</para>
+        /// <para>The client token used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. Only ASCII characters are allowed.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>

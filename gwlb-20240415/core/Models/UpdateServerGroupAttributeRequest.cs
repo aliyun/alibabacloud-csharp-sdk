@@ -133,6 +133,10 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
             [Validation(Required=false)]
             public bool? HealthCheckEnabled { get; set; }
 
+            [NameInMap("HealthCheckExp")]
+            [Validation(Required=false)]
+            public string HealthCheckExp { get; set; }
+
             /// <summary>
             /// <para>The HTTP status codes that the system returns for health checks.</para>
             /// </summary>
@@ -179,6 +183,10 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
             [NameInMap("HealthCheckProtocol")]
             [Validation(Required=false)]
             public string HealthCheckProtocol { get; set; }
+
+            [NameInMap("HealthCheckReq")]
+            [Validation(Required=false)]
+            public string HealthCheckReq { get; set; }
 
             /// <summary>
             /// <para>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health check status of the backend server changes from <b>fail</b> to <b>success</b>.</para>

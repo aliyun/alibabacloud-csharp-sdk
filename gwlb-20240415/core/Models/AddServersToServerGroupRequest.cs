@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
         /// <summary>
         /// <para>The backend servers that you want to add.</para>
         /// <remarks>
-        /// <para>You can add at most 200 backend servers in each call.</para>
+        /// <para> You can add up to 200 backend servers in each call.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
             /// <summary>
             /// <para>The backend server ID.</para>
             /// <list type="bullet">
-            /// <item><description>If the server group is of the <b>Instance</b> type, set this parameter to the IDs of servers of the <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b> type.</description></item>
+            /// <item><description>If the server group is of the <b>Instance</b> type, set this parameter to the IDs of resources of the <b>Ecs</b>, <b>Eni</b>, <b>Eci</b> type.</description></item>
             /// <item><description>If the server group is of the <b>Ip</b> type, set ServerId to IP addresses.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
