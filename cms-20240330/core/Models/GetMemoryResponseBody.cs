@@ -11,6 +11,22 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
     public class GetMemoryResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>test_user_001</para>
+        /// </summary>
+        [NameInMap("agentId")]
+        [Validation(Required=false)]
+        public string AgentId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test_user_001</para>
+        /// </summary>
+        [NameInMap("appId")]
+        [Validation(Required=false)]
+        public string AppId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>1751595283143</para>
         /// </summary>
         [NameInMap("createdAt")]
@@ -83,11 +99,27 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>test_user_001</para>
+        /// </summary>
+        [NameInMap("runId")]
+        [Validation(Required=false)]
+        public string RunId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>1744428159434</para>
         /// </summary>
         [NameInMap("updatedAt")]
         [Validation(Required=false)]
         public string UpdatedAt { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test_user_001</para>
+        /// </summary>
+        [NameInMap("userId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
 
     }
 

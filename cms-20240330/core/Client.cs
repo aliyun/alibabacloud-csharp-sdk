@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             {
                 body["runId"] = request.RunId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timestamp))
+            {
+                body["timestamp"] = request.Timestamp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 body["userId"] = request.UserId;
@@ -168,6 +172,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
             {
                 body["runId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timestamp))
+            {
+                body["timestamp"] = request.Timestamp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {

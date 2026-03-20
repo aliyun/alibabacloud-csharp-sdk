@@ -89,6 +89,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>12312314214</para>
+        /// </summary>
+        [NameInMap("timestamp")]
+        [Validation(Required=false)]
+        public long? Timestamp { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>test_user_001</para>
         /// </summary>
         [NameInMap("userId")]

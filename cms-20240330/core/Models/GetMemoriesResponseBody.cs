@@ -69,6 +69,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>test_user_001</para>
+            /// </summary>
+            [NameInMap("appId")]
+            [Validation(Required=false)]
+            public string AppId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>1747623093939</para>
             /// </summary>
             [NameInMap("createdAt")]
