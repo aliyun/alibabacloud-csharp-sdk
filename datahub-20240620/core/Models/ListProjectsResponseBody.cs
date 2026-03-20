@@ -21,34 +21,18 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
                 [Validation(Required=false)]
                 public string Comment { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1708171905000</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1048133943212399</para>
-                /// </summary>
                 [NameInMap("Creator")]
                 [Validation(Required=false)]
                 public string Creator { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>poc_test</para>
-                /// </summary>
                 [NameInMap("ProjectName")]
                 [Validation(Required=false)]
                 public string ProjectName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1708171905000</para>
-                /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
                 public long? UpdateTime { get; set; }

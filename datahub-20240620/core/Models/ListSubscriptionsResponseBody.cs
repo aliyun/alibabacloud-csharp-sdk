@@ -17,82 +17,42 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
             [Validation(Required=false)]
             public List<ListSubscriptionsResponseBodyListSubscription> Subscription { get; set; }
             public class ListSubscriptionsResponseBodyListSubscription : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>test_application_name</para>
-                /// </summary>
                 [NameInMap("Application")]
                 [Validation(Required=false)]
                 public string Application { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>test_comment</para>
-                /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
                 public string Comment { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1708171905000</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1048133943212399</para>
-                /// </summary>
                 [NameInMap("Creator")]
                 [Validation(Required=false)]
                 public string Creator { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>test_project</para>
-                /// </summary>
                 [NameInMap("ProjectName")]
                 [Validation(Required=false)]
                 public string ProjectName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("State")]
                 [Validation(Required=false)]
                 public int? State { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1745824636429WZ2EE</para>
-                /// </summary>
                 [NameInMap("SubscriptionId")]
                 [Validation(Required=false)]
                 public string SubscriptionId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>test_topic</para>
-                /// </summary>
                 [NameInMap("TopicName")]
                 [Validation(Required=false)]
                 public string TopicName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>USER</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1708171905000</para>
-                /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
                 public long? UpdateTime { get; set; }
