@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public bool? DeletionProtection { get; set; }
 
+        [NameInMap("EnableJumboFrame")]
+        [Validation(Required=false)]
+        public bool? EnableJumboFrame { get; set; }
+
         /// <summary>
         /// <para>The hostname of the instance.</para>
         /// 

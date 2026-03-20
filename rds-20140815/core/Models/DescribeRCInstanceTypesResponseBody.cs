@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string InstanceTypeId { get; set; }
 
+                [NameInMap("JumboFrameSupport")]
+                [Validation(Required=false)]
+                public bool? JumboFrameSupport { get; set; }
+
                 /// <summary>
                 /// <para>The memory size of the instance type. Unit: GiB.</para>
                 /// 

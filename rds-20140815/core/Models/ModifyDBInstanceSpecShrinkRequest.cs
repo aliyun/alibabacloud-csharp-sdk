@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceSpecShrinkRequest : TeaModel {
+        [NameInMap("AllocateStrategy")]
+        [Validation(Required=false)]
+        public string AllocateStrategy { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to upgrade the major engine version of an ApsaraDB RDS for SQL Server instance. For more information, see <a href="https://help.aliyun.com/document_detail/127458.html">Upgrade the major engine version</a>. Valid values:</para>
         /// <list type="bullet">

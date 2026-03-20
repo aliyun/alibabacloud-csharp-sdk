@@ -289,6 +289,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
 
+        [NameInMap("NetworkOptions")]
+        [Validation(Required=false)]
+        public RunRCInstancesRequestNetworkOptions NetworkOptions { get; set; }
+        public class RunRCInstancesRequestNetworkOptions : TeaModel {
+            [NameInMap("EnableJumboFrame")]
+            [Validation(Required=false)]
+            public bool? EnableJumboFrame { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The password of the account that is used to log on to the instance.</para>
         /// 

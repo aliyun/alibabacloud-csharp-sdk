@@ -215,6 +215,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
 
+        [NameInMap("NetworkOptions")]
+        [Validation(Required=false)]
+        public string NetworkOptionsShrink { get; set; }
+
         /// <summary>
         /// <para>The password of the account that is used to log on to the instance.</para>
         /// 
