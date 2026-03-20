@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>Deletes multiple routing policies at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>Deletes multiple routing policies at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -358,7 +358,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>Deletes multiple routing policies at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -376,7 +376,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>Deletes multiple routing policies at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2118,7 +2118,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>Deletes an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2172,7 +2172,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>Deletes an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2226,7 +2226,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>Deletes an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2244,7 +2244,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>Deletes an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3254,7 +3254,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a job.</para>
+        /// <para>Disables a specified task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3292,7 +3292,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a job.</para>
+        /// <para>Disables a specified task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3330,7 +3330,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a job.</para>
+        /// <para>Disables a specified task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3348,7 +3348,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a job.</para>
+        /// <para>Disables a specified task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3954,7 +3954,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The configuration of the alert. The value is a JSON string. For more information, see \\<em>\\<em>the additional information about response parameters below this table\\</em>\\</em>.</para>
+        /// <para>The configuration of the alert. The value is a JSON string. For more information, see \\\\<em>\\\\<em>the additional information about response parameters below this table\\\\</em>\\\\</em>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4004,7 +4004,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The configuration of the alert. The value is a JSON string. For more information, see \\<em>\\<em>the additional information about response parameters below this table\\</em>\\</em>.</para>
+        /// <para>The configuration of the alert. The value is a JSON string. For more information, see \\\\<em>\\\\<em>the additional information about response parameters below this table\\\\</em>\\\\</em>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4054,7 +4054,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The configuration of the alert. The value is a JSON string. For more information, see \\<em>\\<em>the additional information about response parameters below this table\\</em>\\</em>.</para>
+        /// <para>The configuration of the alert. The value is a JSON string. For more information, see \\\\<em>\\\\<em>the additional information about response parameters below this table\\\\</em>\\\\</em>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4072,7 +4072,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The configuration of the alert. The value is a JSON string. For more information, see \\<em>\\<em>the additional information about response parameters below this table\\</em>\\</em>.</para>
+        /// <para>The configuration of the alert. The value is a JSON string. For more information, see \\\\<em>\\\\<em>the additional information about response parameters below this table\\\\</em>\\\\</em>.</para>
         /// </summary>
         /// 
         /// <param name="request">

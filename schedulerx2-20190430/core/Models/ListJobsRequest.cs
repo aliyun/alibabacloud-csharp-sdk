@@ -51,6 +51,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [Validation(Required=false)]
         public string NamespaceSource { get; set; }
 
+        [NameInMap("PageNum")]
+        [Validation(Required=false)]
+        public int? PageNum { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         /// <summary>
         /// <para>The ID of the region.</para>
         /// <para>This parameter is required.</para>

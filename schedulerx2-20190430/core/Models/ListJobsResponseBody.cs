@@ -456,6 +456,18 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 
             }
 
+            [NameInMap("PageNumber")]
+            [Validation(Required=false)]
+            public int? PageNumber { get; set; }
+
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+
+            [NameInMap("Total")]
+            [Validation(Required=false)]
+            public int? Total { get; set; }
+
         }
 
         /// <summary>
