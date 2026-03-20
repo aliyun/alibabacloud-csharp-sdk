@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.LingMou20250527.Models
 {
     public class TemplateVariable : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -17,6 +21,10 @@ namespace AlibabaCloud.SDK.LingMou20250527.Models
         [Validation(Required=false)]
         public object Properties { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>text</para>
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
