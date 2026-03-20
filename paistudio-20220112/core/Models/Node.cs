@@ -85,13 +85,21 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string GPUType { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-07-10T11:49:47Z</para>
         /// </summary>
         [NameInMap("GmtCreateTime")]
         [Validation(Required=false)]
+        [Obsolete]
         public string GmtCreateTime { get; set; }
+
+        [NameInMap("GmtCreatedTime")]
+        [Validation(Required=false)]
+        public string GmtCreatedTime { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
