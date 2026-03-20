@@ -296,6 +296,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public List<string> InterruptWords { get; set; }
 
+            [NameInMap("KeepInterruptWordsForLLM")]
+            [Validation(Required=false)]
+            public bool? KeepInterruptWordsForLLM { get; set; }
+
             [NameInMap("NoInterruptMode")]
             [Validation(Required=false)]
             public string NoInterruptMode { get; set; }
