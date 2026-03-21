@@ -129,6 +129,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             [Validation(Required=false)]
             public long? UsedTime { get; set; }
 
+            [NameInMap("UsedTimeDecimal")]
+            [Validation(Required=false)]
+            public string UsedTimeDecimal { get; set; }
+
             [NameInMap("UsedTimeWithScale")]
             [Validation(Required=false)]
             public long? UsedTimeWithScale { get; set; }
@@ -174,6 +178,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         [NameInMap("TotalUsedTime")]
         [Validation(Required=false)]
         public long? TotalUsedTime { get; set; }
+
+        [NameInMap("TotalUsedTimeDecimal")]
+        [Validation(Required=false)]
+        public string TotalUsedTimeDecimal { get; set; }
 
     }
 
