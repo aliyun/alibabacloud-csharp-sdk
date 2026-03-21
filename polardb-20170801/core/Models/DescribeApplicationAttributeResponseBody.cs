@@ -299,6 +299,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public bool? Expired { get; set; }
 
+        [NameInMap("IsLatestVersion")]
+        [Validation(Required=false)]
+        public bool? IsLatestVersion { get; set; }
+
+        [NameInMap("LatestVersion")]
+        [Validation(Required=false)]
+        public string LatestVersion { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>Unlock</para>
@@ -352,6 +360,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string UserName { get; set; }
 
         }
+
+        [NameInMap("MinorVersion")]
+        [Validation(Required=false)]
+        public string MinorVersion { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
