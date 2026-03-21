@@ -13,6 +13,18 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public bool? DisableSessionIdReuse { get; set; }
 
+        [NameInMap("nasConfig")]
+        [Validation(Required=false)]
+        public NASConfig NasConfig { get; set; }
+
+        [NameInMap("ossMountConfig")]
+        [Validation(Required=false)]
+        public OSSMountConfig OssMountConfig { get; set; }
+
+        [NameInMap("polarFsConfig")]
+        [Validation(Required=false)]
+        public PolarFsConfig PolarFsConfig { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1800</para>
