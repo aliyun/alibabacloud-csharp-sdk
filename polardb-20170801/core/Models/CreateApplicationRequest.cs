@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string Architecture { get; set; }
 
+        [NameInMap("AutoAllocatePublicEip")]
+        [Validation(Required=false)]
+        public bool? AutoAllocatePublicEip { get; set; }
+
         [NameInMap("AutoCreatePolarFs")]
         [Validation(Required=false)]
         public bool? AutoCreatePolarFs { get; set; }
