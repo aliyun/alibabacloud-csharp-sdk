@@ -50,18 +50,43 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <para>The mapping between disks and snapshots in the image.</para>
+            /// </summary>
             [NameInMap("DiskDeviceMappings")]
             [Validation(Required=false)]
             public List<DescribeRCImageListResponseBodyImagesDiskDeviceMappings> DiskDeviceMappings { get; set; }
             public class DescribeRCImageListResponseBodyImagesDiskDeviceMappings : TeaModel {
+                /// <summary>
+                /// <para>The device information of the disk, such as <c>/dev/xvdb</c>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/dev/xvdb</para>
+                /// </summary>
                 [NameInMap("Device")]
                 [Validation(Required=false)]
                 public string Device { get; set; }
 
+                /// <summary>
+                /// <para>The size of the disk. Unit: GiB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>40</para>
+                /// </summary>
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public string Size { get; set; }
 
+                /// <summary>
+                /// <para>The property of the disk.</para>
+                /// <list type="bullet">
+                /// <item><description><b>system</b>: system disk.</description></item>
+                /// <item><description><b>data</b>: data disk.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>system</para>
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -112,12 +137,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public bool? IsPublic { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether RDS Custom instances are supported. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("IsSupportRdsCustom")]
             [Validation(Required=false)]
             public bool? IsSupportRdsCustom { get; set; }
 
             /// <summary>
             /// <para>The display name of the operating system in Chinese.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Alibaba Cloud Linux  2.1903 LTS 64位 快速启动版</para>
             /// </summary>
             [NameInMap("OSName")]
             [Validation(Required=false)]
@@ -147,6 +185,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string OSType { get; set; }
 
+            /// <summary>
+            /// <para>Operating system platform.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Aliyun</para>
+            /// </summary>
             [NameInMap("Platform")]
             [Validation(Required=false)]
             public string Platform { get; set; }

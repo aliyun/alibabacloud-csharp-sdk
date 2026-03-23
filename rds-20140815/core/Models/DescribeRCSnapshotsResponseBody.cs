@@ -143,6 +143,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <para>Resource group ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rc-t8q22a87745hf8****</para>
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
@@ -161,7 +167,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The snapshot name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>s-2ze8klip00xcogcwer76</para>
+            /// <para>csw-37-系统盘</para>
             /// </summary>
             [NameInMap("SnapshotName")]
             [Validation(Required=false)]
@@ -244,14 +250,29 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>Tag Details.</para>
+            /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public List<DescribeRCSnapshotsResponseBodySnapshotsTag> Tag { get; set; }
             public class DescribeRCSnapshotsResponseBodySnapshotsTag : TeaModel {
+                /// <summary>
+                /// <para>tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testRC</para>
+                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
+                /// <summary>
+                /// <para>tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test01</para>
+                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

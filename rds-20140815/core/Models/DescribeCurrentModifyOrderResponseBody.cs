@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The description of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>eyJ2IjoibWV0YS5rOHMuaW8vdjEiLCJydiI6MTg2MjEwOTkwLCJzdGFydCI6InNob3BpZnktdXNlci1jb3JlXHUwMDAwIn0</para>
+            /// <para>无</para>
             /// </summary>
             [NameInMap("Mark")]
             [Validation(Required=false)]

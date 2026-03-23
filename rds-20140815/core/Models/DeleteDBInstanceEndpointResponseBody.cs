@@ -9,41 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteDBInstanceEndpointResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The data returned.</para>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteDBInstanceEndpointResponseBodyData Data { get; set; }
         public class DeleteDBInstanceEndpointResponseBodyData : TeaModel {
-            /// <summary>
-            /// <para>The endpoint ID of the instance.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>ep-****</para>
-            /// </summary>
             [NameInMap("DBInstanceEndpointId")]
             [Validation(Required=false)]
             public string DBInstanceEndpointId { get; set; }
 
-            /// <summary>
-            /// <para>The ID of the instance.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>rm-****</para>
-            /// </summary>
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]
             public string DBInstanceName { get; set; }
 
         }
 
-        /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>224DB9F7-3100-4899-AB9C-C938BCCB43E7</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

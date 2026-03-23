@@ -9,19 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CheckRegionSupportBackupEncryptionRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>rm-wz91q53f9*******</para>
-        /// </summary>
         [NameInMap("DBInstanceID")]
         [Validation(Required=false)]
         public string DBInstanceID { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

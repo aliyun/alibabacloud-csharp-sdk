@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyImportTaskRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID. You can obtain it by invoking DescribeDBInstances.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RETRY_IMPORT: retry import  </description></item>
+        /// <item><description>CANCEL: cancel job</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Destination region ID. You can view region IDs by invoking the DescribeRegions API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Job ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

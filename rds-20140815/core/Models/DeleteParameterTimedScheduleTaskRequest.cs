@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteParameterTimedScheduleTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The instance Name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rm-uf6wjk5****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the scheduled task for parameter modification.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>41698</para>
         /// </summary>

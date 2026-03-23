@@ -9,22 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeInstanceKeywordsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The type of reserved keyword returned.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>account</para>
-        /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
-        /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

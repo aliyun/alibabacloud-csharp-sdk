@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyAccountMaskingPrivilegeRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>Database name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>myDB</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBName { get; set; }
 
         /// <summary>
+        /// <para>Permission expiration time in UTC format. (Required only for fullAccess permission.)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-01-22T02:01:20Z</para>
         /// </summary>
@@ -40,6 +45,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Permission type (noneAccess, restrictedAccess, fullAccess)</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +56,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Privilege { get; set; }
 
         /// <summary>
+        /// <para>Region ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ap-southeast-1</para>
         /// </summary>
@@ -66,6 +74,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>Account name. Multiple accounts are supported and must be separated by commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

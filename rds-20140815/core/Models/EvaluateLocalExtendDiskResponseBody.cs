@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>Indicates whether the instance is available. Valid values: true and false.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>True</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Available")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-bp1375i66nd******</para>
+        /// <para>rm-wz9s06u4drm******</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

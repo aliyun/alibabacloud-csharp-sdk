@@ -9,12 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeModifyPGHbaConfigLogResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The instance ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>pgm-bp1lymyn1v3i****</para>
-        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -131,22 +125,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
-        /// <summary>
-        /// <para>The number of modification records.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("LogItemCount")]
         [Validation(Required=false)]
         public int? LogItemCount { get; set; }
 
-        /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>6D797E6B-E157-510C-A27F-6F9E6DA40633</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

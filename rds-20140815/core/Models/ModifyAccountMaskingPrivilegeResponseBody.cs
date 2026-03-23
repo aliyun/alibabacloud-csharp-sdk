@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyAccountMaskingPrivilegeResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Returned data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public Dictionary<string, string> Data { get; set; }
 
         /// <summary>
+        /// <para>Return message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2144F5CC-10C5-3B72-8C74-E52C********</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation succeeded</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

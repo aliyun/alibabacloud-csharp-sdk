@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>b-n8tpg24c6i0v****</para>
+        /// <para>262186****</para>
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5****</para>
+        /// <para>rm-7xv8f2zcia0e4****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2025-06-17T12:10:23Z</para>
+        /// <para>2025-07-15T12:10:23Z</para>
         /// </summary>
         [NameInMap("ExpectExpireTime")]
         [Validation(Required=false)]

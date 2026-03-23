@@ -23,14 +23,32 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string Architecture { get; set; }
 
+        /// <summary>
+        /// <para>Image ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>m-2oqiu973jwcxe****</para>
+        /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        /// <summary>
+        /// <para>Image Name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_image_name</para>
+        /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
         public string ImageName { get; set; }
 
+        /// <summary>
+        /// <para>Query images that can be used for the specified instance type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mysql.x2.xlarge.6cm</para>
+        /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }

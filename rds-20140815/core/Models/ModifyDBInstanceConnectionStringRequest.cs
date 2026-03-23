@@ -111,10 +111,32 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to retain the virtual IP address (VIP) when swapping connection addresses.  </para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Retains the VIP.  </description></item>
+        /// <item><description><b>false</b> (default): Does not retain the VIP.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is supported only for RDS PostgreSQL instances.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("RetainVip")]
         [Validation(Required=false)]
         public bool? RetainVip { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the target RDS PostgreSQL instance whose connection address you want to swap with the current instance.  </para>
+        /// <remarks>
+        /// <para>This parameter is supported only for RDS PostgreSQL instances.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pgm-bp1206s14p3o****</para>
+        /// </summary>
         [NameInMap("TargetDBInstanceId")]
         [Validation(Required=false)]
         public string TargetDBInstanceId { get; set; }

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1711510887******</para>
+        /// <para>171151088708****</para>
         /// </summary>
         [NameInMap("ActivityId")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2000001******</para>
+        /// <para>200000199****</para>
         /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]

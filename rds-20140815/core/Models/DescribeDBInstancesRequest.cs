@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
+        /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The endpoint of the instance. You must specify this parameter only when you want to query a single instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com</para>
+        /// <para>rm-uf6wjk5****.mysql.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>rm-uf6wjk5****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The dedicated cluster ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dhg-7a9xxxxxxxx</para>
+        /// <para>dhg-7a9****</para>
         /// </summary>
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The host ID of the instance in the dedicated cluster.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>i-bpxxxxxxx</para>
+        /// <para>i-bp****</para>
         /// </summary>
         [NameInMap("DedicatedHostId")]
         [Validation(Required=false)]
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The database engine version.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5.7</para>
+        /// <para>8.0</para>
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The token that is used to display the next page. You must set this parameter to the value that is returned from the most recent call of the <b>DescribeDBInstances</b> operation for <b>NextToken</b>. If the returned entries are displayed on multiple pages, the next page can be displayed when you call this operation again with this parameter specified.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>o7PORW5o2TJg**********</para>
+        /// <para>o7PORW5o2TJg****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -275,6 +275,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string PayType { get; set; }
 
+        /// <summary>
+        /// <para>Reserved parameter. No configuration is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("QueryAutoRenewal")]
         [Validation(Required=false)]
         public bool? QueryAutoRenewal { get; set; }
@@ -294,7 +300,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmyxxxxx</para>
+        /// <para>rg-acfmy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -332,7 +338,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The vSwitch ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vsw-uf6adz52c2pxxxxxxxxxx</para>
+        /// <para>vsw-uf6adz52c2p****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
@@ -342,7 +348,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vpc-uf6f7l4fg90xxxxxxxxxx</para>
+        /// <para>vpc-uf6f7l4fg90****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

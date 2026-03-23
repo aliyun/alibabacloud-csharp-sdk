@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>A reserved parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("BpeEnabled")]
         [Validation(Required=false)]
@@ -122,6 +122,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>A reserved parameter. No configuration is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("CustomExtraInfo")]
         [Validation(Required=false)]
         public string CustomExtraInfo { get; set; }
@@ -131,7 +137,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rds.mys2.small</para>
+        /// <para>mysqlro.n2.small.1c</para>
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
@@ -144,7 +150,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>Test read-only instance</para>
+        /// <para>testReadOnly</para>
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
@@ -242,7 +248,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("GdnInstanceName")]
         [Validation(Required=false)]
@@ -270,7 +276,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("InstructionSetArch")]
         [Validation(Required=false)]
@@ -280,12 +286,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("IoAccelerationEnabled")]
         [Validation(Required=false)]
         public string IoAccelerationEnabled { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to create a DuckDB analytic instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Enabled</description></item>
+        /// <item><description><b>false</b>: Disabled</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>Currently, only RDS MySQL and RDS PostgreSQL support creating DuckDB analytic instances.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("IsAnalyticReadOnlyIns")]
         [Validation(Required=false)]
         public bool? IsAnalyticReadOnlyIns { get; set; }
@@ -352,7 +368,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The coupon code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>717446260784</para>
+        /// <para>71744626****</para>
         /// </summary>
         [NameInMap("PromotionCode")]
         [Validation(Required=false)]
@@ -401,7 +417,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("TddlBizType")]
         [Validation(Required=false)]
@@ -411,7 +427,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("TddlRegionConfig")]
         [Validation(Required=false)]

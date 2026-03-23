@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RunRCInstancesShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>ACU type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gn8is</para>
         /// </summary>
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
@@ -53,12 +55,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to automatically use a coupon. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b> (default): Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If you use a coupon and later decrease the quota, the amount offset by the coupon will not be refunded.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("AutoUseCoupon")]
         [Validation(Required=false)]
         public bool? AutoUseCoupon { get; set; }
@@ -73,14 +88,33 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>Information about the ACK Edge cluster.</para>
+        /// </summary>
         [NameInMap("CreateAckEdgeParam")]
         [Validation(Required=false)]
         public string CreateAckEdgeParamShrink { get; set; }
 
+        /// <summary>
+        /// <para>Reserved parameter. Not supported currently.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("CreateExtraParam")]
         [Validation(Required=false)]
         public string CreateExtraParam { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether the instance can be added to an ACK cluster. When this parameter is set to <b>1</b>, the created instance can be added to an ACK cluster by invoking the <b>AttachRCInstances</b> API operation, enabling efficient management of container applications.</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: Yes.</description></item>
+        /// <item><description><b>0</b> (default): No.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("CreateMode")]
         [Validation(Required=false)]
         public string CreateMode { get; set; }
@@ -92,6 +126,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DataDiskShrink { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable release protection. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Enabled  </description></item>
+        /// <item><description><b>false</b> (default): Disabled</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DeletionProtection")]
         [Validation(Required=false)]
         public bool? DeletionProtection { get; set; }
@@ -100,7 +144,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The deployment set ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ds-uf6670sipmph5j5b6ke4</para>
+        /// <para>ds-uf6670sipmph********</para>
         /// </summary>
         [NameInMap("DeploymentSetId")]
         [Validation(Required=false)]
@@ -130,6 +174,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// <para>Hostname of the instance (2–64 characters).  </para>
+        /// <list type="bullet">
+        /// <item><description>Multiple segments separated by periods (.) are supported. Each segment can contain uppercase and lowercase English letters, digits, and hyphens (-).  </description></item>
+        /// <item><description>A period (.) or hyphen (-) cannot appear at the beginning or end of a segment, nor can two periods or hyphens appear consecutively.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testHost1</para>
+        /// </summary>
         [NameInMap("HostName")]
         [Validation(Required=false)]
         public string HostName { get; set; }
@@ -138,7 +192,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The ID of the image used by the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>image-dsvjzw2ii8n4fvr6de</para>
+        /// <para>image-dsvjzw2ii8n4******</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
@@ -158,7 +212,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ceshi</para>
+        /// <para>rc-node-[99,1]-rchost</para>
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
@@ -189,7 +243,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The reserved parameter. This parameter is not supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("InternetMaxBandwidthOut")]
         [Validation(Required=false)]
@@ -223,12 +277,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The password of the account that is used to log on to the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2F9e9@a69c!e18b569c8</para>
+        /// <para>TestRDS123!</para>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to use the password preset in the image. When this parameter is used, the Password parameter must be empty, and you must ensure that the selected image has a password already configured. Default value: false.</para>
+        /// </summary>
         [NameInMap("PasswordInherit")]
         [Validation(Required=false)]
         public bool? PasswordInherit { get; set; }
@@ -251,7 +308,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Year</para>
+        /// <para>Month</para>
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
@@ -265,6 +322,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string PrivateIpAddress { get; set; }
 
+        /// <summary>
+        /// <para>The coupon code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>72329885****</para>
+        /// </summary>
         [NameInMap("PromotionCode")]
         [Validation(Required=false)]
         public string PromotionCode { get; set; }
@@ -280,11 +343,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmy****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>Scheduled elasticity rule</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;rule&quot;:[{&quot;beginTime&quot;:&quot;09:00&quot;,&quot;endTime&quot;:&quot;17:00&quot;,&quot;acu&quot;:4}]}</para>
         /// </summary>
@@ -309,7 +380,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>sg-uf6av412xaxixuezol6w</para>
+        /// <para>sg-uf6av412xaxixu******</para>
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
@@ -319,10 +390,32 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string SecurityGroupIdsShrink { get; set; }
 
+        /// <summary>
+        /// <para>The spot strategy for pay-as-you-go instances. This parameter takes effect only when the <b>InstanceChargeType</b> parameter is set to <b>PostPaid</b>. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description><b>NoSpot</b>: Normal pay-as-you-go instance.  </description></item>
+        /// <item><description><b>SpotAsPriceGo</b>: The system automatically bids based on the current market price.</description></item>
+        /// </list>
+        /// <para>Default value: <b>NoSpot</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NoSpot</para>
+        /// </summary>
         [NameInMap("SpotStrategy")]
         [Validation(Required=false)]
         public string SpotStrategy { get; set; }
 
+        /// <summary>
+        /// <para>The deployment type of RDS Custom. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>eni</b>: Dual network interface cards.</description></item>
+        /// <item><description><b>edge</b>: Point of presence (POP) node pool.</description></item>
+        /// <item><description><b>share</b>: VPC.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>share</para>
+        /// </summary>
         [NameInMap("SupportCase")]
         [Validation(Required=false)]
         public string SupportCase { get; set; }
@@ -334,24 +427,59 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string SystemDiskShrink { get; set; }
 
+        /// <summary>
+        /// <para>The list of tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<RunRCInstancesShrinkRequestTag> Tag { get; set; }
         public class RunRCInstancesShrinkRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key. You can create up to N tag keys at the same time, where N ranges from <b>1 to 20</b>. Empty strings are not allowed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Testkey1</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value corresponding to the tag key. You can create up to N tag values at the same time, where N ranges from <b>1 to 20</b>. Empty strings are allowed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Testvalue1</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>The instance user data. The raw data can be up to 32 KB in size.  </para>
+        /// <para>Do not pass sensitive information, such as passwords and private keys, in plaintext. If you must pass such information, encrypt it first, encode it in Base64, and then transmit it. Decrypt and use it inside the instance. The following is an example of converting a script into a Base64-encoded string:  </para>
+        /// <pre><c>echo -n \\&quot;#!/bin/sh
+        /// echo &quot;Hello World&quot;\\&quot; | base64 -w 0
+        /// </c></pre>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IyEvYmluL3NoCmVjaG8gIkhlbGxvIFdvcmxkLiBUaGUgdGltZSBpcyBub3cgJChkYXRlIC1SKSIhIHwgdGVlIC9yb290L3VzZXJkYXRhX3Rlc3QudHh0</para>
+        /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether custom data is Base64-encoded.  </para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Yes.  </description></item>
+        /// <item><description><b>false</b> (default): No.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("UserDataInBase64")]
         [Validation(Required=false)]
         public bool? UserDataInBase64 { get; set; }

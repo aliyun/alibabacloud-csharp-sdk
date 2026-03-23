@@ -61,29 +61,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
-        /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>D4A23265-C5B6-42E1-98A0-EFA1EB42E723</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>Indicates whether parameter templates exist in the specified region. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false<remarks>
-        /// <para>Notice: This parameter is deprecated.</para>
-        /// </remarks>
-        /// </description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("SignalForOptimizeParams")]
         [Validation(Required=false)]
         public bool? SignalForOptimizeParams { get; set; }

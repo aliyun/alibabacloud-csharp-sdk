@@ -125,40 +125,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
-        /// <summary>
-        /// <para>The network type of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Classic</b>: classic network</description></item>
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>VPC</para>
-        /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
         public string InstanceNetworkType { get; set; }
 
-        /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>777C4593-8053-427B-99E2-105593277CAB</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The whitelist mode of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>normal</b>: standard whitelist mode</description></item>
-        /// <item><description><b>safety</b>: enhanced whitelist mode</description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>safety</para>
-        /// </summary>
         [NameInMap("SecurityIPMode")]
         [Validation(Required=false)]
         public string SecurityIPMode { get; set; }

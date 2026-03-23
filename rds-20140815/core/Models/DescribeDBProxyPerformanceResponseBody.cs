@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>lsmexxxxxxx</para>
+        /// <para>lsme****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

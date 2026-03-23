@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyParameterTimedScheduleTaskRequest : TeaModel {
         /// <summary>
+        /// <para>Instance Name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pgm-bp102g323jd4****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The scheduled switchover time to be set, in the format yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-05-06T09:24:00Z</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SwitchTime { get; set; }
 
         /// <summary>
+        /// <para>Job ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>440437220</para>
         /// </summary>

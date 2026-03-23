@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>none</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("InstantAccess")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>none</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("InstantAccessRetentionDays")]
         [Validation(Required=false)]
@@ -61,8 +61,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>rc-t8q22a87745hf8****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -79,21 +81,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? RetentionDays { get; set; }
 
+        /// <summary>
+        /// <para>Tag Details.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateRCSnapshotRequestTag> Tag { get; set; }
         public class CreateRCSnapshotRequestTag : TeaModel {
             /// <summary>
+            /// <para>tag key.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>None</para>
+            /// <para>testRC</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>tag value.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>None</para>
+            /// <para>test01</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -105,7 +114,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter has been deprecated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou-b</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>A deprecated parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("BpeEnabled")]
         [Validation(Required=false)]
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCz*****</para>
+        /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The internal endpoint that is used to connect to the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5*****.mysql.rds.aliyuncs.com</para>
+        /// <para>rm-uf6wjk5****.mysql.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rds.mysql.s1.small</para>
+        /// <para>mysql.n2.medium.2c</para>
         /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>Test database</para>
+        /// <para>testInstance</para>
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Internet</para>
+        /// <para>Intranet</para>
         /// </summary>
         [NameInMap("DBInstanceNetType")]
         [Validation(Required=false)]
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>cloud_essd</para>
+        /// <para>general_essd</para>
         /// </summary>
         [NameInMap("DBInstanceStorageType")]
         [Validation(Required=false)]
@@ -358,7 +358,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>rpg-sys-*****</para>
+        /// <para>rpg-sys-****</para>
         /// </summary>
         [NameInMap("DBParamGroupId")]
         [Validation(Required=false)]
@@ -403,7 +403,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>dhg-4n*****</para>
+        /// <para>dhg-4n****</para>
         /// </summary>
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
@@ -508,12 +508,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5.6</para>
+        /// <para>8.0</para>
         /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
+        /// <summary>
+        /// <para>Enable or disable <a href="https://help.aliyun.com/document_detail/2856526.html">RDS MySQL native replication</a>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ON</b>: Enabled.</description></item>
+        /// <item><description><b>OFF</b>: Disabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ON</para>
+        /// </summary>
         [NameInMap("ExternalReplication")]
         [Validation(Required=false)]
         public bool? ExternalReplication { get; set; }
@@ -536,7 +546,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Classic</para>
+        /// <para>VPC</para>
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
@@ -661,7 +671,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmy*****</para>
+        /// <para>rg-acfmy****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -678,7 +688,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>acs:ram::1406xxxxxx:role/aliyunrdsinstanceencryptiondefaultrole</para>
+        /// <para>acs:ram::1406****:role/aliyunrdsinstanceencryptiondefaultrole</para>
         /// </summary>
         [NameInMap("RoleARN")]
         [Validation(Required=false)]
@@ -821,7 +831,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>i-bp*****3</para>
+        /// <para>i-bp****</para>
         /// </summary>
         [NameInMap("TargetDedicatedHostIdForLog")]
         [Validation(Required=false)]
@@ -836,7 +846,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>i-bp*****1</para>
+        /// <para>i-bp****</para>
         /// </summary>
         [NameInMap("TargetDedicatedHostIdForMaster")]
         [Validation(Required=false)]
@@ -851,7 +861,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>i-bp*****2</para>
+        /// <para>i-bp****</para>
         /// </summary>
         [NameInMap("TargetDedicatedHostIdForSlave")]
         [Validation(Required=false)]
@@ -916,7 +926,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>67798*****</para>
+        /// <para>67798****</para>
         /// </summary>
         [NameInMap("UserBackupId")]
         [Validation(Required=false)]
@@ -929,7 +939,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>vpc-*****</para>
+        /// <para>vpc-****</para>
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
@@ -945,7 +955,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>vsw-*****</para>
+        /// <para>vsw-****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
@@ -955,7 +965,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The entries in the whitelist. If you enter multiple IP addresses or CIDR blocks, you must separate the IP addresses or CIDR blocks with commas (,). Do not add spaces preceding or following the commas. Example: <c>192.168.0.1,172.16.213.9</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.XXX.XX.1,172.XXX.XX.9</para>
+        /// <para>192.168.0.1,172.16.213.9</para>
         /// </summary>
         [NameInMap("WhitelistTemplateList")]
         [Validation(Required=false)]

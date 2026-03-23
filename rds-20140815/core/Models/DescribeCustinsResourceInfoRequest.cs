@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-wz9s06u4drmqj4aqv</para>
+        /// <para>rm-wz9s06u4drm******</para>
         /// </summary>
         [NameInMap("DBInstanceIds")]
         [Validation(Required=false)]

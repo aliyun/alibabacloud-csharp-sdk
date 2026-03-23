@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The ID of the backup task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5073731</para>
+        /// <para>507****</para>
         /// </summary>
         [NameInMap("BackupJobId")]
         [Validation(Required=false)]

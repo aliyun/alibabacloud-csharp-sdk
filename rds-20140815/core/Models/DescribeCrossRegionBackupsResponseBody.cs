@@ -9,12 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCrossRegionBackupsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The end of the time range to query.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2019-06-15T12:10:00Z</para>
-        /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
@@ -113,63 +107,26 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
-        /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
-        /// <para>Default value: <b>1</b>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        /// <summary>
-        /// <para>The number of cross-region data backup files on the current page.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>30</para>
-        /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
-        /// <summary>
-        /// <para>The region ID of the instance.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
-        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>60912B41-7579-4B5D-B289-8856030F0A6A</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The beginning of the time range to query.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2019-05-30T12:10:00Z</para>
-        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        /// <summary>
-        /// <para>The total number of entries that are returned.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>100</para>
-        /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
         public int? TotalRecordCount { get; set; }

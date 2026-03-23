@@ -9,12 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribePGHbaConfigResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The instance ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rm-bp1*****</para>
-        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -63,47 +57,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
-        /// <summary>
-        /// <para>The time when the previous modification was made to the pg_hba.conf file.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2021-11-25T06:00:40Z</para>
-        /// </summary>
         [NameInMap("HbaModifyTime")]
         [Validation(Required=false)]
         public string HbaModifyTime { get; set; }
 
-        /// <summary>
-        /// <para>The status of the previous modification to the pg_hba.conf file. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>success</b></description></item>
-        /// <item><description><b>setting</b></description></item>
-        /// <item><description><b>failed</b></description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>success</para>
-        /// </summary>
         [NameInMap("LastModifyStatus")]
         [Validation(Required=false)]
         public string LastModifyStatus { get; set; }
 
-        /// <summary>
-        /// <para>The reason why the previous modification was made to the pg_hba.conf file.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>The specified users (testuser) is not exist.</para>
-        /// </summary>
         [NameInMap("ModifyStatusReason")]
         [Validation(Required=false)]
         public string ModifyStatusReason { get; set; }
 
-        /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>A147A124-A147-5CCF-9609-B73C028848DF</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCInstanceAttributeResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Indicates whether auto-renewal is enabled for the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Yes</description></item>
+        /// <item><description><b>false</b>: No</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
@@ -36,6 +46,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? Cpu { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the instance is added to an ACK cluster. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: Yes  </description></item>
+        /// <item><description><b>0</b>: No</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("CreateMode")]
         [Validation(Required=false)]
         public int? CreateMode { get; set; }
@@ -108,6 +128,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        /// <summary>
+        /// <para>The database type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>mssql</b>: SQL Server</description></item>
+        /// <item><description><b>mysql</b>: MySQL</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mysql</para>
+        /// </summary>
         [NameInMap("DbType")]
         [Validation(Required=false)]
         public string DbType { get; set; }
@@ -144,6 +174,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        /// <summary>
+        /// <para>Whether deletion protection is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Enabled</description></item>
+        /// <item><description><b>false</b>: Disabled</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DeletionProtection")]
         [Validation(Required=false)]
         public bool? DeletionProtection { get; set; }
@@ -268,10 +308,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ExpiredTime { get; set; }
 
+        /// <summary>
+        /// <para>Number of GPUs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("Gpu")]
         [Validation(Required=false)]
         public int? Gpu { get; set; }
 
+        /// <summary>
+        /// <para>The GPU type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NVIDIA V100</para>
+        /// </summary>
         [NameInMap("GpuTypes")]
         [Validation(Required=false)]
         public string GpuTypes { get; set; }
@@ -320,6 +372,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        /// <summary>
+        /// <para>Billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PrePaid</b>: subscription</description></item>
+        /// <item><description><b>PostPaid</b>: pay-as-you-go</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PostPaid</para>
+        /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
@@ -439,6 +501,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? Memory { get; set; }
 
+        /// <summary>
+        /// <para>The File Type. When the value is <b>rds_vnode</b>, it indicates that the node is a container node.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rds_vnode</para>
+        /// </summary>
         [NameInMap("NodeType")]
         [Validation(Required=false)]
         public string NodeType { get; set; }
@@ -489,6 +557,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aeky6z354ks****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -513,6 +587,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string SerialNumber { get; set; }
 
+        /// <summary>
+        /// <para>The spot strategy for pay-as-you-go instances. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>NoSpot</b>: Normal pay-as-you-go instance.</description></item>
+        /// <item><description><b>SpotAsPriceGo</b>: The system automatically bids based on the current marketplace price.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NoSpot</para>
+        /// </summary>
         [NameInMap("SpotStrategy")]
         [Validation(Required=false)]
         public string SpotStrategy { get; set; }
@@ -549,26 +633,75 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string StoppedMode { get; set; }
 
+        /// <summary>
+        /// <para>System disk specifications.</para>
+        /// </summary>
         [NameInMap("SystemDisk")]
         [Validation(Required=false)]
         public DescribeRCInstanceAttributeResponseBodySystemDisk SystemDisk { get; set; }
         public class DescribeRCInstanceAttributeResponseBodySystemDisk : TeaModel {
+            /// <summary>
+            /// <para>A backup parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>None</para>
+            /// </summary>
             [NameInMap("DeleteWithInstance")]
             [Validation(Required=false)]
             public bool? DeleteWithInstance { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to encrypt the disk. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: Yes</description></item>
+            /// <item><description><b>false</b>: No</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("Encrypted")]
             [Validation(Required=false)]
             public string Encrypted { get; set; }
 
+            /// <summary>
+            /// <para>The system disk category. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>cloud_efficiency</b>: ultra disk.</description></item>
+            /// <item><description><b>cloud_ssd</b>: standard SSD.</description></item>
+            /// <item><description><b>cloud_essd</b>: enterprise SSD (ESSD).</description></item>
+            /// <item><description><b>cloud_auto</b>: premium performance disk.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cloud_essd</para>
+            /// </summary>
             [NameInMap("SystemDiskCategory")]
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
 
+            /// <summary>
+            /// <para>Performance level of the system disk when it is an enterprise SSD (ESSD). Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>PL0</b></description></item>
+            /// <item><description><b>PL1</b></description></item>
+            /// <item><description><b>PL2</b></description></item>
+            /// <item><description><b>PL3</b></description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PL1</para>
+            /// </summary>
             [NameInMap("SystemDiskPerformanceLevel")]
             [Validation(Required=false)]
             public string SystemDiskPerformanceLevel { get; set; }
 
+            /// <summary>
+            /// <para>System disk size, in GiB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>40</para>
+            /// </summary>
             [NameInMap("SystemDiskSize")]
             [Validation(Required=false)]
             public long? SystemDiskSize { get; set; }
@@ -603,6 +736,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        /// <summary>
+        /// <para>The custom data of the instance, formatted as a base64-encoded string.</para>
+        /// <remarks>
+        /// <para>If the instance does not have custom data, an empty string is returned.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IyEvYmluL3NoCmVjaG8gXCJIZWxsbyBXb3JsZC4gVGhlIHRpbWUgaXMgbm93ICQoZGF0ZSAtUikhXCIgfCB0ZWUgL3Jvb3QvdXNlcmRhdGFfdGVzdDA2MjB0d28udHh0</para>
+        /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }
