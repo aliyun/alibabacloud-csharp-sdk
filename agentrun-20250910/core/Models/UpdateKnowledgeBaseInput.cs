@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public Dictionary<string, object> RetrieveSettings { get; set; }
 
+        [NameInMap("workspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
+
     }
 
 }

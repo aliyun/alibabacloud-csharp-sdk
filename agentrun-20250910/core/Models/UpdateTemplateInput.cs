@@ -10,6 +10,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class UpdateTemplateInput : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -30,6 +33,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
         /// <summary>
         /// <para>CPU资源配置（单位：核心）</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("cpu")]
         [Validation(Required=false)]
@@ -39,10 +45,18 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public CredentialConfiguration CredentialConfiguration { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>demo description</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("enableAgent")]
         [Validation(Required=false)]
         public bool? EnableAgent { get; set; }
@@ -51,6 +65,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public Dictionary<string, string> EnvironmentVariables { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>arn:acs:agentrun:cn-hangzhou:123456789:xxx/test</para>
+        /// </summary>
         [NameInMap("executionRoleArn")]
         [Validation(Required=false)]
         public string ExecutionRoleArn { get; set; }
@@ -61,6 +79,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
         /// <summary>
         /// <para>内存资源配置（单位：MB）</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("memory")]
         [Validation(Required=false)]
@@ -80,6 +101,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
         /// <summary>
         /// <para>沙箱空闲超时时间（秒）</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>21600</para>
         /// </summary>
         [NameInMap("sandboxIdleTimeoutInSeconds")]
         [Validation(Required=false)]
@@ -89,6 +113,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         /// 
         /// <summary>
         /// <para>沙箱存活时间（秒）</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>86400</para>
         /// </summary>
         [NameInMap("sandboxTTLInSeconds")]
         [Validation(Required=false)]
@@ -106,6 +133,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public Dictionary<string, object> TemplateConfiguration { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ws-1234567890abcdef</para>
+        /// </summary>
         [NameInMap("workspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

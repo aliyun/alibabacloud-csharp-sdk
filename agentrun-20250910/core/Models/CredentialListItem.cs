@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string UpdatedAt { get; set; }
 
+        [NameInMap("workspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
+
     }
 
 }

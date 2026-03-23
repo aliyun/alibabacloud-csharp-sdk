@@ -33,6 +33,22 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string Provider { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1e546db8-bd93-5a52-9be1-5a1351cdac95</para>
+        /// </summary>
+        [NameInMap("workspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1e546db8-bd93-5a52-9be1-5a1351cdac95,1e546db8-bd93-5a52-9be1-5a1351caass4</para>
+        /// </summary>
+        [NameInMap("workspaceIds")]
+        [Validation(Required=false)]
+        public string WorkspaceIds { get; set; }
+
     }
 
 }
