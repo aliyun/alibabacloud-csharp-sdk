@@ -23,6 +23,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("deleteTag")]
+        [Validation(Required=false)]
+        public int? DeleteTag { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
         /// </summary>
         [NameInMap("gmtCreate")]
@@ -44,6 +52,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [NameInMap("id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>key</para>
+        /// </summary>
+        [NameInMap("key")]
+        [Validation(Required=false)]
+        public string Key { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

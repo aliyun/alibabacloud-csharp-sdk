@@ -27,6 +27,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>mt_xxxxxMYTX9</para>
+        /// </summary>
+        [NameInMap("clientUuid")]
+        [Validation(Required=false)]
+        public string ClientUuid { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>50</para>
         /// </summary>
         [NameInMap("completionTokens")]
@@ -64,6 +72,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [NameInMap("id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>qwen3-max</para>
+        /// </summary>
+        [NameInMap("modelCode")]
+        [Validation(Required=false)]
+        public string ModelCode { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -131,11 +147,27 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>success</para>
+        /// </summary>
+        [NameInMap("status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
         [NameInMap("statusCode")]
         [Validation(Required=false)]
         public int? StatusCode { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>qwen</para>
+        /// </summary>
+        [NameInMap("symbol")]
+        [Validation(Required=false)]
+        public string Symbol { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

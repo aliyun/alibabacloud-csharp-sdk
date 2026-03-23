@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ApiKeyPreview { get; set; }
 
         /// <summary>
+        /// <para>Base URL</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://dashscope.aliyuncs.com">https://dashscope.aliyuncs.com</a></para>
         /// </summary>
@@ -33,10 +35,6 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public int? DeleteTag { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>通义千问大模型</para>
-        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -58,6 +56,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GmtModified { get; set; }
 
         /// <summary>
+        /// <para>ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -105,10 +105,6 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public string ModelType { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>通义千问</para>
-        /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -121,10 +117,6 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public string Symbol { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>对话,自然语言处理</para>
-        /// </summary>
         [NameInMap("tagNames")]
         [Validation(Required=false)]
         public string TagNames { get; set; }
@@ -136,6 +128,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [NameInMap("tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("version")]
+        [Validation(Required=false)]
+        public int? Version { get; set; }
 
     }
 

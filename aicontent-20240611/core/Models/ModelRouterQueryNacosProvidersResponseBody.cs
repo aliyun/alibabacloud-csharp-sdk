@@ -15,7 +15,39 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
-        public List<string> Data { get; set; }
+        public List<ModelRouterQueryNacosProvidersResponseBodyData> Data { get; set; }
+        public class ModelRouterQueryNacosProvidersResponseBodyData : TeaModel {
+            [NameInMap("baseUrl")]
+            [Validation(Required=false)]
+            public string BaseUrl { get; set; }
+
+            [NameInMap("models")]
+            [Validation(Required=false)]
+            public List<ModelRouterQueryNacosProvidersResponseBodyDataModels> Models { get; set; }
+            public class ModelRouterQueryNacosProvidersResponseBodyDataModels : TeaModel {
+                [NameInMap("identifier")]
+                [Validation(Required=false)]
+                public string Identifier { get; set; }
+
+                [NameInMap("inputToken")]
+                [Validation(Required=false)]
+                public string InputToken { get; set; }
+
+                [NameInMap("outputToken")]
+                [Validation(Required=false)]
+                public string OutputToken { get; set; }
+
+            }
+
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("symbol")]
+            [Validation(Required=false)]
+            public string Symbol { get; set; }
+
+        }
 
         /// <summary>
         /// <b>Example:</b>
@@ -42,42 +74,6 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>maxResults</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
-        /// </summary>
-        [NameInMap("maxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        /// <summary>
-        /// <para>nextToken</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>xxxx-xxx-xxxxx</para>
-        /// </summary>
-        [NameInMap("nextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
-        [NameInMap("pageIndex")]
-        [Validation(Required=false)]
-        public int? PageIndex { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>10</para>
-        /// </summary>
-        [NameInMap("pageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        /// <summary>
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
         /// </summary>
@@ -86,30 +82,12 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>skip</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
-        /// </summary>
-        [NameInMap("skip")]
-        [Validation(Required=false)]
-        public int? Skip { get; set; }
-
-        /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>100</para>
-        /// </summary>
-        [NameInMap("totalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
 
     }
 

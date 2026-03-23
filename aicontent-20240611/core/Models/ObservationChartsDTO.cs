@@ -27,7 +27,29 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         [NameInMap("successRate")]
         [Validation(Required=false)]
-        public List<TimeSeriesPointDTO> SuccessRate { get; set; }
+        public List<ObservationChartsDTOSuccessRate> SuccessRate { get; set; }
+        public class ObservationChartsDTOSuccessRate : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>series1</para>
+            /// </summary>
+            [NameInMap("label")]
+            [Validation(Required=false)]
+            public string Label { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2024-01-01T00:00:00Z</para>
+            /// </summary>
+            [NameInMap("timestamp")]
+            [Validation(Required=false)]
+            public string Timestamp { get; set; }
+
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public object Value { get; set; }
+
+        }
 
         [NameInMap("tpm")]
         [Validation(Required=false)]
