@@ -103,6 +103,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public string TriggerId { get; set; }
 
+        [NameInMap("triggeredStatus")]
+        [Validation(Required=false)]
+        public string TriggeredStatus { get; set; }
+
     }
 
 }
