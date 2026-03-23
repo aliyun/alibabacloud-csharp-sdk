@@ -91,6 +91,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? MbSeconds { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
+            [NameInMap("priority")]
+            [Validation(Required=false)]
+            public string Priority { get; set; }
+
+            /// <summary>
             /// <para>The name of the resource queue on which the Spark jobs run.</para>
             /// 
             /// <b>Example:</b>

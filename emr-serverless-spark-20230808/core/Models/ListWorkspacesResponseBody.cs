@@ -146,6 +146,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string FailReason { get; set; }
 
+            [NameInMap("gpuSpec")]
+            [Validation(Required=false)]
+            public List<string> GpuSpec { get; set; }
+
             /// <summary>
             /// <para>The unit of the subscription duration.</para>
             /// 

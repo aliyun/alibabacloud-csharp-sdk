@@ -1567,6 +1567,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["networkServiceName"] = request.NetworkServiceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeIds))
+            {
+                body["volumeIds"] = request.VolumeIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerSpec))
             {
                 body["workerSpec"] = request.WorkerSpec;
@@ -1636,6 +1640,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkServiceName))
             {
                 body["networkServiceName"] = request.NetworkServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeIds))
+            {
+                body["volumeIds"] = request.VolumeIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerSpec))
             {
@@ -2170,6 +2178,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["duration"] = request.Duration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuSpec))
+            {
+                body["gpuSpec"] = request.GpuSpec;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucket))
             {
                 body["ossBucket"] = request.OssBucket;
@@ -2285,6 +2297,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
             {
                 body["duration"] = request.Duration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuSpec))
+            {
+                body["gpuSpec"] = request.GpuSpec;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucket))
             {
@@ -3006,6 +3022,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["environments"] = request.Environments;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuSpec))
+            {
+                body["gpuSpec"] = request.GpuSpec;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSpec))
             {
                 body["resourceSpec"] = request.ResourceSpec;
@@ -3069,6 +3089,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Environments))
             {
                 body["environments"] = request.Environments;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuSpec))
+            {
+                body["gpuSpec"] = request.GpuSpec;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSpec))
             {
@@ -5692,6 +5716,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ListKyuubiSparkApplicationsShrinkRequest request = new ListKyuubiSparkApplicationsShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EndTime))
+            {
+                request.EndTimeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EndTime, "endTime", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OrderBy))
             {
                 request.OrderByShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OrderBy, "orderBy", "json");
@@ -5708,6 +5736,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationName))
             {
                 query["applicationName"] = request.ApplicationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimeShrink))
+            {
+                query["endTime"] = request.EndTimeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LatestSqlStatementStatuses))
+            {
+                query["latestSqlStatementStatuses"] = request.LatestSqlStatementStatuses;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -5736,6 +5772,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeShrink))
             {
                 query["startTime"] = request.StartTimeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.States))
+            {
+                query["states"] = request.States;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5780,6 +5820,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ListKyuubiSparkApplicationsShrinkRequest request = new ListKyuubiSparkApplicationsShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EndTime))
+            {
+                request.EndTimeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EndTime, "endTime", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OrderBy))
             {
                 request.OrderByShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OrderBy, "orderBy", "json");
@@ -5796,6 +5840,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationName))
             {
                 query["applicationName"] = request.ApplicationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimeShrink))
+            {
+                query["endTime"] = request.EndTimeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LatestSqlStatementStatuses))
+            {
+                query["latestSqlStatementStatuses"] = request.LatestSqlStatementStatuses;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -5824,6 +5876,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeShrink))
             {
                 query["startTime"] = request.StartTimeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.States))
+            {
+                query["states"] = request.States;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10539,6 +10595,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["networkServiceName"] = request.NetworkServiceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeIds))
+            {
+                body["volumeIds"] = request.VolumeIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerSpec))
             {
                 body["workerSpec"] = request.WorkerSpec;
@@ -10608,6 +10668,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkServiceName))
             {
                 body["networkServiceName"] = request.NetworkServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeIds))
+            {
+                body["volumeIds"] = request.VolumeIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerSpec))
             {

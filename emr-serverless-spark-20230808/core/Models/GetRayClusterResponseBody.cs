@@ -103,6 +103,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>ecs.gn6i-c4g1.xlarge</para>
+            /// </summary>
+            [NameInMap("gpuSpec")]
+            [Validation(Required=false)]
+            public string GpuSpec { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>60</para>
             /// </summary>
             [NameInMap("idleTimeoutSeconds")]
@@ -247,6 +255,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para><a href="http://emr-spark-ray-gateway-cn-hangzhou-internal.emr.aliyuncs.com">http://emr-spark-ray-gateway-cn-hangzhou-internal.emr.aliyuncs.com</a></para>
+        /// </summary>
+        [NameInMap("jobUrlInner")]
+        [Validation(Required=false)]
+        public string JobUrlInner { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
@@ -341,6 +357,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string UserId { get; set; }
 
+        [NameInMap("volumeIds")]
+        [Validation(Required=false)]
+        public List<string> VolumeIds { get; set; }
+
         [NameInMap("workerSpec")]
         [Validation(Required=false)]
         public List<GetRayClusterResponseBodyWorkerSpec> WorkerSpec { get; set; }
@@ -352,6 +372,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("cpu")]
             [Validation(Required=false)]
             public string Cpu { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ecs.gn6i-c4g1.xlarge</para>
+            /// </summary>
+            [NameInMap("gpuSpec")]
+            [Validation(Required=false)]
+            public string GpuSpec { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

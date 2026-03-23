@@ -140,6 +140,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string NotebookAccessUrl { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
+            [NameInMap("priority")]
+            [Validation(Required=false)]
+            public string Priority { get; set; }
+
+            /// <summary>
             /// <para>The version of the Spark engine on which the job runs.</para>
             /// 
             /// <b>Example:</b>

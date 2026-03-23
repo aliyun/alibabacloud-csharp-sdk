@@ -122,6 +122,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public List<string> Environments { get; set; }
 
+            [NameInMap("gpuSpec")]
+            [Validation(Required=false)]
+            public List<string> GpuSpec { get; set; }
+
             /// <summary>
             /// <para>The maximum capacity of resources that can be used in the queue.</para>
             /// 
@@ -169,6 +173,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("properties")]
             [Validation(Required=false)]
             public string Properties { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>CPU</para>
+            /// </summary>
+            [NameInMap("queueCategory")]
+            [Validation(Required=false)]
+            public string QueueCategory { get; set; }
 
             /// <summary>
             /// <para>The name of the queue.</para>

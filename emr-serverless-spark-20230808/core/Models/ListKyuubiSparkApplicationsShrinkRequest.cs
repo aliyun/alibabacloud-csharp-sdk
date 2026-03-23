@@ -29,6 +29,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string ApplicationName { get; set; }
 
+        [NameInMap("endTime")]
+        [Validation(Required=false)]
+        public string EndTimeShrink { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[&quot;SUCCESS&quot;]</para>
+        /// </summary>
+        [NameInMap("latestSqlStatementStatuses")]
+        [Validation(Required=false)]
+        public string LatestSqlStatementStatuses { get; set; }
+
         /// <summary>
         /// <para>The maximum number of entries to return.</para>
         /// 
@@ -39,6 +51,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>60000</para>
+        /// </summary>
         [NameInMap("minDuration")]
         [Validation(Required=false)]
         public long? MinDuration { get; set; }
@@ -57,10 +73,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string OrderByShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>root_queue</para>
+        /// </summary>
         [NameInMap("resourceQueueId")]
         [Validation(Required=false)]
         public string ResourceQueueId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>asc</para>
+        /// </summary>
         [NameInMap("sort")]
         [Validation(Required=false)]
         public string Sort { get; set; }
@@ -71,6 +95,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [NameInMap("startTime")]
         [Validation(Required=false)]
         public string StartTimeShrink { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[&quot;ERROR&quot;]</para>
+        /// </summary>
+        [NameInMap("states")]
+        [Validation(Required=false)]
+        public string States { get; set; }
 
     }
 

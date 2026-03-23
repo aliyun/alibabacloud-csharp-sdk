@@ -99,6 +99,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>ecs.gn6i-c4g1.xlarge</para>
+                /// </summary>
+                [NameInMap("gpuSpec")]
+                [Validation(Required=false)]
+                public string GpuSpec { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>60</para>
                 /// </summary>
                 [NameInMap("idleTimeoutSeconds")]
@@ -230,6 +238,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 [NameInMap("cpu")]
                 [Validation(Required=false)]
                 public string Cpu { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>ecs.gn6i-c4g1.xlarge</para>
+                /// </summary>
+                [NameInMap("gpuSpec")]
+                [Validation(Required=false)]
+                public string GpuSpec { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

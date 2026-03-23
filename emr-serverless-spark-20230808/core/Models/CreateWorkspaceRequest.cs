@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string Duration { get; set; }
 
+        [NameInMap("gpuSpec")]
+        [Validation(Required=false)]
+        public List<string> GpuSpec { get; set; }
+
         /// <summary>
         /// <para>The name of the Object Storage Service (OSS) bucket.</para>
         /// 
@@ -167,6 +171,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("cu")]
             [Validation(Required=false)]
             public string Cu { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
+            [NameInMap("gpu")]
+            [Validation(Required=false)]
+            public int? Gpu { get; set; }
 
         }
 

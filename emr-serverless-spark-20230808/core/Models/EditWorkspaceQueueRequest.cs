@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public List<string> Environments { get; set; }
 
+        [NameInMap("gpuSpec")]
+        [Validation(Required=false)]
+        public List<string> GpuSpec { get; set; }
+
         [NameInMap("resourceSpec")]
         [Validation(Required=false)]
         public EditWorkspaceQueueRequestResourceSpec ResourceSpec { get; set; }
@@ -24,6 +28,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("cu")]
             [Validation(Required=false)]
             public long? Cu { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
+            [NameInMap("gpu")]
+            [Validation(Required=false)]
+            public int? Gpu { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
