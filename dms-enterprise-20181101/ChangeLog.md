@@ -2,6 +2,10 @@
 - Support API ListTagMetaAsset.
 
 
+2026-03-23 Version: 2.3.0
+- Support API ListTagMetaAsset.
+
+
 2026-03-19 Version: 2.2.1
 - Update API GetAIOrderApprovalCommentSSE: add response parameters Body.Output.
 
