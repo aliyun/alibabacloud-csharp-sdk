@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeEdgeFunctionsRequest : TeaModel {
         /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
@@ -28,6 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EdgeFunctionName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the RDS Supabase instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +41,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>

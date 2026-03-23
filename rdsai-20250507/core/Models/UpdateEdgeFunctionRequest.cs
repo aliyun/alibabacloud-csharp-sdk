@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class UpdateEdgeFunctionRequest : TeaModel {
         /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
@@ -17,11 +19,20 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>The error code that is returned if the request failed. For more information, see the &quot;Error codes&quot; section of the topic.</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public UpdateEdgeFunctionRequestCode Code { get; set; }
         public class UpdateEdgeFunctionRequestCode : TeaModel {
+            [NameInMap("DownloadUrl")]
+            [Validation(Required=false)]
+            public string DownloadUrl { get; set; }
+
             /// <summary>
+            /// <para>The name of the OSS bucket.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>code</para>
             /// </summary>
@@ -30,6 +41,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string OssBucketName { get; set; }
 
             /// <summary>
+            /// <para>The path of the code file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>example2.zip</para>
             /// </summary>
@@ -38,6 +51,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string OssObjectName { get; set; }
 
             /// <summary>
+            /// <para>The storage class of the OSS bucket.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>supabase</para>
             /// </summary>
@@ -48,15 +63,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
+        /// <para>The configuration parameters of the edge function.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
         [NameInMap("CustomConfig")]
         [Validation(Required=false)]
-        public Dictionary<string, object> CustomConfig { get; set; }
+        public Dictionary<string, string> CustomConfig { get; set; }
 
         /// <summary>
-        /// <para>fc-xxxx。</para>
+        /// <para>fc-xxxx</para>
         /// 
         /// <b>Example:</b>
         /// <para>ef-****</para>
@@ -65,11 +82,15 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string EdgeFunctionName { get; set; }
 
+        /// <summary>
+        /// <para>The environment variables of the edge function.</para>
+        /// </summary>
         [NameInMap("Envs")]
         [Validation(Required=false)]
         public Dictionary<string, string> Envs { get; set; }
 
         /// <summary>
+        /// <para>The ID of the RDS Supabase instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,6 +101,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>

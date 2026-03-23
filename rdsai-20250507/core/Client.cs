@@ -783,8 +783,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘函数</para>
+        /// <para>Creates an edge function.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an edge function, compresses the code into a zip file, and uploads it to Supabase Storage.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateEdgeFunctionRequest
@@ -863,8 +868,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘函数</para>
+        /// <para>Creates an edge function.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an edge function, compresses the code into a zip file, and uploads it to Supabase Storage.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateEdgeFunctionRequest
@@ -943,8 +953,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘函数</para>
+        /// <para>Creates an edge function.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an edge function, compresses the code into a zip file, and uploads it to Supabase Storage.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateEdgeFunctionRequest
@@ -961,8 +976,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建边缘函数</para>
+        /// <para>Creates an edge function.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an edge function, compresses the code into a zip file, and uploads it to Supabase Storage.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateEdgeFunctionRequest
@@ -1799,8 +1819,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘函数</para>
+        /// <para>Deletes an edge function.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an edge function.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteEdgeFunctionRequest
@@ -1853,8 +1878,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘函数</para>
+        /// <para>Deletes an edge function.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an edge function.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteEdgeFunctionRequest
@@ -1907,8 +1937,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘函数</para>
+        /// <para>Deletes an edge function.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an edge function.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteEdgeFunctionRequest
@@ -1925,8 +1960,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘函数</para>
+        /// <para>Deletes an edge function.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an edge function.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteEdgeFunctionRequest
@@ -2527,8 +2567,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘函数列表</para>
+        /// <para>Query the list of edge functions or a specified edge function.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the list of edge functions or a specified edge function.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEdgeFunctionsRequest
@@ -2581,8 +2626,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘函数列表</para>
+        /// <para>Query the list of edge functions or a specified edge function.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the list of edge functions or a specified edge function.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEdgeFunctionsRequest
@@ -2635,8 +2685,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘函数列表</para>
+        /// <para>Query the list of edge functions or a specified edge function.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the list of edge functions or a specified edge function.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEdgeFunctionsRequest
@@ -2653,8 +2708,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘函数列表</para>
+        /// <para>Query the list of edge functions or a specified edge function.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the list of edge functions or a specified edge function.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEdgeFunctionsRequest
@@ -7829,8 +7889,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新边缘函数</para>
+        /// <para>Updates an edge function</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates an edge function, including updating code versions, adding environment variables, and modifying configurations.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateEdgeFunctionRequest
@@ -7909,8 +7974,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新边缘函数</para>
+        /// <para>Updates an edge function</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates an edge function, including updating code versions, adding environment variables, and modifying configurations.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateEdgeFunctionRequest
@@ -7989,8 +8059,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新边缘函数</para>
+        /// <para>Updates an edge function</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates an edge function, including updating code versions, adding environment variables, and modifying configurations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateEdgeFunctionRequest
@@ -8007,8 +8082,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新边缘函数</para>
+        /// <para>Updates an edge function</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates an edge function, including updating code versions, adding environment variables, and modifying configurations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateEdgeFunctionRequest

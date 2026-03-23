@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateEdgeFunctionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The name of the edge function.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ef-****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EdgeFunctionName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the RDS Supabase instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ra-supabase-8moov5lxba****</para>
         /// </summary>

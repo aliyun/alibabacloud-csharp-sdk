@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class UpdateEdgeFunctionResponseBody : TeaModel {
         /// <summary>
-        /// <para>fc-xxxx。</para>
+        /// <para>fc-xxxx</para>
         /// 
         /// <b>Example:</b>
         /// <para>ef-****</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EdgeFunctionName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the RDS Supabase instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ra-supabase-8moov5lxba****</para>
         /// </summary>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>Id of the request。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329241C</para>
