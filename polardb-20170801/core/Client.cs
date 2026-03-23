@@ -877,6 +877,162 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>应用提示词策略到实例</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ApplyApplicationPromptsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyApplicationPromptsResponse
+        /// </returns>
+        public ApplyApplicationPromptsResponse ApplyApplicationPromptsWithOptions(ApplyApplicationPromptsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ApplyApplicationPromptsShrinkRequest request = new ApplyApplicationPromptsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DisabledPromptIds))
+            {
+                request.DisabledPromptIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DisabledPromptIds, "DisabledPromptIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EnabledPromptIds))
+            {
+                request.EnabledPromptIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EnabledPromptIds, "EnabledPromptIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisabledPromptIdsShrink))
+            {
+                query["DisabledPromptIds"] = request.DisabledPromptIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnabledPromptIdsShrink))
+            {
+                query["EnabledPromptIds"] = request.EnabledPromptIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApplyApplicationPrompts",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ApplyApplicationPromptsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>应用提示词策略到实例</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ApplyApplicationPromptsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyApplicationPromptsResponse
+        /// </returns>
+        public async Task<ApplyApplicationPromptsResponse> ApplyApplicationPromptsWithOptionsAsync(ApplyApplicationPromptsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ApplyApplicationPromptsShrinkRequest request = new ApplyApplicationPromptsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DisabledPromptIds))
+            {
+                request.DisabledPromptIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DisabledPromptIds, "DisabledPromptIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EnabledPromptIds))
+            {
+                request.EnabledPromptIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EnabledPromptIds, "EnabledPromptIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisabledPromptIdsShrink))
+            {
+                query["DisabledPromptIds"] = request.DisabledPromptIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnabledPromptIdsShrink))
+            {
+                query["EnabledPromptIds"] = request.EnabledPromptIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApplyApplicationPrompts",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ApplyApplicationPromptsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>应用提示词策略到实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApplyApplicationPromptsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyApplicationPromptsResponse
+        /// </returns>
+        public ApplyApplicationPromptsResponse ApplyApplicationPrompts(ApplyApplicationPromptsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ApplyApplicationPromptsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>应用提示词策略到实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApplyApplicationPromptsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyApplicationPromptsResponse
+        /// </returns>
+        public async Task<ApplyApplicationPromptsResponse> ApplyApplicationPromptsAsync(ApplyApplicationPromptsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ApplyApplicationPromptsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>挂载PolarFS到PolarDB应用</para>
         /// </summary>
         /// 
@@ -4709,6 +4865,150 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateApplicationEndpointAddressWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建应用提示词策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateApplicationPromptRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApplicationPromptResponse
+        /// </returns>
+        public CreateApplicationPromptResponse CreateApplicationPromptWithOptions(CreateApplicationPromptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptName))
+            {
+                query["PromptName"] = request.PromptName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptType))
+            {
+                query["PromptType"] = request.PromptType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptValue))
+            {
+                query["PromptValue"] = request.PromptValue;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateApplicationPrompt",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateApplicationPromptResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建应用提示词策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateApplicationPromptRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApplicationPromptResponse
+        /// </returns>
+        public async Task<CreateApplicationPromptResponse> CreateApplicationPromptWithOptionsAsync(CreateApplicationPromptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptName))
+            {
+                query["PromptName"] = request.PromptName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptType))
+            {
+                query["PromptType"] = request.PromptType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptValue))
+            {
+                query["PromptValue"] = request.PromptValue;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateApplicationPrompt",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateApplicationPromptResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建应用提示词策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateApplicationPromptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApplicationPromptResponse
+        /// </returns>
+        public CreateApplicationPromptResponse CreateApplicationPrompt(CreateApplicationPromptRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateApplicationPromptWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建应用提示词策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateApplicationPromptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApplicationPromptResponse
+        /// </returns>
+        public async Task<CreateApplicationPromptResponse> CreateApplicationPromptAsync(CreateApplicationPromptRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateApplicationPromptWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10297,6 +10597,134 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteApplicationEndpointAddressWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除应用提示词策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApplicationPromptRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApplicationPromptResponse
+        /// </returns>
+        public DeleteApplicationPromptResponse DeleteApplicationPromptWithOptions(DeleteApplicationPromptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptId))
+            {
+                query["PromptId"] = request.PromptId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteApplicationPrompt",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteApplicationPromptResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除应用提示词策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApplicationPromptRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApplicationPromptResponse
+        /// </returns>
+        public async Task<DeleteApplicationPromptResponse> DeleteApplicationPromptWithOptionsAsync(DeleteApplicationPromptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptId))
+            {
+                query["PromptId"] = request.PromptId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteApplicationPrompt",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteApplicationPromptResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除应用提示词策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApplicationPromptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApplicationPromptResponse
+        /// </returns>
+        public DeleteApplicationPromptResponse DeleteApplicationPrompt(DeleteApplicationPromptRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteApplicationPromptWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除应用提示词策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApplicationPromptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApplicationPromptResponse
+        /// </returns>
+        public async Task<DeleteApplicationPromptResponse> DeleteApplicationPromptAsync(DeleteApplicationPromptRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteApplicationPromptWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -16141,6 +16569,142 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeApplicationParametersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询当前应用下所有的应用提示词策略列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationPromptsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationPromptsResponse
+        /// </returns>
+        public DescribeApplicationPromptsResponse DescribeApplicationPromptsWithOptions(DescribeApplicationPromptsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApplicationPrompts",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApplicationPromptsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询当前应用下所有的应用提示词策略列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationPromptsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationPromptsResponse
+        /// </returns>
+        public async Task<DescribeApplicationPromptsResponse> DescribeApplicationPromptsWithOptionsAsync(DescribeApplicationPromptsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApplicationPrompts",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApplicationPromptsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询当前应用下所有的应用提示词策略列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationPromptsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationPromptsResponse
+        /// </returns>
+        public DescribeApplicationPromptsResponse DescribeApplicationPrompts(DescribeApplicationPromptsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeApplicationPromptsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询当前应用下所有的应用提示词策略列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationPromptsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationPromptsResponse
+        /// </returns>
+        public async Task<DescribeApplicationPromptsResponse> DescribeApplicationPromptsAsync(DescribeApplicationPromptsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeApplicationPromptsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -38583,6 +39147,150 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyApplicationParameterWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改应用提示词策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApplicationPromptRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApplicationPromptResponse
+        /// </returns>
+        public ModifyApplicationPromptResponse ModifyApplicationPromptWithOptions(ModifyApplicationPromptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptId))
+            {
+                query["PromptId"] = request.PromptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptName))
+            {
+                query["PromptName"] = request.PromptName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptValue))
+            {
+                query["PromptValue"] = request.PromptValue;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApplicationPrompt",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApplicationPromptResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改应用提示词策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApplicationPromptRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApplicationPromptResponse
+        /// </returns>
+        public async Task<ModifyApplicationPromptResponse> ModifyApplicationPromptWithOptionsAsync(ModifyApplicationPromptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptId))
+            {
+                query["PromptId"] = request.PromptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptName))
+            {
+                query["PromptName"] = request.PromptName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptValue))
+            {
+                query["PromptValue"] = request.PromptValue;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApplicationPrompt",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApplicationPromptResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改应用提示词策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApplicationPromptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApplicationPromptResponse
+        /// </returns>
+        public ModifyApplicationPromptResponse ModifyApplicationPrompt(ModifyApplicationPromptRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyApplicationPromptWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改应用提示词策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApplicationPromptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApplicationPromptResponse
+        /// </returns>
+        public async Task<ModifyApplicationPromptResponse> ModifyApplicationPromptAsync(ModifyApplicationPromptRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyApplicationPromptWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
