@@ -1,0 +1,49 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Cloudwifi_pop20191118.Models
+{
+    public class DeleteApSsidConfigRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("ApMac")]
+        [Validation(Required=false)]
+        public string ApMac { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("AppCode")]
+        [Validation(Required=false)]
+        public string AppCode { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("AppName")]
+        [Validation(Required=false)]
+        public string AppName { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("RadioIndex")]
+        [Validation(Required=false)]
+        public string RadioIndex { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("Ssid")]
+        [Validation(Required=false)]
+        public string Ssid { get; set; }
+
+    }
+
+}
