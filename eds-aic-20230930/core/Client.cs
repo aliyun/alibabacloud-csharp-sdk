@@ -13023,6 +13023,150 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>通过eds agent通道下发命令</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunSyncCommandRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSyncCommandResponse
+        /// </returns>
+        public RunSyncCommandResponse RunSyncCommandWithOptions(RunSyncCommandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandContent))
+            {
+                query["CommandContent"] = request.CommandContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentEncoding))
+            {
+                query["ContentEncoding"] = request.ContentEncoding;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WaitTime))
+            {
+                query["WaitTime"] = request.WaitTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunSyncCommand",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunSyncCommandResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过eds agent通道下发命令</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunSyncCommandRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSyncCommandResponse
+        /// </returns>
+        public async Task<RunSyncCommandResponse> RunSyncCommandWithOptionsAsync(RunSyncCommandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandContent))
+            {
+                query["CommandContent"] = request.CommandContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentEncoding))
+            {
+                query["ContentEncoding"] = request.ContentEncoding;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WaitTime))
+            {
+                query["WaitTime"] = request.WaitTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunSyncCommand",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunSyncCommandResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过eds agent通道下发命令</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunSyncCommandRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSyncCommandResponse
+        /// </returns>
+        public RunSyncCommandResponse RunSyncCommand(RunSyncCommandRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RunSyncCommandWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过eds agent通道下发命令</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunSyncCommandRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSyncCommandResponse
+        /// </returns>
+        public async Task<RunSyncCommandResponse> RunSyncCommandAsync(RunSyncCommandRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RunSyncCommandWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Pushes files from Object Storage Service (OSS) buckets to cloud phone instances.</para>
         /// </summary>
         /// 
