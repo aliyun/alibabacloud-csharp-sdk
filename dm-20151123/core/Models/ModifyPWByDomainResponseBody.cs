@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         /// <para>Description of the status code</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>请求成功</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

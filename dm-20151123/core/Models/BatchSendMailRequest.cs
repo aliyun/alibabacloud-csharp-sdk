@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class BatchSendMailRequest : TeaModel {
         /// <summary>
-        /// <para>The sending address configured in the management console.</para>
+        /// <para>The sender address configured in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>0: Random account</description></item>
-        /// <item><description>1: Sending address</description></item>
+        /// <item><description><para>0: Random account</para>
+        /// </description></item>
+        /// <item><description><para>1: Sender address</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,8 +38,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>1: Enable data tracking function</description></item>
-        /// <item><description>0 (default): Disable data tracking function</description></item>
+        /// <item><description><para>1: Enables the data tracking feature.</para>
+        /// </description></item>
+        /// <item><description><para>0 (default): Disables the data tracking feature.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,29 +51,60 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string ClickTrace { get; set; }
 
+        /// <summary>
+        /// <para>Enables domain-level authentication.</para>
+        /// <list type="bullet">
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Use this parameter only for domain-level authentication. Ignore it for sender address-level authentication.</para>
+        /// <para>1\. The console creates the address \<c>domain-auth-created-by-system\\@example.com\\</c>. Do not change the prefix before the at sign (@). Replace the domain suffix with your own domain.</para>
+        /// <para>2\.</para>
+        /// <para><b>API scenario</b></para>
+        /// <para>Set \<c>AccountName\\</c> to your domain. Recipients see \<c>domain-auth-created-by-system\\@example.com\\</c> as the sender.</para>
+        /// <para><b>SMTP scenario</b></para>
+        /// <para>a. Use the \<c>ModifyPWByDomain\\</c> API to set a password for your domain.</para>
+        /// <para>b. Authenticate using your domain and the password. Set the actual sender address (\<c>mailfrom\\</c>) to a custom address, such as \<c>user\\@example.com\\</c>. Recipients see \<c>user\\@example.com\\</c> as the sender.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("DomainAuth")]
         [Validation(Required=false)]
         public bool? DomainAuth { get; set; }
 
         /// <summary>
-        /// <para>Currently, the standard fields that can be added to the email header are Message-ID, List-Unsubscribe, and List-Unsubscribe-Post. Standard fields will overwrite the existing values in the email header, while non-standard fields must start with X-User- and will be appended to the email header. Currently, up to 10 headers can be passed in JSON format, and both standard and non-standard fields must comply with the syntax requirements for headers.</para>
+        /// <para>Message header settings.</para>
+        /// <para>All fields, standard or non-standard, must follow standard header syntax. For API calls, the \<c>headers\\</c> field supports up to 10 headers. Any headers beyond this limit are ignored. SMTP does not have a header limit.</para>
+        /// <para>1\. Standard fields</para>
+        /// <para>\<c>Message-ID\\</c>, \<c>List-Unsubscribe\\</c>, \<c>List-Unsubscribe-Post\\</c></para>
+        /// <para>Standard fields overwrite existing values in the message header.</para>
+        /// <para>2\. Non-standard fields</para>
+        /// <para>Case-insensitive</para>
+        /// <para>a. Start with \<c>X-User-\\</c>. These fields are not pushed to EventBridge or Message Service. They are required only for API calls. SMTP supports any custom header.</para>
+        /// <para>b. Start with \<c>X-User-Notify-\\</c>. These fields are pushed to EventBridge and Message Service. They are supported by both API and SMTP.</para>
+        /// <para>When pushed to EventBridge or Message Service, these fields appear under the \<c>headers\\</c> object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///   &quot;Message-ID&quot;: &quot;<a href="mailto:msg0001@example.com">msg0001@example.com</a>&quot;,
-        ///   &quot;X-User-UID1&quot;: &quot;UID-1-000001&quot;,
-        ///   &quot;X-User-UID2&quot;: &quot;UID-2-000001&quot;
-        /// }</para>
+        ///       &quot;Message-ID&quot;: &quot;<a href="mailto:d52ce63e-a0d5-4f95-b6a9-e1256a44f5fb@example.net">d52ce63e-a0d5-4f95-b6a9-e1256a44f5fb@example.net</a>&quot;,
+        ///       &quot;X-User-UID1&quot;: &quot;UID-1-000001&quot;,
+        ///       &quot;X-User-UID2&quot;: &quot;UID-2-000001&quot;,
+        ///       &quot;X-User-Notify-UID1&quot;: &quot;UID-3-000001&quot;,
+        ///       &quot;X-User-Notify-UID2&quot;: &quot;UID-4-000001&quot;</para>
+        /// <para>}</para>
         /// </summary>
         [NameInMap("Headers")]
         [Validation(Required=false)]
         public string Headers { get; set; }
 
         /// <summary>
-        /// <para>dedicated IP pool ID. Users who have purchased an dedicated IP can use this parameter to specify the outgoing IP for this send operation.</para>
+        /// <para>The ID of the dedicated IP address pool. If you purchased dedicated IP addresses, use this parameter to specify the egress IP address for sending the email.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>e4xxxxxe-4xx0-4xx3-8xxa-74cxxxxx1cef</para>
         /// </summary>
         [NameInMap("IpPoolId")]
         [Validation(Required=false)]
@@ -80,7 +115,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the recipient list that has been created and uploaded with recipients. Note: The recipient list should not be deleted until at least 10 minutes after the task is triggered, otherwise it may cause sending failure.</para>
+        /// <para>The name of a pre-created recipient list to which recipients have been uploaded.</para>
+        /// <para>Note:</para>
+        /// <para>The number of recipients in the list must not exceed your remaining daily quota. Otherwise, email sending fails.</para>
+        /// <para>Do not delete the recipient list for at least 10 minutes after triggering the task. Otherwise, email sending may fail.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,7 +129,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string ReceiversName { get; set; }
 
         /// <summary>
-        /// <para>Reply address</para>
+        /// <para>The reply-to address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test2***@example.net</para>
@@ -101,10 +139,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string ReplyAddress { get; set; }
 
         /// <summary>
-        /// <para>Alias for the reply address</para>
+        /// <para>The alias for the reply-to address.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Lucy</para>
+        /// <para>小红</para>
         /// </summary>
         [NameInMap("ReplyAddressAlias")]
         [Validation(Required=false)]
@@ -119,7 +157,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Email tag name.</para>
+        /// <para>The name of the email tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test3</para>
@@ -129,7 +167,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string TagName { get; set; }
 
         /// <summary>
-        /// <para>The name of the template that has been created and approved in advance.</para>
+        /// <para>The name of a pre-created and approved template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -140,13 +178,18 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>Filtering level. Refer to the <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe Function Link Generation and Filtering Mechanism</a> document.</para>
+        /// <para>The filtering level. For more information, see <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe link generation and filtering mechanism</a>.</para>
         /// <list type="bullet">
-        /// <item><description>disabled: No filtering</description></item>
-        /// <item><description>default: Use the default strategy, bulk addresses use sender address-level filtering</description></item>
-        /// <item><description>mailfrom: Sender address-level filtering</description></item>
-        /// <item><description>mailfrom_domain: Sender domain-level filtering</description></item>
-        /// <item><description>edm_id: Account-level filtering</description></item>
+        /// <item><description><para>disabled: No filtering.</para>
+        /// </description></item>
+        /// <item><description><para>default: Uses the default policy. Batch emails are filtered at the sender address level.</para>
+        /// </description></item>
+        /// <item><description><para>mailfrom: Filters at the sender address level.</para>
+        /// </description></item>
+        /// <item><description><para>mailfrom_domain: Filters at the email domain level.</para>
+        /// </description></item>
+        /// <item><description><para>edm_id: Filters at the account level.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -157,15 +200,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string UnSubscribeFilterLevel { get; set; }
 
         /// <summary>
-        /// <para>The type of generated unsubscribe link. Refer to the <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe Function Link Generation and Filtering Mechanism</a> document.</para>
+        /// <para>The type of unsubscribe link to generate. For more information, see <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe link generation and filtering mechanism</a>.</para>
         /// <list type="bullet">
-        /// <item><description>disabled: Do not generate</description></item>
-        /// <item><description>default: Use the default strategy: Generate an unsubscribe link when a bulk-type sending address sends to specific domains, such as those containing keywords like &quot;gmail&quot;, &quot;yahoo&quot;,
-        /// &quot;google&quot;, &quot;aol.com&quot;, &quot;hotmail&quot;,
-        /// &quot;outlook&quot;, &quot;ymail.com&quot;, etc.</description></item>
-        /// <item><description>zh-cn: Generate, for future content preparation</description></item>
-        /// <item><description>en-us: Generate, for future content preparation</description></item>
+        /// <item><description><para>disabled: Does not generate a link.</para>
+        /// </description></item>
+        /// <item><description><para>default: Uses the default policy. An unsubscribe link is generated when batch emails are sent from a sender address to specific domains, such as those containing the keywords &quot;gmail&quot;, &quot;yahoo&quot;, &quot;google&quot;, &quot;aol.com&quot;, &quot;hotmail&quot;, &quot;outlook&quot;, or &quot;ymail.com&quot;.</para>
+        /// </description></item>
         /// </list>
+        /// <para>The language of the unsubscribe link matches the recipient\&quot;s browser language setting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>

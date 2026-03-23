@@ -49,9 +49,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
-        /// <summary>
-        /// <para>Data records</para>
-        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetIpfilterListResponseBodyData Data { get; set; }
@@ -60,34 +57,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<GetIpfilterListResponseBodyDataIpfilters> Ipfilters { get; set; }
             public class GetIpfilterListResponseBodyDataIpfilters : TeaModel {
-                /// <summary>
-                /// <para>timestamp</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1653547140</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
-                /// <summary>
-                /// <para>Record ID</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>10083</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
-                /// <summary>
-                /// <para>IP address/IP range/IP segment</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>xxx.xxx.xxx.xxx
-                /// xxx.xxx.xxx.xxx-xxx.xxx.xxx.xxx
-                /// xxx.xxx.xxx.xxx/xxx</para>
-                /// </summary>
                 [NameInMap("IpAddress")]
                 [Validation(Required=false)]
                 public string IpAddress { get; set; }

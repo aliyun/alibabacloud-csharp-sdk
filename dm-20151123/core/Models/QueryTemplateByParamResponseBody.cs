@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryTemplateByParamResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10Axxxxxxxxxxxx37</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>21</para>
         /// </summary>
@@ -49,10 +57,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<QueryTemplateByParamResponseBodyDataTemplate> Template { get; set; }
             public class QueryTemplateByParamResponseBodyDataTemplate : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2019-09-29T13:28Z</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
@@ -73,26 +77,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 [Validation(Required=false)]
                 public string TemplateComment { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>3xxxx8</para>
-                /// </summary>
                 [NameInMap("TemplateId")]
                 [Validation(Required=false)]
                 public string TemplateId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("TemplateName")]
                 [Validation(Required=false)]
                 public string TemplateName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("TemplateStatus")]
                 [Validation(Required=false)]
                 public string TemplateStatus { get; set; }
@@ -101,10 +93,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 [Validation(Required=false)]
                 public int? TemplateType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1661830382</para>
-                /// </summary>
                 [NameInMap("UtcCreatetime")]
                 [Validation(Required=false)]
                 public long? UtcCreatetime { get; set; }

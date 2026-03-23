@@ -8,26 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
-    public class CreateTagResponseBody : TeaModel {
+    public class GetSendifyAutoLoginURLResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>10A1AD70-E48E-476D-98D9-39BD92193837</para>
+        /// <para><a href="https://dingstore.cn">https://dingstore.cn</a></para>
+        /// </summary>
+        [NameInMap("AutoLoginURL")]
+        [Validation(Required=false)]
+        public string AutoLoginURL { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123423</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// <para>The tag ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>91141</para>
-        /// </summary>
-        [NameInMap("TagId")]
-        [Validation(Required=false)]
-        public string TagId { get; set; }
 
     }
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DedicatedIpListRequest : TeaModel {
         /// <summary>
-        /// <para>IP search keyword</para>
+        /// <para>The keyword for searching IP addresses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>Pagination index, starting from 1</para>
+        /// <para>The page number. The value starts from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>Page size</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

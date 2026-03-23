@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ConfigSetUpdateResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the configuration set.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>

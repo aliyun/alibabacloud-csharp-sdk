@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class SendValidateFileResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the file. Use this ID to query the results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yyyy-yyyy-yyyy-yyyy</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string FileId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxx</para>
         /// </summary>

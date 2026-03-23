@@ -49,9 +49,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
-        /// <summary>
-        /// <para>Detailed information</para>
-        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public QueryReceiverDetailResponseBodyData Data { get; set; }
@@ -60,42 +57,18 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<QueryReceiverDetailResponseBodyDataDetail> Detail { get; set; }
             public class QueryReceiverDetailResponseBodyDataDetail : TeaModel {
-                /// <summary>
-                /// <para>Creation Time</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-09-29T13:28Z</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
-                /// <summary>
-                /// <para>Content</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>{\&quot;Domains\&quot;: [\&quot;a.example.net\&quot;, \&quot;b.example.net\&quot;, \&quot;c.example.net\&quot;, \&quot;d.example.net\&quot;]}</para>
-                /// </summary>
                 [NameInMap("Data")]
                 [Validation(Required=false)]
                 public string Data { get; set; }
 
-                /// <summary>
-                /// <para>Recipient address</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>a***@example.net</para>
-                /// </summary>
                 [NameInMap("Email")]
                 [Validation(Required=false)]
                 public string Email { get; set; }
 
-                /// <summary>
-                /// <para>Creation time in UTC format</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1569734892</para>
-                /// </summary>
                 [NameInMap("UtcCreateTime")]
                 [Validation(Required=false)]
                 public long? UtcCreateTime { get; set; }

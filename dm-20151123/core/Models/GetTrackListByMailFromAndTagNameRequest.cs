@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class GetTrackListByMailFromAndTagNameRequest : TeaModel {
         /// <summary>
-        /// <para>Sender address.</para>
+        /// <para>The sender address.</para>
         /// <remarks>
-        /// <para>If not filled, it represents all addresses; if there is a TagName, this parameter must not be empty.</para>
+        /// <para>If you leave this parameter empty, data for all addresses is returned. This parameter is required if you specify TagName.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -22,20 +22,40 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
+        /// <summary>
+        /// <para>The configuration set ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx</para>
+        /// </summary>
         [NameInMap("ConfigSetId")]
         [Validation(Required=false)]
         public string ConfigSetId { get; set; }
 
+        /// <summary>
+        /// <para>The dedicated IP address. This parameter is available only for users of dedicated IPs.</para>
+        /// <para>If you do not specify this parameter, data for all IPs is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx.xxx.xxx.xxx</para>
+        /// </summary>
         [NameInMap("DedicatedIp")]
         [Validation(Required=false)]
         public string DedicatedIp { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the dedicated IP pool. This parameter is available only for users of dedicated IPs.</para>
+        /// <para>If you do not specify this parameter, data for all IP pools is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx</para>
+        /// </summary>
         [NameInMap("DedicatedIpPoolId")]
         [Validation(Required=false)]
         public string DedicatedIpPoolId { get; set; }
 
         /// <summary>
-        /// <para>End time, with a span from the start time that cannot exceed 15 days. Format: yyyy-MM-dd.</para>
+        /// <para>The end time. The time span between the start time and end time cannot exceed 15 days. The format is yyyy-MM-dd.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,12 +65,31 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// <para>The Email Service Provider (ESP). This parameter is available only for users of dedicated IPs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>gmail.com</para>
+        /// </description></item>
+        /// <item><description><para>yahoo.com</para>
+        /// </description></item>
+        /// <item><description><para>outlook.com</para>
+        /// </description></item>
+        /// <item><description><para>icloud.com</para>
+        /// </description></item>
+        /// <item><description><para>others (data for ESPs other than the ones listed above)</para>
+        /// </description></item>
+        /// </list>
+        /// <para>If you do not specify this parameter, data for all ESPs is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gmail.com</para>
+        /// </summary>
         [NameInMap("Esp")]
         [Validation(Required=false)]
         public string Esp { get; set; }
 
         /// <summary>
-        /// <para>For the first query, set to 0; for subsequent queries, fixed at 1. 1 indicates pagination in ascending order by time. (This field is deprecated)</para>
+        /// <para>The value is 0 for the first query and 1 for subsequent queries. A value of 1 indicates a paged query in chronological order. (This field is deprecated)</para>
         /// 
         /// <b>Example:</b>
         /// <para>（本字段已废弃）</para>
@@ -60,7 +99,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Offset { get; set; }
 
         /// <summary>
-        /// <para>Used for pagination. Not set for the first query; for subsequent queries, set to the value of OffsetCreateTime from the previous response. (This field is deprecated)</para>
+        /// <para>Used for paging. Do not set this parameter for the first query. For subsequent queries, set this parameter to the OffsetCreateTime value from the previous response. (This field is deprecated)</para>
         /// 
         /// <b>Example:</b>
         /// <para>（本字段已废弃）</para>
@@ -84,7 +123,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Current page number</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -94,7 +133,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -112,7 +151,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Start time, which cannot be earlier than 30 days. Format: yyyy-MM-dd.</para>
+        /// <para>The start time. The time cannot be earlier than 30 days ago. The format is yyyy-MM-dd.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -123,7 +162,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>Email tag. If not filled, it represents all tags.</para>
+        /// <para>The email tag. If you leave this parameter empty, data for all tags is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Subscription</para>

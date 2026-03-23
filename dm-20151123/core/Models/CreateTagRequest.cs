@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Tag description</para>
+        /// <para>The description of the tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test description</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string TagDescription { get; set; }
 
         /// <summary>
-        /// <para>Tag name. Limitations: 1-50 characters, allowing English letters, numbers, and underscores.</para>
+        /// <para>The tag name. The name must be 1 to 128 characters long and can contain letters, digits, and underscores (_).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

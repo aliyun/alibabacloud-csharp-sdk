@@ -53,8 +53,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>0 indicates normal</description></item>
-        /// <item><description>1 indicates abnormal</description></item>
+        /// <item><description><para>0 indicates normal</para>
+        /// </description></item>
+        /// <item><description><para>1 indicates abnormal</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

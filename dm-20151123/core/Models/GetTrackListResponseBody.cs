@@ -10,27 +10,27 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class GetTrackListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Used for pagination. Not set for the first query, but for subsequent queries, it should be set to the value of OffsetCreateTime from the previous response. (This field is deprecated)</para>
+        /// <para>Used for pagination. Do not set this parameter for the first request. For subsequent requests, set this parameter to the OffsetCreateTime value from the previous response. (This field is deprecated.)</para>
         /// 
         /// <b>Example:</b>
-        /// <para>(This field is deprecated)</para>
+        /// <para>（本字段已废弃）</para>
         /// </summary>
         [NameInMap("OffsetCreateTime")]
         [Validation(Required=false)]
         public string OffsetCreateTime { get; set; }
 
         /// <summary>
-        /// <para>(This field is deprecated)</para>
+        /// <para>(This field is deprecated.)</para>
         /// 
         /// <b>Example:</b>
-        /// <para>(This field is deprecated)</para>
+        /// <para>（本字段已废弃）</para>
         /// </summary>
         [NameInMap("OffsetCreateTimeDesc")]
         [Validation(Required=false)]
         public string OffsetCreateTimeDesc { get; set; }
 
         /// <summary>
-        /// <para>Current page number</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The unique identifier for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10A1AD70-E48E-476D-98D9-39BD92193837</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of items</para>
+        /// <para>The total number of matching records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -69,13 +69,16 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public int? Total { get; set; }
 
+        /// <summary>
+        /// <para>The total number of pages.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("TotalPages")]
         [Validation(Required=false)]
         public int? TotalPages { get; set; }
 
-        /// <summary>
-        /// <para>Tracking data records</para>
-        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetTrackListResponseBodyData Data { get; set; }
@@ -84,102 +87,42 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<GetTrackListResponseBodyDataStat> Stat { get; set; }
             public class GetTrackListResponseBodyDataStat : TeaModel {
-                /// <summary>
-                /// <para>Creation time</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-09-29T13:28Z</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
-                /// <summary>
-                /// <para>Click count</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("RcptClickCount")]
                 [Validation(Required=false)]
                 public string RcptClickCount { get; set; }
 
-                /// <summary>
-                /// <para>Click rate</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("RcptClickRate")]
                 [Validation(Required=false)]
                 public string RcptClickRate { get; set; }
 
-                /// <summary>
-                /// <para>Number of Opens</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("RcptOpenCount")]
                 [Validation(Required=false)]
                 public string RcptOpenCount { get; set; }
 
-                /// <summary>
-                /// <para>Open rate</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("RcptOpenRate")]
                 [Validation(Required=false)]
                 public string RcptOpenRate { get; set; }
 
-                /// <summary>
-                /// <para>Unique click count</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("RcptUniqueClickCount")]
                 [Validation(Required=false)]
                 public string RcptUniqueClickCount { get; set; }
 
-                /// <summary>
-                /// <para>Unique click rate</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("RcptUniqueClickRate")]
                 [Validation(Required=false)]
                 public string RcptUniqueClickRate { get; set; }
 
-                /// <summary>
-                /// <para>Unique open count</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("RcptUniqueOpenCount")]
                 [Validation(Required=false)]
                 public string RcptUniqueOpenCount { get; set; }
 
-                /// <summary>
-                /// <para>Unique open rate</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("RcptUniqueOpenRate")]
                 [Validation(Required=false)]
                 public string RcptUniqueOpenRate { get; set; }
 
-                /// <summary>
-                /// <para>Total number</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("TotalNumber")]
                 [Validation(Required=false)]
                 public string TotalNumber { get; set; }

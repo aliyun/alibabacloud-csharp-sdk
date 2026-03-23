@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class GetValidationQuotaResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total available quota.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? TotalQuota { get; set; }
 
         /// <summary>
+        /// <para>The used quota.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

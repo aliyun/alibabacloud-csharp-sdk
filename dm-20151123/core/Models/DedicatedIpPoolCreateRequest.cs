@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DedicatedIpPoolCreateRequest : TeaModel {
         /// <summary>
-        /// <para>Purchased IP instance IDs, separated by commas; derived from the IP purchase instance IDs returned by the DedicatedIpNonePoolList interface.</para>
+        /// <para>The IDs of the purchased IP instances. Separate multiple IDs with commas (,). You can obtain the instance IDs from the response of the DedicatedIpNonePoolList operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx,xxx</para>
@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string BuyResourceIds { get; set; }
 
         /// <summary>
-        /// <para>IP pool name;
-        /// Length should be 1-50 characters, allowing English letters, numbers, _, and -. The name cannot be modified after the IP pool is created.</para>
+        /// <para>The name of the IP pool. The name must be 1 to 50 characters in length. It can contain letters, digits, underscores (_), and hyphens (-). The name cannot be changed after the IP pool is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>

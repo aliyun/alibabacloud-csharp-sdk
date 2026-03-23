@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class GetValidateFileResponseBody : TeaModel {
         /// <summary>
+        /// <para>The download URL of the result file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxxxx/yyy">https://xxxxxx/yyy</a></para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string FileUrl { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yyyy-yyyy-yyyy-yyyy</para>
         /// </summary>

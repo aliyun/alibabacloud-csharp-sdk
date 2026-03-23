@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="mailto:test1@example.com">test1@example.com</a></para>
+        /// <para>账号+@+域名</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         /// <para>Reply-to address</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="mailto:test2@example.com">test2@example.com</a></para>
+        /// <para>test1***@example.net</para>
         /// </summary>
         [NameInMap("ReplyAddress")]
         [Validation(Required=false)]

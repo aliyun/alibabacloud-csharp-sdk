@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class GetValidateFileRequest : TeaModel {
         /// <summary>
+        /// <para>The file ID returned after the task is submitted.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxx</para>
         /// </summary>

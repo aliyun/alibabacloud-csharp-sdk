@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ConfigSetDeleteRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the configuration sets. Separate multiple IDs with commas. This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Ids { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to force delete the associations with sender addresses.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -34,13 +34,18 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 
         /// <summary>
         /// <para>The selector field in the DKIM protocol, used to identify a specific public key. It is recommended to leave it blank, as the system will automatically generate it based on cluster information. If the user specifies it manually, for example, if the sending domain is &quot;sub.example.com&quot; and dkimSelector is set to &quot;default&quot;, then the host record will be &quot;default._domainkey.sub&quot;
-        /// Constraints: </para>
+        /// Constraints:</para>
         /// <ol>
-        /// <item><description>The length must not exceed 60 characters. </description></item>
-        /// <item><description>It must consist of visible characters only. </description></item>
-        /// <item><description>It cannot start with a hyphen (-). </description></item>
-        /// <item><description>It cannot end with a hyphen (-). </description></item>
-        /// <item><description>It cannot contain any of the following characters: _ :;/!*~.@#$%^&amp;()+=[{]}|?&lt;&gt;,\&quot;&quot;</description></item>
+        /// <item><description><para>The length must not exceed 60 characters.</para>
+        /// </description></item>
+        /// <item><description><para>It must consist of visible characters only.</para>
+        /// </description></item>
+        /// <item><description><para>It cannot start with a hyphen (-).</para>
+        /// </description></item>
+        /// <item><description><para>It cannot end with a hyphen (-).</para>
+        /// </description></item>
+        /// <item><description><para>It cannot contain any of the following characters: _ :;/!\*\~.@#$%^&amp;()+=[{]}|?&lt;&gt;,\&quot;&quot;</para>
+        /// </description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>

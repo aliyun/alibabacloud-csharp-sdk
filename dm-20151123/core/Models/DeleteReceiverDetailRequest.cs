@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         /// <para>The single recipient to be deleted from the recipient list</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="mailto:test@example.com">test@example.com</a></para>
+        /// <para>账号+@+域名</para>
         /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]

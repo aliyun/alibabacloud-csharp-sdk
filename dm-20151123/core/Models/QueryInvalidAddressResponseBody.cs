@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
-        /// <summary>
-        /// <para>Records.</para>
-        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public QueryInvalidAddressResponseBodyData Data { get; set; }
@@ -50,32 +47,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<QueryInvalidAddressResponseBodyDataMailDetail> MailDetail { get; set; }
             public class QueryInvalidAddressResponseBodyDataMailDetail : TeaModel {
-                /// <summary>
-                /// <para>Update time.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2021-04-28T17:11Z</para>
-                /// </summary>
                 [NameInMap("LastUpdateTime")]
                 [Validation(Required=false)]
                 public string LastUpdateTime { get; set; }
 
-                /// <summary>
-                /// <para>Recipient address.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="mailto:toaddress@example.com">toaddress@example.com</a></para>
-                /// </summary>
                 [NameInMap("ToAddress")]
                 [Validation(Required=false)]
                 public string ToAddress { get; set; }
 
-                /// <summary>
-                /// <para>Update time (in timestamp format).</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1619601108</para>
-                /// </summary>
                 [NameInMap("UtcLastUpdateTime")]
                 [Validation(Required=false)]
                 public long? UtcLastUpdateTime { get; set; }

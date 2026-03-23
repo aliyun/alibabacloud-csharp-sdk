@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ValidateEmailResponseBody : TeaModel {
         /// <summary>
+        /// <para>The domain part of the email address parsed from the syntax check. The domain part is converted to lowercase.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yyy.com</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string DomainPart { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the address is from a free email service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public bool? IsFreeMail { get; set; }
 
         /// <summary>
+        /// <para>The local part of the email address parsed from the syntax check. The local part is converted to lowercase and the content after the plus sign (+) is removed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string LocalPart { get; set; }
 
         /// <summary>
+        /// <para>The email service provider of the address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Gmail</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Provider { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxx</para>
         /// </summary>
@@ -50,6 +60,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The validation status of the email address.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +71,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The detailed validation status of the email address. This provides more information about the Status.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

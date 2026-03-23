@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DescDomainResponseBody : TeaModel {
         /// <summary>
-        /// <para>CNAME verification flag, 0 for success, 1 for failure.</para>
+        /// <para>The CNAME authentication flag. 0: Succeeded. 1: Failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string CnameAuthStatus { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the CNAME host record has been modified, 1 for modified (reverting to the original value also counts as modification), 0 for not modified.</para>
+        /// <para>Indicates whether the CNAME host record was modified. A value of 1 means the record was modified. Reverting to the original value is also considered a modification. A value of 0 means the record was not modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string CnameConfirmStatus { get; set; }
 
         /// <summary>
-        /// <para>Custom part of the CNAME host record</para>
+        /// <para>The custom part of the CNAME host record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dmtrace</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string CnameRecord { get; set; }
 
         /// <summary>
-        /// <para>Creation time</para>
+        /// <para>The time when the domain name was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-19T12:49Z</para>
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Whether it is the default domain,</para>
-        /// <para>Value: 0 No (this field is deprecated)</para>
+        /// <para>Indicates whether the domain name is the default domain name.</para>
+        /// <para>Value: 0 (No). This field is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string DefaultDomain { get; set; }
 
         /// <summary>
-        /// <para>DKIM verification flag, indicating whether the DKIM record set by the user in DNS has passed validation, 0: Passed, 1: Not passed</para>
+        /// <para>The DKIM authentication flag. Indicates if the DKIM record in your DNS settings passed verification. 0: Passed. 1: Not passed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string DkimAuthStatus { get; set; }
 
         /// <summary>
-        /// <para>DKIM public key value, the value that users need to set for the DKIM record in DNS</para>
+        /// <para>The DKIM public key. This is the value of the DKIM record to configure in your DNS settings.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v=DKIM1; k=rsa; p=MIGfMA0GCSqGSI...</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string DkimPublicKey { get; set; }
 
         /// <summary>
-        /// <para>DKIM host record, the key that the user needs to set in the DNS for the DKIM record</para>
+        /// <para>The DKIM host record. This is the key of the DKIM record to configure in your DNS settings.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun-cn-hangzhou._domainkey.hangzhou26</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? DkimRsaLength { get; set; }
 
         /// <summary>
-        /// <para>DMARC verification flag, indicating whether the DMARC record set by the user in DNS has passed validation, 0: Passed, 1: Not passed</para>
+        /// <para>The DMARC authentication flag. Indicates if the DMARC record in your DNS settings passed verification. 0: Passed. 1: Not passed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? DmarcAuthStatus { get; set; }
 
         /// <summary>
-        /// <para>DMARC host record value</para>
+        /// <para>The DMARC host record value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>_dmarc.xxx</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string DmarcHostRecord { get; set; }
 
         /// <summary>
-        /// <para>DMARC record value</para>
+        /// <para>The DMARC record value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v=DMARC1;p=none;rua=mailto:<a href="mailto:dmarc_report@service.aliyun.com">dmarc_report@service.aliyun.com</a></para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string DmarcRecord { get; set; }
 
         /// <summary>
-        /// <para>DMARC record value resolved through the public domain name</para>
+        /// <para>The DMARC record value parsed from the public domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v=DMARC1;p=none;rua=mailto:<a href="mailto:dmarc_report@service.aliyun.com">dmarc_report@service.aliyun.com</a></para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string DnsDmarc { get; set; }
 
         /// <summary>
-        /// <para>MX record value resolved from the public network domain</para>
+        /// <para>The MX record value parsed from the public domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mx01.dm.aliyun.com</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string DnsMx { get; set; }
 
         /// <summary>
-        /// <para>SPF record value resolved from the public network domain</para>
+        /// <para>The SPF record value parsed from the public domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v=xxxx</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string DnsSpf { get; set; }
 
         /// <summary>
-        /// <para>Ownership record value resolved from the public network domain</para>
+        /// <para>The ownership record value parsed from the public domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c40d5f125af4e42892a</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string DnsTxt { get; set; }
 
         /// <summary>
-        /// <para>Domain ID</para>
+        /// <para>The domain name ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>158910</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string DomainId { get; set; }
 
         /// <summary>
-        /// <para>Domain name</para>
+        /// <para>The domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test.example.net</para>
@@ -185,10 +185,12 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>Domain status. Indicates whether the verification was successful, with values:</para>
+        /// <para>The domain status. This indicates whether the domain name passed authentication. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Available, verified successfully</description></item>
-        /// <item><description><b>1</b>: Unavailable, verification failed</description></item>
+        /// <item><description><para><b>0</b>: Active. The domain name passed authentication.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Inactive. The domain name failed authentication.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -199,7 +201,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string DomainStatus { get; set; }
 
         /// <summary>
-        /// <para>Ownership record provided by the email push console</para>
+        /// <para>The ownership record provided by the Direct Mail console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c40d5f125af4e42892a</para>
@@ -209,7 +211,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string DomainType { get; set; }
 
         /// <summary>
-        /// <para>Host record</para>
+        /// <para>The host record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -219,7 +221,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string HostRecord { get; set; }
 
         /// <summary>
-        /// <para>Filing status. <b>1</b> indicates filed, <b>0</b> indicates not filed.</para>
+        /// <para>The ICP filing status. <b>1</b> indicates that the domain name has an ICP filing. <b>0</b> indicates that the domain name does not have an ICP filing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -229,7 +231,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string IcpStatus { get; set; }
 
         /// <summary>
-        /// <para>MX verification flag, 0 for success, 1 for failure.</para>
+        /// <para>The MX authentication flag. 0: Succeeded. 1: Failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -239,7 +241,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string MxAuthStatus { get; set; }
 
         /// <summary>
-        /// <para>MX record value provided by the email push console</para>
+        /// <para>The MX record value provided by the Direct Mail console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mx01.dm.aliyun.com</para>
@@ -249,7 +251,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string MxRecord { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>51B74264-46B4-43C8-A9A0-6B8E8BC04F34</para>
@@ -259,7 +261,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>SPF verification flag, 0 for success, 1 for failure.</para>
+        /// <para>The SPF authentication flag. 0: Succeeded. 1: Failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -269,7 +271,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string SpfAuthStatus { get; set; }
 
         /// <summary>
-        /// <para>SPF record value provided by the email push console</para>
+        /// <para>The SPF record value provided by the Direct Mail console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>include:spf1.dm.aliyun.com</para>
@@ -279,7 +281,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string SpfRecord { get; set; }
 
         /// <summary>
-        /// <para>SPF record. Previously, the SPF display content needed to be calculated by the calling end based on the spfRecord in the response. The new field spfRecordV2 replaces spfRecord, and the calling end can directly display this field after obtaining it;</para>
+        /// <para>The SPF record. This field replaces the \<c>spfRecord\\</c> field. You can directly display the value of this field without needing to calculate it from the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v=spf1 include:spf1.dm.aliyun.com -all</para>
@@ -289,7 +291,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string SpfRecordV2 { get; set; }
 
         /// <summary>
-        /// <para>Primary domain</para>
+        /// <para>The primary domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -299,7 +301,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string TlDomainName { get; set; }
 
         /// <summary>
-        /// <para>CNAME record value provided by the email push console</para>
+        /// <para>The CNAME record value provided by the Direct Mail console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tracedm.aliyuncs.com</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DedicatedIpAutoRenewalResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>

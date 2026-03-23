@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ConfigSetListRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to query all configuration sets. This parameter is optional.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public bool? All { get; set; }
 
         /// <summary>
+        /// <para>The keyword to search by name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The page index. The value starts from 1. This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string PageIndex { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

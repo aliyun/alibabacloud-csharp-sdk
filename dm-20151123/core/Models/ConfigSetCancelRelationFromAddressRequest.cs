@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ConfigSetCancelRelationFromAddressRequest : TeaModel {
         /// <summary>
+        /// <para>The sender address. This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:xxx@xxx.com">xxx@xxx.com</a></para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string FromAddress { get; set; }
 
         /// <summary>
+        /// <para>The ID of the configuration set. This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
