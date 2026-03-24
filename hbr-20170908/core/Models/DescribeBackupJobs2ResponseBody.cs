@@ -285,6 +285,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public string TableName { get; set; }
 
+                [NameInMap("TriggerMode")]
+                [Validation(Required=false)]
+                public string TriggerMode { get; set; }
+
                 [NameInMap("UpdatedTime")]
                 [Validation(Required=false)]
                 public long? UpdatedTime { get; set; }
