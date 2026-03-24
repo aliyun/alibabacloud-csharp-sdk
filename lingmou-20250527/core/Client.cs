@@ -319,6 +319,152 @@ namespace AlibabaCloud.SDK.LingMou20250527
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>复制播报方案（从模版）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CopyBroadcastSceneFromTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CopyBroadcastSceneFromTemplateResponse
+        /// </returns>
+        public CopyBroadcastSceneFromTemplateResponse CopyBroadcastSceneFromTemplateWithOptions(CopyBroadcastSceneFromTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ratio))
+            {
+                body["ratio"] = request.Ratio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["templateId"] = request.TemplateId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CopyBroadcastSceneFromTemplate",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/customer/broadcast/template/scene/copyByTemplate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CopyBroadcastSceneFromTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>复制播报方案（从模版）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CopyBroadcastSceneFromTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CopyBroadcastSceneFromTemplateResponse
+        /// </returns>
+        public async Task<CopyBroadcastSceneFromTemplateResponse> CopyBroadcastSceneFromTemplateWithOptionsAsync(CopyBroadcastSceneFromTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ratio))
+            {
+                body["ratio"] = request.Ratio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["templateId"] = request.TemplateId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CopyBroadcastSceneFromTemplate",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/customer/broadcast/template/scene/copyByTemplate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CopyBroadcastSceneFromTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>复制播报方案（从模版）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CopyBroadcastSceneFromTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CopyBroadcastSceneFromTemplateResponse
+        /// </returns>
+        public CopyBroadcastSceneFromTemplateResponse CopyBroadcastSceneFromTemplate(CopyBroadcastSceneFromTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CopyBroadcastSceneFromTemplateWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>复制播报方案（从模版）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CopyBroadcastSceneFromTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CopyBroadcastSceneFromTemplateResponse
+        /// </returns>
+        public async Task<CopyBroadcastSceneFromTemplateResponse> CopyBroadcastSceneFromTemplateAsync(CopyBroadcastSceneFromTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CopyBroadcastSceneFromTemplateWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建背景素材</para>
         /// </summary>
         /// 
@@ -2805,6 +2951,168 @@ namespace AlibabaCloud.SDK.LingMou20250527
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListPrivateTTSVoicesCustomWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举播报方案模板（公共的播报方案模板）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPublicBroadcastSceneTemplatesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPublicBroadcastSceneTemplatesResponse
+        /// </returns>
+        public ListPublicBroadcastSceneTemplatesResponse ListPublicBroadcastSceneTemplatesWithOptions(ListPublicBroadcastSceneTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["tags"] = request.Tags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPublicBroadcastSceneTemplates",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/customer/broadcast/template/scene/listPublic",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPublicBroadcastSceneTemplatesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举播报方案模板（公共的播报方案模板）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPublicBroadcastSceneTemplatesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPublicBroadcastSceneTemplatesResponse
+        /// </returns>
+        public async Task<ListPublicBroadcastSceneTemplatesResponse> ListPublicBroadcastSceneTemplatesWithOptionsAsync(ListPublicBroadcastSceneTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["tags"] = request.Tags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPublicBroadcastSceneTemplates",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/customer/broadcast/template/scene/listPublic",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPublicBroadcastSceneTemplatesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举播报方案模板（公共的播报方案模板）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPublicBroadcastSceneTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPublicBroadcastSceneTemplatesResponse
+        /// </returns>
+        public ListPublicBroadcastSceneTemplatesResponse ListPublicBroadcastSceneTemplates(ListPublicBroadcastSceneTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListPublicBroadcastSceneTemplatesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举播报方案模板（公共的播报方案模板）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPublicBroadcastSceneTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPublicBroadcastSceneTemplatesResponse
+        /// </returns>
+        public async Task<ListPublicBroadcastSceneTemplatesResponse> ListPublicBroadcastSceneTemplatesAsync(ListPublicBroadcastSceneTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListPublicBroadcastSceneTemplatesWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
