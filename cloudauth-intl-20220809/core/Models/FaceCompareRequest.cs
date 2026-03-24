@@ -29,6 +29,15 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string MerchantBizId { get; set; }
 
+        /// <summary>
+        /// <para>The Base64 encoding of the portrait photo.</para>
+        /// <remarks>
+        /// <para>If you use this method to pass the image, check the image size. Do not pass an oversized image.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/9j/4AAQSkZJRgABAQAASxxxxxxx</para>
+        /// </summary>
         [NameInMap("SourceFacePicture")]
         [Validation(Required=false)]
         public string SourceFacePicture { get; set; }
@@ -46,6 +55,15 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string SourceFacePictureUrl { get; set; }
 
+        /// <summary>
+        /// <para>The Base64 encoding of the base photo.</para>
+        /// <remarks>
+        /// <para>If you use this method to pass the image, check the image size. Do not pass an oversized image.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/9j/4AAQSkZJRgABAQAASxxxxxxx</para>
+        /// </summary>
         [NameInMap("TargetFacePicture")]
         [Validation(Required=false)]
         public string TargetFacePicture { get; set; }

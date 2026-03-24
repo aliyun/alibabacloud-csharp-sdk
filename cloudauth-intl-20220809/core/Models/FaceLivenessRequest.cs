@@ -25,6 +25,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string Crop { get; set; }
 
+        /// <summary>
+        /// <para>The Base64-encoded image. If you use this parameter to pass the facial image, check the image size. Do not pass an oversized image.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dsjisaj***oekwodsm</para>
+        /// </summary>
         [NameInMap("FacePictureBase64")]
         [Validation(Required=false)]
         public string FacePictureBase64 { get; set; }

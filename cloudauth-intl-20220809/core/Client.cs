@@ -6878,7 +6878,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改人脸库</para>
+        /// <para>Modify Face Group</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6928,7 +6928,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改人脸库</para>
+        /// <para>Modify Face Group</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6978,7 +6978,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改人脸库</para>
+        /// <para>Modify Face Group</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6996,7 +6996,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改人脸库</para>
+        /// <para>Modify Face Group</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7014,7 +7014,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增人脸</para>
+        /// <para>Add New Face</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7060,7 +7060,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增人脸</para>
+        /// <para>Add New Face</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7106,7 +7106,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增人脸</para>
+        /// <para>Add New Face</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7124,7 +7124,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增人脸</para>
+        /// <para>Add New Face</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7142,7 +7142,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询人脸库</para>
+        /// <para>Query Face Group</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7204,7 +7204,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询人脸库</para>
+        /// <para>Query Face Group</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7266,7 +7266,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询人脸库</para>
+        /// <para>Query Face Group</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7284,7 +7284,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询人脸库</para>
+        /// <para>Query Face Group</para>
         /// </summary>
         /// 
         /// <param name="request">

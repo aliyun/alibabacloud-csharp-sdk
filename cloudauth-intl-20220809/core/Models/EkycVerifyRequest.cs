@@ -88,6 +88,15 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string DocType { get; set; }
 
+        /// <summary>
+        /// <para>The Base64 encoding of the portrait image.</para>
+        /// <remarks>
+        /// <para>If you use this method to pass the certificate image, check the image size. Do not pass an oversized image.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dsjisaj***oekwodsm</para>
+        /// </summary>
         [NameInMap("FacePictureBase64")]
         [Validation(Required=false)]
         public string FacePictureBase64 { get; set; }
@@ -102,6 +111,15 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string FacePictureUrl { get; set; }
 
+        /// <summary>
+        /// <para>The Base64 encoding of the certificate image.</para>
+        /// <remarks>
+        /// <para>If you use this method to pass the certificate image, check the image size. Do not pass an oversized image.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dsjisaj***oekwodsm</para>
+        /// </summary>
         [NameInMap("IdOcrPictureBase64")]
         [Validation(Required=false)]
         public string IdOcrPictureBase64 { get; set; }

@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtIdInfo { get; set; }
 
             /// <summary>
-            /// <para>Extended information</para>
+            /// <para>Extended information, in JSON string format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -106,6 +106,25 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             [Validation(Required=false)]
             public string ExtRiskInfo { get; set; }
 
+            /// <summary>
+            /// <para>Detailed verification results from the data source (example using Indonesian data sources):</para>
+            /// <list type="bullet">
+            /// <item><description><b>govId, fullName, dob</b>: A comparison score of 1.0 indicates complete consistency with the official data source; less than 1.0 indicates inconsistency. </description></item>
+            /// <item><description><b>selfiePhoto</b>: A comparison score greater than 0.8 indicates consistency with the official data source; less than or equal to 0.8 indicates inconsistency. </description></item>
+            /// <item><description><b>liveness</b>: A score higher than 0.95 indicates a risk of liveness detection. </description></item>
+            /// <item><description><b>imgManipulationScore</b>: A score higher than 0.95 indicates a risk of image manipulation.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            ///   &quot;govId&quot;: 1.0,
+            ///   &quot;fullName&quot;: 1.0,
+            ///   &quot;dob&quot;: 0.9,
+            ///   &quot;selfiePhoto&quot;: 0.8777,
+            ///   &quot;liveness&quot;: 0.1152,
+            ///   &quot;imgManipulationScore&quot;: 0.2253
+            /// }</para>
+            /// </summary>
             [NameInMap("ExtSourceInfo")]
             [Validation(Required=false)]
             public string ExtSourceInfo { get; set; }

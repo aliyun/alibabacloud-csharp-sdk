@@ -84,6 +84,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             [Validation(Required=false)]
             public string RiskTag { get; set; }
 
+            [NameInMap("TransactionId")]
+            [Validation(Required=false)]
+            public string TransactionId { get; set; }
+
         }
 
     }
