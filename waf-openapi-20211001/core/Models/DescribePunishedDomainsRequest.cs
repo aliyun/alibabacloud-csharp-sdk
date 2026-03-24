@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribePunishedDomainsRequest : TeaModel {
         /// <summary>
-        /// <para>The domain names that are added to WAF.</para>
+        /// <para>The list of domain names added to WAF.</para>
         /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -31,10 +31,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of punishment. Valid values:</para>
+        /// <para>The penalty type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>beian</b> (default): the filing center.</description></item>
-        /// <item><description><b>punishCenter</b>: the punishment center.</description></item>
+        /// <item><description><para><b>beian</b> (default): ICP filing center.</para>
+        /// </description></item>
+        /// <item><description><para><b>punishCenter</b>: penalty center.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,10 +47,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string PunishType { get; set; }
 
         /// <summary>
-        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
+        /// <para>The region of the WAF instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

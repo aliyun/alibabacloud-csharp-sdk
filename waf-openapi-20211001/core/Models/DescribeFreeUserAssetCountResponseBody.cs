@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeFreeUserAssetCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The asset statistics provided by basic detection.</para>
+        /// <para>The statistics information about assets detected by the basic API security feature.</para>
         /// </summary>
         [NameInMap("Asset")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AssetActive { get; set; }
 
             /// <summary>
-            /// <para>The total number of APIs.</para>
+            /// <para>The total number of API assets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AssetCount { get; set; }
 
             /// <summary>
-            /// <para>The number of deactivated APIs.</para>
+            /// <para>The number of inactive APIs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13</para>

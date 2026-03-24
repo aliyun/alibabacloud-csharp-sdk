@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSensitiveApiStatisticResponseBody : TeaModel {
         /// <summary>
-        /// <para>The statistics.</para>
+        /// <para>The list of statistics.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeSensitiveApiStatisticResponseBodyData> Data { get; set; }
         public class DescribeSensitiveApiStatisticResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of personal information records involved in cross-border data transfer by domain name.</para>
+            /// <para>The number of outbound personal information entries by domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>213</para>
@@ -27,7 +27,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? InfoOutboundCount { get; set; }
 
             /// <summary>
-            /// <para>The domain name-related APIs.</para>
+            /// <para>The list of statistics about APIs for the domain name.</para>
+            /// <remarks>
+            /// <para>The statistics by API are returned only when you set the <b>Type</b> parameter to <b>apiFormat</b>.</para>
+            /// </remarks>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string ApiId { get; set; }
 
                 /// <summary>
-                /// <para>The number of personal information records involved in cross-border data transfer by API.</para>
+                /// <para>The number of outbound personal information entries by API.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>78</para>
@@ -64,14 +67,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public long? InfoCount { get; set; }
 
                 /// <summary>
-                /// <para>The types of sensitive data.</para>
+                /// <para>The list of sensitive data types.</para>
                 /// </summary>
                 [NameInMap("SensitiveCode")]
                 [Validation(Required=false)]
                 public List<string> SensitiveCode { get; set; }
 
                 /// <summary>
-                /// <para>The number of sensitive personal information records involved in cross-border data transfer by API.</para>
+                /// <para>The number of outbound personal sensitive data entries by API.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>55</para>
@@ -93,7 +96,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string MatchedHost { get; set; }
 
             /// <summary>
-            /// <para>The number of sensitive personal information records involved in cross-border data transfer by domain name.</para>
+            /// <para>The number of outbound personal sensitive data entries by domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>127</para>
@@ -115,7 +118,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

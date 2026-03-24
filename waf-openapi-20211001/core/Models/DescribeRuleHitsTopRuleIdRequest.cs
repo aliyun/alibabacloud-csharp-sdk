@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeRuleHitsTopRuleIdRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.</para>
+        /// <para>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the current time is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1665386280</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the WAF instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,10 +34,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether protected objects that trigger protection rules are returned in the response. Valid values</para>
+        /// <para>Specifies whether to aggregate the number of rule hits by protected object.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: returns only the number of times each protection rule is triggered. If you set IsGroupResource to true, Resource is left empty.</description></item>
-        /// <item><description><b>false</b>: returns the number of times each protection rule is triggered by each protected object.</description></item>
+        /// <item><description><para>true (default): The number of rule hits is aggregated for each protection rule. In this case, the <b>Resource</b> parameter in the response is empty.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The number of rule hits is not aggregated. Statistics are collected for each protected object and protection rule.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,8 +52,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou:</b> the Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1:</b> outside the Chinese mainland.</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: Outside Chinese mainland.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,7 +76,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Resource { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -82,13 +86,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of rules that are triggered by the protected object. By default, this parameter is not specified and all types of rules are queried.</para>
+        /// <para>The type of rule that was hit. If you do not specify this parameter, statistics for all rule types are returned.</para>
         /// <list type="bullet">
-        /// <item><description><b>blacklist:</b> IP address blacklist rules.</description></item>
-        /// <item><description><b>custom:</b> custom rules.</description></item>
-        /// <item><description><b>antiscan:</b> scan protection rules.</description></item>
-        /// <item><description><b>cc_system:</b> HTTP flood protection rules.</description></item>
-        /// <item><description><b>region_block:</b> region blacklist rules.</description></item>
+        /// <item><description><para><b>blacklist</b>: The request hit a rule in the IP address blacklist.</para>
+        /// </description></item>
+        /// <item><description><para><b>custom</b>: The request hit a custom rule.</para>
+        /// </description></item>
+        /// <item><description><para><b>antiscan</b>: The request hit a scan protection rule.</para>
+        /// </description></item>
+        /// <item><description><para><b>cc_system</b>: The request hit an HTTP flood protection rule.</para>
+        /// </description></item>
+        /// <item><description><para><b>region_block</b>: The request hit a rule in the Location Blacklist.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,7 +108,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RuleType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Unit: seconds.</para>
+        /// <para>The start of the time range to query. This value is a UNIX timestamp. Unit: seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

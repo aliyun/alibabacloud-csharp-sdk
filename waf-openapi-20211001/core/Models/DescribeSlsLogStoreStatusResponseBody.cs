@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>Indicates whether a Logstore is created for WAF. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: A Logstore is created.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: No Logstore is created.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public bool? ExistStatus { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>184F538F-C115-5C89-A4EF-C79CD2E29AC7</para>

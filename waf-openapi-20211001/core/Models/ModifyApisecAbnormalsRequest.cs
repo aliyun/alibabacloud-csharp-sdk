@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyApisecAbnormalsRequest : TeaModel {
         /// <summary>
-        /// <para>The risk IDs.</para>
+        /// <para>A list of API security risk IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AbnormalIds")]
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the hybrid cloud cluster.</para>
         /// <remarks>
-        /// <para> This parameter is available only in hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query hybrid cloud clusters.</para>
+        /// <para>This parameter is available only for hybrid cloud scenarios. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query information about hybrid cloud clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The description.</para>
+        /// <para>The remarks for the status change.</para>
         /// 
         /// <b>Example:</b>
         /// <para>already fixed.</para>
@@ -55,10 +55,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Note { get; set; }
 
         /// <summary>
-        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b>: the Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: a region outside the Chinese mainland.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,13 +81,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The risk status. Valid values:</para>
+        /// <para>The status of the security risk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>toBeConfirmed</b></description></item>
-        /// <item><description><b>confirmed</b></description></item>
-        /// <item><description><b>toBeFixed</b></description></item>
-        /// <item><description><b>fixed</b></description></item>
-        /// <item><description><b>ignored</b></description></item>
+        /// <item><description><para><b>toBeConfirmed</b>: The security risk is to be confirmed.</para>
+        /// </description></item>
+        /// <item><description><para><b>confirmed</b>: The security risk is confirmed.</para>
+        /// </description></item>
+        /// <item><description><para><b>toBeFixed</b>: The security risk is to be fixed.</para>
+        /// </description></item>
+        /// <item><description><para><b>fixed</b>: The security risk is fixed.</para>
+        /// </description></item>
+        /// <item><description><para><b>ignored</b>: The security risk is ignored.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

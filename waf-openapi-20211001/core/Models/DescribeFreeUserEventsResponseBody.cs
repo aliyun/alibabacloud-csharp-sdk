@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeFreeUserEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The security events on which basic detection is performed.</para>
+        /// <para>The list of security events detected by the basic scan.</para>
         /// </summary>
         [NameInMap("Event")]
         [Validation(Required=false)]
         public List<DescribeFreeUserEventsResponseBodyEvent> Event { get; set; }
         public class DescribeFreeUserEventsResponseBodyEvent : TeaModel {
             /// <summary>
-            /// <para>The API.</para>
+            /// <para>The API path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/api/login</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ApiFormat { get; set; }
 
             /// <summary>
-            /// <para>The attacker IP address.</para>
+            /// <para>The attack IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>104.234.140.**</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string AttackIP { get; set; }
 
             /// <summary>
-            /// <para>The time at which the attack was launched. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+            /// <para>The time of the attack. This value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1683703260</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AttackTime { get; set; }
 
             /// <summary>
-            /// <para>The domain name of the API.</para>
+            /// <para>The domain name to which the API belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>www.***.cn</para>
@@ -57,11 +57,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The severity level of the security event. Valid values:</para>
+            /// <para>The event level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>high</b></description></item>
-            /// <item><description><b>medium</b></description></item>
-            /// <item><description><b>low</b></description></item>
+            /// <item><description><para><b>high</b>: high risk.</para>
+            /// </description></item>
+            /// <item><description><para><b>medium</b>: medium risk.</para>
+            /// </description></item>
+            /// <item><description><para><b>low</b>: low risk.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,9 +75,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string EventLevel { get; set; }
 
             /// <summary>
-            /// <para>The type of the security event.</para>
+            /// <para>The event type.</para>
             /// <remarks>
-            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of security events.</para>
+            /// <para>Call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to obtain the supported event types.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The policies.</para>
+        /// <para>The list of rules.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeApisecRulesResponseBodyData> Data { get; set; }
         public class DescribeApisecRulesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the policy.</para>
+            /// <para>The ID of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>34933</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The details of the policy. The value is a string that consists of multiple parameters in the JSON format.</para>
+            /// <para>The details of the rule. The value is a string that is converted from a JSON object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -44,10 +44,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Rule { get; set; }
 
             /// <summary>
-            /// <para>The status of the policy. Valid values:</para>
+            /// <para>The status of the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: enabled</description></item>
-            /// <item><description><b>0</b>: disabled</description></item>
+            /// <item><description><para><b>1</b>: enabled</para>
+            /// </description></item>
+            /// <item><description><para><b>0</b>: disabled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -58,17 +60,26 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the policy. Valid values:</para>
+            /// <para>The type of the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>risk</b>: risk detection</description></item>
-            /// <item><description><b>event</b>: security event</description></item>
-            /// <item><description><b>sensitive_word</b>: sensitive data</description></item>
-            /// <item><description><b>auth_flag</b>: authentication credential</description></item>
-            /// <item><description><b>api_tag</b>: business purpose</description></item>
-            /// <item><description><b>desensitization</b>: data masking</description></item>
-            /// <item><description><b>whitelist</b>: whitelist</description></item>
-            /// <item><description><b>recognition</b>: API recognition</description></item>
-            /// <item><description><b>offline_api</b>: lifecycle management</description></item>
+            /// <item><description><para><b>risk</b>: threat detection</para>
+            /// </description></item>
+            /// <item><description><para><b>event</b>: security event</para>
+            /// </description></item>
+            /// <item><description><para><b>sensitive_word</b>: sensitive data</para>
+            /// </description></item>
+            /// <item><description><para><b>auth_flag</b>: authentication credential</para>
+            /// </description></item>
+            /// <item><description><para><b>api_tag</b>: business purpose</para>
+            /// </description></item>
+            /// <item><description><para><b>desensitization</b>: data masking</para>
+            /// </description></item>
+            /// <item><description><para><b>whitelist</b>: whitelist</para>
+            /// </description></item>
+            /// <item><description><para><b>recognition</b>: API.</para>
+            /// </description></item>
+            /// <item><description><para><b>offline_api</b>: lifecycle management</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,7 +90,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The time when the policy was updated. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+            /// <para>The time when the rule was updated. This value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1721095301</para>
@@ -91,7 +102,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D7861F61-5B61-46CE-A47C-6B19160D5EB0</para>

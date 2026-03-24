@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeChargeResultRequest : TeaModel {
         /// <summary>
+        /// <para>The billing cycle for the WAF instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Year</b>: yearly billing cycle.</para>
+        /// </description></item>
+        /// <item><description><para><b>Month</b>: monthly billing cycle.</para>
+        /// </description></item>
+        /// <item><description><para><b>Day</b>: daily billing cycle.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Day</para>
         /// </summary>
@@ -18,6 +28,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ChargeCycle { get; set; }
 
         /// <summary>
+        /// <para>The billing modules to calculate.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ChargeModules")]
@@ -25,6 +36,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeChargeResultRequestChargeModules> ChargeModules { get; set; }
         public class DescribeChargeResultRequestChargeModules : TeaModel {
             /// <summary>
+            /// <para>The ID of the billing module.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>domainCount</para>
             /// </summary>
@@ -33,6 +46,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ModuleCode { get; set; }
 
             /// <summary>
+            /// <para>The usage amount of the billing module.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -43,6 +58,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
+        /// <para>The billing method of the WAF instance. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,6 +72,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string PayType { get; set; }
 
         /// <summary>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -61,6 +88,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
         /// </summary>

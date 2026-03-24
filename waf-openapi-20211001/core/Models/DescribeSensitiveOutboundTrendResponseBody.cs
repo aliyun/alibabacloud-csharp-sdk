@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSensitiveOutboundTrendResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information records involved in cross-border data transfer.</para>
+        /// <para>The trend data of sensitive outbound data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeSensitiveOutboundTrendResponseBodyData> Data { get; set; }
         public class DescribeSensitiveOutboundTrendResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The total number of personal information records.</para>
+            /// <para>The total number of personal information entries detected during the time period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>672</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? InfoCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of personal information records involved in cross-border data transfer.</para>
+            /// <para>The total number of outbound personal information entries detected during the time period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>541</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? InfoOutboundCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of sensitive information records involved in cross-border data transfer.</para>
+            /// <para>The total number of sensitive outbound data entries detected during the time period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>378</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? SensitiveOutboundCount { get; set; }
 
             /// <summary>
-            /// <para>The time of cross-border data transfer. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+            /// <para>The timestamp that indicates when the data was recorded. This value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1672502400</para>

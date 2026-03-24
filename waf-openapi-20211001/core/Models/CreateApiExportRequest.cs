@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the hybrid cloud cluster.</para>
         /// <remarks>
-        /// <para>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</para>
+        /// <para>This parameter is applicable only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query hybrid cloud clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,19 +37,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The extended parameters of the data export task. The parameter value is in the JSON format. The following keys are supported:</para>
-        /// <list type="bullet">
-        /// <item><description><b>instanceId</b>: the instance ID</description></item>
-        /// <item><description><b>clusterId</b>: the ID of the hybrid cloud cluster</description></item>
-        /// <item><description><b>orderKey</b>: the name of the field used to sort exported data</description></item>
-        /// <item><description><b>orderWay</b>: the sorting method of the exported data</description></item>
-        /// </list>
+        /// <para>The filter conditions for the export task. The value is a JSON string.</para>
+        /// <remarks>
+        /// <para>The filter conditions vary based on the export task type specified by <b>Type</b>. For more information, see <b>Export task parameters</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///     &quot;orderWay&quot;: &quot;asc&quot;,
-        ///     &quot;orderKey&quot;: &quot;endTs&quot;,
-        ///     &quot;instanceId&quot;: &quot;waf_v3prepaid_public_cn-****&quot;
+        ///     &quot;startTime&quot;: 1741449600,
+        ///     &quot;endTime&quot;: 1744079820,
+        ///     &quot;sensitiveLevel&quot;: &quot;L1&quot;
         /// }</para>
         /// </summary>
         [NameInMap("Param")]
@@ -57,10 +54,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Param { get; set; }
 
         /// <summary>
-        /// <para>Language type. Valid values:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn</b>: Chinese.</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><para><b>cn</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,10 +70,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</para>
+        /// <para>The region ID of the WAF instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b>: Chinese mainland</description></item>
-        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +86,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -95,11 +96,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of the data export task. Valid values:</para>
+        /// <para>The type of the export task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>apisec_api</b>: API tasks</description></item>
-        /// <item><description><b>apisec_abnormal</b>: API risk tasks</description></item>
-        /// <item><description><b>apisec_event</b>: API security event tasks</description></item>
+        /// <item><description><para><b>apisec_api</b> (default): Exports API asset data.</para>
+        /// </description></item>
+        /// <item><description><para><b>apisec_abnormal</b>: Exports API threat data.</para>
+        /// </description></item>
+        /// <item><description><para><b>apisec_event</b>: Exports API security event data.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,7 +114,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The ID of the time zone.</para>
+        /// <para>The time zone of the export data, such as <b>Asia/Shanghai</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Asia/Shanghai</para>

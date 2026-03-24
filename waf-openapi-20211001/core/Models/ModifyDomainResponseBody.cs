@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyDomainResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the domain name.</para>
+        /// <para>The information about the modified domain name.</para>
         /// </summary>
         [NameInMap("DomainInfo")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Cname { get; set; }
 
             /// <summary>
-            /// <para>The domain name whose access configurations you modified.</para>
+            /// <para>The domain name whose configurations are modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>
@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>D7861F61-5B61-46CE-A47C-6B19160D5EB0</para>
+        /// <para>D7861F61-5B61-46CE-A47C-6B19160D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

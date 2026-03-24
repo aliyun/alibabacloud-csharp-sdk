@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of resources.</para>
+        /// <para>The resource list.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource. ALIYUN::WAF::DEFENSERESOURCE is returned.</para>
+            /// <para>The resource type. ALIYUN::WAF::DEFENSERESOURCE is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALIYUN::WAF::DEFENSERESOURCE</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The key of tag N that is added to the resource.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagKey1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N that is added to the resource.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TayValue1</para>

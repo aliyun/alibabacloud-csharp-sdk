@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreateDomainResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the domain name that is added.</para>
+        /// <para>The details of the added domain name.</para>
         /// </summary>
         [NameInMap("DomainInfo")]
         [Validation(Required=false)]
         public CreateDomainResponseBodyDomainInfo DomainInfo { get; set; }
         public class CreateDomainResponseBodyDomainInfo : TeaModel {
             /// <summary>
-            /// <para>The CNAME that is assigned by WAF to the domain name.</para>
+            /// <para>The CNAME assigned by WAF to the domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxxwww.****.com</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Cname { get; set; }
 
             /// <summary>
-            /// <para>The domain name that you added to WAF.</para>
+            /// <para>The domain name that is onboarded to WAF.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The name of the protected object that is generated.</para>
+            /// <para>The ID of the domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></para>
@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>D7861F61-5B61-46CE-A47C-6B19160D****</para>
+        /// <para>D7861F61-5B61-46CE-A47C-6B19160D5EB0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

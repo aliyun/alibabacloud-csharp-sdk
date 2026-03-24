@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribePrepayDailyBillsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The bills of the burstable QPS (pay-as-you-go) feature.</para>
+        /// <para>List of WAF burstable billing records.</para>
         /// </summary>
         [NameInMap("Bills")]
         [Validation(Required=false)]
         public List<DescribePrepayDailyBillsResponseBodyBills> Bills { get; set; }
         public class DescribePrepayDailyBillsResponseBodyBills : TeaModel {
             /// <summary>
-            /// <para>The burstable QPS of the WAF instance.</para>
+            /// <para>Elastic QPS specification for the WAF instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? ElasticQpsSetValue { get; set; }
 
             /// <summary>
-            /// <para>The billing end time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>End time of the billing period, in Unix timestamp format (UTC), measured in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1687591200</para>
@@ -37,11 +37,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The status of QPS usage within the current period of time. Valid values:</para>
+            /// <para>Overuse status for the current period. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: normal.</description></item>
-            /// <item><description><b>1</b>: excess.</description></item>
-            /// <item><description><b>2</b>: sandbox.</description></item>
+            /// <item><description><para><b>0</b>: Normal.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: Overused.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: Sandbox.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,7 +55,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? ExceedStatus { get; set; }
 
             /// <summary>
-            /// <para>The peak QPS within the current period of time.</para>
+            /// <para>Maximum QPS for the current period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>600</para>
@@ -62,7 +65,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? MaxQps { get; set; }
 
             /// <summary>
-            /// <para>The unit price in the bill. The price is measured in CNY for bills at the China site (aliyun.com) and in USD for bills at the international site (alibabacloud.com).</para>
+            /// <para>Unit price for burstable charges. Unit: CNY for the Alibaba Cloud China Website (www\.aliyun.com) and USD for the Alibaba Cloud International Website (www\.alibabacloud.com).</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.25</para>
@@ -72,7 +75,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public float? Price { get; set; }
 
             /// <summary>
-            /// <para>The extended QPS of the WAF instance.</para>
+            /// <para>QPS extension specification for the WAF instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -82,7 +85,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Qps { get; set; }
 
             /// <summary>
-            /// <para>The default QPS of the WAF instance.</para>
+            /// <para>QPS specification within the version of the WAF instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -92,10 +95,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? QpsVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether risk identification is enabled. Valid values:</para>
+            /// <para>Whether Fraud Detection is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: Fraud Detection is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Fraud Detection is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -106,7 +111,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? RiskControl { get; set; }
 
             /// <summary>
-            /// <para>The number of times that risk identification is performed.</para>
+            /// <para>Number of Fraud Detection requests processed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -116,7 +121,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? RiskTraffic { get; set; }
 
             /// <summary>
-            /// <para>The billing start time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>Start time of the billing period, in Unix timestamp format (UTC), measured in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1687822980</para>
@@ -126,7 +131,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The actual QPS in total.</para>
+            /// <para>Total QPS subject to burstable billing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -136,7 +141,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Total { get; set; }
 
             /// <summary>
-            /// <para>The billing types.</para>
+            /// <para>The billing type.</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -145,7 +150,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC10C9EA-A367-52D5-<em><b>-</b></em></para>
@@ -155,7 +160,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>Total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

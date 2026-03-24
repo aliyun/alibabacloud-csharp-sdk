@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyApisecLogDeliveryStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the log subscription. Valid values:</para>
+        /// <para>The type of the API security log delivery. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>risk</b>: risk information.</description></item>
-        /// <item><description><b>event</b>: attack event information.</description></item>
-        /// <item><description><b>asset</b>: asset information.</description></item>
+        /// <item><description><para><b>risk</b>: threat information.</para>
+        /// </description></item>
+        /// <item><description><para><b>event</b>: attack event information.</para>
+        /// </description></item>
+        /// <item><description><para><b>asset</b>: asset information.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,9 +29,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AssertKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,10 +43,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region in which the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +59,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -64,10 +69,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The status of API security log subscription. Valid values:</para>
+        /// <para>Indicates whether the API security log subscription is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enabled.</description></item>
-        /// <item><description><b>false</b>: disabled.</description></item>
+        /// <item><description><para><b>true</b>: The API security log subscription is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The API security log subscription is disabled.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

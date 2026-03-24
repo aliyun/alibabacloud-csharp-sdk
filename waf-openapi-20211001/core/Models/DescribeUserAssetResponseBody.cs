@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeUserAssetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API statistics.</para>
+        /// <para>A list of asset statistics.</para>
         /// </summary>
         [NameInMap("Assets")]
         [Validation(Required=false)]
         public List<DescribeUserAssetResponseBodyAssets> Assets { get; set; }
         public class DescribeUserAssetResponseBodyAssets : TeaModel {
             /// <summary>
-            /// <para>The number of APIs returned.</para>
+            /// <para>The number of assets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>134</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AssetNum { get; set; }
 
             /// <summary>
-            /// <para>The time at which the API was called. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+            /// <para>The time when the statistics are collected. This value is a UNIX timestamp in seconds. The time is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1723435200</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C1823E96-EF4B-5BD2-9E02-1D18****3ED8</para>

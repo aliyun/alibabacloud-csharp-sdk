@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeUserEventTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The types and statistics of security events.</para>
+        /// <para>A list of security event types and their statistics.</para>
         /// </summary>
         [NameInMap("Event")]
         [Validation(Required=false)]
         public List<DescribeUserEventTypeResponseBodyEvent> Event { get; set; }
         public class DescribeUserEventTypeResponseBodyEvent : TeaModel {
             /// <summary>
-            /// <para>The code of the security event.</para>
+            /// <para>The event code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Event_LoginCollision</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? EventCount { get; set; }
 
             /// <summary>
-            /// <para>The parent type of the security event.</para>
+            /// <para>The parent type of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EventType_Account</para>
@@ -47,13 +47,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string EventParentType { get; set; }
 
             /// <summary>
-            /// <para>The type of the security event.</para>
+            /// <para>The type of the event.</para>
             /// <remarks>
-            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of security events.</para>
+            /// <para>Call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported event types.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>Event_AbnormalFrequency</para>
+            /// <para>Event_LoginCollision</para>
             /// </summary>
             [NameInMap("EventType")]
             [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>177BA739-6512-5470-98C6-E***0BAA3D</para>

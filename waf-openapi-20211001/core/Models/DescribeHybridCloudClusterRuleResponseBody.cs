@@ -10,18 +10,44 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeHybridCloudClusterRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the rule.</para>
+        /// <para>The information about the rule.</para>
         /// </summary>
         [NameInMap("ClusterRule")]
         [Validation(Required=false)]
         public DescribeHybridCloudClusterRuleResponseBodyClusterRule ClusterRule { get; set; }
         public class DescribeHybridCloudClusterRuleResponseBodyClusterRule : TeaModel {
+            /// <summary>
+            /// <para>The resource ID of the cluster rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hdbc-clusterrule-2m*****m0w</para>
+            /// </summary>
             [NameInMap("ClusterRuleResourceId")]
             [Validation(Required=false)]
             public string ClusterRuleResourceId { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the rule.</para>
+            /// <para>The configuration of the traffic routing rule.</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>check_mode</b>: Defines the traffic scope for the routing rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>all</b>: Routes all traffic.</para>
+            /// </description></item>
+            /// <item><description><para><b>part</b>: Routes a portion of the traffic.</para>
+            /// </description></item>
+            /// </list>
+            /// </description></item>
+            /// <item><description><para><b>type</b>: The rule\&quot;s match type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>exact</b>: Exact match.</para>
+            /// </description></item>
+            /// <item><description><para><b>regex</b>: Regular expression match.</para>
+            /// </description></item>
+            /// </list>
+            /// </description></item>
+            /// <item><description><para><b>substance</b>: The value of the rule.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;check_mode\&quot;:\&quot;all\&quot;,\&quot;exclude\&quot;:{\&quot;exact\&quot;:[],\&quot;regex\&quot;:[]}}</para>
@@ -33,8 +59,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The status of the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>on</b>: enabled.</description></item>
-            /// <item><description><b>off</b>: disabled.</description></item>
+            /// <item><description><para><b>on</b>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>off</b>: Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,9 +73,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string RuleStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the rule. Valid values:</para>
+            /// <para>The type of the rule.</para>
             /// <list type="bullet">
-            /// <item><description><b>pullin</b>: The traffic redirection rule of the hybrid cloud cluster.</description></item>
+            /// <item><description>pullin: The traffic routing rule.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

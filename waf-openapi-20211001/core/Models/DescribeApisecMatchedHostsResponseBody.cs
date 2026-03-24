@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecMatchedHostsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The domain names.</para>
+        /// <para>The list of domain names.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeApisecMatchedHostsResponseBodyData> Data { get; set; }
         public class DescribeApisecMatchedHostsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of APIs related to the domain name.</para>
+            /// <para>The number of queries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>31</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8D4CA088-F72B-5658-BD5B-ECE8B8F0C7BB</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeVisitTopIpResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5D2B8DAE-A761-58CB-A68D-74989E4831DA</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The array of the top 10 IP addresses from which requests are sent.</para>
+        /// <para>The top 10 IP addresses that initiate the most requests.</para>
         /// </summary>
         [NameInMap("TopIp")]
         [Validation(Required=false)]
         public List<DescribeVisitTopIpResponseBodyTopIp> TopIp { get; set; }
         public class DescribeVisitTopIpResponseBodyTopIp : TeaModel {
             /// <summary>
-            /// <para>The ordinal number of the area to which the IP address belongs.</para>
+            /// <para>The code of the geographical location.</para>
             /// 
             /// <b>Example:</b>
             /// <para>310000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Area { get; set; }
 
             /// <summary>
-            /// <para>The total number of requests that are sent from the IP address.</para>
+            /// <para>The total number of requests that are initiated from the IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2622</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The ISP.</para>
+            /// <para>The Internet service provider (ISP).</para>
             /// 
             /// <b>Example:</b>
             /// <para>AAA</para>

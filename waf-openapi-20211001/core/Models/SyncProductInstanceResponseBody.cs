@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class SyncProductInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>45BA2382-7C3F-5B29-9A83-C3BCE586****</para>

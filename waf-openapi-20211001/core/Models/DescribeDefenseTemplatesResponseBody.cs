@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDefenseTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4F26D2F1-E288-5104-8518-05E240E3****</para>
+        /// <para>4F26D2F1-E288-5104-8518-05E240E337A4</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The protection templates.</para>
+        /// <para>An array of protection templates.</para>
         /// </summary>
         [NameInMap("Templates")]
         [Validation(Required=false)]
         public List<DescribeDefenseTemplatesResponseBodyTemplates> Templates { get; set; }
         public class DescribeDefenseTemplatesResponseBodyTemplates : TeaModel {
             /// <summary>
-            /// <para>The scenario in which the protection template is used.</para>
+            /// <para>The protection scenario. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>waf_group</b>: basic protection.</description></item>
-            /// <item><description><b>antiscan</b>: scan protection.</description></item>
-            /// <item><description><b>ip_blacklist</b>: IP address blacklist.</description></item>
-            /// <item><description><b>custom_acl</b>: custom rule.</description></item>
-            /// <item><description><b>whitelist</b>: whitelist.</description></item>
-            /// <item><description><b>region_block</b>: region blacklist.</description></item>
-            /// <item><description><b>custom_response</b>: custom response.</description></item>
-            /// <item><description><b>cc</b>: HTTP flood protection.</description></item>
-            /// <item><description><b>tamperproof</b>: website tamper-proofing.</description></item>
-            /// <item><description><b>dlp</b>: data leakage prevention.</description></item>
+            /// <item><description><para><b>waf_group</b>: Basic Protection.</para>
+            /// </description></item>
+            /// <item><description><para><b>antiscan</b>: Scan Protection.</para>
+            /// </description></item>
+            /// <item><description><para><b>ip_blacklist</b>: IP Blocklist.</para>
+            /// </description></item>
+            /// <item><description><para><b>custom_acl</b>: Custom Rule.</para>
+            /// </description></item>
+            /// <item><description><para><b>whitelist</b>: Allowlist.</para>
+            /// </description></item>
+            /// <item><description><para><b>region_block</b>: Geographic Blocking.</para>
+            /// </description></item>
+            /// <item><description><para><b>custom_response</b>: Custom Response.</para>
+            /// </description></item>
+            /// <item><description><para><b>cc</b>: HTTP Flood Protection.</para>
+            /// </description></item>
+            /// <item><description><para><b>tamperproof</b>: Webpage Tamper Protection.</para>
+            /// </description></item>
+            /// <item><description><para><b>dlp</b>: Data Loss Prevention.</para>
+            /// </description></item>
+            /// <item><description><para><b>bot_manager</b>: Bot Management.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -49,11 +61,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string DefenseScene { get; set; }
 
             /// <summary>
-            /// <para>The sub-scenario in which the protection template is used. Valid values:</para>
+            /// <para>The sub-scenario for the Bot Management template. This parameter is returned only when <c>DefenseScene</c> is set to <c>bot_manager</c>. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>web</b>: bot management for website protection.</description></item>
-            /// <item><description><b>app</b>: bot management for app protection.</description></item>
-            /// <item><description><b>basic</b>: bot management for basic protection.</description></item>
+            /// <item><description><para><b>web</b>: web protection</para>
+            /// </description></item>
+            /// <item><description><para><b>app</b>: app protection</para>
+            /// </description></item>
+            /// <item><description><para><b>basic</b>: basic protection</para>
+            /// </description></item>
+            /// <item><description><para><b>bot_custom_acl</b>: The protection template for advanced Custom Rules in Bot Management.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,17 +81,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string DefenseSubScene { get; set; }
 
             /// <summary>
-            /// <para>The description of the protection template.</para>
+            /// <para>The description of the template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>testTemplate</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the protection template was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The last modification time of the protection template. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1683776070000</para>
@@ -87,7 +104,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <para>The ID of the protection template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>12345</para>
+            /// <para>56477</para>
             /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
@@ -97,14 +114,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <para>The name of the protection template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>testTemplateName</para>
+            /// <para>template-blockarea1</para>
             /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>The origin of the protection template. The value custom indicates that the protection template is a custom template created by the user.</para>
+            /// <para>The origin of the protection template to be created. The value is custom, which indicates a user-defined template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom</para>
@@ -116,8 +133,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The status of the protection template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: disabled.</description></item>
-            /// <item><description><b>1</b>: enabled.</description></item>
+            /// <item><description><para><b>0</b>: Disabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: Enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -130,8 +149,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The type of the protection template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>user_default</b>: default template.</description></item>
-            /// <item><description><b>user_custom</b>: custom template.</description></item>
+            /// <item><description><para><b>user_default</b>: The user\&quot;s default protection template.</para>
+            /// </description></item>
+            /// <item><description><para><b>user_custom</b>: A custom protection template defined by the user.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -144,7 +165,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of protection templates returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

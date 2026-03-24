@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>26E46541-7AAB-5565-801D-F14DBDC5F186</para>
+        /// <para>26E46541-7AAB-5565-801D-F14DBDC5****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the protection rules. Multiple IDs are separated by commas (,).</para>
+        /// <para>The IDs of the created protection rules, separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>22215,23354,462165</para>

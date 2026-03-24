@@ -14,8 +14,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public DescribeHybridCloudResourceDetailResponseBodyDomain Domain { get; set; }
         public class DescribeHybridCloudResourceDetailResponseBodyDomain : TeaModel {
             /// <summary>
-            /// <para>CNAME</para>
-            /// 
             /// <b>Example:</b>
             /// <para>kdmqyi3ck7xogegxpiyfpb0fj21mgkxn.****.com</para>
             /// </summary>
@@ -32,8 +30,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>id</para>
-            /// 
             /// <b>Example:</b>
             /// <para>31323</para>
             /// </summary>

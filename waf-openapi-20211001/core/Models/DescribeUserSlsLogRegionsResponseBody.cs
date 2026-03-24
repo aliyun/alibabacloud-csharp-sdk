@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeUserSlsLogRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The region IDs.</para>
+        /// <para>The list of log storage region IDs.</para>
         /// </summary>
         [NameInMap("LogRegions")]
         [Validation(Required=false)]
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>9D11AC3A-A10C-56E7-A342-E87EC892****</para>
+        /// <para>9D11AC3A-A10C-56E7-A342-E87EC892BAE2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

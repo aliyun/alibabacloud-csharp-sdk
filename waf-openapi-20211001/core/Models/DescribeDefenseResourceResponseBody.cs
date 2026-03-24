@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDefenseResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>439AADF2-368C-5E98-B14E-3086****0573</para>
@@ -20,17 +20,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The protected object.</para>
+        /// <para>The details of the protected object.</para>
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public DescribeDefenseResourceResponseBodyResource Resource { get; set; }
         public class DescribeDefenseResourceResponseBodyResource : TeaModel {
             /// <summary>
-            /// <para>The status of the tracking cookie.</para>
+            /// <para>Indicates whether the tracking cookie feature is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: disabled.</description></item>
-            /// <item><description><b>1</b>: enabled.</description></item>
+            /// <item><description><para><b>0</b>: disabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,10 +43,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? AcwCookieStatus { get; set; }
 
             /// <summary>
-            /// <para>The status of the secure attribute of the tracking cookie.</para>
+            /// <para>Indicates whether the secure attribute of the tracking cookie is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: disabled.</description></item>
-            /// <item><description><b>1</b>: enabled.</description></item>
+            /// <item><description><para><b>0</b>: disabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,10 +59,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? AcwSecureStatus { get; set; }
 
             /// <summary>
-            /// <para>The status of the secure attribute of the slider CAPTCHA cookie.</para>
+            /// <para>Indicates whether the secure attribute of the slider CAPTCHA cookie is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: disabled.</description></item>
-            /// <item><description><b>1</b>: enabled.</description></item>
+            /// <item><description><para><b>0</b>: disabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -69,9 +75,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? AcwV3SecureStatus { get; set; }
 
             /// <summary>
-            /// <para>The custom header fields.</para>
+            /// <para>The list of custom header fields used to identify the actual client IP address.</para>
             /// <remarks>
-            /// <para> If the value of XffStatus is 1, the first IP address in the specified header field is used as the originating IP address of the client to prevent X-Forwarded-For (XFF) forgery. If you specify multiple header fields, WAF reads the values of the header fields in sequence until the originating IP address is obtained. If the originating IP address cannot be obtained, the first IP address in the XFF header field is used as the originating IP address of the client.</para>
+            /// <para>This parameter takes effect only when XffStatus is set to 1. WAF uses the first IP address in the specified header fields as the client source IP address to prevent X-Forwarded-For (XFF) spoofing. If multiple headers are specified, WAF checks them in order. If the first header does not contain a source IP address, WAF checks the next header. If none of the specified headers contain a source IP address, WAF uses the first IP address in the X-Forwarded-For header.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("CustomHeaders")]
@@ -89,7 +95,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The details of the protected object. Different key-value pairs indicate different attributes of the protected object.</para>
+            /// <para>The details of the protected object. The fields vary based on the cloud service type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -102,7 +108,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public Dictionary<string, object> Detail { get; set; }
 
             /// <summary>
-            /// <para>The time when the protected object was created. Unit: milliseconds.</para>
+            /// <para>The time when the protected object was created. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1607493144000</para>
@@ -112,7 +118,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the protected object was modified. Unit: milliseconds.</para>
+            /// <para>The time when the protected object was modified. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1691720010000</para>
@@ -121,12 +127,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public long? GmtModified { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the WAF instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>waf_v2_public_cn-wwo****</para>
+            /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The user ID (UID) of the Alibaba Cloud account to which the protected object belongs.</para>
+            /// <para>The ID of the Alibaba Cloud account to which the protected object belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>170457******9107</para>
@@ -136,7 +148,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string OwnerUserId { get; set; }
 
             /// <summary>
-            /// <para>The pattern used for the protected object.</para>
+            /// <para>The protection pattern of the protected object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>domain</para>
@@ -146,7 +158,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Pattern { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud service.</para>
+            /// <para>The type of cloud service to which the protected object belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alb</para>
@@ -188,8 +200,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The origin of the protected object. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>custom</b></description></item>
-            /// <item><description><b>access</b></description></item>
+            /// <item><description><para><b>custom</b>: The protected object is created through provisioning.</para>
+            /// </description></item>
+            /// <item><description><para><b>access</b>: The protected object is user-defined.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -200,14 +214,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceOrigin { get; set; }
 
             /// <summary>
-            /// <para>The response header.</para>
+            /// <para>The custom response headers configured for the protected object.</para>
             /// </summary>
             [NameInMap("ResponseHeaders")]
             [Validation(Required=false)]
             public List<DescribeDefenseResourceResponseBodyResourceResponseHeaders> ResponseHeaders { get; set; }
             public class DescribeDefenseResourceResponseBodyResourceResponseHeaders : TeaModel {
                 /// <summary>
-                /// <para>Specifies the key for a custom response header.</para>
+                /// <para>The key of the custom response header.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Header-Key</para>
@@ -217,7 +231,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>Specifies the value for a custom response header.</para>
+                /// <para>The value of the custom response header.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Header-Value</para>
@@ -229,10 +243,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether a Layer 7 proxy is deployed in front of WAF, such as Anti-DDoS Proxy and Alibaba Cloud CDN. Valid values:</para>
+            /// <para>Indicates whether a Layer 7 proxy such as Anti-DDoS or CDN is enabled in front of WAF. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: No Layer 7 proxy is deployed.</description></item>
-            /// <item><description><b>1</b>: A Layer 7 proxy is deployed.</description></item>
+            /// <item><description><para><b>0</b>: disabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeVisitUasResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2847CE98-AFAE-5A64-B80E-60461717F9DE</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The array of the top 10 user agents that are used to initiate requests.</para>
+        /// <para>The top 10 User-Agents.</para>
         /// </summary>
         [NameInMap("Uas")]
         [Validation(Required=false)]
         public List<DescribeVisitUasResponseBodyUas> Uas { get; set; }
         public class DescribeVisitUasResponseBodyUas : TeaModel {
             /// <summary>
-            /// <para>The number of requests that use the user agent.</para>
+            /// <para>The total number of requests from the User-Agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>698455</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The user agent.</para>
+            /// <para>The User-Agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>chrome</para>

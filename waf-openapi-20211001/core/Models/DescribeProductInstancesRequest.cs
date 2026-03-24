@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeProductInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>The Web Application Firewall (WAF) instance ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the current WAF instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the resource belongs.</para>
+        /// <para>The ID of the Alibaba Cloud account to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1704********9107</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string OwnerUserId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the returned page. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,10 +54,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,12 +69,28 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The protection status of WAF. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>all</b>: All protected.</para>
+        /// </description></item>
+        /// <item><description><para><b>any</b>: Protected.</para>
+        /// </description></item>
+        /// <item><description><para><b>part</b>: Partially protected.</para>
+        /// </description></item>
+        /// <item><description><para><b>non</b>: Not protected.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>all</para>
+        /// </summary>
         [NameInMap("ResourceInstanceAccessStatus")]
         [Validation(Required=false)]
         public string ResourceInstanceAccessStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID of the cloud service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb-2zeugkfj81jvo****4tqm</para>
@@ -82,7 +100,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the instance that is added to WAF.</para>
+        /// <para>The IP address of the instance added to WAF.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.X.X.1</para>
@@ -92,7 +110,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceInstanceIp { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance that is added to WAF.</para>
+        /// <para>The name of the instance added to WAF.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demoInstanceName</para>
@@ -138,11 +156,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// <para>The cloud service to which the instance belongs. Valid values:</para>
+        /// <para>The type of the cloud service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>clb4</b>: Layer 4 Classic Load Balancer (CLB).</description></item>
-        /// <item><description><b>clb7</b>: Layer 7 CLB.</description></item>
-        /// <item><description><b>ecs</b>: Elastic Compute Service (ECS).</description></item>
+        /// <item><description><para><b>clb4</b>: Layer 4 CLB.</para>
+        /// </description></item>
+        /// <item><description><para><b>clb7</b>: Layer 7 CLB.</para>
+        /// </description></item>
+        /// <item><description><para><b>ecs</b>: Elastic Compute Service (ECS).</para>
+        /// </description></item>
+        /// <item><description><para><b>nlb</b>: Network Load Balancer (NLB).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -155,16 +178,26 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The region ID of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-chengdu</b>: China (Chengdu).</description></item>
-        /// <item><description><b>cn-beijing</b>: China (Beijing).</description></item>
-        /// <item><description><b>cn-zhangjiakou</b>: China (Zhangjiakou).</description></item>
-        /// <item><description><b>cn-hangzhou</b>: China (Hangzhou).</description></item>
-        /// <item><description><b>cn-shanghai</b>: China (Shanghai).</description></item>
-        /// <item><description><b>cn-shenzhen</b>: China (Shenzhen).</description></item>
-        /// <item><description><b>cn-qingdao</b>: China (Qingdao).</description></item>
-        /// <item><description><b>cn-hongkong</b>: China (Hong Kong).</description></item>
-        /// <item><description><b>ap-southeast-3</b>: Malaysia (Kuala Lumpur).</description></item>
-        /// <item><description><b>ap-southeast-5</b>: Indonesia (Jakarta).</description></item>
+        /// <item><description><para><b>cn-chengdu</b>: China (Chengdu).</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-beijing</b>: China (Beijing).</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-zhangjiakou</b>: China (Zhangjiakou).</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: China (Hangzhou).</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-shanghai</b>: China (Shanghai).</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-shenzhen</b>: China (Shenzhen).</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-qingdao</b>: China (Qingdao).</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hongkong</b>: China (Hong Kong).</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-3</b>: Malaysia (Kuala Lumpur).</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-5</b>: Indonesia (Jakarta).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

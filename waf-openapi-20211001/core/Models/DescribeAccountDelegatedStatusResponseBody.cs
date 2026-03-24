@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Alibaba Cloud account. This parameter is returned only if the account is the delegated administrator account.</para>
+        /// <para>The name of the Alibaba Cloud account. This parameter is returned only if the account is a delegated administrator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>account_test</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the Alibaba Cloud account is the delegated administrator account of the WAF instance.</para>
+        /// <para>Indicates whether the account is a delegated administrator for WAF.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The account is a delegated administrator.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The account is not a delegated administrator.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,10 +46,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public bool? DelegatedStatus { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8161375D-5958-5627-BFDE-DF14****3E87</para>
+        /// <para>8161375D-5958-5627-BFDE-DF1458A73E87</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

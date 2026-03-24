@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSensitiveStatisticResponseBody : TeaModel {
         /// <summary>
-        /// <para>The statistics of the sensitive data.</para>
+        /// <para>The list of sensitive data statistics.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeSensitiveStatisticResponseBodyData> Data { get; set; }
         public class DescribeSensitiveStatisticResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The API.</para>
+            /// <para>The API path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/api/login</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ApiFormat { get; set; }
 
             /// <summary>
-            /// <para>The IP address.</para>
+            /// <para>The client IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.50.11.**</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ClientIP { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned.</para>
+            /// <para>The number of data entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>169</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The domain name.</para>
+            /// <para>The matched domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a.****.com</para>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string MatchedHost { get; set; }
 
             /// <summary>
-            /// <para>The type of the sensitive data.</para>
+            /// <para>The sensitive data type.</para>
             /// <remarks>
-            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of sensitive data.</para>
+            /// <para>Call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported sensitive data types.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

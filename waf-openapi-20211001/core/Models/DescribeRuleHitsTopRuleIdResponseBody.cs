@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The array of the IDs of the top 10 rules that are matched by requests.</para>
+        /// <para>The IDs of the top 10 rules that were hit most frequently.</para>
         /// </summary>
         [NameInMap("RuleHitsTopRuleId")]
         [Validation(Required=false)]
         public List<DescribeRuleHitsTopRuleIdResponseBodyRuleHitsTopRuleId> RuleHitsTopRuleId { get; set; }
         public class DescribeRuleHitsTopRuleIdResponseBodyRuleHitsTopRuleId : TeaModel {
             /// <summary>
-            /// <para>The number of requests that match the rule.</para>
+            /// <para>The number of times the rule was hit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>181174784</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The protected object.</para>
+            /// <para>The protected object. This parameter is returned only if IsGroupResource is set to false.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>

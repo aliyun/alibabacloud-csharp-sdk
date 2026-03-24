@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSensitiveRequestLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access logs.</para>
+        /// <para>The list of access logs.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeSensitiveRequestLogResponseBodyData> Data { get; set; }
         public class DescribeSensitiveRequestLogResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The account that initiated the request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>admin</para>
             /// </summary>
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Account { get; set; }
 
             /// <summary>
-            /// <para>The API.</para>
+            /// <para>The API path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/api/users/login</para>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ApiId { get; set; }
 
             /// <summary>
-            /// <para>The IP address.</para>
+            /// <para>The client IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>103.118.55.**</para>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ClientIP { get; set; }
 
             /// <summary>
-            /// <para>The number of sensitive data records involved in cross-border data transfer.</para>
+            /// <para>The number of outbound sensitive data entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -75,7 +77,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string MatchedHost { get; set; }
 
             /// <summary>
-            /// <para>IP region, formatted as a region code.</para>
+            /// <para>The code of the region to which the client IP address belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CN</para>
@@ -85,7 +87,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string RemoteCountryId { get; set; }
 
             /// <summary>
-            /// <para>The time when the request was initiated. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+            /// <para>The time of the request. This value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1723392000</para>
@@ -95,9 +97,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? RequestTime { get; set; }
 
             /// <summary>
-            /// <para>The details of sensitive data. The value is a string that consists of a JSON struct. The JSON struct contains key-value pairs. In a key-value pair, a key indicates the identifier of a sensitive data type, including built-in and custom types, and a value indicates specific sensitive data.</para>
+            /// <para>The sensitive data. The key indicates the sensitive data type identifier, which can be a built-in or custom type, and the value indicates the list of sensitive data.</para>
             /// <remarks>
-            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -116,7 +118,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string SensitiveList { get; set; }
 
             /// <summary>
-            /// <para>The trace ID.</para>
+            /// <para>The ID of the access log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0a3d455b17027784870843933dce3d</para>

@@ -10,24 +10,26 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSensitiveDetectionResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The compliance check results.</para>
+        /// <para>The data returned for the compliance detection results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeSensitiveDetectionResultResponseBodyData Data { get; set; }
         public class DescribeSensitiveDetectionResultResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The compliance checks.</para>
+            /// <para>The compliance detection results for sensitive data.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<DescribeSensitiveDetectionResultResponseBodyDataResult> Result { get; set; }
             public class DescribeSensitiveDetectionResultResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The compliance check results. Valid values:</para>
+                /// <para>The result of the compliance detection. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>report</b>: Risks exist in cross-border data transfer.</description></item>
-                /// <item><description><b>none</b>: No risks exist in cross-border data transfer.</description></item>
+                /// <item><description><para><b>report</b>: A risk of outbound data transfer is detected.</para>
+                /// </description></item>
+                /// <item><description><para><b>none</b>: No risk of outbound data transfer is detected.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -38,14 +40,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string DetectionResult { get; set; }
 
                 /// <summary>
-                /// <para>The sensitive information check results by sensitive data type.</para>
+                /// <para>The detection results for each sensitive data type.</para>
                 /// </summary>
                 [NameInMap("List")]
                 [Validation(Required=false)]
                 public List<DescribeSensitiveDetectionResultResponseBodyDataResultList> List { get; set; }
                 public class DescribeSensitiveDetectionResultResponseBodyDataResultList : TeaModel {
                     /// <summary>
-                    /// <para>The number of personal information records.</para>
+                    /// <para>The number of personal information items.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>11</para>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                     public long? InfoCount { get; set; }
 
                     /// <summary>
-                    /// <para>The number of sensitive personal information records that are involved in cross-border data transfer.</para>
+                    /// <para>The number of outbound transfers of personal information.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>6</para>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                     public long? OutboundCount { get; set; }
 
                     /// <summary>
-                    /// <para>The sensitive data type.</para>
+                    /// <para>The code of the sensitive data type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1002</para>
@@ -77,14 +79,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 }
 
                 /// <summary>
-                /// <para>The maximum values in the statistics of sensitive data types.</para>
+                /// <para>The statistics for the most frequently detected sensitive data type.</para>
                 /// </summary>
                 [NameInMap("Max")]
                 [Validation(Required=false)]
                 public DescribeSensitiveDetectionResultResponseBodyDataResultMax Max { get; set; }
                 public class DescribeSensitiveDetectionResultResponseBodyDataResultMax : TeaModel {
                     /// <summary>
-                    /// <para>The number of sensitive personal information records that are of the most frequent sensitive data type.</para>
+                    /// <para>The number of personal information items for the most frequently detected sensitive data type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>187</para>
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                     public long? InfoCount { get; set; }
 
                     /// <summary>
-                    /// <para>The number of sensitive personal information records that are of the most frequent sensitive data type and are involved in cross-border data transfer.</para>
+                    /// <para>The number of outbound transfers of personal information for the most frequently detected sensitive data type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>54</para>
@@ -104,7 +106,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                     public long? OutboundCount { get; set; }
 
                     /// <summary>
-                    /// <para>The most frequent sensitive data type.</para>
+                    /// <para>The code of the sensitive data type that is most frequently detected.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1003</para>
@@ -120,7 +122,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D7861F61-5B61-46CE-A47C-6B19160D5EB0</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeHybridCloudServerRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the regions.</para>
+        /// <para>The regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
