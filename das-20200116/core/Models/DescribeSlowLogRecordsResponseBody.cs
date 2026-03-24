@@ -136,6 +136,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public string DocsExamined { get; set; }
 
+                [NameInMap("Fail")]
+                [Validation(Required=false)]
+                public string Fail { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -228,6 +232,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public string OriginTime { get; set; }
 
+                [NameInMap("Params")]
+                [Validation(Required=false)]
+                public string Params { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -275,6 +283,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [NameInMap("QueryTimeSeconds")]
                 [Validation(Required=false)]
                 public double? QueryTimeSeconds { get; set; }
+
+                [NameInMap("Reason")]
+                [Validation(Required=false)]
+                public string Reason { get; set; }
+
+                [NameInMap("ReqId")]
+                [Validation(Required=false)]
+                public string ReqId { get; set; }
 
                 [NameInMap("RequestSize")]
                 [Validation(Required=false)]
