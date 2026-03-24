@@ -20,7 +20,21 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
-        public string Content { get; set; }
+        public DescribeDomainVerifyDataResponseBodyContent Content { get; set; }
+        public class DescribeDomainVerifyDataResponseBodyContent : TeaModel {
+            [NameInMap("RootDomain")]
+            [Validation(Required=false)]
+            public string RootDomain { get; set; }
+
+            [NameInMap("verifyCode")]
+            [Validation(Required=false)]
+            public string VerifyCode { get; set; }
+
+            [NameInMap("verifyKey")]
+            [Validation(Required=false)]
+            public string VerifyKey { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The ID of the request.</para>

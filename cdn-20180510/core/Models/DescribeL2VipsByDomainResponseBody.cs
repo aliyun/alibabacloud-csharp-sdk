@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The list of VIPs.</para>
-        /// </summary>
         [NameInMap("Vips")]
         [Validation(Required=false)]
         public DescribeL2VipsByDomainResponseBodyVips Vips { get; set; }

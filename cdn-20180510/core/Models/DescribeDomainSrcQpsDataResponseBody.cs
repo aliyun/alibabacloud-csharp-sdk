@@ -49,9 +49,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The back-to-origin bandwidth information at each interval.</para>
-        /// </summary>
         [NameInMap("SrcQpsDataPerInterval")]
         [Validation(Required=false)]
         public DescribeDomainSrcQpsDataResponseBodySrcQpsDataPerInterval SrcQpsDataPerInterval { get; set; }
@@ -60,22 +57,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainSrcQpsDataResponseBodySrcQpsDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDomainSrcQpsDataResponseBodySrcQpsDataPerIntervalDataModule : TeaModel {
-                /// <summary>
-                /// <para>The timestamp of the data returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-12-10T21:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The QPS value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string DataInterval { get; set; }
 
-        /// <summary>
-        /// <para>The statistics of HTTP status codes returned at each time interval.</para>
-        /// </summary>
         [NameInMap("HttpCodeDataInterval")]
         [Validation(Required=false)]
         public DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataInterval HttpCodeDataInterval { get; set; }
@@ -30,32 +27,14 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule> DataModule { get; set; }
             public class DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule : TeaModel {
-                /// <summary>
-                /// <para>The timestamp of the data returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-12-10T20:35:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The total number of times that HTTP status codes were returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>110</para>
-                /// </summary>
                 [NameInMap("TotalValue")]
                 [Validation(Required=false)]
                 public string TotalValue { get; set; }
 
-                /// <summary>
-                /// <para>The number of times that the HTTP status code was returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>{ &quot;200&quot;: 10, &quot;206&quot;: 100}</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

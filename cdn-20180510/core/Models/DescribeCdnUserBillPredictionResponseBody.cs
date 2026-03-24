@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnUserBillPredictionResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The estimated bill data.</para>
-        /// </summary>
         [NameInMap("BillPredictionData")]
         [Validation(Required=false)]
         public DescribeCdnUserBillPredictionResponseBodyBillPredictionData BillPredictionData { get; set; }
@@ -20,32 +17,14 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeCdnUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem> BillPredictionDataItem { get; set; }
             public class DescribeCdnUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem : TeaModel {
-                /// <summary>
-                /// <para>The billable region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>CN</para>
-                /// </summary>
                 [NameInMap("Area")]
                 [Validation(Required=false)]
                 public string Area { get; set; }
 
-                /// <summary>
-                /// <para>The time when the value used as the estimated value is generated. This parameter is returned only if the metering method is pay by 95th percentile, pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00, or pay by 4th peak bandwidth per month.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2018-10-15T16:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStp")]
                 [Validation(Required=false)]
                 public string TimeStp { get; set; }
 
-                /// <summary>
-                /// <para>The estimated value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>10000</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public float? Value { get; set; }

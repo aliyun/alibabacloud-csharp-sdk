@@ -79,9 +79,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string Type { get; set; }
 
-        /// <summary>
-        /// <para>The resource usage that was collected at each interval.</para>
-        /// </summary>
         [NameInMap("UsageDataPerInterval")]
         [Validation(Required=false)]
         public DescribeDomainUsageDataResponseBodyUsageDataPerInterval UsageDataPerInterval { get; set; }
@@ -90,48 +87,18 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule : TeaModel {
-                /// <summary>
-                /// <para>The time of the peak bandwidth value if the <b>Field</b> parameter in the request is set to <b>bps</b>. Otherwise, this parameter returns the same value as the <b>TimeStamp</b> parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-12-10T21:30:00Z</para>
-                /// </summary>
                 [NameInMap("PeakTime")]
                 [Validation(Required=false)]
                 public string PeakTime { get; set; }
 
-                /// <summary>
-                /// <para>The resource usage in a specific scenario.</para>
-                /// <remarks>
-                /// <para>SpecialValue indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>423304182</para>
-                /// </summary>
                 [NameInMap("SpecialValue")]
                 [Validation(Required=false)]
                 public string SpecialValue { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp of the data returned.</para>
-                /// <remarks>
-                /// <para><b>TimeStamp</b> indicates the timestamp of the data returned at each interval.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-12-10T21:30:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The amount of resource usage.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>423304182</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

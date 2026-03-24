@@ -145,9 +145,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public string ServerCertificateStatus { get; set; }
 
-            /// <summary>
-            /// <para>The information about the origin server.</para>
-            /// </summary>
             [NameInMap("SourceModels")]
             [Validation(Required=false)]
             public DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModels SourceModels { get; set; }
@@ -156,68 +153,26 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 [Validation(Required=false)]
                 public List<DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModelsSourceModel> SourceModel { get; set; }
                 public class DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModelsSourceModel : TeaModel {
-                    /// <summary>
-                    /// <para>The address of the origin server.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>example.com</para>
-                    /// </summary>
                     [NameInMap("Content")]
                     [Validation(Required=false)]
                     public string Content { get; set; }
 
-                    /// <summary>
-                    /// <para>The status.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>online</para>
-                    /// </summary>
                     [NameInMap("Enabled")]
                     [Validation(Required=false)]
                     public string Enabled { get; set; }
 
-                    /// <summary>
-                    /// <para>The port over which requests are redirected to the origin server. Ports 443 and 80 are supported.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>80</para>
-                    /// </summary>
                     [NameInMap("Port")]
                     [Validation(Required=false)]
                     public int? Port { get; set; }
 
-                    /// <summary>
-                    /// <para>The priority.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>20</para>
-                    /// </summary>
                     [NameInMap("Priority")]
                     [Validation(Required=false)]
                     public string Priority { get; set; }
 
-                    /// <summary>
-                    /// <para>The type of the origin server. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>ipaddr</b>: an origin IP address</description></item>
-                    /// <item><description><b>domain</b>: an origin domain name</description></item>
-                    /// <item><description><b>oss</b>: the domain name of an Object Storage Service (OSS) bucket</description></item>
-                    /// <item><description><b>fc_domain:</b> a Function Compute domain name</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>domain</para>
-                    /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
 
-                    /// <summary>
-                    /// <para>The weight of the origin server if multiple origin servers have been specified.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>10</para>
-                    /// </summary>
                     [NameInMap("Weight")]
                     [Validation(Required=false)]
                     public string Weight { get; set; }

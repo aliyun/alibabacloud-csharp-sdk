@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        /// <summary>
-        /// <para>The most frequently requested web pages.</para>
-        /// </summary>
         [NameInMap("TopReferList")]
         [Validation(Required=false)]
         public DescribeDomainTopReferVisitResponseBodyTopReferList TopReferList { get; set; }
@@ -50,52 +47,22 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainTopReferVisitResponseBodyTopReferListReferList> ReferList { get; set; }
             public class DescribeDomainTopReferVisitResponseBodyTopReferListReferList : TeaModel {
-                /// <summary>
-                /// <para>The amount of network traffic. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>200</para>
-                /// </summary>
                 [NameInMap("Flow")]
                 [Validation(Required=false)]
                 public string Flow { get; set; }
 
-                /// <summary>
-                /// <para>The proportion of network traffic consumed to access the URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.5</para>
-                /// </summary>
                 [NameInMap("FlowProportion")]
                 [Validation(Required=false)]
                 public float? FlowProportion { get; set; }
 
-                /// <summary>
-                /// <para>The URLs to the most frequently requested web pages.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>learn.aliyundoc.com</para>
-                /// </summary>
                 [NameInMap("ReferDetail")]
                 [Validation(Required=false)]
                 public string ReferDetail { get; set; }
 
-                /// <summary>
-                /// <para>The number of visits to the URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3</para>
-                /// </summary>
                 [NameInMap("VisitData")]
                 [Validation(Required=false)]
                 public string VisitData { get; set; }
 
-                /// <summary>
-                /// <para>The proportion of visits to the URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.5</para>
-                /// </summary>
                 [NameInMap("VisitProportion")]
                 [Validation(Required=false)]
                 public float? VisitProportion { get; set; }

@@ -59,9 +59,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// <para>A list of bandwidth values collected at each time interval.</para>
-        /// </summary>
         [NameInMap("PathDataPerInterval")]
         [Validation(Required=false)]
         public DescribeDomainPathDataResponseBodyPathDataPerInterval PathDataPerInterval { get; set; }
@@ -70,42 +67,18 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainPathDataResponseBodyPathDataPerIntervalUsageData> UsageData { get; set; }
             public class DescribeDomainPathDataResponseBodyPathDataPerIntervalUsageData : TeaModel {
-                /// <summary>
-                /// <para>The number of visits to the URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>10</para>
-                /// </summary>
                 [NameInMap("Acc")]
                 [Validation(Required=false)]
                 public int? Acc { get; set; }
 
-                /// <summary>
-                /// <para>The path.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>/path/</para>
-                /// </summary>
                 [NameInMap("Path")]
                 [Validation(Required=false)]
                 public string Path { get; set; }
 
-                /// <summary>
-                /// <para>The point in time.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2017-09-30T16:00:00Z</para>
-                /// </summary>
                 [NameInMap("Time")]
                 [Validation(Required=false)]
                 public string Time { get; set; }
 
-                /// <summary>
-                /// <para>The amount of network traffic. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>346</para>
-                /// </summary>
                 [NameInMap("Traffic")]
                 [Validation(Required=false)]
                 public int? Traffic { get; set; }

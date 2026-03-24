@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainMax95BpsDataResponseBody : TeaModel {
-        /// <summary>
-        /// <para>Details of the 95th percentile bandwidth.</para>
-        /// </summary>
         [NameInMap("DetailData")]
         [Validation(Required=false)]
         public DescribeDomainMax95BpsDataResponseBodyDetailData DetailData { get; set; }
@@ -20,42 +17,18 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainMax95BpsDataResponseBodyDetailDataMax95Detail> Max95Detail { get; set; }
             public class DescribeDomainMax95BpsDataResponseBodyDetailDataMax95Detail : TeaModel {
-                /// <summary>
-                /// <para>Region of the 95th percentile bandwidth.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>CN</para>
-                /// </summary>
                 [NameInMap("Area")]
                 [Validation(Required=false)]
                 public string Area { get; set; }
 
-                /// <summary>
-                /// <para>The 95th percentile bandwidth.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>16777590.28</para>
-                /// </summary>
                 [NameInMap("Max95Bps")]
                 [Validation(Required=false)]
                 public float? Max95Bps { get; set; }
 
-                /// <summary>
-                /// <para>Time of the 95th percentile bandwidth.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-12-11T21:05:00Z</para>
-                /// </summary>
                 [NameInMap("Max95BpsPeakTime")]
                 [Validation(Required=false)]
                 public string Max95BpsPeakTime { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp of the returned data.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-12-11T21:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }

@@ -59,9 +59,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        /// <summary>
-        /// <para>The proportions of requests initiated from each region.</para>
-        /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]
         public DescribeDomainRegionDataResponseBodyValue Value { get; set; }
@@ -70,122 +67,50 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainRegionDataResponseBodyValueRegionProportionData> RegionProportionData { get; set; }
             public class DescribeDomainRegionDataResponseBodyValueRegionProportionData : TeaModel {
-                /// <summary>
-                /// <para>The average response size. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>800019.0</para>
-                /// </summary>
                 [NameInMap("AvgObjectSize")]
                 [Validation(Required=false)]
                 public string AvgObjectSize { get; set; }
 
-                /// <summary>
-                /// <para>The average response speed. Unit: bit/s.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>154.3345765545624</para>
-                /// </summary>
                 [NameInMap("AvgResponseRate")]
                 [Validation(Required=false)]
                 public string AvgResponseRate { get; set; }
 
-                /// <summary>
-                /// <para>The average response time. Unit: milliseconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>5183.666666666667</para>
-                /// </summary>
                 [NameInMap("AvgResponseTime")]
                 [Validation(Required=false)]
                 public string AvgResponseTime { get; set; }
 
-                /// <summary>
-                /// <para>The bandwidth.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>380.9614285714286</para>
-                /// </summary>
                 [NameInMap("Bps")]
                 [Validation(Required=false)]
                 public string Bps { get; set; }
 
-                /// <summary>
-                /// <para>The proportion of traffic from the region. For example, a value of 90 indicates that 90% of the traffic is from the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.003544181046236794</para>
-                /// </summary>
                 [NameInMap("BytesProportion")]
                 [Validation(Required=false)]
                 public string BytesProportion { get; set; }
 
-                /// <summary>
-                /// <para>The proportion of visits from the region. For example, a value of 90 indicates that 90% of the visits are from the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.01155980271270037</para>
-                /// </summary>
                 [NameInMap("Proportion")]
                 [Validation(Required=false)]
                 public string Proportion { get; set; }
 
-                /// <summary>
-                /// <para>The number of queries per second.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>5.9523809523809524E-5</para>
-                /// </summary>
                 [NameInMap("Qps")]
                 [Validation(Required=false)]
                 public string Qps { get; set; }
 
-                /// <summary>
-                /// <para>The information about the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Japan</para>
-                /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
-                /// <summary>
-                /// <para>The name of the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>japan</para>
-                /// </summary>
                 [NameInMap("RegionEname")]
                 [Validation(Required=false)]
                 public string RegionEname { get; set; }
 
-                /// <summary>
-                /// <para>The request error rate. A value of 90 indicates that 90% of the requests encountered errors.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.0</para>
-                /// </summary>
                 [NameInMap("ReqErrRate")]
                 [Validation(Required=false)]
                 public string ReqErrRate { get; set; }
 
-                /// <summary>
-                /// <para>The total traffic. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2400057</para>
-                /// </summary>
                 [NameInMap("TotalBytes")]
                 [Validation(Required=false)]
                 public string TotalBytes { get; set; }
 
-                /// <summary>
-                /// <para>The total number of requests.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3</para>
-                /// </summary>
                 [NameInMap("TotalQuery")]
                 [Validation(Required=false)]
                 public string TotalQuery { get; set; }

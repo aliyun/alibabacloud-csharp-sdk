@@ -40,9 +40,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        /// <summary>
-        /// <para>The proportions of HTTP status codes at each time interval.</para>
-        /// </summary>
         [NameInMap("RealTimeHttpCodeData")]
         [Validation(Required=false)]
         public DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeData RealTimeHttpCodeData { get; set; }
@@ -51,19 +48,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageData> UsageData { get; set; }
             public class DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageData : TeaModel {
-                /// <summary>
-                /// <para>The timestamp of the data returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-11-29T05:39:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The proportions of the HTTP status codes.</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValue Value { get; set; }
@@ -72,32 +60,14 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                     [Validation(Required=false)]
                     public List<DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValueRealTimeCodeProportionData> RealTimeCodeProportionData { get; set; }
                     public class DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValueRealTimeCodeProportionData : TeaModel {
-                        /// <summary>
-                        /// <para>The HTTP status code returned.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>500</para>
-                        /// </summary>
                         [NameInMap("Code")]
                         [Validation(Required=false)]
                         public string Code { get; set; }
 
-                        /// <summary>
-                        /// <para>The total number of entries.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>100</para>
-                        /// </summary>
                         [NameInMap("Count")]
                         [Validation(Required=false)]
                         public string Count { get; set; }
 
-                        /// <summary>
-                        /// <para>The proportion of the HTTP status code.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>28.4496124031008</para>
-                        /// </summary>
                         [NameInMap("Proportion")]
                         [Validation(Required=false)]
                         public string Proportion { get; set; }

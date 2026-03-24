@@ -49,9 +49,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The origin bandwidth data at each time interval. Unit: bit/s.</para>
-        /// </summary>
         [NameInMap("SrcBpsDataPerInterval")]
         [Validation(Required=false)]
         public DescribeDomainSrcBpsDataResponseBodySrcBpsDataPerInterval SrcBpsDataPerInterval { get; set; }
@@ -60,32 +57,14 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainSrcBpsDataResponseBodySrcBpsDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDomainSrcBpsDataResponseBodySrcBpsDataPerIntervalDataModule : TeaModel {
-                /// <summary>
-                /// <para>The bandwidth values of origin HTTPS requests.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>10</para>
-                /// </summary>
                 [NameInMap("HttpsValue")]
                 [Validation(Required=false)]
                 public string HttpsValue { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp of the returned data.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-12-10T20:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The traffic value at each time interval.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>500</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

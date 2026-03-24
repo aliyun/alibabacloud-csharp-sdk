@@ -16,9 +16,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public DescribeCdnCertificateListResponseBodyCertificateListModel CertificateListModel { get; set; }
         public class DescribeCdnCertificateListResponseBodyCertificateListModel : TeaModel {
-            /// <summary>
-            /// <para>The list of certificates.</para>
-            /// </summary>
             [NameInMap("CertList")]
             [Validation(Required=false)]
             public DescribeCdnCertificateListResponseBodyCertificateListModelCertList CertList { get; set; }
@@ -27,62 +24,26 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 [Validation(Required=false)]
                 public List<DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert> Cert { get; set; }
                 public class DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert : TeaModel {
-                    /// <summary>
-                    /// <para>The ID of the certificate.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1</para>
-                    /// </summary>
                     [NameInMap("CertId")]
                     [Validation(Required=false)]
                     public long? CertId { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the certificate.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>Certificate1</para>
-                    /// </summary>
                     [NameInMap("CertName")]
                     [Validation(Required=false)]
                     public string CertName { get; set; }
 
-                    /// <summary>
-                    /// <para>The Common Name (CN) attribute of the certificate. In most cases, the CN is a domain name.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>example.com</para>
-                    /// </summary>
                     [NameInMap("Common")]
                     [Validation(Required=false)]
                     public string Common { get; set; }
 
-                    /// <summary>
-                    /// <para>The fingerprint of the certificate.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>2ED68FD33786C5B42950D40A6C50353575BB****</para>
-                    /// </summary>
                     [NameInMap("Fingerprint")]
                     [Validation(Required=false)]
                     public string Fingerprint { get; set; }
 
-                    /// <summary>
-                    /// <para>The certificate authority (CA) that issued the certificate.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>CO****</para>
-                    /// </summary>
                     [NameInMap("Issuer")]
                     [Validation(Required=false)]
                     public string Issuer { get; set; }
 
-                    /// <summary>
-                    /// <para>The timestamp.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1512388610</para>
-                    /// </summary>
                     [NameInMap("LastTime")]
                     [Validation(Required=false)]
                     public long? LastTime { get; set; }

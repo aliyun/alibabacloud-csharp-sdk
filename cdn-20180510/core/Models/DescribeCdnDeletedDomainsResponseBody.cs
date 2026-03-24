@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnDeletedDomainsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The list of accelerated domain names and the time each domain name was last modified.</para>
-        /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
         public DescribeCdnDeletedDomainsResponseBodyDomains Domains { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeCdnDeletedDomainsResponseBodyDomainsPageData> PageData { get; set; }
             public class DescribeCdnDeletedDomainsResponseBodyDomainsPageData : TeaModel {
-                /// <summary>
-                /// <para>The accelerated domain name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>example.com</para>
-                /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
-                /// <summary>
-                /// <para>The time when the accelerated domain name was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-10-28T11:05:52Z</para>
-                /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }

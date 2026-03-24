@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainTopUrlVisitResponseBody : TeaModel {
-        /// <summary>
-        /// <para>A list of frequently requested URLs.</para>
-        /// </summary>
         [NameInMap("AllUrlList")]
         [Validation(Required=false)]
         public DescribeDomainTopUrlVisitResponseBodyAllUrlList AllUrlList { get; set; }
@@ -20,52 +17,22 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainTopUrlVisitResponseBodyAllUrlListUrlList> UrlList { get; set; }
             public class DescribeDomainTopUrlVisitResponseBodyAllUrlListUrlList : TeaModel {
-                /// <summary>
-                /// <para>The amount of network traffic. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>460486880</para>
-                /// </summary>
                 [NameInMap("Flow")]
                 [Validation(Required=false)]
                 public string Flow { get; set; }
 
-                /// <summary>
-                /// <para>The proportion of network traffic consumed to access the URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.35</para>
-                /// </summary>
                 [NameInMap("FlowProportion")]
                 [Validation(Required=false)]
                 public float? FlowProportion { get; set; }
 
-                /// <summary>
-                /// <para>The complete URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="http://example.com/nn_live/nn_x64/a0.m3u8">http://example.com/nn_live/nn_x64/a0.m3u8</a></para>
-                /// </summary>
                 [NameInMap("UrlDetail")]
                 [Validation(Required=false)]
                 public string UrlDetail { get; set; }
 
-                /// <summary>
-                /// <para>The number of visits to the URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>161673</para>
-                /// </summary>
                 [NameInMap("VisitData")]
                 [Validation(Required=false)]
                 public string VisitData { get; set; }
 
-                /// <summary>
-                /// <para>The proportion of visits to the URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.35</para>
-                /// </summary>
                 [NameInMap("VisitProportion")]
                 [Validation(Required=false)]
                 public float? VisitProportion { get; set; }
@@ -104,9 +71,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        /// <summary>
-        /// <para>A list of URLs for which 2xx status codes were returned.</para>
-        /// </summary>
         [NameInMap("Url200List")]
         [Validation(Required=false)]
         public DescribeDomainTopUrlVisitResponseBodyUrl200List Url200List { get; set; }
@@ -115,52 +79,22 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainTopUrlVisitResponseBodyUrl200ListUrlList> UrlList { get; set; }
             public class DescribeDomainTopUrlVisitResponseBodyUrl200ListUrlList : TeaModel {
-                /// <summary>
-                /// <para>The amount of network traffic. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>460486880</para>
-                /// </summary>
                 [NameInMap("Flow")]
                 [Validation(Required=false)]
                 public string Flow { get; set; }
 
-                /// <summary>
-                /// <para>The proportion of network traffic consumed to access the URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.35</para>
-                /// </summary>
                 [NameInMap("FlowProportion")]
                 [Validation(Required=false)]
                 public float? FlowProportion { get; set; }
 
-                /// <summary>
-                /// <para>The complete URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="http://example.com/nn_live/nn_x64/aWQ9SE5KU0bGxfcGNfbGl2ZQ,,/HNJSMPP360.m3u8">http://example.com/nn_live/nn_x64/aWQ9SE5KU0bGxfcGNfbGl2ZQ,,/HNJSMPP360.m3u8</a></para>
-                /// </summary>
                 [NameInMap("UrlDetail")]
                 [Validation(Required=false)]
                 public string UrlDetail { get; set; }
 
-                /// <summary>
-                /// <para>The number of visits to the URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>161673</para>
-                /// </summary>
                 [NameInMap("VisitData")]
                 [Validation(Required=false)]
                 public string VisitData { get; set; }
 
-                /// <summary>
-                /// <para>The proportion of visits to the URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.35</para>
-                /// </summary>
                 [NameInMap("VisitProportion")]
                 [Validation(Required=false)]
                 public float? VisitProportion { get; set; }
@@ -169,9 +103,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         }
 
-        /// <summary>
-        /// <para>A list of URLs for which 3xx status codes were returned.</para>
-        /// </summary>
         [NameInMap("Url300List")]
         [Validation(Required=false)]
         public DescribeDomainTopUrlVisitResponseBodyUrl300List Url300List { get; set; }
@@ -180,52 +111,22 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainTopUrlVisitResponseBodyUrl300ListUrlList> UrlList { get; set; }
             public class DescribeDomainTopUrlVisitResponseBodyUrl300ListUrlList : TeaModel {
-                /// <summary>
-                /// <para>The amount of network traffic. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>460486880</para>
-                /// </summary>
                 [NameInMap("Flow")]
                 [Validation(Required=false)]
                 public string Flow { get; set; }
 
-                /// <summary>
-                /// <para>The proportion of network traffic consumed to access the URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.35</para>
-                /// </summary>
                 [NameInMap("FlowProportion")]
                 [Validation(Required=false)]
                 public float? FlowProportion { get; set; }
 
-                /// <summary>
-                /// <para>The complete URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="http://example.com/nn_live/nn_x64/a0.m3u8">http://example.com/nn_live/nn_x64/a0.m3u8</a></para>
-                /// </summary>
                 [NameInMap("UrlDetail")]
                 [Validation(Required=false)]
                 public string UrlDetail { get; set; }
 
-                /// <summary>
-                /// <para>The number of visits to the URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>161673</para>
-                /// </summary>
                 [NameInMap("VisitData")]
                 [Validation(Required=false)]
                 public string VisitData { get; set; }
 
-                /// <summary>
-                /// <para>The proportion of visits to the URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.35</para>
-                /// </summary>
                 [NameInMap("VisitProportion")]
                 [Validation(Required=false)]
                 public float? VisitProportion { get; set; }
@@ -234,9 +135,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         }
 
-        /// <summary>
-        /// <para>A list of URLs for which 4xx status codes were returned.</para>
-        /// </summary>
         [NameInMap("Url400List")]
         [Validation(Required=false)]
         public DescribeDomainTopUrlVisitResponseBodyUrl400List Url400List { get; set; }
@@ -245,52 +143,22 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainTopUrlVisitResponseBodyUrl400ListUrlList> UrlList { get; set; }
             public class DescribeDomainTopUrlVisitResponseBodyUrl400ListUrlList : TeaModel {
-                /// <summary>
-                /// <para>The amount of network traffic. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>460486880</para>
-                /// </summary>
                 [NameInMap("Flow")]
                 [Validation(Required=false)]
                 public string Flow { get; set; }
 
-                /// <summary>
-                /// <para>The proportion of network traffic consumed to access the URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.35</para>
-                /// </summary>
                 [NameInMap("FlowProportion")]
                 [Validation(Required=false)]
                 public float? FlowProportion { get; set; }
 
-                /// <summary>
-                /// <para>The complete URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="http://example.com/nn_live/nn_x64/aWQ9SE5KU01QUhbGxfcGNfbGl2ZQ,,/HNJSMPP360.m3u8">http://example.com/nn_live/nn_x64/aWQ9SE5KU01QUhbGxfcGNfbGl2ZQ,,/HNJSMPP360.m3u8</a></para>
-                /// </summary>
                 [NameInMap("UrlDetail")]
                 [Validation(Required=false)]
                 public string UrlDetail { get; set; }
 
-                /// <summary>
-                /// <para>The number of visits to the URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1884</para>
-                /// </summary>
                 [NameInMap("VisitData")]
                 [Validation(Required=false)]
                 public string VisitData { get; set; }
 
-                /// <summary>
-                /// <para>The proportion of visits to the URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.35</para>
-                /// </summary>
                 [NameInMap("VisitProportion")]
                 [Validation(Required=false)]
                 public float? VisitProportion { get; set; }
@@ -299,9 +167,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         }
 
-        /// <summary>
-        /// <para>A list of URLs for which 5xx status codes were returned.</para>
-        /// </summary>
         [NameInMap("Url500List")]
         [Validation(Required=false)]
         public DescribeDomainTopUrlVisitResponseBodyUrl500List Url500List { get; set; }
@@ -310,52 +175,22 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainTopUrlVisitResponseBodyUrl500ListUrlList> UrlList { get; set; }
             public class DescribeDomainTopUrlVisitResponseBodyUrl500ListUrlList : TeaModel {
-                /// <summary>
-                /// <para>The amount of network traffic. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>460486880</para>
-                /// </summary>
                 [NameInMap("Flow")]
                 [Validation(Required=false)]
                 public string Flow { get; set; }
 
-                /// <summary>
-                /// <para>The proportion of network traffic consumed to access the URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.35</para>
-                /// </summary>
                 [NameInMap("FlowProportion")]
                 [Validation(Required=false)]
                 public float? FlowProportion { get; set; }
 
-                /// <summary>
-                /// <para>The complete URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="http://example.com/nn_live/nn_x64/aWQ9SE5KU0GNfbGl2ZQ,,/HNJSMPP360.m3u8">http://example.com/nn_live/nn_x64/aWQ9SE5KU0GNfbGl2ZQ,,/HNJSMPP360.m3u8</a></para>
-                /// </summary>
                 [NameInMap("UrlDetail")]
                 [Validation(Required=false)]
                 public string UrlDetail { get; set; }
 
-                /// <summary>
-                /// <para>The number of visits to the URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>161673</para>
-                /// </summary>
                 [NameInMap("VisitData")]
                 [Validation(Required=false)]
                 public string VisitData { get; set; }
 
-                /// <summary>
-                /// <para>The proportion of visits to the URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.35</para>
-                /// </summary>
                 [NameInMap("VisitProportion")]
                 [Validation(Required=false)]
                 public float? VisitProportion { get; set; }

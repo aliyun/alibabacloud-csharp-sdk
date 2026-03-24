@@ -16,9 +16,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public DescribeCdnSMCertificateListResponseBodyCertificateListModel CertificateListModel { get; set; }
         public class DescribeCdnSMCertificateListResponseBodyCertificateListModel : TeaModel {
-            /// <summary>
-            /// <para>The list of certificates.</para>
-            /// </summary>
             [NameInMap("CertList")]
             [Validation(Required=false)]
             public DescribeCdnSMCertificateListResponseBodyCertificateListModelCertList CertList { get; set; }
@@ -27,42 +24,18 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 [Validation(Required=false)]
                 public List<DescribeCdnSMCertificateListResponseBodyCertificateListModelCertListCert> Cert { get; set; }
                 public class DescribeCdnSMCertificateListResponseBodyCertificateListModelCertListCert : TeaModel {
-                    /// <summary>
-                    /// <para>The ID of the certificate.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>yourCertldentifier</para>
-                    /// </summary>
                     [NameInMap("CertIdentifier")]
                     [Validation(Required=false)]
                     public string CertIdentifier { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the certificate.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>yourCertName</para>
-                    /// </summary>
                     [NameInMap("CertName")]
                     [Validation(Required=false)]
                     public string CertName { get; set; }
 
-                    /// <summary>
-                    /// <para>The common name of the certificate.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>yourCertCommon</para>
-                    /// </summary>
                     [NameInMap("Common")]
                     [Validation(Required=false)]
                     public string Common { get; set; }
 
-                    /// <summary>
-                    /// <para>The certificate authority (CA) that issued the certificate.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>yourCertIssuer</para>
-                    /// </summary>
                     [NameInMap("Issuer")]
                     [Validation(Required=false)]
                     public string Issuer { get; set; }

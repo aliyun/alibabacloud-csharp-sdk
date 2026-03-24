@@ -49,9 +49,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string Layer { get; set; }
 
-        /// <summary>
-        /// <para>The number of queries per second at each interval.</para>
-        /// </summary>
         [NameInMap("QpsDataInterval")]
         [Validation(Required=false)]
         public DescribeDomainQpsDataByLayerResponseBodyQpsDataInterval QpsDataInterval { get; set; }
@@ -60,72 +57,30 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule> DataModule { get; set; }
             public class DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule : TeaModel {
-                /// <summary>
-                /// <para>The number of requests in the Chinese mainland.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>12</para>
-                /// </summary>
                 [NameInMap("AccDomesticValue")]
                 [Validation(Required=false)]
                 public string AccDomesticValue { get; set; }
 
-                /// <summary>
-                /// <para>The number of requests outside the Chinese mainland.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>44</para>
-                /// </summary>
                 [NameInMap("AccOverseasValue")]
                 [Validation(Required=false)]
                 public string AccOverseasValue { get; set; }
 
-                /// <summary>
-                /// <para>The total number of requests.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>56</para>
-                /// </summary>
                 [NameInMap("AccValue")]
                 [Validation(Required=false)]
                 public string AccValue { get; set; }
 
-                /// <summary>
-                /// <para>The number of queries per second in the Chinese mainland.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.12</para>
-                /// </summary>
                 [NameInMap("DomesticValue")]
                 [Validation(Required=false)]
                 public string DomesticValue { get; set; }
 
-                /// <summary>
-                /// <para>The number of queries per second outside the Chinese mainland.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.44</para>
-                /// </summary>
                 [NameInMap("OverseasValue")]
                 [Validation(Required=false)]
                 public string OverseasValue { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp of the returned data.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-12-10T21:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The total number of queries per second.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.56</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

@@ -75,9 +75,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string OpeningTime { get; set; }
 
-        /// <summary>
-        /// <para>The lock status.</para>
-        /// </summary>
         [NameInMap("OperationLocks")]
         [Validation(Required=false)]
         public DescribeCdnServiceResponseBodyOperationLocks OperationLocks { get; set; }
@@ -86,12 +83,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeCdnServiceResponseBodyOperationLocksLockReason> LockReason { get; set; }
             public class DescribeCdnServiceResponseBodyOperationLocksLockReason : TeaModel {
-                /// <summary>
-                /// <para>The reason why the service is locked. A value of financial indicates that the service is locked due to overdue payments.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>financial</para>
-                /// </summary>
                 [NameInMap("LockReason")]
                 [Validation(Required=false)]
                 public string LockReason { get; set; }

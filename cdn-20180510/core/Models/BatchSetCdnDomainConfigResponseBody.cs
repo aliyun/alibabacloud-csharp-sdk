@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class BatchSetCdnDomainConfigResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The list of domain configurations.</para>
-        /// </summary>
         [NameInMap("DomainConfigList")]
         [Validation(Required=false)]
         public BatchSetCdnDomainConfigResponseBodyDomainConfigList DomainConfigList { get; set; }
@@ -20,32 +17,14 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<BatchSetCdnDomainConfigResponseBodyDomainConfigListDomainConfigModel> DomainConfigModel { get; set; }
             public class BatchSetCdnDomainConfigResponseBodyDomainConfigListDomainConfigModel : TeaModel {
-                /// <summary>
-                /// <para>The ID of the configuration.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1234567</para>
-                /// </summary>
                 [NameInMap("ConfigId")]
                 [Validation(Required=false)]
                 public long? ConfigId { get; set; }
 
-                /// <summary>
-                /// <para>The domain name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="http://www.example.com">www.example.com</a></para>
-                /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
-                /// <summary>
-                /// <para>The name of the feature.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>set_resp_header</para>
-                /// </summary>
                 [NameInMap("FunctionName")]
                 [Validation(Required=false)]
                 public string FunctionName { get; set; }

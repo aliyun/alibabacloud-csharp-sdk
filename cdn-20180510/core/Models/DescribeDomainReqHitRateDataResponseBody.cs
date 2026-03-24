@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        /// <summary>
-        /// <para>The request hit ratio data at each time interval. The hit ratio is measured in percentage.</para>
-        /// </summary>
         [NameInMap("ReqHitRateInterval")]
         [Validation(Required=false)]
         public DescribeDomainReqHitRateDataResponseBodyReqHitRateInterval ReqHitRateInterval { get; set; }
@@ -50,32 +47,14 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainReqHitRateDataResponseBodyReqHitRateIntervalDataModule> DataModule { get; set; }
             public class DescribeDomainReqHitRateDataResponseBodyReqHitRateIntervalDataModule : TeaModel {
-                /// <summary>
-                /// <para>The hit ratio of HTTPS requests.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>50.0</para>
-                /// </summary>
                 [NameInMap("HttpsValue")]
                 [Validation(Required=false)]
                 public string HttpsValue { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp of the returned data.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2017-12-22T08:00:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The request hit ratio.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>100.0</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

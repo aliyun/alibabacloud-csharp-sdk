@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainAverageResponseTimeResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The average response time data for time intervals.</para>
-        /// </summary>
         [NameInMap("AvgRTPerInterval")]
         [Validation(Required=false)]
         public DescribeDomainAverageResponseTimeResponseBodyAvgRTPerInterval AvgRTPerInterval { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainAverageResponseTimeResponseBodyAvgRTPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDomainAverageResponseTimeResponseBodyAvgRTPerIntervalDataModule : TeaModel {
-                /// <summary>
-                /// <para>The timestamp of the data returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-12-10T20:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The average response time.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

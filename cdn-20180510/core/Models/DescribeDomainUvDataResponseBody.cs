@@ -59,9 +59,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        /// <summary>
-        /// <para>The number of UVs at each interval.</para>
-        /// </summary>
         [NameInMap("UvDataInterval")]
         [Validation(Required=false)]
         public DescribeDomainUvDataResponseBodyUvDataInterval UvDataInterval { get; set; }
@@ -70,22 +67,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainUvDataResponseBodyUvDataIntervalUsageData> UsageData { get; set; }
             public class DescribeDomainUvDataResponseBodyUvDataIntervalUsageData : TeaModel {
-                /// <summary>
-                /// <para>The timestamp of the returned data.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-11-29T00:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The number of UVs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>318</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

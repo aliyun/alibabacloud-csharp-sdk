@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainBpsDataResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The list of bandwidth data entries returned at each interval.</para>
-        /// </summary>
         [NameInMap("BpsDataPerInterval")]
         [Validation(Required=false)]
         public DescribeDomainBpsDataResponseBodyBpsDataPerInterval BpsDataPerInterval { get; set; }
@@ -20,72 +17,30 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainBpsDataResponseBodyBpsDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDomainBpsDataResponseBodyBpsDataPerIntervalDataModule : TeaModel {
-                /// <summary>
-                /// <para>The bandwidth value in the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>11286111</para>
-                /// </summary>
                 [NameInMap("DomesticValue")]
                 [Validation(Required=false)]
                 public string DomesticValue { get; set; }
 
-                /// <summary>
-                /// <para>The bandwidth data for HTTPS requests in the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>11286111</para>
-                /// </summary>
                 [NameInMap("HttpsDomesticValue")]
                 [Validation(Required=false)]
                 public string HttpsDomesticValue { get; set; }
 
-                /// <summary>
-                /// <para>The bandwidth data for HTTPS requests in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2000</para>
-                /// </summary>
                 [NameInMap("HttpsOverseasValue")]
                 [Validation(Required=false)]
                 public string HttpsOverseasValue { get; set; }
 
-                /// <summary>
-                /// <para>The bandwidth value for HTTPS requests. Unit: bit/s.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>11288111</para>
-                /// </summary>
                 [NameInMap("HttpsValue")]
                 [Validation(Required=false)]
                 public string HttpsValue { get; set; }
 
-                /// <summary>
-                /// <para>The bandwidth data in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2000</para>
-                /// </summary>
                 [NameInMap("OverseasValue")]
                 [Validation(Required=false)]
                 public string OverseasValue { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp of the data returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-12-10T20:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The bandwidth. Unit: bit/s.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>11288111</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

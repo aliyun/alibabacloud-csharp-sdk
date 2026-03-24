@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        /// <summary>
-        /// <para>The number of PVs at each interval.</para>
-        /// </summary>
         [NameInMap("PvDataInterval")]
         [Validation(Required=false)]
         public DescribeDomainPvDataResponseBodyPvDataInterval PvDataInterval { get; set; }
@@ -50,22 +47,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainPvDataResponseBodyPvDataIntervalUsageData> UsageData { get; set; }
             public class DescribeDomainPvDataResponseBodyPvDataIntervalUsageData : TeaModel {
-                /// <summary>
-                /// <para>The timestamp of the returned data.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-11-28T03:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The number of PVs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>9292</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

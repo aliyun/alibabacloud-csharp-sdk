@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeStagingIpResponseBody : TeaModel {
-        /// <summary>
-        /// <para>IPv4 addresses.</para>
-        /// </summary>
         [NameInMap("IPV4s")]
         [Validation(Required=false)]
         public DescribeStagingIpResponseBodyIPV4s IPV4s { get; set; }
