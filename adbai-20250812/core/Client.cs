@@ -1111,6 +1111,326 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>修改变配指标平台</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyAgentPlatformRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAgentPlatformResponse
+        /// </returns>
+        public ModifyAgentPlatformResponse ModifyAgentPlatformWithOptions(ModifyAgentPlatformRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyAgentPlatformShrinkRequest request = new ModifyAgentPlatformShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AiPlatformConfig))
+            {
+                request.AiPlatformConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AiPlatformConfig, "AiPlatformConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiPlatformConfigShrink))
+            {
+                query["AiPlatformConfig"] = request.AiPlatformConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAgentPlatform",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAgentPlatformResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改变配指标平台</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyAgentPlatformRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAgentPlatformResponse
+        /// </returns>
+        public async Task<ModifyAgentPlatformResponse> ModifyAgentPlatformWithOptionsAsync(ModifyAgentPlatformRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyAgentPlatformShrinkRequest request = new ModifyAgentPlatformShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AiPlatformConfig))
+            {
+                request.AiPlatformConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AiPlatformConfig, "AiPlatformConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiPlatformConfigShrink))
+            {
+                query["AiPlatformConfig"] = request.AiPlatformConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAgentPlatform",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAgentPlatformResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改变配指标平台</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAgentPlatformRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAgentPlatformResponse
+        /// </returns>
+        public ModifyAgentPlatformResponse ModifyAgentPlatform(ModifyAgentPlatformRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyAgentPlatformWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改变配指标平台</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAgentPlatformRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAgentPlatformResponse
+        /// </returns>
+        public async Task<ModifyAgentPlatformResponse> ModifyAgentPlatformAsync(ModifyAgentPlatformRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyAgentPlatformWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变配具身智能平台</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyEmbodiedAIPlatformRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyEmbodiedAIPlatformResponse
+        /// </returns>
+        public ModifyEmbodiedAIPlatformResponse ModifyEmbodiedAIPlatformWithOptions(ModifyEmbodiedAIPlatformRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyEmbodiedAIPlatformShrinkRequest request = new ModifyEmbodiedAIPlatformShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RayConfig))
+            {
+                request.RayConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RayConfig, "RayConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformName))
+            {
+                query["PlatformName"] = request.PlatformName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RayConfigShrink))
+            {
+                query["RayConfig"] = request.RayConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebserverSpecName))
+            {
+                query["WebserverSpecName"] = request.WebserverSpecName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyEmbodiedAIPlatform",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyEmbodiedAIPlatformResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变配具身智能平台</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyEmbodiedAIPlatformRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyEmbodiedAIPlatformResponse
+        /// </returns>
+        public async Task<ModifyEmbodiedAIPlatformResponse> ModifyEmbodiedAIPlatformWithOptionsAsync(ModifyEmbodiedAIPlatformRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyEmbodiedAIPlatformShrinkRequest request = new ModifyEmbodiedAIPlatformShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RayConfig))
+            {
+                request.RayConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RayConfig, "RayConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformName))
+            {
+                query["PlatformName"] = request.PlatformName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RayConfigShrink))
+            {
+                query["RayConfig"] = request.RayConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebserverSpecName))
+            {
+                query["WebserverSpecName"] = request.WebserverSpecName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyEmbodiedAIPlatform",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyEmbodiedAIPlatformResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变配具身智能平台</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyEmbodiedAIPlatformRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyEmbodiedAIPlatformResponse
+        /// </returns>
+        public ModifyEmbodiedAIPlatformResponse ModifyEmbodiedAIPlatform(ModifyEmbodiedAIPlatformRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyEmbodiedAIPlatformWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变配具身智能平台</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyEmbodiedAIPlatformRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyEmbodiedAIPlatformResponse
+        /// </returns>
+        public async Task<ModifyEmbodiedAIPlatformResponse> ModifyEmbodiedAIPlatformAsync(ModifyEmbodiedAIPlatformRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyEmbodiedAIPlatformWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>重置具身智能平台密码</para>
         /// </summary>
         /// 
