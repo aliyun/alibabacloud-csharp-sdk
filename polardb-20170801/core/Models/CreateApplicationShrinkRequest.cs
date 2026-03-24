@@ -185,6 +185,36 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateApplicationShrinkRequestTag> Tag { get; set; }
+        public class CreateApplicationShrinkRequestTag : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>testKey</para>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>testValue</para>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>latest</para>
+        /// </summary>
+        [NameInMap("TargetVersion")]
+        [Validation(Required=false)]
+        public string TargetVersion { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>

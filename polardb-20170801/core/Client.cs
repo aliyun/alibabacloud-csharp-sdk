@@ -4492,6 +4492,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetVersion))
+            {
+                query["TargetVersion"] = request.TargetVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
                 query["UsedTime"] = request.UsedTime;
@@ -4659,6 +4667,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetVersion))
+            {
+                query["TargetVersion"] = request.TargetVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
@@ -13901,6 +13917,194 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteParameterGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除PolarFs文件</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>PolarFsInstanceId</c> 是必须提供的参数，用来指定要操作的PolarFS实例。</description></item>
+        /// <item><description><c>DBClusterId</c> 参数是可选的，如果提供，则表示与特定PolarDB集群关联的操作。</description></item>
+        /// <item><description><c>Objects</c> 参数是一个字符串数组，列出了所有需要被删除的对象路径，并且是必需的。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DeletePolarFsObjectsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolarFsObjectsResponse
+        /// </returns>
+        public DeletePolarFsObjectsResponse DeletePolarFsObjectsWithOptions(DeletePolarFsObjectsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeletePolarFsObjectsShrinkRequest request = new DeletePolarFsObjectsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectsToDelete))
+            {
+                request.ObjectsToDeleteShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectsToDelete, "ObjectsToDelete", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectsToDeleteShrink))
+            {
+                query["ObjectsToDelete"] = request.ObjectsToDeleteShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePolarFsObjects",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePolarFsObjectsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除PolarFs文件</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>PolarFsInstanceId</c> 是必须提供的参数，用来指定要操作的PolarFS实例。</description></item>
+        /// <item><description><c>DBClusterId</c> 参数是可选的，如果提供，则表示与特定PolarDB集群关联的操作。</description></item>
+        /// <item><description><c>Objects</c> 参数是一个字符串数组，列出了所有需要被删除的对象路径，并且是必需的。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DeletePolarFsObjectsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolarFsObjectsResponse
+        /// </returns>
+        public async Task<DeletePolarFsObjectsResponse> DeletePolarFsObjectsWithOptionsAsync(DeletePolarFsObjectsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeletePolarFsObjectsShrinkRequest request = new DeletePolarFsObjectsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectsToDelete))
+            {
+                request.ObjectsToDeleteShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectsToDelete, "ObjectsToDelete", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectsToDeleteShrink))
+            {
+                query["ObjectsToDelete"] = request.ObjectsToDeleteShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePolarFsObjects",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePolarFsObjectsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除PolarFs文件</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>PolarFsInstanceId</c> 是必须提供的参数，用来指定要操作的PolarFS实例。</description></item>
+        /// <item><description><c>DBClusterId</c> 参数是可选的，如果提供，则表示与特定PolarDB集群关联的操作。</description></item>
+        /// <item><description><c>Objects</c> 参数是一个字符串数组，列出了所有需要被删除的对象路径，并且是必需的。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeletePolarFsObjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolarFsObjectsResponse
+        /// </returns>
+        public DeletePolarFsObjectsResponse DeletePolarFsObjects(DeletePolarFsObjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeletePolarFsObjectsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除PolarFs文件</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>PolarFsInstanceId</c> 是必须提供的参数，用来指定要操作的PolarFS实例。</description></item>
+        /// <item><description><c>DBClusterId</c> 参数是可选的，如果提供，则表示与特定PolarDB集群关联的操作。</description></item>
+        /// <item><description><c>Objects</c> 参数是一个字符串数组，列出了所有需要被删除的对象路径，并且是必需的。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeletePolarFsObjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolarFsObjectsResponse
+        /// </returns>
+        public async Task<DeletePolarFsObjectsResponse> DeletePolarFsObjectsAsync(DeletePolarFsObjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeletePolarFsObjectsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
