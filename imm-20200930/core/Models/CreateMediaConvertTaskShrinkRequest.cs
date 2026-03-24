@@ -63,9 +63,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
 
+        [NameInMap("TargetGroups")]
+        [Validation(Required=false)]
+        public string TargetGroupsShrink { get; set; }
+
         /// <summary>
         /// <para>List of media processing tasks, supporting multiple task configurations.</para>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]

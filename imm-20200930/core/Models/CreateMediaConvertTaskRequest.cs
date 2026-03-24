@@ -202,14 +202,85 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Tags { get; set; }
 
+        [NameInMap("TargetGroups")]
+        [Validation(Required=false)]
+        public List<CreateMediaConvertTaskRequestTargetGroups> TargetGroups { get; set; }
+        public class CreateMediaConvertTaskRequestTargetGroups : TeaModel {
+            [NameInMap("Targets")]
+            [Validation(Required=false)]
+            public List<CreateMediaConvertTaskRequestTargetGroupsTargets> Targets { get; set; }
+            public class CreateMediaConvertTaskRequestTargetGroupsTargets : TeaModel {
+                [NameInMap("Audio")]
+                [Validation(Required=false)]
+                public TargetAudio Audio { get; set; }
+
+                [NameInMap("Container")]
+                [Validation(Required=false)]
+                public string Container { get; set; }
+
+                [NameInMap("Segment")]
+                [Validation(Required=false)]
+                public CreateMediaConvertTaskRequestTargetGroupsTargetsSegment Segment { get; set; }
+                public class CreateMediaConvertTaskRequestTargetGroupsTargetsSegment : TeaModel {
+                    [NameInMap("Duration")]
+                    [Validation(Required=false)]
+                    public double? Duration { get; set; }
+
+                    [NameInMap("Format")]
+                    [Validation(Required=false)]
+                    public string Format { get; set; }
+
+                    [NameInMap("StartNumber")]
+                    [Validation(Required=false)]
+                    public int? StartNumber { get; set; }
+
+                }
+
+                [NameInMap("Speed")]
+                [Validation(Required=false)]
+                public float? Speed { get; set; }
+
+                [NameInMap("StripMetadata")]
+                [Validation(Required=false)]
+                public bool? StripMetadata { get; set; }
+
+                [NameInMap("Subtitle")]
+                [Validation(Required=false)]
+                public TargetSubtitle Subtitle { get; set; }
+
+                [NameInMap("URI")]
+                [Validation(Required=false)]
+                public string URI { get; set; }
+
+                [NameInMap("Video")]
+                [Validation(Required=false)]
+                public TargetVideo Video { get; set; }
+
+            }
+
+            [NameInMap("URI")]
+            [Validation(Required=false)]
+            public string URI { get; set; }
+
+        }
+
         /// <summary>
         /// <para>List of media processing tasks, supporting multiple task configurations.</para>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]
         public List<CreateMediaConvertTaskRequestTargets> Targets { get; set; }
         public class CreateMediaConvertTaskRequestTargets : TeaModel {
+            [NameInMap("AttachedPicture")]
+            [Validation(Required=false)]
+            public CreateMediaConvertTaskRequestTargetsAttachedPicture AttachedPicture { get; set; }
+            public class CreateMediaConvertTaskRequestTargetsAttachedPicture : TeaModel {
+                [NameInMap("Stream")]
+                [Validation(Required=false)]
+                public List<int?> Stream { get; set; }
+
+            }
+
             /// <summary>
             /// <para>Audio processing parameter configuration.</para>
             /// <remarks>
@@ -236,6 +307,16 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [NameInMap("Container")]
             [Validation(Required=false)]
             public string Container { get; set; }
+
+            [NameInMap("Data")]
+            [Validation(Required=false)]
+            public CreateMediaConvertTaskRequestTargetsData Data { get; set; }
+            public class CreateMediaConvertTaskRequestTargetsData : TeaModel {
+                [NameInMap("Stream")]
+                [Validation(Required=false)]
+                public List<int?> Stream { get; set; }
+
+            }
 
             /// <summary>
             /// <para>Configuration for frame capture, sprite image capture, and media to animated image conversion.</para>
