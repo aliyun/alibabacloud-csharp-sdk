@@ -10725,6 +10725,10 @@ namespace AlibabaCloud.SDK.Eas20210701
                 request.LabelShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Label, "Label", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                query["Accessibility"] = request.Accessibility;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoscalerEnabled))
             {
                 query["AutoscalerEnabled"] = request.AutoscalerEnabled;
@@ -10877,6 +10881,10 @@ namespace AlibabaCloud.SDK.Eas20210701
                 request.LabelShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Label, "Label", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                query["Accessibility"] = request.Accessibility;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoscalerEnabled))
             {
                 query["AutoscalerEnabled"] = request.AutoscalerEnabled;
@@ -11797,6 +11805,144 @@ namespace AlibabaCloud.SDK.Eas20210701
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await RestartServiceWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>伸缩服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleServiceResponse
+        /// </returns>
+        public ScaleServiceResponse ScaleServiceWithOptions(string ClusterId, string ServiceName, ScaleServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instance))
+            {
+                body["Instance"] = request.Instance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstancesToDelete))
+            {
+                body["InstancesToDelete"] = request.InstancesToDelete;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ScaleService",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/scale",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ScaleServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>伸缩服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleServiceResponse
+        /// </returns>
+        public async Task<ScaleServiceResponse> ScaleServiceWithOptionsAsync(string ClusterId, string ServiceName, ScaleServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instance))
+            {
+                body["Instance"] = request.Instance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstancesToDelete))
+            {
+                body["InstancesToDelete"] = request.InstancesToDelete;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ScaleService",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/scale",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ScaleServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>伸缩服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleServiceResponse
+        /// </returns>
+        public ScaleServiceResponse ScaleService(string ClusterId, string ServiceName, ScaleServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ScaleServiceWithOptions(ClusterId, ServiceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>伸缩服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleServiceResponse
+        /// </returns>
+        public async Task<ScaleServiceResponse> ScaleServiceAsync(string ClusterId, string ServiceName, ScaleServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ScaleServiceWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

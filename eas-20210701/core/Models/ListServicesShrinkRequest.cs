@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListServicesShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>PUBLIC</para>
+        /// </summary>
+        [NameInMap("Accessibility")]
+        [Validation(Required=false)]
+        public string Accessibility { get; set; }
+
         [NameInMap("AutoscalerEnabled")]
         [Validation(Required=false)]
         public bool? AutoscalerEnabled { get; set; }
