@@ -77,6 +77,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string SubAccountName { get; set; }
 
+        /// <summary>
+        /// <para>Cloud asset vendor. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Tencent</b>: Tencent Cloud </description></item>
+        /// <item><description><b>AWS</b>: Amazon Web Services</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>VOLCENGINE</para>
+        /// </summary>
         [NameInMap("Vendor")]
         [Validation(Required=false)]
         public string Vendor { get; set; }

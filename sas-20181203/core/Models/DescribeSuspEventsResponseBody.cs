@@ -277,6 +277,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            /// <summary>
+            /// <para>Source of discovery (invalid field)</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>linux</para>
+            /// </summary>
             [NameInMap("DetectSource")]
             [Validation(Required=false)]
             public string DetectSource { get; set; }

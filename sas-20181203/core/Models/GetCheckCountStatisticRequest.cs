@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckCountStatisticRequest : TeaModel {
         /// <summary>
+        /// <para>语言参数</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -35,6 +37,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>Task source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("TaskSources")]
         [Validation(Required=false)]

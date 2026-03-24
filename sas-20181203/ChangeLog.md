@@ -1,3 +1,21 @@
+2026-03-24 Version: 9.1.0
+- Support API DescribeSuspiciousSecurityEventyStatistics.
+- Support API GetAttackEventDashboard.
+- Support API GetAttackEventDetail.
+- Support API GetClusterCheckSummary.
+- Support API GetValidDeductInstances.
+- Support API ListAttackEventInfo.
+- Support API ListClusterCheckResult.
+- Support API ListKspmInstances.
+- Update API DescribeImageBaselineStrategy: add response parameters Body.Strategy.ImageVulClean.
+- Update API DescribeSnapshots: add response parameters Body.Snapshots.$.ExpireTime.
+- Update API ListPrivateRegistryList: add response parameters Body.ImageRegistryInfos.$.Port.
+- Update API ModifyImageRegistry: add request parameters DomainName.
+- Update API ModifyImageRegistry: add request parameters Port.
+- Update API ModifyImageRegistry: add request parameters RegistryHostIp.
+- Update API SaveImageBaselineStrategy: add request parameters ImageVulClean.
+
+
 2026-03-17 Version: 9.0.2
 - Update API GetSupportedModules: add response parameters Body.SupportedModuleResponse.$.SupportedModules.$.ModuleAuth.
 

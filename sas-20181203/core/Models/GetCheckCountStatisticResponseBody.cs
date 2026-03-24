@@ -24,6 +24,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<GetCheckCountStatisticResponseBodyCheckCountStatisticDTOCheckCountStatisticItems> CheckCountStatisticItems { get; set; }
             public class GetCheckCountStatisticResponseBodyCheckCountStatisticDTOCheckCountStatisticItems : TeaModel {
                 /// <summary>
+                /// <para>检查项展示名称</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>开启公网访问</para>
                 /// </summary>
@@ -245,6 +247,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? Vendor { get; set; }
 
                 /// <summary>
+                /// <para>厂商名称</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>阿里云</para>
                 /// </summary>

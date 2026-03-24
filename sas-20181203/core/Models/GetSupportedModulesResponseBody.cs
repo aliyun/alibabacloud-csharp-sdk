@@ -49,6 +49,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [Validation(Required=false)]
                 public string Module { get; set; }
 
+                /// <summary>
+                /// <para>Module authorization switch indicator. Values: </para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: Enabled</description></item>
+                /// <item><description><b>false</b>: Not enabled</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("ModuleAuth")]
                 [Validation(Required=false)]
                 public bool? ModuleAuth { get; set; }

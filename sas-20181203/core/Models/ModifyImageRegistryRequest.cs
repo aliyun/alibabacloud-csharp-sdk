@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyImageRegistryRequest : TeaModel {
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
         /// <summary>
         /// <para>The ID of the image repository. You can call the listImageRegistry operation to query the ID of the image repository.</para>
         /// 
@@ -28,6 +32,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
+
+        [NameInMap("Port")]
+        [Validation(Required=false)]
+        public int? Port { get; set; }
+
+        [NameInMap("RegistryHostIp")]
+        [Validation(Required=false)]
+        public string RegistryHostIp { get; set; }
 
         /// <summary>
         /// <para>The number of images that are scanned per hour.</para>

@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            [NameInMap("ImageVulClean")]
+            [Validation(Required=false)]
+            public int? ImageVulClean { get; set; }
+
             /// <summary>
             /// <para>The number of selected baseline check items.</para>
             /// 

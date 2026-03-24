@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string BaselineItemList { get; set; }
 
+        [NameInMap("ImageVulClean")]
+        [Validation(Required=false)]
+        public int? ImageVulClean { get; set; }
+
         /// <summary>
         /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">

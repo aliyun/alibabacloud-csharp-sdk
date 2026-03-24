@@ -189,11 +189,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string ScaVersion { get; set; }
 
+        /// <summary>
+        /// <para>搜索条件列表</para>
+        /// </summary>
         [NameInMap("SearchCriteriaList")]
         [Validation(Required=false)]
         public List<DescribePropertyScaDetailRequestSearchCriteriaList> SearchCriteriaList { get; set; }
         public class DescribePropertyScaDetailRequestSearchCriteriaList : TeaModel {
             /// <summary>
+            /// <para>搜索条件名称</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Name</para>
             /// </summary>
@@ -202,6 +207,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>搜索条件过滤值</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>

@@ -75,6 +75,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<GetAssetsPropertyDetailResponseBodyPropertys> Propertys { get; set; }
         public class GetAssetsPropertyDetailResponseBodyPropertys : TeaModel {
+            /// <summary>
+            /// <para>Agent</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Mozilla/5.0 (Windows NT 10.0%3B Win64%3B x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0</para>
+            /// </summary>
             [NameInMap("Agent")]
             [Validation(Required=false)]
             public string Agent { get; set; }
@@ -99,6 +105,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? CreateTimestamp { get; set; }
 
+            /// <summary>
+            /// <para>Asset description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;Type\&quot;: \&quot;text\&quot;, \&quot;Value\&quot;: u\&quot;\u786e\u4fdd\u7f51\u5173\u5b89\u5168\u9632\u62a4\u3002\u8981\u6c42\uff1a\u5f00\u542fWAF\u9632\u706b\u5899\u9632\u62a4\u529f\u80fd\u3002\&quot;}</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
@@ -150,6 +162,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Filepath { get; set; }
 
             /// <summary>
+            /// <para>镜像Digest</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ImageDigest</para>
             /// </summary>
@@ -240,6 +254,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string ListenProtocol { get; set; }
 
+            /// <summary>
+            /// <para>MCP name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>@modelcontextprotocol/server-github</para>
+            /// </summary>
             [NameInMap("McpName")]
             [Validation(Required=false)]
             public string McpName { get; set; }
@@ -364,6 +384,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>镜像的RepoName</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ACR-Example</para>
             /// </summary>
@@ -372,6 +394,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoName { get; set; }
 
             /// <summary>
+            /// <para>镜像Repo命名空间</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Default</para>
             /// </summary>
@@ -405,11 +429,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Size { get; set; }
 
+            /// <summary>
+            /// <para>Skill name</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Analytics and Data Analysis</para>
+            /// </summary>
             [NameInMap("SkillsName")]
             [Validation(Required=false)]
             public string SkillsName { get; set; }
 
             /// <summary>
+            /// <para>标签</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AI</para>
             /// </summary>
@@ -417,6 +449,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Tag { get; set; }
 
+            /// <summary>
+            /// <para>Transmission name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("TransportName")]
             [Validation(Required=false)]
             public string TransportName { get; set; }

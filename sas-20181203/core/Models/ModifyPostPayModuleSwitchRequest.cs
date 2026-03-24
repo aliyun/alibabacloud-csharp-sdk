@@ -108,6 +108,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Agentless { get; set; }
 
             /// <summary>
+            /// <para>AI Digitization</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>

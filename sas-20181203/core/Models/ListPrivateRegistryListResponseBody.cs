@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? PersistenceDay { get; set; }
 
+            [NameInMap("Port")]
+            [Validation(Required=false)]
+            public int? Port { get; set; }
+
             /// <summary>
             /// <para>The type of the protocol. Valid values:</para>
             /// <list type="bullet">

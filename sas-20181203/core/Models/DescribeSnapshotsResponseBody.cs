@@ -169,6 +169,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ErrorFile { get; set; }
 
             /// <summary>
+            /// <para>Snapshot expiration timestamp. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1799132915000</para>
+            /// </summary>
+            [NameInMap("ExpireTime")]
+            [Validation(Required=false)]
+            public long? ExpireTime { get; set; }
+
+            /// <summary>
             /// <para>The ID of the ECS instance.</para>
             /// 
             /// <b>Example:</b>

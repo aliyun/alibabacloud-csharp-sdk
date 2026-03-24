@@ -229,11 +229,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string VpcInstanceIds { get; set; }
 
+        /// <summary>
+        /// <para>漏洞组件信息列表</para>
+        /// </summary>
         [NameInMap("VulEntityList")]
         [Validation(Required=false)]
         public List<ExportVulRequestVulEntityList> VulEntityList { get; set; }
         public class ExportVulRequestVulEntityList : TeaModel {
             /// <summary>
+            /// <para>组件名称</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Ollama</para>
             /// </summary>
@@ -242,6 +247,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string EntityName { get; set; }
 
             /// <summary>
+            /// <para>组件版本</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
             /// </summary>
