@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>chatbot-cn-mp90s2lrk00050</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [NameInMap("SandBox")]
         [Validation(Required=false)]
         public bool? SandBox { get; set; }
+
+        [NameInMap("SessionId")]
+        [Validation(Required=false)]
+        public string SessionId { get; set; }
 
         [NameInMap("VendorParam")]
         [Validation(Required=false)]

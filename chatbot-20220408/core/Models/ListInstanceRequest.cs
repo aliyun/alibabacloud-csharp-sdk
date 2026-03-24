@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string RobotType { get; set; }
 
+        [NameInMap("Sandbox")]
+        [Validation(Required=false)]
+        public bool? Sandbox { get; set; }
+
     }
 
 }

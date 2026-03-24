@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>a***<a href="mailto:bcx@gmail.com">bcx@gmail.com</a></para>
+        /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]
         public string Email { get; set; }
@@ -74,6 +78,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string Nick { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1381111****</para>
+        /// </summary>
         [NameInMap("Telephone")]
         [Validation(Required=false)]
         public string Telephone { get; set; }
