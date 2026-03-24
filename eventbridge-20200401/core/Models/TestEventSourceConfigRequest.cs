@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
 
+            [NameInMap("SnapshotMode")]
+            [Validation(Required=false)]
+            public string SnapshotMode { get; set; }
+
             /// <summary>
             /// <para>The table name. The name must be prefixed with the database name. ${DatabaseName}.${TableName}</para>
             /// 

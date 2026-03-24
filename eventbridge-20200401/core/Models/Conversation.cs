@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string Id { get; set; }
 
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
