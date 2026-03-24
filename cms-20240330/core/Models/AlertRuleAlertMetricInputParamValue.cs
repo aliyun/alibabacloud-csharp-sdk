@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class AlertRuleAlertMetricInputParamValue : TeaModel {
         /// <summary>
+        /// <para>预定义指标参数名</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>预定义指标参数值</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

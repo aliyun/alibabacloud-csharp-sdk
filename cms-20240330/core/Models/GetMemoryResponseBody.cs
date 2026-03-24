@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The time when the memory was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1751595283143</para>
         /// </summary>
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
+        /// <para>The expiration time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1751595283143</para>
         /// </summary>
@@ -42,6 +46,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ExpirationDate { get; set; }
 
         /// <summary>
+        /// <para>The memory ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>019ca1e5-7307-7d50-b943-5e628326a8ed</para>
         /// </summary>
@@ -50,6 +56,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>This property is mutable.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -58,6 +66,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Immutable { get; set; }
 
         /// <summary>
+        /// <para>The memory content.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>My name is Zhang San and I live in Hangzhou.</para>
         /// </summary>
@@ -66,6 +76,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Memory { get; set; }
 
         /// <summary>
+        /// <para>The metadata.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</para>
         /// </summary>
@@ -74,6 +86,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Metadata { get; set; }
 
         /// <summary>
+        /// <para>The organization.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -82,6 +96,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Organization { get; set; }
 
         /// <summary>
+        /// <para>The owner of the memory.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -90,6 +106,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Owner { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
         /// </summary>
@@ -106,6 +124,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RunId { get; set; }
 
         /// <summary>
+        /// <para>The time when the memory was last updated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1744428159434</para>
         /// </summary>

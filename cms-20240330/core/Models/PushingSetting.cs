@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public List<string> RestoreActionIds { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>&quot;template-abc123&quot;</para>
-        /// </summary>
         [NameInMap("templateUuid")]
         [Validation(Required=false)]
         public string TemplateUuid { get; set; }

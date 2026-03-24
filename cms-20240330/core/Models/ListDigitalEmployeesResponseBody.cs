@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListDigitalEmployeesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>List of digital employees.</para>
+        /// </summary>
         [NameInMap("digitalEmployees")]
         [Validation(Required=false)]
         public List<ListDigitalEmployeesResponseBodyDigitalEmployees> DigitalEmployees { get; set; }
         public class ListDigitalEmployeesResponseBodyDigitalEmployees : TeaModel {
             /// <summary>
+            /// <para>Creation time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -24,6 +28,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>Default rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DefaultRule { get; set; }
 
             /// <summary>
+            /// <para>Description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -40,6 +48,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>Digital employee display name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -47,19 +57,33 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
+            /// <summary>
+            /// <para>Digital employee type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>custom</para>
+            /// </summary>
             [NameInMap("employeeType")]
             [Validation(Required=false)]
             public string EmployeeType { get; set; }
 
+            /// <summary>
+            /// <para>List of knowledge bases.</para>
+            /// </summary>
             [NameInMap("knowledges")]
             [Validation(Required=false)]
             public ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledges Knowledges { get; set; }
             public class ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledges : TeaModel {
+                /// <summary>
+                /// <para>Bailian knowledge base list.</para>
+                /// </summary>
                 [NameInMap("bailian")]
                 [Validation(Required=false)]
                 public List<ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledgesBailian> Bailian { get; set; }
                 public class ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledgesBailian : TeaModel {
                     /// <summary>
+                    /// <para>Knowledge base attributes.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
                     /// </summary>
@@ -68,6 +92,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string Attributes { get; set; }
 
                     /// <summary>
+                    /// <para>Bailian index ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>index-xxxx</para>
                     /// </summary>
@@ -76,6 +102,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string IndexId { get; set; }
 
                     /// <summary>
+                    /// <para>Region of the Bailian knowledge base.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>cn-beijing</para>
                     /// </summary>
@@ -84,6 +112,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string Region { get; set; }
 
                     /// <summary>
+                    /// <para>Bailian workspace ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>llm-xxxx</para>
                     /// </summary>
@@ -93,6 +123,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
                 }
 
+                /// <summary>
+                /// <para>SOP knowledge base list.</para>
+                /// </summary>
                 [NameInMap("sop")]
                 [Validation(Required=false)]
                 public List<Dictionary<string, object>> Sop { get; set; }
@@ -100,6 +133,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
+            /// <para>Digital employee name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -108,6 +143,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Resource group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rg-ae******ey</para>
             /// </summary>
@@ -116,6 +153,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
+            /// <para>Role ARN.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>acs:ram::12345678912:role/testrole</para>
             /// </summary>
@@ -123,11 +162,15 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string RoleArn { get; set; }
 
+            /// <summary>
+            /// <para>Tags.</para>
+            /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<Tag> Tags { get; set; }
 
             /// <summary>
+            /// <para>Update time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -140,6 +183,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
+        /// <para>Maximum number of results returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -148,6 +193,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Token for the next page of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxx</para>
         /// </summary>
@@ -156,6 +203,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
         /// </summary>
@@ -164,6 +213,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>56</para>
         /// </summary>

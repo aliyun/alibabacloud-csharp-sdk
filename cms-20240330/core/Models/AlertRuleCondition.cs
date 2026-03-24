@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class AlertRuleCondition : TeaModel {
         /// <summary>
-        /// <para>Applicable condition type: SLS_CONDITION.
-        /// Number of times the condition must be met before triggering an alert, default is 1.</para>
+        /// <para>适用条件类型：SLS_CONDITION</para>
+        /// <para>满足条件几次后告警，默认为1</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -21,15 +21,15 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? AlertCount { get; set; }
 
         /// <summary>
-        /// <para>Applicable condition type: SLS_CONDITION.
-        /// SLS alert condition list.</para>
+        /// <para>适用条件类型： SLS_CONDITION。</para>
+        /// <para>SLS告警条件列表</para>
         /// </summary>
         [NameInMap("caseList")]
         [Validation(Required=false)]
         public List<AlertRuleConditionCaseList> CaseList { get; set; }
         public class AlertRuleConditionCaseList : TeaModel {
             /// <summary>
-            /// <para>Matching expression, example: logLevel: error.</para>
+            /// <para>匹配表达式，示例：  logLevel: error</para>
             /// 
             /// <b>Example:</b>
             /// <para>logLevel: error</para>
@@ -39,7 +39,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Condition { get; set; }
 
             /// <summary>
-            /// <para>Count matching expression, examples: range combination: count &gt;= 3 &amp;&amp; count &lt;= 10; single range: count &gt;= 3.</para>
+            /// <para>数量匹配表达式，示例：
+            /// 区间组合： <b>count</b> &gt;= 3 &amp;&amp; <b>count</b> &lt;= 10
+            /// 单区间： __count__ &gt;= 3</para>
             /// 
             /// <b>Example:</b>
             /// <para>count &gt;= 3</para>
@@ -49,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CountCondition { get; set; }
 
             /// <summary>
-            /// <para>Alert severity level after condition is met.</para>
+            /// <para>满足条件后的告警级别</para>
             /// 
             /// <b>Example:</b>
             /// <para>INFO</para>
@@ -59,13 +61,13 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>Matching type: Has data / Has a specific number of data entries / Has matching data / Has a specific number of matching entries.</para>
-            /// <para>Valid values:</para>
+            /// <para>匹配类型： 有数据/有特定条数据/有数据匹配/有特定条数匹配。</para>
+            /// <para>取值范围：</para>
             /// <list type="bullet">
-            /// <item><description>HasData: Has data.</description></item>
-            /// <item><description>HasDataCount: Has a specific number of data entries.</description></item>
-            /// <item><description>HasDataMatch: Has matching data.</description></item>
-            /// <item><description>HasDataMatchCount: Has a specific number of matching entries.</description></item>
+            /// <item><description>HasData: 有数据</description></item>
+            /// <item><description>HasDataCount:  有特定条数据</description></item>
+            /// <item><description>HasDataMatch：有数据匹配</description></item>
+            /// <item><description>HasDataMatchCount：有特定条数匹配</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,18 +80,18 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Applicable condition type: APM_CONDITION.
-        /// APM alert comparison condition list.</para>
+        /// <para>适用条件类型：APM_CONDITION。</para>
+        /// <para>APM告警比较条件列表</para>
         /// </summary>
         [NameInMap("compareList")]
         [Validation(Required=false)]
         public List<AlertRuleConditionCompareList> CompareList { get; set; }
         public class AlertRuleConditionCompareList : TeaModel {
             /// <summary>
-            /// <para>Time series post-aggregation functions:</para>
+            /// <para>时间序列后聚合函数</para>
             /// <list type="bullet">
             /// <item><description>count</description></item>
-            /// <item><description>sum </description></item>
+            /// <item><description>sum</description></item>
             /// <item><description>avg</description></item>
             /// <item><description>min</description></item>
             /// <item><description>max</description></item>
@@ -106,7 +108,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Aggregate { get; set; }
 
             /// <summary>
-            /// <para>Data unit.</para>
+            /// <para>数据单位</para>
             /// 
             /// <b>Example:</b>
             /// <para>%</para>
@@ -116,7 +118,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string BaseUnit { get; set; }
 
             /// <summary>
-            /// <para>Display unit.</para>
+            /// <para>展示单位</para>
             /// 
             /// <b>Example:</b>
             /// <para>%</para>
@@ -126,16 +128,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DisplayUnit { get; set; }
 
             /// <summary>
-            /// <para>Comparison operations to determine whether it is year-over-year (YoY) or month-over-month (MoM):</para>
+            /// <para>比较操作，判断是否是同比、环比</para>
             /// <list type="bullet">
-            /// <item><description>Greater than (GT),</description></item>
-            /// <item><description>Greater than or equal to (GTE),</description></item>
-            /// <item><description>Less than (LT),</description></item>
-            /// <item><description>Less than or equal to (LTE),</description></item>
-            /// <item><description>Equal to (EQ),</description></item>
-            /// <item><description>Not equal to (NE),</description></item>
-            /// <item><description>Year-over-year increase (YOY_UP),</description></item>
-            /// <item><description>Year-over-year decrease (YOY_DOWN).</description></item>
+            /// <item><description>大于 GT</description></item>
+            /// <item><description>大于等于 GTE</description></item>
+            /// <item><description>小于 LT</description></item>
+            /// <item><description>小于等于 LTE</description></item>
+            /// <item><description>等于 EQ</description></item>
+            /// <item><description>不等于 NE</description></item>
+            /// <item><description>同比增加 YOY_UP</description></item>
+            /// <item><description>同比减少 YOY_DOWN</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -146,7 +148,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Oper { get; set; }
 
             /// <summary>
-            /// <para>Comparison threshold.</para>
+            /// <para>对比的阈值</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -156,14 +158,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public double? Value { get; set; }
 
             /// <summary>
-            /// <para>List of alert severity levels for different values.</para>
+            /// <para>不同值的报警级别的列表。</para>
             /// </summary>
             [NameInMap("valueLevelList")]
             [Validation(Required=false)]
             public List<AlertRuleConditionCompareListValueLevelList> ValueLevelList { get; set; }
             public class AlertRuleConditionCompareListValueLevelList : TeaModel {
                 /// <summary>
-                /// <para>Severity level corresponding to the threshold.</para>
+                /// <para>阈值对应的级别</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>INFO</para>
@@ -173,7 +175,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Level { get; set; }
 
                 /// <summary>
-                /// <para>Comparison threshold.</para>
+                /// <para>对比的阈值</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>120</para>
@@ -185,7 +187,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>Year-over-year time unit (only applicable when oper=YOY_UP/YOY_DOWN): minute, hour, day, week, month.</para>
+            /// <para>同比时间单位（仅对oper=YOY_UP/YOY_DOWN生效）
+            ///  minute、hour、day、week、month</para>
             /// 
             /// <b>Example:</b>
             /// <para>month</para>
@@ -195,7 +198,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string YoyTimeUnit { get; set; }
 
             /// <summary>
-            /// <para>Year-over-year time value, used in conjunction with yoyTimeUnit.</para>
+            /// <para>同比时间的值，与yoyTimeUnit配合使用</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -207,35 +210,35 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Applicable condition type: CMS_BASIC_CONDITION.
-        /// Valid only when escalationType=composite; composite metric alert condition.</para>
+        /// <para>适用条件类型：CMS_BASIC_CONDITION</para>
+        /// <para>escalationType=composite时有效，组合指标告警条件</para>
         /// </summary>
         [NameInMap("compositeEscalation")]
         [Validation(Required=false)]
         public AlertRuleConditionCompositeEscalation CompositeEscalation { get; set; }
         public class AlertRuleConditionCompositeEscalation : TeaModel {
             /// <summary>
-            /// <para>List of multi-metric composite conditions.</para>
+            /// <para>多指标的组合条件列表</para>
             /// </summary>
             [NameInMap("escalations")]
             [Validation(Required=false)]
             public List<AlertRuleConditionCompositeEscalationEscalations> Escalations { get; set; }
             public class AlertRuleConditionCompositeEscalationEscalations : TeaModel {
                 /// <summary>
-                /// <para>Threshold comparison operator, valid values:</para>
+                /// <para>阈值比较符，取值范围：</para>
                 /// <list type="bullet">
-                /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to.</description></item>
-                /// <item><description>GreaterThanThreshold: greater than.</description></item>
-                /// <item><description>LessThanOrEqualToThreshold: less than or equal to.</description></item>
-                /// <item><description>LessThanThreshold: less than.</description></item>
-                /// <item><description>NotEqualToThreshold: not equal to.</description></item>
-                /// <item><description>EqualToThreshold: equal to.</description></item>
-                /// <item><description>GreaterThanYesterday: increased compared to the same time yesterday.</description></item>
-                /// <item><description>LessThanYesterday: decreased compared to the same time yesterday.</description></item>
-                /// <item><description>GreaterThanLastWeek: increased compared to the same time last week.</description></item>
-                /// <item><description>LessThanLastWeek: decreased compared to the same time last week.</description></item>
-                /// <item><description>GreaterThanLastPeriod: increased compared to the previous period (MoM).</description></item>
-                /// <item><description>LessThanLastPeriod: decreased compared to the previous period (MoM).</description></item>
+                /// <item><description>GreaterThanOrEqualToThreshold：大于等于。</description></item>
+                /// <item><description>GreaterThanThreshold：大于。</description></item>
+                /// <item><description>LessThanOrEqualToThreshold：小于等于。</description></item>
+                /// <item><description>LessThanThreshold：小于。</description></item>
+                /// <item><description>NotEqualToThreshold：不等于。</description></item>
+                /// <item><description>EqualToThreshold：等于。</description></item>
+                /// <item><description>GreaterThanYesterday：同比昨天时间上涨。</description></item>
+                /// <item><description>LessThanYesterday：同比昨天时间下降。</description></item>
+                /// <item><description>GreaterThanLastWeek：同比上周同一时间上涨。</description></item>
+                /// <item><description>LessThanLastWeek：同比上周同一时间下降。</description></item>
+                /// <item><description>GreaterThanLastPeriod：环比上周期上涨。</description></item>
+                /// <item><description>LessThanLastPeriod：环比上周期下降。</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -246,7 +249,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string ComparisonOperator { get; set; }
 
                 /// <summary>
-                /// <para>Metric name.</para>
+                /// <para>指标名称</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cpu_total</para>
@@ -256,7 +259,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string MetricName { get; set; }
 
                 /// <summary>
-                /// <para>Metric time window.</para>
+                /// <para>指标的时间窗口</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -266,14 +269,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public long? Period { get; set; }
 
                 /// <summary>
-                /// <para>Statistical method; the value of this parameter is determined by the Statistics column corresponding to the specified cloud product\&quot;s MetricName. This represents the statistical method for the monitoring metric. Example values:</para>
+                /// <para>统计方法，该参数的取值由指定云产品的MetricName对应的Statistics列决定。  监控项的统计方法。取值示例：</para>
                 /// <list type="bullet">
-                /// <item><description>$Maximum: maximum value.</description></item>
-                /// <item><description>$Minimum: minimum value.</description></item>
-                /// <item><description>$Average: average value.</description></item>
-                /// <item><description>$Availability: availability (typically used for site monitoring).
-                /// Note: &quot;$&quot; is a unified prefix symbol for monitoring metrics.</description></item>
+                /// <item><description>$Maximum：最大值。</description></item>
+                /// <item><description>$Minimum：最小值。</description></item>
+                /// <item><description>$Average：平均值。</description></item>
+                /// <item><description>$Availability：可用率（通常用于站点监控）</description></item>
                 /// </list>
+                /// <para>说明 $为监控项的统一前缀符号。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>$Maximum</para>
@@ -283,7 +286,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Statistics { get; set; }
 
                 /// <summary>
-                /// <para>Alert threshold.</para>
+                /// <para>告警阈值</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -295,7 +298,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>Alert severity level triggered when the condition is met (multi-metric composite alerts support only one level).</para>
+            /// <para>满足条件时触发的告警级别(多指标组合告警仅支持一个级别)</para>
             /// 
             /// <b>Example:</b>
             /// <para>INFO</para>
@@ -305,7 +308,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>Relationship between multiple metric conditions; valid values are &quot;and&quot; or &quot;or&quot;.</para>
+            /// <para>多个指标条件之间的关系，取值为and或or</para>
             /// 
             /// <b>Example:</b>
             /// <para>and</para>
@@ -315,7 +318,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Relation { get; set; }
 
             /// <summary>
-            /// <para>Number of times the condition must be met to trigger an alert.</para>
+            /// <para>触发告警需满足条件的次数</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -327,12 +330,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Applicable condition type: CMS_BASIC_CONDITION.
-        /// Valid values:</para>
+        /// <para>适用条件类型：CMS_BASIC_CONDITION</para>
+        /// <para>取值范围: </para>
         /// <list type="bullet">
-        /// <item><description>simple: Simple metric condition,</description></item>
-        /// <item><description>composite: Composite metric condition,</description></item>
-        /// <item><description>express: Expression condition.</description></item>
+        /// <item><description>simple: 简单指标条件</description></item>
+        /// <item><description>composite: 组合指标条件</description></item>
+        /// <item><description>express: 表达式条件</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -343,18 +346,18 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string EscalationType { get; set; }
 
         /// <summary>
-        /// <para>Applicable condition type: CMS_BASIC_CONDITION.
-        /// Valid only when escalationType=composite; multi-metric composite alert condition.</para>
+        /// <para>适用条件类型：CMS_BASIC_CONDITION。</para>
+        /// <para>escalationType=composite时有效，多指标组合告警条件。</para>
         /// </summary>
         [NameInMap("expressEscalation")]
         [Validation(Required=false)]
         public AlertRuleConditionExpressEscalation ExpressEscalation { get; set; }
         public class AlertRuleConditionExpressEscalation : TeaModel {
             /// <summary>
-            /// <para>Alert severity level triggered when the condition is met (expression-based alerts support only one level): </para>
+            /// <para>满足条件时触发的告警级别(表达式告警仅支持一个级别)</para>
             /// <list type="bullet">
-            /// <item><description>CRITICAL </description></item>
-            /// <item><description>WARNING </description></item>
+            /// <item><description>CRITICAL</description></item>
+            /// <item><description>WARNING</description></item>
             /// <item><description>INFO</description></item>
             /// </list>
             /// 
@@ -366,7 +369,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>Alert condition expression.</para>
+            /// <para>告警条件表达式</para>
             /// 
             /// <b>Example:</b>
             /// <para>@cpu_total[60].$Average &gt; 60</para>
@@ -376,7 +379,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RawExpression { get; set; }
 
             /// <summary>
-            /// <para>Number of times the condition must be met to trigger an alert.</para>
+            /// <para>触发告警需满足条件的次数</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -388,8 +391,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Applicable condition type: APM_CONDITION.
-        /// Alert severity level when no data is available; if not specified, no alert will be triggered for missing data.</para>
+        /// <para>适用条件类型：APM_CONDITION。</para>
+        /// <para>无数据时的告警级别，不指定则不对无数据报警</para>
         /// 
         /// <b>Example:</b>
         /// <para>INFO</para>
@@ -399,8 +402,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NoDataAlertLevel { get; set; }
 
         /// <summary>
-        /// <para>Applicable condition type: APM_CONDITION.
-        /// Fallback value when no data is available.</para>
+        /// <para>适用条件类型：APM_CONDITION。</para>
+        /// <para>无数据时补偿的值。</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -410,12 +413,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NoDataAppendValue { get; set; }
 
         /// <summary>
-        /// <para>Applicable condition type: CMS_BASIC_CONDITION.
-        /// Handling method when no monitoring data is available. Valid values:</para>
+        /// <para>适用条件类型：CMS_BASIC_CONDITION。</para>
+        /// <para>无监控数据时报警的处理方式。取值：</para>
         /// <list type="bullet">
-        /// <item><description>KEEP_LAST_STATE (default): No action is taken.</description></item>
-        /// <item><description>INSUFFICIENT_DATA: Alert with &quot;insufficient data&quot; message.</description></item>
-        /// <item><description>OK: Treat as normal.</description></item>
+        /// <item><description>KEEP_LAST_STATE（默认值）：不做任何处理。</description></item>
+        /// <item><description>INSUFFICIENT_DATA：报警内容为无数据。</description></item>
+        /// <item><description>OK：正常。</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -426,16 +429,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NoDataPolicy { get; set; }
 
         /// <summary>
-        /// <para>Comparison operations to determine whether it is year-over-year (YoY) or month-over-month (MoM):</para>
+        /// <para>比较操作，判断是否是同比、环比</para>
         /// <list type="bullet">
-        /// <item><description>Greater than (GT),</description></item>
-        /// <item><description>Greater than or equal to (GTE),</description></item>
-        /// <item><description>Less than (LT),</description></item>
-        /// <item><description>Less than or equal to (LTE),</description></item>
-        /// <item><description>Equal to (EQ),</description></item>
-        /// <item><description>Not equal to (NE),</description></item>
-        /// <item><description>Year-over-year increase (YOY_UP),</description></item>
-        /// <item><description>Year-over-year decrease (YOY_DOWN).</description></item>
+        /// <item><description>大于 GT</description></item>
+        /// <item><description>大于等于 GTE</description></item>
+        /// <item><description>小于 LT</description></item>
+        /// <item><description>小于等于 LTE</description></item>
+        /// <item><description>等于 EQ</description></item>
+        /// <item><description>不等于 NE</description></item>
+        /// <item><description>同比增加 YOY_UP</description></item>
+        /// <item><description>同比减少 YOY_DOWN</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -446,8 +449,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Oper { get; set; }
 
         /// <summary>
-        /// <para>Applicable condition type: APM_CONDITION.
-        /// Logical relationship between multiple conditions. Valid values: and, or.</para>
+        /// <para>适用条件类型：APM_CONDITION。</para>
+        /// <para>多个条件之间的逻辑关系。 取值：</para>
+        /// <list type="bullet">
+        /// <item><description>and</description></item>
+        /// <item><description>or</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>and</para>
@@ -457,35 +464,35 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Relation { get; set; }
 
         /// <summary>
-        /// <para>Applicable condition type: CMS_BASIC_CONDITION.
-        /// Only valid when escalationType=simple; specifies the alert condition for a single metric.</para>
+        /// <para>适用条件类型：CMS_BASIC_CONDITION。</para>
+        /// <para>仅当escalationType=simple时有效，针对单一指标设置的告警条件</para>
         /// </summary>
         [NameInMap("simpleEscalation")]
         [Validation(Required=false)]
         public AlertRuleConditionSimpleEscalation SimpleEscalation { get; set; }
         public class AlertRuleConditionSimpleEscalation : TeaModel {
             /// <summary>
-            /// <para>List of conditions; for an alert rule with multiple severity levels, each level corresponds to one condition object.</para>
+            /// <para>条件列表，同一个告警规则对应多个级别的，每一个级别会有一个条件对象。</para>
             /// </summary>
             [NameInMap("escalations")]
             [Validation(Required=false)]
             public List<AlertRuleConditionSimpleEscalationEscalations> Escalations { get; set; }
             public class AlertRuleConditionSimpleEscalationEscalations : TeaModel {
                 /// <summary>
-                /// <para>Threshold comparison operator, valid values:</para>
+                /// <para>阈值比较符，取值范围：</para>
                 /// <list type="bullet">
-                /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to.</description></item>
-                /// <item><description>GreaterThanThreshold: greater than.</description></item>
-                /// <item><description>LessThanOrEqualToThreshold: less than or equal to.</description></item>
-                /// <item><description>LessThanThreshold: less than.</description></item>
-                /// <item><description>NotEqualToThreshold: not equal to.</description></item>
-                /// <item><description>EqualToThreshold: equal to.</description></item>
-                /// <item><description>GreaterThanYesterday: increased compared to the same time yesterday.</description></item>
-                /// <item><description>LessThanYesterday: decreased compared to the same time yesterday.</description></item>
-                /// <item><description>GreaterThanLastWeek: increased compared to the same time last week.</description></item>
-                /// <item><description>LessThanLastWeek: decreased compared to the same time last week.</description></item>
-                /// <item><description>GreaterThanLastPeriod: increased compared to the previous period (MoM).</description></item>
-                /// <item><description>LessThanLastPeriod: decreased compared to the previous period (MoM).</description></item>
+                /// <item><description>GreaterThanOrEqualToThreshold：大于等于。</description></item>
+                /// <item><description>GreaterThanThreshold：大于。</description></item>
+                /// <item><description>LessThanOrEqualToThreshold：小于等于。</description></item>
+                /// <item><description>LessThanThreshold：小于。</description></item>
+                /// <item><description>NotEqualToThreshold：不等于。</description></item>
+                /// <item><description>EqualToThreshold：等于。</description></item>
+                /// <item><description>GreaterThanYesterday：同比昨天时间上涨。</description></item>
+                /// <item><description>LessThanYesterday：同比昨天时间下降。</description></item>
+                /// <item><description>GreaterThanLastWeek：同比上周同一时间上涨。</description></item>
+                /// <item><description>LessThanLastWeek：同比上周同一时间下降。</description></item>
+                /// <item><description>GreaterThanLastPeriod：环比上周期上涨。</description></item>
+                /// <item><description>LessThanLastPeriod：环比上周期下降。</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -496,10 +503,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string ComparisonOperator { get; set; }
 
                 /// <summary>
-                /// <para>Alert severity level triggered when the condition is met (expression-based alerts support only one level): </para>
+                /// <para>满足条件时触发的告警级别(表达式告警仅支持一个级别)</para>
                 /// <list type="bullet">
-                /// <item><description>CRITICAL </description></item>
-                /// <item><description>WARNING </description></item>
+                /// <item><description>CRITICAL</description></item>
+                /// <item><description>WARNING</description></item>
                 /// <item><description>INFO</description></item>
                 /// </list>
                 /// 
@@ -511,7 +518,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Level { get; set; }
 
                 /// <summary>
-                /// <para>Statistical method; the value of this parameter is determined by the Statistics column corresponding to the specified cloud product\&quot;s MetricName, for example: Maximum, Minimum, and Average.</para>
+                /// <para>统计方法，该参数的取值由指定云产品的MetricName对应的Statistics列决定，例如：Maximum、Minimum 和 Average</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Average</para>
@@ -521,7 +528,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Statistics { get; set; }
 
                 /// <summary>
-                /// <para>Alert threshold.</para>
+                /// <para>告警阈值</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -531,7 +538,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public double? Threshold { get; set; }
 
                 /// <summary>
-                /// <para>Number of times the condition must be met to trigger an alert.</para>
+                /// <para>触发告警需满足条件的次数</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -543,8 +550,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>Applicable condition type: CMS_BASIC_CONDITION.
-            /// Metric associated with the alert condition.</para>
+            /// <para>适用条件类型：CMS_BASIC_CONDITION。</para>
+            /// <para>告警条件关联的指标</para>
             /// 
             /// <b>Example:</b>
             /// <para>cpu_total</para>
@@ -554,7 +561,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string MetricName { get; set; }
 
             /// <summary>
-            /// <para>Metric time window, in seconds.</para>
+            /// <para>指标的时间窗口，单位秒</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -566,10 +573,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Rule condition type, valid values:</para>
-        /// <para>SLS_CONDITION (SLS alert condition),
-        /// APM_CONDITION (APM alert condition),
-        /// CMS_BASIC_CONDITION (Basic Cloud Monitoring alert condition).</para>
+        /// <para>规则条件类型，取值范围：</para>
+        /// <list type="bullet">
+        /// <item><description>SLS_CONDITION(SLS告警条件)</description></item>
+        /// <item><description>APM_CONDITION(APM告警条件)</description></item>
+        /// <item><description>CMS_BASIC_CONDITION(基础云监控告警条件)</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -580,7 +589,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>Alert triggering threshold.</para>
+        /// <para>告警触发的阈值。</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>

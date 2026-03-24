@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateServiceRequest : TeaModel {
         /// <summary>
-        /// <para>Extended attributes.</para>
+        /// <para>The extended properties.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;language&quot;:&quot;java&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Attributes { get; set; }
 
         /// <summary>
-        /// <para>Service description, only valid when serviceType=RUM.</para>
+        /// <para>The description of the service. This parameter is valid only when serviceType is set to RUM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Display name, only valid when serviceType=RUM.</para>
+        /// <para>The display name. This parameter is valid only when serviceType is set to RUM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>api-monitor-test</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Service status, only valid when serviceType=RUM.</para>
+        /// <para>The status of the service. This parameter is valid only when serviceType is set to RUM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Stopped</para>

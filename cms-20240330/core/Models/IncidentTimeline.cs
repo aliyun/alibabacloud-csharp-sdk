@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentTimeline : TeaModel {
         /// <summary>
-        /// <para>Subtype.</para>
+        /// <para>子类型。</para>
         /// 
         /// <b>Example:</b>
         /// <para>comment</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ChildType { get; set; }
 
         /// <summary>
-        /// <para>Content.</para>
+        /// <para>内容。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The operations team has been notified to investigate.</para>
+        /// <para>已通知运维团队进行排查</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>Incident ID.</para>
+        /// <para>所属事件 ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>incident-001</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentId { get; set; }
 
         /// <summary>
-        /// <para>Timeline node unique ID.</para>
+        /// <para>时间线节点唯一 ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>timeline-001</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentTimelineId { get; set; }
 
         /// <summary>
-        /// <para>Time.</para>
+        /// <para>时间戳。</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741234567890</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? Time { get; set; }
 
         /// <summary>
-        /// <para>Parent timeline ID.</para>
+        /// <para>所属时间线 ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>timeline-main-001</para>
@@ -70,17 +70,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string TimelineId { get; set; }
 
         /// <summary>
-        /// <para>Title.</para>
+        /// <para>时间线标题。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The operations team has been contacted.</para>
+        /// <para>已联系运维团队</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>Type.</para>
+        /// <para>类型。</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACTION</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>User ID.</para>
+        /// <para>用户 ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>user-12345</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class MergeWebhook : TeaModel {
         /// <summary>
+        /// <para>内容类型。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>application/json</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContentType { get; set; }
 
         /// <summary>
+        /// <para>扩展字段，用于存储额外配置。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;timeout&quot;: 3000}</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Extend { get; set; }
 
         /// <summary>
+        /// <para>创建时间。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58.789Z</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
+        /// <para>最后修改时间。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58.789Z</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, object> GmtModified { get; set; }
 
         /// <summary>
+        /// <para>请求头信息。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;Authorization&quot;: &quot;Bearer abc123&quot;}</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Headers { get; set; }
 
         /// <summary>
+        /// <para>Webhook 唯一标识符。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>webhook-12345</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Identifier { get; set; }
 
         /// <summary>
+        /// <para>语言偏好。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>HTTP 请求方法。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>POST</para>
         /// </summary>
@@ -73,11 +89,19 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string Method { get; set; }
 
+        /// <summary>
+        /// <para>Webhook 名称。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>运维告警通知</para>
+        /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>Webhook 来源系统。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dingtalk</para>
         /// </summary>
@@ -86,6 +110,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Source { get; set; }
 
         /// <summary>
+        /// <para>Webhook 类型，表示其目标平台。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dingtalk</para>
         /// </summary>
@@ -94,6 +120,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>Webhook 地址，用于发送请求。</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://oapi.dingtalk.com/robot/send?access_token=abc123">https://oapi.dingtalk.com/robot/send?access_token=abc123</a></para>
         /// </summary>

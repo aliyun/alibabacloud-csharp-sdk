@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DeleteDigitalEmployeeSkillResponseBody : TeaModel {
         /// <summary>
+        /// <para>ID of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0CEC5375-XXXX-XXXX-XXXX-9A629907C1F0</para>
         /// </summary>

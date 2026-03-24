@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAlertActionsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Unique identifier for the action integration.</para>
+        /// <para>The unique IDs of the alert action integrations.</para>
         /// </summary>
         [NameInMap("alertActionIds")]
         [Validation(Required=false)]
         public string AlertActionIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>Name of the action integration.</para>
+        /// <para>The name of the alert action integration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testName</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AlertActionName { get; set; }
 
         /// <summary>
-        /// <para>Page number. Default is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size. Default is 100.</para>
+        /// <para>The number of entries per page. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Type of the action integration.</para>
+        /// <para>The type of the alert action integration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FC</para>

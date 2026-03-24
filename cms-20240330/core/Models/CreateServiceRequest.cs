@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateServiceRequest : TeaModel {
         /// <summary>
-        /// <para>Extended attributes.</para>
+        /// <para>The extended properties.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;language&quot;:&quot;java&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Attributes { get; set; }
 
         /// <summary>
-        /// <para>Service description, only valid when <c>serviceType=RUM</c>.</para>
+        /// <para>The service description. This parameter is valid only when serviceType is set to RUM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mag测试应用</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Display name, only valid when <c>serviceType=RUM</c>.</para>
+        /// <para>The display name. This parameter is valid only when serviceType is set to RUM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mag测试应用</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Application ID, generally not required to be specified.</para>
+        /// <para>The application ID. You do not typically need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bx3udsi5ie@ed2ba6beebdb6de</para>
@@ -50,15 +50,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Pid { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>rg-xxekxxzuad5zzzz</para>
+        /// <para>rg-xxxxxxx</para>
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Service name</para>
+        /// <para>The service name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>Service status, not required for service creation.</para>
+        /// <para>The service status. Do not specify this parameter when you create a service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Created</para>
@@ -79,7 +81,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ServiceStatus { get; set; }
 
         /// <summary>
-        /// <para>Service type</para>
+        /// <para>The service type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,11 +91,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string ServiceType { get; set; }
 
+        /// <summary>
+        /// <para>An array of tags.</para>
+        /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<CreateServiceRequestTags> Tags { get; set; }
         public class CreateServiceRequestTags : TeaModel {
             /// <summary>
+            /// <para>The <c>key</c> of the tag.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>env</para>
             /// </summary>
@@ -102,6 +109,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The <c>value</c> of the tag.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>prod</para>
             /// </summary>

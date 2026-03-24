@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class NotifyChannel : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>&quot;DingTalk&quot;</para>
-        /// </summary>
         [NameInMap("channelType")]
         [Validation(Required=false)]
         public string ChannelType { get; set; }

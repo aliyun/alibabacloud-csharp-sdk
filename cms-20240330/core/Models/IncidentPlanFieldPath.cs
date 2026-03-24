@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentPlanFieldPath : TeaModel {
         /// <summary>
-        /// <para>Field alias.</para>
+        /// <para>字段别名。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Service name.</para>
+        /// <para>服务名称</para>
         /// </summary>
         [NameInMap("fieldAlias")]
         [Validation(Required=false)]
         public string FieldAlias { get; set; }
 
         /// <summary>
-        /// <para>List of field paths.</para>
+        /// <para>字段路径的列表。</para>
         /// </summary>
         [NameInMap("fieldPath")]
         [Validation(Required=false)]

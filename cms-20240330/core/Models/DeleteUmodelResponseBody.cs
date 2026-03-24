@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DeleteUmodelResponseBody : TeaModel {
         /// <summary>
-        /// <para>request ID</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123123-3213-345-9941-345345345</para>

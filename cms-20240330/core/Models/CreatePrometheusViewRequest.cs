@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreatePrometheusViewRequest : TeaModel {
         /// <summary>
-        /// <para>Not enabled yet</para>
+        /// <para>This parameter is not in use.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AuthFreeReadPolicy { get; set; }
 
         /// <summary>
-        /// <para>Whether to support password-free read</para>
+        /// <para>Specifies whether to enable password-free read access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EnableAuthFreeRead { get; set; }
 
         /// <summary>
-        /// <para>Whether to support authToken</para>
+        /// <para>Specifies whether to enable an authentication token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EnableAuthToken { get; set; }
 
         /// <summary>
-        /// <para>List of Prometheus instances.</para>
+        /// <para>The list of Prometheus instances.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("prometheusInstances")]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<CreatePrometheusViewRequestPrometheusInstances> PrometheusInstances { get; set; }
         public class CreatePrometheusViewRequestPrometheusInstances : TeaModel {
             /// <summary>
-            /// <para>Instance ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>arms-1d581fac20a462dcde743d9628</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PrometheusInstanceId { get; set; }
 
             /// <summary>
-            /// <para>Region ID.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-wulanchabu</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>User ID.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>167271234567890</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Prometheus view name.</para>
+        /// <para>The name of the Prometheus view.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusViewName { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm3gn5i6bigbi</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Not enabled yet.</para>
+        /// <para>This parameter is not in use.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -120,14 +120,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The operation to be performed.</para>
+        /// <para>Specifies the operation to execute.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<CreatePrometheusViewRequestTags> Tags { get; set; }
         public class CreatePrometheusViewRequestTags : TeaModel {
             /// <summary>
-            /// <para>Tag key.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-key</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Tag value.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-value</para>
@@ -150,8 +150,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>V1: Old version</description></item>
-        /// <item><description>V2: New version</description></item>
+        /// <item><description><para>V1: The old version.</para>
+        /// </description></item>
+        /// <item><description><para>V2: The new version.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -163,7 +165,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Version { get; set; }
 
         /// <summary>
-        /// <para>Default value: default-cms-{userId}-{regionId}</para>
+        /// <para>The default value is default-cms-{userId}-{regionId}.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cms-monitor-test-aysls-pub-cn-zhangjiakou-spe-monitor</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpsertUmodelDataRequest : TeaModel {
         /// <summary>
-        /// <para>Element content</para>
+        /// <para>The content of the element.</para>
         /// </summary>
         [NameInMap("elements")]
         [Validation(Required=false)]
         public List<object> Elements { get; set; }
 
         /// <summary>
-        /// <para>Method</para>
+        /// <para>The method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Upsert</para>

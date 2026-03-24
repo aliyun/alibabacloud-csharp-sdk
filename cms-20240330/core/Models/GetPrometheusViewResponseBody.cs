@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetPrometheusViewResponseBody : TeaModel {
         /// <summary>
-        /// <para>View instance.</para>
+        /// <para>The view instance.</para>
         /// </summary>
         [NameInMap("prometheusView")]
         [Validation(Required=false)]
         public GetPrometheusViewResponseBodyPrometheusView PrometheusView { get; set; }
         public class GetPrometheusViewResponseBodyPrometheusView : TeaModel {
             /// <summary>
-            /// <para>Password-free read policy (supports IP segments and VpcId).</para>
+            /// <para>The password-free read policy. It supports IP address segments and VPC IDs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AuthFreeReadPolicy { get; set; }
 
             /// <summary>
-            /// <para>authToken string.</para>
+            /// <para>The authToken string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eJxxxxxx</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AuthToken { get; set; }
 
             /// <summary>
-            /// <para>Instance creation time, using UTC+0 time, format is yyyy-MM-ddTHH:mmZ.</para>
+            /// <para>The time when the instance was created. The time is in UTC and follows the yyyy-MM-ddTHH:mmZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-10T02:07:53Z</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Whether to enable password-free read.</para>
+            /// <para>Indicates whether password-free read is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? EnableAuthFreeRead { get; set; }
 
             /// <summary>
-            /// <para>Whether to enable authToken.</para>
+            /// <para>Indicates whether authToken is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? EnableAuthToken { get; set; }
 
             /// <summary>
-            /// <para>Observability dashboard URL.</para>
+            /// <para>The URL of the observability dashboard.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxxx">https://xxxx</a></para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string FolderUrl { get; set; }
 
             /// <summary>
-            /// <para>Bound managed Grafana instance ID.</para>
+            /// <para>The ID of the attached managed Grafana instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>g-xxx</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string GrafanaInstanceId { get; set; }
 
             /// <summary>
-            /// <para>Bound managed Grafana instance name.</para>
+            /// <para>The name of the attached managed Grafana instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gxxx</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string GrafanaInstanceName { get; set; }
 
             /// <summary>
-            /// <para>Public HTTP address.</para>
+            /// <para>The HTTP API endpoint for the Internet.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxxxxxxx">http://xxxxxxxx</a></para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string HttpApiInterUrl { get; set; }
 
             /// <summary>
-            /// <para>Private HTTP address.</para>
+            /// <para>The HTTP API endpoint for the internal network.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxxxxxxx">http://xxxxxxxx</a></para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string HttpApiIntraUrl { get; set; }
 
             /// <summary>
-            /// <para>Instance type, fixed value prom-view.</para>
+            /// <para>The instance type. The value is fixed to prom-view.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prom-view</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>Payment type. Currently, the fixed value is FREE (free).</para>
+            /// <para>The billing method. The value is fixed to FREE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FREE</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PaymentType { get; set; }
 
             /// <summary>
-            /// <para>Product that the prom instance belongs to.</para>
+            /// <para>The product to which the Prometheus instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cms</para>
@@ -156,14 +156,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Product { get; set; }
 
             /// <summary>
-            /// <para>Prometheus instance list.</para>
+            /// <para>A list of Prometheus instances.</para>
             /// </summary>
             [NameInMap("prometheusInstances")]
             [Validation(Required=false)]
             public List<GetPrometheusViewResponseBodyPrometheusViewPrometheusInstances> PrometheusInstances { get; set; }
             public class GetPrometheusViewResponseBodyPrometheusViewPrometheusInstances : TeaModel {
                 /// <summary>
-                /// <para>Instance ID.</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rw-63549e054ff596a4149927961dff</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string PrometheusInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Region ID</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-north-2-gov-1</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>User ID.</para>
+                /// <para>The user ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>122xxxxx</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>Prometheus view ID.</para>
+            /// <para>The ID of the Prometheus view.</para>
             /// 
             /// <b>Example:</b>
             /// <para>view-xxx</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PrometheusViewId { get; set; }
 
             /// <summary>
-            /// <para>Prometheus view name.</para>
+            /// <para>The name of the Prometheus view.</para>
             /// 
             /// <b>Example:</b>
             /// <para>view1</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PrometheusViewName { get; set; }
 
             /// <summary>
-            /// <para>Region ID</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Remote read public URL.</para>
+            /// <para>The remote read URL for the Internet.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://workspace-default-cms-xxx-cn-hangzhou.cn-hangzhou.log.aliyuncs.com/prometheus/workspace-default-cms-xxx-cn-hangzhou/xxx/api/v1/read">http://workspace-default-cms-xxx-cn-hangzhou.cn-hangzhou.log.aliyuncs.com/prometheus/workspace-default-cms-xxx-cn-hangzhou/xxx/api/v1/read</a></para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RemoteReadInterUrl { get; set; }
 
             /// <summary>
-            /// <para>Remote read intranet URL.</para>
+            /// <para>The remote read URL for the internal network.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://workspace-default-cms-xxx-cn-hangzhou.cn-hangzhou-intranet.log.aliyuncs.com/prometheus/workspace-default-cms-xxx-cn-hangzhou/xxx/api/v1/read">http://workspace-default-cms-xxx-cn-hangzhou.cn-hangzhou-intranet.log.aliyuncs.com/prometheus/workspace-default-cms-xxx-cn-hangzhou/xxx/api/v1/read</a></para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RemoteReadIntraUrl { get; set; }
 
             /// <summary>
-            /// <para>Resource group ID.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfm3gn5i6bigbi</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>Fixed value: PrometheusView</para>
+            /// <para>The value is fixed to PrometheusView.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RegistryModule</para>
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>Backend data storage status</para>
+            /// <para>The status of the backend data storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Pending2Running</para>
@@ -275,21 +275,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Supported authentication types.</para>
+            /// <para>The supported authentication types.</para>
             /// </summary>
             [NameInMap("supportAuthTypes")]
             [Validation(Required=false)]
             public List<string> SupportAuthTypes { get; set; }
 
             /// <summary>
-            /// <para>Instance tag keys.</para>
+            /// <para>The tags of the instance.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<GetPrometheusViewResponseBodyPrometheusViewTags> Tags { get; set; }
             public class GetPrometheusViewResponseBodyPrometheusViewTags : TeaModel {
                 /// <summary>
-                /// <para>PagerDuty integration key.</para>
+                /// <para>The integration key for PagerDuty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>global_score_series</para>
@@ -299,7 +299,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>Tag value.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>371293199010092839</para>
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>User ID.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11222</para>
@@ -321,7 +321,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>Version.</para>
+            /// <para>The version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>V1</para>
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Version { get; set; }
 
             /// <summary>
-            /// <para>Workspace to which the environment belongs</para>
+            /// <para>The workspace to which the environment belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cms-monitor-test-aysls-pub-cn-fuzhou-monitor</para>
@@ -343,7 +343,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0B9377D9-C56B-5C2E-A8A4-A01D6CC3F4B8</para>

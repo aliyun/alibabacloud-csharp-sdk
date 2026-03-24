@@ -9,25 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListThreadsRequest : TeaModel {
+        /// <summary>
+        /// <para>The filter conditions for the query. If you do not specify this parameter, all threads in the instance are queried.</para>
+        /// </summary>
         [NameInMap("filter")]
         [Validation(Required=false)]
         public List<ListThreadsRequestFilter> Filter { get; set; }
         public class ListThreadsRequestFilter : TeaModel {
             /// <summary>
+            /// <para>The filter key. Supported values are title, workspace, and project.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>dukang-oxs-pre-obeqi</para>
+            /// <para>title</para>
             /// </summary>
             [NameInMap("key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The set value.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{\&quot;Type\&quot;: \&quot;primaryDoc\&quot;, \&quot;Id\&quot;: \&quot;01ZM8y7\&quot;, \&quot;Name\&quot;: \&quot;key\&quot;}, {\&quot;Type\&quot;: \&quot;text\&quot;, \&quot;Id\&quot;: \&quot;mHe1U1b\&quot;, \&quot;Name\&quot;: \&quot;value\&quot;}, {\&quot;Type\&quot;: \&quot;text\&quot;, \&quot;Id\&quot;: \&quot;rRIhpBs\&quot;, \&quot;Name\&quot;: u\&quot;\u4f5c\u7528\&quot;}]</para>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
+        /// <para>The maximum number of results to return. The maximum value is 200.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The paging token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxxx</para>
         /// </summary>
@@ -52,16 +61,20 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The session status.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>Running</para>
+        /// <para>active</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The session ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>thread_id01</para>
+        /// <para>thread-123123</para>
         /// </summary>
         [NameInMap("threadId")]
         [Validation(Required=false)]

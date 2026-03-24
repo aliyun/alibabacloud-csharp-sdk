@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class MaintainWindowForView : TeaModel {
         /// <summary>
-        /// <para>Creation time.</para>
+        /// <para>创建时间</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Description.</para>
+        /// <para>描述</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Effective time range.</para>
+        /// <para>生效时间范围</para>
         /// </summary>
         [NameInMap("effectTimeRange")]
         [Validation(Required=false)]
         public MaintainWindowForViewEffectTimeRange EffectTimeRange { get; set; }
         public class MaintainWindowForViewEffectTimeRange : TeaModel {
             /// <summary>
-            /// <para>Effective days (Monday to Sunday).</para>
+            /// <para>生效天(周一到周日)</para>
             /// </summary>
             [NameInMap("dayInWeek")]
             [Validation(Required=false)]
             public List<int?> DayInWeek { get; set; }
 
             /// <summary>
-            /// <para>End time (in minutes).</para>
+            /// <para>结束时间(分钟数)</para>
             /// 
             /// <b>Example:</b>
             /// <para>360</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? EndTimeInMinute { get; set; }
 
             /// <summary>
-            /// <para>Start time (in minutes).</para>
+            /// <para>开始时间(分钟数)</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? StartTimeInMinute { get; set; }
 
             /// <summary>
-            /// <para>Time Zone.</para>
+            /// <para>时区</para>
             /// 
             /// <b>Example:</b>
             /// <para>+08:00</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Crontab expression.</para>
+        /// <para>Crontab 表达式</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Effective { get; set; }
 
         /// <summary>
-        /// <para>Whether enabled.</para>
+        /// <para>是否启用</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>Effective end time.</para>
+        /// <para>生效结束时间</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-11-26 12:02:01</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Filtering conditions.</para>
+        /// <para>筛选条件</para>
         /// </summary>
         [NameInMap("filterSetting")]
         [Validation(Required=false)]
@@ -128,18 +128,18 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MaintainWindowId { get; set; }
 
         /// <summary>
-        /// <para>Name.</para>
+        /// <para>名称</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test policy.</para>
+        /// <para>测试策略</para>
         /// </summary>
         [NameInMap("maintainWindowName")]
         [Validation(Required=false)]
         public string MaintainWindowName { get; set; }
 
         /// <summary>
-        /// <para>Effective start time.</para>
+        /// <para>生效开始时间</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-11-26 10:02:01</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>Update time.</para>
+        /// <para>更新时间</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-05-07T02:19:05Z</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>User ID.</para>
+        /// <para>用户id</para>
         /// 
         /// <b>Example:</b>
         /// <para>12312312***</para>

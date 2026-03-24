@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateDigitalEmployeeSkillRequest : TeaModel {
         /// <summary>
+        /// <para>The description of the skill.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The display name of the skill.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable the skill.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Enable { get; set; }
 
         /// <summary>
+        /// <para>The list of skill files.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("files")]
@@ -41,6 +48,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<CreateDigitalEmployeeSkillRequestFiles> Files { get; set; }
         public class CreateDigitalEmployeeSkillRequestFiles : TeaModel {
             /// <summary>
+            /// <para>The content of the file.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// <h2>name: skill
@@ -53,6 +62,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>The name of the file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SKILL.md</para>
             /// </summary>
@@ -63,6 +74,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
+        /// <para>The remarks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>remark</para>
         /// </summary>
@@ -71,6 +84,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Remark { get; set; }
 
         /// <summary>
+        /// <para>The name of the skill.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

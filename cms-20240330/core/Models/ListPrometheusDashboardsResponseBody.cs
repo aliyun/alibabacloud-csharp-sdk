@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListPrometheusDashboardsResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of Prometheus instance dashboards.</para>
+        /// <para>A list of dashboards for the Prometheus instance.</para>
         /// </summary>
         [NameInMap("prometheusDashboards")]
         [Validation(Required=false)]
         public List<ListPrometheusDashboardsResponseBodyPrometheusDashboards> PrometheusDashboards { get; set; }
         public class ListPrometheusDashboardsResponseBodyPrometheusDashboards : TeaModel {
             /// <summary>
-            /// <para>Dashboard ID.</para>
+            /// <para>The dashboard ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>Dashboard name.</para>
+            /// <para>The dashboard name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pod</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Tags.</para>
+            /// <para>The tags.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<string> Tags { get; set; }
 
             /// <summary>
-            /// <para>Dashboard title.</para>
+            /// <para>The dashboard title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ceshi</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>Dashboard UID.</para>
+            /// <para>The dashboard UID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1987395500251724</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Uid { get; set; }
 
             /// <summary>
-            /// <para>Dashboard URL address.</para>
+            /// <para>The URL of the dashboard.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://gnew.console.aliyun.com/d/xxx-17460385-807-7-6/cs-cost-application">https://gnew.console.aliyun.com/d/xxx-17460385-807-7-6/cs-cost-application</a></para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of instances</para>
+        /// <para>The total number of instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66</para>

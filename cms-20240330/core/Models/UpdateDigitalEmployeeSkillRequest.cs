@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateDigitalEmployeeSkillRequest : TeaModel {
         /// <summary>
+        /// <para>Description</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Display name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>Is enabled</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Enable { get; set; }
 
         /// <summary>
+        /// <para>List of skill files</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("files")]
@@ -43,6 +49,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<UpdateDigitalEmployeeSkillRequestFiles> Files { get; set; }
         public class UpdateDigitalEmployeeSkillRequestFiles : TeaModel {
             /// <summary>
+            /// <para>File content</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// <h2>name: skill
@@ -55,6 +63,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>File name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SKILL.md</para>
             /// </summary>
@@ -65,6 +75,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
+        /// <para>Remark</para>
+        /// 
         /// <b>Example:</b>
         /// <para>remark</para>
         /// </summary>

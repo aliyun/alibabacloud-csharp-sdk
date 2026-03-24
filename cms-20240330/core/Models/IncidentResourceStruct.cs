@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentResourceStruct : TeaModel {
         /// <summary>
-        /// <para>Description information.</para>
+        /// <para>描述信息。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Production environment web server.</para>
+        /// <para>生产环境 Web 服务器</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Incident ID.</para>
+        /// <para>事件ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>incident-001</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of this resource in the event.</para>
+        /// <para>事件中该资源的唯一 ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>res-001</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentResourceId { get; set; }
 
         /// <summary>
-        /// <para>Event resource details object.</para>
+        /// <para>事件资源详情对象。</para>
         /// </summary>
         [NameInMap("resource")]
         [Validation(Required=false)]
         public IncidentResourceDetail Resource { get; set; }
 
         /// <summary>
-        /// <para>Source.</para>
+        /// <para>来源。</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloudmonitor</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>Time.</para>
+        /// <para>时间戳</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741234567890</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? Time { get; set; }
 
         /// <summary>
-        /// <para>User ID.</para>
+        /// <para>用户 ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>user-12345</para>

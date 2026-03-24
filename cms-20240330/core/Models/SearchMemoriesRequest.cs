@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class SearchMemoriesRequest : TeaModel {
         /// <summary>
+        /// <para>Agent ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>972772996913709056</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <para>App key assigned by the merchant</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mm_480d961a1b5e4efe84603f4cbc0f</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>Resource metadata</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, object> Metadata { get; set; }
 
         /// <summary>
+        /// <para>Query text</para>
+        /// 
         /// <b>Example:</b>
         /// <para>What I like</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Query { get; set; }
 
         /// <summary>
+        /// <para>Rerank the search results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Rerank { get; set; }
 
         /// <summary>
+        /// <para>Run ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_session_001</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RunId { get; set; }
 
         /// <summary>
+        /// <para>Number of top results to return</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? TopK { get; set; }
 
         /// <summary>
+        /// <para>User ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_session_001</para>
         /// </summary>

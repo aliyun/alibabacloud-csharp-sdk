@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListPrometheusViewsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Maximum number of records to return.</para>
+        /// <para>The maximum number of records returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Token for the next query.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2-ba4d-4b9f-aa24-dcb067a30f1c</para>
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>List of Prometheus view instances.</para>
+        /// <para>The list of Prometheus view instances.</para>
         /// </summary>
         [NameInMap("prometheusViews")]
         [Validation(Required=false)]
         public List<ListPrometheusViewsResponseBodyPrometheusViews> PrometheusViews { get; set; }
         public class ListPrometheusViewsResponseBodyPrometheusViews : TeaModel {
             /// <summary>
-            /// <para>Instance creation time, using UTC+0 time, formatted as yyyy-MM-ddTHH:mmZ</para>
+            /// <para>The time when the instance was created. The time is in UTC and in the \<c>yyyy-MM-ddTHH:mmZ\\</c> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-12T02:18:36Z</para>
@@ -50,9 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Instance type:
-            /// prom-view: new version aggregated view
-            /// global-view: old version aggregated view</para>
+            /// <para>The instance type. Valid values are \<c>prom-view\\</c> for a new-version aggregation view and \<c>global-view\\</c> for an old-version aggregation view.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prom-view</para>
@@ -62,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>Payment type. Currently, the fixed value is FREE (free).</para>
+            /// <para>The billing method. The value is fixed to \<c>FREE\\</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FREE</para>
@@ -72,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PaymentType { get; set; }
 
             /// <summary>
-            /// <para>Product that the prom instance belongs to (arms or cms).</para>
+            /// <para>The product to which the Prometheus instance belongs. Valid values: \<c>arms\\</c> and \<c>cms\\</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cms</para>
@@ -82,7 +80,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Product { get; set; }
 
             /// <summary>
-            /// <para>Number of Prometheus instances in the view.</para>
+            /// <para>The number of Prometheus instances in the view.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -92,7 +90,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? PrometheusInstanceCount { get; set; }
 
             /// <summary>
-            /// <para>Prometheus view ID.</para>
+            /// <para>The Prometheus view ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>view-xxx</para>
@@ -102,7 +100,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PrometheusViewId { get; set; }
 
             /// <summary>
-            /// <para>Prometheus view name.</para>
+            /// <para>The name of the Prometheus view.</para>
             /// 
             /// <b>Example:</b>
             /// <para>view1</para>
@@ -112,7 +110,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PrometheusViewName { get; set; }
 
             /// <summary>
-            /// <para>Region ID.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-zhangjiakou</para>
@@ -122,7 +120,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Fixed value: PrometheusView.</para>
+            /// <para>The resource type. The value is fixed to \<c>PrometheusView\\</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PrometheusView</para>
@@ -132,7 +130,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>Backend data storage status.</para>
+            /// <para>The status of the backend data storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -142,7 +140,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>User ID.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123xxx</para>
@@ -152,7 +150,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>Version.</para>
+            /// <para>The version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>V2</para>
@@ -162,7 +160,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Version { get; set; }
 
             /// <summary>
-            /// <para>Workspace that the prom instance belongs to.</para>
+            /// <para>The workspace to which the Prometheus instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default-cms-1490404746278495-cn-hangzhou</para>
@@ -174,7 +172,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0CEC5375-C554-562B-A65F-9A629907C1F0</para>
@@ -184,7 +182,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of instances</para>
+        /// <para>The total number of instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66</para>

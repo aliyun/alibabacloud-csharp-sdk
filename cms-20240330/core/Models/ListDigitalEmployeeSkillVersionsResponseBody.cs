@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListDigitalEmployeeSkillVersionsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The historical versions.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListDigitalEmployeeSkillVersionsResponseBodyData> Data { get; set; }
         public class ListDigitalEmployeeSkillVersionsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The time when the skill was created.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -24,6 +28,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The display name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -40,6 +48,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DisplayName { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the skill is enabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -48,6 +58,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? Enable { get; set; }
 
             /// <summary>
+            /// <para>The remarks.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>remark</para>
             /// </summary>
@@ -56,6 +68,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Remark { get; set; }
 
             /// <summary>
+            /// <para>The name of the skill.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -64,6 +78,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string SkillName { get; set; }
 
             /// <summary>
+            /// <para>The time when the skill was last updated.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -74,6 +89,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
+            /// <para>The version number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1770386951147366810</para>
             /// </summary>
@@ -84,6 +101,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0B9377D9-C56B-5C2E-A8A4-A01D6CC3F4B8</para>
         /// </summary>

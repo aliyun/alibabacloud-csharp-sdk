@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetEntityStoreDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>Total list of returned data</para>
+        /// <para>The list of returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<List<string>> Data { get; set; }
 
         /// <summary>
-        /// <para>List of request headers</para>
+        /// <para>The list of request headers.</para>
         /// </summary>
         [NameInMap("header")]
         [Validation(Required=false)]
         public List<string> Header { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Result status</para>
+        /// <para>The result status.</para>
         /// </summary>
         [NameInMap("responseStatus")]
         [Validation(Required=false)]
         public GetEntityStoreDataResponseBodyResponseStatus ResponseStatus { get; set; }
         public class GetEntityStoreDataResponseBodyResponseStatus : TeaModel {
             /// <summary>
-            /// <para>Information during the execution process</para>
+            /// <para>Information about the execution procedure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ExecutionStates { get; set; }
 
             /// <summary>
-            /// <para>Status level</para>
+            /// <para>The status level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Info,Warn,Error</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>Execution result</para>
+            /// <para>The execution result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success,PartialSuccess,Error</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>Retry policy</para>
+            /// <para>The retry policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None,Once,Continuous</para>
@@ -81,14 +81,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RetryPolicy { get; set; }
 
             /// <summary>
-            /// <para>Detailed status information list</para>
+            /// <para>A list of detailed status information.</para>
             /// </summary>
             [NameInMap("statusItem")]
             [Validation(Required=false)]
             public List<GetEntityStoreDataResponseBodyResponseStatusStatusItem> StatusItem { get; set; }
             public class GetEntityStoreDataResponseBodyResponseStatusStatusItem : TeaModel {
                 /// <summary>
-                /// <para>Status code</para>
+                /// <para>The status code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Success,ExecuteTimeout,UModelNotExist</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Status level</para>
+                /// <para>The status level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Info,Warn,Error</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Level { get; set; }
 
                 /// <summary>
-                /// <para>Calculation execution information</para>
+                /// <para>The execution information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Query execution timeout after 30 seconds</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>Suggestions when an error occurs during execution</para>
+                /// <para>The suggestion provided when an execution fault occurs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Try to reduce the query scope or increase timeout limit, then retry</para>

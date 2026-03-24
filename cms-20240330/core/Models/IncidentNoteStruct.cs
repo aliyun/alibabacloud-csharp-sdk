@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentNoteStruct : TeaModel {
         /// <summary>
-        /// <para>Content.</para>
+        /// <para>内容。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The operations team has been contacted and is currently investigating the issue.</para>
+        /// <para>已联系运维团队，正在排查问题。</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>Content format.</para>
+        /// <para>内容格式。</para>
         /// 
         /// <b>Example:</b>
         /// <para>markdown</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Format { get; set; }
 
         /// <summary>
-        /// <para>Incident ID.</para>
+        /// <para>事件ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>incident-001</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentId { get; set; }
 
         /// <summary>
-        /// <para>Note ID.</para>
+        /// <para>记录ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>note-001</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NoteId { get; set; }
 
         /// <summary>
-        /// <para>Operator.</para>
+        /// <para>操作符。</para>
         /// </summary>
         [NameInMap("operator")]
         [Validation(Required=false)]
         public IncidentNoteStructOperator Operator { get; set; }
         public class IncidentNoteStructOperator : TeaModel {
             /// <summary>
-            /// <para>Contact.</para>
+            /// <para>联系人。</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;mobile_phone_num\&quot;:\&quot;153xxxx8040\&quot;,\&quot;mobile_country_code\&quot;:\&quot;86\&quot;,\&quot;email\&quot;:\&quot;<a href="mailto:flightxxg@dida.com">flightxxg@dida.com</a>\&quot;}</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Contact { get; set; }
 
             /// <summary>
-            /// <para>Contact ID.</para>
+            /// <para>联系人id。</para>
             /// 
             /// <b>Example:</b>
             /// <para>user-12345</para>
@@ -77,17 +77,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ContactId { get; set; }
 
             /// <summary>
-            /// <para>Name.</para>
+            /// <para>名称。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Zhang San.</para>
+            /// <para>张三</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>User ID.</para>
+            /// <para>用户ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>4123456</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Time.</para>
+        /// <para>时间。</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741234567890</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? Time { get; set; }
 
         /// <summary>
-        /// <para>Type.</para>
+        /// <para>类型。</para>
         /// 
         /// <b>Example:</b>
         /// <para>apm</para>

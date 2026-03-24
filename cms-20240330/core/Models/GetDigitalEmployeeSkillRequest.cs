@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetDigitalEmployeeSkillRequest : TeaModel {
         /// <summary>
+        /// <para>Historical version number</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1770386951147366810</para>
         /// </summary>

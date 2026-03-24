@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Cluster ID.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>et15prod-et15storage</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Custom scraping job rules</para>
+        /// <para>The custom scrape job rules.</para>
         /// </summary>
         [NameInMap("customScrapeJobRules")]
         [Validation(Required=false)]
         public List<ListIntegrationPolicyCustomScrapeJobRulesResponseBodyCustomScrapeJobRules> CustomScrapeJobRules { get; set; }
         public class ListIntegrationPolicyCustomScrapeJobRulesResponseBodyCustomScrapeJobRules : TeaModel {
             /// <summary>
-            /// <para>Addon name.</para>
+            /// <para>The add-on name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud-ecs</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AddonName { get; set; }
 
             /// <summary>
-            /// <para>Addon Release name</para>
+            /// <para>The name of the add-on release.</para>
             /// 
             /// <b>Example:</b>
             /// <para>release-12345678</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AddonReleaseName { get; set; }
 
             /// <summary>
-            /// <para>Addon version</para>
+            /// <para>The add-on version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AddonVersion { get; set; }
 
             /// <summary>
-            /// <para>Configuration yaml</para>
+            /// <para>The configuration YAML file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>scrape_cofnigs:</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ConfigYaml { get; set; }
 
             /// <summary>
-            /// <para>Enable status</para>
+            /// <para>The enabled status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mini</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EnableStatus { get; set; }
 
             /// <summary>
-            /// <para>Encrypt yaml</para>
+            /// <para>Indicates whether the YAML file is encrypted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? EncryptYaml { get; set; }
 
             /// <summary>
-            /// <para>Matched pod count</para>
+            /// <para>The number of matched pods.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? MatchedPodCount { get; set; }
 
             /// <summary>
-            /// <para>Detailed information.</para>
+            /// <para>The details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ok</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Service name.</para>
+            /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dlab1</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Namespace</para>
+            /// <para>The namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prod-data</para>
@@ -130,14 +130,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>Custom configurations</para>
+            /// <para>The custom configurations.</para>
             /// </summary>
             [NameInMap("scrapeConfigs")]
             [Validation(Required=false)]
             public List<ListIntegrationPolicyCustomScrapeJobRulesResponseBodyCustomScrapeJobRulesScrapeConfigs> ScrapeConfigs { get; set; }
             public class ListIntegrationPolicyCustomScrapeJobRulesResponseBodyCustomScrapeJobRulesScrapeConfigs : TeaModel {
                 /// <summary>
-                /// <para>Scraping job name</para>
+                /// <para>The scrape job name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mysql-exporter</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string JobName { get; set; }
 
                 /// <summary>
-                /// <para>Detailed information.</para>
+                /// <para>The details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>successful</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>Metrics path</para>
+                /// <para>The scrape path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/metrics</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string MetricsPath { get; set; }
 
                 /// <summary>
-                /// <para>Call method.</para>
+                /// <para>The invocation method.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>http</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Scheme { get; set; }
 
                 /// <summary>
-                /// <para>Scrape interval</para>
+                /// <para>The scrape interval.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30s</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string ScrapeInterval { get; set; }
 
                 /// <summary>
-                /// <para>Scrape timeout</para>
+                /// <para>The scrape timeout period.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60s</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string ScrapeTimeout { get; set; }
 
                 /// <summary>
-                /// <para>Service discovery configuration</para>
+                /// <para>The service discovery configurations.</para>
                 /// </summary>
                 [NameInMap("serviceDiscoveryConfigs")]
                 [Validation(Required=false)]
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Policy ID.</para>
+        /// <para>The policy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>policy-15abcc24c06f4797832b5954198e1ed1</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0CEC5375-C554-562B-A65F-9A629907C1F0</para>

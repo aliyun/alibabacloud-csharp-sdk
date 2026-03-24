@@ -9,18 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class RepeatNotifySetting : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>&quot;Resolved&quot;</para>
-        /// </summary>
         [NameInMap("endIncidentState")]
         [Validation(Required=false)]
         public string EndIncidentState { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>5</para>
-        /// </summary>
         [NameInMap("repeatInterval")]
         [Validation(Required=false)]
         public string RepeatInterval { get; set; }

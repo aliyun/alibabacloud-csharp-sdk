@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateIntegrationPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>Entity group for creating the policy. Policies can be quickly created using the entity group, and <c>clusterId</c> and <c>vpcId</c> are independent of each other.</para>
+        /// <para>The entity group used to create the policy. You can quickly create a policy using an entity group. The clusterId and vpcId parameters are independent of each other.</para>
         /// </summary>
         [NameInMap("entityGroup")]
         [Validation(Required=false)]
         public CreateIntegrationPolicyRequestEntityGroup EntityGroup { get; set; }
         public class CreateIntegrationPolicyRequestEntityGroup : TeaModel {
             /// <summary>
-            /// <para>Cluster entity type, such as acs.ack.cluster/acs.one.cluster/acs.asi.cluster or others.</para>
+            /// <para>The cluster entity type. Examples: acs.ack.cluster, acs.one.cluster, and acs.asi.cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs.ack.cluster</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ClusterEntityType { get; set; }
 
             /// <summary>
-            /// <para>Cluster ID.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>na61prod3-na61cloudhdfsssd</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ClusterNamespace { get; set; }
 
             /// <summary>
-            /// <para>Whether to disable the unique binding of the Policy. If enabled, multiple Policies can be created for a single container cluster.</para>
+            /// <para>Specifies whether to disable unique policy binding. If this parameter is set to true, you can create multiple policies for a container cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ture</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? DisablePolicyShare { get; set; }
 
             /// <summary>
-            /// <para>Entity group ID.</para>
+            /// <para>The entity group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eg-b79f65d11fb94e779867cf937c3a3002</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EntityGroupId { get; set; }
 
             /// <summary>
-            /// <para>User ID to which the cluster belongs.</para>
+            /// <para>The ID of the user who owns the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12xxxx</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EntityUserId { get; set; }
 
             /// <summary>
-            /// <para>VPC ID.</para>
+            /// <para>The virtual private cloud (VPC) ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp18fgg3ffxa9czna40xt</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Policy name</para>
+        /// <para>The policy name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>prod-database</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>Policy type: CS/ECS/Cloud</para>
+        /// <para>The policy type. Valid values: CS, ECS, and Cloud.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PolicyType { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekz2km4kmhtbii</para>
@@ -114,14 +114,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Resource tags.</para>
+        /// <para>The resource tags.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<CreateIntegrationPolicyRequestTags> Tags { get; set; }
         public class CreateIntegrationPolicyRequestTags : TeaModel {
             /// <summary>
-            /// <para>Tag <c>key</c> value.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>use</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Tag <c>value</c> value.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>database</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Workspace.</para>
+        /// <para>The workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>prometheus</para>

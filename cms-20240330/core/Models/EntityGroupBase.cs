@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class EntityGroupBase : TeaModel {
+        /// <summary>
+        /// <para>实体描述。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ECS 实例</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>实体ID。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eg-1234567890</para>
         /// </summary>
@@ -21,15 +29,26 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string EntityGroupId { get; set; }
 
+        /// <summary>
+        /// <para>实体名称。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ECS 全部实体</para>
+        /// </summary>
         [NameInMap("entityGroupName")]
         [Validation(Required=false)]
         public string EntityGroupName { get; set; }
 
+        /// <summary>
+        /// <para>实体查询规则集合。</para>
+        /// </summary>
         [NameInMap("entityQueries")]
         [Validation(Required=false)]
         public List<EntityGroupBaseEntityQueries> EntityQueries { get; set; }
         public class EntityGroupBaseEntityQueries : TeaModel {
             /// <summary>
+            /// <para>实体类型。</para>
+            /// 
             /// <b>Example:</b>
             /// <para>acs.ecs.instance</para>
             /// </summary>
@@ -38,6 +57,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EntityType { get; set; }
 
             /// <summary>
+            /// <para>SPL查询语句。</para>
+            /// 
             /// <b>Example:</b>
             /// <para>.entity with(type=\&quot;acs.ecs.instance\&quot;) | where region_id in (\&quot;cn-beijing\&quot;)</para>
             /// </summary>
@@ -47,11 +68,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         }
 
+        /// <summary>
+        /// <para>用于实体发现的规则。</para>
+        /// </summary>
         [NameInMap("entityRules")]
         [Validation(Required=false)]
         public EntityDiscoverRule EntityRules { get; set; }
 
         /// <summary>
+        /// <para>地域ID。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-heyuan</para>
         /// </summary>
@@ -60,6 +86,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>用户ID。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1654218***343050</para>
         /// </summary>
@@ -68,6 +96,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UserId { get; set; }
 
         /// <summary>
+        /// <para>工作空间。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default-cms-1654218***343050-cn-hangzhou</para>
         /// </summary>

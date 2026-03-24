@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListServicesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records to return in this request.</para>
+        /// <para>The maximum number of records to return for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Token for the next query, an empty value indicates the last page.</para>
+        /// <para>The token for the next page of results. If this parameter is empty, it means you have reached the last page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7-b81a-4bc9-bbfa-a50cc6988667</para>
@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-aekxxzuad5zzzz</para>
         /// </summary>
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The application service name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>app-demo</para>
         /// </summary>
@@ -46,16 +50,18 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>Service type</para>
+        /// <para>The service type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>apm</para>
+        /// <para>TRACE</para>
         /// </summary>
         [NameInMap("serviceType")]
         [Validation(Required=false)]
         public string ServiceType { get; set; }
 
         /// <summary>
+        /// <para>An array of tags.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>

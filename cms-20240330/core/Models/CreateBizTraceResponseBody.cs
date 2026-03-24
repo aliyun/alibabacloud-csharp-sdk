@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateBizTraceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the business trace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>e339260ed64c95d</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string BizTraceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</para>
         /// </summary>

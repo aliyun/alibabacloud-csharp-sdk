@@ -9,18 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentEscalationPolicyForModify : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>workspace api monitor create test</para>
-        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
@@ -31,9 +23,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>&quot;Critical-Alert-Escalation&quot;</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

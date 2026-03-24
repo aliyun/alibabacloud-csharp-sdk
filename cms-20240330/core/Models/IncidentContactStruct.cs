@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentContactStruct : TeaModel {
         /// <summary>
-        /// <para>Channel list.</para>
+        /// <para>通道列表</para>
         /// </summary>
         [NameInMap("channel")]
         [Validation(Required=false)]
         public List<string> Channel { get; set; }
 
         /// <summary>
-        /// <para>Contact ID.</para>
+        /// <para>联系人id</para>
         /// 
         /// <b>Example:</b>
         /// <para>627415</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContactId { get; set; }
 
         /// <summary>
-        /// <para>Contact type.</para>
+        /// <para>联系类型。</para>
         /// 
         /// <b>Example:</b>
         /// <para>GROUP</para>

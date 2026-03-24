@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListMemoryStoresResponseBody : TeaModel {
         /// <summary>
+        /// <para>The maximum number of returned entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -17,11 +19,15 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <para>The list of memory stores.</para>
+        /// </summary>
         [NameInMap("memoryStores")]
         [Validation(Required=false)]
         public List<ListMemoryStoresResponseBodyMemoryStores> MemoryStores { get; set; }
         public class ListMemoryStoresResponseBodyMemoryStores : TeaModel {
             /// <summary>
+            /// <para>The time when the memory store was created.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The description of the memory store.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Created by taishan-module-recovery</para>
             /// </summary>
@@ -40,6 +48,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The name of the memory store.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>qianyi_test_1</para>
             /// </summary>
@@ -48,6 +58,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string MemoryStoreName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -56,6 +68,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The time when the memory store was last updated.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -66,6 +79,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
+            /// <para>Workspace</para>
+            /// 
             /// <b>Example:</b>
             /// <para>default-cms-1646467597142798-cn-shenzhen</para>
             /// </summary>
@@ -76,6 +91,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
+        /// <para>The token for the next page of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxxx</para>
         /// </summary>
@@ -84,6 +101,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>16C0A6D6-C3E7-511D-A60B-A87FD85F5BA7</para>
         /// </summary>
