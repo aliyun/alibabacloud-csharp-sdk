@@ -47,6 +47,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>PayByCenOwner</para>
+            /// </summary>
+            [NameInMap("EffectiveOrderType")]
+            [Validation(Required=false)]
+            public string EffectiveOrderType { get; set; }
+
+            /// <summary>
             /// <para>The entity that pays the fees of the network instance. Valid values: Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>PayByCenOwner</b>: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the CEN instance belongs.</description></item>

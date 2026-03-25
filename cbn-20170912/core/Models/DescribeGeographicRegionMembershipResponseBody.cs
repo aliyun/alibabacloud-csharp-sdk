@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// <para>The list of regions.</para>
-        /// </summary>
         [NameInMap("RegionIds")]
         [Validation(Required=false)]
         public DescribeGeographicRegionMembershipResponseBodyRegionIds RegionIds { get; set; }
@@ -40,13 +37,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId> RegionId { get; set; }
             public class DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId : TeaModel {
-                /// <summary>
-                /// <para>The ID of the region.</para>
-                /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>us-west-1</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }

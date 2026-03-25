@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenGeographicSpansResponseBody : TeaModel {
-        /// <summary>
-        /// <para>A list of areas.</para>
-        /// </summary>
         [NameInMap("GeographicSpanModels")]
         [Validation(Required=false)]
         public DescribeCenGeographicSpansResponseBodyGeographicSpanModels GeographicSpanModels { get; set; }
@@ -20,32 +17,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel> GeographicSpanModel { get; set; }
             public class DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel : TeaModel {
-                /// <summary>
-                /// <para>The ID of the pair of connected areas.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>china_asia-pacific</para>
-                /// </summary>
                 [NameInMap("GeographicSpanId")]
                 [Validation(Required=false)]
                 public string GeographicSpanId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the local area.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>asia-pacific</para>
-                /// </summary>
                 [NameInMap("LocalGeoRegionId")]
                 [Validation(Required=false)]
                 public string LocalGeoRegionId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the peer area.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>china</para>
-                /// </summary>
                 [NameInMap("OppositeGeoRegionId")]
                 [Validation(Required=false)]
                 public string OppositeGeoRegionId { get; set; }

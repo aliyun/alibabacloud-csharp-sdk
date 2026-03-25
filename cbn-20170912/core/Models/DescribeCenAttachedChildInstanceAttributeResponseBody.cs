@@ -57,9 +57,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string Ipv6CidrBlock { get; set; }
 
-            /// <summary>
-            /// <para>The IPv6 CIDR blocks of the VPC.</para>
-            /// </summary>
             [NameInMap("Ipv6CidrBlocks")]
             [Validation(Required=false)]
             public DescribeCenAttachedChildInstanceAttributeResponseBodyChildInstanceAttributesIpv6CidrBlocks Ipv6CidrBlocks { get; set; }
@@ -68,31 +65,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 [Validation(Required=false)]
                 public List<DescribeCenAttachedChildInstanceAttributeResponseBodyChildInstanceAttributesIpv6CidrBlocksIpv6CidrBlock> Ipv6CidrBlock { get; set; }
                 public class DescribeCenAttachedChildInstanceAttributeResponseBodyChildInstanceAttributesIpv6CidrBlocksIpv6CidrBlock : TeaModel {
-                    /// <summary>
-                    /// <para>The IPv6 CIDR block of the VPC.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>2408:XXXX:0:6a::/56</para>
-                    /// </summary>
                     [NameInMap("Ipv6CidrBlock")]
                     [Validation(Required=false)]
                     public string Ipv6CidrBlock { get; set; }
 
-                    /// <summary>
-                    /// <para>The type of the IPv6 CIDR block of the VPC. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>BGP (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6</description></item>
-                    /// <item><description>ChinaMobile: China Mobile (single line)</description></item>
-                    /// <item><description>ChinaUnicom: China Unicom (single line)</description></item>
-                    /// <item><description>ChinaTelecom: China Telecom (single line)</description></item>
-                    /// </list>
-                    /// <remarks>
-                    /// <para> If you are on the whitelist of single-line bandwidth, you can set this parameter to ChinaTelecom, ChinaUnicom, or ChinaMobile.</para>
-                    /// </remarks>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>BGP</para>
-                    /// </summary>
                     [NameInMap("Ipv6Isp")]
                     [Validation(Required=false)]
                     public string Ipv6Isp { get; set; }
@@ -101,9 +77,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             }
 
-            /// <summary>
-            /// <para>The information about the VPC secondary CIDR block.</para>
-            /// </summary>
             [NameInMap("SecondaryCidrBlocks")]
             [Validation(Required=false)]
             public DescribeCenAttachedChildInstanceAttributeResponseBodyChildInstanceAttributesSecondaryCidrBlocks SecondaryCidrBlocks { get; set; }

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeChildInstanceRegionsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>A list of regions.</para>
-        /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public DescribeChildInstanceRegionsResponseBodyRegions Regions { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribeChildInstanceRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeChildInstanceRegionsResponseBodyRegionsRegion : TeaModel {
-                /// <summary>
-                /// <para>The name of the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>China (Hangzhou)</para>
-                /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }

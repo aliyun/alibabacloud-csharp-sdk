@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeFlowlogsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information about the flow log.</para>
-        /// </summary>
         [NameInMap("FlowLogs")]
         [Validation(Required=false)]
         public DescribeFlowlogsResponseBodyFlowLogs FlowLogs { get; set; }
@@ -20,136 +17,54 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribeFlowlogsResponseBodyFlowLogsFlowLog> FlowLog { get; set; }
             public class DescribeFlowlogsResponseBodyFlowLogsFlowLog : TeaModel {
-                /// <summary>
-                /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cen-7qthudw0ll6jmc****</para>
-                /// </summary>
                 [NameInMap("CenId")]
                 [Validation(Required=false)]
                 public string CenId { get; set; }
 
-                /// <summary>
-                /// <para>The time when the flow log was created.</para>
-                /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2021-07-24T13:00:52Z</para>
-                /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
-                /// <summary>
-                /// <para>The description of the flow log.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>myFlowlog</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the flow log.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>flowlog-m5evbtbpt****</para>
-                /// </summary>
                 [NameInMap("FlowLogId")]
                 [Validation(Required=false)]
                 public string FlowLogId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the flow log.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>myFlowlog</para>
-                /// </summary>
                 [NameInMap("FlowLogName")]
                 [Validation(Required=false)]
                 public string FlowLogName { get; set; }
 
-                /// <summary>
-                /// <para>The flow log version.</para>
-                /// <para>Flow logs are automatically created in the latest version, which is <b>3</b>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3</para>
-                /// </summary>
                 [NameInMap("FlowLogVersion")]
                 [Validation(Required=false)]
                 public string FlowLogVersion { get; set; }
 
-                /// <summary>
-                /// <para>The time window for collecting log data. Unit: seconds. Valid values: <b>60</b> or <b>600</b> Default value: <b>600</b>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>60</para>
-                /// </summary>
                 [NameInMap("Interval")]
                 [Validation(Required=false)]
                 public long? Interval { get; set; }
 
-                /// <summary>
-                /// <para>The string that defines the format of the flow log. Format:</para>
-                /// <para><c>${Field 1}${Field 2}${Field 3}</c></para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>${srcaddr}${dstaddr}${bytes}</para>
-                /// </summary>
                 [NameInMap("LogFormatString")]
                 [Validation(Required=false)]
                 public string LogFormatString { get; set; }
 
-                /// <summary>
-                /// <para>The Logstore that stores the captured traffic data.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>FlowLogStore</para>
-                /// </summary>
                 [NameInMap("LogStoreName")]
                 [Validation(Required=false)]
                 public string LogStoreName { get; set; }
 
-                /// <summary>
-                /// <para>The name of the project that stores the captured traffic data.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>FlowLogProject</para>
-                /// </summary>
                 [NameInMap("ProjectName")]
                 [Validation(Required=false)]
                 public string ProjectName { get; set; }
 
-                /// <summary>
-                /// <para>The region ID of the flow log.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
-                /// <summary>
-                /// <para>The status of the flow log. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Active</b>: The flow log is enabled.</description></item>
-                /// <item><description><b>Inactive</b>: The flow log is disabled.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Active</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
-                /// <summary>
-                /// <para>The tags.</para>
-                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeFlowlogsResponseBodyFlowLogsFlowLogTags Tags { get; set; }
@@ -158,22 +73,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     [Validation(Required=false)]
                     public List<DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag> Tag { get; set; }
                     public class DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag : TeaModel {
-                        /// <summary>
-                        /// <para>The tag key.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>TagKey</para>
-                        /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
-                        /// <summary>
-                        /// <para>The tag value.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>TagValue</para>
-                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -182,22 +85,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
                 }
 
-                /// <summary>
-                /// <para>The ID of the network instance connection</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>tr-attach-5x4o4ynzuqbv6g****</para>
-                /// </summary>
                 [NameInMap("TransitRouterAttachmentId")]
                 [Validation(Required=false)]
                 public string TransitRouterAttachmentId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the transit router.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>tr-bp1g9313sx675zr1lajmj</para>
-                /// </summary>
                 [NameInMap("TransitRouterId")]
                 [Validation(Required=false)]
                 public string TransitRouterId { get; set; }

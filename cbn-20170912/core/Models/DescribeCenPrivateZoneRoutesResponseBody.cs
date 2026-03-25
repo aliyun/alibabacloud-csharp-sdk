@@ -49,9 +49,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string PrivateZoneDnsServers { get; set; }
 
-        /// <summary>
-        /// <para>The detailed configuration of PrivateZone.</para>
-        /// </summary>
         [NameInMap("PrivateZoneInfos")]
         [Validation(Required=false)]
         public DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfos PrivateZoneInfos { get; set; }
@@ -60,47 +57,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfosPrivateZoneInfo> PrivateZoneInfo { get; set; }
             public class DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfosPrivateZoneInfo : TeaModel {
-                /// <summary>
-                /// <para>The ID of the region where PrivateZone is accessed.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("AccessRegionId")]
                 [Validation(Required=false)]
                 public string AccessRegionId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the region where PrivateZone is deployed.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("HostRegionId")]
                 [Validation(Required=false)]
                 public string HostRegionId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the VPC that is associated with PrivateZone.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vpc-bp18sth14qii3pnvo****</para>
-                /// </summary>
                 [NameInMap("HostVpcId")]
                 [Validation(Required=false)]
                 public string HostVpcId { get; set; }
 
-                /// <summary>
-                /// <para>The status of PrivateZone. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Creating</b>: being created</description></item>
-                /// <item><description><b>Active</b>: available</description></item>
-                /// <item><description><b>Deleting</b>: being deleted</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Active</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }

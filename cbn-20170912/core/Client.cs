@@ -6747,7 +6747,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Connects the virtual border routers (VBRs) among which you want to establish network communication to the transit router in the region. Then, the transit router can exchange data between the VBR and CEN instance over private connections.</para>
+        /// <para>Connects a virtual border router (VBR) to an Enterprise Edition transit router.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6865,7 +6865,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Connects the virtual border routers (VBRs) among which you want to establish network communication to the transit router in the region. Then, the transit router can exchange data between the VBR and CEN instance over private connections.</para>
+        /// <para>Connects a virtual border router (VBR) to an Enterprise Edition transit router.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6983,7 +6983,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Connects the virtual border routers (VBRs) among which you want to establish network communication to the transit router in the region. Then, the transit router can exchange data between the VBR and CEN instance over private connections.</para>
+        /// <para>Connects a virtual border router (VBR) to an Enterprise Edition transit router.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7021,7 +7021,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Connects the virtual border routers (VBRs) among which you want to establish network communication to the transit router in the region. Then, the transit router can exchange data between the VBR and CEN instance over private connections.</para>
+        /// <para>Connects a virtual border router (VBR) to an Enterprise Edition transit router.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8177,6 +8177,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await DeleteCenWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a bandwidth plan.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteCenBandwidthPackageRequest
         /// </param>
@@ -8230,6 +8235,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteCenBandwidthPackageResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a bandwidth plan.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteCenBandwidthPackageRequest
         /// </param>
@@ -8283,6 +8293,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<DeleteCenBandwidthPackageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a bandwidth plan.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteCenBandwidthPackageRequest
         /// </param>
@@ -8296,6 +8311,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return DeleteCenBandwidthPackageWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a bandwidth plan.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteCenBandwidthPackageRequest
         /// </param>
@@ -16747,7 +16767,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries overlapping routes.</para>
+        /// <para>Queries conflicting routes on a network instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16829,7 +16849,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries overlapping routes.</para>
+        /// <para>Queries conflicting routes on a network instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16911,7 +16931,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries overlapping routes.</para>
+        /// <para>Queries conflicting routes on a network instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16929,7 +16949,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries overlapping routes.</para>
+        /// <para>Queries conflicting routes on a network instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16947,7 +16967,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of cloud services, such as the cloud service status and the ID of the associated VPC.</para>
+        /// <para>Queries the cloud services that are configured on a Cloud Enterprise Network (CEN) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17029,7 +17049,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of cloud services, such as the cloud service status and the ID of the associated VPC.</para>
+        /// <para>Queries the cloud services that are configured on a Cloud Enterprise Network (CEN) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17111,7 +17131,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of cloud services, such as the cloud service status and the ID of the associated VPC.</para>
+        /// <para>Queries the cloud services that are configured on a Cloud Enterprise Network (CEN) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17129,7 +17149,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of cloud services, such as the cloud service status and the ID of the associated VPC.</para>
+        /// <para>Queries the cloud services that are configured on a Cloud Enterprise Network (CEN) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22109,6 +22129,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await ListTransitRouterMulticastDomainAssociationsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about vSwitches that are associated with a multicast domain after the virtual private cloud (VPC) of the vSwitches is connected to an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTransitRouterMulticastDomainVSwitchesRequest
         /// </param>
@@ -22178,6 +22203,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterMulticastDomainVSwitchesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about vSwitches that are associated with a multicast domain after the virtual private cloud (VPC) of the vSwitches is connected to an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTransitRouterMulticastDomainVSwitchesRequest
         /// </param>
@@ -22247,6 +22277,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<ListTransitRouterMulticastDomainVSwitchesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about vSwitches that are associated with a multicast domain after the virtual private cloud (VPC) of the vSwitches is connected to an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTransitRouterMulticastDomainVSwitchesRequest
         /// </param>
@@ -22260,6 +22295,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return ListTransitRouterMulticastDomainVSwitchesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about vSwitches that are associated with a multicast domain after the virtual private cloud (VPC) of the vSwitches is connected to an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTransitRouterMulticastDomainVSwitchesRequest
         /// </param>
@@ -30691,7 +30731,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>进行云企业网预付费带宽包临时升配</para>
+        /// <para>Temporarily upgrades a subscription bandwidth plan of Cloud Enterprise Network (CEN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30757,7 +30797,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>进行云企业网预付费带宽包临时升配</para>
+        /// <para>Temporarily upgrades a subscription bandwidth plan of Cloud Enterprise Network (CEN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30823,7 +30863,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>进行云企业网预付费带宽包临时升配</para>
+        /// <para>Temporarily upgrades a subscription bandwidth plan of Cloud Enterprise Network (CEN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30841,7 +30881,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>进行云企业网预付费带宽包临时升配</para>
+        /// <para>Temporarily upgrades a subscription bandwidth plan of Cloud Enterprise Network (CEN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31039,7 +31079,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除PrivateZone</para>
+        /// <para>Disables access to PrivateZone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31101,7 +31141,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除PrivateZone</para>
+        /// <para>Disables access to PrivateZone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31163,7 +31203,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除PrivateZone</para>
+        /// <para>Disables access to PrivateZone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31181,7 +31221,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除PrivateZone</para>
+        /// <para>Disables access to PrivateZone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31199,7 +31239,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Remove tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31273,7 +31313,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Remove tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31347,7 +31387,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Remove tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31365,7 +31405,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Remove tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32234,6 +32274,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -32313,6 +32357,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -33085,6 +33133,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -33171,6 +33223,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -33319,6 +33375,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -33415,6 +33475,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -33784,6 +33848,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -33861,6 +33929,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {

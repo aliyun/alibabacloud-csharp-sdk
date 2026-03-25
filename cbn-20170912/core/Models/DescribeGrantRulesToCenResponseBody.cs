@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeGrantRulesToCenResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The permissions that are granted to the CEN instance.</para>
-        /// </summary>
         [NameInMap("GrantRules")]
         [Validation(Required=false)]
         public DescribeGrantRulesToCenResponseBodyGrantRules GrantRules { get; set; }
@@ -20,90 +17,43 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule> GrantRule { get; set; }
             public class DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule : TeaModel {
-                /// <summary>
-                /// <para>The ID of the CEN instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cen-nye53d7p3hzyu4****</para>
-                /// </summary>
                 [NameInMap("CenId")]
                 [Validation(Required=false)]
                 public string CenId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the Alibaba Cloud account to which the CEN instance belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1210123456123456</para>
-                /// </summary>
                 [NameInMap("CenOwnerId")]
                 [Validation(Required=false)]
                 public long? CenOwnerId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the network instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vpc-bp1rgeww9mdstuuar****</para>
-                /// </summary>
                 [NameInMap("ChildInstanceId")]
                 [Validation(Required=false)]
                 public string ChildInstanceId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the Alibaba Cloud account to which the network instance belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1250123456123456</para>
-                /// </summary>
                 [NameInMap("ChildInstanceOwnerId")]
                 [Validation(Required=false)]
                 public long? ChildInstanceOwnerId { get; set; }
 
-                /// <summary>
-                /// <para>The region ID of the network instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("ChildInstanceRegionId")]
                 [Validation(Required=false)]
                 public string ChildInstanceRegionId { get; set; }
 
-                /// <summary>
-                /// <para>The type of the network instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>VPC</b>: VPC</description></item>
-                /// <item><description><b>VBR</b>: VBR</description></item>
-                /// <item><description><b>CCN</b>: CCN instance</description></item>
-                /// <item><description><b>VPN</b>: IPsec-VPN connection</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>VPC</para>
-                /// </summary>
                 [NameInMap("ChildInstanceType")]
                 [Validation(Required=false)]
                 public string ChildInstanceType { get; set; }
 
-                /// <summary>
-                /// <para>The time when the permissions were granted to the CEN instance.</para>
-                /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2024-01-24T16:27Z</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The entity that pays the fees of the network instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>PayByCenOwner</b>: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the CEN instance belongs.</description></item>
-                /// <item><description><b>PayByResourceOwner</b>: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the network instance belongs.</description></item>
-                /// </list>
-                /// 
+                /// <b>Example:</b>
+                /// <para>PayByCenOwner</para>
+                /// </summary>
+                [NameInMap("EffectiveOrderType")]
+                [Validation(Required=false)]
+                public string EffectiveOrderType { get; set; }
+
+                /// <summary>
                 /// <b>Example:</b>
                 /// <para>PayByCenOwner</para>
                 /// </summary>
