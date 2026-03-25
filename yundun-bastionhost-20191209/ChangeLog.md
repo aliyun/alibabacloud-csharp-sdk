@@ -3,6 +3,11 @@
 - Support API ListImportableKMSSecretsForHost.
 
 
+2026-03-25 Version: 1.5.0
+- Support API ImportKMSSecretsForHost.
+- Support API ListImportableKMSSecretsForHost.
+
+
 2026-02-03 Version: 1.4.3
 - Generated csharp 2019-12-09 for Yundun-bastionhost.
 
