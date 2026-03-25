@@ -3093,7 +3093,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建密钥</para>
+        /// <para>Generates a key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3159,7 +3159,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建密钥</para>
+        /// <para>Generates a key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3225,7 +3225,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建密钥</para>
+        /// <para>Generates a key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3244,7 +3244,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建密钥</para>
+        /// <para>Generates a key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5127,7 +5127,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除密钥</para>
+        /// <para>Deletes a key value.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5163,7 +5163,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除密钥</para>
+        /// <para>Deletes a key value.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5199,7 +5199,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除密钥</para>
+        /// <para>Deletes a key value.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5214,7 +5214,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除密钥</para>
+        /// <para>Deletes a key value.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7553,8 +7553,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥</para>
+        /// <para>Obtains the key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create multiple services at a time.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -7589,8 +7594,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥</para>
+        /// <para>Obtains the key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create multiple services at a time.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -7625,8 +7635,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥</para>
+        /// <para>Obtains the key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create multiple services at a time.</para>
+        /// </description>
         /// 
         /// <returns>
         /// GetSecretResponse
@@ -7640,8 +7655,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥</para>
+        /// <para>Obtains the key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create multiple services at a time.</para>
+        /// </description>
         /// 
         /// <returns>
         /// GetSecretResponse
@@ -7655,7 +7675,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥值</para>
+        /// <para>Gets the key value.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7691,7 +7711,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥值</para>
+        /// <para>Gets the key value.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7727,7 +7747,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥值</para>
+        /// <para>Gets the key value.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7742,7 +7762,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥值</para>
+        /// <para>Gets the key value.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8455,7 +8475,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者授权规则列表</para>
+        /// <para>Obtains a list of consumer authentication rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8509,7 +8529,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者授权规则列表</para>
+        /// <para>Obtains a list of consumer authentication rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8563,7 +8583,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者授权规则列表</para>
+        /// <para>Obtains a list of consumer authentication rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8582,7 +8602,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者授权规则列表</para>
+        /// <para>Obtains a list of consumer authentication rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10545,8 +10565,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListPluginClasses</para>
+        /// <para>Obtains a plugin.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create multiple services at a time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPluginClassesRequest
@@ -10631,8 +10656,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListPluginClasses</para>
+        /// <para>Obtains a plugin.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create multiple services at a time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPluginClassesRequest
@@ -10717,8 +10747,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListPluginClasses</para>
+        /// <para>Obtains a plugin.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create multiple services at a time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPluginClassesRequest
@@ -10736,8 +10771,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListPluginClasses</para>
+        /// <para>Obtains a plugin.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create multiple services at a time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPluginClassesRequest
@@ -11305,8 +11345,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥的引用详情</para>
+        /// <para>Lists key references.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create multiple services at a time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSecretReferencesRequest
@@ -11355,8 +11400,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥的引用详情</para>
+        /// <para>Lists key references.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create multiple services at a time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSecretReferencesRequest
@@ -11405,8 +11455,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥的引用详情</para>
+        /// <para>Lists key references.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create multiple services at a time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSecretReferencesRequest
@@ -11424,8 +11479,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥的引用详情</para>
+        /// <para>Lists key references.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create multiple services at a time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSecretReferencesRequest
@@ -15175,8 +15235,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新消费者</para>
+        /// <para>Updates the key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can only update the listening Ingress configuration for sources of the <b>ACK</b> type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateSecretRequest
@@ -15221,8 +15286,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新消费者</para>
+        /// <para>Updates the key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can only update the listening Ingress configuration for sources of the <b>ACK</b> type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateSecretRequest
@@ -15267,8 +15337,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新消费者</para>
+        /// <para>Updates the key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can only update the listening Ingress configuration for sources of the <b>ACK</b> type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateSecretRequest
@@ -15286,8 +15361,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新消费者</para>
+        /// <para>Updates the key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can only update the listening Ingress configuration for sources of the <b>ACK</b> type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateSecretRequest

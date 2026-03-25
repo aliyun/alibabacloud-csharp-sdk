@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ValidationOptions : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("skipVerifyAIChatCompletion")]
         [Validation(Required=false)]
         public bool? SkipVerifyAIChatCompletion { get; set; }

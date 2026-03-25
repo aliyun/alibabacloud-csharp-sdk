@@ -115,6 +115,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
                 }
 
+                [NameInMap("mcpToolsDefinition")]
+                [Validation(Required=false)]
+                public string McpToolsDefinition { get; set; }
+
                 /// <summary>
                 /// <para>The data structs that pass the dry run.</para>
                 /// </summary>
