@@ -6113,6 +6113,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             {
                 request.DataIngestionTemplateIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataIngestionTemplateIds, "DataIngestionTemplateIds", "simple");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NormalizationSchemaIds))
+            {
+                request.NormalizationSchemaIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NormalizationSchemaIds, "NormalizationSchemaIds", "simple");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataIngestionIdsShrink))
             {
@@ -6129,6 +6133,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NormalizationSchemaIdsShrink))
+            {
+                body["NormalizationSchemaIds"] = request.NormalizationSchemaIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
             {
@@ -6189,6 +6197,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             {
                 request.DataIngestionTemplateIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataIngestionTemplateIds, "DataIngestionTemplateIds", "simple");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NormalizationSchemaIds))
+            {
+                request.NormalizationSchemaIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NormalizationSchemaIds, "NormalizationSchemaIds", "simple");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataIngestionIdsShrink))
             {
@@ -6205,6 +6217,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NormalizationSchemaIdsShrink))
+            {
+                body["NormalizationSchemaIds"] = request.NormalizationSchemaIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
             {

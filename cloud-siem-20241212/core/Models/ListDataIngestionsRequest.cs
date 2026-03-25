@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("NormalizationSchemaIds")]
+        [Validation(Required=false)]
+        public List<string> NormalizationSchemaIds { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>alibaba_cloud_sas。</para>
