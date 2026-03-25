@@ -214,6 +214,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string Ip { get; set; }
 
+            [NameInMap("SecurityGroupId")]
+            [Validation(Required=false)]
+            public string SecurityGroupId { get; set; }
+
             /// <summary>
             /// <para>The subnet ID.</para>
             /// 
@@ -223,6 +227,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [NameInMap("SubnetId")]
             [Validation(Required=false)]
             public string SubnetId { get; set; }
+
+            [NameInMap("VSwitchId")]
+            [Validation(Required=false)]
+            public string VSwitchId { get; set; }
 
             /// <summary>
             /// <para>The ID of the cluster network.</para>

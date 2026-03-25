@@ -282,6 +282,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 [Validation(Required=false)]
                 public string LoginPassword { get; set; }
 
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
+                public string SecurityGroupId { get; set; }
+
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
@@ -434,6 +438,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
+
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
+                public string SecurityGroupId { get; set; }
 
                 /// <summary>
                 /// <para>VSwitch ID</para>

@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves an O\&amp;M operation.</para>
+        /// <para>Approves an O\\\&amp;M operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves an O\&amp;M operation.</para>
+        /// <para>Approves an O\\\&amp;M operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves an O\&amp;M operation.</para>
+        /// <para>Approves an O\\\&amp;M operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves an O\&amp;M operation.</para>
+        /// <para>Approves an O\\\&amp;M operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2203,7 +2203,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点分组</para>
+        /// <para>Delete Node Group</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2249,7 +2249,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点分组</para>
+        /// <para>Delete Node Group</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2295,7 +2295,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点分组</para>
+        /// <para>Delete Node Group</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2313,7 +2313,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点分组</para>
+        /// <para>Delete Node Group</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2843,7 +2843,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution list and status of O\&amp;M Assistant commands.</para>
+        /// <para>Queries the execution list and status of O\\\&amp;M Assistant commands.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2897,7 +2897,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution list and status of O\&amp;M Assistant commands.</para>
+        /// <para>Queries the execution list and status of O\\\&amp;M Assistant commands.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2951,7 +2951,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution list and status of O\&amp;M Assistant commands.</para>
+        /// <para>Queries the execution list and status of O\\\&amp;M Assistant commands.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2969,7 +2969,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution list and status of O\&amp;M Assistant commands.</para>
+        /// <para>Queries the execution list and status of O\\\&amp;M Assistant commands.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3347,7 +3347,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Web Terminal会话</para>
+        /// <para>查询节点规格详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3389,7 +3389,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Web Terminal会话</para>
+        /// <para>查询节点规格详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3431,7 +3431,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Web Terminal会话</para>
+        /// <para>查询节点规格详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3449,7 +3449,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Web Terminal会话</para>
+        /// <para>查询节点规格详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3587,7 +3587,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files that are sent by an O\&amp;M assistant and the status of the files.</para>
+        /// <para>Queries the files that are sent by an O\\\&amp;M assistant and the status of the files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3633,7 +3633,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files that are sent by an O\&amp;M assistant and the status of the files.</para>
+        /// <para>Queries the files that are sent by an O\\\&amp;M assistant and the status of the files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3679,7 +3679,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files that are sent by an O\&amp;M assistant and the status of the files.</para>
+        /// <para>Queries the files that are sent by an O\\\&amp;M assistant and the status of the files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3697,7 +3697,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files that are sent by an O\&amp;M assistant and the status of the files.</para>
+        /// <para>Queries the files that are sent by an O\\\&amp;M assistant and the status of the files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7845,7 +7845,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops the O\&amp;M assistant command execution.</para>
+        /// <para>Stops the O\\\&amp;M assistant command execution.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7897,7 +7897,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops the O\&amp;M assistant command execution.</para>
+        /// <para>Stops the O\\\&amp;M assistant command execution.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7949,7 +7949,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops the O\&amp;M assistant command execution.</para>
+        /// <para>Stops the O\\\&amp;M assistant command execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7967,7 +7967,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops the O\&amp;M assistant command execution.</para>
+        /// <para>Stops the O\\\&amp;M assistant command execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
