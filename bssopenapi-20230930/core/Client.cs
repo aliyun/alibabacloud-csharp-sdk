@@ -1524,7 +1524,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建账单订阅</para>
+        /// <para>Create a bill report subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1616,7 +1616,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建账单订阅</para>
+        /// <para>Create a bill report subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1708,7 +1708,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建账单订阅</para>
+        /// <para>Create a bill report subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1726,7 +1726,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建账单订阅</para>
+        /// <para>Create a bill report subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2346,7 +2346,63 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
             {
                 request.EcIdAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EcIdAccountIds, "EcIdAccountIds", "json");
             }
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponId))
+            {
+                query["CouponId"] = request.CouponId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
+            {
+                query["CouponNo"] = request.CouponNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponType))
+            {
+                query["CouponType"] = request.CouponType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIdsShrink))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveEndTime))
+            {
+                query["EffectiveEndTime"] = request.EffectiveEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveStartTime))
+            {
+                query["EffectiveStartTime"] = request.EffectiveStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireEndDate))
+            {
+                query["ExpireEndDate"] = request.ExpireEndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireStartDate))
+            {
+                query["ExpireStartDate"] = request.ExpireStartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2357,7 +2413,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -2390,7 +2446,63 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
             {
                 request.EcIdAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EcIdAccountIds, "EcIdAccountIds", "json");
             }
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponId))
+            {
+                query["CouponId"] = request.CouponId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
+            {
+                query["CouponNo"] = request.CouponNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponType))
+            {
+                query["CouponType"] = request.CouponType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIdsShrink))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveEndTime))
+            {
+                query["EffectiveEndTime"] = request.EffectiveEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveStartTime))
+            {
+                query["EffectiveStartTime"] = request.EffectiveStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireEndDate))
+            {
+                query["ExpireEndDate"] = request.ExpireEndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireStartDate))
+            {
+                query["ExpireStartDate"] = request.ExpireStartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2401,7 +2513,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -2470,7 +2582,31 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
             {
                 request.EcIdAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EcIdAccountIds, "EcIdAccountIds", "json");
             }
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponId))
+            {
+                query["CouponId"] = request.CouponId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIdsShrink))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2481,7 +2617,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -2514,7 +2650,31 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
             {
                 request.EcIdAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EcIdAccountIds, "EcIdAccountIds", "json");
             }
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponId))
+            {
+                query["CouponId"] = request.CouponId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIdsShrink))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2525,7 +2685,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",

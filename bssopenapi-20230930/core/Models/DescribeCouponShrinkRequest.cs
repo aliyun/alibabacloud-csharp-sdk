@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         [Validation(Required=false)]
         public long? ExpireStartDate { get; set; }
 
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2684201000001</para>
@@ -86,6 +90,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         [NameInMap("Nbid")]
         [Validation(Required=false)]
         public string Nbid { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
