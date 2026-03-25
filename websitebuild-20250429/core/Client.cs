@@ -2227,6 +2227,158 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>编辑插件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditPluginConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditPluginConfigResponse
+        /// </returns>
+        public EditPluginConfigResponse EditPluginConfigWithOptions(EditPluginConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginConfig))
+            {
+                query["PluginConfig"] = request.PluginConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginDesc))
+            {
+                query["PluginDesc"] = request.PluginDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginId))
+            {
+                query["PluginId"] = request.PluginId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginName))
+            {
+                query["PluginName"] = request.PluginName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EditPluginConfig",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EditPluginConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑插件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditPluginConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditPluginConfigResponse
+        /// </returns>
+        public async Task<EditPluginConfigResponse> EditPluginConfigWithOptionsAsync(EditPluginConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginConfig))
+            {
+                query["PluginConfig"] = request.PluginConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginDesc))
+            {
+                query["PluginDesc"] = request.PluginDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginId))
+            {
+                query["PluginId"] = request.PluginId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginName))
+            {
+                query["PluginName"] = request.PluginName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EditPluginConfig",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EditPluginConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑插件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditPluginConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditPluginConfigResponse
+        /// </returns>
+        public EditPluginConfigResponse EditPluginConfig(EditPluginConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EditPluginConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑插件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditPluginConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditPluginConfigResponse
+        /// </returns>
+        public async Task<EditPluginConfigResponse> EditPluginConfigAsync(EditPluginConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EditPluginConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>导出素材文件</para>
         /// </summary>
         /// 
