@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>01KMB33KCB3YRYE9C2AJCW5DQK</para>
+        /// </summary>
+        [NameInMap("sandboxId")]
+        [Validation(Required=false)]
+        public string SandboxId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>CREATING</para>
         /// </summary>
         [NameInMap("status")]

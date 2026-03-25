@@ -7138,6 +7138,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910
             {
                 query["nextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxId))
+            {
+                query["sandboxId"] = request.SandboxId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["status"] = request.Status;
@@ -7204,6 +7208,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxId))
+            {
+                query["sandboxId"] = request.SandboxId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
