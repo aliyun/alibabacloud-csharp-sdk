@@ -10702,6 +10702,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["GroupType"] = request.GroupType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupUuid))
+            {
+                query["GroupUuid"] = request.GroupUuid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -10770,6 +10774,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
             {
                 query["GroupType"] = request.GroupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupUuid))
+            {
+                query["GroupUuid"] = request.GroupUuid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {

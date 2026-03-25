@@ -52,6 +52,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string GroupType { get; set; }
 
+        [NameInMap("GroupUuid")]
+        [Validation(Required=false)]
+        public string GroupUuid { get; set; }
+
         /// <summary>
         /// <para>The language of the content within the request. Valid values:</para>
         /// <list type="bullet">
