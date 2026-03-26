@@ -141,6 +141,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string OutputUrl { get; set; }
 
+            [NameInMap("StoryboardInfoList")]
+            [Validation(Required=false)]
+            public string StoryboardInfoList { get; set; }
+
+            [NameInMap("SuccessStoryboardIds")]
+            [Validation(Required=false)]
+            public string SuccessStoryboardIds { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>[\&quot;st_2118280473\&quot;]</para>

@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string AspectRatio { get; set; }
 
+        [NameInMap("ExecMode")]
+        [Validation(Required=false)]
+        public string ExecMode { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para><a href="http://test.oss-cn-shanghai.aliyuncs.com/test.mp4">http://test.oss-cn-shanghai.aliyuncs.com/test.mp4</a></para>
@@ -66,6 +70,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("ShotSplitMode")]
         [Validation(Required=false)]
         public string ShotSplitMode { get; set; }
+
+        [NameInMap("SkipFailureShot")]
+        [Validation(Required=false)]
+        public bool? SkipFailureShot { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
