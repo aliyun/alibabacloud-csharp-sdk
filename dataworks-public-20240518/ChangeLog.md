@@ -5,6 +5,13 @@
 - Update API UpdateDIJob: add request parameters Owner.
 
 
+2026-03-26 Version: 5.0.4
+- Update API CreateDIJob: add request parameters Owner.
+- Update API GetDIJob: add response parameters Body.PagingInfo.Owner.
+- Update API ListDIJobs: add response parameters Body.PagingInfo.DIJobs.$.Owner.
+- Update API UpdateDIJob: add request parameters Owner.
+
+
 2026-01-15 Version: 5.0.3
 - Generated csharp 2024-05-18 for dataworks-public.
 
