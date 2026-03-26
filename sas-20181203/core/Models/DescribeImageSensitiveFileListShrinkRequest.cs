@@ -222,6 +222,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string ScanRangeShrink { get; set; }
 
+        /// <summary>
+        /// <para>敏感文件Key列表</para>
+        /// </summary>
         [NameInMap("SensitiveKeyList")]
         [Validation(Required=false)]
         public List<string> SensitiveKeyList { get; set; }

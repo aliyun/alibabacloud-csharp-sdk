@@ -22,6 +22,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string BizType { get; set; }
 
+        [NameInMap("FocusLevel")]
+        [Validation(Required=false)]
+        public string FocusLevel { get; set; }
+
         /// <summary>
         /// <para>The identifier of the notification item. Valid values:</para>
         /// <list type="bullet">

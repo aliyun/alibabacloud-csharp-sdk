@@ -55,7 +55,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The identifier of the file. Only MD5 hash values are supported.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a212417e65c26ff133cfff28f6c****</para>

@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
+
             /// <summary>
             /// <para>The timestamp when the last scan was performed. Unit: milliseconds.</para>
             /// 
