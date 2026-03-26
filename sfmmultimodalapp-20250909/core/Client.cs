@@ -262,9 +262,17 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909
             {
                 query["AppId"] = request.AppId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoUpdate))
+            {
+                query["AutoUpdate"] = request.AutoUpdate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
             {
                 query["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpirationTime))
+            {
+                query["ExpirationTime"] = request.ExpirationTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessagesJson))
             {
@@ -277,6 +285,10 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                query["Prompt"] = request.Prompt;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDefinedId))
             {
@@ -334,9 +346,17 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909
             {
                 query["AppId"] = request.AppId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoUpdate))
+            {
+                query["AutoUpdate"] = request.AutoUpdate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
             {
                 query["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpirationTime))
+            {
+                query["ExpirationTime"] = request.ExpirationTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessagesJson))
             {
@@ -349,6 +369,10 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                query["Prompt"] = request.Prompt;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDefinedId))
             {

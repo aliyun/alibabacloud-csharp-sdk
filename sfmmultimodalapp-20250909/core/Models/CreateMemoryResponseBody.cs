@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
                 [Validation(Required=false)]
                 public string MemoryNodeId { get; set; }
 
+                [NameInMap("OldContent")]
+                [Validation(Required=false)]
+                public string OldContent { get; set; }
+
             }
 
         }
