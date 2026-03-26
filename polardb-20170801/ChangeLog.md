@@ -6,6 +6,10 @@
 - Support API UpgradePolarClawSkills.
 
 
+2026-03-26 Version: 6.10.0
+- Support API UpgradePolarClawSkills.
+
+
 2026-03-24 Version: 6.9.0
 - Support API DeletePolarFsObjects.
 - Update API CreateApplication: add request parameters Tag.
