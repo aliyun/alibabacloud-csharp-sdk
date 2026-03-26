@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>A list of regions.</para>
-        /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public DescribeRegionsResponseBodyRegions Regions { get; set; }
@@ -20,35 +17,14 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
-                /// <summary>
-                /// <para>The name of the region.</para>
-                /// <remarks>
-                /// <para> If AcceptLanguage is set to zh-CN, the Chinese name of the region is returned. If AcceptLanguage is set to en-US or left empty, the English name of the region is returned.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>China (Hangzhou)</para>
-                /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
-                /// <summary>
-                /// <para>The endpoint of ActionTrail in the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>actiontrail.cn-hangzhou.aliyuncs.com</para>
-                /// </summary>
                 [NameInMap("RegionEndpoint")]
                 [Validation(Required=false)]
                 public string RegionEndpoint { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }

@@ -2652,6 +2652,126 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>关闭insight</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableInsightRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableInsightResponse
+        /// </returns>
+        public DisableInsightResponse DisableInsightWithOptions(DisableInsightRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InsightType))
+            {
+                query["InsightType"] = request.InsightType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableInsight",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableInsightResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭insight</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableInsightRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableInsightResponse
+        /// </returns>
+        public async Task<DisableInsightResponse> DisableInsightWithOptionsAsync(DisableInsightRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InsightType))
+            {
+                query["InsightType"] = request.InsightType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableInsight",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableInsightResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭insight</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableInsightRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableInsightResponse
+        /// </returns>
+        public DisableInsightResponse DisableInsight(DisableInsightRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DisableInsightWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭insight</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableInsightRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableInsightResponse
+        /// </returns>
+        public async Task<DisableInsightResponse> DisableInsightAsync(DisableInsightRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DisableInsightWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Enables the Insights feature</para>
         /// </summary>
         /// 
@@ -4136,6 +4256,356 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取跟踪insights配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInsightSelectorsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInsightSelectorsResponse
+        /// </returns>
+        public GetInsightSelectorsResponse GetInsightSelectorsWithOptions(GetInsightSelectorsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrailName))
+            {
+                query["TrailName"] = request.TrailName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInsightSelectors",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInsightSelectorsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取跟踪insights配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInsightSelectorsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInsightSelectorsResponse
+        /// </returns>
+        public async Task<GetInsightSelectorsResponse> GetInsightSelectorsWithOptionsAsync(GetInsightSelectorsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrailName))
+            {
+                query["TrailName"] = request.TrailName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInsightSelectors",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInsightSelectorsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取跟踪insights配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInsightSelectorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInsightSelectorsResponse
+        /// </returns>
+        public GetInsightSelectorsResponse GetInsightSelectors(GetInsightSelectorsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetInsightSelectorsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取跟踪insights配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInsightSelectorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInsightSelectorsResponse
+        /// </returns>
+        public async Task<GetInsightSelectorsResponse> GetInsightSelectorsAsync(GetInsightSelectorsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetInsightSelectorsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取查询账号开启insight的类型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInsightTypesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInsightTypesResponse
+        /// </returns>
+        public GetInsightTypesResponse GetInsightTypesWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInsightTypes",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInsightTypesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取查询账号开启insight的类型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInsightTypesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInsightTypesResponse
+        /// </returns>
+        public async Task<GetInsightTypesResponse> GetInsightTypesWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInsightTypes",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInsightTypesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取查询账号开启insight的类型</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetInsightTypesResponse
+        /// </returns>
+        public GetInsightTypesResponse GetInsightTypes()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetInsightTypesWithOptions(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取查询账号开启insight的类型</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetInsightTypesResponse
+        /// </returns>
+        public async Task<GetInsightTypesResponse> GetInsightTypesAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetInsightTypesWithOptionsAsync(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>得到当前账号的insights事件数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInsightsEventsCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInsightsEventsCountResponse
+        /// </returns>
+        public GetInsightsEventsCountResponse GetInsightsEventsCountWithOptions(GetInsightsEventsCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Date))
+            {
+                query["Date"] = request.Date;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInsightsEventsCount",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInsightsEventsCountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>得到当前账号的insights事件数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInsightsEventsCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInsightsEventsCountResponse
+        /// </returns>
+        public async Task<GetInsightsEventsCountResponse> GetInsightsEventsCountWithOptionsAsync(GetInsightsEventsCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Date))
+            {
+                query["Date"] = request.Date;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInsightsEventsCount",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInsightsEventsCountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>得到当前账号的insights事件数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInsightsEventsCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInsightsEventsCountResponse
+        /// </returns>
+        public GetInsightsEventsCountResponse GetInsightsEventsCount(GetInsightsEventsCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetInsightsEventsCountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>得到当前账号的insights事件数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInsightsEventsCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInsightsEventsCountResponse
+        /// </returns>
+        public async Task<GetInsightsEventsCountResponse> GetInsightsEventsCountAsync(GetInsightsEventsCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetInsightsEventsCountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the status of a trail.</para>
         /// </summary>
         /// 
@@ -4880,6 +5350,158 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询Insight事件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LookupInsightEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LookupInsightEventsResponse
+        /// </returns>
+        public LookupInsightEventsResponse LookupInsightEventsWithOptions(LookupInsightEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LookupAttribute))
+            {
+                query["LookupAttribute"] = request.LookupAttribute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LookupInsightEvents",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LookupInsightEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Insight事件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LookupInsightEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LookupInsightEventsResponse
+        /// </returns>
+        public async Task<LookupInsightEventsResponse> LookupInsightEventsWithOptionsAsync(LookupInsightEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LookupAttribute))
+            {
+                query["LookupAttribute"] = request.LookupAttribute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LookupInsightEvents",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LookupInsightEventsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Insight事件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LookupInsightEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LookupInsightEventsResponse
+        /// </returns>
+        public LookupInsightEventsResponse LookupInsightEvents(LookupInsightEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return LookupInsightEventsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Insight事件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LookupInsightEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LookupInsightEventsResponse
+        /// </returns>
+        public async Task<LookupInsightEventsResponse> LookupInsightEventsAsync(LookupInsightEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await LookupInsightEventsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建事件选择器</para>
         /// </summary>
         /// 
@@ -5020,6 +5642,134 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PutDataEventSelectorWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改跟踪insights功能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PutInsightSelectorsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutInsightSelectorsResponse
+        /// </returns>
+        public PutInsightSelectorsResponse PutInsightSelectorsWithOptions(PutInsightSelectorsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InsightSelectors))
+            {
+                query["InsightSelectors"] = request.InsightSelectors;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrailName))
+            {
+                query["TrailName"] = request.TrailName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutInsightSelectors",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PutInsightSelectorsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改跟踪insights功能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PutInsightSelectorsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutInsightSelectorsResponse
+        /// </returns>
+        public async Task<PutInsightSelectorsResponse> PutInsightSelectorsWithOptionsAsync(PutInsightSelectorsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InsightSelectors))
+            {
+                query["InsightSelectors"] = request.InsightSelectors;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrailName))
+            {
+                query["TrailName"] = request.TrailName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutInsightSelectors",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PutInsightSelectorsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改跟踪insights功能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PutInsightSelectorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutInsightSelectorsResponse
+        /// </returns>
+        public PutInsightSelectorsResponse PutInsightSelectors(PutInsightSelectorsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PutInsightSelectorsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改跟踪insights功能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PutInsightSelectorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutInsightSelectorsResponse
+        /// </returns>
+        public async Task<PutInsightSelectorsResponse> PutInsightSelectorsAsync(PutInsightSelectorsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PutInsightSelectorsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
