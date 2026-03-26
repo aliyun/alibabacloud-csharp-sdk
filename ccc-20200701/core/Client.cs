@@ -714,6 +714,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await AddFeedbackWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组添加号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddNumbersToSkillGroupRequest
         /// </param>
@@ -763,6 +768,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AddNumbersToSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组添加号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddNumbersToSkillGroupRequest
         /// </param>
@@ -812,6 +822,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AddNumbersToSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组添加号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddNumbersToSkillGroupRequest
         /// </param>
@@ -825,6 +840,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return AddNumbersToSkillGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组添加号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddNumbersToSkillGroupRequest
         /// </param>
@@ -838,6 +858,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await AddNumbersToSkillGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增加个人号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddPersonalNumbersToUserRequest
         /// </param>
@@ -883,6 +908,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AddPersonalNumbersToUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增加个人号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddPersonalNumbersToUserRequest
         /// </param>
@@ -928,6 +958,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AddPersonalNumbersToUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增加个人号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddPersonalNumbersToUserRequest
         /// </param>
@@ -941,6 +976,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return AddPersonalNumbersToUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增加个人号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddPersonalNumbersToUserRequest
         /// </param>
@@ -954,6 +994,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await AddPersonalNumbersToUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组添加号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddPhoneNumberToSkillGroupsRequest
         /// </param>
@@ -999,6 +1044,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AddPhoneNumberToSkillGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组添加号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddPhoneNumberToSkillGroupsRequest
         /// </param>
@@ -1044,6 +1094,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AddPhoneNumberToSkillGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组添加号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddPhoneNumberToSkillGroupsRequest
         /// </param>
@@ -1057,6 +1112,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return AddPhoneNumberToSkillGroupsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组添加号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddPhoneNumberToSkillGroupsRequest
         /// </param>
@@ -1070,6 +1130,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await AddPhoneNumberToSkillGroupsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddPhoneNumbersRequest
         /// </param>
@@ -1123,6 +1188,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AddPhoneNumbersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddPhoneNumbersRequest
         /// </param>
@@ -1176,6 +1246,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AddPhoneNumbersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddPhoneNumbersRequest
         /// </param>
@@ -1189,6 +1264,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return AddPhoneNumbersWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddPhoneNumbersRequest
         /// </param>
@@ -1338,6 +1418,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await AddSchemaPropertyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组添加用户</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddSkillGroupsToUserRequest
         /// </param>
@@ -1383,6 +1468,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AddSkillGroupsToUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组添加用户</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddSkillGroupsToUserRequest
         /// </param>
@@ -1428,6 +1518,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AddSkillGroupsToUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组添加用户</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddSkillGroupsToUserRequest
         /// </param>
@@ -1441,6 +1536,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return AddSkillGroupsToUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组添加用户</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddSkillGroupsToUserRequest
         /// </param>
@@ -1594,6 +1694,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await AddTicketTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组添加用户</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddUsersToSkillGroupRequest
         /// </param>
@@ -1639,6 +1744,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AddUsersToSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组添加用户</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddUsersToSkillGroupRequest
         /// </param>
@@ -1684,6 +1794,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AddUsersToSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组添加用户</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddUsersToSkillGroupRequest
         /// </param>
@@ -1697,6 +1812,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return AddUsersToSkillGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组添加用户</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddUsersToSkillGroupRequest
         /// </param>
@@ -1710,6 +1830,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await AddUsersToSkillGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分析对话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AnalyzeConversationRequest
         /// </param>
@@ -1759,6 +1884,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AnalyzeConversationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分析对话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AnalyzeConversationRequest
         /// </param>
@@ -1808,6 +1938,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AnalyzeConversationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分析对话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AnalyzeConversationRequest
         /// </param>
@@ -1821,6 +1956,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return AnalyzeConversationWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分析对话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AnalyzeConversationRequest
         /// </param>
@@ -1834,6 +1974,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await AnalyzeConversationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>接电话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AnswerCallRequest
         /// </param>
@@ -1883,6 +2028,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AnswerCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>接电话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AnswerCallRequest
         /// </param>
@@ -1932,6 +2082,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AnswerCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>接电话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AnswerCallRequest
         /// </param>
@@ -1945,6 +2100,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return AnswerCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>接电话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AnswerCallRequest
         /// </param>
@@ -2114,6 +2274,11 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// OpenAPI AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AssignUsersRequest
         /// </param>
@@ -2172,6 +2337,11 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入坐席</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// AssignUsersRequest
@@ -2232,6 +2402,11 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// OpenAPI AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AssignUsersRequest
         /// </param>
@@ -2251,6 +2426,11 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// OpenAPI AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AssignUsersRequest
         /// </param>
@@ -2266,6 +2446,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await AssignUsersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>BargeInCall</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BargeInCallRequest
         /// </param>
@@ -2323,6 +2508,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<BargeInCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>BargeInCall</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BargeInCallRequest
         /// </param>
@@ -2380,6 +2570,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<BargeInCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>BargeInCall</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BargeInCallRequest
         /// </param>
@@ -2393,6 +2588,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return BargeInCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>BargeInCall</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BargeInCallRequest
         /// </param>
@@ -2406,6 +2606,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await BargeInCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>盲转</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BlindTransferRequest
         /// </param>
@@ -2507,6 +2712,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<BlindTransferResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>盲转</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BlindTransferRequest
         /// </param>
@@ -2608,6 +2818,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<BlindTransferResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>盲转</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BlindTransferRequest
         /// </param>
@@ -2621,6 +2836,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return BlindTransferWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>盲转</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BlindTransferRequest
         /// </param>
@@ -2634,6 +2854,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await BlindTransferWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>BridgeRtcCall</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BridgeRtcCallRequest
         /// </param>
@@ -2703,6 +2928,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<BridgeRtcCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>BridgeRtcCall</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BridgeRtcCallRequest
         /// </param>
@@ -2772,6 +3002,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<BridgeRtcCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>BridgeRtcCall</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BridgeRtcCallRequest
         /// </param>
@@ -2785,6 +3020,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return BridgeRtcCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>BridgeRtcCall</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BridgeRtcCallRequest
         /// </param>
@@ -2798,6 +3038,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await BridgeRtcCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关注转-取消</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelAttendedTransferRequest
         /// </param>
@@ -2847,6 +3092,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CancelAttendedTransferResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关注转-取消</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelAttendedTransferRequest
         /// </param>
@@ -2896,6 +3146,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CancelAttendedTransferResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关注转-取消</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelAttendedTransferRequest
         /// </param>
@@ -2909,6 +3164,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return CancelAttendedTransferWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关注转-取消</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelAttendedTransferRequest
         /// </param>
@@ -2922,6 +3182,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await CancelAttendedTransferWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改隐身状态(等同于仅外呼场景)</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ChangeVisibilityRequest
         /// </param>
@@ -2967,6 +3232,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ChangeVisibilityResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改隐身状态(等同于仅外呼场景)</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ChangeVisibilityRequest
         /// </param>
@@ -3012,6 +3282,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ChangeVisibilityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改隐身状态(等同于仅外呼场景)</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ChangeVisibilityRequest
         /// </param>
@@ -3025,6 +3300,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ChangeVisibilityWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改隐身状态(等同于仅外呼场景)</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ChangeVisibilityRequest
         /// </param>
@@ -3038,6 +3318,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ChangeVisibilityWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改坐席工作模式</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ChangeWorkModeRequest
         /// </param>
@@ -3095,6 +3380,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ChangeWorkModeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改坐席工作模式</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ChangeWorkModeRequest
         /// </param>
@@ -3152,6 +3442,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ChangeWorkModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改坐席工作模式</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ChangeWorkModeRequest
         /// </param>
@@ -3165,6 +3460,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ChangeWorkModeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改坐席工作模式</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ChangeWorkModeRequest
         /// </param>
@@ -3176,6 +3476,166 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ChangeWorkModeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>认领电话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClaimCallRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClaimCallResponse
+        /// </returns>
+        public ClaimCallResponse ClaimCallWithOptions(ClaimCallRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CandidateUserListJson))
+            {
+                query["CandidateUserListJson"] = request.CandidateUserListJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillGroupId))
+            {
+                query["SkillGroupId"] = request.SkillGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ClaimCall",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ClaimCallResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>认领电话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClaimCallRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClaimCallResponse
+        /// </returns>
+        public async Task<ClaimCallResponse> ClaimCallWithOptionsAsync(ClaimCallRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CandidateUserListJson))
+            {
+                query["CandidateUserListJson"] = request.CandidateUserListJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillGroupId))
+            {
+                query["SkillGroupId"] = request.SkillGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ClaimCall",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ClaimCallResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>认领电话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClaimCallRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClaimCallResponse
+        /// </returns>
+        public ClaimCallResponse ClaimCall(ClaimCallRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ClaimCallWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>认领电话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClaimCallRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClaimCallResponse
+        /// </returns>
+        public async Task<ClaimCallResponse> ClaimCallAsync(ClaimCallRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ClaimCallWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
@@ -3294,6 +3754,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ClaimChatWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>辅导</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CoachCallRequest
         /// </param>
@@ -3351,6 +3816,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CoachCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>辅导</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CoachCallRequest
         /// </param>
@@ -3408,6 +3878,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CoachCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>辅导</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CoachCallRequest
         /// </param>
@@ -3421,6 +3896,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return CoachCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>辅导</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CoachCallRequest
         /// </param>
@@ -3434,6 +3914,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await CoachCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交ivr流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CommitContactFlowRequest
         /// </param>
@@ -3487,6 +3972,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CommitContactFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交ivr流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CommitContactFlowRequest
         /// </param>
@@ -3540,6 +4030,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CommitContactFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交ivr流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CommitContactFlowRequest
         /// </param>
@@ -3553,6 +4048,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return CommitContactFlowWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交ivr流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CommitContactFlowRequest
         /// </param>
@@ -3566,6 +4066,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await CommitContactFlowWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关注转-完成</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CompleteAttendedTransferRequest
         /// </param>
@@ -3615,6 +4120,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CompleteAttendedTransferResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关注转-完成</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CompleteAttendedTransferRequest
         /// </param>
@@ -3664,6 +4174,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CompleteAttendedTransferResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关注转-完成</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CompleteAttendedTransferRequest
         /// </param>
@@ -3677,6 +4192,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return CompleteAttendedTransferWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关注转-完成</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CompleteAttendedTransferRequest
         /// </param>
@@ -3690,6 +4210,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await CompleteAttendedTransferWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建媒体文件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAudioFileRequest
         /// </param>
@@ -3743,6 +4268,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CreateAudioFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建媒体文件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAudioFileRequest
         /// </param>
@@ -3796,6 +4326,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CreateAudioFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建媒体文件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAudioFileRequest
         /// </param>
@@ -3809,6 +4344,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return CreateAudioFileWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建媒体文件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAudioFileRequest
         /// </param>
@@ -3822,6 +4362,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await CreateAudioFileWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建会话小结</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCallSummaryRequest
         /// </param>
@@ -3871,6 +4416,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CreateCallSummaryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建会话小结</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCallSummaryRequest
         /// </param>
@@ -3920,6 +4470,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CreateCallSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建会话小结</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCallSummaryRequest
         /// </param>
@@ -3933,6 +4488,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return CreateCallSummaryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建会话小结</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCallSummaryRequest
         /// </param>
@@ -4474,6 +5034,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await CreateChatMediaUrlWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建ivr流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateContactFlowRequest
         /// </param>
@@ -4527,6 +5092,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CreateContactFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建ivr流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateContactFlowRequest
         /// </param>
@@ -4580,6 +5150,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CreateContactFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建ivr流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateContactFlowRequest
         /// </param>
@@ -4593,6 +5168,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return CreateContactFlowWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建ivr流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateContactFlowRequest
         /// </param>
@@ -5054,6 +5634,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await CreateSchemaWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSkillGroupRequest
         /// </param>
@@ -5107,6 +5692,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CreateSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSkillGroupRequest
         /// </param>
@@ -5160,6 +5750,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CreateSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSkillGroupRequest
         /// </param>
@@ -5173,6 +5768,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return CreateSkillGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSkillGroupRequest
         /// </param>
@@ -5550,6 +6150,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await CreateUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除语音文件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAudioFileRequest
         /// </param>
@@ -5591,6 +6196,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteAudioFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除语音文件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAudioFileRequest
         /// </param>
@@ -5632,6 +6242,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteAudioFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除语音文件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAudioFileRequest
         /// </param>
@@ -5645,6 +6260,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return DeleteAudioFileWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除语音文件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAudioFileRequest
         /// </param>
@@ -5788,9 +6408,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>删除ivr流程</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5840,9 +6458,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>删除ivr流程</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5892,9 +6508,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>删除ivr流程</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5912,9 +6526,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>删除ivr流程</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6658,6 +7270,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await DeleteSchemaPropertyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSkillGroupRequest
         /// </param>
@@ -6703,6 +7320,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSkillGroupRequest
         /// </param>
@@ -6748,6 +7370,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSkillGroupRequest
         /// </param>
@@ -6761,6 +7388,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return DeleteSkillGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSkillGroupRequest
         /// </param>
@@ -7222,6 +7854,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await DisableTicketTemplateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>废弃当前IVR流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DiscardEditingContactFlowRequest
         /// </param>
@@ -7267,6 +7904,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DiscardEditingContactFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>废弃当前IVR流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DiscardEditingContactFlowRequest
         /// </param>
@@ -7312,6 +7954,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DiscardEditingContactFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>废弃当前IVR流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DiscardEditingContactFlowRequest
         /// </param>
@@ -7325,6 +7972,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return DiscardEditingContactFlowWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>废弃当前IVR流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DiscardEditingContactFlowRequest
         /// </param>
@@ -7570,6 +8222,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await EnableTicketTemplateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>结束会议</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EndConferenceRequest
         /// </param>
@@ -7615,6 +8272,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<EndConferenceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>结束会议</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EndConferenceRequest
         /// </param>
@@ -7660,6 +8322,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<EndConferenceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>结束会议</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EndConferenceRequest
         /// </param>
@@ -7673,6 +8340,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return EndConferenceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>结束会议</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EndConferenceRequest
         /// </param>
@@ -8208,7 +8880,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetAccessChannelOfStaging</para>
+        /// <para>获取指定Chat渠道配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8246,7 +8918,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetAccessChannelOfStaging</para>
+        /// <para>获取指定Chat渠道配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8284,7 +8956,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetAccessChannelOfStaging</para>
+        /// <para>获取指定Chat渠道配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8302,7 +8974,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetAccessChannelOfStaging</para>
+        /// <para>获取指定Chat渠道配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8446,6 +9118,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetAudioFileWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取录音文件下载链接</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAudioFileDownloadUrlRequest
         /// </param>
@@ -8487,6 +9164,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetAudioFileDownloadUrlResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取录音文件下载链接</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAudioFileDownloadUrlRequest
         /// </param>
@@ -8528,6 +9210,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetAudioFileDownloadUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取录音文件下载链接</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAudioFileDownloadUrlRequest
         /// </param>
@@ -8541,6 +9228,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetAudioFileDownloadUrlWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取录音文件下载链接</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAudioFileDownloadUrlRequest
         /// </param>
@@ -8554,6 +9246,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetAudioFileDownloadUrlWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取录音文件上传参数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAudioFileUploadParametersRequest
         /// </param>
@@ -8595,6 +9292,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetAudioFileUploadParametersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取录音文件上传参数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAudioFileUploadParametersRequest
         /// </param>
@@ -8636,6 +9338,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetAudioFileUploadParametersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取录音文件上传参数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAudioFileUploadParametersRequest
         /// </param>
@@ -8649,6 +9356,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetAudioFileUploadParametersWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取录音文件上传参数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAudioFileUploadParametersRequest
         /// </param>
@@ -8918,6 +9630,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetCampaignWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取预测试外呼号码配置文件上传链接</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetCaseFileUploadUrlRequest
         /// </param>
@@ -8959,6 +9676,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetCaseFileUploadUrlResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取预测试外呼号码配置文件上传链接</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetCaseFileUploadUrlRequest
         /// </param>
@@ -9000,6 +9722,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetCaseFileUploadUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取预测试外呼号码配置文件上传链接</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetCaseFileUploadUrlRequest
         /// </param>
@@ -9013,6 +9740,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetCaseFileUploadUrlWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取预测试外呼号码配置文件上传链接</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetCaseFileUploadUrlRequest
         /// </param>
@@ -9242,6 +9974,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetChatRoutingProfileWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取ivr流程信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetContactFlowRequest
         /// </param>
@@ -9287,6 +10024,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetContactFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取ivr流程信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetContactFlowRequest
         /// </param>
@@ -9332,6 +10074,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetContactFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取ivr流程信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetContactFlowRequest
         /// </param>
@@ -9345,6 +10092,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetContactFlowWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取ivr流程信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetContactFlowRequest
         /// </param>
@@ -9494,6 +10246,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetConversationDetailWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取DataChannel通道的Token信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetDataChannelCredentialsRequest
         /// </param>
@@ -9535,6 +10292,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetDataChannelCredentialsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取DataChannel通道的Token信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetDataChannelCredentialsRequest
         /// </param>
@@ -9576,6 +10338,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetDataChannelCredentialsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取DataChannel通道的Token信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetDataChannelCredentialsRequest
         /// </param>
@@ -9589,6 +10356,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetDataChannelCredentialsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取DataChannel通道的Token信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetDataChannelCredentialsRequest
         /// </param>
@@ -9974,6 +10746,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetEarlyMediaRecordingWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计呼入号码信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetHistoricalCallerReportRequest
         /// </param>
@@ -10023,6 +10800,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetHistoricalCallerReportResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计呼入号码信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetHistoricalCallerReportRequest
         /// </param>
@@ -10072,6 +10854,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetHistoricalCallerReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计呼入号码信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetHistoricalCallerReportRequest
         /// </param>
@@ -10085,6 +10872,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetHistoricalCallerReportWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计呼入号码信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetHistoricalCallerReportRequest
         /// </param>
@@ -10210,6 +11002,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetHistoricalCampaignReportWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计实例呼叫数据</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetHistoricalInstanceReportRequest
         /// </param>
@@ -10259,6 +11056,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetHistoricalInstanceReportResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计实例呼叫数据</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetHistoricalInstanceReportRequest
         /// </param>
@@ -10308,6 +11110,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetHistoricalInstanceReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计实例呼叫数据</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetHistoricalInstanceReportRequest
         /// </param>
@@ -10321,6 +11128,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetHistoricalInstanceReportWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计实例呼叫数据</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetHistoricalInstanceReportRequest
         /// </param>
@@ -10454,6 +11266,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计实例呼叫信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceTrendingReportRequest
         /// </param>
@@ -10503,6 +11320,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetInstanceTrendingReportResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计实例呼叫信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceTrendingReportRequest
         /// </param>
@@ -10552,6 +11374,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetInstanceTrendingReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计实例呼叫信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceTrendingReportRequest
         /// </param>
@@ -10565,6 +11392,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetInstanceTrendingReportWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计实例呼叫信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceTrendingReportRequest
         /// </param>
@@ -10706,6 +11538,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetIvrTrackingSummaryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取登录信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetLoginDetailsRequest
         /// </param>
@@ -10751,6 +11588,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetLoginDetailsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取登录信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetLoginDetailsRequest
         /// </param>
@@ -10796,6 +11638,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetLoginDetailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取登录信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetLoginDetailsRequest
         /// </param>
@@ -10809,6 +11656,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetLoginDetailsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取登录信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetLoginDetailsRequest
         /// </param>
@@ -10822,6 +11674,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetLoginDetailsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取通话对应的录音, 用于播放和下载</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetMonoRecordingRequest
         /// </param>
@@ -10867,6 +11724,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetMonoRecordingResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取通话对应的录音, 用于播放和下载</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetMonoRecordingRequest
         /// </param>
@@ -10912,6 +11774,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetMonoRecordingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取通话对应的录音, 用于播放和下载</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetMonoRecordingRequest
         /// </param>
@@ -10925,6 +11792,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetMonoRecordingWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取通话对应的录音, 用于播放和下载</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetMonoRecordingRequest
         /// </param>
@@ -10938,6 +11810,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetMonoRecordingWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取通话对应的录音, 用于分轨或者质检</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetMultiChannelRecordingRequest
         /// </param>
@@ -10979,6 +11856,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetMultiChannelRecordingResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取通话对应的录音, 用于分轨或者质检</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetMultiChannelRecordingRequest
         /// </param>
@@ -11020,6 +11902,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetMultiChannelRecordingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取通话对应的录音, 用于分轨或者质检</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetMultiChannelRecordingRequest
         /// </param>
@@ -11033,6 +11920,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetMultiChannelRecordingWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取通话对应的录音, 用于分轨或者质检</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetMultiChannelRecordingRequest
         /// </param>
@@ -11046,6 +11938,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetMultiChannelRecordingWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询号码归属地</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetNumberLocationRequest
         /// </param>
@@ -11087,6 +11984,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetNumberLocationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询号码归属地</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetNumberLocationRequest
         /// </param>
@@ -11128,6 +12030,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetNumberLocationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询号码归属地</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetNumberLocationRequest
         /// </param>
@@ -11141,6 +12048,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetNumberLocationWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询号码归属地</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetNumberLocationRequest
         /// </param>
@@ -11266,6 +12178,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetRealtimeCampaignStatsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时查询实例状态信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRealtimeInstanceStatesRequest
         /// </param>
@@ -11307,6 +12224,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetRealtimeInstanceStatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时查询实例状态信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRealtimeInstanceStatesRequest
         /// </param>
@@ -11348,6 +12270,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetRealtimeInstanceStatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时查询实例状态信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRealtimeInstanceStatesRequest
         /// </param>
@@ -11361,6 +12288,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetRealtimeInstanceStatesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时查询实例状态信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRealtimeInstanceStatesRequest
         /// </param>
@@ -12014,6 +12946,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetTicketSummaryReportWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工单模版</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTicketTemplateRequest
         /// </param>
@@ -12059,6 +12996,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetTicketTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工单模版</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTicketTemplateRequest
         /// </param>
@@ -12104,6 +13046,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetTicketTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工单模版</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTicketTemplateRequest
         /// </param>
@@ -12117,6 +13064,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetTicketTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工单模版</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTicketTemplateRequest
         /// </param>
@@ -12130,6 +13082,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetTicketTemplateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取TURN服务的临时用户名和密码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTurnCredentialsRequest
         /// </param>
@@ -12171,6 +13128,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetTurnCredentialsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取TURN服务的临时用户名和密码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTurnCredentialsRequest
         /// </param>
@@ -12212,6 +13174,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetTurnCredentialsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取TURN服务的临时用户名和密码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTurnCredentialsRequest
         /// </param>
@@ -12225,6 +13192,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetTurnCredentialsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取TURN服务的临时用户名和密码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTurnCredentialsRequest
         /// </param>
@@ -12238,6 +13210,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetTurnCredentialsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取可用的TURN服务器列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTurnServerListRequest
         /// </param>
@@ -12275,6 +13252,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetTurnServerListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取可用的TURN服务器列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTurnServerListRequest
         /// </param>
@@ -12312,6 +13294,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetTurnServerListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取可用的TURN服务器列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTurnServerListRequest
         /// </param>
@@ -12325,6 +13312,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetTurnServerListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取可用的TURN服务器列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTurnServerListRequest
         /// </param>
@@ -12450,6 +13442,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetUploadAudioDataParamsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetUserRequest
         /// </param>
@@ -12495,6 +13492,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetUserRequest
         /// </param>
@@ -12540,6 +13542,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetUserRequest
         /// </param>
@@ -12553,6 +13560,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetUserRequest
         /// </param>
@@ -12802,6 +13814,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetVisitorLoginDetailsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取语音邮箱录音, 用于播放和下载</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetVoicemailRecordingRequest
         /// </param>
@@ -12843,6 +13860,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetVoicemailRecordingResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取语音邮箱录音, 用于播放和下载</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetVoicemailRecordingRequest
         /// </param>
@@ -12884,6 +13906,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetVoicemailRecordingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取语音邮箱录音, 用于播放和下载</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetVoicemailRecordingRequest
         /// </param>
@@ -12897,6 +13924,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetVoicemailRecordingWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取语音邮箱录音, 用于播放和下载</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetVoicemailRecordingRequest
         /// </param>
@@ -12910,6 +13942,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetVoicemailRecordingWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保持通话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// HoldCallRequest
         /// </param>
@@ -12967,6 +14004,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<HoldCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保持通话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// HoldCallRequest
         /// </param>
@@ -13024,6 +14066,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<HoldCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保持通话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// HoldCallRequest
         /// </param>
@@ -13037,6 +14084,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return HoldCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保持通话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// HoldCallRequest
         /// </param>
@@ -13854,6 +14906,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ImportDocumentsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入ram用户</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ImportRamUsersRequest
         /// </param>
@@ -13907,6 +14964,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ImportRamUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入ram用户</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ImportRamUsersRequest
         /// </param>
@@ -13960,6 +15022,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ImportRamUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入ram用户</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ImportRamUsersRequest
         /// </param>
@@ -13973,6 +15040,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ImportRamUsersWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入ram用户</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ImportRamUsersRequest
         /// </param>
@@ -13986,6 +15058,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ImportRamUsersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关注转-发起</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// InitiateAttendedTransferRequest
         /// </param>
@@ -14079,6 +15156,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<InitiateAttendedTransferResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关注转-发起</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// InitiateAttendedTransferRequest
         /// </param>
@@ -14172,6 +15254,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<InitiateAttendedTransferResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关注转-发起</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// InitiateAttendedTransferRequest
         /// </param>
@@ -14185,6 +15272,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return InitiateAttendedTransferWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关注转-发起</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// InitiateAttendedTransferRequest
         /// </param>
@@ -14198,6 +15290,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await InitiateAttendedTransferWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>打断通话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// InterceptCallRequest
         /// </param>
@@ -14255,6 +15352,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<InterceptCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>打断通话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// InterceptCallRequest
         /// </param>
@@ -14312,6 +15414,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<InterceptCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>打断通话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// InterceptCallRequest
         /// </param>
@@ -14325,6 +15432,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return InterceptCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>打断通话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// InterceptCallRequest
         /// </param>
@@ -14338,6 +15450,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await InterceptCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起IVR认证流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// LaunchAuthenticationRequest
         /// </param>
@@ -14395,6 +15512,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<LaunchAuthenticationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起IVR认证流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// LaunchAuthenticationRequest
         /// </param>
@@ -14452,6 +15574,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<LaunchAuthenticationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起IVR认证流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// LaunchAuthenticationRequest
         /// </param>
@@ -14465,6 +15592,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return LaunchAuthenticationWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起IVR认证流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// LaunchAuthenticationRequest
         /// </param>
@@ -14478,6 +15610,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await LaunchAuthenticationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起话后满意度调查IVR流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// LaunchSurveyRequest
         /// </param>
@@ -14551,6 +15688,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<LaunchSurveyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起话后满意度调查IVR流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// LaunchSurveyRequest
         /// </param>
@@ -14624,6 +15766,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<LaunchSurveyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起话后满意度调查IVR流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// LaunchSurveyRequest
         /// </param>
@@ -14637,6 +15784,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return LaunchSurveyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起话后满意度调查IVR流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// LaunchSurveyRequest
         /// </param>
@@ -14650,6 +15802,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await LaunchSurveyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取坐席状态记录列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAgentStateLogsRequest
         /// </param>
@@ -14699,6 +15856,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListAgentStateLogsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取坐席状态记录列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAgentStateLogsRequest
         /// </param>
@@ -14748,6 +15910,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListAgentStateLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取坐席状态记录列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAgentStateLogsRequest
         /// </param>
@@ -14761,6 +15928,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListAgentStateLogsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取坐席状态记录列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAgentStateLogsRequest
         /// </param>
@@ -15494,6 +16666,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListBlacklistCallTaggingsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>坐席工作台坐席调用转接使用</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListBriefSkillGroupsRequest
         /// </param>
@@ -15547,6 +16724,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListBriefSkillGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>坐席工作台坐席调用转接使用</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListBriefSkillGroupsRequest
         /// </param>
@@ -15600,6 +16782,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListBriefSkillGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>坐席工作台坐席调用转接使用</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListBriefSkillGroupsRequest
         /// </param>
@@ -15613,6 +16800,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListBriefSkillGroupsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>坐席工作台坐席调用转接使用</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListBriefSkillGroupsRequest
         /// </param>
@@ -15626,6 +16818,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListBriefSkillGroupsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取通话详情</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCallDetailRecordsRequest
         /// </param>
@@ -15743,6 +16940,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListCallDetailRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取通话详情</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCallDetailRecordsRequest
         /// </param>
@@ -15860,6 +17062,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListCallDetailRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取通话详情</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCallDetailRecordsRequest
         /// </param>
@@ -15873,6 +17080,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListCallDetailRecordsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取通话详情</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCallDetailRecordsRequest
         /// </param>
@@ -17150,6 +18362,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListCommonTicketFieldsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询系统配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListConfigItemsRequest
         /// </param>
@@ -17195,6 +18412,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListConfigItemsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询系统配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListConfigItemsRequest
         /// </param>
@@ -17240,6 +18462,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListConfigItemsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询系统配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListConfigItemsRequest
         /// </param>
@@ -17253,6 +18480,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListConfigItemsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询系统配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListConfigItemsRequest
         /// </param>
@@ -17268,9 +18500,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>列表查询ivr流程</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17336,9 +18566,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>列表查询ivr流程</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17404,9 +18632,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>列表查询ivr流程</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17424,9 +18650,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>列表查询ivr流程</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17618,6 +18842,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListCustomCallTaggingWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询可用设备</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDevicesRequest
         /// </param>
@@ -17659,6 +18888,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListDevicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询可用设备</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDevicesRequest
         /// </param>
@@ -17700,6 +18934,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListDevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询可用设备</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDevicesRequest
         /// </param>
@@ -17713,6 +18952,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListDevicesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询可用设备</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDevicesRequest
         /// </param>
@@ -18730,6 +19974,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListGroupChatMessagesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询历史作息报告</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListHistoricalAgentReportRequest
         /// </param>
@@ -18797,6 +20046,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListHistoricalAgentReportResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询历史作息报告</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListHistoricalAgentReportRequest
         /// </param>
@@ -18864,6 +20118,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListHistoricalAgentReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询历史作息报告</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListHistoricalAgentReportRequest
         /// </param>
@@ -18877,6 +20136,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListHistoricalAgentReportWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询历史作息报告</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListHistoricalAgentReportRequest
         /// </param>
@@ -19242,6 +20506,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListHistoricalSkillGroupReportWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstancesRequest
         /// </param>
@@ -19283,6 +20552,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstancesRequest
         /// </param>
@@ -19324,6 +20598,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstancesRequest
         /// </param>
@@ -19337,6 +20616,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListInstancesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstancesRequest
         /// </param>
@@ -19350,6 +20634,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListInstancesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstancesOfUserRequest
         /// </param>
@@ -19391,6 +20680,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListInstancesOfUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstancesOfUserRequest
         /// </param>
@@ -19432,6 +20726,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListInstancesOfUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstancesOfUserRequest
         /// </param>
@@ -19445,6 +20744,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListInstancesOfUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstancesOfUserRequest
         /// </param>
@@ -19458,6 +20762,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListInstancesOfUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询坐席报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIntervalAgentReportRequest
         /// </param>
@@ -19515,6 +20824,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListIntervalAgentReportResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询坐席报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIntervalAgentReportRequest
         /// </param>
@@ -19572,6 +20886,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListIntervalAgentReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询坐席报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIntervalAgentReportRequest
         /// </param>
@@ -19585,6 +20904,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListIntervalAgentReportWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询坐席报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIntervalAgentReportRequest
         /// </param>
@@ -19710,6 +21034,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListIntervalAgentSkillGroupReportWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIntervalInstanceReportRequest
         /// </param>
@@ -19759,6 +21088,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListIntervalInstanceReportResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIntervalInstanceReportRequest
         /// </param>
@@ -19808,6 +21142,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListIntervalInstanceReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIntervalInstanceReportRequest
         /// </param>
@@ -19821,6 +21160,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListIntervalInstanceReportWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIntervalInstanceReportRequest
         /// </param>
@@ -19834,6 +21178,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListIntervalInstanceReportWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询技能组报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIntervalSkillGroupReportRequest
         /// </param>
@@ -19891,6 +21240,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListIntervalSkillGroupReportResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询技能组报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIntervalSkillGroupReportRequest
         /// </param>
@@ -19948,6 +21302,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListIntervalSkillGroupReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询技能组报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIntervalSkillGroupReportRequest
         /// </param>
@@ -19961,6 +21320,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListIntervalSkillGroupReportWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询技能组报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIntervalSkillGroupReportRequest
         /// </param>
@@ -19974,6 +21338,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListIntervalSkillGroupReportWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询ivr轨迹</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIvrTrackingDetailsRequest
         /// </param>
@@ -20023,6 +21392,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListIvrTrackingDetailsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询ivr轨迹</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIvrTrackingDetailsRequest
         /// </param>
@@ -20072,6 +21446,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListIvrTrackingDetailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询ivr轨迹</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIvrTrackingDetailsRequest
         /// </param>
@@ -20085,6 +21464,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListIvrTrackingDetailsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询ivr轨迹</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIvrTrackingDetailsRequest
         /// </param>
@@ -21346,6 +22730,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListOutboundNumbersOfUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取个人外呼号码列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPersonalNumbersOfUserRequest
         /// </param>
@@ -21403,6 +22792,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListPersonalNumbersOfUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取个人外呼号码列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPersonalNumbersOfUserRequest
         /// </param>
@@ -21460,6 +22854,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListPersonalNumbersOfUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取个人外呼号码列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPersonalNumbersOfUserRequest
         /// </param>
@@ -21473,6 +22872,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListPersonalNumbersOfUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取个人外呼号码列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPersonalNumbersOfUserRequest
         /// </param>
@@ -21646,6 +23050,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListPhoneNumbersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询技能组绑定的号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPhoneNumbersOfSkillGroupRequest
         /// </param>
@@ -21707,6 +23116,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListPhoneNumbersOfSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询技能组绑定的号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPhoneNumbersOfSkillGroupRequest
         /// </param>
@@ -21768,6 +23182,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListPhoneNumbersOfSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询技能组绑定的号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPhoneNumbersOfSkillGroupRequest
         /// </param>
@@ -21781,6 +23200,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListPhoneNumbersOfSkillGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询技能组绑定的号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPhoneNumbersOfSkillGroupRequest
         /// </param>
@@ -21794,6 +23218,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListPhoneNumbersOfSkillGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户权限</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPrivilegesOfUserRequest
         /// </param>
@@ -21831,6 +23260,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListPrivilegesOfUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户权限</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPrivilegesOfUserRequest
         /// </param>
@@ -21868,6 +23302,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListPrivilegesOfUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户权限</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPrivilegesOfUserRequest
         /// </param>
@@ -21881,6 +23320,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListPrivilegesOfUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户权限</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPrivilegesOfUserRequest
         /// </param>
@@ -21894,6 +23338,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListPrivilegesOfUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询ram用户</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRamUsersRequest
         /// </param>
@@ -21943,6 +23392,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListRamUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询ram用户</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRamUsersRequest
         /// </param>
@@ -21992,6 +23446,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListRamUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询ram用户</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRamUsersRequest
         /// </param>
@@ -22005,6 +23464,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListRamUsersWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询ram用户</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRamUsersRequest
         /// </param>
@@ -22018,6 +23482,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListRamUsersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询坐席状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRealtimeAgentStatesRequest
         /// </param>
@@ -22101,6 +23570,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListRealtimeAgentStatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询坐席状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRealtimeAgentStatesRequest
         /// </param>
@@ -22184,6 +23658,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListRealtimeAgentStatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询坐席状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRealtimeAgentStatesRequest
         /// </param>
@@ -22197,6 +23676,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListRealtimeAgentStatesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询坐席状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRealtimeAgentStatesRequest
         /// </param>
@@ -22210,6 +23694,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListRealtimeAgentStatesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询技能组状态报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRealtimeSkillGroupStatesRequest
         /// </param>
@@ -22265,6 +23754,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListRealtimeSkillGroupStatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询技能组状态报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRealtimeSkillGroupStatesRequest
         /// </param>
@@ -22320,6 +23814,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListRealtimeSkillGroupStatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询技能组状态报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRealtimeSkillGroupStatesRequest
         /// </param>
@@ -22333,6 +23832,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListRealtimeSkillGroupStatesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询技能组状态报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRealtimeSkillGroupStatesRequest
         /// </param>
@@ -22346,6 +23850,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListRealtimeSkillGroupStatesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询历史通话记录</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRecentCallDetailRecordsRequest
         /// </param>
@@ -22405,6 +23914,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListRecentCallDetailRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询历史通话记录</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRecentCallDetailRecordsRequest
         /// </param>
@@ -22464,6 +23978,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListRecentCallDetailRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询历史通话记录</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRecentCallDetailRecordsRequest
         /// </param>
@@ -22477,6 +23996,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListRecentCallDetailRecordsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询历史通话记录</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRecentCallDetailRecordsRequest
         /// </param>
@@ -22490,6 +24014,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListRecentCallDetailRecordsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询角色</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRolesRequest
         /// </param>
@@ -22527,6 +24056,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListRolesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询角色</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRolesRequest
         /// </param>
@@ -22564,6 +24098,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListRolesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询角色</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRolesRequest
         /// </param>
@@ -22577,6 +24116,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListRolesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表查询角色</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListRolesRequest
         /// </param>
@@ -22862,6 +24406,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListSkillGroupSummaryReportsSinceMidnightWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询技能组列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListSkillGroupsRequest
         /// </param>
@@ -22915,6 +24464,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListSkillGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询技能组列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListSkillGroupsRequest
         /// </param>
@@ -22968,6 +24522,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListSkillGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询技能组列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListSkillGroupsRequest
         /// </param>
@@ -22981,6 +24540,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListSkillGroupsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询技能组列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListSkillGroupsRequest
         /// </param>
@@ -22994,6 +24558,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListSkillGroupsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户技能组级别</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListSkillLevelsOfUserRequest
         /// </param>
@@ -23051,6 +24620,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListSkillLevelsOfUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户技能组级别</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListSkillLevelsOfUserRequest
         /// </param>
@@ -23108,6 +24682,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListSkillLevelsOfUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户技能组级别</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListSkillLevelsOfUserRequest
         /// </param>
@@ -23121,6 +24700,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListSkillLevelsOfUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户技能组级别</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListSkillLevelsOfUserRequest
         /// </param>
@@ -23874,6 +25458,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListUnassignedNumbersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询技能组级别列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListUserLevelsOfSkillGroupRequest
         /// </param>
@@ -23931,6 +25520,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListUserLevelsOfSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询技能组级别列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListUserLevelsOfSkillGroupRequest
         /// </param>
@@ -23988,6 +25582,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListUserLevelsOfSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询技能组级别列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListUserLevelsOfSkillGroupRequest
         /// </param>
@@ -24001,6 +25600,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListUserLevelsOfSkillGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询技能组级别列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListUserLevelsOfSkillGroupRequest
         /// </param>
@@ -24014,6 +25618,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListUserLevelsOfSkillGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListUsersRequest
         /// </param>
@@ -24067,6 +25676,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListUsersRequest
         /// </param>
@@ -24120,6 +25734,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListUsersRequest
         /// </param>
@@ -24133,6 +25752,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListUsersWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListUsersRequest
         /// </param>
@@ -24786,6 +26410,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await MakeCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改媒体文件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAudioFileRequest
         /// </param>
@@ -24843,6 +26472,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ModifyAudioFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改媒体文件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAudioFileRequest
         /// </param>
@@ -24900,6 +26534,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ModifyAudioFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改媒体文件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAudioFileRequest
         /// </param>
@@ -24913,6 +26552,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ModifyAudioFileWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改媒体文件</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAudioFileRequest
         /// </param>
@@ -25334,6 +26978,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ModifyInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改电话号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyPhoneNumberRequest
         /// </param>
@@ -25383,6 +27032,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ModifyPhoneNumberResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改电话号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyPhoneNumberRequest
         /// </param>
@@ -25432,6 +27086,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ModifyPhoneNumberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改电话号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyPhoneNumberRequest
         /// </param>
@@ -25445,6 +27104,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ModifyPhoneNumberWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改电话号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyPhoneNumberRequest
         /// </param>
@@ -25458,6 +27122,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ModifyPhoneNumberWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySkillGroupRequest
         /// </param>
@@ -25507,6 +27176,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ModifySkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySkillGroupRequest
         /// </param>
@@ -25556,6 +27230,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ModifySkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySkillGroupRequest
         /// </param>
@@ -25569,6 +27248,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ModifySkillGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySkillGroupRequest
         /// </param>
@@ -25582,6 +27266,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ModifySkillGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改坐席技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySkillLevelsOfUserRequest
         /// </param>
@@ -25627,6 +27316,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ModifySkillLevelsOfUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改坐席技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySkillLevelsOfUserRequest
         /// </param>
@@ -25672,6 +27366,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ModifySkillLevelsOfUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改坐席技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySkillLevelsOfUserRequest
         /// </param>
@@ -25685,6 +27384,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ModifySkillLevelsOfUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改坐席技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySkillLevelsOfUserRequest
         /// </param>
@@ -25698,6 +27402,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ModifySkillLevelsOfUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyUserRequest
         /// </param>
@@ -25771,6 +27480,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ModifyUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyUserRequest
         /// </param>
@@ -25844,6 +27558,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ModifyUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyUserRequest
         /// </param>
@@ -25857,6 +27576,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ModifyUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyUserRequest
         /// </param>
@@ -25870,6 +27594,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ModifyUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改坐席技能组级别</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyUserLevelsOfSkillGroupRequest
         /// </param>
@@ -25915,6 +27644,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ModifyUserLevelsOfSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改坐席技能组级别</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyUserLevelsOfSkillGroupRequest
         /// </param>
@@ -25960,6 +27694,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ModifyUserLevelsOfSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改坐席技能组级别</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyUserLevelsOfSkillGroupRequest
         /// </param>
@@ -25973,6 +27712,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ModifyUserLevelsOfSkillGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改坐席技能组级别</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyUserLevelsOfSkillGroupRequest
         /// </param>
@@ -25986,6 +27730,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ModifyUserLevelsOfSkillGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通话监听</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MonitorCallRequest
         /// </param>
@@ -26039,6 +27788,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<MonitorCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通话监听</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MonitorCallRequest
         /// </param>
@@ -26092,6 +27846,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<MonitorCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通话监听</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MonitorCallRequest
         /// </param>
@@ -26105,6 +27864,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return MonitorCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通话监听</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MonitorCallRequest
         /// </param>
@@ -26118,6 +27882,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await MonitorCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>静音</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MuteCallRequest
         /// </param>
@@ -26171,6 +27940,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<MuteCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>静音</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MuteCallRequest
         /// </param>
@@ -26224,6 +27998,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<MuteCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>静音</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MuteCallRequest
         /// </param>
@@ -26237,6 +28016,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return MuteCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>静音</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MuteCallRequest
         /// </param>
@@ -26378,6 +28162,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await PauseCampaignWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>选择外呼号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PickOutboundNumbersRequest
         /// </param>
@@ -26427,6 +28216,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<PickOutboundNumbersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>选择外呼号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PickOutboundNumbersRequest
         /// </param>
@@ -26476,6 +28270,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<PickOutboundNumbersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>选择外呼号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PickOutboundNumbersRequest
         /// </param>
@@ -26489,6 +28288,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return PickOutboundNumbersWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>选择外呼号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PickOutboundNumbersRequest
         /// </param>
@@ -26502,6 +28306,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await PickOutboundNumbersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轮询座席状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PollUserStatusRequest
         /// </param>
@@ -26547,6 +28356,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<PollUserStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轮询座席状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PollUserStatusRequest
         /// </param>
@@ -26592,6 +28406,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<PollUserStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轮询座席状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PollUserStatusRequest
         /// </param>
@@ -26605,6 +28424,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return PollUserStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轮询座席状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PollUserStatusRequest
         /// </param>
@@ -26902,6 +28726,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ProcessCustomIMCallbackWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发布ivr流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PublishContactFlowRequest
         /// </param>
@@ -26947,6 +28776,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<PublishContactFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发布ivr流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PublishContactFlowRequest
         /// </param>
@@ -26992,6 +28826,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<PublishContactFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发布ivr流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PublishContactFlowRequest
         /// </param>
@@ -27005,6 +28844,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return PublishContactFlowWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发布ivr流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PublishContactFlowRequest
         /// </param>
@@ -27018,6 +28862,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await PublishContactFlowWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>就绪/示闲</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReadyForServiceRequest
         /// </param>
@@ -27067,6 +28916,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ReadyForServiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>就绪/示闲</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReadyForServiceRequest
         /// </param>
@@ -27116,6 +28970,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ReadyForServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>就绪/示闲</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReadyForServiceRequest
         /// </param>
@@ -27129,6 +28988,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ReadyForServiceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>就绪/示闲</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReadyForServiceRequest
         /// </param>
@@ -27142,6 +29006,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ReadyForServiceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重拨</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RedialCallRequest
         /// </param>
@@ -27207,6 +29076,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RedialCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重拨</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RedialCallRequest
         /// </param>
@@ -27272,6 +29146,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RedialCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重拨</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RedialCallRequest
         /// </param>
@@ -27285,6 +29164,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return RedialCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重拨</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RedialCallRequest
         /// </param>
@@ -27298,6 +29182,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await RedialCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>注册设备</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RegisterDeviceRequest
         /// </param>
@@ -27347,6 +29236,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RegisterDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>注册设备</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RegisterDeviceRequest
         /// </param>
@@ -27396,6 +29290,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RegisterDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>注册设备</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RegisterDeviceRequest
         /// </param>
@@ -27409,6 +29308,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return RegisterDeviceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>注册设备</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RegisterDeviceRequest
         /// </param>
@@ -27422,6 +29326,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await RegisterDeviceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>注册设备</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RegisterDevicesRequest
         /// </param>
@@ -27471,6 +29380,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RegisterDevicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>注册设备</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RegisterDevicesRequest
         /// </param>
@@ -27520,6 +29434,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RegisterDevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>注册设备</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RegisterDevicesRequest
         /// </param>
@@ -27533,6 +29452,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return RegisterDevicesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>注册设备</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RegisterDevicesRequest
         /// </param>
@@ -27770,6 +29694,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await RejectTicketWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放对话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseCallRequest
         /// </param>
@@ -27823,6 +29752,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ReleaseCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放对话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseCallRequest
         /// </param>
@@ -27876,6 +29810,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ReleaseCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放对话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseCallRequest
         /// </param>
@@ -27889,6 +29828,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ReleaseCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放对话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseCallRequest
         /// </param>
@@ -28298,6 +30242,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await RemoveDoNotCallNumbersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除个人号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemovePersonalNumbersFromUserRequest
         /// </param>
@@ -28343,6 +30292,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RemovePersonalNumbersFromUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除个人号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemovePersonalNumbersFromUserRequest
         /// </param>
@@ -28388,6 +30342,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RemovePersonalNumbersFromUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除个人号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemovePersonalNumbersFromUserRequest
         /// </param>
@@ -28401,6 +30360,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return RemovePersonalNumbersFromUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除个人号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemovePersonalNumbersFromUserRequest
         /// </param>
@@ -28414,6 +30378,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await RemovePersonalNumbersFromUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除技能组下的电话号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemovePhoneNumberFromSkillGroupsRequest
         /// </param>
@@ -28459,6 +30428,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RemovePhoneNumberFromSkillGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除技能组下的电话号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemovePhoneNumberFromSkillGroupsRequest
         /// </param>
@@ -28504,6 +30478,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RemovePhoneNumberFromSkillGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除技能组下的电话号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemovePhoneNumberFromSkillGroupsRequest
         /// </param>
@@ -28517,6 +30496,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return RemovePhoneNumberFromSkillGroupsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除技能组下的电话号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemovePhoneNumberFromSkillGroupsRequest
         /// </param>
@@ -28530,6 +30514,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await RemovePhoneNumberFromSkillGroupsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除电话号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemovePhoneNumbersRequest
         /// </param>
@@ -28575,6 +30564,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RemovePhoneNumbersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除电话号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemovePhoneNumbersRequest
         /// </param>
@@ -28620,6 +30614,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RemovePhoneNumbersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除电话号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemovePhoneNumbersRequest
         /// </param>
@@ -28633,6 +30632,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return RemovePhoneNumbersWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除电话号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemovePhoneNumbersRequest
         /// </param>
@@ -28646,6 +30650,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await RemovePhoneNumbersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除技能组下的电话号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemovePhoneNumbersFromSkillGroupRequest
         /// </param>
@@ -28691,6 +30700,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RemovePhoneNumbersFromSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除技能组下的电话号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemovePhoneNumbersFromSkillGroupRequest
         /// </param>
@@ -28736,6 +30750,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RemovePhoneNumbersFromSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除技能组下的电话号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemovePhoneNumbersFromSkillGroupRequest
         /// </param>
@@ -28749,6 +30768,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return RemovePhoneNumbersFromSkillGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除技能组下的电话号码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemovePhoneNumbersFromSkillGroupRequest
         /// </param>
@@ -28762,6 +30786,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await RemovePhoneNumbersFromSkillGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除多个技能组下的坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveSkillGroupsFromUserRequest
         /// </param>
@@ -28807,6 +30836,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RemoveSkillGroupsFromUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除多个技能组下的坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveSkillGroupsFromUserRequest
         /// </param>
@@ -28852,6 +30886,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RemoveSkillGroupsFromUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除多个技能组下的坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveSkillGroupsFromUserRequest
         /// </param>
@@ -28865,6 +30904,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return RemoveSkillGroupsFromUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除多个技能组下的坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveSkillGroupsFromUserRequest
         /// </param>
@@ -28878,6 +30922,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await RemoveSkillGroupsFromUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveUsersRequest
         /// </param>
@@ -28931,6 +30980,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RemoveUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveUsersRequest
         /// </param>
@@ -28984,6 +31038,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RemoveUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveUsersRequest
         /// </param>
@@ -28997,6 +31056,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return RemoveUsersWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除坐席</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveUsersRequest
         /// </param>
@@ -29010,6 +31074,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await RemoveUsersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除坐席下的技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveUsersFromSkillGroupRequest
         /// </param>
@@ -29055,6 +31124,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RemoveUsersFromSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除坐席下的技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveUsersFromSkillGroupRequest
         /// </param>
@@ -29100,6 +31174,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RemoveUsersFromSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除坐席下的技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveUsersFromSkillGroupRequest
         /// </param>
@@ -29113,6 +31192,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return RemoveUsersFromSkillGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除坐席下的技能组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveUsersFromSkillGroupRequest
         /// </param>
@@ -29126,6 +31210,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await RemoveUsersFromSkillGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重置坐席状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResetAgentStateRequest
         /// </param>
@@ -29171,6 +31260,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ResetAgentStateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重置坐席状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResetAgentStateRequest
         /// </param>
@@ -29216,6 +31310,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ResetAgentStateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重置坐席状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResetAgentStateRequest
         /// </param>
@@ -29229,6 +31328,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ResetAgentStateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重置坐席状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResetAgentStateRequest
         /// </param>
@@ -29242,6 +31346,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ResetAgentStateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重置坐席密码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResetUserPasswordRequest
         /// </param>
@@ -29287,6 +31396,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ResetUserPasswordResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重置坐席密码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResetUserPasswordRequest
         /// </param>
@@ -29332,6 +31446,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ResetUserPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重置坐席密码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResetUserPasswordRequest
         /// </param>
@@ -29345,6 +31464,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ResetUserPasswordWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重置坐席密码</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResetUserPasswordRequest
         /// </param>
@@ -29730,6 +31854,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ResumeCampaignWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取回</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RetrieveCallRequest
         /// </param>
@@ -29783,6 +31912,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RetrieveCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取回</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RetrieveCallRequest
         /// </param>
@@ -29836,6 +31970,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RetrieveCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取回</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RetrieveCallRequest
         /// </param>
@@ -29849,6 +31988,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return RetrieveCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取回</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RetrieveCallRequest
         /// </param>
@@ -29994,6 +32138,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await SaveDocumentWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客服侧数据收集</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveRTCStatsV2Request
         /// </param>
@@ -30051,6 +32200,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<SaveRTCStatsV2Response>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客服侧数据收集</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveRTCStatsV2Request
         /// </param>
@@ -30108,6 +32262,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<SaveRTCStatsV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客服侧数据收集</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveRTCStatsV2Request
         /// </param>
@@ -30121,6 +32280,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return SaveRTCStatsV2WithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客服侧数据收集</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveRTCStatsV2Request
         /// </param>
@@ -30134,6 +32298,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await SaveRTCStatsV2WithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存终端埋点日志</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveTerminalLogRequest
         /// </param>
@@ -30203,6 +32372,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<SaveTerminalLogResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存终端埋点日志</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveTerminalLogRequest
         /// </param>
@@ -30272,6 +32446,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<SaveTerminalLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存终端埋点日志</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveTerminalLogRequest
         /// </param>
@@ -30285,6 +32464,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return SaveTerminalLogWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存终端埋点日志</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveTerminalLogRequest
         /// </param>
@@ -30298,6 +32482,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await SaveTerminalLogWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客服侧数据收集</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveWebRTCStatsRequest
         /// </param>
@@ -30355,6 +32544,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<SaveWebRTCStatsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客服侧数据收集</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveWebRTCStatsRequest
         /// </param>
@@ -30412,6 +32606,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<SaveWebRTCStatsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客服侧数据收集</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveWebRTCStatsRequest
         /// </param>
@@ -30425,6 +32624,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return SaveWebRTCStatsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客服侧数据收集</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveWebRTCStatsRequest
         /// </param>
@@ -30438,6 +32642,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await SaveWebRTCStatsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客服侧数据收集</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveWebRtcInfoRequest
         /// </param>
@@ -30491,6 +32700,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<SaveWebRtcInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客服侧数据收集</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveWebRtcInfoRequest
         /// </param>
@@ -30544,6 +32758,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<SaveWebRtcInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客服侧数据收集</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveWebRtcInfoRequest
         /// </param>
@@ -30557,6 +32776,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return SaveWebRtcInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客服侧数据收集</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveWebRtcInfoRequest
         /// </param>
@@ -30570,6 +32794,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await SaveWebRtcInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>在接通的电话上发送DTMF信号</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SendDtmfSignalingRequest
         /// </param>
@@ -30627,6 +32856,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<SendDtmfSignalingResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>在接通的电话上发送DTMF信号</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SendDtmfSignalingRequest
         /// </param>
@@ -30684,6 +32918,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<SendDtmfSignalingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>在接通的电话上发送DTMF信号</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SendDtmfSignalingRequest
         /// </param>
@@ -30697,6 +32936,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return SendDtmfSignalingWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>在接通的电话上发送DTMF信号</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SendDtmfSignalingRequest
         /// </param>
@@ -30862,6 +33106,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await SendNotificationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上线</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SignInGroupRequest
         /// </param>
@@ -30919,6 +33168,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<SignInGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上线</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SignInGroupRequest
         /// </param>
@@ -30976,6 +33230,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<SignInGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上线</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SignInGroupRequest
         /// </param>
@@ -30989,6 +33248,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return SignInGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上线</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SignInGroupRequest
         /// </param>
@@ -31002,6 +33266,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await SignInGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下线</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SignOutGroupRequest
         /// </param>
@@ -31047,6 +33316,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<SignOutGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下线</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SignOutGroupRequest
         /// </param>
@@ -31092,6 +33366,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<SignOutGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下线</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SignOutGroupRequest
         /// </param>
@@ -31105,6 +33384,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return SignOutGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下线</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SignOutGroupRequest
         /// </param>
@@ -31118,6 +33402,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await SignOutGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>双呼</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartBack2BackCallRequest
         /// </param>
@@ -31179,6 +33468,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<StartBack2BackCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>双呼</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartBack2BackCallRequest
         /// </param>
@@ -31240,6 +33534,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<StartBack2BackCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>双呼</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartBack2BackCallRequest
         /// </param>
@@ -31253,6 +33552,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return StartBack2BackCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>双呼</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartBack2BackCallRequest
         /// </param>
@@ -31402,6 +33706,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await StartChatWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开始会议</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartConferenceRequest
         /// </param>
@@ -31455,6 +33764,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<StartConferenceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开始会议</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartConferenceRequest
         /// </param>
@@ -31508,6 +33822,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<StartConferenceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开始会议</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartConferenceRequest
         /// </param>
@@ -31521,6 +33840,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return StartConferenceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开始会议</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartConferenceRequest
         /// </param>
@@ -31534,6 +33858,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await StartConferenceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑ivr流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartEditContactFlowRequest
         /// </param>
@@ -31575,6 +33904,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<StartEditContactFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑ivr流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartEditContactFlowRequest
         /// </param>
@@ -31616,6 +33950,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<StartEditContactFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑ivr流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartEditContactFlowRequest
         /// </param>
@@ -31629,6 +33968,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return StartEditContactFlowWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑ivr流程</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartEditContactFlowRequest
         /// </param>
@@ -31642,6 +33986,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await StartEditContactFlowWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开始预测试外呼</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartPredictiveCallRequest
         /// </param>
@@ -31711,6 +34060,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<StartPredictiveCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开始预测试外呼</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartPredictiveCallRequest
         /// </param>
@@ -31780,6 +34134,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<StartPredictiveCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开始预测试外呼</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartPredictiveCallRequest
         /// </param>
@@ -31793,6 +34152,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return StartPredictiveCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开始预测试外呼</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartPredictiveCallRequest
         /// </param>
@@ -32078,6 +34442,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await SubmitCampaignWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>切换关注/咨询转到会议</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SwitchToConferenceRequest
         /// </param>
@@ -32127,6 +34496,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<SwitchToConferenceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>切换关注/咨询转到会议</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SwitchToConferenceRequest
         /// </param>
@@ -32176,6 +34550,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<SwitchToConferenceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>切换关注/咨询转到会议</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SwitchToConferenceRequest
         /// </param>
@@ -32189,6 +34568,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return SwitchToConferenceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>切换关注/咨询转到会议</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SwitchToConferenceRequest
         /// </param>
@@ -32202,6 +34586,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await SwitchToConferenceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>小休</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TakeBreakRequest
         /// </param>
@@ -32251,6 +34640,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<TakeBreakResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>小休</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TakeBreakRequest
         /// </param>
@@ -32300,6 +34694,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<TakeBreakResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>小休</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TakeBreakRequest
         /// </param>
@@ -32313,6 +34712,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TakeBreakWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>小休</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TakeBreakRequest
         /// </param>
@@ -32574,6 +34978,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await TransferTicketTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消静音</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnmuteCallRequest
         /// </param>
@@ -32627,6 +35036,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<UnmuteCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消静音</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnmuteCallRequest
         /// </param>
@@ -32680,6 +35094,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<UnmuteCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消静音</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnmuteCallRequest
         /// </param>
@@ -32693,6 +35112,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return UnmuteCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消静音</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnmuteCallRequest
         /// </param>
@@ -32834,6 +35258,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await UnregisterDeviceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新会话小结</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateCallSummaryRequest
         /// </param>
@@ -32879,6 +35308,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<UpdateCallSummaryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新会话小结</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateCallSummaryRequest
         /// </param>
@@ -32924,6 +35358,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<UpdateCallSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新会话小结</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateCallSummaryRequest
         /// </param>
@@ -32937,6 +35376,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return UpdateCallSummaryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新会话小结</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateCallSummaryRequest
         /// </param>
@@ -32952,7 +35396,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update campaign</para>
+        /// <para>更新预测试外呼活动</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33022,7 +35466,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update campaign</para>
+        /// <para>更新预测试外呼活动</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33092,7 +35536,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update campaign</para>
+        /// <para>更新预测试外呼活动</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33110,7 +35554,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update campaign</para>
+        /// <para>更新预测试外呼活动</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33234,6 +35678,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await UpdateChatRoutingProfileWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新系统配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateConfigItemsRequest
         /// </param>
@@ -33283,6 +35732,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<UpdateConfigItemsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新系统配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateConfigItemsRequest
         /// </param>
@@ -33332,6 +35786,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<UpdateConfigItemsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新系统配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateConfigItemsRequest
         /// </param>
@@ -33345,6 +35804,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return UpdateConfigItemsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新系统配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateConfigItemsRequest
         /// </param>
