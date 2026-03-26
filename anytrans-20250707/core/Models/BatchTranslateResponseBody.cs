@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
                 [Validation(Required=false)]
                 public long? Code { get; set; }
 
+                [NameInMap("detectedLang")]
+                [Validation(Required=false)]
+                public string DetectedLang { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>0</para>

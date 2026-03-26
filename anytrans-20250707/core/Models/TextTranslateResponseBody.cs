@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         [Validation(Required=false)]
         public TextTranslateResponseBodyData Data { get; set; }
         public class TextTranslateResponseBodyData : TeaModel {
+            [NameInMap("detectedLang")]
+            [Validation(Required=false)]
+            public string DetectedLang { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>How does Mogujie solve the data annotation challenge by building a platform?</para>
