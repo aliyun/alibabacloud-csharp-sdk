@@ -53645,5 +53645,149 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await UpgradeDBClusterVersionZonalWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>执行自定义命令</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradePolarClawSkillsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradePolarClawSkillsResponse
+        /// </returns>
+        public UpgradePolarClawSkillsResponse UpgradePolarClawSkillsWithOptions(UpgradePolarClawSkillsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationType))
+            {
+                query["ApplicationType"] = request.ApplicationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpgradeMethod))
+            {
+                query["UpgradeMethod"] = request.UpgradeMethod;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpgradePolarClawSkills",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpgradePolarClawSkillsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>执行自定义命令</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradePolarClawSkillsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradePolarClawSkillsResponse
+        /// </returns>
+        public async Task<UpgradePolarClawSkillsResponse> UpgradePolarClawSkillsWithOptionsAsync(UpgradePolarClawSkillsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationType))
+            {
+                query["ApplicationType"] = request.ApplicationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpgradeMethod))
+            {
+                query["UpgradeMethod"] = request.UpgradeMethod;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpgradePolarClawSkills",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpgradePolarClawSkillsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>执行自定义命令</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradePolarClawSkillsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradePolarClawSkillsResponse
+        /// </returns>
+        public UpgradePolarClawSkillsResponse UpgradePolarClawSkills(UpgradePolarClawSkillsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpgradePolarClawSkillsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>执行自定义命令</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradePolarClawSkillsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradePolarClawSkillsResponse
+        /// </returns>
+        public async Task<UpgradePolarClawSkillsResponse> UpgradePolarClawSkillsAsync(UpgradePolarClawSkillsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpgradePolarClawSkillsWithOptionsAsync(request, runtime);
+        }
+
     }
 }
