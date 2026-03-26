@@ -36,6 +36,32 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
+            [NameInMap("InstanceLicenseDetail")]
+            [Validation(Required=false)]
+            public GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail InstanceLicenseDetail { get; set; }
+            public class GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail : TeaModel {
+                [NameInMap("ConditionalAccessPolicyLicenseStatus")]
+                [Validation(Required=false)]
+                public string ConditionalAccessPolicyLicenseStatus { get; set; }
+
+                [NameInMap("M2mApplicationLicenseStatus")]
+                [Validation(Required=false)]
+                public string M2mApplicationLicenseStatus { get; set; }
+
+                [NameInMap("M2mApplicationQuota")]
+                [Validation(Required=false)]
+                public long? M2mApplicationQuota { get; set; }
+
+                [NameInMap("NetworkAccessEndpointQuota")]
+                [Validation(Required=false)]
+                public long? NetworkAccessEndpointQuota { get; set; }
+
+                [NameInMap("UserQuota")]
+                [Validation(Required=false)]
+                public long? UserQuota { get; set; }
+
+            }
+
             /// <summary>
             /// <para>Payment type of the License</para>
             /// 
