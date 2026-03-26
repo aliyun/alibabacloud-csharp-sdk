@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.MaaS20260318
                 Action = "CreateApiKey",
                 Version = "2026-03-18",
                 Protocol = "HTTPS",
-                Pathname = "/bailianControl/apiKey/createApiKey",
+                Pathname = "/maas/apikeys",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.MaaS20260318
                 Action = "CreateApiKey",
                 Version = "2026-03-18",
                 Protocol = "HTTPS",
-                Pathname = "/bailianControl/apiKey/createApiKey",
+                Pathname = "/maas/apikeys",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -180,9 +180,6 @@ namespace AlibabaCloud.SDK.MaaS20260318
         /// <para>删除apiKey</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DeleteApiKeyRequest
-        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -193,25 +190,18 @@ namespace AlibabaCloud.SDK.MaaS20260318
         /// <returns>
         /// DeleteApiKeyResponse
         /// </returns>
-        public DeleteApiKeyResponse DeleteApiKeyWithOptions(DeleteApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteApiKeyResponse DeleteApiKeyWithOptions(string apiKeyId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKeyId))
-            {
-                query["apiKeyId"] = request.ApiKeyId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteApiKey",
                 Version = "2026-03-18",
                 Protocol = "HTTPS",
-                Pathname = "/bailianControl/apiKey/deleteApiKey",
+                Pathname = "/maas/apikeys/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(apiKeyId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -226,9 +216,6 @@ namespace AlibabaCloud.SDK.MaaS20260318
         /// <para>删除apiKey</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DeleteApiKeyRequest
-        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -239,25 +226,18 @@ namespace AlibabaCloud.SDK.MaaS20260318
         /// <returns>
         /// DeleteApiKeyResponse
         /// </returns>
-        public async Task<DeleteApiKeyResponse> DeleteApiKeyWithOptionsAsync(DeleteApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteApiKeyResponse> DeleteApiKeyWithOptionsAsync(string apiKeyId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKeyId))
-            {
-                query["apiKeyId"] = request.ApiKeyId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteApiKey",
                 Version = "2026-03-18",
                 Protocol = "HTTPS",
-                Pathname = "/bailianControl/apiKey/deleteApiKey",
+                Pathname = "/maas/apikeys/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(apiKeyId),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -272,18 +252,14 @@ namespace AlibabaCloud.SDK.MaaS20260318
         /// <para>删除apiKey</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DeleteApiKeyRequest
-        /// </param>
-        /// 
         /// <returns>
         /// DeleteApiKeyResponse
         /// </returns>
-        public DeleteApiKeyResponse DeleteApiKey(DeleteApiKeyRequest request)
+        public DeleteApiKeyResponse DeleteApiKey(string apiKeyId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteApiKeyWithOptions(request, headers, runtime);
+            return DeleteApiKeyWithOptions(apiKeyId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -291,18 +267,14 @@ namespace AlibabaCloud.SDK.MaaS20260318
         /// <para>删除apiKey</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DeleteApiKeyRequest
-        /// </param>
-        /// 
         /// <returns>
         /// DeleteApiKeyResponse
         /// </returns>
-        public async Task<DeleteApiKeyResponse> DeleteApiKeyAsync(DeleteApiKeyRequest request)
+        public async Task<DeleteApiKeyResponse> DeleteApiKeyAsync(string apiKeyId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteApiKeyWithOptionsAsync(request, headers, runtime);
+            return await DeleteApiKeyWithOptionsAsync(apiKeyId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -310,9 +282,6 @@ namespace AlibabaCloud.SDK.MaaS20260318
         /// <para>查询ApiKey详情</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetApiKeyRequest
-        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -323,25 +292,18 @@ namespace AlibabaCloud.SDK.MaaS20260318
         /// <returns>
         /// GetApiKeyResponse
         /// </returns>
-        public GetApiKeyResponse GetApiKeyWithOptions(GetApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetApiKeyResponse GetApiKeyWithOptions(string apiKeyId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKeyId))
-            {
-                query["apiKeyId"] = request.ApiKeyId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetApiKey",
                 Version = "2026-03-18",
                 Protocol = "HTTPS",
-                Pathname = "/bailianControl/apiKey/getApiKey",
+                Pathname = "/maas/apikeys/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(apiKeyId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -356,9 +318,6 @@ namespace AlibabaCloud.SDK.MaaS20260318
         /// <para>查询ApiKey详情</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetApiKeyRequest
-        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -369,25 +328,18 @@ namespace AlibabaCloud.SDK.MaaS20260318
         /// <returns>
         /// GetApiKeyResponse
         /// </returns>
-        public async Task<GetApiKeyResponse> GetApiKeyWithOptionsAsync(GetApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetApiKeyResponse> GetApiKeyWithOptionsAsync(string apiKeyId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKeyId))
-            {
-                query["apiKeyId"] = request.ApiKeyId;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetApiKey",
                 Version = "2026-03-18",
                 Protocol = "HTTPS",
-                Pathname = "/bailianControl/apiKey/getApiKey",
+                Pathname = "/maas/apikeys/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(apiKeyId),
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -402,18 +354,14 @@ namespace AlibabaCloud.SDK.MaaS20260318
         /// <para>查询ApiKey详情</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetApiKeyRequest
-        /// </param>
-        /// 
         /// <returns>
         /// GetApiKeyResponse
         /// </returns>
-        public GetApiKeyResponse GetApiKey(GetApiKeyRequest request)
+        public GetApiKeyResponse GetApiKey(string apiKeyId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetApiKeyWithOptions(request, headers, runtime);
+            return GetApiKeyWithOptions(apiKeyId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -421,18 +369,14 @@ namespace AlibabaCloud.SDK.MaaS20260318
         /// <para>查询ApiKey详情</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetApiKeyRequest
-        /// </param>
-        /// 
         /// <returns>
         /// GetApiKeyResponse
         /// </returns>
-        public async Task<GetApiKeyResponse> GetApiKeyAsync(GetApiKeyRequest request)
+        public async Task<GetApiKeyResponse> GetApiKeyAsync(string apiKeyId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetApiKeyWithOptionsAsync(request, headers, runtime);
+            return await GetApiKeyWithOptionsAsync(apiKeyId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -487,7 +431,7 @@ namespace AlibabaCloud.SDK.MaaS20260318
                 Action = "ListApiKeys",
                 Version = "2026-03-18",
                 Protocol = "HTTPS",
-                Pathname = "/bailianControl/apiKeys",
+                Pathname = "/maas/apikeys",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -549,7 +493,7 @@ namespace AlibabaCloud.SDK.MaaS20260318
                 Action = "ListApiKeys",
                 Version = "2026-03-18",
                 Protocol = "HTTPS",
-                Pathname = "/bailianControl/apiKeys",
+                Pathname = "/maas/apikeys",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -641,7 +585,7 @@ namespace AlibabaCloud.SDK.MaaS20260318
                 Action = "ListWorkspaces",
                 Version = "2026-03-18",
                 Protocol = "HTTPS",
-                Pathname = "/bailianControl/workspaces",
+                Pathname = "/maas/workspaces",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -695,7 +639,7 @@ namespace AlibabaCloud.SDK.MaaS20260318
                 Action = "ListWorkspaces",
                 Version = "2026-03-18",
                 Protocol = "HTTPS",
-                Pathname = "/bailianControl/workspaces",
+                Pathname = "/maas/workspaces",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -761,14 +705,10 @@ namespace AlibabaCloud.SDK.MaaS20260318
         /// <returns>
         /// UpdateApiKeyResponse
         /// </returns>
-        public UpdateApiKeyResponse UpdateApiKeyWithOptions(UpdateApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateApiKeyResponse UpdateApiKeyWithOptions(string apiKeyId, UpdateApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKeyId))
-            {
-                query["apiKeyId"] = request.ApiKeyId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["description"] = request.Description;
@@ -783,7 +723,7 @@ namespace AlibabaCloud.SDK.MaaS20260318
                 Action = "UpdateApiKey",
                 Version = "2026-03-18",
                 Protocol = "HTTPS",
-                Pathname = "/bailianControl/apiKey/updateApiKey",
+                Pathname = "/maas/apikeys/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(apiKeyId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -811,14 +751,10 @@ namespace AlibabaCloud.SDK.MaaS20260318
         /// <returns>
         /// UpdateApiKeyResponse
         /// </returns>
-        public async Task<UpdateApiKeyResponse> UpdateApiKeyWithOptionsAsync(UpdateApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateApiKeyResponse> UpdateApiKeyWithOptionsAsync(string apiKeyId, UpdateApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKeyId))
-            {
-                query["apiKeyId"] = request.ApiKeyId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["description"] = request.Description;
@@ -833,7 +769,7 @@ namespace AlibabaCloud.SDK.MaaS20260318
                 Action = "UpdateApiKey",
                 Version = "2026-03-18",
                 Protocol = "HTTPS",
-                Pathname = "/bailianControl/apiKey/updateApiKey",
+                Pathname = "/maas/apikeys/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(apiKeyId),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -855,11 +791,11 @@ namespace AlibabaCloud.SDK.MaaS20260318
         /// <returns>
         /// UpdateApiKeyResponse
         /// </returns>
-        public UpdateApiKeyResponse UpdateApiKey(UpdateApiKeyRequest request)
+        public UpdateApiKeyResponse UpdateApiKey(string apiKeyId, UpdateApiKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateApiKeyWithOptions(request, headers, runtime);
+            return UpdateApiKeyWithOptions(apiKeyId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -874,11 +810,11 @@ namespace AlibabaCloud.SDK.MaaS20260318
         /// <returns>
         /// UpdateApiKeyResponse
         /// </returns>
-        public async Task<UpdateApiKeyResponse> UpdateApiKeyAsync(UpdateApiKeyRequest request)
+        public async Task<UpdateApiKeyResponse> UpdateApiKeyAsync(string apiKeyId, UpdateApiKeyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateApiKeyWithOptionsAsync(request, headers, runtime);
+            return await UpdateApiKeyWithOptionsAsync(apiKeyId, request, headers, runtime);
         }
 
     }

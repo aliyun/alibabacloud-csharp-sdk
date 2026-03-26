@@ -18,8 +18,6 @@ namespace AlibabaCloud.SDK.MaaS20260318.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>llm-y3kv9qctnlytgmga</para>
         /// </summary>
