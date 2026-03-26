@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class Partition : TeaModel {
         /// <summary>
+        /// <para>The creation time. This value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1700192563000</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The storage size of the partition. Unit: bytes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4096</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DataSize { get; set; }
 
         /// <summary>
+        /// <para>The modification time. This value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1700192563000</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ModifyTime { get; set; }
 
         /// <summary>
+        /// <para>The partition name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ds=20250101</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The number of records in the partition.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000000</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? RecordCount { get; set; }
 
         /// <summary>
+        /// <para>The ID of the table to which the partition belongs. You can configure this parameter by referring to the <c>Table</c> topic.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>maxcompute-table:accountId::project::table</para>
         /// </summary>

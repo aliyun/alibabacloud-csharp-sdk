@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public string MigrationType { get; set; }
 
+                [NameInMap("Owner")]
+                [Validation(Required=false)]
+                public string Owner { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the DataWorks workspace to which the synchronization task belongs.</para>
                 /// 

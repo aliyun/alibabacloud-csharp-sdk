@@ -65,7 +65,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The DataWorks workspace ID.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10000</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
