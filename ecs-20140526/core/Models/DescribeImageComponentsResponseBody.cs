@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImageComponentsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information about the image components.</para>
-        /// </summary>
         [NameInMap("ImageComponent")]
         [Validation(Required=false)]
         public DescribeImageComponentsResponseBodyImageComponent ImageComponent { get; set; }
@@ -20,93 +17,38 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeImageComponentsResponseBodyImageComponentImageComponentSet> ImageComponentSet { get; set; }
             public class DescribeImageComponentsResponseBodyImageComponentImageComponentSet : TeaModel {
-                /// <summary>
-                /// <para>The type of the image component.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Build</para>
-                /// </summary>
                 [NameInMap("ComponentType")]
                 [Validation(Required=false)]
                 public string ComponentType { get; set; }
 
-                /// <summary>
-                /// <para>The version number of the image component.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>null</para>
-                /// </summary>
                 [NameInMap("ComponentVersion")]
                 [Validation(Required=false)]
                 public string ComponentVersion { get; set; }
 
-                /// <summary>
-                /// <para>The content of the image component.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>RESTART</para>
-                /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
-                /// <summary>
-                /// <para>The time when the image component was created.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2020-11-24T06:00:00Z</para>
-                /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
-                /// <summary>
-                /// <para>The description of the image component.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>This is description.</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the image component.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ic-bp67acfmxazb4p****</para>
-                /// </summary>
                 [NameInMap("ImageComponentId")]
                 [Validation(Required=false)]
                 public string ImageComponentId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the image component.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testComponent</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                /// <summary>
-                /// <para>The type of the image component. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>SELF: the custom component that you created.</description></item>
-                /// <item><description>ALIYUN: the system component provided by Alibaba Cloud.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>SELF</para>
-                /// </summary>
                 [NameInMap("Owner")]
                 [Validation(Required=false)]
                 public string Owner { get; set; }
 
-                /// <summary>
-                /// <para>The parameters contained in the image component.</para>
-                /// </summary>
                 [NameInMap("Parameters")]
                 [Validation(Required=false)]
                 public DescribeImageComponentsResponseBodyImageComponentImageComponentSetParameters Parameters { get; set; }
@@ -115,38 +57,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter> Parameter { get; set; }
                     public class DescribeImageComponentsResponseBodyImageComponentImageComponentSetParametersParameter : TeaModel {
-                        /// <summary>
-                        /// <para>The default value of the parameter.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>null</para>
-                        /// </summary>
                         [NameInMap("DefaultValue")]
                         [Validation(Required=false)]
                         public string DefaultValue { get; set; }
 
-                        /// <summary>
-                        /// <para>The name of the parameter.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>null</para>
-                        /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
-                        /// <summary>
-                        /// <para>The type of the parameter.</para>
-                        /// <para>Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>String</description></item>
-                        /// <item><description>Number</description></item>
-                        /// <item><description>Boolean</description></item>
-                        /// </list>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>null</para>
-                        /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }
@@ -155,29 +73,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 }
 
-                /// <summary>
-                /// <para>The ID of the resource group to which the image component belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rg-bp67acfmxazb4p****</para>
-                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
-                /// <summary>
-                /// <para>The type of the operating system supported by the image component.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Linux</para>
-                /// </summary>
                 [NameInMap("SystemType")]
                 [Validation(Required=false)]
                 public string SystemType { get; set; }
 
-                /// <summary>
-                /// <para>The tags of the image component.</para>
-                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeImageComponentsResponseBodyImageComponentImageComponentSetTags Tags { get; set; }
@@ -186,22 +89,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeImageComponentsResponseBodyImageComponentImageComponentSetTagsTag> Tag { get; set; }
                     public class DescribeImageComponentsResponseBodyImageComponentImageComponentSetTagsTag : TeaModel {
-                        /// <summary>
-                        /// <para>The key of the tag.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>TestKey</para>
-                        /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
-                        /// <summary>
-                        /// <para>The value of the tag.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>TestValue</para>
-                        /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
                         public string TagValue { get; set; }

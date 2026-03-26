@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The IDs of the reserved instances.</para>
-        /// </summary>
         [NameInMap("ReservedInstanceIdSets")]
         [Validation(Required=false)]
         public ModifyReservedInstancesResponseBodyReservedInstanceIdSets ReservedInstanceIdSets { get; set; }

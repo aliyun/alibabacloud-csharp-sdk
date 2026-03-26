@@ -51,9 +51,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string FinishedTime { get; set; }
 
-        /// <summary>
-        /// <para>The results of all diagnostic metrics in the diagnostic metric set.</para>
-        /// </summary>
         [NameInMap("MetricResults")]
         [Validation(Required=false)]
         public DescribeDiagnosticReportAttributesResponseBodyMetricResults MetricResults { get; set; }
@@ -62,9 +59,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResult> MetricResult { get; set; }
             public class DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResult : TeaModel {
-                /// <summary>
-                /// <para>The diagnosed issues.</para>
-                /// </summary>
                 [NameInMap("Issues")]
                 [Validation(Required=false)]
                 public DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResultIssues Issues { get; set; }
@@ -73,41 +67,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResultIssuesIssue> Issue { get; set; }
                     public class DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResultIssuesIssue : TeaModel {
-                        /// <summary>
-                        /// <para>The additional data about the diagnosed issue. The value is a JSON string.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>{
-                        ///   &quot;TotalPercent&quot;: 95,
-                        ///   &quot;TopUtilizationProcesses&quot;: [
-                        ///     {
-                        ///       &quot;Pid&quot;: &quot;1223&quot;,
-                        ///       &quot;CommandName&quot;: &quot;/usr/bin/mem.py&quot;,
-                        ///       &quot;PhysicalMemoryPercent&quot;: 50
-                        ///     }
-                        ///   ]
-                        /// }</para>
-                        /// </summary>
                         [NameInMap("Additional")]
                         [Validation(Required=false)]
                         public string Additional { get; set; }
 
-                        /// <summary>
-                        /// <para>The ID of the diagnosed issue, which is the unique identifier of the issue.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>GuestOS.CPU.HighUtiliz*****</para>
-                        /// </summary>
                         [NameInMap("IssueId")]
                         [Validation(Required=false)]
                         public string IssueId { get; set; }
 
-                        /// <summary>
-                        /// <para>The time when the diagnosed issue occurred.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>2022-07-11T14:00:00Z</para>
-                        /// </summary>
                         [NameInMap("OccurrenceTime")]
                         [Validation(Required=false)]
                         public string OccurrenceTime { get; set; }
@@ -120,17 +87,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public bool? Repairable { get; set; }
 
-                        /// <summary>
-                        /// <para>The severity level of the diagnosed issue. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>Info: Diagnostic information was recorded and may be related to exceptions.</description></item>
-                        /// <item><description>Warn: Diagnostic information was recorded and may indicate potential exceptions.</description></item>
-                        /// <item><description>Critical: Critical exceptions were detected.</description></item>
-                        /// </list>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>Info</para>
-                        /// </summary>
                         [NameInMap("Severity")]
                         [Validation(Required=false)]
                         public string Severity { get; set; }
@@ -139,55 +95,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 }
 
-                /// <summary>
-                /// <para>The category of the diagnostic metric.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>CPU</para>
-                /// </summary>
                 [NameInMap("MetricCategory")]
                 [Validation(Required=false)]
                 public string MetricCategory { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the diagnostic metric.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>GuestOS.WinFirewall</para>
-                /// </summary>
                 [NameInMap("MetricId")]
                 [Validation(Required=false)]
                 public string MetricId { get; set; }
 
-                /// <summary>
-                /// <para>The severity level of the diagnostic metric. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</description></item>
-                /// <item><description>Normal: No exceptions were detected.</description></item>
-                /// <item><description>Info: Diagnostic information was recorded and may be related to exceptions.</description></item>
-                /// <item><description>NotSupport: The version of the guest operating system does support diagnosing the metric.</description></item>
-                /// <item><description>Warn: Diagnostic information was recorded and may indicate potential exceptions.</description></item>
-                /// <item><description>Critical: Critical exceptions were detected.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Normal</para>
-                /// </summary>
                 [NameInMap("Severity")]
                 [Validation(Required=false)]
                 public string Severity { get; set; }
 
-                /// <summary>
-                /// <para>The state of the diagnostic metric. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>InProgress.</description></item>
-                /// <item><description>Finished.</description></item>
-                /// <item><description>Failed.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Finished</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }

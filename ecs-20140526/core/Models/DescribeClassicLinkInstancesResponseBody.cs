@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeClassicLinkInstancesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The details of the ClassicLink connections between the instances reside in the classic network and VPCs.</para>
-        /// </summary>
         [NameInMap("Links")]
         [Validation(Required=false)]
         public DescribeClassicLinkInstancesResponseBodyLinks Links { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeClassicLinkInstancesResponseBodyLinksLink> Link { get; set; }
             public class DescribeClassicLinkInstancesResponseBodyLinksLink : TeaModel {
-                /// <summary>
-                /// <para>The instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>i-test</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
-                /// <summary>
-                /// <para>The VPC ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vpc-test</para>
-                /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }

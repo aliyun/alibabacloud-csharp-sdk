@@ -20,12 +20,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        /// <summary>
-        /// <para>RAM用户的虚拟账号ID。</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>155780923770</para>
-        /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -41,22 +35,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// <para>资源主账号的账号名称。</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ECSforCloud</para>
-        /// </summary>
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
-        /// <summary>
-        /// <para>资源主账号的ID，亦即UID。</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>155780923770</para>
-        /// </summary>
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }

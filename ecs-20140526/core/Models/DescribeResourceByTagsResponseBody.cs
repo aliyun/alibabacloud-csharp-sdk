@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>Details about the resources to which the tags are bound.</para>
-        /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public DescribeResourceByTagsResponseBodyResources Resources { get; set; }
@@ -50,32 +47,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeResourceByTagsResponseBodyResourcesResource> Resource { get; set; }
             public class DescribeResourceByTagsResponseBodyResourcesResource : TeaModel {
-                /// <summary>
-                /// <para>The region ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
-                /// <summary>
-                /// <para>The resource ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>i-bp16t2cgmiiy7t1c****</para>
-                /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
-                /// <summary>
-                /// <para>The type of the resource.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>instance</para>
-                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }

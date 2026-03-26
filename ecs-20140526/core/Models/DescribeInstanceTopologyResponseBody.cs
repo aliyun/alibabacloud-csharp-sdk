@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>Details about the topology.</para>
-        /// </summary>
         [NameInMap("Topologys")]
         [Validation(Required=false)]
         public DescribeInstanceTopologyResponseBodyTopologys Topologys { get; set; }
@@ -30,22 +27,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceTopologyResponseBodyTopologysTopology> Topology { get; set; }
             public class DescribeInstanceTopologyResponseBodyTopologysTopology : TeaModel {
-                /// <summary>
-                /// <para>The ID of the host where the ECS instance resides. This parameter is encrypted and cannot match the ID of the ECS instance. However, if the values of this parameter for different ECS instances are the same, the ECS instances reside on the same host.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ZWNobyBo****</para>
-                /// </summary>
                 [NameInMap("HostId")]
                 [Validation(Required=false)]
                 public string HostId { get; set; }
 
-                /// <summary>
-                /// <para>The instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>i-bp67acfmxazb4p****</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }

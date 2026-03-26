@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The IDs of the SCUs.</para>
-        /// </summary>
         [NameInMap("StorageCapacityUnitIds")]
         [Validation(Required=false)]
         public PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds StorageCapacityUnitIds { get; set; }

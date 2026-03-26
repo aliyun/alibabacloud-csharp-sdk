@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelineExecutionsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The total number of returned image components.</para>
-        /// </summary>
         [NameInMap("ImagePipelineExecution")]
         [Validation(Required=false)]
         public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecution ImagePipelineExecution { get; set; }
@@ -20,103 +17,38 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSet> ImagePipelineExecutionSet { get; set; }
             public class DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSet : TeaModel {
-                /// <summary>
-                /// <para>Details of the image creation tasks.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2020-11-24T06:00:00Z</para>
-                /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
-                /// <summary>
-                /// <para>The data returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>exec-5fb8facb8ed7427c****</para>
-                /// </summary>
                 [NameInMap("ExecutionId")]
                 [Validation(Required=false)]
                 public string ExecutionId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the resource group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>m-bp67acfmxazb4p****</para>
-                /// </summary>
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
-                /// <summary>
-                /// <para>Details of the image creation task.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ip-2ze5tsl5bp6nf2b3****</para>
-                /// </summary>
                 [NameInMap("ImagePipelineId")]
                 [Validation(Required=false)]
                 public string ImagePipelineId { get; set; }
 
-                /// <summary>
-                /// <para>The last modification time of the image creation task.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Create transition vpc &quot;vpc-2ze70rc7093j9idu6****&quot; success!</para>
-                /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the image template.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2020-11-25T06:00:00Z</para>
-                /// </summary>
                 [NameInMap("ModifiedTime")]
                 [Validation(Required=false)]
                 public string ModifiedTime { get; set; }
 
-                /// <summary>
-                /// <para>The status of the image creation task. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>PREPARING: Resources, such as intermediate instances, are being created.</description></item>
-                /// <item><description>REPAIRING: The source image is being repaired.</description></item>
-                /// <item><description>BUILDING: The user-defined commands are being run and an image is being created.</description></item>
-                /// <item><description>TESTING: The user-defined test commands are being run.</description></item>
-                /// <item><description>DISTRIBUTING: The created image is being copied and shared.</description></item>
-                /// <item><description>RELEASING: The temporary resources generated during the image creation process are being released.</description></item>
-                /// <item><description>SUCCESS The image creation task is completed.</description></item>
-                /// <item><description>PARTITION_SUCCESS: The image creation task is partially completed. The image is created, but exceptions may occur when the image was copied or shared or when temporary resources were released.</description></item>
-                /// <item><description>FAILED: The image creation task fails.</description></item>
-                /// <item><description>TEST_FAILED: The image is created, but the test fails.</description></item>
-                /// <item><description>CANCELLING: The image creation task is being canceled.</description></item>
-                /// <item><description>CANCELLED: The image creation task is canceled.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rg-bp67acfmxazb4p****</para>
-                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
-                /// <summary>
-                /// <para>The time when the image creation task was created.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>BUILDING</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the image.</para>
-                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTags Tags { get; set; }
@@ -125,22 +57,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTagsTag> Tag { get; set; }
                     public class DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTagsTag : TeaModel {
-                        /// <summary>
-                        /// <para>The tag of the image creation task.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>TestValue</para>
-                        /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
-                        /// <summary>
-                        /// <para>The tags of the image creation task.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>TestKey</para>
-                        /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
                         public string TagValue { get; set; }

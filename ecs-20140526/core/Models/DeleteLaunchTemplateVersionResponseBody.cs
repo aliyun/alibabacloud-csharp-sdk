@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteLaunchTemplateVersionResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The deleted launch template versions.</para>
-        /// </summary>
         [NameInMap("LaunchTemplateVersions")]
         [Validation(Required=false)]
         public DeleteLaunchTemplateVersionResponseBodyLaunchTemplateVersions LaunchTemplateVersions { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DeleteLaunchTemplateVersionResponseBodyLaunchTemplateVersionsLaunchTemplateVersion> LaunchTemplateVersion { get; set; }
             public class DeleteLaunchTemplateVersionResponseBodyLaunchTemplateVersionsLaunchTemplateVersion : TeaModel {
-                /// <summary>
-                /// <para>The ID of the launch template.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>lt-m5eiaupmvm2op9d****</para>
-                /// </summary>
                 [NameInMap("LaunchTemplateId")]
                 [Validation(Required=false)]
                 public string LaunchTemplateId { get; set; }
 
-                /// <summary>
-                /// <para>The version number of the launch template.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("LaunchTemplateVersionNumber")]
                 [Validation(Required=false)]
                 public long? LaunchTemplateVersionNumber { get; set; }

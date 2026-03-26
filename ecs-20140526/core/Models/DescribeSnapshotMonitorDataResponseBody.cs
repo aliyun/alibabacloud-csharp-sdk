@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotMonitorDataResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The monitoring data of snapshot sizes.</para>
-        /// </summary>
         [NameInMap("MonitorData")]
         [Validation(Required=false)]
         public DescribeSnapshotMonitorDataResponseBodyMonitorData MonitorData { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint> DataPoint { get; set; }
             public class DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint : TeaModel {
-                /// <summary>
-                /// <para>The total size of snapshots. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>243036848128</para>
-                /// </summary>
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public long? Size { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp that corresponds to a snapshot size.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-05-10T04:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }

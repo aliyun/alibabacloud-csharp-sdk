@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceAttachmentAttributesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information about the association between private pools and instances.</para>
-        /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public DescribeInstanceAttachmentAttributesResponseBodyInstances Instances { get; set; }
@@ -20,37 +17,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance> Instance { get; set; }
             public class DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance : TeaModel {
-                /// <summary>
-                /// <para>The ID of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>i-bp67acfmxazb4****</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the private pool. If the value of <c>PrivatePoolOptionsMatchCriteria</c> is <c>Open</c>, the value of PrivatePoolOptionsId is the ID of the private pool that is automatically matched to the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>eap-bp67acfmxazb4****</para>
-                /// </summary>
                 [NameInMap("PrivatePoolOptionsId")]
                 [Validation(Required=false)]
                 public string PrivatePoolOptionsId { get; set; }
 
-                /// <summary>
-                /// <para>The match mode of the private pool. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Open: open private pool. Instances automatically match an open private pool.</description></item>
-                /// <item><description>Target: specified private pool. Instances match a specified private pool.</description></item>
-                /// <item><description>None: no private pool. Instances do not use private pools.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Open</para>
-                /// </summary>
                 [NameInMap("PrivatePoolOptionsMatchCriteria")]
                 [Validation(Required=false)]
                 public string PrivatePoolOptionsMatchCriteria { get; set; }

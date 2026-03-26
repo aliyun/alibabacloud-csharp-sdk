@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RunInstancesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The instance IDs.</para>
-        /// </summary>
         [NameInMap("InstanceIdSets")]
         [Validation(Required=false)]
         public RunInstancesResponseBodyInstanceIdSets InstanceIdSets { get; set; }

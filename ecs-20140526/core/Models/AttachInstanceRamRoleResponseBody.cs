@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AttachInstanceRamRoleResponseBody : TeaModel {
-        /// <summary>
-        /// <para>Details about the results of attaching the instance RAM role.</para>
-        /// </summary>
         [NameInMap("AttachInstanceRamRoleResults")]
         [Validation(Required=false)]
         public AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResults AttachInstanceRamRoleResults { get; set; }
@@ -20,42 +17,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResultsAttachInstanceRamRoleResult> AttachInstanceRamRoleResult { get; set; }
             public class AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResultsAttachInstanceRamRoleResult : TeaModel {
-                /// <summary>
-                /// <para>Indicates whether the instance RAM role was attached. If the instance RAM role was attached, 200 is returned. If the instance RAM role failed to be attached, any other value is returned. For more information, see the &quot;Error codes&quot; section.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>200</para>
-                /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>i-bp10ws62o04ubhvi****</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the instance RAM role was attached. If the instance RAM role was attached, success is returned. If the instance RAM role failed to be attached, any other value is returned. For more information, see the &quot;Error codes&quot; section.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>success</para>
-                /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the instance RAM role was attached.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("Success")]
                 [Validation(Required=false)]
                 public bool? Success { get; set; }

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeHpcClustersResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The name of the HPC cluster.</para>
-        /// </summary>
         [NameInMap("HpcClusters")]
         [Validation(Required=false)]
         public DescribeHpcClustersResponseBodyHpcClusters HpcClusters { get; set; }
@@ -20,32 +17,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeHpcClustersResponseBodyHpcClustersHpcCluster> HpcCluster { get; set; }
             public class DescribeHpcClustersResponseBodyHpcClustersHpcCluster : TeaModel {
-                /// <summary>
-                /// <para>The description of the HPC cluster.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testDescription</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The description of the HPC cluster.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>hpc-bp1a5zr3u7nq9cx****</para>
-                /// </summary>
                 [NameInMap("HpcClusterId")]
                 [Validation(Required=false)]
                 public string HpcClusterId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the HPC cluster.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testName</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }

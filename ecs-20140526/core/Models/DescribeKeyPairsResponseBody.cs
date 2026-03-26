@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeKeyPairsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information of the key pairs.</para>
-        /// </summary>
         [NameInMap("KeyPairs")]
         [Validation(Required=false)]
         public DescribeKeyPairsResponseBodyKeyPairs KeyPairs { get; set; }
@@ -20,59 +17,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeKeyPairsResponseBodyKeyPairsKeyPair> KeyPair { get; set; }
             public class DescribeKeyPairsResponseBodyKeyPairsKeyPair : TeaModel {
-                /// <summary>
-                /// <para>The time when the key pair was created.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2023-09-04T08:33Z</para>
-                /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
-                /// <summary>
-                /// <para>The fingerprint of the key pair.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ABC1234567</para>
-                /// </summary>
                 [NameInMap("KeyPairFingerPrint")]
                 [Validation(Required=false)]
                 public string KeyPairFingerPrint { get; set; }
 
-                /// <summary>
-                /// <para>The name of the key pair.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testKeyPairName</para>
-                /// </summary>
                 [NameInMap("KeyPairName")]
                 [Validation(Required=false)]
                 public string KeyPairName { get; set; }
 
-                /// <summary>
-                /// <para>The content of the public key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ssh-rsa****</para>
-                /// </summary>
                 [NameInMap("PublicKey")]
                 [Validation(Required=false)]
                 public string PublicKey { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the resource group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rg-amnhr7u7c7hj****</para>
-                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
-                /// <summary>
-                /// <para>The tags of the key pair.</para>
-                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeKeyPairsResponseBodyKeyPairsKeyPairTags Tags { get; set; }
@@ -81,22 +45,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeKeyPairsResponseBodyKeyPairsKeyPairTagsTag> Tag { get; set; }
                     public class DescribeKeyPairsResponseBodyKeyPairsKeyPairTagsTag : TeaModel {
-                        /// <summary>
-                        /// <para>The tag key of the key pair.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>TestKey</para>
-                        /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
-                        /// <summary>
-                        /// <para>The tag value of the key pair.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>TestValue</para>
-                        /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
                         public string TagValue { get; set; }

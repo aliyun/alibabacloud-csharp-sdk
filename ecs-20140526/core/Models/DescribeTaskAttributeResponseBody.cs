@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string FinishedTime { get; set; }
 
-        /// <summary>
-        /// <para>The return data of the task.</para>
-        /// </summary>
         [NameInMap("OperationProgressSet")]
         [Validation(Required=false)]
         public DescribeTaskAttributeResponseBodyOperationProgressSet OperationProgressSet { get; set; }
@@ -50,39 +47,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress> OperationProgress { get; set; }
             public class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress : TeaModel {
-                /// <summary>
-                /// <para>The error code.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ParameterInvalid</para>
-                /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
-                /// <summary>
-                /// <para>The error message.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>The specified RegionId parameter is invalid.</para>
-                /// </summary>
                 [NameInMap("ErrorMsg")]
                 [Validation(Required=false)]
                 public string ErrorMsg { get; set; }
 
-                /// <summary>
-                /// <para>The status of the operation.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Success</para>
-                /// </summary>
                 [NameInMap("OperationStatus")]
                 [Validation(Required=false)]
                 public string OperationStatus { get; set; }
 
-                /// <summary>
-                /// <para>The type of resource information.</para>
-                /// </summary>
                 [NameInMap("RelatedItemSet")]
                 [Validation(Required=false)]
                 public DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSet RelatedItemSet { get; set; }
@@ -91,22 +67,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem> RelatedItem { get; set; }
                     public class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem : TeaModel {
-                        /// <summary>
-                        /// <para>The name of the related item.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>OSSObject</para>
-                        /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
-                        /// <summary>
-                        /// <para>The value of the related item.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>MYOSSPRE_m-23f8tcp***_t-23ym6mv***.vhd</para>
-                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }

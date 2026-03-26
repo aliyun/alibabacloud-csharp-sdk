@@ -43,9 +43,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        /// <summary>
-        /// <para>Details about the entries in the prefix list.</para>
-        /// </summary>
         [NameInMap("Entries")]
         [Validation(Required=false)]
         public DescribePrefixListAttributesResponseBodyEntries Entries { get; set; }
@@ -54,22 +51,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribePrefixListAttributesResponseBodyEntriesEntry> Entry { get; set; }
             public class DescribePrefixListAttributesResponseBodyEntriesEntry : TeaModel {
-                /// <summary>
-                /// <para>The CIDR block in entry N.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>192.168.1.0/24</para>
-                /// </summary>
                 [NameInMap("Cidr")]
                 [Validation(Required=false)]
                 public string Cidr { get; set; }
 
-                /// <summary>
-                /// <para>The description in entry N.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Description Sample 01</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }

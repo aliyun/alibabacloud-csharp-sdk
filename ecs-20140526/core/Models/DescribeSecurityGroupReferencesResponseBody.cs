@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>Details about the references to the specified security groups.</para>
-        /// </summary>
         [NameInMap("SecurityGroupReferences")]
         [Validation(Required=false)]
         public DescribeSecurityGroupReferencesResponseBodySecurityGroupReferences SecurityGroupReferences { get; set; }
@@ -30,9 +27,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReference> SecurityGroupReference { get; set; }
             public class DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReference : TeaModel {
-                /// <summary>
-                /// <para>Details about the security groups whose rules reference the specified security group.</para>
-                /// </summary>
                 [NameInMap("ReferencingSecurityGroups")]
                 [Validation(Required=false)]
                 public DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroups ReferencingSecurityGroups { get; set; }
@@ -41,22 +35,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroupsReferencingSecurityGroup> ReferencingSecurityGroup { get; set; }
                     public class DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroupsReferencingSecurityGroup : TeaModel {
-                        /// <summary>
-                        /// <para>The ID of the Alibaba Cloud account to which the security group whose rules reference the specified security group belongs.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>123456****</para>
-                        /// </summary>
                         [NameInMap("AliUid")]
                         [Validation(Required=false)]
                         public string AliUid { get; set; }
 
-                        /// <summary>
-                        /// <para>The ID of the security group whose rules reference the specified security group.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>sg-bp67acfmxazb4j****</para>
-                        /// </summary>
                         [NameInMap("SecurityGroupId")]
                         [Validation(Required=false)]
                         public string SecurityGroupId { get; set; }
@@ -65,12 +47,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 }
 
-                /// <summary>
-                /// <para>The ID of the specified security group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>sg-bp67acfmxazb4p****</para>
-                /// </summary>
                 [NameInMap("SecurityGroupId")]
                 [Validation(Required=false)]
                 public string SecurityGroupId { get; set; }

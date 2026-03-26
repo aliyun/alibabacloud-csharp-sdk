@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        /// <summary>
-        /// <para>The IPv4 prefixes assigned to the ENI.</para>
-        /// </summary>
         [NameInMap("Ipv4PrefixSets")]
         [Validation(Required=false)]
         public CreateNetworkInterfaceResponseBodyIpv4PrefixSets Ipv4PrefixSets { get; set; }
@@ -30,12 +27,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<CreateNetworkInterfaceResponseBodyIpv4PrefixSetsIpv4PrefixSet> Ipv4PrefixSet { get; set; }
             public class CreateNetworkInterfaceResponseBodyIpv4PrefixSetsIpv4PrefixSet : TeaModel {
-                /// <summary>
-                /// <para>The IPv4 prefix assigned to the ENI.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>hide</para>
-                /// </summary>
                 [NameInMap("Ipv4Prefix")]
                 [Validation(Required=false)]
                 public string Ipv4Prefix { get; set; }
@@ -44,9 +35,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
-        /// <summary>
-        /// <para>The IPv6 prefixes assigned to the ENI.</para>
-        /// </summary>
         [NameInMap("Ipv6PrefixSets")]
         [Validation(Required=false)]
         public CreateNetworkInterfaceResponseBodyIpv6PrefixSets Ipv6PrefixSets { get; set; }
@@ -55,12 +43,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<CreateNetworkInterfaceResponseBodyIpv6PrefixSetsIpv6PrefixSet> Ipv6PrefixSet { get; set; }
             public class CreateNetworkInterfaceResponseBodyIpv6PrefixSetsIpv6PrefixSet : TeaModel {
-                /// <summary>
-                /// <para>The IPv6 prefix assigned to the ENI.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>hide</para>
-                /// </summary>
                 [NameInMap("Ipv6Prefix")]
                 [Validation(Required=false)]
                 public string Ipv6Prefix { get; set; }
@@ -69,9 +51,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
-        /// <summary>
-        /// <para>The IPv6 addresses assigned to the ENI.</para>
-        /// </summary>
         [NameInMap("Ipv6Sets")]
         [Validation(Required=false)]
         public CreateNetworkInterfaceResponseBodyIpv6Sets Ipv6Sets { get; set; }
@@ -80,12 +59,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<CreateNetworkInterfaceResponseBodyIpv6SetsIpv6Set> Ipv6Set { get; set; }
             public class CreateNetworkInterfaceResponseBodyIpv6SetsIpv6Set : TeaModel {
-                /// <summary>
-                /// <para>The IPv6 address assigned to the ENI.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2001:db8:1234:1a00::****</para>
-                /// </summary>
                 [NameInMap("Ipv6Address")]
                 [Validation(Required=false)]
                 public string Ipv6Address { get; set; }
@@ -144,9 +117,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string PrivateIpAddress { get; set; }
 
-        /// <summary>
-        /// <para>The private IP addresses.</para>
-        /// </summary>
         [NameInMap("PrivateIpSets")]
         [Validation(Required=false)]
         public CreateNetworkInterfaceResponseBodyPrivateIpSets PrivateIpSets { get; set; }
@@ -155,22 +125,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet> PrivateIpSet { get; set; }
             public class CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet : TeaModel {
-                /// <summary>
-                /// <para>Indicates whether the private IP address is the primary private IP address.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("Primary")]
                 [Validation(Required=false)]
                 public bool? Primary { get; set; }
 
-                /// <summary>
-                /// <para>The private IP address of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><c>172.17.**.**</c></para>
-                /// </summary>
                 [NameInMap("PrivateIpAddress")]
                 [Validation(Required=false)]
                 public string PrivateIpAddress { get; set; }
@@ -199,9 +157,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        /// <summary>
-        /// <para>The IDs of the security groups to which the ENI belongs.</para>
-        /// </summary>
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
         public CreateNetworkInterfaceResponseBodySecurityGroupIds SecurityGroupIds { get; set; }
@@ -254,9 +209,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
-        /// <summary>
-        /// <para>The tags of the ENI.</para>
-        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public CreateNetworkInterfaceResponseBodyTags Tags { get; set; }
@@ -265,22 +217,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<CreateNetworkInterfaceResponseBodyTagsTag> Tag { get; set; }
             public class CreateNetworkInterfaceResponseBodyTagsTag : TeaModel {
-                /// <summary>
-                /// <para>The tag key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>TestKey</para>
-                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
-                /// <summary>
-                /// <para>The tag value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>TestValue</para>
-                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

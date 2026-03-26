@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The result set of the unbind operation.</para>
-        /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public DetachKeyPairResponseBodyResults Results { get; set; }
@@ -50,42 +47,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DetachKeyPairResponseBodyResultsResult> Result { get; set; }
             public class DetachKeyPairResponseBodyResultsResult : TeaModel {
-                /// <summary>
-                /// <para>The operation status code that is returned. 200 indicates that the operation is successful.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>200</para>
-                /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>i-bp1d6tsvznfghy7y****</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
-                /// <summary>
-                /// <para>The result of the operation. For example, if the value of <c>Code</c> is 200, the value of <c>Message</c> is <c>successful</c>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>successful</para>
-                /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the operation is successful.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("Success")]
                 [Validation(Required=false)]
                 public string Success { get; set; }

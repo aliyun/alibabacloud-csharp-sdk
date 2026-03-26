@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDedicatedHostsChargeTypeResponseBody : TeaModel {
-        /// <summary>
-        /// <para>Details about the charges for the order.</para>
-        /// </summary>
         [NameInMap("FeeOfInstances")]
         [Validation(Required=false)]
         public ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstances FeeOfInstances { get; set; }
@@ -20,34 +17,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstancesFeeOfInstance> FeeOfInstance { get; set; }
             public class ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstancesFeeOfInstance : TeaModel {
-                /// <summary>
-                /// <para>The unit of currency for the bill.</para>
-                /// <para>Alibaba Cloud China site (aliyun.com): CNY</para>
-                /// <para>Alibaba Cloud International site (alibabacloud.com): USD</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>CNY</para>
-                /// </summary>
                 [NameInMap("Currency")]
                 [Validation(Required=false)]
                 public string Currency { get; set; }
 
-                /// <summary>
-                /// <para>The charged amount.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("Fee")]
                 [Validation(Required=false)]
                 public string Fee { get; set; }
 
-                /// <summary>
-                /// <para>The IDs of the dedicated hosts.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>dh-bp181e5064b5sotrr****</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }

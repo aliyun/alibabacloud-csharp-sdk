@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeElasticityAssuranceInstancesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>Details about the instances that match and use the elasticity assurance.</para>
-        /// </summary>
         [NameInMap("ElasticityAssuranceItem")]
         [Validation(Required=false)]
         public DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem ElasticityAssuranceItem { get; set; }
@@ -20,12 +17,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItemInstanceIdSet> InstanceIdSet { get; set; }
             public class DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItemInstanceIdSet : TeaModel {
-                /// <summary>
-                /// <para>The instance ID</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>i-bp67acfmxazb4****</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }

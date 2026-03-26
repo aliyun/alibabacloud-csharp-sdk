@@ -16,9 +16,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet AssignedPrivateIpAddressesSet { get; set; }
         public class AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet : TeaModel {
-            /// <summary>
-            /// <para>Details about the assigned IPv4 prefixes.</para>
-            /// </summary>
             [NameInMap("Ipv4PrefixSet")]
             [Validation(Required=false)]
             public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetIpv4PrefixSet Ipv4PrefixSet { get; set; }
@@ -39,9 +36,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string NetworkInterfaceId { get; set; }
 
-            /// <summary>
-            /// <para>The secondary private IP addresses that are assigned to the ENI.</para>
-            /// </summary>
             [NameInMap("PrivateIpSet")]
             [Validation(Required=false)]
             public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetPrivateIpSet PrivateIpSet { get; set; }

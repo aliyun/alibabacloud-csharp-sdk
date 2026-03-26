@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceRamRoleResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The IDs of the ECS instances and the names of the corresponding instance RAM roles.</para>
-        /// </summary>
         [NameInMap("InstanceRamRoleSets")]
         [Validation(Required=false)]
         public DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets InstanceRamRoleSets { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet> InstanceRamRoleSet { get; set; }
             public class DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet : TeaModel {
-                /// <summary>
-                /// <para>The ID of the instance</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>i-bp67acfmxazb4p****</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the instance RAM role.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>EcsServiceRole-EcsDocGuideTest</para>
-                /// </summary>
                 [NameInMap("RamRoleName")]
                 [Validation(Required=false)]
                 public string RamRoleName { get; set; }

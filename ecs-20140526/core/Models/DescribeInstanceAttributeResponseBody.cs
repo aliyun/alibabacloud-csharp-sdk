@@ -204,9 +204,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
-        /// <summary>
-        /// <para>The internal IP address of the instance located in the classic network.</para>
-        /// </summary>
         [NameInMap("InnerIpAddress")]
         [Validation(Required=false)]
         public DescribeInstanceAttributeResponseBodyInnerIpAddress InnerIpAddress { get; set; }
@@ -383,16 +380,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
-        /// <summary>
-        /// <para>The reason why the instance was locked. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>financial: The dedicated host was locked due to overdue payments.</description></item>
-        /// <item><description>security: The instance was locked due to security reasons.</description></item>
-        /// <item><description>recycling: The spot instance was locked and pending release.</description></item>
-        /// <item><description>dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</description></item>
-        /// <item><description>refunded: The instance was locked because a refund was made for the instance.</description></item>
-        /// </list>
-        /// </summary>
         [NameInMap("OperationLocks")]
         [Validation(Required=false)]
         public DescribeInstanceAttributeResponseBodyOperationLocks OperationLocks { get; set; }
@@ -401,19 +388,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceAttributeResponseBodyOperationLocksLockReason> LockReason { get; set; }
             public class DescribeInstanceAttributeResponseBodyOperationLocksLockReason : TeaModel {
-                /// <summary>
-                /// <para>The reason why the instance was locked. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>financial: The instance was locked due to overdue payments.</description></item>
-                /// <item><description>security: The instance was locked due to security reasons.</description></item>
-                /// <item><description>recycling: The spot instance was locked and pending release.</description></item>
-                /// <item><description>dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</description></item>
-                /// <item><description>refunded: The instance was locked because a refund is made for the instance.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>financial</para>
-                /// </summary>
                 [NameInMap("LockReason")]
                 [Validation(Required=false)]
                 public string LockReason { get; set; }
@@ -422,9 +396,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
-        /// <summary>
-        /// <para>The public IP address of the instance.</para>
-        /// </summary>
         [NameInMap("PublicIpAddress")]
         [Validation(Required=false)]
         public DescribeInstanceAttributeResponseBodyPublicIpAddress PublicIpAddress { get; set; }
@@ -455,9 +426,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The IDs of the security groups to which the instance belongs.</para>
-        /// </summary>
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
         public DescribeInstanceAttributeResponseBodySecurityGroupIds SecurityGroupIds { get; set; }
@@ -540,9 +508,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string NatIpAddress { get; set; }
 
-            /// <summary>
-            /// <para>The private IP address of the instance.</para>
-            /// </summary>
             [NameInMap("PrivateIpAddress")]
             [Validation(Required=false)]
             public DescribeInstanceAttributeResponseBodyVpcAttributesPrivateIpAddress PrivateIpAddress { get; set; }

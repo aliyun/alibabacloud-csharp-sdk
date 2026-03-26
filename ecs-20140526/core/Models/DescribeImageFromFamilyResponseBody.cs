@@ -50,9 +50,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            /// <summary>
-            /// <para>The mappings between the disk and the snapshot in the image.</para>
-            /// </summary>
             [NameInMap("DiskDeviceMappings")]
             [Validation(Required=false)]
             public DescribeImageFromFamilyResponseBodyImageDiskDeviceMappings DiskDeviceMappings { get; set; }
@@ -61,75 +58,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public List<DescribeImageFromFamilyResponseBodyImageDiskDeviceMappingsDiskDeviceMapping> DiskDeviceMapping { get; set; }
                 public class DescribeImageFromFamilyResponseBodyImageDiskDeviceMappingsDiskDeviceMapping : TeaModel {
-                    /// <summary>
-                    /// <para>The device name of the disk. Example: /dev/xvdb.</para>
-                    /// <remarks>
-                    /// <para> This parameter will be removed in the future. To ensure compatibility, we recommend that you use other parameters.</para>
-                    /// </remarks>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>/dev/xvdb</para>
-                    /// </summary>
                     [NameInMap("Device")]
                     [Validation(Required=false)]
                     public string Device { get; set; }
 
-                    /// <summary>
-                    /// <para>The image format.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>qcow2</para>
-                    /// </summary>
                     [NameInMap("Format")]
                     [Validation(Required=false)]
                     public string Format { get; set; }
 
-                    /// <summary>
-                    /// <para>The OSS bucket that contains the imported image file.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>testEcsImport</para>
-                    /// </summary>
                     [NameInMap("ImportOSSBucket")]
                     [Validation(Required=false)]
                     public string ImportOSSBucket { get; set; }
 
-                    /// <summary>
-                    /// <para>The OSS object to which the imported image belongs.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>imageImport</para>
-                    /// </summary>
                     [NameInMap("ImportOSSObject")]
                     [Validation(Required=false)]
                     public string ImportOSSObject { get; set; }
 
-                    /// <summary>
-                    /// <para>The size of the disk. Unit: GiB.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>80</para>
-                    /// </summary>
                     [NameInMap("Size")]
                     [Validation(Required=false)]
                     public string Size { get; set; }
 
-                    /// <summary>
-                    /// <para>The snapshot ID.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>s-bp17ot2q7x72ggtw****</para>
-                    /// </summary>
                     [NameInMap("SnapshotId")]
                     [Validation(Required=false)]
                     public string SnapshotId { get; set; }
 
-                    /// <summary>
-                    /// <para>The image type.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>custom</para>
-                    /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
@@ -324,9 +276,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
-            /// <summary>
-            /// <para>The tags of the image.</para>
-            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public DescribeImageFromFamilyResponseBodyImageTags Tags { get; set; }
@@ -335,22 +284,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public List<DescribeImageFromFamilyResponseBodyImageTagsTag> Tag { get; set; }
                 public class DescribeImageFromFamilyResponseBodyImageTagsTag : TeaModel {
-                    /// <summary>
-                    /// <para>The tag key of the custom image.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>TestKey</para>
-                    /// </summary>
                     [NameInMap("TagKey")]
                     [Validation(Required=false)]
                     public string TagKey { get; set; }
 
-                    /// <summary>
-                    /// <para>The tag value of the custom image.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>TestValue</para>
-                    /// </summary>
                     [NameInMap("TagValue")]
                     [Validation(Required=false)]
                     public string TagValue { get; set; }

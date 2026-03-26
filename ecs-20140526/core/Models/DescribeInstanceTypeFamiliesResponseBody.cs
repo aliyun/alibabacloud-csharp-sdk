@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceTypeFamiliesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The instance families.</para>
-        /// </summary>
         [NameInMap("InstanceTypeFamilies")]
         [Validation(Required=false)]
         public DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies InstanceTypeFamilies { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily> InstanceTypeFamily { get; set; }
             public class DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily : TeaModel {
-                /// <summary>
-                /// <para>The series of the instance family.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ecs-5</para>
-                /// </summary>
                 [NameInMap("Generation")]
                 [Validation(Required=false)]
                 public string Generation { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the instance family.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ecs.g6</para>
-                /// </summary>
                 [NameInMap("InstanceTypeFamilyId")]
                 [Validation(Required=false)]
                 public string InstanceTypeFamilyId { get; set; }

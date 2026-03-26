@@ -29,18 +29,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>hide</para>
-        /// </summary>
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>111</para>
-        /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -56,18 +48,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>hide</para>
-        /// </summary>
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>111</para>
-        /// </summary>
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }

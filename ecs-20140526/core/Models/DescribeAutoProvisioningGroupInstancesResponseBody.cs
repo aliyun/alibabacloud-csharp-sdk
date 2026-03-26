@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAutoProvisioningGroupInstancesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information about the instances in the auto provisioning group.</para>
-        /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public DescribeAutoProvisioningGroupInstancesResponseBodyInstances Instances { get; set; }
@@ -20,130 +17,50 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance> Instance { get; set; }
             public class DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance : TeaModel {
-                /// <summary>
-                /// <para>The number of vCPU cores of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("CPU")]
                 [Validation(Required=false)]
                 public int? CPU { get; set; }
 
-                /// <summary>
-                /// <para>The time when the instance was created.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2017-12-10T04:04Z</para>
-                /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
-                /// <summary>
-                /// <para>The instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>i-bp67acfmxazb4p****</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
-                /// <summary>
-                /// <para>The ECS instance type.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ecs.g5.large</para>
-                /// </summary>
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
                 public string InstanceType { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the instance is an I/O optimized instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("IoOptimized")]
                 [Validation(Required=false)]
                 public bool? IoOptimized { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the instance is a spot instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("IsSpot")]
                 [Validation(Required=false)]
                 public bool? IsSpot { get; set; }
 
-                /// <summary>
-                /// <para>The memory capacity of the instance. Unit: MiB.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1024</para>
-                /// </summary>
                 [NameInMap("Memory")]
                 [Validation(Required=false)]
                 public int? Memory { get; set; }
 
-                /// <summary>
-                /// <para>The network type of the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>vpc: Virtual Private Cloud (VPC)</description></item>
-                /// <item><description>classic: classic network</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vpc</para>
-                /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
 
-                /// <summary>
-                /// <para>The operating system type of the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>windows</description></item>
-                /// <item><description>linux</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>linux</para>
-                /// </summary>
                 [NameInMap("OsType")]
                 [Validation(Required=false)]
                 public string OsType { get; set; }
 
-                /// <summary>
-                /// <para>The region ID of the container group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
-                /// <summary>
-                /// <para>The status of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Running</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the zone to which the instance belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou-g</para>
-                /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }

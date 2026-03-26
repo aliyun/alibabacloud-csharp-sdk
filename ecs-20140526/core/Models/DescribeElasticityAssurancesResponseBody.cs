@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeElasticityAssurancesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>Details about the elasticity assurances.</para>
-        /// </summary>
         [NameInMap("ElasticityAssuranceSet")]
         [Validation(Required=false)]
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSet ElasticityAssuranceSet { get; set; }
@@ -20,9 +17,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem> ElasticityAssuranceItem { get; set; }
             public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem : TeaModel {
-                /// <summary>
-                /// <para>Details of the allocated resources.</para>
-                /// </summary>
                 [NameInMap("AllocatedResources")]
                 [Validation(Required=false)]
                 public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResources AllocatedResources { get; set; }
@@ -31,23 +25,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource> AllocatedResource { get; set; }
                     public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource : TeaModel {
-                        /// <summary>
-                        /// <remarks>
-                        /// <para> This parameter is not publicly available.</para>
-                        /// </remarks>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>5</para>
-                        /// </summary>
                         [NameInMap("AvailableAmount")]
                         [Validation(Required=false)]
                         public int? AvailableAmount { get; set; }
 
-                        /// <summary>
-                        /// <remarks>
-                        /// <para> This parameter is not publicly available.</para>
-                        /// </remarks>
-                        /// </summary>
                         [NameInMap("ElasticityAssuranceUsages")]
                         [Validation(Required=false)]
                         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsages ElasticityAssuranceUsages { get; set; }
@@ -56,38 +37,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [Validation(Required=false)]
                             public List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage> ElasticityAssuranceUsage { get; set; }
                             public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResourceElasticityAssuranceUsagesElasticityAssuranceUsage : TeaModel {
-                                /// <summary>
-                                /// <remarks>
-                                /// <para> This parameter is not publicly available.</para>
-                                /// </remarks>
-                                /// 
-                                /// <b>Example:</b>
-                                /// <para>1144775968548340</para>
-                                /// </summary>
                                 [NameInMap("AccountId")]
                                 [Validation(Required=false)]
                                 public string AccountId { get; set; }
 
-                                /// <summary>
-                                /// <remarks>
-                                /// <para> This parameter is not publicly available.</para>
-                                /// </remarks>
-                                /// 
-                                /// <b>Example:</b>
-                                /// <para>name</para>
-                                /// </summary>
                                 [NameInMap("ServiceName")]
                                 [Validation(Required=false)]
                                 public string ServiceName { get; set; }
 
-                                /// <summary>
-                                /// <remarks>
-                                /// <para> This parameter is not publicly available.</para>
-                                /// </remarks>
-                                /// 
-                                /// <b>Example:</b>
-                                /// <para>1</para>
-                                /// </summary>
                                 [NameInMap("UsedAmount")]
                                 [Validation(Required=false)]
                                 public int? UsedAmount { get; set; }
@@ -96,42 +53,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                         }
 
-                        /// <summary>
-                        /// <para>The instance type.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>ecs.c6.large</para>
-                        /// </summary>
                         [NameInMap("InstanceType")]
                         [Validation(Required=false)]
                         public string InstanceType { get; set; }
 
-                        /// <summary>
-                        /// <para>The total number of instances for which capacity of an instance type is reserved.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>2</para>
-                        /// </summary>
                         [NameInMap("TotalAmount")]
                         [Validation(Required=false)]
                         public int? TotalAmount { get; set; }
 
-                        /// <summary>
-                        /// <para>The number of instances that have used the elasticity assurance.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>2</para>
-                        /// </summary>
                         [NameInMap("UsedAmount")]
                         [Validation(Required=false)]
                         public int? UsedAmount { get; set; }
 
-                        /// <summary>
-                        /// <para>The zone ID.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>cn-hangzhou-h</para>
-                        /// </summary>
                         [NameInMap("zoneId")]
                         [Validation(Required=false)]
                         public string ZoneId { get; set; }
@@ -140,111 +73,42 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 }
 
-                /// <summary>
-                /// <para>The description of the elasticity assurance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>This is description.</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <remarks>
-                /// <para> This parameter is not publicly available.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>e114477596854834</para>
-                /// </summary>
                 [NameInMap("ElasticityAssuranceOwnerId")]
                 [Validation(Required=false)]
                 public string ElasticityAssuranceOwnerId { get; set; }
 
-                /// <summary>
-                /// <para>The time when the elasticity assurance expires.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2021-12-03T16:00Z</para>
-                /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
 
-                /// <summary>
-                /// <para>The billing method of the instance. The value can be only PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>PostPaid</para>
-                /// </summary>
                 [NameInMap("InstanceChargeType")]
                 [Validation(Required=false)]
                 public string InstanceChargeType { get; set; }
 
-                /// <summary>
-                /// <remarks>
-                /// <para>This parameter is not publicly available.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>null</para>
-                /// </summary>
                 [NameInMap("LatestStartTime")]
                 [Validation(Required=false)]
                 public string LatestStartTime { get; set; }
 
-                /// <summary>
-                /// <para>The type of the elasticity assurance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>ElasticityAssurance: the general-purpose elasticity assurance.</description></item>
-                /// <item><description>TimeDivisionElasticityAssurance: the time-segmented assurance of the elasticity assurance.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ElasticityAssurance</para>
-                /// </summary>
                 [NameInMap("PackageType")]
                 [Validation(Required=false)]
                 public string PackageType { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the elasticity assurance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>eap-bp1ir35kqtn8ywci****</para>
-                /// </summary>
                 [NameInMap("PrivatePoolOptionsId")]
                 [Validation(Required=false)]
                 public string PrivatePoolOptionsId { get; set; }
 
-                /// <summary>
-                /// <para>The type of the private pool associated with the elasticity assurance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Open: open private pool</description></item>
-                /// <item><description>Target: specific private pool</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Target</para>
-                /// </summary>
                 [NameInMap("PrivatePoolOptionsMatchCriteria")]
                 [Validation(Required=false)]
                 public string PrivatePoolOptionsMatchCriteria { get; set; }
 
-                /// <summary>
-                /// <para>The name of the elasticity assurance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>eapTestName</para>
-                /// </summary>
                 [NameInMap("PrivatePoolOptionsName")]
                 [Validation(Required=false)]
                 public string PrivatePoolOptionsName { get; set; }
 
-                /// <summary>
-                /// <para>The recurrence rules of the time-segmented assurances.</para>
-                /// </summary>
                 [NameInMap("RecurrenceRules")]
                 [Validation(Required=false)]
                 public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRules RecurrenceRules { get; set; }
@@ -253,52 +117,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRulesRecurrenceRule> RecurrenceRule { get; set; }
                     public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRulesRecurrenceRule : TeaModel {
-                        /// <summary>
-                        /// <para>The time when the time-segmented assurance ends.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>10</para>
-                        /// </summary>
                         [NameInMap("EndHour")]
                         [Validation(Required=false)]
                         public int? EndHour { get; set; }
 
-                        /// <summary>
-                        /// <para>The type of the recurrence rule. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>Daily</description></item>
-                        /// <item><description>Weekly</description></item>
-                        /// <item><description>Monthly</description></item>
-                        /// </list>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>Daily</para>
-                        /// </summary>
                         [NameInMap("RecurrenceType")]
                         [Validation(Required=false)]
                         public string RecurrenceType { get; set; }
 
-                        /// <summary>
-                        /// <para>The recurrence value of the time-segmented assurance. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>If you set <c>RecurrenceType</c> to <c>Daily</c>, you can set RecurrenceValue to only one value. Valid values: 1 to 31. The time-segmented assurance is performed every few days.</description></item>
-                        /// <item><description>If you set <c>RecurrenceType</c> to <c>Weekly</c>, you can set RecurrenceValue to one or more values. Separate the values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6. For example, <c>1,2</c> indicates that the time-segmented assurance is performed on Monday and Tuesday of every week.</description></item>
-                        /// <item><description>If you set <c>RecurrenceType</c> to <c>Monthly</c>, you can set RecurrenceValue to two values in the <c>A-B</c> format. Valid values of A and B: 1 to 31. B must be greater than or equal to A. For example, <c>1-5</c> indicates that the time-segmented assurance is performed from the 1st to the 5th of each month.</description></item>
-                        /// </list>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>1</para>
-                        /// </summary>
                         [NameInMap("RecurrenceValue")]
                         [Validation(Required=false)]
                         public string RecurrenceValue { get; set; }
 
-                        /// <summary>
-                        /// <para>The time when the time-segmented assurance takes effect.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>4</para>
-                        /// </summary>
                         [NameInMap("StartHour")]
                         [Validation(Required=false)]
                         public int? StartHour { get; set; }
@@ -307,69 +137,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 }
 
-                /// <summary>
-                /// <para>The region ID of the elasticity assurance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the resource group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rg-bp67acfmxazb4p****</para>
-                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
-                /// <summary>
-                /// <para>The time when the elasticity assurance takes effect.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2020-12-03T05:25Z</para>
-                /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
 
-                /// <summary>
-                /// <para>Indicates when the elasticity assurance takes effect. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Now: The elasticity assurance takes effect immediately after it is created.</description></item>
-                /// <item><description>Later: The elasticity assurance takes effect at a specified time.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Now</para>
-                /// </summary>
                 [NameInMap("StartTimeType")]
                 [Validation(Required=false)]
                 public string StartTimeType { get; set; }
 
-                /// <summary>
-                /// <para>The status of the elasticity assurance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Preparing</description></item>
-                /// <item><description>Prepared</description></item>
-                /// <item><description>Active</description></item>
-                /// <item><description>Released</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Active</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
-                /// <summary>
-                /// <para>The tags of the elasticity assurance.</para>
-                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTags Tags { get; set; }
@@ -378,22 +165,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTagsTag> Tag { get; set; }
                     public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTagsTag : TeaModel {
-                        /// <summary>
-                        /// <para>The key of the tag.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>TestKey</para>
-                        /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
-                        /// <summary>
-                        /// <para>The value of the tag.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>TestValue</para>
-                        /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
                         public string TagValue { get; set; }
@@ -402,24 +177,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 }
 
-                /// <summary>
-                /// <para>The total number of times that the elasticity assurance is applied.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Unlimited</para>
-                /// </summary>
                 [NameInMap("TotalAssuranceTimes")]
                 [Validation(Required=false)]
                 public string TotalAssuranceTimes { get; set; }
 
-                /// <summary>
-                /// <remarks>
-                /// <para>This parameter is not publicly available.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("UsedAssuranceTimes")]
                 [Validation(Required=false)]
                 public int? UsedAssuranceTimes { get; set; }

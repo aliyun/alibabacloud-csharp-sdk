@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImageSharePermissionResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The Alibaba Cloud accounts.</para>
-        /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
         public DescribeImageSharePermissionResponseBodyAccounts Accounts { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeImageSharePermissionResponseBodyAccountsAccount> Account { get; set; }
             public class DescribeImageSharePermissionResponseBodyAccountsAccount : TeaModel {
-                /// <summary>
-                /// <para>The ID of the Alibaba Cloud account.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1234567890</para>
-                /// </summary>
                 [NameInMap("AliyunId")]
                 [Validation(Required=false)]
                 public string AliyunId { get; set; }
 
-                /// <summary>
-                /// <para>The time when the image was shared. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2023-01-01T12:05:00Z</para>
-                /// </summary>
                 [NameInMap("SharedTime")]
                 [Validation(Required=false)]
                 public string SharedTime { get; set; }
@@ -94,9 +79,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The shared groups.</para>
-        /// </summary>
         [NameInMap("ShareGroups")]
         [Validation(Required=false)]
         public DescribeImageSharePermissionResponseBodyShareGroups ShareGroups { get; set; }
@@ -105,12 +87,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeImageSharePermissionResponseBodyShareGroupsShareGroup> ShareGroup { get; set; }
             public class DescribeImageSharePermissionResponseBodyShareGroupsShareGroup : TeaModel {
-                /// <summary>
-                /// <para>The shared group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>all</para>
-                /// </summary>
                 [NameInMap("Group")]
                 [Validation(Required=false)]
                 public string Group { get; set; }

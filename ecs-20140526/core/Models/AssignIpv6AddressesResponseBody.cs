@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AssignIpv6AddressesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The IPv6 prefixes of the ENI.</para>
-        /// </summary>
         [NameInMap("Ipv6PrefixSets")]
         [Validation(Required=false)]
         public AssignIpv6AddressesResponseBodyIpv6PrefixSets Ipv6PrefixSets { get; set; }
@@ -22,9 +19,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
-        /// <summary>
-        /// <para>The IPv6 addresses assigned to the ENI.</para>
-        /// </summary>
         [NameInMap("Ipv6Sets")]
         [Validation(Required=false)]
         public AssignIpv6AddressesResponseBodyIpv6Sets Ipv6Sets { get; set; }

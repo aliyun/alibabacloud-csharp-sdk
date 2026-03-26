@@ -26,6 +26,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<string> AllowedUpgradeWindow { get; set; }
 
+            [NameInMap("BootstrapUpgrade")]
+            [Validation(Required=false)]
+            public bool? BootstrapUpgrade { get; set; }
+
+            [NameInMap("DisableUpgrade")]
+            [Validation(Required=false)]
+            public bool? DisableUpgrade { get; set; }
+
             /// <summary>
             /// <para>Specifies whether to enable custom upgrade for Cloud Assistant Agent. If you set this parameter to false, an upgrade attempt is performed for Cloud Assistant Agent every 30 minutes.</para>
             /// <para>Default value: false.</para>
@@ -162,6 +170,36 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("ResourceUsageConfig")]
+        [Validation(Required=false)]
+        public ModifyCloudAssistantSettingsRequestResourceUsageConfig ResourceUsageConfig { get; set; }
+        public class ModifyCloudAssistantSettingsRequestResourceUsageConfig : TeaModel {
+            [NameInMap("CpuLimit")]
+            [Validation(Required=false)]
+            public int? CpuLimit { get; set; }
+
+            [NameInMap("KeepScriptFile")]
+            [Validation(Required=false)]
+            public bool? KeepScriptFile { get; set; }
+
+            [NameInMap("LogFileCountLimit")]
+            [Validation(Required=false)]
+            public int? LogFileCountLimit { get; set; }
+
+            [NameInMap("LogSizeLimit")]
+            [Validation(Required=false)]
+            public string LogSizeLimit { get; set; }
+
+            [NameInMap("MemoryLimit")]
+            [Validation(Required=false)]
+            public string MemoryLimit { get; set; }
+
+            [NameInMap("OverloadLimit")]
+            [Validation(Required=false)]
+            public int? OverloadLimit { get; set; }
+
+        }
 
         /// <summary>
         /// <para>Cloud Assistant Session Manager configuration.</para>

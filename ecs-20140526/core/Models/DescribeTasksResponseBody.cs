@@ -49,9 +49,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>Details about the tasks.</para>
-        /// </summary>
         [NameInMap("TaskSet")]
         [Validation(Required=false)]
         public DescribeTasksResponseBodyTaskSet TaskSet { get; set; }
@@ -60,72 +57,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeTasksResponseBodyTaskSetTask> Task { get; set; }
             public class DescribeTasksResponseBodyTaskSetTask : TeaModel {
-                /// <summary>
-                /// <para>The time when the task was created.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2020-11-24T12:50Z</para>
-                /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
-                /// <summary>
-                /// <para>The time when the task ended.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2020-11-24T12:50Z</para>
-                /// </summary>
                 [NameInMap("FinishedTime")]
                 [Validation(Required=false)]
                 public string FinishedTime { get; set; }
 
-                /// <summary>
-                /// <para>The resource ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>m-bp1i8huqm5u7****</para>
-                /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the task can be canceled.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("SupportCancel")]
                 [Validation(Required=false)]
                 public string SupportCancel { get; set; }
 
-                /// <summary>
-                /// <para>The name of the operation that generates the task.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ImportImage</para>
-                /// </summary>
                 [NameInMap("TaskAction")]
                 [Validation(Required=false)]
                 public string TaskAction { get; set; }
 
-                /// <summary>
-                /// <para>The task ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>t-bp1hvgwromzv32iq****</para>
-                /// </summary>
                 [NameInMap("TaskId")]
                 [Validation(Required=false)]
                 public string TaskId { get; set; }
 
-                /// <summary>
-                /// <para>The task status.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Finished</para>
-                /// </summary>
                 [NameInMap("TaskStatus")]
                 [Validation(Required=false)]
                 public string TaskStatus { get; set; }

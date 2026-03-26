@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceStatusResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The IDs and status of the ECS instances.</para>
-        /// </summary>
         [NameInMap("InstanceStatuses")]
         [Validation(Required=false)]
         public DescribeInstanceStatusResponseBodyInstanceStatuses InstanceStatuses { get; set; }
@@ -20,29 +17,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus> InstanceStatus { get; set; }
             public class DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus : TeaModel {
-                /// <summary>
-                /// <para>The ID of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>i-bp1j4i2jdf3owlhe****</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
-                /// <summary>
-                /// <para>The status of the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Pending: The instance is being created.</description></item>
-                /// <item><description>Running: The instance is running.</description></item>
-                /// <item><description>Starting: The instance is being started.</description></item>
-                /// <item><description>Stopping: The instance is being stopped.</description></item>
-                /// <item><description>Stopped: The instance is stopped.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Running</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }

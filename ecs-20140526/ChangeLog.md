@@ -1,3 +1,15 @@
+2026-03-26 Version: 7.6.1
+- Update API CreateDeploymentSet: add request parameters Type.
+- Update API DescribeCloudAssistantSettings: add response parameters Body.ResourceUsageConfig.
+- Update API DescribeCloudAssistantSettings: add response parameters Body.AgentUpgradeConfig.BootstrapUpgrade.
+- Update API DescribeCloudAssistantSettings: add response parameters Body.AgentUpgradeConfig.DisableUpgrade.
+- Update API DescribeDeploymentSets: add request parameters Type.
+- Update API DescribeDeploymentSets: add response parameters Body.DeploymentSets.$.Type.
+- Update API ModifyCloudAssistantSettings: add request parameters ResourceUsageConfig.
+- Update API ModifyCloudAssistantSettings: add request parameters AgentUpgradeConfig.BootstrapUpgrade.
+- Update API ModifyCloudAssistantSettings: add request parameters AgentUpgradeConfig.DisableUpgrade.
+
+
 2026-02-02 Version: 7.6.0
 - Support API CreatePlanMaintenanceWindow.
 - Support API DeletePlanMaintenanceWindow.
