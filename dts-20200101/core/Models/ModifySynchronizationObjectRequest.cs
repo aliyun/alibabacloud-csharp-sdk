@@ -23,6 +23,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -69,7 +75,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SynchronizationJobId { get; set; }
 
         /// <summary>
+        /// <para>The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141901.html">SynchronizationObjects</a>.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;DBName&quot;: &quot;dtstestdata&quot;}]</para>
         /// </summary>
         [NameInMap("SynchronizationObjects")]
         [Validation(Required=false)]

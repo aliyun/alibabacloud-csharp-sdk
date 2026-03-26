@@ -3954,7 +3954,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作流任务结果</para>
+        /// <para>Creates a document parsing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4016,7 +4016,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作流任务结果</para>
+        /// <para>Creates a document parsing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4078,7 +4078,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作流任务结果</para>
+        /// <para>Creates a document parsing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4096,7 +4096,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作流任务结果</para>
+        /// <para>Creates a document parsing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6898,7 +6898,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>请求所有数据校验任务数据</para>
+        /// <para>Verifies data migration tasks and data synchronization tasks</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6964,7 +6964,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>请求所有数据校验任务数据</para>
+        /// <para>Verifies data migration tasks and data synchronization tasks</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7030,7 +7030,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>请求所有数据校验任务数据</para>
+        /// <para>Verifies data migration tasks and data synchronization tasks</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7048,7 +7048,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>请求所有数据校验任务数据</para>
+        /// <para>Verifies data migration tasks and data synchronization tasks</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9026,7 +9026,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作流任务结果</para>
+        /// <para>Retrieves the result of a document parsing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9080,7 +9080,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作流任务结果</para>
+        /// <para>Retrieves the result of a document parsing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9134,7 +9134,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作流任务结果</para>
+        /// <para>Retrieves the result of a document parsing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9152,7 +9152,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作流任务结果</para>
+        /// <para>Retrieves the result of a document parsing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9170,7 +9170,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作流任务结果</para>
+        /// <para>Queries the execution status of a document parsing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9224,7 +9224,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作流任务结果</para>
+        /// <para>Queries the execution status of a document parsing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9278,7 +9278,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作流任务结果</para>
+        /// <para>Queries the execution status of a document parsing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9296,7 +9296,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作流任务结果</para>
+        /// <para>Queries the execution status of a document parsing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9634,8 +9634,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The latency of incremental data migration or synchronization.
-        /// \\\\\&gt;  If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
+        /// <para>The latency of incremental data migration or synchronization. \\\\\\\\&gt; If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9701,8 +9700,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The latency of incremental data migration or synchronization.
-        /// \\\\\&gt;  If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
+        /// <para>The latency of incremental data migration or synchronization. \\\\\\\\&gt; If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9768,8 +9766,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The latency of incremental data migration or synchronization.
-        /// \\\\\&gt;  If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
+        /// <para>The latency of incremental data migration or synchronization. \\\\\\\\&gt; If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9787,8 +9784,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The latency of incremental data migration or synchronization.
-        /// \\\\\&gt;  If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
+        /// <para>The latency of incremental data migration or synchronization. \\\\\\\\&gt; If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10774,7 +10770,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询GAD实例列表</para>
+        /// <para>Queries the GAD instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10848,7 +10844,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询GAD实例列表</para>
+        /// <para>Queries the GAD instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10922,7 +10918,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询GAD实例列表</para>
+        /// <para>Queries the GAD instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10940,7 +10936,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询GAD实例列表</para>
+        /// <para>Queries the GAD instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12154,7 +12150,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预检查创建GAD订单任务结果</para>
+        /// <para>Queries the result of a precheck task before a GAD instance is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12212,7 +12208,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预检查创建GAD订单任务结果</para>
+        /// <para>Queries the result of a precheck task before a GAD instance is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12270,7 +12266,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预检查创建GAD订单任务结果</para>
+        /// <para>Queries the result of a precheck task before a GAD instance is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12288,7 +12284,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预检查创建GAD订单任务结果</para>
+        /// <para>Queries the result of a precheck task before a GAD instance is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14710,7 +14706,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除从角色</para>
+        /// <para>Removes a secondary instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14768,7 +14764,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除从角色</para>
+        /// <para>Removes a secondary instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14826,7 +14822,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除从角色</para>
+        /// <para>Removes a secondary instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14844,7 +14840,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除从角色</para>
+        /// <para>Removes a secondary instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18082,7 +18078,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改GAD实例名称</para>
+        /// <para>Modifies the name of a GAD instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18140,7 +18136,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改GAD实例名称</para>
+        /// <para>Modifies the name of a GAD instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18198,7 +18194,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改GAD实例名称</para>
+        /// <para>Modifies the name of a GAD instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18216,7 +18212,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改GAD实例名称</para>
+        /// <para>Modifies the name of a GAD instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18930,7 +18926,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预检查创建GAD订单</para>
+        /// <para>Prechecks before a GAD instance is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19016,7 +19012,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预检查创建GAD订单</para>
+        /// <para>Prechecks before a GAD instance is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19102,7 +19098,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预检查创建GAD订单</para>
+        /// <para>Prechecks before a GAD instance is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19120,7 +19116,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预检查创建GAD订单</para>
+        /// <para>Prechecks before a GAD instance is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19798,7 +19794,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调转双向任务的方向</para>
+        /// <para>Reverse the direction of a two-way synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19852,7 +19848,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调转双向任务的方向</para>
+        /// <para>Reverse the direction of a two-way synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19906,7 +19902,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调转双向任务的方向</para>
+        /// <para>Reverse the direction of a two-way synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19924,7 +19920,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调转双向任务的方向</para>
+        /// <para>Reverse the direction of a two-way synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22818,7 +22814,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>物理迁移任务切换上云</para>
+        /// <para>Migrates Microsoft SQL Server (MSSQL) to the cloud by using a physical gateway</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22876,7 +22872,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>物理迁移任务切换上云</para>
+        /// <para>Migrates Microsoft SQL Server (MSSQL) to the cloud by using a physical gateway</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22934,7 +22930,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>物理迁移任务切换上云</para>
+        /// <para>Migrates Microsoft SQL Server (MSSQL) to the cloud by using a physical gateway</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22952,7 +22948,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>物理迁移任务切换上云</para>
+        /// <para>Migrates Microsoft SQL Server (MSSQL) to the cloud by using a physical gateway</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24106,8 +24102,8 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If the \\<em>\\<em>source or destination instance\\</em>\\</em> is a \\<em>\\<em>self-managed database\\</em>\\</em> or a \\<em>\\<em>third-party cloud database\\</em>\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\(<del>176627</del>).
-        /// \\&gt;  If the \\<em>\\<em>source or destination database\\</em>\\</em> is an \\<em>\\<em>ApsaraDB database instance\\</em>\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\<em>\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\</em>\\</em>, you do not need to add the CIDR blocks. When you click \\<em>\\<em>Set Whitelist and Next\\</em>\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
+        /// <para>If the \\\\<em>\\\\<em>source or destination instance\\\\</em>\\\\</em> is a \\\\<em>\\\\<em>self-managed database\\\\</em>\\\\</em> or a \\\\<em>\\\\<em>third-party cloud database\\\\</em>\\\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \\\[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\\(<del>176627</del>).
+        /// \\\&gt;  If the \\\\<em>\\\\<em>source or destination database\\\\</em>\\\\</em> is an \\\\<em>\\\\<em>ApsaraDB database instance\\\\</em>\\\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\\\<em>\\\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\\\</em>\\\\</em>, you do not need to add the CIDR blocks. When you click \\\\<em>\\\\<em>Set Whitelist and Next\\\\</em>\\\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source o</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24214,8 +24210,8 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If the \\<em>\\<em>source or destination instance\\</em>\\</em> is a \\<em>\\<em>self-managed database\\</em>\\</em> or a \\<em>\\<em>third-party cloud database\\</em>\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\(<del>176627</del>).
-        /// \\&gt;  If the \\<em>\\<em>source or destination database\\</em>\\</em> is an \\<em>\\<em>ApsaraDB database instance\\</em>\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\<em>\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\</em>\\</em>, you do not need to add the CIDR blocks. When you click \\<em>\\<em>Set Whitelist and Next\\</em>\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
+        /// <para>If the \\\\<em>\\\\<em>source or destination instance\\\\</em>\\\\</em> is a \\\\<em>\\\\<em>self-managed database\\\\</em>\\\\</em> or a \\\\<em>\\\\<em>third-party cloud database\\\\</em>\\\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \\\[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\\(<del>176627</del>).
+        /// \\\&gt;  If the \\\\<em>\\\\<em>source or destination database\\\\</em>\\\\</em> is an \\\\<em>\\\\<em>ApsaraDB database instance\\\\</em>\\\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\\\<em>\\\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\\\</em>\\\\</em>, you do not need to add the CIDR blocks. When you click \\\\<em>\\\\<em>Set Whitelist and Next\\\\</em>\\\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source o</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24322,8 +24318,8 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If the \\<em>\\<em>source or destination instance\\</em>\\</em> is a \\<em>\\<em>self-managed database\\</em>\\</em> or a \\<em>\\<em>third-party cloud database\\</em>\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\(<del>176627</del>).
-        /// \\&gt;  If the \\<em>\\<em>source or destination database\\</em>\\</em> is an \\<em>\\<em>ApsaraDB database instance\\</em>\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\<em>\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\</em>\\</em>, you do not need to add the CIDR blocks. When you click \\<em>\\<em>Set Whitelist and Next\\</em>\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
+        /// <para>If the \\\\<em>\\\\<em>source or destination instance\\\\</em>\\\\</em> is a \\\\<em>\\\\<em>self-managed database\\\\</em>\\\\</em> or a \\\\<em>\\\\<em>third-party cloud database\\\\</em>\\\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \\\[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\\(<del>176627</del>).
+        /// \\\&gt;  If the \\\\<em>\\\\<em>source or destination database\\\\</em>\\\\</em> is an \\\\<em>\\\\<em>ApsaraDB database instance\\\\</em>\\\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\\\<em>\\\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\\\</em>\\\\</em>, you do not need to add the CIDR blocks. When you click \\\\<em>\\\\<em>Set Whitelist and Next\\\\</em>\\\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source o</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24346,8 +24342,8 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If the \\<em>\\<em>source or destination instance\\</em>\\</em> is a \\<em>\\<em>self-managed database\\</em>\\</em> or a \\<em>\\<em>third-party cloud database\\</em>\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\(<del>176627</del>).
-        /// \\&gt;  If the \\<em>\\<em>source or destination database\\</em>\\</em> is an \\<em>\\<em>ApsaraDB database instance\\</em>\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\<em>\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\</em>\\</em>, you do not need to add the CIDR blocks. When you click \\<em>\\<em>Set Whitelist and Next\\</em>\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
+        /// <para>If the \\\\<em>\\\\<em>source or destination instance\\\\</em>\\\\</em> is a \\\\<em>\\\\<em>self-managed database\\\\</em>\\\\</em> or a \\\\<em>\\\\<em>third-party cloud database\\\\</em>\\\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \\\[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\\(<del>176627</del>).
+        /// \\\&gt;  If the \\\\<em>\\\\<em>source or destination database\\\\</em>\\\\</em> is an \\\\<em>\\\\<em>ApsaraDB database instance\\\\</em>\\\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\\\<em>\\\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\\\</em>\\\\</em>, you do not need to add the CIDR blocks. When you click \\\\<em>\\\\<em>Set Whitelist and Next\\\\</em>\\\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source o</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

@@ -65,26 +65,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             [Validation(Required=false)]
             public List<DescribePreCheckCreateGadOrderResultResponseBodyPreCheckItemsPreCheckItems> PreCheckItems { get; set; }
             public class DescribePreCheckCreateGadOrderResultResponseBodyPreCheckItemsPreCheckItems : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>CHECK_MASTER_DB_STATUS</para>
-                /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>Running</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }

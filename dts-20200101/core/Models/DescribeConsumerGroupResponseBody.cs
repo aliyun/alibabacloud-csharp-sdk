@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeConsumerGroupResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The list of consumer groups.</para>
-        /// </summary>
         [NameInMap("ConsumerChannels")]
         [Validation(Required=false)]
         public DescribeConsumerGroupResponseBodyConsumerChannels ConsumerChannels { get; set; }
@@ -20,68 +17,26 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             [Validation(Required=false)]
             public List<DescribeConsumerGroupResponseBodyConsumerChannelsDescribeConsumerChannel> DescribeConsumerChannel { get; set; }
             public class DescribeConsumerGroupResponseBodyConsumerChannelsDescribeConsumerChannel : TeaModel {
-                /// <summary>
-                /// <para>The ID of the consumer group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>dtspis1110z232****</para>
-                /// </summary>
                 [NameInMap("ConsumerGroupID")]
                 [Validation(Required=false)]
                 public string ConsumerGroupID { get; set; }
 
-                /// <summary>
-                /// <para>The name of the consumer group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>consumergrouptest</para>
-                /// </summary>
                 [NameInMap("ConsumerGroupName")]
                 [Validation(Required=false)]
                 public string ConsumerGroupName { get; set; }
 
-                /// <summary>
-                /// <para>The username of the consumer group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("ConsumerGroupUserName")]
                 [Validation(Required=false)]
                 public string ConsumerGroupUserName { get; set; }
 
-                /// <summary>
-                /// <para>The consumption checkpoint, which is the time when the latest data record was consumed by the change tracking client. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-10-02T12:00:00Z</para>
-                /// </summary>
                 [NameInMap("ConsumptionCheckpoint")]
                 [Validation(Required=false)]
                 public string ConsumptionCheckpoint { get; set; }
 
-                /// <summary>
-                /// <para>The message delay, which is the current time minus the timestamp of the earliest unconsumed message in the change tracking instance. Unit: seconds.</para>
-                /// <remarks>
-                /// <para> If the return value of this parameter is <b>-1</b>, no client is connected to the consumer group.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>172714</para>
-                /// </summary>
                 [NameInMap("MessageDelay")]
                 [Validation(Required=false)]
                 public long? MessageDelay { get; set; }
 
-                /// <summary>
-                /// <para>The total number of unconsumed messages, which is the number of unconsumed data records plus the number of heartbeat messages.</para>
-                /// <remarks>
-                /// <para> If the return value of this parameter is <b>-1</b>, no client is connected to the consumer group.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>186600</para>
-                /// </summary>
                 [NameInMap("UnconsumedData")]
                 [Validation(Required=false)]
                 public long? UnconsumedData { get; set; }

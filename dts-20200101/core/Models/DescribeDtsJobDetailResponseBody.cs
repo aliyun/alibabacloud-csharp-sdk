@@ -22,6 +22,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string AppName { get; set; }
 
+        [NameInMap("ApprovalProcessStatus")]
+        [Validation(Required=false)]
+        public long? ApprovalProcessStatus { get; set; }
+
+        [NameInMap("ApprovalProcessUrl")]
+        [Validation(Required=false)]
+        public string ApprovalProcessUrl { get; set; }
+
         /// <summary>
         /// <para>The start of the time range for change tracking. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
         /// 

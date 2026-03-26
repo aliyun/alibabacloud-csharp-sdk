@@ -57,90 +57,46 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             [Validation(Required=false)]
             public List<DescribeGadInstancesResponseBodyInstancesInstances> Instances { get; set; }
             public class DescribeGadInstancesResponseBodyInstancesInstances : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2024-05-29 23:55:58</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>MySQL</para>
-                /// </summary>
                 [NameInMap("DbEngineType")]
                 [Validation(Required=false)]
                 public string DbEngineType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("DbInstanceCount")]
                 [Validation(Required=false)]
                 public int? DbInstanceCount { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>rg-a76s8afa****</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
                 public string InstanceName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("InstanceRegion")]
                 [Validation(Required=false)]
                 public string InstanceRegion { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>DR</para>
-                /// </summary>
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
                 public string InstanceType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>rm-sadfasfa****</para>
-                /// </summary>
                 [NameInMap("MasterDbInstanceId")]
                 [Validation(Required=false)]
                 public string MasterDbInstanceId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("MasterDbInstanceName")]
                 [Validation(Required=false)]
                 public string MasterDbInstanceName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("MasterDbInstanceRegion")]
                 [Validation(Required=false)]
                 public string MasterDbInstanceRegion { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("MasterDbInstanceZoneId")]
                 [Validation(Required=false)]
                 public string MasterDbInstanceZoneId { get; set; }
@@ -149,18 +105,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 [Validation(Required=false)]
                 public int? MasterEngineArchType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>rg-aekzq276dmnaxqa</para>
-                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>running</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }

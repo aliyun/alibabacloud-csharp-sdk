@@ -145,6 +145,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string Period { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the region where the data synchronization instance resides. The region ID is the same as the value of the <b>DestRegion</b> parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

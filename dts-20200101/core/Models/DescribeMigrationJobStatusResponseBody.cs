@@ -369,9 +369,6 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public DescribeMigrationJobStatusResponseBodyPrecheckStatus PrecheckStatus { get; set; }
         public class DescribeMigrationJobStatusResponseBodyPrecheckStatus : TeaModel {
-            /// <summary>
-            /// <para>The result of each precheck item.</para>
-            /// </summary>
             [NameInMap("Detail")]
             [Validation(Required=false)]
             public DescribeMigrationJobStatusResponseBodyPrecheckStatusDetail Detail { get; set; }
@@ -380,52 +377,18 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 [Validation(Required=false)]
                 public List<DescribeMigrationJobStatusResponseBodyPrecheckStatusDetailCheckItem> CheckItem { get; set; }
                 public class DescribeMigrationJobStatusResponseBodyPrecheckStatusDetailCheckItem : TeaModel {
-                    /// <summary>
-                    /// <para>The precheck result. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>Success</b>: The task passed the precheck.</description></item>
-                    /// <item><description><b>Failed</b>: The task failed to pass the precheck.</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>Success</para>
-                    /// </summary>
                     [NameInMap("CheckStatus")]
                     [Validation(Required=false)]
                     public string CheckStatus { get; set; }
 
-                    /// <summary>
-                    /// <para>The error message returned if the task failed to pass the precheck.</para>
-                    /// <remarks>
-                    /// <para> This parameter is returned only if the return value of the <b>CheckStatus</b> parameter is <b>Failed</b>.</para>
-                    /// </remarks>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>Original error: Access denied for user \&quot;dtstest\&quot;@\&quot;100.104.***.**\&quot; (using password: YES)</para>
-                    /// </summary>
                     [NameInMap("ErrorMessage")]
                     [Validation(Required=false)]
                     public string ErrorMessage { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the precheck item.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>CHECK_CONN_SRC</para>
-                    /// </summary>
                     [NameInMap("ItemName")]
                     [Validation(Required=false)]
                     public string ItemName { get; set; }
 
-                    /// <summary>
-                    /// <para>The method to fix the precheck failure.</para>
-                    /// <remarks>
-                    /// <para> This parameter is returned only if the return value of the <b>CheckStatus</b> parameter is <b>Failed</b>.</para>
-                    /// </remarks>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>CHECK_ERROR_DEST_CONN_REPAIR2</para>
-                    /// </summary>
                     [NameInMap("RepairMethod")]
                     [Validation(Required=false)]
                     public string RepairMethod { get; set; }

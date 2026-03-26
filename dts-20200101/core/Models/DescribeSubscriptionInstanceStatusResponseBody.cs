@@ -262,9 +262,6 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string SubscriptionInstanceName { get; set; }
 
-        /// <summary>
-        /// <para>The objects for change tracking.</para>
-        /// </summary>
         [NameInMap("SubscriptionObject")]
         [Validation(Required=false)]
         public DescribeSubscriptionInstanceStatusResponseBodySubscriptionObject SubscriptionObject { get; set; }
@@ -273,19 +270,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             [Validation(Required=false)]
             public List<DescribeSubscriptionInstanceStatusResponseBodySubscriptionObjectSynchronousObject> SynchronousObject { get; set; }
             public class DescribeSubscriptionInstanceStatusResponseBodySubscriptionObjectSynchronousObject : TeaModel {
-                /// <summary>
-                /// <para>The name of the database to which the object belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>dtstestdata</para>
-                /// </summary>
                 [NameInMap("DatabaseName")]
                 [Validation(Required=false)]
                 public string DatabaseName { get; set; }
 
-                /// <summary>
-                /// <para>The table name.</para>
-                /// </summary>
                 [NameInMap("TableList")]
                 [Validation(Required=false)]
                 public DescribeSubscriptionInstanceStatusResponseBodySubscriptionObjectSynchronousObjectTableList TableList { get; set; }
@@ -296,16 +284,6 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
                 }
 
-                /// <summary>
-                /// <para>Indicates whether the data of an entire database is tracked. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>true</b>: yes</description></item>
-                /// <item><description><b>false</b>: no</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>false</para>
-                /// </summary>
                 [NameInMap("WholeDatabase")]
                 [Validation(Required=false)]
                 public string WholeDatabase { get; set; }
