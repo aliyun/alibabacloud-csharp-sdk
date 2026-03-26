@@ -41,6 +41,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public List<SearchCloudGtmMonitorTemplatesResponseBodyTemplatesTemplate> Template { get; set; }
             public class SearchCloudGtmMonitorTemplatesResponseBodyTemplatesTemplate : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>mtp-xxxx</para>
+                /// </summary>
+                [NameInMap("CloudGtmMonitorTemplateId")]
+                [Validation(Required=false)]
+                public string CloudGtmMonitorTemplateId { get; set; }
+
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
@@ -77,34 +85,66 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     [Validation(Required=false)]
                     public List<SearchCloudGtmMonitorTemplatesResponseBodyTemplatesTemplateIspCityNodesIspCityNode> IspCityNode { get; set; }
                     public class SearchCloudGtmMonitorTemplatesResponseBodyTemplatesTemplateIspCityNodesIspCityNode : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>718</para>
+                        /// </summary>
                         [NameInMap("CityCode")]
                         [Validation(Required=false)]
                         public string CityCode { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>南京市</para>
+                        /// </summary>
                         [NameInMap("CityName")]
                         [Validation(Required=false)]
                         public string CityName { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>629</para>
+                        /// </summary>
                         [NameInMap("CountryCode")]
                         [Validation(Required=false)]
                         public string CountryCode { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>中国</para>
+                        /// </summary>
                         [NameInMap("CountryName")]
                         [Validation(Required=false)]
                         public string CountryName { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>运营商节点</para>
+                        /// </summary>
                         [NameInMap("GroupName")]
                         [Validation(Required=false)]
                         public string GroupName { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>ISP</para>
+                        /// </summary>
                         [NameInMap("GroupType")]
                         [Validation(Required=false)]
                         public string GroupType { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>5</para>
+                        /// </summary>
                         [NameInMap("IspCode")]
                         [Validation(Required=false)]
                         public string IspCode { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>移动</para>
+                        /// </summary>
                         [NameInMap("IspName")]
                         [Validation(Required=false)]
                         public string IspName { get; set; }
@@ -121,6 +161,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [Validation(Required=false)]
                 public string Protocol { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>remark content: xxxx</para>
+                /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
