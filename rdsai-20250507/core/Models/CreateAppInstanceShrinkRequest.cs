@@ -42,6 +42,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("Components")]
+        [Validation(Required=false)]
+        public string ComponentsShrink { get; set; }
+
         /// <summary>
         /// <para>A reserved parameter.</para>
         /// </summary>

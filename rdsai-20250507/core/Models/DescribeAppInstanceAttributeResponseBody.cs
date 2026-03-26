@@ -29,6 +29,20 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string AppType { get; set; }
 
+        [NameInMap("Components")]
+        [Validation(Required=false)]
+        public List<DescribeAppInstanceAttributeResponseBodyComponents> Components { get; set; }
+        public class DescribeAppInstanceAttributeResponseBodyComponents : TeaModel {
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The ID of the RDS for PostgreSQL instance with which the RDS Supabase instances are associated.</para>
         /// 

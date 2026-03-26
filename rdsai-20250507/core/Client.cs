@@ -352,6 +352,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateAppInstanceShrinkRequest request = new CreateAppInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Components))
+            {
+                request.ComponentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Components, "Components", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DBInstanceConfig))
             {
                 request.DBInstanceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DBInstanceConfig, "DBInstanceConfig", "json");
@@ -368,6 +372,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentsShrink))
+            {
+                query["Components"] = request.ComponentsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceConfigShrink))
             {
@@ -467,6 +475,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateAppInstanceShrinkRequest request = new CreateAppInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Components))
+            {
+                request.ComponentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Components, "Components", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DBInstanceConfig))
             {
                 request.DBInstanceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DBInstanceConfig, "DBInstanceConfig", "json");
@@ -483,6 +495,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentsShrink))
+            {
+                query["Components"] = request.ComponentsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceConfigShrink))
             {
@@ -1036,6 +1052,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["ReportLanguage"] = request.ReportLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportRegionId))
+            {
+                query["ReportRegionId"] = request.ReportRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportType))
             {
                 query["ReportType"] = request.ReportType;
@@ -1101,6 +1121,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportLanguage))
             {
                 query["ReportLanguage"] = request.ReportLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportRegionId))
+            {
+                query["ReportRegionId"] = request.ReportRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportType))
             {
@@ -1208,6 +1232,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["ReportLanguage"] = request.ReportLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportRegionId))
+            {
+                query["ReportRegionId"] = request.ReportRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportType))
             {
                 query["ReportType"] = request.ReportType;
@@ -1281,6 +1309,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportLanguage))
             {
                 query["ReportLanguage"] = request.ReportLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportRegionId))
+            {
+                query["ReportRegionId"] = request.ReportRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportType))
             {

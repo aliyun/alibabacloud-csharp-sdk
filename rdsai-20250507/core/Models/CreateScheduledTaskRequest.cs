@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string ReportLanguage { get; set; }
 
+        [NameInMap("ReportRegionId")]
+        [Validation(Required=false)]
+        public string ReportRegionId { get; set; }
+
         [NameInMap("ReportType")]
         [Validation(Required=false)]
         public string ReportType { get; set; }
