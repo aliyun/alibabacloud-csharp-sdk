@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Accessibility { get; set; }
 
+        [NameInMap("AccessibleRoleIdList")]
+        [Validation(Required=false)]
+        public List<string> AccessibleRoleIdList { get; set; }
+
         /// <summary>
         /// <para>The type of the data source. Valid values:</para>
         /// <list type="bullet">

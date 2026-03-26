@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateDatasetRequest : TeaModel {
+        [NameInMap("Accessibility")]
+        [Validation(Required=false)]
+        public string Accessibility { get; set; }
+
+        [NameInMap("AccessibleRoleIdList")]
+        [Validation(Required=false)]
+        public List<string> AccessibleRoleIdList { get; set; }
+
         /// <summary>
         /// <para>The description of the dataset.</para>
         /// </summary>

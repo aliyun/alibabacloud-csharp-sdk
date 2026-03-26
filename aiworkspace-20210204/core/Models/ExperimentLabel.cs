@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ExperimentLabel : TeaModel {
         /// <summary>
+        /// <para>ExperimentId</para>
+        /// 
         /// <b>Example:</b>
         /// <para>exp-890waerw09a0f</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ExperimentId { get; set; }
 
         /// <summary>
+        /// <para>Create time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-12-27T03:30:04Z</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
+        /// <para>Modified time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-12-27T03:30:04Z</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>Key of Experiment Label</para>
+        /// 
         /// <b>Example:</b>
         /// <para>key</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Key { get; set; }
 
         /// <summary>
+        /// <para>Value of Experiment Label</para>
+        /// 
         /// <b>Example:</b>
         /// <para>value</para>
         /// </summary>

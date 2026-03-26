@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class TrialLabel : TeaModel {
         /// <summary>
+        /// <para>Create time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-12-27T03:30:04Z</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
+        /// <para>Modified time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-12-27T03:30:04Z</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>Key of Trial Label</para>
+        /// 
         /// <b>Example:</b>
         /// <para>key</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Key { get; set; }
 
+        /// <summary>
+        /// <para>trl-v0fw9a0sd8f9af</para>
+        /// </summary>
         [NameInMap("TrialId")]
         [Validation(Required=false)]
         public string TrialId { get; set; }
 
         /// <summary>
+        /// <para>Value of Trial Label</para>
+        /// 
         /// <b>Example:</b>
         /// <para>value</para>
         /// </summary>

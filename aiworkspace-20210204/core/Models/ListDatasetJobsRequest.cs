@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("WithLogs")]
+        [Validation(Required=false)]
+        public bool? WithLogs { get; set; }
+
         /// <summary>
         /// <para>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
         /// 

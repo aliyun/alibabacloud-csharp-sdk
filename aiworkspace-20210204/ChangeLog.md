@@ -1,3 +1,12 @@
+2026-03-26 Version: 6.1.1
+- Update API CreateDataset: add request parameters body.AccessibleRoleIdList.
+- Update API GetDataset: add response parameters Body.AccessibleRoleIdList.
+- Update API ListDatasetJobs: add request parameters WithLogs.
+- Update API ListDatasets: add request parameters DatasetIds.
+- Update API UpdateDataset: add request parameters body.Accessibility.
+- Update API UpdateDataset: add request parameters body.AccessibleRoleIdList.
+
+
 2026-02-03 Version: 6.1.0
 - Support API ValidateConnection.
 - Update API GetPermission: add request parameters CallerType.

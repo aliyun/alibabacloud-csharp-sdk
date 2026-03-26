@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class LabelInfo : TeaModel {
         /// <summary>
+        /// <para>Key of Label</para>
+        /// 
         /// <b>Example:</b>
         /// <para>key</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Key { get; set; }
 
         /// <summary>
+        /// <para>Value of Label</para>
+        /// 
         /// <b>Example:</b>
         /// <para>value</para>
         /// </summary>

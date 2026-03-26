@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string DataTypes { get; set; }
 
+        [NameInMap("DatasetIds")]
+        [Validation(Required=false)]
+        public string DatasetIds { get; set; }
+
         [NameInMap("Edition")]
         [Validation(Required=false)]
         public string Edition { get; set; }
