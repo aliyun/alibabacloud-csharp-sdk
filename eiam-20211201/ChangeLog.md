@@ -1,3 +1,10 @@
+2026-03-27 Version: 1.23.2
+- Update API ListUsers: add request parameters MaxResults.
+- Update API ListUsers: add request parameters NextToken.
+- Update API ListUsers: add response parameters Body.MaxResults.
+- Update API ListUsers: add response parameters Body.NextToken.
+
+
 2026-03-26 Version: 1.23.1
 - Update API GetInstanceLicense: add response parameters Body.License.InstanceLicenseDetail.
 

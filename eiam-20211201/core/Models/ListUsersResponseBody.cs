@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListUsersResponseBody : TeaModel {
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// <para>The ID of the request.</para>
         /// 

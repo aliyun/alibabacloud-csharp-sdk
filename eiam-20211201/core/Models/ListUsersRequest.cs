@@ -40,6 +40,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// <para>The ID of the organizational unit.</para>
         /// 
