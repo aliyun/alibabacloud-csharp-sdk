@@ -280,6 +280,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 [Validation(Required=false)]
                 public string RichTextClipboard { get; set; }
 
+                [NameInMap("RichTextClipboardLimit")]
+                [Validation(Required=false)]
+                public int? RichTextClipboardLimit { get; set; }
+
+                [NameInMap("RichTextClipboardSizeUnit")]
+                [Validation(Required=false)]
+                public string RichTextClipboardSizeUnit { get; set; }
+
                 /// <summary>
                 /// <para>The text clipboard policy.</para>
                 /// <para>Valid values:</para>
