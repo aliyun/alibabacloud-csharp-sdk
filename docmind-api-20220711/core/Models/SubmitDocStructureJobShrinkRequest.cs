@@ -8,18 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 {
-    public class SubmitDocParserJobShrinkRequest : TeaModel {
-        [NameInMap("CustomOssConfig")]
+    public class SubmitDocStructureJobShrinkRequest : TeaModel {
+        [NameInMap("AllowPptFormat")]
         [Validation(Required=false)]
-        public string CustomOssConfigShrink { get; set; }
+        public bool? AllowPptFormat { get; set; }
 
         [NameInMap("EnableEventCallback")]
         [Validation(Required=false)]
         public bool? EnableEventCallback { get; set; }
-
-        [NameInMap("EnhancementMode")]
-        [Validation(Required=false)]
-        public string EnhancementMode { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -49,26 +45,6 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public bool? FormulaEnhancement { get; set; }
 
-        [NameInMap("LLMParam")]
-        [Validation(Required=false)]
-        public string LLMParamShrink { get; set; }
-
-        [NameInMap("LlmEnhancement")]
-        [Validation(Required=false)]
-        public bool? LlmEnhancement { get; set; }
-
-        [NameInMap("MultimediaParameters")]
-        [Validation(Required=false)]
-        public string MultimediaParametersShrink { get; set; }
-
-        [NameInMap("NeedHeaderFooter")]
-        [Validation(Required=false)]
-        public bool? NeedHeaderFooter { get; set; }
-
-        [NameInMap("Option")]
-        [Validation(Required=false)]
-        public string Option { get; set; }
-
         [NameInMap("OssBucket")]
         [Validation(Required=false)]
         public string OssBucket { get; set; }
@@ -81,13 +57,13 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public string OutputFormatShrink { get; set; }
 
-        [NameInMap("OutputHtmlTable")]
-        [Validation(Required=false)]
-        public bool? OutputHtmlTable { get; set; }
-
         [NameInMap("PageIndex")]
         [Validation(Required=false)]
         public string PageIndex { get; set; }
+
+        [NameInMap("StructureType")]
+        [Validation(Required=false)]
+        public string StructureType { get; set; }
 
     }
 

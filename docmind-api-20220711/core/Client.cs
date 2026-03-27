@@ -4013,6 +4013,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             {
                 request.MultimediaParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MultimediaParameters, "MultimediaParameters", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutputFormat))
+            {
+                request.OutputFormatShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutputFormat, "OutputFormat", "simple");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomOssConfigShrink))
             {
@@ -4069,6 +4073,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssEndpoint))
             {
                 query["OssEndpoint"] = request.OssEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputFormatShrink))
+            {
+                query["OutputFormat"] = request.OutputFormatShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputHtmlTable))
             {
@@ -4129,6 +4137,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             {
                 request.MultimediaParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MultimediaParameters, "MultimediaParameters", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutputFormat))
+            {
+                request.OutputFormatShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutputFormat, "OutputFormat", "simple");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomOssConfigShrink))
             {
@@ -4185,6 +4197,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssEndpoint))
             {
                 query["OssEndpoint"] = request.OssEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputFormatShrink))
+            {
+                query["OutputFormat"] = request.OutputFormatShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputHtmlTable))
             {
@@ -4446,7 +4462,7 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
         /// <para>文档智能解析</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// SubmitDocStructureJobRequest
         /// </param>
         /// <param name="runtime">
@@ -4456,9 +4472,15 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
         /// <returns>
         /// SubmitDocStructureJobResponse
         /// </returns>
-        public SubmitDocStructureJobResponse SubmitDocStructureJobWithOptions(SubmitDocStructureJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public SubmitDocStructureJobResponse SubmitDocStructureJobWithOptions(SubmitDocStructureJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitDocStructureJobShrinkRequest request = new SubmitDocStructureJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutputFormat))
+            {
+                request.OutputFormatShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutputFormat, "OutputFormat", "simple");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowPptFormat))
             {
@@ -4491,6 +4513,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssEndpoint))
             {
                 query["OssEndpoint"] = request.OssEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputFormatShrink))
+            {
+                query["OutputFormat"] = request.OutputFormatShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
             {
@@ -4524,7 +4550,7 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
         /// <para>文档智能解析</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// SubmitDocStructureJobRequest
         /// </param>
         /// <param name="runtime">
@@ -4534,9 +4560,15 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
         /// <returns>
         /// SubmitDocStructureJobResponse
         /// </returns>
-        public async Task<SubmitDocStructureJobResponse> SubmitDocStructureJobWithOptionsAsync(SubmitDocStructureJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<SubmitDocStructureJobResponse> SubmitDocStructureJobWithOptionsAsync(SubmitDocStructureJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitDocStructureJobShrinkRequest request = new SubmitDocStructureJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutputFormat))
+            {
+                request.OutputFormatShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutputFormat, "OutputFormat", "simple");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowPptFormat))
             {
@@ -4569,6 +4601,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssEndpoint))
             {
                 query["OssEndpoint"] = request.OssEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputFormatShrink))
+            {
+                query["OutputFormat"] = request.OutputFormatShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
             {

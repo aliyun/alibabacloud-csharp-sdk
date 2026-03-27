@@ -131,6 +131,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public string OssEndpoint { get; set; }
 
+        [NameInMap("OutputFormat")]
+        [Validation(Required=false)]
+        public List<string> OutputFormat { get; set; }
+
         [NameInMap("OutputHtmlTable")]
         [Validation(Required=false)]
         public bool? OutputHtmlTable { get; set; }

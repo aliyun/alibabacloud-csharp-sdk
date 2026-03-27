@@ -29,6 +29,46 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
             [Validation(Required=false)]
             public int? NumberOfSuccessfulParsing { get; set; }
 
+            [NameInMap("OutputFormatResult")]
+            [Validation(Required=false)]
+            public List<QueryDocParserStatusResponseBodyDataOutputFormatResult> OutputFormatResult { get; set; }
+            public class QueryDocParserStatusResponseBodyDataOutputFormatResult : TeaModel {
+                [NameInMap("OutputFileUrl")]
+                [Validation(Required=false)]
+                public string OutputFileUrl { get; set; }
+
+                [NameInMap("OutputType")]
+                [Validation(Required=false)]
+                public string OutputType { get; set; }
+
+                [NameInMap("Pages")]
+                [Validation(Required=false)]
+                public List<QueryDocParserStatusResponseBodyDataOutputFormatResultPages> Pages { get; set; }
+                public class QueryDocParserStatusResponseBodyDataOutputFormatResultPages : TeaModel {
+                    [NameInMap("ImageHeight")]
+                    [Validation(Required=false)]
+                    public int? ImageHeight { get; set; }
+
+                    [NameInMap("ImageUrl")]
+                    [Validation(Required=false)]
+                    public string ImageUrl { get; set; }
+
+                    [NameInMap("ImageWidth")]
+                    [Validation(Required=false)]
+                    public int? ImageWidth { get; set; }
+
+                    [NameInMap("PageIdAllDocs")]
+                    [Validation(Required=false)]
+                    public int? PageIdAllDocs { get; set; }
+
+                    [NameInMap("PageIdCurDoc")]
+                    [Validation(Required=false)]
+                    public int? PageIdCurDoc { get; set; }
+
+                }
+
+            }
+
             [NameInMap("PageCountEstimate")]
             [Validation(Required=false)]
             public int? PageCountEstimate { get; set; }
