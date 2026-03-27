@@ -21,7 +21,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The list of destination data source settings.</para>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DestinationDataSourceSettings")]
         [Validation(Required=false)]
@@ -29,7 +28,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, LogHub, StarRocks, DataHub, AnalyticDB for MySQL, Kafka, and Hive.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Hologres</para>
@@ -37,6 +35,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [NameInMap("DestinationDataSourceType")]
         [Validation(Required=false)]
         public string DestinationDataSourceType { get; set; }
+
+        [NameInMap("FileSpec")]
+        [Validation(Required=false)]
+        public string FileSpec { get; set; }
 
         /// <term><b>Obsolete</b></term>
         /// 
@@ -82,7 +84,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <item><description>OfflineIncremental</description></item>
         /// <item><description>FullAndOfflineIncremental</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FullAndRealtimeIncremental</para>
@@ -124,7 +125,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The resource settings.</para>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceSettings")]
         [Validation(Required=false)]
@@ -132,7 +132,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The list of source data source settings.</para>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SourceDataSourceSettings")]
         [Validation(Required=false)]
@@ -140,7 +139,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The source type. Valid values: PolarDB, MySQL, Kafka, LogHub, Hologres, Oracle, OceanBase, MongoDB, Redshift, Hive, SQL Server, Doris, and ClickHouse.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -154,7 +152,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <remarks>
         /// <para> [ { &quot;SourceObjectSelectionRules&quot;:[ { &quot;ObjectType&quot;:&quot;Database&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;biz_db&quot; }, { &quot;ObjectType&quot;:&quot;Schema&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;s1&quot; }, { &quot;ObjectType&quot;:&quot;Table&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;table1&quot; } ], &quot;TransformationRuleNames&quot;:[ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot; } ] } ]</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TableMappings")]
         [Validation(Required=false)]

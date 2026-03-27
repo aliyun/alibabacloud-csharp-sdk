@@ -2124,6 +2124,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             {
                 body["DestinationDataSourceSettings"] = request.DestinationDataSourceSettingsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSpec))
+            {
+                body["FileSpec"] = request.FileSpec;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSettingsShrink))
             {
                 body["JobSettings"] = request.JobSettingsShrink;
@@ -2257,6 +2261,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationDataSourceSettingsShrink))
             {
                 body["DestinationDataSourceSettings"] = request.DestinationDataSourceSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSpec))
+            {
+                body["FileSpec"] = request.FileSpec;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSettingsShrink))
             {
@@ -37075,6 +37083,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSpec))
+            {
+                body["FileSpec"] = request.FileSpec;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSettingsShrink))
             {
                 body["JobSettings"] = request.JobSettingsShrink;
@@ -37173,6 +37185,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSpec))
+            {
+                body["FileSpec"] = request.FileSpec;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSettingsShrink))
             {

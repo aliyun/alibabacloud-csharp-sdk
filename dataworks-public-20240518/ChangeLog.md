@@ -1,3 +1,8 @@
+2026-03-27 Version: 5.0.5
+- Update API CreateDIJob: add request parameters FileSpec.
+- Update API UpdateDIJob: add request parameters FileSpec.
+
+
 2026-03-26 Version: 5.0.4
 - Update API CreateDIJob: add request parameters Owner.
 - Update API GetDIJob: add response parameters Body.PagingInfo.Owner.

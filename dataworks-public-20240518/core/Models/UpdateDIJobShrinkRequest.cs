@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("FileSpec")]
+        [Validation(Required=false)]
+        public string FileSpec { get; set; }
+
         /// <summary>
         /// <para>The ID of the synchronization task.</para>
         /// 
