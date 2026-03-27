@@ -174,6 +174,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
+            [NameInMap("SceneType")]
+            [Validation(Required=false)]
+            public string SceneType { get; set; }
+
             /// <summary>
             /// <para>Service code.</para>
             /// 
