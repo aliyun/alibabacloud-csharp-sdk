@@ -77,6 +77,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string LockExpiredTime { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>compliance</para>
+            /// </summary>
+            [NameInMap("LockMode")]
+            [Validation(Required=false)]
+            public string LockMode { get; set; }
+
+            /// <summary>
             /// <para>The lock status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>compliance-cooloff: The snapshot is locked in compliance mode but is still in a cooling-off period. Snapshots cannot be deleted. However, users with the corresponding RAM permissions can unlock snapshots, extend or shorten the cooling-off period, and extend or shorten the lock duration.</description></item>

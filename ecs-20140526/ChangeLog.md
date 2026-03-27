@@ -1,3 +1,8 @@
+2026-03-27 Version: 7.6.2
+- Update API DescribeLockedSnapshots: add response parameters Body.LockedSnapshotsInfo.$.LockMode.
+- Update API LockSnapshot: add response parameters Body.LockedSnapshotInfo.LockMode.
+
+
 2026-03-26 Version: 7.6.1
 - Update API CreateDeploymentSet: add request parameters Type.
 - Update API DescribeCloudAssistantSettings: add response parameters Body.ResourceUsageConfig.
