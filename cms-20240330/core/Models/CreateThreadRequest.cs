@@ -14,8 +14,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, string> Attributes { get; set; }
 
         /// <summary>
-        /// <para>The title of the session.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -23,28 +21,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string Title { get; set; }
 
-        /// <summary>
-        /// <para>The properties of the session.</para>
-        /// </summary>
         [NameInMap("variables")]
         [Validation(Required=false)]
         public CreateThreadRequestVariables Variables { get; set; }
         public class CreateThreadRequestVariables : TeaModel {
             /// <summary>
-            /// <para>The name of the Simple Log Service project.</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>project</para>
+            /// <para>az_alipay</para>
             /// </summary>
             [NameInMap("project")]
             [Validation(Required=false)]
             public string Project { get; set; }
 
             /// <summary>
-            /// <para>The name of the workspace.</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>workspace</para>
+            /// <para>rum-monitor-test-aysls-pub-cn-heyuan-monitor</para>
             /// </summary>
             [NameInMap("workspace")]
             [Validation(Required=false)]

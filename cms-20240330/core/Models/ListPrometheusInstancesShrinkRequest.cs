@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListPrometheusInstancesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>A list of region IDs to filter by, separated by commas.</para>
+        /// <para>Specified list of regionIds to filter (comma-separated).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shenzhen</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string FilterRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to return.</para>
+        /// <para>Maximum number of records to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token.</para>
+        /// <para>Query token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxxx</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>A list of instance IDs, separated by commas.</para>
+        /// <para>List of instance IDs (comma-separated)</para>
         /// 
         /// <b>Example:</b>
         /// <para>rw-00001,rw-00002,rw-00003</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The instance name. Partial match is supported.</para>
+        /// <para>Instance name (partial match supported)</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>Resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2bhocin5e2na</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The resource type of the instance.</para>
+        /// <para>Resource type of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Prometheus</para>
@@ -98,14 +98,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>List of tags.</para>
         /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]
         public string TagShrink { get; set; }
 
         /// <summary>
-        /// <para>The instance version. Valid values: V1 and V2.</para>
+        /// <para>Instance version: V1 or V2</para>
         /// 
         /// <b>Example:</b>
         /// <para>V2</para>

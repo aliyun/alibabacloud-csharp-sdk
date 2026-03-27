@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListWorkspacesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned per page. Default value: 50. Maximum value: 50.</para>
+        /// <para>Page size
+        /// Default value:
+        ///     50
+        /// Maximum value:
+        ///     50</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results.</para>
+        /// <para>Pagination Token</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxxx</para>
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</para>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>Total count</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,14 +54,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? Total { get; set; }
 
         /// <summary>
-        /// <para>The list of workspaces.</para>
+        /// <para>List of workspaces</para>
         /// </summary>
         [NameInMap("workspaces")]
         [Validation(Required=false)]
         public List<ListWorkspacesResponseBodyWorkspaces> Workspaces { get; set; }
         public class ListWorkspacesResponseBodyWorkspaces : TeaModel {
             /// <summary>
-            /// <para>The time when the workspace was created.</para>
+            /// <para>Creation time</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -68,7 +72,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the workspace.</para>
+            /// <para>Workspace description</para>
             /// 
             /// <b>Example:</b>
             /// <para>workspace test</para>
@@ -78,7 +82,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The display name of the workspace.</para>
+            /// <para>Workspace display name</para>
             /// 
             /// <b>Example:</b>
             /// <para>workspace-test</para>
@@ -88,7 +92,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace was last modified.</para>
+            /// <para>Last modified time</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -99,7 +103,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string LastModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>Region ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-heyuan</para>
@@ -109,7 +113,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the Simple Log Service project.</para>
+            /// <para>Log Service project name</para>
             /// 
             /// <b>Example:</b>
             /// <para>sls-project-test-001</para>
@@ -119,7 +123,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string SlsProject { get; set; }
 
             /// <summary>
-            /// <para>The name of the workspace.</para>
+            /// <para>Workspace name</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

@@ -9,16 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateNotifyStrategyRequest : TeaModel {
-        /// <summary>
-        /// <para>The request body.</para>
-        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public NotifyStrategyForModify Body { get; set; }
 
         /// <summary>
-        /// <para>The name of the workspace.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>
         /// </summary>

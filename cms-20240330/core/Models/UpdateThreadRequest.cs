@@ -14,8 +14,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, string> Attributes { get; set; }
 
         /// <summary>
-        /// <para>The status of the session.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>active</para>
         /// </summary>
@@ -24,10 +22,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The title of the session.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>title</para>
+        /// <para>MY ANTOM Tech Team Annual Dinner Performance Lucky Draw</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]

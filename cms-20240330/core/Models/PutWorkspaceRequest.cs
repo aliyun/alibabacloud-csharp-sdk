@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class PutWorkspaceRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the workspace.</para>
+        /// <para>Description of the workspace</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The display name of the workspace.</para>
+        /// <para>Display name of the workspace</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The name of the Simple Log Service project.</para>
+        /// <para>Name of the Log Service project</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListIntegrationPolicyCustomScrapeJobRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the add-on release.</para>
+        /// <para>Addon Release name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>release12345678</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AddonReleaseName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to encrypt the YAML file.</para>
+        /// <para>Whether to encrypt Yaml.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EncryptYaml { get; set; }
 
         /// <summary>
-        /// <para>The namespace.</para>
+        /// <para>Namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>arms-prom</para>

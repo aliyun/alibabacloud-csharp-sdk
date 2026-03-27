@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateDigitalEmployeeSkillResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>350779DC-980D-58FD-BECB-D2275D2487CA</para>
         /// </summary>

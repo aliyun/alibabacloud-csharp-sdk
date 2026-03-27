@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreatePrometheusInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The number of days that data is automatically archived after the storage duration expires. A value of 0 indicates that data is not archived. Valid values:</para>
+        /// <para>The number of days to automatically archive and save after the storage expires, 0 means no archiving. The range of archiving days is as follows:</para>
         /// <list type="bullet">
-        /// <item><description><para>V1 instances: 60 to 365.</para>
-        /// </description></item>
-        /// <item><description><para>V2 instances: 60 to 3650. A value of 3650 indicates that the data is permanently stored.</para>
-        /// </description></item>
+        /// <item><description>V1: 60~365 days.</description></item>
+        /// <item><description>V2: 60~3650 days (3650 indicates permanent storage).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -29,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? ArchiveDuration { get; set; }
 
         /// <summary>
-        /// <para>The policy for password-free read access. IP address ranges and VPC IDs are supported.</para>
+        /// <para>Password-free read policy (supports IP segments and VpcId).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -48,7 +46,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AuthFreeReadPolicy { get; set; }
 
         /// <summary>
-        /// <para>The policy for password-free write access.</para>
+        /// <para>Password-free write policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -67,7 +65,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AuthFreeWritePolicy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable password-free read access. This feature is supported only for V2 instances.</para>
+        /// <para>Whether to enable password-free read (only supported in V2 version).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -77,7 +75,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EnableAuthFreeRead { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable password-free write access. This feature is supported only for V2 instances.</para>
+        /// <para>Whether to enable password-free write (only supported in V2 version).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -87,7 +85,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EnableAuthFreeWrite { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable an authorization token. This feature is supported only for V1 instances.</para>
+        /// <para>Whether to enable authorization Token (only supported in V1 version).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -97,12 +95,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EnableAuthToken { get; set; }
 
         /// <summary>
-        /// <para>The billing method.</para>
+        /// <para>Billing method:</para>
         /// <list type="bullet">
-        /// <item><description><para>POSTPAY: pay-as-you-go based on the volume of reported metrics.</para>
-        /// </description></item>
-        /// <item><description><para>Note: If you leave this parameter empty, the default billing method is used. If a default billing method is not configured, POSTPAY is used.</para>
-        /// </description></item>
+        /// <item><description>POSTPAY: Postpaid by metric reporting volume.</description></item>
+        /// <item><description>POSTPAY_GB: Postpaid by metric write volume.
+        /// Note, if left blank, the user\&quot;s default billing method configuration will be used. If the user has not configured a default, the system defaults to billing by metric reporting volume.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,7 +110,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance.</para>
+        /// <para>Instance name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -124,7 +121,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The instance status.</para>
+        /// <para>Instance status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -134,12 +131,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The storage duration of the instance in days. The valid values depend on the billing method:</para>
+        /// <para>Storage duration (days):</para>
         /// <list type="bullet">
-        /// <item><description><para>For instances billed based on data written: 90 and 180.</para>
-        /// </description></item>
-        /// <item><description><para>For instances billed based on reported metrics: 15, 30, 60, 90, and 180.</para>
-        /// </description></item>
+        /// <item><description>By write volume: 90, 180.</description></item>
+        /// <item><description>By metric reporting volume: 15, 30, 60, 90, 180.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -150,14 +145,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? StorageDuration { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>Tag values.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<CreatePrometheusInstanceRequestTags> Tags { get; set; }
         public class CreatePrometheusInstanceRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>Tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key1</para>
@@ -167,7 +162,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>Tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>110109200001214284</para>
@@ -179,7 +174,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The workspace to which the instance belongs. The default value is default-cms-{userId}-{regionId}.</para>
+        /// <para>Belonging workspace, default value: default-cms-{userId}-{regionId}.</para>
         /// 
         /// <b>Example:</b>
         /// <para>wokspace1</para>

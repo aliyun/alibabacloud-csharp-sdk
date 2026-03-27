@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateIntegrationPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the paid plan. Valid values: CS_Pro, CS_Basic, and empty.</para>
+        /// <para>Fee package type, CS_Pro/CS_Basic/empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CS_Pro</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string FeePackage { get; set; }
 
         /// <summary>
-        /// <para>The name of the rule. The name must be 3 to 63 characters in length and start with a letter.</para>
+        /// <para>Rule name, minimum 3 characters, maximum 63 characters, must start with a letter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>metrics-inner-manage</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs.</para>
+        /// <para>Resource group ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzoiafjtr7zyq</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the resource.</para>
+        /// <para>Resource tags.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<UpdateIntegrationPolicyRequestTags> Tags { get; set; }
         public class UpdateIntegrationPolicyRequestTags : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>Tag <c>key</c> value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>algo_bhv_expose_in_airec_exposure</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>Tag <c>value</c> value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{\&quot;Id\&quot;: \&quot;kgqie6hm\&quot;, \&quot;Name\&quot;: \&quot;Sheet1\&quot;}]</para>

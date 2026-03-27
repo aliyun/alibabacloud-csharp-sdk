@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetUmodelDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error messages.</para>
+        /// <para>Error information</para>
         /// </summary>
         [NameInMap("errors")]
         [Validation(Required=false)]
         public List<GetUmodelDataResponseBodyErrors> Errors { get; set; }
         public class GetUmodelDataResponseBodyErrors : TeaModel {
             /// <summary>
-            /// <para>The detailed information.</para>
+            /// <para>Details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ok</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The type of the error.</para>
+            /// <para>Error type</para>
             /// 
             /// <b>Example:</b>
             /// <para>external</para>
@@ -39,21 +39,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The list of links between nodes.</para>
+        /// <para>List of node link relationships</para>
         /// </summary>
         [NameInMap("links")]
         [Validation(Required=false)]
         public List<object> Links { get; set; }
 
         /// <summary>
-        /// <para>The list of nodes.</para>
+        /// <para>List of nodes</para>
         /// </summary>
         [NameInMap("nodes")]
         [Validation(Required=false)]
         public List<object> Nodes { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>123-123-234-345-123</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of links between nodes.</para>
+        /// <para>Total number of node links</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? TotalLinksCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of nodes.</para>
+        /// <para>Total number of nodes</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

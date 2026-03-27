@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentEscalationStruct : TeaModel {
         /// <summary>
-        /// <para>创建时间</para>
+        /// <para>Creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58Z</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>描述。</para>
+        /// <para>Description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>当告警未响应时，依次通知运维团队、值班经理、CTO</para>
+        /// <para>When an alert is not acknowledged, notify the operations team, on-duty manager, and CTO sequentially.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>事件升级ID</para>
+        /// <para>Event Escalation ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>52631388567</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentEscalationId { get; set; }
 
         /// <summary>
-        /// <para>修改时间</para>
+        /// <para>Modification time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58Z</para>
@@ -50,17 +50,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? ModifyTime { get; set; }
 
         /// <summary>
-        /// <para>名称。</para>
+        /// <para>Name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>生产环境告警升级策略</para>
+        /// <para>Production Environment Alert Escalation Policy.</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>地域 ID</para>
+        /// <para>Region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>阶段。</para>
+        /// <para>Phase.</para>
         /// </summary>
         [NameInMap("stage")]
         [Validation(Required=false)]
         public List<IncidentEscalationStageStruct> Stage { get; set; }
 
         /// <summary>
-        /// <para>工作空间</para>
+        /// <para>Workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>

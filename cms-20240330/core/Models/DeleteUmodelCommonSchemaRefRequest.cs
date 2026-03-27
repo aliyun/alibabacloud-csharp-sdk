@@ -10,7 +10,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DeleteUmodelCommonSchemaRefRequest : TeaModel {
         /// <summary>
-        /// <para>The public Umodel schema group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

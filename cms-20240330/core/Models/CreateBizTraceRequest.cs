@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateBizTraceRequest : TeaModel {
         /// <summary>
-        /// <para>The advanced configuration.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>{&quot;sample&quot;:{&quot;strategy&quot;:&quot;BY_APP&quot;}}</para>
         /// </summary>
@@ -20,8 +18,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AdvancedConfig { get; set; }
 
         /// <summary>
-        /// <para>The identifier for the business trace. It can contain only letters, digits, and underscores (_). The first character must be a lowercase letter.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>label_env</para>
         /// </summary>
@@ -30,8 +26,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string BizTraceCode { get; set; }
 
         /// <summary>
-        /// <para>The name of the business trace.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>just test</para>
         /// </summary>
@@ -40,8 +34,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string BizTraceName { get; set; }
 
         /// <summary>
-        /// <para>The configuration rules.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;entrancePid&quot;:&quot;xxx@d9w3jd9j3&quot;,&quot;rpcMatcher&quot;:{&quot;matchType&quot;:&quot;EQUALS&quot;,&quot;pattern&quot;:&quot;/&quot;},&quot;characteristics&quot;:{&quot;operation&quot;:&quot;OR&quot;,&quot;rules&quot;:[{&quot;target&quot;:&quot;CUSTOM_EXTRACT&quot;,&quot;id&quot;:&quot;oi0b3bb7&quot;,&quot;key&quot;:&quot;biz.test&quot;,&quot;matcher&quot;:{&quot;matchType&quot;:&quot;CONTAINS&quot;,&quot;pattern&quot;:[&quot;1&quot;]}}]}}]</para>
         /// </summary>
@@ -50,8 +42,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RuleConfig { get; set; }
 
         /// <summary>
-        /// <para>The workspace.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>default-cms-xxxxxxx-cn-hangzhou</para>
         /// </summary>

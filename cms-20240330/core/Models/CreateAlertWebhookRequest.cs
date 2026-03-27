@@ -10,14 +10,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateAlertWebhookRequest : TeaModel {
         /// <summary>
-        /// <para>The content type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>JSON (default)</para>
-        /// </description></item>
-        /// <item><description><para>FORM</para>
-        /// </description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>JSON</para>
         /// </summary>
@@ -26,21 +18,13 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>The headers.</para>
+        /// <para>headers</para>
         /// </summary>
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         /// <summary>
-        /// <para>The language. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>zh_CN</para>
-        /// </description></item>
-        /// <item><description><para>en_US</para>
-        /// </description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>zh_CN</para>
         /// </summary>
@@ -49,14 +33,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The request method. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>GET</para>
-        /// </description></item>
-        /// <item><description><para>POST</para>
-        /// </description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>GET</para>
         /// </summary>
@@ -65,7 +41,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Method { get; set; }
 
         /// <summary>
-        /// <para>The name of the webhook.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +51,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The URL for the alert callback.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,8 +61,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Url { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the webhook.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>

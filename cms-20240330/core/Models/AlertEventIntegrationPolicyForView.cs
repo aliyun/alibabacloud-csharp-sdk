@@ -20,19 +20,13 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AlertEventIntegrationPolicyId { get; set; }
 
         /// <summary>
-        /// <para>名称</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>集成名</para>
         /// </summary>
         [NameInMap("alertEventIntegrationPolicyName")]
         [Validation(Required=false)]
         public string AlertEventIntegrationPolicyName { get; set; }
 
         /// <summary>
-        /// <para>创建时间</para>
-        /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58Z</para>
         /// </summary>
@@ -41,8 +35,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>描述</para>
-        /// 
         /// <b>Example:</b>
         /// <para>workspace test</para>
         /// </summary>
@@ -51,8 +43,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>是否启用</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -60,16 +50,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
-        /// <summary>
-        /// <para>过滤配置</para>
-        /// </summary>
         [NameInMap("filterSetting")]
         [Validation(Required=false)]
         public FilterSetting FilterSetting { get; set; }
 
         /// <summary>
-        /// <para>订阅设置</para>
-        /// 
         /// <b>Example:</b>
         /// <para>{&quot;region&quot;:&quot;cn-hangzhou&quot;}</para>
         /// </summary>
@@ -78,8 +63,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IntegrationSetting { get; set; }
 
         /// <summary>
-        /// <para>集成的上报入口key</para>
-        /// 
         /// <b>Example:</b>
         /// <para>10-16818f1445e10a1d012922b285bfb334</para>
         /// </summary>
@@ -87,16 +70,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string Token { get; set; }
 
-        /// <summary>
-        /// <para>转换设置</para>
-        /// </summary>
         [NameInMap("transformerSetting")]
         [Validation(Required=false)]
         public List<TransformAction> TransformerSetting { get; set; }
 
         /// <summary>
-        /// <para>类型</para>
-        /// 
         /// <b>Example:</b>
         /// <para>ALERT_CUSTOM</para>
         /// </summary>
@@ -105,8 +83,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>更新时间</para>
-        /// 
         /// <b>Example:</b>
         /// <para>2024-12-16T02:00:23Z</para>
         /// </summary>
@@ -115,8 +91,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>用户id</para>
-        /// 
         /// <b>Example:</b>
         /// <para>123123</para>
         /// </summary>

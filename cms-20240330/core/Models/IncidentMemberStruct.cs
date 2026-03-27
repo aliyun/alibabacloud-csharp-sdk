@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentMemberStruct : TeaModel {
         /// <summary>
-        /// <para>确认信息结构体。</para>
+        /// <para>Acknowledgement Information Structure.</para>
         /// </summary>
         [NameInMap("acknowledge")]
         [Validation(Required=false)]
         public IncidentMemberStructAcknowledge Acknowledge { get; set; }
         public class IncidentMemberStructAcknowledge : TeaModel {
             /// <summary>
-            /// <para>确认级别。</para>
+            /// <para>Acknowledgement level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string BreakLevel { get; set; }
 
             /// <summary>
-            /// <para>验证时间。</para>
+            /// <para>Verification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1741234567890</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>联系人ID。</para>
+        /// <para>Contact ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user-12345</para>
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContactId { get; set; }
 
         /// <summary>
-        /// <para>联系人列表。</para>
+        /// <para>Contact list.</para>
         /// </summary>
         [NameInMap("contacts")]
         [Validation(Required=false)]
         public List<IncidentMemberStructContacts> Contacts { get; set; }
         public class IncidentMemberStructContacts : TeaModel {
             /// <summary>
-            /// <para>通道。</para>
+            /// <para>Channel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dingtalk</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Channel { get; set; }
 
             /// <summary>
-            /// <para>联系人 ID（脱敏）</para>
+            /// <para>Contact ID (masked).</para>
             /// 
             /// <b>Example:</b>
             /// <para>user-12345</para>
@@ -78,24 +78,24 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>升级阶段信息。</para>
+        /// <para>Escalation phase information.</para>
         /// </summary>
         [NameInMap("escalation")]
         [Validation(Required=false)]
         public IncidentMemberStructEscalation Escalation { get; set; }
         public class IncidentMemberStructEscalation : TeaModel {
             /// <summary>
-            /// <para>描述。</para>
+            /// <para>Description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>通知运维团队</para>
+            /// <para>Notify the operations team.</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>事件升级ID。</para>
+            /// <para>Event Escalation ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>escalation-001</para>
@@ -105,17 +105,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string IncidentEscalationId { get; set; }
 
             /// <summary>
-            /// <para>名称。</para>
+            /// <para>Name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>第一阶段</para>
+            /// <para>Phase one.</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>升级阶段索引。</para>
+            /// <para>Escalation phase index.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -125,10 +125,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string StageIndex { get; set; }
 
             /// <summary>
-            /// <para>标题。</para>
+            /// <para>Title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>告警升级至运维团队</para>
+            /// <para>Alert escalated to the operations team.</para>
             /// </summary>
             [NameInMap("title")]
             [Validation(Required=false)]
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>事件ID。</para>
+        /// <para>Incident ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>incident-001</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentId { get; set; }
 
         /// <summary>
-        /// <para>事件成员ID。</para>
+        /// <para>Event Member ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>member-001</para>
@@ -157,14 +157,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentMemberId { get; set; }
 
         /// <summary>
-        /// <para>调度组。</para>
+        /// <para>Schedule group.</para>
         /// </summary>
         [NameInMap("scheduleGroup")]
         [Validation(Required=false)]
         public IncidentMemberStructScheduleGroup ScheduleGroup { get; set; }
         public class IncidentMemberStructScheduleGroup : TeaModel {
             /// <summary>
-            /// <para>联系人ID。</para>
+            /// <para>Contact ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>group-001</para>
@@ -174,10 +174,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ContactId { get; set; }
 
             /// <summary>
-            /// <para>名称。</para>
+            /// <para>Name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>夜间值班组</para>
+            /// <para>Night shift duty team.</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>时间。</para>
+        /// <para>Time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-10-08 10:18:58</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? Time { get; set; }
 
         /// <summary>
-        /// <para>用户ID。</para>
+        /// <para>User ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4123456</para>

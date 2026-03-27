@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListPrometheusInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records returned.</para>
+        /// <para>Maximum number of records to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query.</para>
+        /// <para>Token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxxx</para>
@@ -33,14 +33,15 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The list of Prometheus instances.</para>
+        /// <para>List of Prometheus instances.</para>
         /// </summary>
         [NameInMap("prometheusInstances")]
         [Validation(Required=false)]
         public List<ListPrometheusInstancesResponseBodyPrometheusInstances> PrometheusInstances { get; set; }
         public class ListPrometheusInstancesResponseBodyPrometheusInstances : TeaModel {
             /// <summary>
-            /// <para>The permission type. Valid values: readWrite, readOnly, and httpReadOnly.</para>
+            /// <para>Access type:
+            /// readWrite, readOnly, httpReadOnly</para>
             /// 
             /// <b>Example:</b>
             /// <para>readWrite</para>
@@ -50,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AccessType { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created. The time is in UTC and the format is yyyy-MM-ddTHH:mmZ.</para>
+            /// <para>Instance creation time, using UTC+0 time, formatted as yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-10T02:07:53Z</para>
@@ -60,7 +61,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The instance type.</para>
+            /// <para>Instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>remote-write</para>
@@ -70,9 +71,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>POSTPAY: Pay-as-you-go, billed by metrics.
-            /// POSTPAY_GB: Pay-as-you-go, billed by data written.
-            /// PREPAY: Subscription.
+            /// <para>POSTPAY: Postpaid by metric.
+            /// POSTPAY_GB: Postpaid by write volume.
+            /// PREPAY: Prepaid.
             /// FREE: Free.</para>
             /// 
             /// <b>Example:</b>
@@ -83,7 +84,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PaymentType { get; set; }
 
             /// <summary>
-            /// <para>The product to which the Prometheus instance belongs.</para>
+            /// <para>Product to which the prom instance belongs</para>
             /// 
             /// <b>Example:</b>
             /// <para>arms</para>
@@ -93,7 +94,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Product { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>Instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rw-63549e054ff596a4149927961dff</para>
@@ -103,7 +104,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PrometheusInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The instance name.</para>
+            /// <para>Instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-prom-name</para>
@@ -113,7 +114,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PrometheusInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>Region ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-nanjing</para>
@@ -123,7 +124,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The resource type.</para>
+            /// <para>Resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Prometheus</para>
@@ -133,7 +134,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The status of the backend data storage.</para>
+            /// <para>Backend data storage status</para>
             /// 
             /// <b>Example:</b>
             /// <para>Pending2Running</para>
@@ -143,14 +144,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The supported authentication types.</para>
+            /// <para>Supported authentication types.</para>
             /// </summary>
             [NameInMap("supportAuthTypes")]
             [Validation(Required=false)]
             public List<string> SupportAuthTypes { get; set; }
 
             /// <summary>
-            /// <para>The user ID.</para>
+            /// <para>User ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17073812345</para>
@@ -160,7 +161,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The version.</para>
+            /// <para>Version</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -172,7 +173,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Version { get; set; }
 
             /// <summary>
-            /// <para>The workspace to which the Prometheus instance belongs.</para>
+            /// <para>Workspace to which the Prometheus instance belongs</para>
             /// 
             /// <b>Example:</b>
             /// <para>default-cms-115214006-cn-hangzhou</para>
@@ -184,7 +185,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</para>
@@ -194,7 +195,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of instances.</para>
+        /// <para>Total number of instances</para>
         /// 
         /// <b>Example:</b>
         /// <para>66</para>

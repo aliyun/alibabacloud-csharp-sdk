@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ContactForIncidentView : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>&quot;contact-123456&quot;</para>
+        /// </summary>
         [NameInMap("contactId")]
         [Validation(Required=false)]
         public string ContactId { get; set; }

@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListDigitalEmployeeSkillsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of results returned.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -20,8 +18,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>sjC5rekx93Ew7K7VcmI3wkBZBYQ-GphB2ilQu3zJCGxoZuicwyJznfo2riTjr-lq</para>
         /// </summary>
@@ -39,15 +35,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The list of skills.</para>
-        /// </summary>
         [NameInMap("skills")]
         [Validation(Required=false)]
         public List<ListDigitalEmployeeSkillsResponseBodySkills> Skills { get; set; }
         public class ListDigitalEmployeeSkillsResponseBodySkills : TeaModel {
             /// <summary>
-            /// <para>The time when the skill was created.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -58,8 +50,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -68,8 +58,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The display name of the skill.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -78,8 +66,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the skill is enabled.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -88,8 +74,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The name of the skill.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -98,7 +82,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string SkillName { get; set; }
 
             /// <summary>
-            /// <para>The time when the skill was last updated.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -111,8 +94,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The total number of records.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>15</para>
         /// </summary>

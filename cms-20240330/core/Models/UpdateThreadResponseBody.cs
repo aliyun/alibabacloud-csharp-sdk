@@ -20,20 +20,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The session ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>thread-12313</para>
+        /// <para>thread_id01</para>
         /// </summary>
         [NameInMap("threadId")]
         [Validation(Required=false)]
         public string ThreadId { get; set; }
 
         /// <summary>
-        /// <para>The version number.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>123123</para>
+        /// <para>0.1.0</para>
         /// </summary>
         [NameInMap("version")]
         [Validation(Required=false)]

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
     public class Tag : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>test-key</para>
+        /// <para>env</para>
         /// </summary>
         [NameInMap("key")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>test-value</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("value")]
         [Validation(Required=false)]

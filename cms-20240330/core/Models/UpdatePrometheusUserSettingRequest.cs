@@ -10,11 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdatePrometheusUserSettingRequest : TeaModel {
         /// <summary>
-        /// <para>The value of the user setting.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ap-southeast-1</para>
+        /// <para>abc</para>
         /// </summary>
         [NameInMap("settingValue")]
         [Validation(Required=false)]

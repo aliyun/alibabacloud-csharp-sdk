@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdatePrometheusInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The number of days to store archived data after the storage duration expires. A value of 0 disables archiving. For V1 instances, the valid values are 1 to 365. This is supported only for the pay-by-data-write billing method. For V2 instances, the valid values are 1 to 3650. A value of 3650 indicates permanent storage.</para>
+        /// <para>The number of days to automatically archive and save after the storage expires, 0 means no archiving. The range of archiving days:
+        /// V1: 1<del>365 days. Only supported for metric write volume.
+        /// V2: 1</del>3650 days (3650 indicates permanent storage).</para>
         /// 
         /// <b>Example:</b>
         /// <para>365</para>
@@ -23,7 +25,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? ArchiveDuration { get; set; }
 
         /// <summary>
-        /// <para>The policy for password-free read access. The policy supports IP address segments and VPC IDs.</para>
+        /// <para>Password-free read policy (supports IP segments and VpcId).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -42,7 +44,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AuthFreeReadPolicy { get; set; }
 
         /// <summary>
-        /// <para>The policy for password-free write access. The policy supports IP address segments and VPC IDs.</para>
+        /// <para>Password-free write policy (supports IP segments and VpcId).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AuthFreeWritePolicy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable password-free read access.</para>
+        /// <para>Whether to enable password-free read.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EnableAuthFreeRead { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable password-free write access.</para>
+        /// <para>Whether to enable password-free write.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EnableAuthFreeWrite { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable authentication with an access token.</para>
+        /// <para>Whether to enable access token authentication.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -91,7 +93,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EnableAuthToken { get; set; }
 
         /// <summary>
-        /// <para>The billing method. You can change the billing method only once during the instance lifecycle. Valid values: \<c>POSTPAY\\</c> (pay-as-you-go based on reported metrics) and \<c>POSTPAY_GB\\</c> (pay-as-you-go based on data writes).</para>
+        /// <para>Billing method (can only be modified once during the instance\&quot;s lifecycle):
+        /// POSTPAY: Postpaid by metric reporting volume.
+        /// POSTPAY_GB: Postpaid by metric write volume.</para>
         /// 
         /// <b>Example:</b>
         /// <para>POSTPAY_GB</para>
@@ -101,7 +105,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance.</para>
+        /// <para>Instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-prom-name</para>
@@ -111,7 +115,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The status of the instance storage database. Only RUNNING is supported. If this parameter is left empty, the status of the storage database is not changed.</para>
+        /// <para>Instance storage DB status (only supports RUNNING). If empty, the storage DB status will not be changed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
@@ -121,7 +125,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The storage duration in days. If the instance is billed by data writes, valid values are 90 and 180. If the instance is billed by reported metrics, valid values are 15, 30, 60, 90, and 180.</para>
+        /// <para>Storage duration (days):
+        /// By write volume: 90, 180.
+        /// By metric reporting volume: 15, 30, 60, 90, 180.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90</para>
@@ -131,7 +137,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? StorageDuration { get; set; }
 
         /// <summary>
-        /// <para>The workspace to which the instance belongs.</para>
+        /// <para>Belonging workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default-cms-1500199863951574-cn-shanghai</para>

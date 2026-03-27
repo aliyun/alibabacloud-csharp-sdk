@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentEventStruct : TeaModel {
         /// <summary>
-        /// <para>自动恢复时间。</para>
+        /// <para>Automatic recovery time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741234567890</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? AutoRecoverTime { get; set; }
 
         /// <summary>
-        /// <para>内容。</para>
+        /// <para>Content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>检测到 user-service 实例 i-abc123 的 CPU 使用率达到 95%，已触发告警。</para>
+        /// <para>Detected that the CPU usage of the user-service instance i-abc123 has reached 95%, triggering an alert.</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>统计数量。</para>
+        /// <para>Count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -40,21 +40,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>维度。</para>
+        /// <para>Dimension.</para>
         /// </summary>
         [NameInMap("dimension")]
         [Validation(Required=false)]
         public Dictionary<string, string> Dimension { get; set; }
 
         /// <summary>
-        /// <para>用于分组维度。</para>
+        /// <para>Used for grouping dimensions.</para>
         /// </summary>
         [NameInMap("groupBy")]
         [Validation(Required=false)]
         public Dictionary<string, string> GroupBy { get; set; }
 
         /// <summary>
-        /// <para>事件事件ID。</para>
+        /// <para>Incident Event Id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>event-001</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentEventId { get; set; }
 
         /// <summary>
-        /// <para>事件ID。</para>
+        /// <para>Incident Id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>incident-001</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentId { get; set; }
 
         /// <summary>
-        /// <para>最后时间。</para>
+        /// <para>Last time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741234567890</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? LastTime { get; set; }
 
         /// <summary>
-        /// <para>手动恢复时间。</para>
+        /// <para>Manual recovery time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741234567890</para>
@@ -94,14 +94,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? RecoverTime { get; set; }
 
         /// <summary>
-        /// <para>描述事件关联的资源信息。</para>
+        /// <para>Describes the resource information associated with the event.</para>
         /// </summary>
         [NameInMap("resource")]
         [Validation(Required=false)]
         public Dictionary<string, string> Resource { get; set; }
 
         /// <summary>
-        /// <para>状态。</para>
+        /// <para>Status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? Status { get; set; }
 
         /// <summary>
-        /// <para>时间。</para>
+        /// <para>Time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58Z</para>
@@ -121,17 +121,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Time { get; set; }
 
         /// <summary>
-        /// <para>标题。</para>
+        /// <para>Title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>用户服务 CPU 使用率过高</para>
+        /// <para>User service CPU usage is too high.</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>用户ID。</para>
+        /// <para>User ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user-12345</para>

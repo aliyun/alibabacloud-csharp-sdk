@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DeleteUmodelDataRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the Umodel data to delete. Omit this parameter to delete all Umodel data.</para>
+        /// <para>Can specify the name of a specific Umodel data, leaving it blank means all</para>
         /// 
         /// <b>Example:</b>
         /// <para>apm</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The kind of the Umodel data. If unspecified, data of all kinds is deleted.</para>
+        /// <para>Can specify the kind of a specific Umodel data, leaving it blank means all</para>
         /// 
         /// <b>Example:</b>
         /// <para>metric_set</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Kind { get; set; }
 
         /// <summary>
-        /// <para>The name of the Umodel data. If unspecified, data with any name is deleted.</para>
+        /// <para>Can specify the name of a specific Umodel data, leaving it blank means all</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListThreadsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of results returned. The maximum value is 200.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -20,8 +18,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The paging token.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxxx</para>
         /// </summary>
@@ -30,28 +26,23 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CD8BA7D6-995D-578D-9941-xxxx</para>
+        /// <para>CD8BA7D6-995D-578D-9941-78B0FECD14B5</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The session ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>thread-123123</para>
+        /// <para>thread_id01</para>
         /// </summary>
         [NameInMap("threadId")]
         [Validation(Required=false)]
         public string ThreadId { get; set; }
 
-        /// <summary>
-        /// <para>The sessions.</para>
-        /// </summary>
         [NameInMap("threads")]
         [Validation(Required=false)]
         public List<ListThreadsResponseBodyThreads> Threads { get; set; }
@@ -61,18 +52,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public Dictionary<string, string> Attributes { get; set; }
 
             /// <summary>
-            /// <para>The time when the session was created.</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>2025-12-19T15:19:55.040403272+08:00</para>
+            /// <para>2025-04-22T12:46:34Z</para>
             /// </summary>
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the digital employee.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -81,8 +68,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DigitalEmployeeName { get; set; }
 
             /// <summary>
-            /// <para>The session status.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>active</para>
             /// </summary>
@@ -91,18 +76,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The session ID.</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>thread-123123</para>
+            /// <para>thread-t71rrw-1s7r7z9gu0v2s</para>
             /// </summary>
             [NameInMap("threadId")]
             [Validation(Required=false)]
             public string ThreadId { get; set; }
 
             /// <summary>
-            /// <para>The session title.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -111,37 +92,30 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>The time when the session was last updated.</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>2025-12-19T15:19:55.040403272+08:00</para>
+            /// <para>2025-06-24 10:05:21</para>
             /// </summary>
             [NameInMap("updateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
 
-            /// <summary>
-            /// <para>The session properties.</para>
-            /// </summary>
             [NameInMap("variables")]
             [Validation(Required=false)]
             public ListThreadsResponseBodyThreadsVariables Variables { get; set; }
             public class ListThreadsResponseBodyThreadsVariables : TeaModel {
                 /// <summary>
-                /// <para>The Simple Log Service (SLS) project.</para>
+                /// <para>SLS project。</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>project</para>
+                /// <para>ciec_rl_ads</para>
                 /// </summary>
                 [NameInMap("project")]
                 [Validation(Required=false)]
                 public string Project { get; set; }
 
                 /// <summary>
-                /// <para>The workspace.</para>
-                /// 
                 /// <b>Example:</b>
-                /// <para>workspace</para>
+                /// <para>hd1-np</para>
                 /// </summary>
                 [NameInMap("workspace")]
                 [Validation(Required=false)]
@@ -150,10 +124,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The version number.</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>123123</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]
@@ -162,8 +136,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

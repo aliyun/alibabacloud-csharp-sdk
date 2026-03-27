@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentPlanStruct : TeaModel {
         /// <summary>
-        /// <para>自动恢复等待时间。</para>
+        /// <para>Automatic recovery wait time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? AutoRecoverSeconds { get; set; }
 
         /// <summary>
-        /// <para>事件关闭超时时间。</para>
+        /// <para>Event closure timeout.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86400000</para>
@@ -30,31 +30,31 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? CloseExpire { get; set; }
 
         /// <summary>
-        /// <para>参与协作的团队或角色列表。</para>
+        /// <para>List of teams or roles involved in collaboration.</para>
         /// </summary>
         [NameInMap("corporation")]
         [Validation(Required=false)]
         public List<IncidentPlanCorporationStruct> Corporation { get; set; }
 
         /// <summary>
-        /// <para>预案描述。</para>
+        /// <para>Contingency plan description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>针对数据库连接数过高的应急处理方案</para>
+        /// <para>Emergency response plan for excessively high database connection count.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>升级策略 ID的列表。</para>
+        /// <para>List of escalation policy IDs.</para>
         /// </summary>
         [NameInMap("escalationId")]
         [Validation(Required=false)]
         public List<string> EscalationId { get; set; }
 
         /// <summary>
-        /// <para>创建时间。</para>
+        /// <para>Creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741234567890</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>最后修改时间</para>
+        /// <para>Last modification time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741234567890</para>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? GmtModified { get; set; }
 
         /// <summary>
-        /// <para>分组字段路径</para>
+        /// <para>Grouping field path.</para>
         /// </summary>
         [NameInMap("groupBy")]
         [Validation(Required=false)]
         public List<IncidentPlanFieldPath> GroupBy { get; set; }
 
         /// <summary>
-        /// <para>事件预案 ID。</para>
+        /// <para>Event contingency plan ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>plan-001</para>
@@ -91,24 +91,24 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentPlanId { get; set; }
 
         /// <summary>
-        /// <para>预案名称。</para>
+        /// <para>Contingency plan name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>数据库连接数告警预案</para>
+        /// <para>Database connection count alert contingency plan.</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>资源字段映射路径的列表。</para>
+        /// <para>List of resource field mapping paths.</para>
         /// </summary>
         [NameInMap("resourceFiled")]
         [Validation(Required=false)]
         public List<IncidentPlanFieldPath> ResourceFiled { get; set; }
 
         /// <summary>
-        /// <para>状态。</para>
+        /// <para>Status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>用户 ID。</para>
+        /// <para>User ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>uesr-12345</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? UserId { get; set; }
 
         /// <summary>
-        /// <para>工作空间名称</para>
+        /// <para>Workspace name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>

@@ -10,7 +10,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetMemoryStoreResponseBody : TeaModel {
         /// <summary>
-        /// <para>Creation time.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -20,16 +19,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
-        /// <summary>
-        /// <para>Custom extraction strategies.</para>
-        /// </summary>
         [NameInMap("customExtractionStrategies")]
         [Validation(Required=false)]
         public List<CustomExtractionStrategy> CustomExtractionStrategies { get; set; }
 
         /// <summary>
-        /// <para>Description.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -37,16 +31,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        /// <summary>
-        /// <para>Supported values: Episodic, Summary, and Fact.</para>
-        /// </summary>
         [NameInMap("extractionStrategies")]
         [Validation(Required=false)]
         public List<string> ExtractionStrategies { get; set; }
 
         /// <summary>
-        /// <para>Memory store name.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>test-memory-store</para>
         /// </summary>
@@ -55,8 +44,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MemoryStoreName { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -65,8 +52,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>0B9377D9-C56B-5C2E-A8A4-A01D6CC3F4B8</para>
         /// </summary>
@@ -74,29 +59,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>Short-term memory storage.</para>
-        /// </summary>
         [NameInMap("shortTermStorage")]
         [Validation(Required=false)]
         public GetMemoryStoreResponseBodyShortTermStorage ShortTermStorage { get; set; }
         public class GetMemoryStoreResponseBodyShortTermStorage : TeaModel {
-            /// <summary>
-            /// <para>Simple Log Service Logstore name.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>memory-store</para>
-            /// </summary>
             [NameInMap("logstore")]
             [Validation(Required=false)]
             public string Logstore { get; set; }
 
-            /// <summary>
-            /// <para>Simple Log Service Project name.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>wk_cms_data_warehouse</para>
-            /// </summary>
             [NameInMap("project")]
             [Validation(Required=false)]
             public string Project { get; set; }
@@ -104,8 +74,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Short-term memory retention time, in seconds.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -114,7 +82,40 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? ShortTermTtl { get; set; }
 
         /// <summary>
-        /// <para>Update time.</para>
+        /// <b>Example:</b>
+        /// <para>Trace</para>
+        /// </summary>
+        [NameInMap("sourceType")]
+        [Validation(Required=false)]
+        public string SourceType { get; set; }
+
+        [NameInMap("traceSourceConfig")]
+        [Validation(Required=false)]
+        public GetMemoryStoreResponseBodyTraceSourceConfig TraceSourceConfig { get; set; }
+        public class GetMemoryStoreResponseBodyTraceSourceConfig : TeaModel {
+            [NameInMap("includeOutput")]
+            [Validation(Required=false)]
+            public bool? IncludeOutput { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>(serviceName : &quot;langchain-rag&quot; or serviceName : &quot;agentscope-code-correction&quot;) and hostname = frontend-proxy-999c48c8d-hvk6c</para>
+            /// </summary>
+            [NameInMap("query")]
+            [Validation(Required=false)]
+            public string Query { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>test-workspace</para>
+            /// </summary>
+            [NameInMap("workspace")]
+            [Validation(Required=false)]
+            public string Workspace { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -125,8 +126,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>Workspace name.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>default-cms-xxxxxx-cn-beijing</para>
         /// </summary>

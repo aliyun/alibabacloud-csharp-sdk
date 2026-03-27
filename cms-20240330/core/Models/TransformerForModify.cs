@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class TransformerForModify : TeaModel {
         /// <summary>
-        /// <para>转换操作</para>
+        /// <para>Transformation operation.</para>
         /// </summary>
         [NameInMap("actions")]
         [Validation(Required=false)]
         public List<TransformAction> Actions { get; set; }
 
         /// <summary>
-        /// <para>描述</para>
+        /// <para>Description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace test</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>筛选条件</para>
+        /// <para>Filter Setting.</para>
         /// </summary>
         [NameInMap("filterSetting")]
         [Validation(Required=false)]
         public FilterSetting FilterSetting { get; set; }
 
         /// <summary>
-        /// <para>匹配处理后退出</para>
+        /// <para>Exit after matching processing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? QuitAfterMatch { get; set; }
 
         /// <summary>
-        /// <para>排序数</para>
+        /// <para>Sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? SortId { get; set; }
 
         /// <summary>
-        /// <para>名称</para>
+        /// <para>Name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

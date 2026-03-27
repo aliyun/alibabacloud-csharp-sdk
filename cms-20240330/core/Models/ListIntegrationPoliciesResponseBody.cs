@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListIntegrationPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned per page.
+        /// <para>Page size
         /// Default value:
-        /// 50
+        ///     50
         /// Maximum value:
-        /// 50</para>
+        ///     50</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
+        /// <para>Pagination token</para>
         /// 
         /// <b>Example:</b>
         /// <para>44ANBjKZmQeKnaB1fXRq06w7sFYK3MUcCALMD9qQbmEiE</para>
@@ -34,21 +34,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>A list of integration policies.</para>
+        /// <para>Access policy list</para>
         /// </summary>
         [NameInMap("policies")]
         [Validation(Required=false)]
         public List<ListIntegrationPoliciesResponseBodyPolicies> Policies { get; set; }
         public class ListIntegrationPoliciesResponseBodyPolicies : TeaModel {
             /// <summary>
-            /// <para>The information about the attached resource.</para>
+            /// <para>Bound resource information</para>
             /// </summary>
             [NameInMap("bindResource")]
             [Validation(Required=false)]
             public ListIntegrationPoliciesResponseBodyPoliciesBindResource BindResource { get; set; }
             public class ListIntegrationPoliciesResponseBodyPoliciesBindResource : TeaModel {
                 /// <summary>
-                /// <para>The cluster ID.</para>
+                /// <para>Cluster ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cv68tt87d78vyc89zy9v</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// <para>The cluster type.</para>
+                /// <para>Cluster type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ManagedKubernetes</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string ClusterType { get; set; }
 
                 /// <summary>
-                /// <para>The CIDR block of the VPC.</para>
+                /// <para>VPC CIDR</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100.100.0.1/16</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string VpcCidr { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the virtual private cloud (VPC).</para>
+                /// <para>Virtual Private Cloud (VPC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-uf664nyle5khp5d4d7hdo</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The installation status of umodel in the container environment.</para>
+            /// <para>Container environment umodel installation status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -100,14 +100,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? CsUmodelStatus { get; set; }
 
             /// <summary>
-            /// <para>The entity group.</para>
+            /// <para>Entity group</para>
             /// </summary>
             [NameInMap("entityGroup")]
             [Validation(Required=false)]
             public ListIntegrationPoliciesResponseBodyPoliciesEntityGroup EntityGroup { get; set; }
             public class ListIntegrationPoliciesResponseBodyPoliciesEntityGroup : TeaModel {
                 /// <summary>
-                /// <para>The description.</para>
+                /// <para>Description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxxx</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The entity group ID.</para>
+                /// <para>Entity group ID</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eg-b79f65d11fb94e779867cf937c3a3002</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string EntityGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The entity group name.</para>
+                /// <para>Entity group name</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test-eg</para>
@@ -137,21 +137,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string EntityGroupName { get; set; }
 
                 /// <summary>
-                /// <para>The entity group.</para>
+                /// <para>Entity group</para>
                 /// </summary>
                 [NameInMap("entityRules")]
                 [Validation(Required=false)]
                 public ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRules EntityRules { get; set; }
                 public class ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRules : TeaModel {
                     /// <summary>
-                    /// <para>The annotations.</para>
+                    /// <para>Annotations</para>
                     /// </summary>
                     [NameInMap("annotations")]
                     [Validation(Required=false)]
                     public List<ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesAnnotations> Annotations { get; set; }
                     public class ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesAnnotations : TeaModel {
                         /// <summary>
-                        /// <para>The operation to perform.</para>
+                        /// <para>Operation to be performed.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>add</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string Op { get; set; }
 
                         /// <summary>
-                        /// <para>The tag key.</para>
+                        /// <para>Tag key.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>key</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// <para>The tag values.</para>
+                        /// <para>Tag values</para>
                         /// </summary>
                         [NameInMap("tagValues")]
                         [Validation(Required=false)]
@@ -180,21 +180,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>A list of entity types.</para>
+                    /// <para>List of entity types</para>
                     /// </summary>
                     [NameInMap("entityTypes")]
                     [Validation(Required=false)]
                     public List<string> EntityTypes { get; set; }
 
                     /// <summary>
-                    /// <para>The field rules.</para>
+                    /// <para>Field rules</para>
                     /// </summary>
                     [NameInMap("fieldRules")]
                     [Validation(Required=false)]
                     public List<ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesFieldRules> FieldRules { get; set; }
                     public class ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesFieldRules : TeaModel {
                         /// <summary>
-                        /// <para>The unique identifier of the field.</para>
+                        /// <para>Unique identifier for the field.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>test</para>
@@ -204,14 +204,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string FieldKey { get; set; }
 
                         /// <summary>
-                        /// <para>The content of the field. Separate multiple values with commas.</para>
+                        /// <para>Field content, multiple values separated by English commas.</para>
                         /// </summary>
                         [NameInMap("fieldValues")]
                         [Validation(Required=false)]
                         public List<string> FieldValues { get; set; }
 
                         /// <summary>
-                        /// <para>The operation to perform.</para>
+                        /// <para>Operation to be performed.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>add</para>
@@ -223,21 +223,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>The instance IDs.</para>
+                    /// <para>Instance IDs.</para>
                     /// </summary>
                     [NameInMap("instanceIds")]
                     [Validation(Required=false)]
                     public List<string> InstanceIds { get; set; }
 
                     /// <summary>
-                    /// <para>The IP address matching rule.</para>
+                    /// <para>IP match rule</para>
                     /// </summary>
                     [NameInMap("ipMatchRule")]
                     [Validation(Required=false)]
                     public ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesIpMatchRule IpMatchRule { get; set; }
                     public class ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesIpMatchRule : TeaModel {
                         /// <summary>
-                        /// <para>The IP address CIDR block.</para>
+                        /// <para>IP segment</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>100.100.1.0/16</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string IpCidr { get; set; }
 
                         /// <summary>
-                        /// <para>The key of the IP address field.</para>
+                        /// <para>Key of the IP field</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>xxxx</para>
@@ -259,14 +259,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>The labels.</para>
+                    /// <para>Labels</para>
                     /// </summary>
                     [NameInMap("labels")]
                     [Validation(Required=false)]
                     public List<ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesLabels> Labels { get; set; }
                     public class ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesLabels : TeaModel {
                         /// <summary>
-                        /// <para>The operation to perform.</para>
+                        /// <para>Operation to be performed.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>add</para>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string Op { get; set; }
 
                         /// <summary>
-                        /// <para>The tag key.</para>
+                        /// <para>Tag key.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>test</para>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// <para>The tag values.</para>
+                        /// <para>Tag values</para>
                         /// </summary>
                         [NameInMap("tagValues")]
                         [Validation(Required=false)]
@@ -295,14 +295,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>A list of region IDs.</para>
+                    /// <para>List of region IDs.</para>
                     /// </summary>
                     [NameInMap("regionIds")]
                     [Validation(Required=false)]
                     public List<string> RegionIds { get; set; }
 
                     /// <summary>
-                    /// <para>The resource group ID.</para>
+                    /// <para>Resource group ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>rg-5i6dbwxfxuqihk7k</para>
@@ -312,14 +312,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string ResourceGroupId { get; set; }
 
                     /// <summary>
-                    /// <para>The tags of the instance.</para>
+                    /// <para>Instance tag information.</para>
                     /// </summary>
                     [NameInMap("tags")]
                     [Validation(Required=false)]
                     public List<ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesTags> Tags { get; set; }
                     public class ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesTags : TeaModel {
                         /// <summary>
-                        /// <para>The operation to perform.</para>
+                        /// <para>Operation to be performed.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>add</para>
@@ -329,7 +329,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string Op { get; set; }
 
                         /// <summary>
-                        /// <para>The tag key.</para>
+                        /// <para>Tag key.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>key</para>
@@ -339,7 +339,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// <para>The tag values.</para>
+                        /// <para>Tag value.</para>
                         /// </summary>
                         [NameInMap("tagValues")]
                         [Validation(Required=false)]
@@ -350,7 +350,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>The search keyword. You can search by entity group name and description.</para>
+                /// <para>Search keywords, supporting document library name and description</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>哈弗</para>
@@ -360,7 +360,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Query { get; set; }
 
                 /// <summary>
-                /// <para>The region ID.</para>
+                /// <para>Region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-heyuan</para>
@@ -370,7 +370,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The user ID.</para>
+                /// <para>User ID</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1236812738</para>
@@ -380,7 +380,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string UserId { get; set; }
 
                 /// <summary>
-                /// <para>The workspace.</para>
+                /// <para>Workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test-api</para>
@@ -392,7 +392,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The billing type.</para>
+            /// <para>Billing type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CS_Pro</para>
@@ -402,14 +402,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string FeePackage { get; set; }
 
             /// <summary>
-            /// <para>The network management information of the policy.</para>
+            /// <para>Policy network management information.</para>
             /// </summary>
             [NameInMap("managedInfo")]
             [Validation(Required=false)]
             public ListIntegrationPoliciesResponseBodyPoliciesManagedInfo ManagedInfo { get; set; }
             public class ListIntegrationPoliciesResponseBodyPoliciesManagedInfo : TeaModel {
                 /// <summary>
-                /// <para>The ID of the elastic network interface (ENI) for the managed probe. For example, eni-xxxx.</para>
+                /// <para>ENI card ID of the managed probe. For example: eni-xxxx.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eni-12345678</para>
@@ -419,7 +419,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string EniId { get; set; }
 
                 /// <summary>
-                /// <para>The security group ID.</para>
+                /// <para>Security group ID</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sg-xxxxx</para>
@@ -429,7 +429,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string SecurityGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The vSwitch ID.</para>
+                /// <para>VSwitch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-xxxxxx</para>
@@ -441,7 +441,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The policy ID.</para>
+            /// <para>Policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>policy-ac38a7cb02d14ff48bc9f97d0a75063e</para>
@@ -451,7 +451,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PolicyId { get; set; }
 
             /// <summary>
-            /// <para>The policy name.</para>
+            /// <para>Rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6f5HSsg3AP</para>
@@ -461,7 +461,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PolicyName { get; set; }
 
             /// <summary>
-            /// <para>The type of the Integration Center policy.</para>
+            /// <para>Access center policy type</para>
             /// 
             /// <b>Example:</b>
             /// <para>ECS</para>
@@ -471,7 +471,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PolicyType { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>Region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-heyuan</para>
@@ -481,7 +481,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
+            /// <para>Resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-xxxxx</para>
@@ -491,14 +491,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The number of sub-releases.</para>
+            /// <para>Number of sub-releases</para>
             /// </summary>
             [NameInMap("subAddonRelease")]
             [Validation(Required=false)]
             public ListIntegrationPoliciesResponseBodyPoliciesSubAddonRelease SubAddonRelease { get; set; }
             public class ListIntegrationPoliciesResponseBodyPoliciesSubAddonRelease : TeaModel {
                 /// <summary>
-                /// <para>The number of ready sub-releases.</para>
+                /// <para>Number of ready sub-releases</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -508,7 +508,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public int? Ready { get; set; }
 
                 /// <summary>
-                /// <para>The number of rules.</para>
+                /// <para>Number of rules.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>278</para>
@@ -520,7 +520,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The user ID.</para>
+            /// <para>User ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>128470923</para>
@@ -530,7 +530,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The workspace.</para>
+            /// <para>Workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-api</para>
@@ -542,7 +542,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>CD8BA7D6-995D-578D-9941-78B0FECD14B5</para>
@@ -552,7 +552,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>Total number of entries</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

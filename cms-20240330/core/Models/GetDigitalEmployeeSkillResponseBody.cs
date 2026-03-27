@@ -10,7 +10,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetDigitalEmployeeSkillResponseBody : TeaModel {
         /// <summary>
-        /// <para>Creation time</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +20,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Skill description</para>
-        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -31,8 +28,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Skill display name</para>
-        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -41,8 +36,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Whether the skill is enabled</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -50,16 +43,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
-        /// <summary>
-        /// <para>Skill file list</para>
-        /// </summary>
         [NameInMap("files")]
         [Validation(Required=false)]
         public List<GetDigitalEmployeeSkillResponseBodyFiles> Files { get; set; }
         public class GetDigitalEmployeeSkillResponseBodyFiles : TeaModel {
             /// <summary>
-            /// <para>File content</para>
-            /// 
             /// <b>Example:</b>
             /// <hr>
             /// <h2>name: skill
@@ -72,8 +60,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>File name</para>
-            /// 
             /// <b>Example:</b>
             /// <para>SKILL.md</para>
             /// </summary>
@@ -84,8 +70,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Remarks</para>
-        /// 
         /// <b>Example:</b>
         /// <para>remark</para>
         /// </summary>
@@ -94,7 +78,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
@@ -104,8 +88,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Skill name</para>
-        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -114,7 +96,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string SkillName { get; set; }
 
         /// <summary>
-        /// <para>Update time</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -125,8 +106,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>Version number</para>
-        /// 
         /// <b>Example:</b>
         /// <para>1770386951147366810</para>
         /// </summary>

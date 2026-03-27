@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetEntityStoreResponseBody : TeaModel {
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>Region ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-heyuan</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The name of the workspace.</para>
+        /// <para>Workspace name</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test-001</para>

@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class AddMemoriesRequest : TeaModel {
         /// <summary>
-        /// <para>Application agent ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>952730733889060865</para>
         /// </summary>
@@ -20,8 +18,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>Application ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>mm_480d961a1b5e4efe84603f4cbc0f</para>
         /// </summary>
@@ -30,8 +26,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>Asynchronous mode.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -40,8 +34,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? AsyncMode { get; set; }
 
         /// <summary>
-        /// <para>Custom instructions.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>Your custom instructions here</para>
         /// </summary>
@@ -50,8 +42,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CustomInstructions { get; set; }
 
         /// <summary>
-        /// <para>Infer.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -59,16 +49,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public bool? Infer { get; set; }
 
-        /// <summary>
-        /// <para>Messages.</para>
-        /// </summary>
         [NameInMap("messages")]
         [Validation(Required=false)]
         public List<AddMemoriesRequestMessages> Messages { get; set; }
         public class AddMemoriesRequestMessages : TeaModel {
             /// <summary>
-            /// <para>Content.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>My name is Zhang San and I live in Hangzhou.</para>
             /// </summary>
@@ -77,8 +62,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>Role.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>user</para>
             /// </summary>
@@ -89,8 +72,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Metadata.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</para>
         /// </summary>
@@ -99,8 +80,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, object> Metadata { get; set; }
 
         /// <summary>
-        /// <para>Run ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>jr-80ded1d6953c64ea</para>
         /// </summary>
@@ -117,8 +96,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? Timestamp { get; set; }
 
         /// <summary>
-        /// <para>User ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>test_user_001</para>
         /// </summary>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetUmodelResponseBody : TeaModel {
         /// <summary>
-        /// <para>This parameter is reserved.</para>
+        /// <para>This field does not need to be filled currently</para>
         /// </summary>
         [NameInMap("commonSchemaRef")]
         [Validation(Required=false)]
         public List<GetUmodelResponseBodyCommonSchemaRef> CommonSchemaRef { get; set; }
         public class GetUmodelResponseBodyCommonSchemaRef : TeaModel {
             /// <summary>
-            /// <para>The public Umodel schema group.</para>
+            /// <para>Common Umodel Schema group</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-job-123123</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Group { get; set; }
 
             /// <summary>
-            /// <para>The version.</para>
+            /// <para>Version</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The Umodel description.</para>
+        /// <para>Umodel description</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace test</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The region of the resource.</para>
+        /// <para>Region</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-heyuan</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>123-123123-sdf-435-3123</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The workspace name.</para>
+        /// <para>Workspace name</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>

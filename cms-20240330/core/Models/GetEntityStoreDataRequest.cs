@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetEntityStoreDataRequest : TeaModel {
         /// <summary>
-        /// <para>The start point in time for the query.</para>
-        /// <para>This is a UNIX timestamp. It represents the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</para>
+        /// <para>Start time of the query.</para>
+        /// <para>Unix timestamp format, representing the number of seconds since 1970-1-1 00:00:00 UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? From { get; set; }
 
         /// <summary>
-        /// <para>The search statement.</para>
+        /// <para>Query statement</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The end point in time for the query.</para>
-        /// <para>This is a UNIX timestamp. It represents the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</para>
+        /// <para>End time of the query.</para>
+        /// <para>Unix timestamp format, representing the number of seconds since 1970-1-1 00:00:00 UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

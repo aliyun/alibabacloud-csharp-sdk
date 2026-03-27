@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentResourceDetail : TeaModel {
         /// <summary>
-        /// <para>额外的资源标识符</para>
+        /// <para>Additional resource identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-prod-web-01</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ExtraId { get; set; }
 
         /// <summary>
-        /// <para>资源 ID 对象。</para>
+        /// <para>Resource ID object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ &quot;type&quot;: &quot;ecs&quot;, &quot;id&quot;: &quot;i-bp1234567890abcdef&quot; }</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, object> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>资源类型，表示该资源属于哪种云产品。</para>
+        /// <para>Resource type, indicating which cloud product the resource belongs to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs</para>

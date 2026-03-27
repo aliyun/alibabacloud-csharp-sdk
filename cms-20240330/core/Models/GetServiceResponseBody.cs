@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>264C3E89-BE6E-5F82-A484-CE9C2196C7DC</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The service object.</para>
+        /// <para>Service object.</para>
         /// </summary>
         [NameInMap("service")]
         [Validation(Required=false)]
         public GetServiceResponseBodyService Service { get; set; }
         public class GetServiceResponseBodyService : TeaModel {
             /// <summary>
-            /// <para>The extended information.</para>
+            /// <para>Extended information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;language&quot;:&quot;java&quot;}</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Attributes { get; set; }
 
             /// <summary>
-            /// <para>The time when the service was created.</para>
+            /// <para>Creation time</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-13T03:32:55Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description. This parameter is valid only when serviceType is set to RUM.</para>
+            /// <para>Description, only valid when serviceType=RUM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The display name. This parameter is valid only when serviceType is set to RUM.</para>
+            /// <para>Display name, only valid when serviceType=RUM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo应用</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ARMS application that is compatible with earlier versions.</para>
+            /// <para>Legacy ARMS application ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>by6rjzro2j@0fe8dfa799e5906</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Pid { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>Region ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-heyuan</para>
@@ -87,8 +87,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>rg-aekxxzuad5zzzz</para>
             /// </summary>
@@ -97,7 +95,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The service ID.</para>
+            /// <para>Service ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cwzxvuc6uo@4bc6b15ad81f166174ffb</para>
@@ -107,7 +105,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// <para>The service name.</para>
+            /// <para>Service name</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo-app</para>
@@ -117,7 +115,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>The service status. This parameter is valid only when serviceType is set to RUM.</para>
+            /// <para>Service status, only valid when serviceType=RUM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -127,7 +125,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ServiceStatus { get; set; }
 
             /// <summary>
-            /// <para>The service type.</para>
+            /// <para>Service type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TRACE</para>
@@ -136,16 +134,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string ServiceType { get; set; }
 
-            /// <summary>
-            /// <para>The array of tags.</para>
-            /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<GetServiceResponseBodyServiceTags> Tags { get; set; }
             public class GetServiceResponseBodyServiceTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key.</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>env</para>
                 /// </summary>
@@ -154,8 +147,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>prod</para>
                 /// </summary>
@@ -166,7 +157,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The workspace name.</para>
+            /// <para>Workspace name</para>
             /// 
             /// <b>Example:</b>
             /// <para>default-cms-1106439496876715-cn-hangzhou</para>

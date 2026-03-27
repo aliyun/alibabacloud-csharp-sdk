@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The resource group ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>rg-ae******ey</para>
         /// </summary>
@@ -20,8 +18,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The resource ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -30,8 +26,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>Service</para>
         /// </summary>

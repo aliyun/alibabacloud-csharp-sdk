@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreatePrometheusVirtualInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance.</para>
+        /// <para>Instance ID</para>
         /// </summary>
         [NameInMap("instance")]
         [Validation(Required=false)]
         public CreatePrometheusVirtualInstanceResponseBodyInstance Instance { get; set; }
         public class CreatePrometheusVirtualInstanceResponseBodyInstance : TeaModel {
             /// <summary>
-            /// <para>The time when the instance was created.</para>
+            /// <para>Creation time</para>
             /// 
             /// <b>Example:</b>
             /// <para>1751520976660</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The HTTP API query URL.</para>
+            /// <para>HTTP API query address</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxxxxxx">http://xxxxxxx</a></para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string HttpApiUrl { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>Region ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>rw-e815960b4c9ebc5c3d89790c7e82</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The cloud product.</para>
+            /// <para>Cloud product</para>
             /// 
             /// <b>Example:</b>
             /// <para>ack-csi-fuse</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>Region ID</para>
+            /// <para>User ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-zhengzhou-jva</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The user ID.</para>
+            /// <para>User ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>167212345678</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>0B9377D9-C56B-5C2E-A8A4-************</para>

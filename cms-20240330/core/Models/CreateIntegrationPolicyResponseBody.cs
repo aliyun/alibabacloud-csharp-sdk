@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateIntegrationPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the policy was created.</para>
+        /// <para>Whether it is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Created { get; set; }
 
         /// <summary>
-        /// <para>The upload policy.</para>
+        /// <para>Uploaded policy.</para>
         /// </summary>
         [NameInMap("policy")]
         [Validation(Required=false)]
         public CreateIntegrationPolicyResponseBodyPolicy Policy { get; set; }
         public class CreateIntegrationPolicyResponseBodyPolicy : TeaModel {
             /// <summary>
-            /// <para>The entity group ID.</para>
+            /// <para>Entity group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eg-b79f65d11fb94e779867cf937c3a3002</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EntityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The policy ID.</para>
+            /// <para>Policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>policy-14c8e9a29b0a46da843f8781471062ff</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PolicyId { get; set; }
 
             /// <summary>
-            /// <para>The policy name.</para>
+            /// <para>Policy name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>metrics-inner-manage</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PolicyName { get; set; }
 
             /// <summary>
-            /// <para>The policy type.</para>
+            /// <para>Policy type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CS</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PolicyType { get; set; }
 
             /// <summary>
-            /// <para>The region.</para>
+            /// <para>Region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-heyuan</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The user ID.</para>
+            /// <para>User ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>u1234567</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The workspace where the policy resides.</para>
+            /// <para>The workspace where the Policy resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prometheus</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CD8BA7D6-995D-578D-9941-78B0FECD14B5</para>

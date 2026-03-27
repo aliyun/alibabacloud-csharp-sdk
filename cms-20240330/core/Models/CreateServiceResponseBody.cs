@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the ARMS application for backward compatibility.</para>
+        /// <para>Historical compatible ARMS application ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>cwzxvuc6uo@d60088ad4797d26</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Pid { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3A2FA9E9-9CF1-5CB1-A808-52828F14310D</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The service ID.</para>
+        /// <para>Service ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>cwzxvuc6uo@4bc6b15ad81f166174ffb</para>

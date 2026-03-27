@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class TransformerForView : TeaModel {
         /// <summary>
-        /// <para>转换操作</para>
+        /// <para>Transformation operation.</para>
         /// </summary>
         [NameInMap("actions")]
         [Validation(Required=false)]
         public List<TransformAction> Actions { get; set; }
 
         /// <summary>
-        /// <para>创建时间</para>
+        /// <para>Create Time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>描述</para>
+        /// <para>Description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace test</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>是否启用</para>
+        /// <para>Whether enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>筛选设置</para>
+        /// <para>Filter Setting.</para>
         /// </summary>
         [NameInMap("filterSetting")]
         [Validation(Required=false)]
         public FilterSetting FilterSetting { get; set; }
 
         /// <summary>
-        /// <para>匹配处理后退出</para>
+        /// <para>Exit after matching processing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? QuitAfterMatch { get; set; }
 
         /// <summary>
-        /// <para>排序数</para>
+        /// <para>Sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -84,18 +84,18 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string TransformerId { get; set; }
 
         /// <summary>
-        /// <para>名称</para>
+        /// <para>Name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试处理流</para>
+        /// <para>Test processing flow.</para>
         /// </summary>
         [NameInMap("transformerName")]
         [Validation(Required=false)]
         public string TransformerName { get; set; }
 
         /// <summary>
-        /// <para>更新时间</para>
+        /// <para>Update Time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-16T02:27:01Z</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>用户id</para>
+        /// <para>User ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123123123**</para>

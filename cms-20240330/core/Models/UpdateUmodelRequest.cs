@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateUmodelRequest : TeaModel {
         /// <summary>
-        /// <para>The description.</para>
+        /// <para>Description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace test</para>

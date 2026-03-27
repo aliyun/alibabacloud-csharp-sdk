@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class MergeRobot : TeaModel {
         /// <summary>
-        /// <para>创建时间。</para>
-        /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58.789Z</para>
         /// </summary>
@@ -19,16 +17,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
-        /// <summary>
-        /// <para>扩展字段。</para>
-        /// </summary>
         [NameInMap("extend")]
         [Validation(Required=false)]
         public MergeRobotExtend Extend { get; set; }
         public class MergeRobotExtend : TeaModel {
             /// <summary>
-            /// <para>卡片模板。</para>
-            /// 
             /// <b>Example:</b>
             /// <para>incident-card-template</para>
             /// </summary>
@@ -37,8 +30,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CardTemplate { get; set; }
 
             /// <summary>
-            /// <para>是否启用每日值班报告。</para>
-            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -47,8 +38,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? DailyNoc { get; set; }
 
             /// <summary>
-            /// <para>每日值班报告时间。</para>
-            /// 
             /// <b>Example:</b>
             /// <para>09:00</para>
             /// </summary>
@@ -57,8 +46,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DailyNocTime { get; set; }
 
             /// <summary>
-            /// <para>钉钉签名密钥。</para>
-            /// 
             /// <b>Example:</b>
             /// <para>abc123</para>
             /// </summary>
@@ -67,8 +54,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DingSignKey { get; set; }
 
             /// <summary>
-            /// <para>是否启用出站请求。</para>
-            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -77,8 +62,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? EnableOutgoing { get; set; }
 
             /// <summary>
-            /// <para>认证令牌。</para>
-            /// 
             /// <b>Example:</b>
             /// <para>token-abc123</para>
             /// </summary>
@@ -89,8 +72,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>最后修改时间。</para>
-        /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58.789Z</para>
         /// </summary>
@@ -99,8 +80,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// <para>机器人唯一标识符。</para>
-        /// 
         /// <b>Example:</b>
         /// <para>robot-12345</para>
         /// </summary>
@@ -109,8 +88,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Identifier { get; set; }
 
         /// <summary>
-        /// <para>语言偏好。</para>
-        /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
         /// </summary>
@@ -118,19 +95,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        /// <summary>
-        /// <para>机器人名称。</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>运维告警机器人</para>
-        /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>机器人来源系统。</para>
-        /// 
         /// <b>Example:</b>
         /// <para>dingtalk</para>
         /// </summary>
@@ -139,8 +108,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>机器人类型。</para>
-        /// 
         /// <b>Example:</b>
         /// <para>dingtalk</para>
         /// </summary>
@@ -149,8 +116,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>Webhook 地址。</para>
-        /// 
         /// <b>Example:</b>
         /// <para><a href="https://oapi.dingtalk.com/robot/send?access_token=abc123">https://oapi.dingtalk.com/robot/send?access_token=abc123</a></para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateAggTaskGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The summary of the aggregation task group configuration.</para>
+        /// <para>Summary of the aggregation task group configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a54136014dc386a92c83a6ef1e97ff22</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AggTaskGroupConfigHash { get; set; }
 
         /// <summary>
-        /// <para>The ID of the aggregation task group.</para>
+        /// <para>Aggregation task group ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>aggTaskGroup-5fb2c3ade63a4709bcb059d13493b7b8</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AggTaskGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the aggregation task group.</para>
+        /// <para>Aggregation task group name</para>
         /// 
         /// <b>Example:</b>
         /// <para>pipeline-aggtask-group</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AggTaskGroupName { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source Prometheus instance for the aggregation task group.</para>
+        /// <para>Source Prometheus instance ID of the aggregation task group</para>
         /// 
         /// <b>Example:</b>
         /// <para>rw-083e17834e279f8c627fe91a2d72</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string SourcePrometheusId { get; set; }
 
         /// <summary>
-        /// <para>The current status of the aggregation task group.</para>
+        /// <para>Current status of the aggregation task group</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
