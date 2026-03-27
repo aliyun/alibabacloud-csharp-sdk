@@ -49,15 +49,6 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string CreateIndexType { get; set; }
 
         /// <summary>
-        /// <remarks>
-        /// <para> This parameter is not available. Do not specify this parameter.</para>
-        /// </remarks>
-        /// </summary>
-        [NameInMap("DataSource")]
-        [Validation(Required=false)]
-        public string DataSourceShrink { get; set; }
-
-        /// <summary>
         /// <para>The description of the knowledge base. The description must be 0 to 1,000 characters in length. This parameter is empty by default.</para>
         /// </summary>
         [NameInMap("Description")]
@@ -311,6 +302,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [NameInMap("knowledgeScene")]
         [Validation(Required=false)]
         public string KnowledgeScene { get; set; }
+
+        [NameInMap("knowledgeType")]
+        [Validation(Required=false)]
+        public string KnowledgeType { get; set; }
 
         /// <summary>
         /// <para>The metadata extraction configurations. Metadata refers to a set of additional attributes associated with unstructured data, which are integrated into text chunks in key-value pairs. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</para>
