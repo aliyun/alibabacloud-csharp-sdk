@@ -1,3 +1,12 @@
+2026-03-27 Version: 6.10.1
+- Update API CreateApplication: add request parameters SecurityIPArrayName.
+- Update API CreateApplication: add request parameters SecurityIPList.
+- Update API CreateApplication: add request parameters SecurityIPType.
+- Update API DescribeApplicationAttribute: add response parameters Body.Storages.
+- Update API DescribePolarFsAttribute: add response parameters Body.AccelerateType.
+- Update API DescribePolarFsAttribute: add response parameters Body.CustomBucketPathList.
+
+
 2026-03-26 Version: 6.10.0
 - Support API UpgradePolarClawSkills.
 

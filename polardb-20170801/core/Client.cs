@@ -4492,6 +4492,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPArrayName))
+            {
+                query["SecurityIPArrayName"] = request.SecurityIPArrayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPList))
+            {
+                query["SecurityIPList"] = request.SecurityIPList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPType))
+            {
+                query["SecurityIPType"] = request.SecurityIPType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -4667,6 +4679,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
             {
                 query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPArrayName))
+            {
+                query["SecurityIPArrayName"] = request.SecurityIPArrayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPList))
+            {
+                query["SecurityIPList"] = request.SecurityIPList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPType))
+            {
+                query["SecurityIPType"] = request.SecurityIPType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {

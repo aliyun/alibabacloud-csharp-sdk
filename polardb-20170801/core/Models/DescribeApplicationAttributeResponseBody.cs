@@ -493,6 +493,28 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("Storages")]
+        [Validation(Required=false)]
+        public List<DescribeApplicationAttributeResponseBodyStorages> Storages { get; set; }
+        public class DescribeApplicationAttributeResponseBodyStorages : TeaModel {
+            [NameInMap("StorageCapacity")]
+            [Validation(Required=false)]
+            public string StorageCapacity { get; set; }
+
+            [NameInMap("StorageInstanceId")]
+            [Validation(Required=false)]
+            public string StorageInstanceId { get; set; }
+
+            [NameInMap("StoragePerformanceLevel")]
+            [Validation(Required=false)]
+            public string StoragePerformanceLevel { get; set; }
+
+            [NameInMap("StorageType")]
+            [Validation(Required=false)]
+            public string StorageType { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>false</para>

@@ -319,6 +319,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
+        [NameInMap("SecurityIPArrayName")]
+        [Validation(Required=false)]
+        public string SecurityIPArrayName { get; set; }
+
+        [NameInMap("SecurityIPList")]
+        [Validation(Required=false)]
+        public string SecurityIPList { get; set; }
+
+        [NameInMap("SecurityIPType")]
+        [Validation(Required=false)]
+        public string SecurityIPType { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateApplicationRequestTag> Tag { get; set; }

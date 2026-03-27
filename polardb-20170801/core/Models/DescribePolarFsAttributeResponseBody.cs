@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
     public class DescribePolarFsAttributeResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>alluxio</para>
+        /// </summary>
+        [NameInMap("AccelerateType")]
+        [Validation(Required=false)]
+        public string AccelerateType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
         [NameInMap("AcceleratedStorageSpace")]
@@ -72,6 +80,28 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("CustomBucketPath")]
         [Validation(Required=false)]
         public string CustomBucketPath { get; set; }
+
+        [NameInMap("CustomBucketPathList")]
+        [Validation(Required=false)]
+        public List<DescribePolarFsAttributeResponseBodyCustomBucketPathList> CustomBucketPathList { get; set; }
+        public class DescribePolarFsAttributeResponseBodyCustomBucketPathList : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>pfs-xxx.oss-[regionId]-internal.aliyuncs.com</para>
+            /// </summary>
+            [NameInMap("Bucket")]
+            [Validation(Required=false)]
+            public string Bucket { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>/data</para>
+            /// </summary>
+            [NameInMap("Path")]
+            [Validation(Required=false)]
+            public string Path { get; set; }
+
+        }
 
         /// <summary>
         /// <b>Example:</b>
