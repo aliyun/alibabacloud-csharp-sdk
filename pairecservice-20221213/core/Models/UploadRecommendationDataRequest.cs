@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class UploadRecommendationDataRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("Content")]
         [Validation(Required=false)]
         public List<UploadRecommendationDataRequestContent> Content { get; set; }

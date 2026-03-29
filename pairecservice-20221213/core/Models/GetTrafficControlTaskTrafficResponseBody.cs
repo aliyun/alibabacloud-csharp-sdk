@@ -29,9 +29,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 [Validation(Required=false)]
                 public Dictionary<string, TrafficControlTaskTrafficInfoTargetTrafficsDataValue> Data { get; set; }
 
-                [NameInMap("TrafficControlTargetId")]
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
+                [NameInMap("TrafficContorlTargetId")]
                 [Validation(Required=false)]
-                public string TrafficControlTargetId { get; set; }
+                public string TrafficContorlTargetId { get; set; }
 
             }
 

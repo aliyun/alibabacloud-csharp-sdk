@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
-    public class TrafficControlTaskTrafficInfoTargetTrafficsDataValue : TeaModel {
+    public class CreateDataDiagnosisResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>80</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("Traffic")]
+        [NameInMap("DataDiagnosisId")]
         [Validation(Required=false)]
-        public double? Traffic { get; set; }
+        public string DataDiagnosisId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1760319273</para>
+        /// <para>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</para>
         /// </summary>
-        [NameInMap("RecordTime")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public long? RecordTime { get; set; }
+        public string RequestId { get; set; }
 
     }
 

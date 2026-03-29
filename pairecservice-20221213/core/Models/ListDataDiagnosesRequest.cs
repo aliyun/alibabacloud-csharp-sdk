@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
-    public class ListExperimentGroupsRequest : TeaModel {
+    public class ListDataDiagnosesRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pairec-cn-abcdefg1234</para>
+        /// <para>pairec-test1</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -21,27 +21,23 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>3</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("LayerId")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string LayerId { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>Online</para>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("Status")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public int? PageSize { get; set; }
 
-        [NameInMap("TimeRangeEnd")]
+        [NameInMap("Types")]
         [Validation(Required=false)]
-        public string TimeRangeEnd { get; set; }
-
-        [NameInMap("TimeRangeStart")]
-        [Validation(Required=false)]
-        public string TimeRangeStart { get; set; }
+        public List<string> Types { get; set; }
 
     }
 
