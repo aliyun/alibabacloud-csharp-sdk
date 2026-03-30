@@ -2342,6 +2342,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DescribeCouponShrinkRequest request = new DescribeCouponShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CouponTemplateIdList))
+            {
+                request.CouponTemplateIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CouponTemplateIdList, "CouponTemplateIdList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EcIdAccountIds))
             {
                 request.EcIdAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EcIdAccountIds, "EcIdAccountIds", "json");
@@ -2354,6 +2358,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
             {
                 query["CouponNo"] = request.CouponNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponTemplateIdListShrink))
+            {
+                query["CouponTemplateIdList"] = request.CouponTemplateIdListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponType))
             {
@@ -2442,6 +2450,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DescribeCouponShrinkRequest request = new DescribeCouponShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CouponTemplateIdList))
+            {
+                request.CouponTemplateIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CouponTemplateIdList, "CouponTemplateIdList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EcIdAccountIds))
             {
                 request.EcIdAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EcIdAccountIds, "EcIdAccountIds", "json");
@@ -2454,6 +2466,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
             {
                 query["CouponNo"] = request.CouponNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponTemplateIdListShrink))
+            {
+                query["CouponTemplateIdList"] = request.CouponTemplateIdListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponType))
             {

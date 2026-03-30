@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         [Validation(Required=false)]
         public string CouponNo { get; set; }
 
+        [NameInMap("CouponTemplateIdList")]
+        [Validation(Required=false)]
+        public List<long?> CouponTemplateIdList { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>CERTAIN</para>
