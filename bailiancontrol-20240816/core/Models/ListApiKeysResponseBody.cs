@@ -24,6 +24,16 @@ namespace AlibabaCloud.SDK.BailianControl20240816.Models
             [Validation(Required=false)]
             public string ApikeyId { get; set; }
 
+            [NameInMap("authSetModel")]
+            [Validation(Required=false)]
+            public ListApiKeysResponseBodyApiKeysAuthSetModel AuthSetModel { get; set; }
+            public class ListApiKeysResponseBodyApiKeysAuthSetModel : TeaModel {
+                [NameInMap("authSetMode")]
+                [Validation(Required=false)]
+                public string AuthSetMode { get; set; }
+
+            }
+
             [NameInMap("blocked")]
             [Validation(Required=false)]
             public int? Blocked { get; set; }
