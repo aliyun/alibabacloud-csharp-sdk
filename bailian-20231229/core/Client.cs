@@ -1467,9 +1467,17 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 query["OverlapSize"] = request.OverlapSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankInstruct))
+            {
+                query["RerankInstruct"] = request.RerankInstruct;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankMinScore))
             {
                 query["RerankMinScore"] = request.RerankMinScore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankMode))
+            {
+                query["RerankMode"] = request.RerankMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankModelName))
             {
@@ -1675,9 +1683,17 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 query["OverlapSize"] = request.OverlapSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankInstruct))
+            {
+                query["RerankInstruct"] = request.RerankInstruct;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankMinScore))
             {
                 query["RerankMinScore"] = request.RerankMinScore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankMode))
+            {
+                query["RerankMode"] = request.RerankMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankModelName))
             {

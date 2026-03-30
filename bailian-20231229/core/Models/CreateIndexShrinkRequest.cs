@@ -113,6 +113,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public int? OverlapSize { get; set; }
 
+        [NameInMap("RerankInstruct")]
+        [Validation(Required=false)]
+        public string RerankInstruct { get; set; }
+
         /// <summary>
         /// <para>The similarity threshold. Only chunks with a similarity score higher than this value can be recalled. This parameter is used to filter chunks returned by the re-rank model. Valid values: 0.01 to 1.00.</para>
         /// <para>Default value: 0.01.</para>
@@ -123,6 +127,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [NameInMap("RerankMinScore")]
         [Validation(Required=false)]
         public double? RerankMinScore { get; set; }
+
+        [NameInMap("RerankMode")]
+        [Validation(Required=false)]
+        public string RerankMode { get; set; }
 
         /// <summary>
         /// <para>The re-ranking model used in the knowledge base. The re-rank model is a scoring system outside the knowledge base. It calculates the similarity score of the query and text chunks in the knowledge base and ranks them in descending order. Then, the model returns the top K chunks with the highest scores. Valid values:</para>

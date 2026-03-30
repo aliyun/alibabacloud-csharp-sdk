@@ -107,6 +107,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             [Validation(Required=false)]
             public string ModelName { get; set; }
 
+            [NameInMap("RerankInstruct")]
+            [Validation(Required=false)]
+            public string RerankInstruct { get; set; }
+
+            [NameInMap("RerankMode")]
+            [Validation(Required=false)]
+            public string RerankMode { get; set; }
+
         }
 
         /// <summary>
