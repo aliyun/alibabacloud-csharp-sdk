@@ -81,6 +81,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public bool? Encrypted { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>65535</para>
+                /// </summary>
+                [NameInMap("FullSnapshotSizeInBytes")]
+                [Validation(Required=false)]
+                public long? FullSnapshotSizeInBytes { get; set; }
+
                 [NameInMap("InstantAccess")]
                 [Validation(Required=false)]
                 public bool? InstantAccess { get; set; }
