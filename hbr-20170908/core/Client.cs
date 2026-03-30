@@ -367,6 +367,194 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await AddCrossAccountWithOptionsAsync(request, runtime);
         }
 
+        /// <param name="request">
+        /// AddDataSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDataSourceResponse
+        /// </returns>
+        public AddDataSourceResponse AddDataSourceWithOptions(AddDataSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionInfo))
+            {
+                query["ConnectionInfo"] = request.ConnectionInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Credential))
+            {
+                query["Credential"] = request.Credential;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceName))
+            {
+                query["DataSourceName"] = request.DataSourceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceType))
+            {
+                query["DataSourceType"] = request.DataSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Exclude))
+            {
+                query["Exclude"] = request.Exclude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Include))
+            {
+                query["Include"] = request.Include;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexLevel))
+            {
+                query["IndexLevel"] = request.IndexLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                query["Options"] = request.Options;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schedule))
+            {
+                query["Schedule"] = request.Schedule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeedLimit))
+            {
+                query["SpeedLimit"] = request.SpeedLimit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddDataSource",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddDataSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// AddDataSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDataSourceResponse
+        /// </returns>
+        public async Task<AddDataSourceResponse> AddDataSourceWithOptionsAsync(AddDataSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionInfo))
+            {
+                query["ConnectionInfo"] = request.ConnectionInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Credential))
+            {
+                query["Credential"] = request.Credential;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceName))
+            {
+                query["DataSourceName"] = request.DataSourceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceType))
+            {
+                query["DataSourceType"] = request.DataSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Exclude))
+            {
+                query["Exclude"] = request.Exclude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Include))
+            {
+                query["Include"] = request.Include;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexLevel))
+            {
+                query["IndexLevel"] = request.IndexLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                query["Options"] = request.Options;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schedule))
+            {
+                query["Schedule"] = request.Schedule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeedLimit))
+            {
+                query["SpeedLimit"] = request.SpeedLimit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddDataSource",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddDataSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// AddDataSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDataSourceResponse
+        /// </returns>
+        public AddDataSourceResponse AddDataSource(AddDataSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddDataSourceWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// AddDataSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDataSourceResponse
+        /// </returns>
+        public async Task<AddDataSourceResponse> AddDataSourceAsync(AddDataSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddDataSourceWithOptionsAsync(request, runtime);
+        }
+
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>浏览备份文件</para>
