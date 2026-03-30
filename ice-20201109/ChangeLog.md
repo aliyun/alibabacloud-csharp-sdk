@@ -1,3 +1,7 @@
+2026-03-30 Version: 6.14.1
+- Update API ListYikeProductions: add request parameters WorkspaceId.
+
+
 2026-03-26 Version: 6.14.0
 - Support API ResumeYikeStoryboardJob.
 - Update API GetYikeStoryboardJob: add response parameters Body.JobResult.StoryboardInfoList.
