@@ -8,20 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
-    public class ObtainCloudAccountRoleAccessCredentialRequest : TeaModel {
+    public class ObtainJwtAuthenticationTokenHeaders : TeaModel {
+        [NameInMap("commonHeaders")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> CommonHeaders { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>acs:ram::xxx:role/role-test</para>
+        /// <para>Bearer xxxxxx</para>
         /// </summary>
-        [NameInMap("cloudAccountRoleExternalId")]
+        [NameInMap("Authorization")]
         [Validation(Required=false)]
-        public string CloudAccountRoleExternalId { get; set; }
-
-        [NameInMap("durationSeconds")]
-        [Validation(Required=false)]
-        public int? DurationSeconds { get; set; }
+        public string Authorization { get; set; }
 
     }
 

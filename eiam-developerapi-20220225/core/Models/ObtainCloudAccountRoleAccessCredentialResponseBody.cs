@@ -67,6 +67,28 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 
             }
 
+            [NameInMap("awsStsToken")]
+            [Validation(Required=false)]
+            public ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialAwsStsToken AwsStsToken { get; set; }
+            public class ObtainCloudAccountRoleAccessCredentialResponseBodyCloudAccountRoleAccessCredentialAwsStsToken : TeaModel {
+                [NameInMap("accessKeyId")]
+                [Validation(Required=false)]
+                public string AccessKeyId { get; set; }
+
+                [NameInMap("expiration")]
+                [Validation(Required=false)]
+                public string Expiration { get; set; }
+
+                [NameInMap("secretAccessKey")]
+                [Validation(Required=false)]
+                public string SecretAccessKey { get; set; }
+
+                [NameInMap("sessionToken")]
+                [Validation(Required=false)]
+                public string SessionToken { get; set; }
+
+            }
+
         }
 
         /// <summary>
