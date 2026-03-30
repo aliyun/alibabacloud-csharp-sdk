@@ -4232,6 +4232,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["CloudAccountProviderName"] = request.CloudAccountProviderName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountSite))
+            {
+                query["CloudAccountSite"] = request.CloudAccountSite;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountVendorType))
             {
                 query["CloudAccountVendorType"] = request.CloudAccountVendorType;
@@ -4297,6 +4301,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountProviderName))
             {
                 query["CloudAccountProviderName"] = request.CloudAccountProviderName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountSite))
+            {
+                query["CloudAccountSite"] = request.CloudAccountSite;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountVendorType))
             {

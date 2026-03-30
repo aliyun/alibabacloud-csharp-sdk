@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string CloudAccountProviderName { get; set; }
 
+        [NameInMap("CloudAccountSite")]
+        [Validation(Required=false)]
+        public string CloudAccountSite { get; set; }
+
         /// <summary>
         /// <para>云账号类型</para>
         /// <para>This parameter is required.</para>

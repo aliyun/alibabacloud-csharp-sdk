@@ -1,3 +1,7 @@
+2026-03-30 Version: 1.23.3
+- Update API CreateCloudAccount: add request parameters CloudAccountSite.
+
+
 2026-03-27 Version: 1.23.2
 - Update API ListUsers: add request parameters MaxResults.
 - Update API ListUsers: add request parameters NextToken.
