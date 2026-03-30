@@ -4404,6 +4404,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["Architecture"] = request.Architecture;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthProvider))
+            {
+                query["AuthProvider"] = request.AuthProvider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthProviderConfig))
+            {
+                query["AuthProviderConfig"] = request.AuthProviderConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoAllocatePublicEip))
             {
                 query["AutoAllocatePublicEip"] = request.AutoAllocatePublicEip;
@@ -4591,6 +4599,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Architecture))
             {
                 query["Architecture"] = request.Architecture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthProvider))
+            {
+                query["AuthProvider"] = request.AuthProvider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthProviderConfig))
+            {
+                query["AuthProviderConfig"] = request.AuthProviderConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoAllocatePublicEip))
             {

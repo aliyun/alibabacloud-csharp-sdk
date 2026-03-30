@@ -373,6 +373,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string PayType { get; set; }
 
+        [NameInMap("PolarClawSaaSApplicationAttribute")]
+        [Validation(Required=false)]
+        public DescribeApplicationAttributeResponseBodyPolarClawSaaSApplicationAttribute PolarClawSaaSApplicationAttribute { get; set; }
+        public class DescribeApplicationAttributeResponseBodyPolarClawSaaSApplicationAttribute : TeaModel {
+            [NameInMap("AuthCallbackURL")]
+            [Validation(Required=false)]
+            public string AuthCallbackURL { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>pfs-**************</para>
