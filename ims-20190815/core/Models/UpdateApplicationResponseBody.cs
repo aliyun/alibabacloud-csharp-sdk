@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UpdateApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The application information.</para>
+        /// <para>The information about the application.</para>
         /// </summary>
         [NameInMap("Application")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The application ID.</para>
+            /// <para>The ID of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>472457090344041****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AppType { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-23T08:06:57Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The information about the permission scopes of the application.</para>
+            /// <para>The information about the permissions that are granted on the application.</para>
             /// </summary>
             [NameInMap("DelegatedScope")]
             [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the application can be installed by other Alibaba Cloud accounts.</para>
+            /// <para>Indicates whether the application can be installed by using other Alibaba Cloud accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -129,18 +129,6 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public bool? IsMultiTenant { get; set; }
 
-            /// <summary>
-            /// <para>The OAuth protocol version of the application. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><c>2.0</c>: OAuth 2.0.</para>
-            /// </description></item>
-            /// <item><description><para><c>2.1</c>: OAuth 2.1.</para>
-            /// </description></item>
-            /// </list>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2.0</para>
-            /// </summary>
             [NameInMap("ProtocolVersion")]
             [Validation(Required=false)]
             public string ProtocolVersion { get; set; }
@@ -166,7 +154,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? RefreshTokenValidity { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether an application key is required.</para>
+            /// <para>Indicates whether a secret is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -176,7 +164,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public bool? SecretRequired { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-23T08:06:57Z</para>

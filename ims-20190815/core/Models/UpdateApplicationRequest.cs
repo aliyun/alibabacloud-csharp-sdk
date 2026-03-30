@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UpdateApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID.</para>
+        /// <para>The ID of the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public int? NewAccessTokenValidity { get; set; }
 
         /// <summary>
-        /// <para>The new display name.</para>
+        /// <para>The display name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NewApp</para>
@@ -42,12 +42,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string NewDisplayName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the application can be installed by other Alibaba Cloud accounts. Valid values:</para>
+        /// <para>Specifies whether the application can be installed by using other Alibaba Cloud accounts. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The application can be installed.</para>
-        /// </description></item>
-        /// <item><description><para>false: The application cannot be installed.</para>
-        /// </description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,10 +56,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public bool? NewIsMultiTenant { get; set; }
 
         /// <summary>
-        /// <para>The permission scopes of the application.</para>
-        /// <para>For more information about the valid values and descriptions of permission scopes, see <a href="https://help.aliyun.com/document_detail/93693.html">OAuth scopes</a>. You can also call the <a href="https://help.aliyun.com/document_detail/187206.html">ListPredefinedScopes</a> operation to obtain the permission scopes that are supported by different types of applications.</para>
-        /// <para>If you enter multiple permission scopes, separate them with semicolons (;).</para>
-        /// <para>The new permission scopes overwrite the original ones. For example, if the original permission scope is <c>/acs/ccc</c> and you set the new permission scope to <c>/acs/alidns</c>, the permission scope that takes effect is <c>/acs/alidns</c>. If you want to add <c>/acs/alidns</c> to the original scope, set the new permission scope to <c>/acs/ccc;/acs/alidns</c>.</para>
+        /// <para>The permission that is granted on the application.</para>
+        /// <para>For more information about the application permission scope, see <a href="https://help.aliyun.com/document_detail/93693.html">OAuth scopes</a>. You can also call the <a href="https://help.aliyun.com/document_detail/187206.html">ListPredefinedScopes</a> operation to query the permissions that are supported by different types of applications.</para>
+        /// <para>If you enter multiple permissions, separate them with semicolons (;).</para>
+        /// <para>The new value of this parameter overwrites the original value, and the permission specified by the new value takes effect. For example, if the original value is <c>/acs/ccc</c>, and the new value is <c>/acs/alidns</c>, <c>/acs/alidns</c> takes effect. If you want to retain the original permission and the <c>/acs/alidns</c> permission, set the value to <c>/acs/ccc;/acs/alidns</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>openid</para>
@@ -71,8 +69,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string NewPredefinedScopes { get; set; }
 
         /// <summary>
-        /// <para>The webhook address.</para>
-        /// <para>If you enter multiple webhook addresses, separate them with semicolons (;).</para>
+        /// <para>The callback URL.</para>
+        /// <para>If you enter multiple callback URLs, separate them with semicolons (;).</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.example.com">https://www.example.com</a></para>
@@ -93,13 +91,13 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public int? NewRefreshTokenValidity { get; set; }
 
         /// <summary>
-        /// <para>The required permission scopes of the application.</para>
-        /// <para>You can set one or more scopes specified in <c>RequiredScopes</c> as required. After a scope is set as required, it is selected by default and cannot be deselected when a user grants permissions to the application.</para>
-        /// <para>If you also specify <c>NewPredefinedScopes</c>, the list of application scopes is reset by <c>NewPredefinedScopes</c> first. Then, this parameter is used to configure whether the scopes are required.</para>
-        /// <para>If you enter multiple permission scopes, separate them with semicolons (;).</para>
-        /// <para>The new required scopes overwrite the original ones.</para>
+        /// <para>The required permission.</para>
+        /// <para>You can specify one or more permissions for the <c>RequiredScopes</c> parameter. After you specify this parameter, the required permissions are automatically selected and cannot be revoked when a user grants permissions on the application.</para>
+        /// <para>If you also specify the <c>NewPredefinedScopes</c> parameter, the <c>NewPredefinedScopes</c> parameter specifies the permissions that can be granted on the application, and this parameter specifies the required permissions.</para>
+        /// <para>If you enter multiple permissions, separate them with semicolons (;).</para>
+        /// <para>The new value of this parameter overwrites the original value, and the required permission specified by the new value takes effect.</para>
         /// <remarks>
-        /// <para>If a scope that you specify for <c>RequiredScopes</c> is not within the range of <c>PredefinedScopes</c>, the required setting for that scope does not take effect.</para>
+        /// <para> If the permission that you specify for the <c>RequiredScopes</c> parameter is not included in value of the <c>PredefinedScopes</c> parameter, the permission does not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -110,20 +108,16 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string NewRequiredScopes { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether an application key is required. Valid values:</para>
+        /// <para>Specifies whether a secret is required. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>For applications of the WebApp and ServerApp types, this parameter is forcibly set to true and cannot be modified.</description></item>
-        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For applications of the NativeApp type, you can set this parameter to true or false. The default value is false. These applications often run in untrusted environments and cannot effectively protect application keys. Do not set this parameter to true unless necessary. For more information, see <a href="https://help.aliyun.com/document_detail/93697.html">Log on to Alibaba Cloud using a native application</a>.</description></item>
+        /// <item><description>For applications of the WebApp and ServerApp types, this parameter is automatically set to true and cannot be changed.</description></item>
+        /// <item><description>For applications of the NativeApp type, this parameter can be set to true or false. If you do not set this parameter, false is used. Applications of the NativeApp type run in untrusted environments and the secrets of these applications are not protected. Therefore, we recommend that you do not set this parameter to true unless otherwise specified. For more information, see <a href="https://help.aliyun.com/document_detail/93697.html">Use an application of the NativeApp type to log on to Alibaba Cloud</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

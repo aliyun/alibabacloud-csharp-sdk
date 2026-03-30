@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>E5EDDFD2-3654-4F9F-9780-4AE7D81823EF</para>
+        /// <para>A95A763D-F6B7-5242-83EB-AB45CE67F358</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -36,24 +36,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public string Arn { get; set; }
 
-            /// <summary>
-            /// <para>The supported signature algorithm. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>rsa-sha256</para>
-            /// </description></item>
-            /// <item><description><para>rsa-sha1 (default)</para>
-            /// </description></item>
-            /// </list>
-            /// 
-            /// <b>Example:</b>
-            /// <para>rsa-sha1</para>
-            /// </summary>
             [NameInMap("AuthnSignAlgo")]
             [Validation(Required=false)]
             public string AuthnSignAlgo { get; set; }
 
             /// <summary>
-            /// <para>The time when the information was created. It is displayed in UTC.</para>
+            /// <para>The creation time. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-22T02:37:05Z</para>
@@ -63,7 +51,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The IdP description.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is a provider.</para>
@@ -73,7 +61,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The IdP name.</para>
+            /// <para>The name of the IdP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-provider</para>
@@ -83,7 +71,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string SAMLProviderName { get; set; }
 
             /// <summary>
-            /// <para>The time when the information was last updated. It is displayed in UTC.</para>
+            /// <para>The update time. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-22T02:51:20Z</para>

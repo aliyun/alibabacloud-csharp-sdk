@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetLoginProfileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The logon information for the console.</para>
+        /// <para>The console logon configurations.</para>
         /// </summary>
         [NameInMap("LoginProfile")]
         [Validation(Required=false)]
         public GetLoginProfileResponseBodyLoginProfile LoginProfile { get; set; }
         public class GetLoginProfileResponseBodyLoginProfile : TeaModel {
             /// <summary>
-            /// <para>Indicates whether console logon is automatically disabled if the user is inactive. This feature is enabled by default and cannot be disabled.</para>
+            /// <para>Indicates whether console logon is automatically disabled if a RAM user does not log on to the console in the previous specified number of days. The number of days is specified by MaxIdleDaysForUsers. The default value is true, and you cannot change the value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AutoDisableLoginStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the RAM user last logged on to the console. The time is in UTC.</para>
+            /// <para>The time of the most recent logon. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-14T07:25:25Z</para>
@@ -37,12 +37,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string LastLoginTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether multi-factor authentication (MFA) is required for the user. Valid values:</para>
+            /// <para>Indicates whether multi-factor authentication (MFA) must be enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>false: MFA is not required.</para>
-            /// </description></item>
-            /// <item><description><para>true: MFA is required.</para>
-            /// </description></item>
+            /// <item><description>false</description></item>
+            /// <item><description>true</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,12 +51,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public bool? MFABindRequired { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the RAM user must reset the password at the next logon. Valid values:</para>
+            /// <para>Indicates whether the RAM user is required to reset the password upon the next logon. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>false: The RAM user is not required to reset the password.</para>
-            /// </description></item>
-            /// <item><description><para>true: The RAM user is required to reset the password.</para>
-            /// </description></item>
+            /// <item><description>false</description></item>
+            /// <item><description>true</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -68,32 +64,15 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public bool? PasswordResetRequired { get; set; }
 
-            /// <summary>
-            /// <para>The status of the initial password. An initial password is the password that is configured when you create a logon profile or re-enable console logon.</para>
-            /// <para>Valid values</para>
-            /// <list type="bullet">
-            /// <item><description><para>&quot;NotInitial&quot;: The password is not an initial password.</para>
-            /// </description></item>
-            /// <item><description><para>&quot;InitialValid&quot;: The initial password is valid.</para>
-            /// </description></item>
-            /// <item><description><para>&quot;InitialExpired&quot;: The initial password has expired.</para>
-            /// </description></item>
-            /// </list>
-            /// 
-            /// <b>Example:</b>
-            /// <para>NotInitial</para>
-            /// </summary>
             [NameInMap("PasswordStatus")]
             [Validation(Required=false)]
             public string PasswordStatus { get; set; }
 
             /// <summary>
-            /// <para>The status of console logon. Valid values:</para>
+            /// <para>Indicates whether console logon is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Active: Console logon is enabled.</para>
-            /// </description></item>
-            /// <item><description><para>Inactive: Console logon is disabled.</para>
-            /// </description></item>
+            /// <item><description>Active: enabled.</description></item>
+            /// <item><description>Inactive: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -104,7 +83,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the logon profile was last updated. The time is in Coordinated Universal Time (UTC).</para>
+            /// <para>The modification time. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-14T06:56:45Z</para>
@@ -126,7 +105,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E517F18B-632C-48FC-93F1-CDCBCC6F8444</para>

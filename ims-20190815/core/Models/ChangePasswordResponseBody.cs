@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ChangePasswordResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -33,6 +33,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
         }
 
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5F2FD500-7173-47D6-BD2F-EB60879B4F16</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

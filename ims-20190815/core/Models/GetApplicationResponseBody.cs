@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The application ID.</para>
+            /// <para>The ID of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>472457090344041****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The application name.</para>
+            /// <para>The name of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>myapp</para>
@@ -57,14 +57,11 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The application type. Valid values:</para>
+            /// <para>The type of the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>WebApp: a web application that is based on browser interaction.</para>
-            /// </description></item>
-            /// <item><description><para>NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</para>
-            /// </description></item>
-            /// <item><description><para>ServerApp: an application that can directly access Alibaba Cloud services without user logon. Currently, only applications that use the System for Cross-domain Identity Management (SCIM) for user synchronization are supported.</para>
-            /// </description></item>
+            /// <item><description>WebApp: a web application.</description></item>
+            /// <item><description>NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</description></item>
+            /// <item><description>ServerApp: an application that can access Alibaba Cloud services without the need for user logon. Only applications that synchronize user information based on the System for Cross-domain Identity Management (SCIM) protocol are supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +72,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AppType { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-23T08:06:57Z</para>
@@ -85,7 +82,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The permission scopes of the application.</para>
+            /// <para>The information about the permissions that are granted on the application.</para>
             /// </summary>
             [NameInMap("DelegatedScope")]
             [Validation(Required=false)]
@@ -128,7 +125,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the application can be installed by other Alibaba Cloud accounts.</para>
+            /// <para>Indicates whether the application can be installed by using other Alibaba Cloud accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -137,18 +134,6 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public bool? IsMultiTenant { get; set; }
 
-            /// <summary>
-            /// <para>The OAuth protocol version of the application. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><c>2.0</c>: OAuth 2.0.</para>
-            /// </description></item>
-            /// <item><description><para><c>2.1</c>: OAuth 2.1.</para>
-            /// </description></item>
-            /// </list>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2.0</para>
-            /// </summary>
             [NameInMap("ProtocolVersion")]
             [Validation(Required=false)]
             public string ProtocolVersion { get; set; }
@@ -174,7 +159,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? RefreshTokenValidity { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether an application key is required.</para>
+            /// <para>Indicates whether a secret is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -184,7 +169,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public bool? SecretRequired { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was last updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-23T08:06:57Z</para>
@@ -196,7 +181,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6616F09B-2768-4C11-8866-A8EE4C4A583E</para>

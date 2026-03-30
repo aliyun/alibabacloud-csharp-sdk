@@ -11,40 +11,40 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
     public class SetUserSsoSettingsResponseBody : TeaModel {
         /// <summary>
         /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>87F2E3F6-28A0-43F3-A77F-F7760E62F61E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The user-based SSO settings.</para>
+        /// <para>The configurations of user-based SSO.</para>
         /// </summary>
         [NameInMap("UserSsoSettings")]
         [Validation(Required=false)]
         public SetUserSsoSettingsResponseBodyUserSsoSettings UserSsoSettings { get; set; }
         public class SetUserSsoSettingsResponseBodyUserSsoSettings : TeaModel {
-            /// <summary>
-            /// <para>The signature algorithm that is supported by the Alibaba Cloud SP. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>rsa-sha256</para>
-            /// </description></item>
-            /// <item><description><para>rsa-sha1 (default)</para>
-            /// </description></item>
-            /// </list>
-            /// </summary>
             [NameInMap("AuthnSignAlgo")]
             [Validation(Required=false)]
             public string AuthnSignAlgo { get; set; }
 
             /// <summary>
             /// <para>The auxiliary domain name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example.com</para>
             /// </summary>
             [NameInMap("AuxiliaryDomain")]
             [Validation(Required=false)]
             public string AuxiliaryDomain { get; set; }
 
             /// <summary>
-            /// <para>The metadata file. The file is Base64-encoded.</para>
+            /// <para>The metadata file, which is Base64-encoded.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PD94bWwgdmVy****</para>
             /// </summary>
             [NameInMap("MetadataDocument")]
             [Validation(Required=false)]
@@ -52,20 +52,24 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
             /// <summary>
             /// <para>Indicates whether user-based SSO is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("SsoEnabled")]
             [Validation(Required=false)]
             public bool? SsoEnabled { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the <c>&lt;saml:NameID&gt;</c> element in a SAML response must contain a domain name when a user logs on using SAML-based SSO. This applies if the username that is specified on the IdP for logon matching contains a domain name suffix.</para>
+            /// <para>Indicates whether the SAML SSO requires a domain name in the <c>&lt;saml:NameID&gt;</c> element of the SAML response. If yes, the username specified by the IdP for SSO must have a domain name as the suffix.</para>
             /// <list type="bullet">
-            /// <item><description><para>If this parameter is set to <c>true</c>, the value of the <c>&lt;saml:NameID&gt;</c> element <b>must</b> be in the <c>username@domain</c> format, which includes a domain name suffix. The <c>domain</c> can be the default domain name or a domain alias if one is configured.</para>
-            /// </description></item>
-            /// <item><description><para>If this parameter is set to <c>false</c>, the value of the <c>&lt;saml:NameID&gt;</c> element <b>must</b> be the <c>username</c> only. The value <b>must not</b> contain the <c>domain</c> part.</para>
-            /// </description></item>
+            /// <item><description>If the value of the parameter is <c>true</c>, the <c>&lt;saml:NameID&gt;</c> element <b>must</b> be in the <c>username@domain</c> format. You can set <c>domain</c> to the default domain name or the configured domain alias.</description></item>
+            /// <item><description>If the value of the parameter is <c>false</c>, the <c>&lt;saml:NameID&gt;</c> element <b>must</b> be in the <c>username</c> format and <b>cannot</b> contain the <c>domain</c> suffix.</description></item>
             /// </list>
             /// <para>The default value is <c>true</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("SsoLoginWithDomain")]
             [Validation(Required=false)]

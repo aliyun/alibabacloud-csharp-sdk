@@ -10,8 +10,11 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetSAMLProviderRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the SAML provider.</para>
+        /// <para>The name of the IdP.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-provider</para>
         /// </summary>
         [NameInMap("SAMLProviderName")]
         [Validation(Required=false)]

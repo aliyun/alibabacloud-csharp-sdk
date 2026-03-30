@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ListVirtualMFADevicesRequest : TeaModel {
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.\<c>\\</c></para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.``</para>
         /// <para>When you call the operation for the first time, if the total number of returned entries exceeds the value of <c>MaxItems</c>, the entries are truncated. The system returns entries based on the value of <c>MaxItems</c> and does not return the excess entries. In this case, the value of the response parameter <c>IsTruncated</c> is <c>true</c>, and <c>Marker</c> is returned. In the next call, you can use the value of <c>Marker</c> and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of the <c>IsTruncated</c> parameter becomes <c>false</c>. This way, all entries are returned.</para>
         /// 
         /// <b>Example:</b>
