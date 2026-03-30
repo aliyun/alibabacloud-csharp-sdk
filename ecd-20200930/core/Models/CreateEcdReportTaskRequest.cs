@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateEcdReportTaskRequest : TeaModel {
+        [NameInMap("BusinessChannel")]
+        [Validation(Required=false)]
+        public string BusinessChannel { get; set; }
+
         /// <summary>
         /// <para>The filter conditions for filtering query results. The logical relationship between each filter condition is &quot;and&quot; (&amp;). Each filter condition contains FilterKey and FilterValues, which indicate the key and value for the filter condition.</para>
         /// </summary>

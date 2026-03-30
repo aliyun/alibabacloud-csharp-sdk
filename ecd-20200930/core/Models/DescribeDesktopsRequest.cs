@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopsRequest : TeaModel {
+        [NameInMap("BusinessChannel")]
+        [Validation(Required=false)]
+        public string BusinessChannel { get; set; }
+
         /// <summary>
         /// <para>The billing method of the cloud computer.</para>
         /// <para>Valid values:</para>

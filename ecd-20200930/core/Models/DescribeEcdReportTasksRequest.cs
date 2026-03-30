@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeEcdReportTasksRequest : TeaModel {
+        [NameInMap("BusinessChannel")]
+        [Validation(Required=false)]
+        public string BusinessChannel { get; set; }
+
         /// <summary>
         /// <para>The number of the page to return. Pages start from page 1. Default value: 1.</para>
         /// 

@@ -9872,6 +9872,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
+            {
+                query["BusinessChannel"] = request.BusinessChannel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterList))
             {
                 query["FilterList"] = request.FilterList;
@@ -9930,6 +9934,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
+            {
+                query["BusinessChannel"] = request.BusinessChannel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterList))
             {
                 query["FilterList"] = request.FilterList;
@@ -20556,6 +20564,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
+            {
+                query["BusinessChannel"] = request.BusinessChannel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
                 query["DesktopId"] = request.DesktopId;
@@ -20606,6 +20618,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
+            {
+                query["BusinessChannel"] = request.BusinessChannel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
                 query["DesktopId"] = request.DesktopId;
@@ -21625,6 +21641,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["AppliedScope"] = request.AppliedScope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
+            {
+                query["BusinessChannel"] = request.BusinessChannel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuCount))
             {
                 query["CpuCount"] = request.CpuCount;
@@ -21747,6 +21767,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppliedScope))
             {
                 query["AppliedScope"] = request.AppliedScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
+            {
+                query["BusinessChannel"] = request.BusinessChannel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuCount))
             {
@@ -21908,6 +21932,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
+            {
+                query["BusinessChannel"] = request.BusinessChannel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
                 query["ChargeType"] = request.ChargeType;
@@ -22094,6 +22122,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
+            {
+                query["BusinessChannel"] = request.BusinessChannel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
                 query["ChargeType"] = request.ChargeType;
@@ -23004,6 +23036,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
+            {
+                query["BusinessChannel"] = request.BusinessChannel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
             {
                 query["PageNum"] = request.PageNum;
@@ -23066,6 +23102,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
+            {
+                query["BusinessChannel"] = request.BusinessChannel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
             {
                 query["PageNum"] = request.PageNum;
@@ -42671,7 +42711,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改全球加速配置</para>
+        /// <para>Modifies Global Accelerator (GA) configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42721,7 +42761,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改全球加速配置</para>
+        /// <para>Modifies Global Accelerator (GA) configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42771,7 +42811,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改全球加速配置</para>
+        /// <para>Modifies Global Accelerator (GA) configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42789,7 +42829,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改全球加速配置</para>
+        /// <para>Modifies Global Accelerator (GA) configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48079,7 +48119,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a PowerShell or batch (.bat) command on one or more Windows cloud computers.</para>
+        /// <para>Runs a PowerShell or batch (.bat) script on Windows cloud desktops.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -48154,7 +48194,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a PowerShell or batch (.bat) command on one or more Windows cloud computers.</para>
+        /// <para>Runs a PowerShell or batch (.bat) script on Windows cloud desktops.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -48229,7 +48269,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a PowerShell or batch (.bat) command on one or more Windows cloud computers.</para>
+        /// <para>Runs a PowerShell or batch (.bat) script on Windows cloud desktops.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -48252,7 +48292,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a PowerShell or batch (.bat) command on one or more Windows cloud computers.</para>
+        /// <para>Runs a PowerShell or batch (.bat) script on Windows cloud desktops.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

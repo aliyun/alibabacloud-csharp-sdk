@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string AppliedScope { get; set; }
 
+        [NameInMap("BusinessChannel")]
+        [Validation(Required=false)]
+        public string BusinessChannel { get; set; }
+
         /// <summary>
         /// <para>The number of vCPUs.</para>
         /// 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopInfoRequest : TeaModel {
+        [NameInMap("BusinessChannel")]
+        [Validation(Required=false)]
+        public string BusinessChannel { get; set; }
+
         /// <summary>
         /// <para>The IDs of the cloud computers. You can specify 1 to 100 IDs.</para>
         /// </summary>
