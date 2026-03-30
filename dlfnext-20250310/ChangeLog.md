@@ -1,3 +1,6 @@
+2026-03-30 Version: 1.8.1
+- Generated csharp 2025-03-10 for DlfNext.
+
 2026-03-11 Version: 1.8.0
 - Support API GetVpcConfig.
 

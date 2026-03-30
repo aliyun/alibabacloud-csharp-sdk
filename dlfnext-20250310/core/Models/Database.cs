@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Owner { get; set; }
 
+        [NameInMap("tableCount")]
+        [Validation(Required=false)]
+        public long? TableCount { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1744970111419</para>

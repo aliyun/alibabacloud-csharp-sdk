@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public long? LastFileCreationTime { get; set; }
 
+        [NameInMap("partitionCount")]
+        [Validation(Required=false)]
+        public long? PartitionCount { get; set; }
+
         [NameInMap("recordCount")]
         [Validation(Required=false)]
         public long? RecordCount { get; set; }
